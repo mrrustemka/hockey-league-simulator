@@ -1,10 +1,12 @@
 import React, { FC } from "react";
-import { Button } from "antd";
+// import { Button } from "antd";
+import Table from "./components/Table";
 import "./App.css";
 
 const App: FC = () => (
   <div className="App">
-    <Button type="primary">Button</Button>
+    {/* <Button type="primary">Button</Button> */}
+    <Table />
   </div>
 );
 
