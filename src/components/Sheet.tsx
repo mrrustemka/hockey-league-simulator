@@ -1,4 +1,5 @@
-import { Teams } from "./types";
+import { Table } from "antd";
+import { Teams } from "../data/types";
 import aik from "../images/aik.png";
 import fro from "../images/fro.png";
 import lak from "../images/lak.png";
@@ -16,7 +17,7 @@ import man from "../images/man.png";
 import deg from "../images/deg.png";
 import kec from "../images/kec.png";
 
-export const getTeams: Teams[] = [
+const teams: Teams[] = [
   {
     id: 1,
     name: "Lakers",
@@ -291,4 +292,42 @@ export const getTeams: Teams[] = [
   },
 ];
 
-export default getTeams;
+const columns = [
+  {
+    title: "Team",
+    dataIndex: "name",
+    key: "name",
+  },
+  {
+    title: "Rating",
+    dataIndex: "rating",
+    key: "rating",
+  },
+  {
+    title: "City",
+    dataIndex: "city",
+    key: "city",
+  },
+  {
+    title: "G",
+    dataIndex: "game_counter",
+    key: "game_counter",
+  },
+  {
+    title: "P",
+    dataIndex: "points",
+    key: "points",
+  },
+  {
+    title: "GF/GA",
+    dataIndex: "goals_for",
+    key: "goals_for",
+  },
+];
+
+export function Sheet() {
+  console.log(teams);
+  return <Table dataSource={teams} columns={columns} />;
+}
+
+export default Sheet;
