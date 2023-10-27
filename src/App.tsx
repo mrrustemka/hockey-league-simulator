@@ -1,12 +1,16 @@
 import React, { FC } from "react";
-// import { Button } from "antd";
+import { Col, Row } from "antd";
 import Sheet from "./components/Sheet";
 import "./App.css";
 
 const App: FC = () => (
   <div className="App">
-    {/* <Button type="primary">Button</Button> */}
-    <Sheet />
+    <Row>
+      <Col span={12}>
+        <Sheet />
+      </Col>
+      <Col span={12}></Col>
+    </Row>
   </div>
 );
 
