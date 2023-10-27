@@ -15,3 +15,12 @@ export type Teams = {
   background_color: string;
   sheet_background_color: string;
 };
+
+export type TeamsList = string[];
+
+export type Schedule = {
+  id: string;
+  away: string;
+  home: string;
+};
+

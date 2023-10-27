@@ -1,5 +1,6 @@
 import { Table } from "antd";
 import { teams } from "../data/teams";
+import { schedule } from "../data/schedule";
 
 const columns = [
   {
@@ -47,7 +48,7 @@ const columns = [
 ];
 
 export function Sheet() {
-  console.log(teams);
+  schedule();
   return (
     <Table
       dataSource={teams}
