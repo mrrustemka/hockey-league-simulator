@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { Col, Row } from "antd";
 import Sheet from "./components/Sheet";
+import Game from "./components/Game";
 import "./App.css";
 
 const App: FC = () => (
@@ -9,7 +10,9 @@ const App: FC = () => (
       <Col span={12}>
         <Sheet />
       </Col>
-      <Col span={12}></Col>
+      <Col span={12}>
+        <Game />
+      </Col>
     </Row>
   </div>
 );

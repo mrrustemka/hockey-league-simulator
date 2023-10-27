@@ -1,1 +1,14 @@
 /* @import "~antd/dist/antd.css"; */
+
+.row-panel-cards {
+  margin: 18px;
+}
+
+.row-panel-simulate {
+  text-align: center;
+  margin: 18px;
+}
+
+.ant-card {
+  margin: auto;
+}
