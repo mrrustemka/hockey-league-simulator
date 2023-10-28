@@ -34,6 +34,7 @@ export function Game() {
       points: 0,
       goals_for: 0,
       goals_against: 0,
+      goals_diff: 0,
       rating: 0,
       stadiumCapacity: 0,
       games: [""],
@@ -51,6 +52,7 @@ export function Game() {
       points: 0,
       goals_for: 0,
       goals_against: 0,
+      goals_diff: 0,
       rating: 0,
       stadiumCapacity: 0,
       games: [""],
@@ -132,9 +134,11 @@ export function Game() {
     home.goals_for += homeGoals;
     home.goals_against += awayGoals;
     home.game_counter += 1;
+    home.goals_diff += home.goals_for - home.goals_against;
     away.goals_for += awayGoals;
     away.goals_against += homeGoals;
     away.game_counter += 1;
+    away.goals_diff += away.goals_for - away.goals_against;
 
     console.log(
       home.abbreviation,
@@ -149,7 +153,6 @@ export function Game() {
     setTeamsUpdate(teams);
     setHomeGoals(homeGoals);
     setAwayGoals(awayGoals);
-    console.log(teamsUpdate);
   }
 
   if (scheduleList && gameCounter < scheduleList.length) {

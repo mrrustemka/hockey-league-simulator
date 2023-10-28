@@ -7,6 +7,7 @@ export type Teams = {
   points: number;
   goals_for: number;
   goals_against: number;
+  goals_diff: number;
   rating: number;
   stadiumCapacity: number;
   games: string[];

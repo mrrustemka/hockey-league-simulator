@@ -42,8 +42,8 @@ const columns = [
   },
   {
     title: "GF/GA",
-    dataIndex: "goals_for",
-    key: "goals_for",
+    dataIndex: "goals_diff",
+    key: "goals_diff",
   },
 ];
 
