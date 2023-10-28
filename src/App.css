@@ -1,5 +1,10 @@
 /* @import "~antd/dist/antd.css"; */
 
+body {
+  background-color: #515151;
+  margin: 0;
+}
+
 .row-panel-cards {
   margin: 18px;
 }
@@ -11,6 +16,8 @@
 
 .ant-card {
   margin: auto;
+  overflow: hidden;
+  border: none;
 }
 
 .ant-col {
@@ -24,6 +31,10 @@
 
 .panel-score h1 {
   display: inline;
+}
+
+.ant-table {
+  border-radius: revert !important;
 }
 
 /* .aik {
