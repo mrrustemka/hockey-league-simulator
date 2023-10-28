@@ -27,7 +27,7 @@ const columns = [
     sorter: {
       compare: (a: { game_counter: number }, b: { game_counter: number }) =>
         b.game_counter - a.game_counter,
-      multiple: 1,
+      multiple: 2,
     },
   },
   {
@@ -37,13 +37,18 @@ const columns = [
     sorter: {
       compare: (a: { points: number }, b: { points: number }) =>
         a.points - b.points,
-      multiple: 2,
+      multiple: 3,
     },
   },
   {
     title: "GF/GA",
     dataIndex: "goals_diff",
     key: "goals_diff",
+    sorter: {
+      compare: (a: { goals_diff: number }, b: { goals_diff: number }) =>
+        a.goals_diff - b.goals_diff,
+      multiple: 1,
+    },
   },
 ];
 
