@@ -3,8 +3,8 @@ import { teams } from "./teams";
 import { Schedule, TeamsList } from "./types";
 
 let teamsList: TeamsList = [];
-let scheduleList: Schedule[] = [];
-let i = 0;
+export let scheduleList: Schedule[] = [];
+let i: number = 0;
 
 export function schedule() {
   teams.map((team) => {
@@ -16,7 +16,11 @@ export function schedule() {
       if (teamInfo.abbreviation === team) {
         return team;
       } else {
-        let game = { id: uuidv4(), home: teamInfo.abbreviation, away: team };
+        let game: Schedule = {
+          id: uuidv4(),
+          home: teamInfo.abbreviation,
+          away: team,
+        };
         if (
           scheduleList.find(
             (element) =>
@@ -31,12 +35,11 @@ export function schedule() {
       i++;
       return team;
     });
-    for (let k = scheduleList.length - 1; k > 0; k--) {
-      let j = Math.floor(Math.random() * (k + 1));
+    for (let k: number = scheduleList.length - 1; k > 0; k--) {
+      let j: number = Math.floor(Math.random() * (k + 1));
       [scheduleList[k], scheduleList[j]] = [scheduleList[j], scheduleList[k]];
     }
     return teamInfo;
   });
-
-  console.log(scheduleList);
+  // console.log(scheduleList);
 }

@@ -31,7 +31,7 @@ export const teams: Teams[] = [
     games: [],
     game_counter: 0,
     logo: lak,
-    background_color: "lak",
+    background_color: "#f47734",
     sheet_background_color: "swe",
   },
   {
@@ -48,7 +48,7 @@ export const teams: Teams[] = [
     games: [],
     game_counter: 0,
     logo: aik,
-    background_color: "aik",
+    background_color: "#010101",
     sheet_background_color: "swe",
   },
   {
@@ -65,7 +65,7 @@ export const teams: Teams[] = [
     games: [],
     game_counter: 0,
     logo: ore,
-    background_color: "ore",
+    background_color: "#ffffff",
     sheet_background_color: "swe",
   },
   {
@@ -82,7 +82,7 @@ export const teams: Teams[] = [
     games: [],
     game_counter: 0,
     logo: fro,
-    background_color: "fro",
+    background_color: "#c90210",
     sheet_background_color: "swe",
   },
   {
@@ -99,7 +99,7 @@ export const teams: Teams[] = [
     games: [],
     game_counter: 0,
     logo: gen,
-    background_color: "gen",
+    background_color: "#990012",
     sheet_background_color: "swi",
   },
   {
@@ -116,7 +116,7 @@ export const teams: Teams[] = [
     games: [],
     game_counter: 0,
     logo: hcb,
-    background_color: "hcb",
+    background_color: "#f7cc16",
     sheet_background_color: "swi",
   },
   {
@@ -133,7 +133,7 @@ export const teams: Teams[] = [
     games: [],
     game_counter: 0,
     logo: zsc,
-    background_color: "zsc",
+    background_color: "#e70003",
     sheet_background_color: "swi",
   },
   {
@@ -150,7 +150,7 @@ export const teams: Teams[] = [
     games: [],
     game_counter: 0,
     logo: scb,
-    background_color: "scb",
+    background_color: "#000000",
     sheet_background_color: "swi",
   },
   {
@@ -167,7 +167,7 @@ export const teams: Teams[] = [
     games: [],
     game_counter: 0,
     logo: tap,
-    background_color: "tap",
+    background_color: "#ffffff",
     sheet_background_color: "fin",
   },
   {
@@ -184,7 +184,7 @@ export const teams: Teams[] = [
     games: [],
     game_counter: 0,
     logo: pel,
-    background_color: "pel",
+    background_color: "#e6e6e6",
     sheet_background_color: "fin",
   },
   {
@@ -201,7 +201,7 @@ export const teams: Teams[] = [
     games: [],
     game_counter: 0,
     logo: ifk,
-    background_color: "ifk",
+    background_color: "#b30210",
     sheet_background_color: "fin",
   },
   {
@@ -218,7 +218,7 @@ export const teams: Teams[] = [
     games: [],
     game_counter: 0,
     logo: ilv,
-    background_color: "ilv",
+    background_color: "#000000",
     sheet_background_color: "fin",
   },
   {
@@ -235,7 +235,7 @@ export const teams: Teams[] = [
     games: [],
     game_counter: 0,
     logo: rbm,
-    background_color: "rbm",
+    background_color: "#000080",
     sheet_background_color: "ger",
   },
   {
@@ -252,7 +252,7 @@ export const teams: Teams[] = [
     games: [],
     game_counter: 0,
     logo: man,
-    background_color: "man",
+    background_color: "#ffffff",
     sheet_background_color: "ger",
   },
   {
@@ -269,7 +269,7 @@ export const teams: Teams[] = [
     games: [],
     game_counter: 0,
     logo: deg,
-    background_color: "deg",
+    background_color: "#f6d12a",
     sheet_background_color: "ger",
   },
   {
@@ -286,7 +286,7 @@ export const teams: Teams[] = [
     games: [],
     game_counter: 0,
     logo: kec,
-    background_color: "kec",
+    background_color: "#e30613",
     sheet_background_color: "ger",
   },
 ];
