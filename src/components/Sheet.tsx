@@ -1,5 +1,5 @@
 import { Table } from "antd";
-import teamsUpdate from "../components/Game";
+// import teamsUpdate from "../components/Game";
 import { teams } from "../data/teams";
 
 const columns = [
