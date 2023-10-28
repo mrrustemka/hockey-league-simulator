@@ -17,6 +17,15 @@
   text-align: center;
 }
 
+.panel-score {
+  width: 24%;
+  margin: 0 auto;
+}
+
+.panel-score h1 {
+  display: inline;
+}
+
 /* .aik {
   background-color: #010101;
 } */

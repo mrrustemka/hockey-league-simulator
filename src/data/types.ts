@@ -23,4 +23,3 @@ export type Schedule = {
   away: string;
   home: string;
 };
-
