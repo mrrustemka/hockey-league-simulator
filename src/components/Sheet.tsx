@@ -1,6 +1,9 @@
 import { Table } from "antd";
+import { useState } from "react";
+import { Teams } from "../data/types";
 // import teamsUpdate from "../components/Game";
-import { teams } from "../data/teams";
+// import { teams } from "../data/teams";
+// import { v4 as uuidv4 } from "uuid";
 
 const columns = [
   {
@@ -52,10 +55,12 @@ const columns = [
   },
 ];
 
-export function Sheet() {
+export function Sheet({ teams }: any) {
+  const [teamsData, setTeamsData] = useState<Teams[]>(teams);
+  // setTeamsData(teams);
   return (
     <Table
-      dataSource={teams}
+      dataSource={teamsData}
       columns={columns}
       pagination={false}
       size="small"

@@ -3,13 +3,14 @@ import { Button, Card, Col, Row, Typography } from "antd";
 import { teams } from "../data/teams";
 import { Schedule, Teams } from "../data/types";
 import { schedule, scheduleList } from "../data/schedule";
+import Sheet from "./Sheet";
 
 const { Meta } = Card;
 const { Title } = Typography;
 schedule();
 
 export function Game() {
-  const [teamsUpdate, setTeamsUpdate] = useState<Teams[]>(teams);
+  let [teamsUpdate, setTeamsUpdate] = useState<Teams[]>(teams);
   let [gameCounter, setGameCounter] = useState<number>(0);
   let [homeGoals, setHomeGoals] = useState<number>(0);
   let [awayGoals, setAwayGoals] = useState<number>(0);
@@ -158,118 +159,146 @@ export function Game() {
   if (scheduleList && gameCounter < scheduleList.length) {
     return (
       <div>
-        <Row className="row-panel-cards">
+        <Row>
           <Col span={12}>
-            <Card
-              hoverable
-              style={{
-                width: 240,
-              }}
-              cover={
-                <img
-                  alt={
-                    teams.find(
-                      (element) =>
-                        element.abbreviation === scheduleList[gameCounter].away
-                    )?.name + "Logo"
-                  }
-                  src={
-                    teams.find(
-                      (element) =>
-                        element.abbreviation === scheduleList[gameCounter].away
-                    )?.logo
-                  }
-                  style={{
-                    background: teams.find(
-                      (element) =>
-                        element.abbreviation === scheduleList[gameCounter].away
-                    )?.background_color,
-                  }}
-                />
-              }
-            >
-              <Meta
-                title={
-                  teams.find(
-                    (element) =>
-                      element.abbreviation === scheduleList[gameCounter].away
-                  )?.abbreviation
-                }
-                description={
-                  teams.find(
-                    (element) =>
-                      element.abbreviation === scheduleList[gameCounter].away
-                  )?.city
-                }
-              />
-            </Card>
+            <Sheet teams={teamsUpdate} />
           </Col>
           <Col span={12}>
-            <Card
-              hoverable
-              style={{
-                width: 240,
-              }}
-              cover={
-                <img
-                  alt={
-                    teams.find(
-                      (element) =>
-                        element.abbreviation === scheduleList[gameCounter].home
-                    )?.name + "Logo"
-                  }
-                  src={
-                    teams.find(
-                      (element) =>
-                        element.abbreviation === scheduleList[gameCounter].home
-                    )?.logo
-                  }
+            <Row className="row-panel-cards">
+              <Col span={12}>
+                <Card
+                  hoverable
                   style={{
-                    background: teams.find(
-                      (element) =>
-                        element.abbreviation === scheduleList[gameCounter].home
-                    )?.background_color,
+                    width: 240,
                   }}
-                />
-              }
-            >
-              <Meta
-                title={
-                  teams.find(
-                    (element) =>
-                      element.abbreviation === scheduleList[gameCounter].home
-                  )?.abbreviation
-                }
-                description={
-                  teams.find(
-                    (element) =>
-                      element.abbreviation === scheduleList[gameCounter].home
-                  )?.city
-                }
-              />
-            </Card>
-          </Col>
-        </Row>
-        <Row className="panel-score">
-          <Col span={24} className="panel-simulate">
-            <Card hoverable>
-              <Title>{awayGoals}</Title>
-              <Title>-</Title>
-              <Title>{homeGoals}</Title>
-              <Title level={2}>{typeOfOt}</Title>
-            </Card>
-          </Col>
-        </Row>
-        <Row className="row-panel-simulate">
-          <Col span={24} className="panel-simulate">
-            <Button onClick={buttonHandler}>Simulate</Button>
-            <Button onClick={updateCounter}>Next Game</Button>
+                  cover={
+                    <img
+                      alt={
+                        teams.find(
+                          (element) =>
+                            element.abbreviation ===
+                            scheduleList[gameCounter].away
+                        )?.name + "Logo"
+                      }
+                      src={
+                        teams.find(
+                          (element) =>
+                            element.abbreviation ===
+                            scheduleList[gameCounter].away
+                        )?.logo
+                      }
+                      style={{
+                        background: teams.find(
+                          (element) =>
+                            element.abbreviation ===
+                            scheduleList[gameCounter].away
+                        )?.background_color,
+                      }}
+                    />
+                  }
+                >
+                  <Meta
+                    title={
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].away
+                      )?.abbreviation
+                    }
+                    description={
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].away
+                      )?.city
+                    }
+                  />
+                </Card>
+              </Col>
+              <Col span={12}>
+                <Card
+                  hoverable
+                  style={{
+                    width: 240,
+                  }}
+                  cover={
+                    <img
+                      alt={
+                        teams.find(
+                          (element) =>
+                            element.abbreviation ===
+                            scheduleList[gameCounter].home
+                        )?.name + "Logo"
+                      }
+                      src={
+                        teams.find(
+                          (element) =>
+                            element.abbreviation ===
+                            scheduleList[gameCounter].home
+                        )?.logo
+                      }
+                      style={{
+                        background: teams.find(
+                          (element) =>
+                            element.abbreviation ===
+                            scheduleList[gameCounter].home
+                        )?.background_color,
+                      }}
+                    />
+                  }
+                >
+                  <Meta
+                    title={
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].home
+                      )?.abbreviation
+                    }
+                    description={
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].home
+                      )?.city
+                    }
+                  />
+                </Card>
+              </Col>
+            </Row>
+            <Row className="panel-score">
+              <Col span={24} className="panel-simulate">
+                <Card hoverable>
+                  <Title>{awayGoals}</Title>
+                  <Title>-</Title>
+                  <Title>{homeGoals}</Title>
+                  <Title level={2}>{typeOfOt}</Title>
+                </Card>
+              </Col>
+            </Row>
+            <Row className="row-panel-simulate">
+              <Col span={24} className="panel-simulate">
+                <Button onClick={buttonHandler}>Simulate</Button>
+                <Button onClick={updateCounter}>Next Game</Button>
+              </Col>
+            </Row>
           </Col>
         </Row>
       </div>
     );
   } else {
-    return <div>There is now Games</div>;
+    return (
+      <div>
+        <Row>
+          <Col span={12}>
+            <Sheet teams={teamsUpdate} />
+          </Col>
+          <Col span={12}>
+            <Title>There are no Games</Title>
+          </Col>
+        </Row>
+      </div>
+    );
   }
 }
 
