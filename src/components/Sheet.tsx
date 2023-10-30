@@ -5,55 +5,56 @@ import { Teams } from "../data/types";
 // import { teams } from "../data/teams";
 // import { v4 as uuidv4 } from "uuid";
 
-const columns = [
-  {
-    title: "Team",
-    dataIndex: "name",
-    key: "name",
-  },
-  {
-    title: "Rating",
-    dataIndex: "rating",
-    key: "rating",
-    sorter: (a: { rating: number }, b: { rating: number }) =>
-      a.rating - b.rating,
-  },
-  {
-    title: "City",
-    dataIndex: "city",
-    key: "city",
-  },
-  {
-    title: "G",
-    dataIndex: "game_counter",
-    key: "game_counter",
-    sorter: {
-      compare: (a: { game_counter: number }, b: { game_counter: number }) =>
-        b.game_counter - a.game_counter,
-      multiple: 2,
-    },
-  },
-  {
-    title: "P",
-    dataIndex: "points",
-    key: "points",
-    sorter: {
-      compare: (a: { points: number }, b: { points: number }) =>
-        a.points - b.points,
-      multiple: 3,
-    },
-  },
-  {
-    title: "GF/GA",
-    dataIndex: "goals_diff",
-    key: "goals_diff",
-    sorter: {
-      compare: (a: { goals_diff: number }, b: { goals_diff: number }) =>
-        a.goals_diff - b.goals_diff,
-      multiple: 1,
-    },
-  },
-];
+const { Column } = Table;
+// const columns = [
+//   {
+//     title: "Team",
+//     dataIndex: "name",
+//     key: "name",
+//   },
+//   {
+//     title: "Rating",
+//     dataIndex: "rating",
+//     key: "rating",
+//     sorter: (a: { rating: number }, b: { rating: number }) =>
+//       a.rating - b.rating,
+//   },
+//   {
+//     title: "City",
+//     dataIndex: "city",
+//     key: "city",
+//   },
+//   {
+//     title: "G",
+//     dataIndex: "game_counter",
+//     key: "game_counter",
+//     sorter: {
+//       compare: (a: { game_counter: number }, b: { game_counter: number }) =>
+//         b.game_counter - a.game_counter,
+//       multiple: 2,
+//     },
+//   },
+//   {
+//     title: "P",
+//     dataIndex: "points",
+//     key: "points",
+//     sorter: {
+//       compare: (a: { points: number }, b: { points: number }) =>
+//         a.points - b.points,
+//       multiple: 3,
+//     },
+//   },
+//   {
+//     title: "GF/GA",
+//     dataIndex: "goals_diff",
+//     key: "goals_diff",
+//     sorter: {
+//       compare: (a: { goals_diff: number }, b: { goals_diff: number }) =>
+//         a.goals_diff - b.goals_diff,
+//       multiple: 1,
+//     },
+//   },
+// ];
 
 export function Sheet({ teams }: any) {
   const [teamsData, setTeamsData] = useState<Teams[]>(teams);
@@ -61,10 +62,51 @@ export function Sheet({ teams }: any) {
   return (
     <Table
       dataSource={teamsData}
-      columns={columns}
+      // columns={columns}
       pagination={false}
       size="small"
-    />
+    >
+      <Column title="Team" dataIndex="name" key="name" />
+      <Column
+        title="Rating"
+        dataIndex="rating"
+        key="rating"
+        sorter={(a: { rating: number }, b: { rating: number }) =>
+          a.rating - b.rating
+        }
+      />
+      <Column title="City" dataIndex="city" key="city" />
+      <Column
+        title="G"
+        dataIndex="game_counter"
+        key="game_counter"
+        sorter={{
+          compare: (a: { game_counter: number }, b: { game_counter: number }) =>
+            b.game_counter - a.game_counter,
+          multiple: 2,
+        }}
+      />
+      <Column
+        title="P"
+        dataIndex="points"
+        key="points"
+        sorter={{
+          compare: (a: { points: number }, b: { points: number }) =>
+            a.points - b.points,
+          multiple: 3,
+        }}
+      />
+      <Column
+        title="GF/GA"
+        dataIndex="goals_diff"
+        key="goals_diff"
+        sorter={{
+          compare: (a: { goals_diff: number }, b: { goals_diff: number }) =>
+            a.goals_diff - b.goals_diff,
+          multiple: 1,
+        }}
+      />
+    </Table>
   );
 }
 
