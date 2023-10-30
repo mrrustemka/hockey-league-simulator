@@ -37,6 +37,10 @@ body {
   border-radius: revert !important;
 }
 
+.panel-simulate button {
+  margin: 8px;
+}
+
 /* .aik {
   background-color: #010101;
 } */
@@ -101,7 +105,7 @@ body {
   background-color: #e30613;
 } */
 
-/* .ger {
+.ger {
   background-color: #f9a94d !important;
 }
 
@@ -115,4 +119,4 @@ body {
 
 .swe {
   background-color: #eaff8d !important;
-} */
+}
