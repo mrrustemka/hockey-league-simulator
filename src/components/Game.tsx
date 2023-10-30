@@ -272,19 +272,27 @@ export function Game() {
             <Row className="panel-score">
               <Col span={24} className="panel-simulate">
                 <Card hoverable>
-                  <Title>{awayGoals}</Title>
+                  <Title>{isSimulate ? awayGoals : " "}</Title>
                   <Title>-</Title>
-                  <Title>{homeGoals}</Title>
-                  <Title level={2}>{typeOfOt}</Title>
+                  <Title>{isSimulate ? homeGoals : " "}</Title>
+                  <Title level={2}>{isSimulate? typeOfOt : ''}</Title>
                 </Card>
               </Col>
             </Row>
             <Row className="row-panel-simulate">
               <Col span={24} className="panel-simulate">
-                <Button onClick={buttonHandler} disabled={isSimulate}>
+                <Button
+                  onClick={buttonHandler}
+                  disabled={isSimulate}
+                  size="large"
+                >
                   Simulate
                 </Button>
-                <Button onClick={updateCounter} disabled={!isSimulate}>
+                <Button
+                  onClick={updateCounter}
+                  disabled={!isSimulate}
+                  size="large"
+                >
                   Next Game
                 </Button>
               </Col>

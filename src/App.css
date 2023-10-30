@@ -41,6 +41,20 @@ body {
   margin: 8px;
 }
 
+.panel-simulate button:hover {
+  border: white;
+  color: black;
+}
+
+.panel-simulate button:hover > span {
+  color: black !important;
+}
+
+:where(.css-dev-only-do-not-override-xu9wm8).ant-btn-default:disabled,
+:where(.css-dev-only-do-not-override-xu9wm8).ant-btn-default.ant-btn-disabled {
+  color: white;
+}
+
 /* .aik {
   background-color: #010101;
 } */
