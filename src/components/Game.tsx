@@ -15,13 +15,16 @@ export function Game() {
   let [homeGoals, setHomeGoals] = useState<number>(0);
   let [awayGoals, setAwayGoals] = useState<number>(0);
   let [typeOfOt, setTypeOfOt] = useState<string>("");
+  const [isSimulate, setIsSimulate] = useState<boolean>(false);
 
   const updateCounter = () => {
     setGameCounter(gameCounter + 1);
+    setIsSimulate(false);
   };
 
   const buttonHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
     Simulate(scheduleList[gameCounter]);
+    setIsSimulate(true);
   };
 
   function Simulate(game: Schedule) {
@@ -278,8 +281,12 @@ export function Game() {
             </Row>
             <Row className="row-panel-simulate">
               <Col span={24} className="panel-simulate">
-                <Button onClick={buttonHandler}>Simulate</Button>
-                <Button onClick={updateCounter}>Next Game</Button>
+                <Button onClick={buttonHandler} disabled={isSimulate}>
+                  Simulate
+                </Button>
+                <Button onClick={updateCounter} disabled={!isSimulate}>
+                  Next Game
+                </Button>
               </Col>
             </Row>
           </Col>
