@@ -72,6 +72,24 @@ body {
   color: #ffffff;
 }
 
+.table-points,
+.table-points:hover {
+  background-color: #d0e6f5 !important;
+}
+
+th {
+  font-weight: 700 !important;
+}
+
+.table-team-logo,
+.table-team-name {
+  display: inline;
+}
+
+.table-team-name {
+  font-size: 20px;
+}
+
 /* .aik {
   background-color: #010101;
 } */

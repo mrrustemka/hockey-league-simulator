@@ -1,15 +1,33 @@
 import { Table } from "antd";
 import { useState } from "react";
 import { Teams } from "../data/types";
-
-const { Column } = Table;
+import kec from "../images/aik.png";
 
 export function Sheet({ teams }: any) {
   const [teamsData, setTeamsData] = useState<Teams[]>(teams);
   return (
     <Table dataSource={teamsData} pagination={false} size="small">
-      <Column title="Team" dataIndex="name" key="name" />
-      <Column
+      <Table.Column title="Rank" dataIndex="" key="rank" />
+      <Table.Column
+        title="Team"
+        dataIndex="name"
+        key="name"
+        render={(dataIndex) => {
+          const logo = teamsData.find((item) => item.name === dataIndex)?.logo;
+          return (
+            <div>
+              <img
+                src={logo}
+                alt={dataIndex + " Logo"}
+                width={"16px"}
+                className="table-team-logo"
+              />
+              <p className="table-team-name">{" " + dataIndex}</p>
+            </div>
+          );
+        }}
+      />
+      <Table.Column
         title="Rating"
         dataIndex="rating"
         key="rating"
@@ -17,8 +35,8 @@ export function Sheet({ teams }: any) {
           a.rating - b.rating
         }
       />
-      <Column title="City" dataIndex="city" key="city" />
-      <Column
+      <Table.Column title="City" dataIndex="city" key="city" />
+      <Table.Column
         title="G"
         dataIndex="game_counter"
         key="game_counter"
@@ -28,7 +46,7 @@ export function Sheet({ teams }: any) {
           multiple: 2,
         }}
       />
-      <Column
+      <Table.Column
         title="P"
         dataIndex="points"
         key="points"
@@ -37,8 +55,9 @@ export function Sheet({ teams }: any) {
             a.points - b.points,
           multiple: 3,
         }}
+        className="table-points"
       />
-      <Column
+      <Table.Column
         title="GF/GA"
         dataIndex="goals_diff"
         key="goals_diff"
