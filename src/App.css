@@ -42,17 +42,29 @@ body {
 }
 
 .panel-simulate button:hover {
-  border: white;
-  color: black;
+  border: #ffffff;
+  color: #000000;
 }
 
 .panel-simulate button:hover > span {
-  color: black !important;
+  color: #000000 !important;
 }
 
 :where(.css-dev-only-do-not-override-xu9wm8).ant-btn-default:disabled,
 :where(.css-dev-only-do-not-override-xu9wm8).ant-btn-default.ant-btn-disabled {
-  color: white;
+  color: #ffffff;
+}
+
+.header {
+  height: 60px;
+  background: #000000;
+  color: #ffffff;
+  padding: 20px 40px;
+}
+
+.header h1 {
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* .aik {
