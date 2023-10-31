@@ -16,6 +16,7 @@ export function Game() {
   let [awayGoals, setAwayGoals] = useState<number>(0);
   let [typeOfOt, setTypeOfOt] = useState<string>("");
   const [isSimulate, setIsSimulate] = useState<boolean>(false);
+  const [gameIndex, setGameIndex] = useState<number>(0);
 
   const updateCounter = () => {
     setGameCounter(gameCounter + 1);
@@ -29,6 +30,7 @@ export function Game() {
 
   function Simulate(game: Schedule) {
     setTypeOfOt((typeOfOt = ""));
+    setGameIndex(scheduleList.indexOf(game) + 1);
     let home: Teams = {
       id: 0,
       name: "",
@@ -275,7 +277,7 @@ export function Game() {
                   <Title>{isSimulate ? awayGoals : " "}</Title>
                   <Title>-</Title>
                   <Title>{isSimulate ? homeGoals : " "}</Title>
-                  <Title level={2}>{isSimulate? typeOfOt : ''}</Title>
+                  <Title level={2}>{isSimulate ? typeOfOt : ""}</Title>
                 </Card>
               </Col>
             </Row>
@@ -295,6 +297,11 @@ export function Game() {
                 >
                   Next Game
                 </Button>
+              </Col>
+              <Col span={24} className="panel-counter">
+                <Title level={3}>
+                  {gameIndex}/{scheduleList.length}
+                </Title>
               </Col>
             </Row>
           </Col>

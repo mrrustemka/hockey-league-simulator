@@ -41,5 +41,4 @@ export function schedule() {
     }
     return teamInfo;
   });
-  // console.log(scheduleList);
 }
