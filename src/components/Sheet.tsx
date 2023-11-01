@@ -44,7 +44,7 @@ export function Sheet({ teams }: any) {
         className="table-column-stats"
       />
       <Table.Column
-        title="G"
+        title="GP"
         dataIndex="game_counter"
         key="game_counter"
         sorter={{
@@ -55,7 +55,7 @@ export function Sheet({ teams }: any) {
         className="table-column-stats"
       />
       <Table.Column
-        title="P"
+        title="PTS"
         dataIndex="points"
         key="points"
         sorter={{
