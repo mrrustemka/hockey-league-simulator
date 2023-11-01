@@ -5,6 +5,7 @@ import { Teams } from "../data/types";
 export function Sheet({ teams }: any) {
   const [teamsData, setTeamsData] = useState<Teams[]>(teams);
   let rank: number = 0;
+  console.log(rank);
 
   return (
     <Table dataSource={teamsData} pagination={false} size="small">
@@ -16,7 +17,7 @@ export function Sheet({ teams }: any) {
           rank++;
           return (
             <div>
-              <p>{rank}</p>
+              <p>{rank > teams.length ? (rank = 0) : rank}</p>
             </div>
           );
         }}
