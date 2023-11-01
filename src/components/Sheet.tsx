@@ -1,10 +1,10 @@
 import { Table } from "antd";
 import { useState } from "react";
 import { Teams } from "../data/types";
-import kec from "../images/aik.png";
 
 export function Sheet({ teams }: any) {
   const [teamsData, setTeamsData] = useState<Teams[]>(teams);
+
   return (
     <Table dataSource={teamsData} pagination={false} size="small">
       <Table.Column title="Rank" dataIndex="" key="rank" />
@@ -73,6 +73,23 @@ export function Sheet({ teams }: any) {
           compare: (a: { goals_diff: number }, b: { goals_diff: number }) =>
             a.goals_diff - b.goals_diff,
           multiple: 1,
+        }}
+        render={(dataIndex) => {
+          return (
+            <div>
+              <p
+                className={
+                  dataIndex > 0
+                    ? "table-column-diff-positive"
+                    : dataIndex === 0
+                    ? ""
+                    : "table-column-diff-negative"
+                }
+              >
+                {dataIndex > 0 ? "+" + dataIndex : dataIndex}
+              </p>
+            </div>
+          );
         }}
         className="table-column-stats"
       />

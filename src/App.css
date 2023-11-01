@@ -100,6 +100,14 @@ th {
   text-align: center;
 }
 
+.table-column-diff-positive {
+  color: rgb(75, 148, 72);
+}
+
+.table-column-diff-negative {
+  color: rgb(208, 2, 27);
+}
+
 /* .aik {
   background-color: #010101;
 } */
