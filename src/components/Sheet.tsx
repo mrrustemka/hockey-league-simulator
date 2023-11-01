@@ -61,6 +61,7 @@ export function Sheet({ teams }: any) {
         title="GP"
         dataIndex="game_counter"
         key="game_counter"
+        defaultSortOrder="descend"
         sorter={{
           compare: (a: { game_counter: number }, b: { game_counter: number }) =>
             b.game_counter - a.game_counter,
@@ -72,6 +73,7 @@ export function Sheet({ teams }: any) {
         title="PTS"
         dataIndex="points"
         key="points"
+        defaultSortOrder="descend"
         sorter={{
           compare: (a: { points: number }, b: { points: number }) =>
             a.points - b.points,
@@ -83,6 +85,7 @@ export function Sheet({ teams }: any) {
         title="DIFF"
         dataIndex="goals_diff"
         key="goals_diff"
+        defaultSortOrder="descend"
         sorter={{
           compare: (a: { goals_diff: number }, b: { goals_diff: number }) =>
             a.goals_diff - b.goals_diff,
