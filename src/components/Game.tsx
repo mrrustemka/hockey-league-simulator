@@ -42,12 +42,8 @@ export function Game() {
       goals_against: 0,
       goals_diff: 0,
       rating: 0,
-      stadiumCapacity: 0,
-      games: [""],
       game_counter: 0,
       logo: "",
-      background_color: "",
-      sheet_background_color: "",
     };
     let away: Teams = {
       id: 0,
@@ -60,12 +56,8 @@ export function Game() {
       goals_against: 0,
       goals_diff: 0,
       rating: 0,
-      stadiumCapacity: 0,
-      games: [""],
       game_counter: 0,
       logo: "",
-      background_color: "",
-      sheet_background_color: "",
     };
 
     const homeType: Teams | undefined = teams.find(
@@ -192,13 +184,6 @@ export function Game() {
                             scheduleList[gameCounter].away
                         )?.logo
                       }
-                      style={{
-                        background: teams.find(
-                          (element) =>
-                            element.abbreviation ===
-                            scheduleList[gameCounter].away
-                        )?.background_color,
-                      }}
                     />
                   }
                 >
@@ -242,13 +227,6 @@ export function Game() {
                             scheduleList[gameCounter].home
                         )?.logo
                       }
-                      style={{
-                        background: teams.find(
-                          (element) =>
-                            element.abbreviation ===
-                            scheduleList[gameCounter].home
-                        )?.background_color,
-                      }}
                     />
                   }
                 >
