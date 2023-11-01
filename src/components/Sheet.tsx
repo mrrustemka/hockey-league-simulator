@@ -22,10 +22,11 @@ export function Sheet({ teams }: any) {
                 width={"16px"}
                 className="table-team-logo"
               />
-              <p className="table-team-name">{" " + dataIndex}</p>
+              <p className="table-column-name">{" " + dataIndex}</p>
             </div>
           );
         }}
+        className="column-name"
       />
       <Table.Column
         title="Rating"
@@ -34,8 +35,14 @@ export function Sheet({ teams }: any) {
         sorter={(a: { rating: number }, b: { rating: number }) =>
           a.rating - b.rating
         }
+        className="table-column-stats"
       />
-      <Table.Column title="City" dataIndex="city" key="city" />
+      <Table.Column
+        title="City"
+        dataIndex="city"
+        key="city"
+        className="table-column-stats"
+      />
       <Table.Column
         title="G"
         dataIndex="game_counter"
@@ -45,6 +52,7 @@ export function Sheet({ teams }: any) {
             b.game_counter - a.game_counter,
           multiple: 2,
         }}
+        className="table-column-stats"
       />
       <Table.Column
         title="P"
@@ -55,10 +63,10 @@ export function Sheet({ teams }: any) {
             a.points - b.points,
           multiple: 3,
         }}
-        className="table-points"
+        className="table-column-points table-table-column-stats"
       />
       <Table.Column
-        title="GF/GA"
+        title="DIFF"
         dataIndex="goals_diff"
         key="goals_diff"
         sorter={{
@@ -66,6 +74,7 @@ export function Sheet({ teams }: any) {
             a.goals_diff - b.goals_diff,
           multiple: 1,
         }}
+        className="table-column-stats"
       />
     </Table>
   );

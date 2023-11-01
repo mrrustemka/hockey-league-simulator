@@ -72,22 +72,32 @@ body {
   color: #ffffff;
 }
 
-.table-points,
-.table-points:hover {
+.table-column-points,
+.table-column-points:hover {
   background-color: #d0e6f5 !important;
+  text-align: center;
 }
 
 th {
   font-weight: 700 !important;
+  text-align: center !important;
+}
+
+.column-name {
+  text-align: left !important;
 }
 
 .table-team-logo,
-.table-team-name {
+.table-column-name {
   display: inline;
 }
 
-.table-team-name {
+.table-column-name {
   font-size: 20px;
+}
+
+.table-column-stats {
+  text-align: center;
 }
 
 /* .aik {
