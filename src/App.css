@@ -92,6 +92,10 @@ th {
   display: inline;
 }
 
+.table-team-logo {
+  border-radius: 50%;
+}
+
 .table-column-name {
   font-size: 20px;
 }
