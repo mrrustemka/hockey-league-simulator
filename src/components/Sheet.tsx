@@ -4,10 +4,23 @@ import { Teams } from "../data/types";
 
 export function Sheet({ teams }: any) {
   const [teamsData, setTeamsData] = useState<Teams[]>(teams);
+  let rank: number = 0;
 
   return (
     <Table dataSource={teamsData} pagination={false} size="small">
-      <Table.Column title="Rank" dataIndex="" key="rank" />
+      <Table.Column
+        title="Rank"
+        dataIndex=""
+        key="rank"
+        render={() => {
+          rank++;
+          return (
+            <div>
+              <p>{rank}</p>
+            </div>
+          );
+        }}
+      />
       <Table.Column
         title="Team"
         dataIndex="name"
