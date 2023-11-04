@@ -24,16 +24,16 @@ export function Game() {
   };
 
   const buttonHandler = () => {
-    let res: GameResult | undefined = Simulate(scheduleList[gameCounter]);
-    console.log(res);
-    if (res) {
-      setHomeGoals(res.homeGoals);
-      setAwayGoals(res.awayGoals);
+    let lastGame: GameResult | undefined = Simulate(scheduleList[gameCounter]);
+    console.log(gameIndex + 1, lastGame);
+    if (lastGame) {
+      setHomeGoals(lastGame.homeGoals);
+      setAwayGoals(lastGame.awayGoals);
+      setTypeOfOt(lastGame.overtime);
     }
   };
 
   function Simulate(game: Schedule) {
-    setTypeOfOt("");
     setGameIndex(scheduleList.indexOf(game) + 1);
     let home: Teams = {
       id: 0,
@@ -80,6 +80,8 @@ export function Game() {
     if (awayType !== undefined) {
       away = awayType;
     }
+    console.log("awayType", awayType);
+
     //Goals
     let hGoals: number = Math.round((getGoals(0, 9) * home.rating) / 100);
     let aGoals: number = Math.round((getGoals(0, 9) * away.rating) / 100);
@@ -87,15 +89,13 @@ export function Game() {
     // Make more realistic game score
 
     if (hGoals - aGoals >= 4 || aGoals - hGoals >= 4) {
-      if (Math.random() > 0.9) {
-        return;
-      } else {
+      if (Math.random() < 0.9) {
         aGoals += 1;
       }
     }
 
     // OT or S/O
-
+    let overtime: string = "";
     if (hGoals === aGoals) {
       if (Math.random() > 0.5) {
         hGoals += 1;
@@ -105,9 +105,9 @@ export function Game() {
         home.points += 1;
       }
       if (Math.random() > 0.5) {
-        setTypeOfOt("Overtime");
+        overtime = "Overtime";
       } else {
-        setTypeOfOt("Shootout");
+        overtime = "Shootout";
       }
     }
 
@@ -130,23 +130,12 @@ export function Game() {
     away.game_counter += 1;
     away.goals_diff += away.goals_for - away.goals_against;
 
-    // console.log(
-    //   home.abbreviation,
-    //   " - ",
-    //   away.abbreviation,
-    //   " :",
-    //   hGoals,
-    //   " - ",
-    //   aGoals,
-    //   typeOfOt
-    // );
-
     let result: GameResult = {
       home: home.abbreviation,
       away: away.abbreviation,
       homeGoals: hGoals,
       awayGoals: aGoals,
-      overtime: typeOfOt,
+      overtime: overtime,
     };
     setTeamsUpdate(teams);
     setIsSimulate(true);

@@ -1,11 +1,16 @@
 import { Table } from "antd";
 import { useState } from "react";
 import { Teams } from "../data/types";
+import { teams } from "../data/teams";
 
-export function Sheet({ teams }: any) {
+export function Sheet({ newTeams }: any) {
   const [teamsData, setTeamsData] = useState<Teams[]>(teams);
+  // setTeamsData(newTeams);
+
+  if (newTeams === teams) {
+    setTeamsData(newTeams);
+  }
   let rank: number = 0;
-  console.log(rank);
 
   return (
     <Table dataSource={teamsData} pagination={false} size="small">
