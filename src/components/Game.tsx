@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Card, Col, Row, Typography } from "antd";
 import { teams } from "../data/teams";
-import { Schedule, Teams } from "../data/types";
+import { GameResult, Schedule, Teams } from "../data/types";
 import { schedule, scheduleList } from "../data/schedule";
 import Sheet from "./Sheet";
 
@@ -24,7 +24,12 @@ export function Game() {
   };
 
   const buttonHandler = () => {
-    Simulate(scheduleList[gameCounter]);
+    let res: GameResult | undefined = Simulate(scheduleList[gameCounter]);
+    console.log(res);
+    if (res) {
+      setHomeGoals(res.homeGoals);
+      setAwayGoals(res.awayGoals);
+    }
   };
 
   function Simulate(game: Schedule) {
@@ -67,8 +72,6 @@ export function Game() {
     );
     if (homeType !== undefined) {
       home = homeType;
-    } else {
-      return console.log("Error with home team", homeType);
     }
 
     const awayType: Teams | undefined = teams.find(
@@ -76,34 +79,29 @@ export function Game() {
     );
     if (awayType !== undefined) {
       away = awayType;
-    } else {
-      return console.log("Error with away team", awayType);
     }
-
     //Goals
-
-    setHomeGoals(Math.round((getGoals(0, 9) * home.rating) / 100));
-    setAwayGoals(Math.round((getGoals(0, 9) * away.rating) / 100));
+    let hGoals: number = Math.round((getGoals(0, 9) * home.rating) / 100);
+    let aGoals: number = Math.round((getGoals(0, 9) * away.rating) / 100);
 
     // Make more realistic game score
 
-    if (homeGoals - awayGoals >= 4 || awayGoals - homeGoals >= 4) {
-      let ran: number = Math.random();
-      if (ran > 0.9) {
+    if (hGoals - aGoals >= 4 || aGoals - hGoals >= 4) {
+      if (Math.random() > 0.9) {
         return;
       } else {
-        setHomeGoals(awayGoals + 1);
+        aGoals += 1;
       }
     }
 
     // OT or S/O
 
-    if (homeGoals === awayGoals) {
+    if (hGoals === aGoals) {
       if (Math.random() > 0.5) {
-        setHomeGoals(homeGoals + 1);
+        hGoals += 1;
         away.points += 1;
       } else {
-        setAwayGoals(awayGoals + 1);
+        aGoals += 1;
         home.points += 1;
       }
       if (Math.random() > 0.5) {
@@ -115,7 +113,7 @@ export function Game() {
 
     // Points
 
-    if (homeGoals > awayGoals) {
+    if (hGoals > aGoals) {
       home.points += 2;
     } else {
       away.points += 2;
@@ -132,18 +130,27 @@ export function Game() {
     away.game_counter += 1;
     away.goals_diff += away.goals_for - away.goals_against;
 
-    console.log(
-      home.abbreviation,
-      " - ",
-      away.abbreviation,
-      " :",
-      homeGoals,
-      " - ",
-      awayGoals,
-      typeOfOt
-    );
+    // console.log(
+    //   home.abbreviation,
+    //   " - ",
+    //   away.abbreviation,
+    //   " :",
+    //   hGoals,
+    //   " - ",
+    //   aGoals,
+    //   typeOfOt
+    // );
+
+    let result: GameResult = {
+      home: home.abbreviation,
+      away: away.abbreviation,
+      homeGoals: hGoals,
+      awayGoals: aGoals,
+      overtime: typeOfOt,
+    };
     setTeamsUpdate(teams);
     setIsSimulate(true);
+    return result;
   }
 
   if (scheduleList && gameCounter < scheduleList.length) {
