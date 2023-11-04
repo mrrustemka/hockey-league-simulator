@@ -23,7 +23,7 @@ export function Game() {
     setIsSimulate(false);
   };
 
-  const buttonHandler = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const buttonHandler = () => {
     Simulate(scheduleList[gameCounter]);
     setIsSimulate(true);
   };
