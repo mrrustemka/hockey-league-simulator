@@ -136,7 +136,7 @@ export function Game() {
       awayGoals: aGoals,
       overtime: overtime,
     };
-    setTeamsUpdate(teams);
+    setTeamsUpdate(teamsSort(teams));
     setIsSimulate(true);
     return result;
   }
@@ -150,8 +150,12 @@ export function Game() {
           ? -1
           : team1.game_counter === team2.game_counter
           ? team1.goals_diff > team2.goals_diff
-            ? team1.goals_diff === team2.goals_diff
-              ? team1.rating > team2.rating
+            ? -1
+              ? team1.goals_diff === team2.goals_diff
+                ? team1.rating > team2.rating
+                  ? -1
+                  : 1
+                : 1
                 ? -1
                 : 1
               : 1
@@ -166,7 +170,7 @@ export function Game() {
       <div>
         <Row>
           <Col span={12}>
-            <Sheet teams={teamsUpdate} />
+            <Sheet newTeams={teamsUpdate} />
           </Col>
           <Col span={12}>
             <Row className="row-panel-cards">
@@ -263,7 +267,7 @@ export function Game() {
                   <Title>{isSimulate ? awayGoals : " "}</Title>
                   <Title>-</Title>
                   <Title>{isSimulate ? homeGoals : " "}</Title>
-                  <Title level={2}>{isSimulate ? typeOfOt : ""}</Title>
+                  <Title level={3}>{isSimulate ? typeOfOt : ""}</Title>
                 </Card>
               </Col>
             </Row>
@@ -295,17 +299,16 @@ export function Game() {
       </div>
     );
   } else {
-    let champion: string = teamsSort(teamsUpdate)[0].name;
-
+    const champion: string = teamsSort(teamsUpdate)[0].name;
     return (
       <div>
         <Row>
           <Col span={12}>
-            <Sheet teams={teamsUpdate} />
+            <Sheet newTeams={teamsUpdate} />
           </Col>
           <Col span={12}>
             <Title style={{ color: "#ffffff" }}>
-              There are no Games. The Champion is :
+              There are no Games. The Champion is
             </Title>
             <Title style={{ color: "#ffffff" }}>{champion}</Title>
           </Col>

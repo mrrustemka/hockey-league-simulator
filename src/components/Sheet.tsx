@@ -5,11 +5,10 @@ import { teams } from "../data/teams";
 
 export function Sheet({ newTeams }: any) {
   const [teamsData, setTeamsData] = useState<Teams[]>(teams);
-  // setTeamsData(newTeams);
-
-  if (newTeams === teams) {
-    setTeamsData(newTeams);
-  }
+  // if (newTeams === teams) {
+  //   console.log("re-render");
+  //   setTeamsData(newTeams);
+  // }
   let rank: number = 0;
 
   return (
