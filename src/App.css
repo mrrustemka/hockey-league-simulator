@@ -117,3 +117,10 @@ th {
 .table-column-diff-negative {
   color: rgb(208, 2, 27);
 }
+
+:where(.css-dev-only-do-not-override-xu9wm8).ant-table-wrapper
+  .ant-table-column-sorter-up.active,
+:where(.css-dev-only-do-not-override-xu9wm8).ant-table-wrapper
+  .ant-table-column-sorter-down.active {
+  color: #000000;
+}
