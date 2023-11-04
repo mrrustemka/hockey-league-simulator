@@ -20,3 +20,15 @@ export type Schedule = {
   away: string;
   home: string;
 };
+
+export type GameResult = {
+  home: string;
+  away: string;
+  homeGoals: number;
+  awayGoals: number;
+  overtime: string;
+};
+
+export type buttonStyles = {
+  display: string;
+};
