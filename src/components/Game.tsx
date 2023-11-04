@@ -29,7 +29,7 @@ export function Game() {
   };
 
   function Simulate(game: Schedule) {
-    setTypeOfOt((typeOfOt = ""));
+    setTypeOfOt("");
     setGameIndex(scheduleList.indexOf(game) + 1);
     let home: Teams = {
       id: 0,
@@ -109,9 +109,9 @@ export function Game() {
 
       let ran: number = Math.random();
       if (ran > 0.5) {
-        setTypeOfOt((typeOfOt = "Overtime"));
+        setTypeOfOt("Overtime");
       } else {
-        setTypeOfOt((typeOfOt = "Shootout"));
+        setTypeOfOt("Shootout");
       }
     }
 
