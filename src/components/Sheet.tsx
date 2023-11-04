@@ -3,8 +3,9 @@ import { useState } from "react";
 import { Teams } from "../data/types";
 import { teams } from "../data/teams";
 
-export function Sheet({ newTeams }: any) {
+export function Sheet({ newTeams }: Teams[] | any) {
   const [teamsData, setTeamsData] = useState<Teams[]>(teams);
+  console.log(newTeams[0]);
   // if (newTeams === teams) {
   //   console.log("re-render");
   //   setTeamsData(newTeams);
@@ -12,7 +13,7 @@ export function Sheet({ newTeams }: any) {
   let rank: number = 0;
 
   return (
-    <Table dataSource={teamsData} pagination={false} size="small">
+    <Table dataSource={newTeams} pagination={false} size="small">
       <Table.Column
         title="Rank"
         dataIndex=""

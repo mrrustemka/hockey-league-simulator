@@ -25,7 +25,7 @@ export function Game() {
 
   const buttonHandler = () => {
     let lastGame: GameResult | undefined = Simulate(scheduleList[gameCounter]);
-    console.log(gameIndex + 1, lastGame);
+    // console.log(gameIndex + 1, lastGame);
     if (lastGame) {
       setHomeGoals(lastGame.homeGoals);
       setAwayGoals(lastGame.awayGoals);
@@ -36,32 +36,32 @@ export function Game() {
   function Simulate(game: Schedule) {
     setGameIndex(scheduleList.indexOf(game) + 1);
     let home: Teams = {
-      id: 0,
-      name: "",
       abbreviation: "",
-      country: "",
       city: "",
-      points: 0,
-      goals_for: 0,
+      country: "",
+      game_counter: 0,
       goals_against: 0,
       goals_diff: 0,
-      rating: 0,
-      game_counter: 0,
+      goals_for: 0,
+      id: 0,
       logo: "",
+      name: "",
+      points: 0,
+      rating: 0,
     };
     let away: Teams = {
-      id: 0,
-      name: "",
       abbreviation: "",
-      country: "",
       city: "",
-      points: 0,
-      goals_for: 0,
+      country: "",
+      game_counter: 0,
       goals_against: 0,
       goals_diff: 0,
-      rating: 0,
-      game_counter: 0,
+      goals_for: 0,
+      id: 0,
       logo: "",
+      name: "",
+      points: 0,
+      rating: 0,
     };
     function getGoals(min: number, max: number) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -137,6 +137,7 @@ export function Game() {
       overtime: overtime,
     };
     setTeamsUpdate(teamsSort(teams));
+    console.log(teamsUpdate);
     setIsSimulate(true);
     return result;
   }
@@ -299,7 +300,6 @@ export function Game() {
       </div>
     );
   } else {
-    const champion: string = teamsSort(teamsUpdate)[0].name;
     return (
       <div>
         <Row>
@@ -310,7 +310,7 @@ export function Game() {
             <Title style={{ color: "#ffffff" }}>
               There are no Games. The Champion is
             </Title>
-            <Title style={{ color: "#ffffff" }}>{champion}</Title>
+            <Title style={{ color: "#ffffff" }}>{teamsUpdate[0].name}</Title>
           </Col>
         </Row>
       </div>

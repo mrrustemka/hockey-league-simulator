@@ -1,16 +1,16 @@
 export type Teams = {
-  id: number;
-  name: string;
   abbreviation: string;
-  country: string;
   city: string;
-  points: number;
-  goals_for: number;
+  country: string;
+  game_counter: number;
   goals_against: number;
   goals_diff: number;
-  rating: number;
-  game_counter: number;
+  goals_for: number;
+  id: number;
   logo: string;
+  name: string;
+  points: number;
+  rating: number;
 };
 
 export type TeamsList = string[];
