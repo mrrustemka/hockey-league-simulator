@@ -5,7 +5,7 @@ import { teams } from "../data/teams";
 
 export function Sheet({ newTeams }: Teams[] | any) {
   const [teamsData, setTeamsData] = useState<Teams[]>(teams);
-  console.log(newTeams[0]);
+  console.log(newTeams);
   // if (newTeams === teams) {
   //   console.log("re-render");
   //   setTeamsData(newTeams);

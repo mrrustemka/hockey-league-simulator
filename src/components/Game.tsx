@@ -167,6 +167,14 @@ export function Game() {
   }
 
   if (scheduleList && gameCounter < scheduleList.length) {
+    let homeRating: number =
+      teams.findIndex(
+        (element) => element.abbreviation === scheduleList[gameCounter].home
+      ) + 1;
+    let awayRating: number =
+      teams.findIndex(
+        (element) => element.abbreviation === scheduleList[gameCounter].away
+      ) + 1;
     return (
       <div>
         <Row>
@@ -209,11 +217,13 @@ export function Game() {
                       )?.abbreviation
                     }
                     description={
-                      teams.find(
-                        (element) =>
-                          element.abbreviation ===
-                          scheduleList[gameCounter].away
-                      )?.city
+                      awayRating === 1
+                        ? awayRating + "st"
+                        : awayRating === 2
+                        ? awayRating + "nd"
+                        : awayRating === 3
+                        ? awayRating + "rd"
+                        : awayRating + "th"
                     }
                   />
                 </Card>
@@ -252,11 +262,13 @@ export function Game() {
                       )?.abbreviation
                     }
                     description={
-                      teams.find(
-                        (element) =>
-                          element.abbreviation ===
-                          scheduleList[gameCounter].home
-                      )?.city
+                      homeRating === 1
+                        ? homeRating + "st"
+                        : homeRating === 2
+                        ? homeRating + "nd"
+                        : homeRating === 3
+                        ? homeRating + "rd"
+                        : homeRating + "th"
                     }
                   />
                 </Card>
