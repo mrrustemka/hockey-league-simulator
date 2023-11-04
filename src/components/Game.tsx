@@ -79,8 +79,8 @@ export function Game() {
 
     //Goals
 
-    homeGoals = Math.round(getRandomInt(0, 9) * homeRate);
-    awayGoals = Math.round(getRandomInt(0, 9) * awayRate);
+    setHomeGoals(Math.round(getRandomInt(0, 9) * homeRate));
+    setAwayGoals(Math.round(getRandomInt(0, 9) * awayRate));
 
     function getRandomInt(min: number, max: number) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -91,9 +91,7 @@ export function Game() {
       if (ran > 0.9) {
         return;
       } else {
-        // let goals: number = homeGoals;
-        // setAwayGoals(goals);
-        homeGoals = awayGoals + 1;
+        setHomeGoals(awayGoals + 1);
       }
     }
 
@@ -102,12 +100,10 @@ export function Game() {
     if (homeGoals === awayGoals) {
       let otGoal: number = Math.random();
       if (otGoal > 0.5) {
-        homeGoals += 1;
-        // let winner : Teams = away;
+        setHomeGoals(homeGoals + 1);
         away.points += 1;
       } else {
-        awayGoals += 1;
-        // let winner : Teams = home;
+        setAwayGoals(awayGoals + 1);
         home.points += 1;
       }
 
@@ -149,8 +145,6 @@ export function Game() {
       typeOfOt
     );
     setTeamsUpdate(teams);
-    setHomeGoals(homeGoals);
-    setAwayGoals(awayGoals);
   }
 
   if (scheduleList && gameCounter < scheduleList.length) {
