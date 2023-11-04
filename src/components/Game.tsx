@@ -275,6 +275,24 @@ export function Game() {
       </div>
     );
   } else {
+    let champion: string = teamsUpdate.sort((team1, team2) =>
+      team1.points > team2.points
+        ? -1
+        : team1.points === team2.points
+        ? team1.game_counter < team2.game_counter
+          ? -1
+          : team1.game_counter === team2.game_counter
+          ? team1.goals_diff > team2.goals_diff
+            ? team1.goals_diff === team2.goals_diff
+              ? team1.rating > team2.rating
+                ? -1
+                : 1
+              : 1
+            : 1
+          : 1
+        : 1
+    )[0].name;
+
     return (
       <div>
         <Row>
@@ -283,6 +301,7 @@ export function Game() {
           </Col>
           <Col span={12}>
             <Title>There are no Games</Title>
+            <Title>{champion}</Title>
           </Col>
         </Row>
       </div>
