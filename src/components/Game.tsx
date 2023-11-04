@@ -80,7 +80,6 @@ export function Game() {
     if (awayType !== undefined) {
       away = awayType;
     }
-    console.log("awayType", awayType);
 
     //Goals
     let hGoals: number = Math.round((getGoals(0, 9) * home.rating) / 100);
@@ -121,14 +120,14 @@ export function Game() {
 
     // Goals & Games Stats
 
-    home.goals_for += homeGoals;
-    home.goals_against += awayGoals;
+    home.goals_for += hGoals;
+    home.goals_against += aGoals;
     home.game_counter += 1;
-    home.goals_diff += home.goals_for - home.goals_against;
-    away.goals_for += awayGoals;
-    away.goals_against += homeGoals;
+    home.goals_diff += hGoals - aGoals;
+    away.goals_for += aGoals;
+    away.goals_against += hGoals;
     away.game_counter += 1;
-    away.goals_diff += away.goals_for - away.goals_against;
+    away.goals_diff += aGoals - hGoals;
 
     let result: GameResult = {
       home: home.abbreviation,
