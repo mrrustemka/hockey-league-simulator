@@ -58,12 +58,17 @@ export function Game() {
       game_counter: 0,
       logo: "",
     };
+    function getGoals(min: number, max: number) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
     const homeType: Teams | undefined = teams.find(
       (element) => element.abbreviation === game.home
     );
     if (homeType !== undefined) {
       home = homeType;
+    } else {
+      return console.log("Error with home team", homeType);
     }
 
     const awayType: Teams | undefined = teams.find(
@@ -71,18 +76,18 @@ export function Game() {
     );
     if (awayType !== undefined) {
       away = awayType;
+    } else {
+      return console.log("Error with away team", awayType);
     }
 
     //Goals
 
-    setHomeGoals(Math.round((getRandomInt(0, 9) * home.rating) / 100));
-    setAwayGoals(Math.round((getRandomInt(0, 9) * away.rating) / 100));
+    setHomeGoals(Math.round((getGoals(0, 9) * home.rating) / 100));
+    setAwayGoals(Math.round((getGoals(0, 9) * away.rating) / 100));
 
-    function getRandomInt(min: number, max: number) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
+    // Make more realistic game score
 
-    if (homeGoals - awayGoals >= 5 || awayGoals - homeGoals >= 5) {
+    if (homeGoals - awayGoals >= 4 || awayGoals - homeGoals >= 4) {
       let ran: number = Math.random();
       if (ran > 0.9) {
         return;
@@ -94,17 +99,14 @@ export function Game() {
     // OT or S/O
 
     if (homeGoals === awayGoals) {
-      let otGoal: number = Math.random();
-      if (otGoal > 0.5) {
+      if (Math.random() > 0.5) {
         setHomeGoals(homeGoals + 1);
         away.points += 1;
       } else {
         setAwayGoals(awayGoals + 1);
         home.points += 1;
       }
-
-      let ran: number = Math.random();
-      if (ran > 0.5) {
+      if (Math.random() > 0.5) {
         setTypeOfOt("Overtime");
       } else {
         setTypeOfOt("Shootout");
@@ -119,7 +121,7 @@ export function Game() {
       away.points += 2;
     }
 
-    // Goals Stats
+    // Goals & Games Stats
 
     home.goals_for += homeGoals;
     home.goals_against += awayGoals;
