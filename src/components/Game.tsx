@@ -141,6 +141,26 @@ export function Game() {
     return result;
   }
 
+  function teamsSort(teams: Teams[]) {
+    return teams.sort((team1, team2) =>
+      team1.points > team2.points
+        ? -1
+        : team1.points === team2.points
+        ? team1.game_counter < team2.game_counter
+          ? -1
+          : team1.game_counter === team2.game_counter
+          ? team1.goals_diff > team2.goals_diff
+            ? team1.goals_diff === team2.goals_diff
+              ? team1.rating > team2.rating
+                ? -1
+                : 1
+              : 1
+            : 1
+          : 1
+        : 1
+    );
+  }
+
   if (scheduleList && gameCounter < scheduleList.length) {
     return (
       <div>
@@ -275,23 +295,7 @@ export function Game() {
       </div>
     );
   } else {
-    let champion: string = teamsUpdate.sort((team1, team2) =>
-      team1.points > team2.points
-        ? -1
-        : team1.points === team2.points
-        ? team1.game_counter < team2.game_counter
-          ? -1
-          : team1.game_counter === team2.game_counter
-          ? team1.goals_diff > team2.goals_diff
-            ? team1.goals_diff === team2.goals_diff
-              ? team1.rating > team2.rating
-                ? -1
-                : 1
-              : 1
-            : 1
-          : 1
-        : 1
-    )[0].name;
+    let champion: string = teamsSort(teamsUpdate)[0].name;
 
     return (
       <div>
@@ -300,8 +304,10 @@ export function Game() {
             <Sheet teams={teamsUpdate} />
           </Col>
           <Col span={12}>
-            <Title>There are no Games</Title>
-            <Title>{champion}</Title>
+            <Title style={{ color: "#ffffff" }}>
+              There are no Games. The Champion is :
+            </Title>
+            <Title style={{ color: "#ffffff" }}>{champion}</Title>
           </Col>
         </Row>
       </div>
