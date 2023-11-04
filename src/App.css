@@ -1,5 +1,9 @@
 /* @import "~antd/dist/antd.css"; */
 
+* {
+  font-family: "Inter", "Arial", sans-serif !important;
+}
+
 body {
   background-color: #515151;
   margin: 0;
