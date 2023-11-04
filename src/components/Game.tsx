@@ -25,7 +25,6 @@ export function Game() {
 
   const buttonHandler = () => {
     Simulate(scheduleList[gameCounter]);
-    setIsSimulate(true);
   };
 
   function Simulate(game: Schedule) {
@@ -74,13 +73,10 @@ export function Game() {
       away = awayType;
     }
 
-    const homeRate: number = home.rating / 100;
-    const awayRate: number = away.rating / 100;
-
     //Goals
 
-    setHomeGoals(Math.round(getRandomInt(0, 9) * homeRate));
-    setAwayGoals(Math.round(getRandomInt(0, 9) * awayRate));
+    setHomeGoals(Math.round((getRandomInt(0, 9) * home.rating) / 100));
+    setAwayGoals(Math.round((getRandomInt(0, 9) * away.rating) / 100));
 
     function getRandomInt(min: number, max: number) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -145,6 +141,7 @@ export function Game() {
       typeOfOt
     );
     setTeamsUpdate(teams);
+    setIsSimulate(true);
   }
 
   if (scheduleList && gameCounter < scheduleList.length) {
