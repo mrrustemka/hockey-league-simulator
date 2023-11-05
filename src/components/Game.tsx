@@ -179,7 +179,7 @@ export function Game() {
       <div>
         <Row>
           <Col span={12}>
-            <Sheet newTeams={teamsUpdate} />
+            <Sheet teamsData={teamsUpdate} />
           </Col>
           <Col span={12}>
             <Row className="row-panel-cards">
@@ -316,7 +316,7 @@ export function Game() {
       <div>
         <Row>
           <Col span={12}>
-            <Sheet newTeams={teamsUpdate} />
+            <Sheet teamsData={teamsUpdate} />
           </Col>
           <Col span={12}>
             <Title style={{ color: "#ffffff" }}>

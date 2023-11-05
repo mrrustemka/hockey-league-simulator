@@ -1,19 +1,12 @@
 import { Table } from "antd";
-import { useState } from "react";
 import { Teams } from "../data/types";
-import { teams } from "../data/teams";
 
-export function Sheet({ newTeams }: Teams[] | any) {
-  const [teamsData, setTeamsData] = useState<Teams[]>(teams);
-  console.log(newTeams);
-  // if (newTeams === teams) {
-  //   console.log("re-render");
-  //   setTeamsData(newTeams);
-  // }
+export function Sheet({ teamsData }: Teams[] | any) {
+  console.log(teamsData);
   let rank: number = 0;
 
   return (
-    <Table dataSource={newTeams} pagination={false} size="small">
+    <Table dataSource={[...teamsData]} pagination={false} size="small">
       <Table.Column
         title="Rank"
         dataIndex=""
@@ -22,7 +15,7 @@ export function Sheet({ newTeams }: Teams[] | any) {
           rank++;
           return (
             <div>
-              <p>{rank > teams.length ? (rank = 0) : rank}</p>
+              <p>{rank > teamsData.length ? (rank = 0) : rank}</p>
             </div>
           );
         }}
@@ -32,7 +25,9 @@ export function Sheet({ newTeams }: Teams[] | any) {
         dataIndex="name"
         key="name"
         render={(dataIndex) => {
-          const logo = teamsData.find((item) => item.name === dataIndex)?.logo;
+          const logo = teamsData.find(
+            (item: { name: any }) => item.name === dataIndex
+          )?.logo;
           return (
             <div>
               <img
