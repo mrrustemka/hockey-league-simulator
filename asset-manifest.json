@@ -1,21 +1,28 @@
 {
   "files": {
     "main.css": "/hockey-league-simulator/static/css/main.73b08882.css",
-    "main.js": "/hockey-league-simulator/static/js/main.d8079d7d.js",
+    "main.js": "/hockey-league-simulator/static/js/main.3d00db60.js",
     "static/media/usa.jpg": "/hockey-league-simulator/static/media/usa.970731614dcc483a7b7a.jpg",
+    "static/media/fra.jpg": "/hockey-league-simulator/static/media/fra.4066c075e5633da33870.jpg",
+    "static/media/aus.jpg": "/hockey-league-simulator/static/media/aus.bef1d643afdd48702087.jpg",
     "static/media/slk.jpg": "/hockey-league-simulator/static/media/slk.fc88f1e51653b4b29139.jpg",
     "static/media/swe.jpg": "/hockey-league-simulator/static/media/swe.7c6bf24e07ebbef477d5.jpg",
     "static/media/can.jpg": "/hockey-league-simulator/static/media/can.e16d14a7d1bf090c913e.jpg",
     "static/media/fin.jpg": "/hockey-league-simulator/static/media/fin.ff12f418b2f858ef5b94.jpg",
     "static/media/swi.jpg": "/hockey-league-simulator/static/media/swi.4937d621d4a5e7b01429.jpg",
     "static/media/ger.jpg": "/hockey-league-simulator/static/media/ger.db937a915a3db6195b9a.jpg",
+    "static/media/sln.png": "/hockey-league-simulator/static/media/sln.55160a84639be9dfc437.png",
     "static/media/cze.jpg": "/hockey-league-simulator/static/media/cze.edc794cd30675ae0f5e7.jpg",
+    "static/media/kaz.png": "/hockey-league-simulator/static/media/kaz.569e6cea3bf91fbda042.png",
+    "static/media/nor.jpg": "/hockey-league-simulator/static/media/nor.8f91fabd398fa7e40570.jpg",
+    "static/media/den.jpg": "/hockey-league-simulator/static/media/den.66181e077859cdd5a0eb.jpg",
+    "static/media/ita.png": "/hockey-league-simulator/static/media/ita.9ab36b9ea655b1820491.png",
     "index.html": "/hockey-league-simulator/index.html",
     "main.73b08882.css.map": "/hockey-league-simulator/static/css/main.73b08882.css.map",
-    "main.d8079d7d.js.map": "/hockey-league-simulator/static/js/main.d8079d7d.js.map"
+    "main.3d00db60.js.map": "/hockey-league-simulator/static/js/main.3d00db60.js.map"
   },
   "entrypoints": [
     "static/css/main.73b08882.css",
-    "static/js/main.d8079d7d.js"
+    "static/js/main.3d00db60.js"
   ]
 }
