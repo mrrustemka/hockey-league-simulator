@@ -321,8 +321,11 @@ export function Game() {
           <Col span={12}>
             <Title style={{ color: "#ffffff" }}>
               There are no Games. The Champion is
+              <div>
+                <img src={teamsUpdate[0].logo} style={{ width: "32px" }} />
+                {teamsUpdate[0].name}
+              </div>
             </Title>
-            <Title style={{ color: "#ffffff" }}>{teamsUpdate[0].name}</Title>
           </Col>
         </Row>
       </div>
