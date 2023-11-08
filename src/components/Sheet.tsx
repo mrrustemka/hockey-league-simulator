@@ -64,6 +64,41 @@ export function Sheet({ teamsData }: Teams[] | any) {
         sorter={{
           compare: (a: { game_counter: number }, b: { game_counter: number }) =>
             b.game_counter - a.game_counter,
+          multiple: 4,
+        }}
+        className="table-column-stats"
+      />
+      <Table.Column
+        title="W"
+        dataIndex="wins"
+        key="wins"
+        defaultSortOrder="descend"
+        sorter={{
+          compare: (a: { wins: number }, b: { wins: number }) =>
+            a.wins - b.wins,
+          multiple: 3,
+        }}
+        className="table-column-stats"
+      />
+      <Table.Column
+        title="L"
+        dataIndex="loses"
+        key="loses"
+        defaultSortOrder="descend"
+        sorter={{
+          compare: (a: { game_counter: number }, b: { game_counter: number }) =>
+            b.game_counter - a.game_counter,
+        }}
+        className="table-column-stats"
+      />
+      <Table.Column
+        title="OT"
+        dataIndex="loses_ot"
+        key="loses_ot"
+        defaultSortOrder="descend"
+        sorter={{
+          compare: (a: { game_counter: number }, b: { game_counter: number }) =>
+            b.game_counter - a.game_counter,
           multiple: 2,
         }}
         className="table-column-stats"
@@ -76,7 +111,7 @@ export function Sheet({ teamsData }: Teams[] | any) {
         sorter={{
           compare: (a: { points: number }, b: { points: number }) =>
             a.points - b.points,
-          multiple: 3,
+          multiple: 5,
         }}
         className="table-column-points table-table-column-stats"
       />

@@ -7,14 +7,14 @@ import cze from "../images/cze.jpg";
 import ger from "../images/ger.jpg";
 import slk from "../images/slk.jpg";
 import swi from "../images/swi.jpg";
-import lat from "../images/lat.jpg";
-import den from "../images/den.jpg";
-import nor from "../images/nor.jpg";
-import fra from "../images/fra.jpg";
-import kaz from "../images/kaz.png";
-import aus from "../images/aus.jpg";
-import sln from "../images/sln.png";
-import ita from "../images/ita.png";
+// import lat from "../images/lat.jpg";
+// import den from "../images/den.jpg";
+// import nor from "../images/nor.jpg";
+// import fra from "../images/fra.jpg";
+// import kaz from "../images/kaz.png";
+// import aus from "../images/aus.jpg";
+// import sln from "../images/sln.png";
+// import ita from "../images/ita.png";
 
 export const teams: Teams[] = [
   {
@@ -27,9 +27,12 @@ export const teams: Teams[] = [
     goals_for: 0,
     id: 1,
     logo: can,
+    loses: 0,
+    loses_ot: 0,
     name: "Canada",
     points: 0,
     rating: 99,
+    wins: 0,
   },
   {
     abbreviation: "USA",
@@ -41,9 +44,12 @@ export const teams: Teams[] = [
     goals_for: 0,
     id: 2,
     logo: usa,
+    loses: 0,
+    loses_ot: 0,
     name: "USA",
     points: 0,
     rating: 95,
+    wins: 0,
   },
   {
     abbreviation: "SWE",
@@ -55,9 +61,12 @@ export const teams: Teams[] = [
     goals_for: 0,
     id: 3,
     logo: swe,
+    loses: 0,
+    loses_ot: 0,
     name: "Sweden",
     points: 0,
     rating: 92,
+    wins: 0,
   },
   {
     abbreviation: "FIN",
@@ -69,9 +78,12 @@ export const teams: Teams[] = [
     goals_for: 0,
     id: 4,
     logo: fin,
+    loses: 0,
+    loses_ot: 0,
     name: "Finland",
     points: 0,
     rating: 98,
+    wins: 0,
   },
   {
     abbreviation: "CZE",
@@ -83,9 +95,12 @@ export const teams: Teams[] = [
     goals_for: 0,
     id: 5,
     logo: cze,
+    loses: 0,
+    loses_ot: 0,
     name: "Czech Republic",
     points: 0,
     rating: 90,
+    wins: 0,
   },
   {
     abbreviation: "GER",
@@ -97,9 +112,12 @@ export const teams: Teams[] = [
     goals_for: 0,
     id: 6,
     logo: ger,
+    loses: 0,
+    loses_ot: 0,
     name: "Germany",
     points: 0,
     rating: 92,
+    wins: 0,
   },
   {
     abbreviation: "SLK",
@@ -111,9 +129,12 @@ export const teams: Teams[] = [
     goals_for: 0,
     id: 7,
     logo: slk,
+    loses: 0,
+    loses_ot: 0,
     name: "Slovakia",
     points: 0,
     rating: 89,
+    wins: 0,
   },
   {
     abbreviation: "SWI",
@@ -125,9 +146,12 @@ export const teams: Teams[] = [
     goals_for: 0,
     id: 8,
     logo: swi,
+    loses: 0,
+    loses_ot: 0,
     name: "Switzerland",
     points: 0,
     rating: 91,
+    wins: 0,
   },
   // {
   //   abbreviation: "LAT",

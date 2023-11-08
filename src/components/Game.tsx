@@ -45,9 +45,12 @@ export function Game() {
       goals_for: 0,
       id: 0,
       logo: "",
+      loses: 0,
+      loses_ot: 0,
       name: "",
       points: 0,
       rating: 0,
+      wins: 0,
     };
     let away: Teams = {
       abbreviation: "",
@@ -59,9 +62,12 @@ export function Game() {
       goals_for: 0,
       id: 0,
       logo: "",
+      loses: 0,
+      loses_ot: 0,
       name: "",
       points: 0,
       rating: 0,
+      wins: 0,
     };
     function getGoals(min: number, max: number) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -98,10 +104,10 @@ export function Game() {
     if (hGoals === aGoals) {
       if (Math.random() > 0.5) {
         hGoals += 1;
-        away.points += 1;
+        // away.points += 1;
       } else {
         aGoals += 1;
-        home.points += 1;
+        // home.points += 1;
       }
       if (Math.random() > 0.5) {
         overtime = "Overtime";
@@ -114,8 +120,22 @@ export function Game() {
 
     if (hGoals > aGoals) {
       home.points += 2;
+      home.wins += 1;
+      overtime === "Shootout" || overtime === "Overtime"
+        ? (away.loses_ot += 1)
+        : (away.loses += 1);
+      overtime === "Shootout" || overtime === "Overtime"
+        ? (away.points += 1)
+        : (away.points += 0);
     } else {
       away.points += 2;
+      away.wins += 1;
+      overtime === "Shootout" || overtime === "Overtime"
+        ? (home.loses_ot += 1)
+        : (home.loses += 1);
+      overtime === "Shootout" || overtime === "Overtime"
+        ? (home.points += 1)
+        : (home.points += 0);
     }
 
     // Goals & Games Stats

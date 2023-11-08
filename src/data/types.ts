@@ -8,9 +8,12 @@ export type Teams = {
   goals_for: number;
   id: number;
   logo: string;
+  loses: number;
+  loses_ot: number;
   name: string;
   points: number;
   rating: number;
+  wins: number;
 };
 
 export type TeamsList = string[];
