@@ -2,7 +2,6 @@ import { Table } from "antd";
 import { Teams } from "../data/types";
 
 export function Sheet({ teamsData }: Teams[] | any) {
-  console.log(teamsData);
   let rank: number = 0;
 
   return (
