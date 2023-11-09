@@ -198,10 +198,10 @@ export function Game() {
     return (
       <div>
         <Row>
-          <Col span={12}>
+          <Col span={14}>
             <Sheet teamsData={teamsUpdate} />
           </Col>
-          <Col span={12}>
+          <Col span={10}>
             <Row className="row-panel-cards">
               <Col span={12}>
                 <Card
@@ -321,11 +321,80 @@ export function Game() {
                   Next Game
                 </Button>
               </Col>
-              <Col span={24} className="panel-counter">
-                <Title level={3}>
-                  {gameIndex}/{scheduleList.length}
-                </Title>
-              </Col>
+              <Card>
+                <Col span={24} className="panel-counter">
+                  <Title level={3}>
+                    {gameIndex}/{scheduleList.length}
+                  </Title>
+                </Col>
+              </Card>
+            </Row>
+            <Row className="upcoming-games">
+              <Title level={2}>Upcoming Games</Title>
+              {/* {scheduleList.forEach(function (game: Schedule) {
+                <Card>{game.home}</Card>;
+              })} */}
+
+              <Card
+                hoverable
+                className="upcoming-games-card"
+                cover={
+                  <div className="upcoming-games-card-container">
+                    <h3>
+                      {homeRating === 1
+                        ? homeRating + "st"
+                        : homeRating === 2
+                        ? homeRating + "nd"
+                        : homeRating === 3
+                        ? homeRating + "rd"
+                        : homeRating + "th"}
+                    </h3>
+                    <img
+                      className="upcoming-games-card-container-logo"
+                      alt={
+                        teams.find(
+                          (element) =>
+                            element.abbreviation ===
+                            scheduleList[gameCounter + 1].away
+                        )?.name + "Logo"
+                      }
+                      src={
+                        teams.find(
+                          (element) =>
+                            element.abbreviation ===
+                            scheduleList[gameCounter + 1].away
+                        )?.logo
+                      }
+                    />
+                    <img
+                      className="upcoming-games-card-container-logo"
+                      alt={
+                        teams.find(
+                          (element) =>
+                            element.abbreviation ===
+                            scheduleList[gameCounter + 1].home
+                        )?.name + "Logo"
+                      }
+                      src={
+                        teams.find(
+                          (element) =>
+                            element.abbreviation ===
+                            scheduleList[gameCounter + 1].home
+                        )?.logo
+                      }
+                    />
+                    <h3>
+                      {awayRating === 1
+                        ? awayRating + "st"
+                        : awayRating === 2
+                        ? awayRating + "nd"
+                        : awayRating === 3
+                        ? awayRating + "rd"
+                        : awayRating + "th"}
+                    </h3>
+                  </div>
+                }
+              ></Card>
             </Row>
           </Col>
         </Row>
@@ -335,10 +404,10 @@ export function Game() {
     return (
       <div>
         <Row>
-          <Col span={12}>
+          <Col span={14}>
             <Sheet teamsData={teamsUpdate} />
           </Col>
-          <Col span={12}>
+          <Col span={10}>
             <Title style={{ color: "#ffffff" }}>
               There are no Games. The Champion is
               <div>

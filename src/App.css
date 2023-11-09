@@ -29,7 +29,7 @@ body {
 }
 
 .panel-score {
-  width: 24%;
+  width: 26%;
   margin: 0 auto;
 }
 
@@ -71,10 +71,6 @@ body {
   text-align: center;
   color: #ffffff;
   font-weight: 700;
-}
-
-.panel-counter h3 {
-  color: #ffffff;
 }
 
 .table-column-points,
@@ -123,4 +119,31 @@ th {
 :where(.css-dev-only-do-not-override-xu9wm8).ant-table-wrapper
   .ant-table-column-sorter-down.active {
   color: #000000;
+}
+
+.upcoming-games-card {
+  height: 100px;
+  margin: 18px;
+  width: 100%;
+}
+
+.upcoming-games h2 {
+  margin: auto;
+  color: #ffffff;
+}
+
+.upcoming-games-card-container-logo {
+  width: 100px;
+  height: 100px;
+  display: inline;
+}
+
+.upcoming-games-card-container {
+  display: grid !important;
+  grid-template-columns: 1fr auto auto 1fr;
+}
+
+.upcoming-games-card-container > h3 {
+  color: #000000;
+  margin: auto;
 }
