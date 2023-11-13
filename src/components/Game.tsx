@@ -9,7 +9,7 @@ const { Meta } = Card;
 const { Title } = Typography;
 schedule();
 
-export function Game() {
+function Game() {
   let [teamsUpdate, setTeamsUpdate] = useState<Teams[]>(teams);
   let [gameCounter, setGameCounter] = useState<number>(0);
   let [homeGoals, setHomeGoals] = useState<number>(0);

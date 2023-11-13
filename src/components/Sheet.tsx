@@ -1,7 +1,7 @@
 import { Table } from "antd";
 import { Teams } from "../data/types";
 
-export function Sheet({ teamsData }: Teams[] | any) {
+function Sheet({ teamsData }: Teams[] | any) {
   let rank: number = 0;
 
   return (
@@ -84,7 +84,6 @@ export function Sheet({ teamsData }: Teams[] | any) {
         title="L"
         dataIndex="loses"
         key="loses"
-        defaultSortOrder="descend"
         sorter={{
           compare: (a: { game_counter: number }, b: { game_counter: number }) =>
             b.game_counter - a.game_counter,
