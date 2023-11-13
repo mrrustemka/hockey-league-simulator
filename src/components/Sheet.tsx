@@ -1,11 +1,12 @@
 import { Table } from "antd";
 import { Teams } from "../data/types";
 
-function Sheet({ teamsData }: Teams[] | any) {
+function Sheet(props: { teamsData: Teams[] }) {
   let rank: number = 0;
+  console.log(props.teamsData);
 
   return (
-    <Table dataSource={[...teamsData]} pagination={false} size="small">
+    <Table dataSource={[...props.teamsData]} pagination={false} size="small">
       <Table.Column
         title="Rank"
         dataIndex=""
@@ -14,7 +15,7 @@ function Sheet({ teamsData }: Teams[] | any) {
           rank++;
           return (
             <div>
-              <p>{rank > teamsData.length ? (rank = 0) : rank}</p>
+              <p>{rank > props.teamsData.length ? (rank = 0) : rank}</p>
             </div>
           );
         }}
@@ -24,7 +25,7 @@ function Sheet({ teamsData }: Teams[] | any) {
         dataIndex="name"
         key="name"
         render={(dataIndex) => {
-          const logo = teamsData.find(
+          const logo = props.teamsData.find(
             (item: { name: any }) => item.name === dataIndex
           )?.logo;
           return (

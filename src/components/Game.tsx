@@ -25,7 +25,6 @@ function Game() {
 
   const buttonHandler = () => {
     let lastGame: GameResult | undefined = Simulate(scheduleList[gameCounter]);
-    // console.log(gameIndex + 1, lastGame);
     if (lastGame) {
       setHomeGoals(lastGame.homeGoals);
       setAwayGoals(lastGame.awayGoals);
@@ -329,12 +328,11 @@ function Game() {
                 </Col>
               </Card>
             </Row>
-            <Row className="upcoming-games">
+            {/* <Row className="upcoming-games">
               <Title level={2}>Upcoming Games</Title>
-              {/* {scheduleList.forEach(function (game: Schedule) {
+              {scheduleList.forEach(function (game: Schedule) {
                 <Card>{game.home}</Card>;
-              })} */}
-
+              })}
               <Card
                 hoverable
                 className="upcoming-games-card"
@@ -395,7 +393,7 @@ function Game() {
                   </div>
                 }
               ></Card>
-            </Row>
+            </Row> */}
           </Col>
         </Row>
       </div>
