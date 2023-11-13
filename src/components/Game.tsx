@@ -4,6 +4,7 @@ import { teams } from "../data/teams";
 import { GameResult, Schedule, Teams } from "../data/types";
 import { schedule, scheduleList } from "../data/schedule";
 import Sheet from "./Sheet";
+import UpcomingGame from "./UpcomingGame";
 
 const { Meta } = Card;
 const { Title } = Typography;
@@ -156,7 +157,6 @@ function Game() {
       overtime: overtime,
     };
     setTeamsUpdate(teamsSort(teams));
-    console.log(teamsUpdate);
     setIsSimulate(true);
     return result;
   }
@@ -328,72 +328,45 @@ function Game() {
                 </Col>
               </Card>
             </Row>
-            {/* <Row className="upcoming-games">
+            <Row className="upcoming-games">
               <Title level={2}>Upcoming Games</Title>
-              {scheduleList.forEach(function (game: Schedule) {
-                <Card>{game.home}</Card>;
-              })}
-              <Card
-                hoverable
-                className="upcoming-games-card"
-                cover={
-                  <div className="upcoming-games-card-container">
-                    <h3>
-                      {homeRating === 1
-                        ? homeRating + "st"
-                        : homeRating === 2
-                        ? homeRating + "nd"
-                        : homeRating === 3
-                        ? homeRating + "rd"
-                        : homeRating + "th"}
-                    </h3>
-                    <img
-                      className="upcoming-games-card-container-logo"
-                      alt={
-                        teams.find(
-                          (element) =>
-                            element.abbreviation ===
-                            scheduleList[gameCounter + 1].away
-                        )?.name + "Logo"
-                      }
-                      src={
-                        teams.find(
-                          (element) =>
-                            element.abbreviation ===
-                            scheduleList[gameCounter + 1].away
-                        )?.logo
-                      }
-                    />
-                    <img
-                      className="upcoming-games-card-container-logo"
-                      alt={
-                        teams.find(
-                          (element) =>
-                            element.abbreviation ===
-                            scheduleList[gameCounter + 1].home
-                        )?.name + "Logo"
-                      }
-                      src={
-                        teams.find(
-                          (element) =>
-                            element.abbreviation ===
-                            scheduleList[gameCounter + 1].home
-                        )?.logo
-                      }
-                    />
-                    <h3>
-                      {awayRating === 1
-                        ? awayRating + "st"
-                        : awayRating === 2
-                        ? awayRating + "nd"
-                        : awayRating === 3
-                        ? awayRating + "rd"
-                        : awayRating + "th"}
-                    </h3>
-                  </div>
-                }
-              ></Card>
-            </Row> */}
+              <UpcomingGame
+                counter={gameCounter + 1}
+                schedule={scheduleList}
+                homeRate={homeRating}
+                awayRate={awayRating}
+              />
+              <UpcomingGame
+                counter={gameCounter + 2}
+                schedule={scheduleList}
+                homeRate={homeRating}
+                awayRate={awayRating}
+              />
+              <UpcomingGame
+                counter={gameCounter + 3}
+                schedule={scheduleList}
+                homeRate={homeRating}
+                awayRate={awayRating}
+              />
+              <UpcomingGame
+                counter={gameCounter + 4}
+                schedule={scheduleList}
+                homeRate={homeRating}
+                awayRate={awayRating}
+              />
+              <UpcomingGame
+                counter={gameCounter + 5}
+                schedule={scheduleList}
+                homeRate={homeRating}
+                awayRate={awayRating}
+              />
+              <UpcomingGame
+                counter={gameCounter + 6}
+                schedule={scheduleList}
+                homeRate={homeRating}
+                awayRate={awayRating}
+              />
+            </Row>
           </Col>
         </Row>
       </div>
