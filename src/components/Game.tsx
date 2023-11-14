@@ -331,40 +331,7 @@ function Game() {
             <Row className="upcoming-games">
               <Title level={2}>Upcoming Games</Title>
               <UpcomingGame
-                counter={gameCounter + 1}
-                schedule={scheduleList}
-                homeRate={homeRating}
-                awayRate={awayRating}
-              />
-              <UpcomingGame
-                counter={gameCounter + 2}
-                schedule={scheduleList}
-                homeRate={homeRating}
-                awayRate={awayRating}
-              />
-              <UpcomingGame
-                counter={gameCounter + 3}
-                schedule={scheduleList}
-                homeRate={homeRating}
-                awayRate={awayRating}
-              />
-              <UpcomingGame
-                counter={gameCounter + 4}
-                schedule={scheduleList}
-                homeRate={homeRating}
-                awayRate={awayRating}
-              />
-              <UpcomingGame
-                counter={gameCounter + 5}
-                schedule={scheduleList}
-                homeRate={homeRating}
-                awayRate={awayRating}
-              />
-              <UpcomingGame
-                counter={gameCounter + 6}
-                schedule={scheduleList}
-                homeRate={homeRating}
-                awayRate={awayRating}
+                schedule={scheduleList.slice(gameCounter + 1, gameCounter + 7)}
               />
             </Row>
           </Col>
