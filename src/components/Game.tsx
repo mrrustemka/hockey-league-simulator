@@ -325,7 +325,7 @@ function Game() {
             <Row className="upcoming-games">
               <Title level={2}>Upcoming Games</Title>
               <UpcomingGame
-                schedule={scheduleList.slice(gameCounter + 1, gameCounter + 7)}
+                schedule={scheduleList.slice(gameCounter + 1, gameCounter + 4)}
               />
             </Row>
           </Col>
@@ -347,7 +347,7 @@ function Game() {
                   src={teamsUpdate[0].logo}
                   alt={teamsUpdate[0].name + " Logo"}
                 />
-                {teamsUpdate[0].name}
+                {" " + teamsUpdate[0].name}
               </div>
             </Title>
           </Col>
