@@ -13,6 +13,10 @@ body {
   margin: 18px;
 }
 
+.row-panel-cards > div > div {
+  width: 240px;
+}
+
 .row-panel-simulate {
   text-align: center;
   margin: 18px;
@@ -151,4 +155,12 @@ th {
 .upcoming-games-card-container > h3 {
   color: #000000;
   margin: auto;
+}
+
+.champion-container-panel > h2 {
+  color: #ffffff;
+}
+
+.champion-container-panel > div > img {
+  width: 32px;
 }

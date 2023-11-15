@@ -205,9 +205,6 @@ function Game() {
               <Col span={12}>
                 <Card
                   hoverable
-                  style={{
-                    width: 240,
-                  }}
                   cover={
                     <img
                       alt={
@@ -250,9 +247,6 @@ function Game() {
               <Col span={12}>
                 <Card
                   hoverable
-                  style={{
-                    width: 240,
-                  }}
                   cover={
                     <img
                       alt={
@@ -340,16 +334,16 @@ function Game() {
     );
   } else {
     return (
-      <div>
-        <Row>
-          <Col span={14}>
+      <div className="champion">
+        <Row className="champion-container">
+          <Col span={14} className="champion-container-panel">
             <Sheet teamsData={teamsUpdate} />
           </Col>
-          <Col span={10}>
-            <Title style={{ color: "#ffffff" }}>
+          <Col span={10} className="champion-container-panel">
+            <Title level={2} className="champion-container-panel">
               There are no Games. The Champion is
               <div>
-                <img src={teamsUpdate[0].logo} style={{ width: "32px" }} />
+                <img src={teamsUpdate[0].logo} />
                 {teamsUpdate[0].name}
               </div>
             </Title>
