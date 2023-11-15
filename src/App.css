@@ -149,7 +149,7 @@ th {
 
 .upcoming-games-card-container {
   display: grid !important;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr auto auto auto 1fr;
 }
 
 .upcoming-games-card-container > h3 {

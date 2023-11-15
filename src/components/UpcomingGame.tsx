@@ -15,6 +15,22 @@ function UpcomingGame(props: { schedule: Schedule[] }) {
           key={game.id}
           cover={
             <div className="upcoming-games-card-container">
+              <h3>
+                {
+                  teams.find((element) => element.abbreviation === game.away)
+                    ?.wins
+                }
+                -
+                {
+                  teams.find((element) => element.abbreviation === game.away)
+                    ?.loses
+                }
+                -
+                {
+                  teams.find((element) => element.abbreviation === game.away)
+                    ?.loses_ot
+                }
+              </h3>
               <img
                 className="upcoming-games-card-container-away"
                 alt={
@@ -38,6 +54,23 @@ function UpcomingGame(props: { schedule: Schedule[] }) {
                     ?.logo
                 }
               />
+              <h3>
+                {" "}
+                {
+                  teams.find((element) => element.abbreviation === game.home)
+                    ?.wins
+                }
+                -
+                {
+                  teams.find((element) => element.abbreviation === game.home)
+                    ?.loses
+                }
+                -
+                {
+                  teams.find((element) => element.abbreviation === game.home)
+                    ?.loses_ot
+                }
+              </h3>
             </div>
           }
         ></Card>
