@@ -164,3 +164,23 @@ th {
 .champion-container-panel > div > img {
   width: 24px;
 }
+
+.row-panel-cards-info-result-away {
+  opacity: 0.45;
+  float: inline-start;
+}
+
+.row-panel-cards-info-position-away {
+  opacity: 0.45;
+  float: inline-end;
+}
+
+.row-panel-cards-info-result-home {
+  opacity: 0.45;
+  float: inline-end;
+}
+
+.row-panel-cards-info-position-home {
+  opacity: 0.45;
+  float: inline-start;
+}

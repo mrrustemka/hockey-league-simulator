@@ -224,24 +224,52 @@ function Game() {
                     />
                   }
                 >
-                  <Meta
-                    title={
+                  <Title level={4}>
+                    {
                       teams.find(
                         (element) =>
                           element.abbreviation ===
                           scheduleList[gameCounter].away
                       )?.abbreviation
                     }
-                    description={
-                      awayRating === 1
-                        ? awayRating + "st"
-                        : awayRating === 2
-                        ? awayRating + "nd"
-                        : awayRating === 3
-                        ? awayRating + "rd"
-                        : awayRating + "th"
+                  </Title>
+                  <Title
+                    level={5}
+                    className="row-panel-cards-info-position-away"
+                  >
+                    {awayRating === 1
+                      ? awayRating + "st"
+                      : awayRating === 2
+                      ? awayRating + "nd"
+                      : awayRating === 3
+                      ? awayRating + "rd"
+                      : awayRating + "th"}
+                  </Title>
+                  <Title level={5} className="row-panel-cards-info-result-away">
+                    {
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].away
+                      )?.wins
                     }
-                  />
+                    -
+                    {
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].away
+                      )?.loses
+                    }
+                    -
+                    {
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].away
+                      )?.loses_ot
+                    }
+                  </Title>
                 </Card>
               </Col>
               <Col span={12}>
@@ -266,24 +294,52 @@ function Game() {
                     />
                   }
                 >
-                  <Meta
-                    title={
+                  <Title level={4}>
+                    {
                       teams.find(
                         (element) =>
                           element.abbreviation ===
                           scheduleList[gameCounter].home
                       )?.abbreviation
                     }
-                    description={
-                      homeRating === 1
-                        ? homeRating + "st"
-                        : homeRating === 2
-                        ? homeRating + "nd"
-                        : homeRating === 3
-                        ? homeRating + "rd"
-                        : homeRating + "th"
+                  </Title>
+                  <Title
+                    level={5}
+                    className="row-panel-cards-info-position-home"
+                  >
+                    {homeRating === 1
+                      ? homeRating + "st"
+                      : homeRating === 2
+                      ? homeRating + "nd"
+                      : homeRating === 3
+                      ? homeRating + "rd"
+                      : homeRating + "th"}
+                  </Title>
+                  <Title level={5} className="row-panel-cards-info-result-home">
+                    {
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].home
+                      )?.wins
                     }
-                  />
+                    -
+                    {
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].home
+                      )?.loses
+                    }
+                    -
+                    {
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].home
+                      )?.loses_ot
+                    }
+                  </Title>
                 </Card>
               </Col>
             </Row>
@@ -325,7 +381,7 @@ function Game() {
             <Row className="upcoming-games">
               <Title level={2}>Upcoming Games</Title>
               <UpcomingGame
-                schedule={scheduleList.slice(gameCounter + 1, gameCounter + 4)}
+                schedule={scheduleList.slice(gameCounter + 1, gameCounter + 7)}
               />
             </Row>
           </Col>

@@ -84,10 +84,6 @@ function Sheet(props: { teamsData: Teams[] }) {
         title="L"
         dataIndex="loses"
         key="loses"
-        // sorter={{
-        //   compare: (a: { game_counter: number }, b: { game_counter: number }) =>
-        //     b.game_counter - a.game_counter,
-        // }}
         className="table-column-stats"
       />
       <Table.Column
