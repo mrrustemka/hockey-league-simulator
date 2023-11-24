@@ -5,6 +5,7 @@ import { GameResult, Schedule, Teams } from "../data/types";
 import { schedule, scheduleList } from "../data/schedule";
 import Sheet from "./Sheet";
 import UpcomingGame from "./UpcomingGame";
+import PlayOffGame from "./PlayOffGame";
 
 const { Meta } = Card;
 const { Title } = Typography;
@@ -396,7 +397,7 @@ function Game() {
             <Sheet teamsData={teamsUpdate} />
           </Col>
           <Col span={10} className="champion-container-panel">
-            <Title level={2} className="champion-container-panel">
+            {/* <Title level={2} className="champion-container-panel">
               There are no Games. The Champion is
               <div>
                 <img
@@ -405,7 +406,8 @@ function Game() {
                 />
                 {" " + teamsUpdate[0].name}
               </div>
-            </Title>
+            </Title> */}
+            <PlayOffGame />
           </Col>
         </Row>
       </div>
