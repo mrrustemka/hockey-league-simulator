@@ -1,13 +1,12 @@
 import React from "react";
 import { teams } from "../data/teams";
-import { Button, Card, Col, Row, Typography } from "antd";
+import { Teams } from "../data/types";
+import { Card } from "antd";
 
 function PlayOffSheet() {
-  console.log(teams.slice(0, 2));
-
   return (
     <>
-      {/* {teams.slice(0, 1).map((team) => (
+      {teams.slice(0, 2).map((team: Teams) => (
         <Card
           hoverable
           className="upcoming-games-card"
@@ -20,10 +19,17 @@ function PlayOffSheet() {
                 src={team.logo}
               />
               <h3>@</h3>
+              <img
+                className="upcoming-games-card-container-away"
+                alt={
+                  teams[teams.length - 2 - teams.indexOf(team)].name + " logo"
+                }
+                src={teams[teams.length - 2 - teams.indexOf(team)].logo}
+              />
             </div>
           }
         ></Card>
-      ))} */}
+      ))}
     </>
   );
 }
