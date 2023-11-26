@@ -10,9 +10,9 @@ function PlayOffSheet() {
         <Card
           hoverable
           className="upcoming-games-card"
-          //   key={game.id}
           cover={
             <div className="upcoming-games-card-container">
+              <h3>{teams.indexOf(team) + 1}</h3>
               <img
                 className="upcoming-games-card-container-away"
                 alt={team.name + " logo"}
@@ -26,6 +26,7 @@ function PlayOffSheet() {
                 }
                 src={teams[teams.length - 2 - teams.indexOf(team)].logo}
               />
+              <h3>{teams.indexOf(teams[teams.length - 2 - teams.indexOf(team)]) + 1}</h3>
             </div>
           }
         ></Card>
