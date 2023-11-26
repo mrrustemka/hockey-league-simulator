@@ -7,7 +7,7 @@ import Sheet from "./Sheet";
 import UpcomingGame from "./UpcomingGame";
 import PlayOffGame from "./PlayOffGame";
 
-const { Meta } = Card;
+// const { Meta } = Card;
 const { Title } = Typography;
 schedule();
 
@@ -52,6 +52,7 @@ function Game() {
       points: 0,
       rating: 0,
       wins: 0,
+      wins_play_off: 0,
     };
     let away: Teams = {
       abbreviation: "",
@@ -69,6 +70,7 @@ function Game() {
       points: 0,
       rating: 0,
       wins: 0,
+      wins_play_off: 0,
     };
     function getGoals(min: number, max: number) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
