@@ -3,10 +3,11 @@ import { teams } from "../data/teams";
 import { Teams } from "../data/types";
 import { Card } from "antd";
 
-function PlayOffSheet() {
+function PlayOffSheet(props: { teamsData: Teams[] }) {
+  // const firstRound: Teams[] = teams.slice(0, 4);
   return (
     <>
-      {teams.slice(0, 2).map((team: Teams) => (
+      {props.teamsData.slice(0, 2).map((team: Teams) => (
         <Card
           hoverable
           className="upcoming-games-card"
@@ -26,10 +27,13 @@ function PlayOffSheet() {
                 }
                 src={teams[teams.length - 2 - teams.indexOf(team)].logo}
               />
-              <h3>{teams.indexOf(teams[teams.length - 2 - teams.indexOf(team)]) + 1}</h3>
+              <h3>
+                {teams.indexOf(teams[teams.length - 2 - teams.indexOf(team)]) +
+                  1}
+              </h3>
             </div>
           }
-        ></Card>
+        />
       ))}
     </>
   );

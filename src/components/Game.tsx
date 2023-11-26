@@ -5,9 +5,9 @@ import { GameResult, Schedule, Teams } from "../data/types";
 import { schedule, scheduleList } from "../data/schedule";
 import Sheet from "./Sheet";
 import UpcomingGame from "./UpcomingGame";
-import PlayOffGame from "./PlayOffGame";
+import GamePlayOff from "./GamePlayOff";
+import SheetPlayOff from "./SheetPlayOff";
 
-// const { Meta } = Card;
 const { Title } = Typography;
 schedule();
 
@@ -409,7 +409,8 @@ function Game() {
                 {" " + teamsUpdate[0].name}
               </div>
             </Title> */}
-            <PlayOffGame />
+            <GamePlayOff />
+            <SheetPlayOff teamsData={teamsUpdate.slice(0, 4)} />
           </Col>
         </Row>
       </div>
