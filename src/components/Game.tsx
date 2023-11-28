@@ -399,8 +399,8 @@ function Game() {
             <Sheet teamsData={teamsUpdate} />
           </Col>
           <Col span={10} className="champion-container-panel">
-            {/* <Title level={2} className="champion-container-panel">
-              There are no Games. The Champion is
+            <Title level={2} className="champion-container-panel">
+              There are no Games. The Regular Season Winner is
               <div>
                 <img
                   src={teamsUpdate[0].logo}
@@ -408,9 +408,9 @@ function Game() {
                 />
                 {" " + teamsUpdate[0].name}
               </div>
-            </Title> */}
-            <GamePlayOff />
-            <SheetPlayOff teamsData={teamsUpdate.slice(0, 4)} />
+            </Title>
+            {/* <GamePlayOff />
+            <SheetPlayOff teamsData={teamsUpdate.slice(0, 4)} /> */}
           </Col>
         </Row>
       </div>

@@ -2,9 +2,11 @@ import React from "react";
 import { teams } from "../data/teams";
 import { Teams } from "../data/types";
 import { Card } from "antd";
+import { schedulePlayOff } from "../data/schedulePlayOff";
 
 function PlayOffSheet(props: { teamsData: Teams[] }) {
   // const firstRound: Teams[] = teams.slice(0, 4);
+  // schedulePlayOff({props.teamsData});
   return (
     <>
       {props.teamsData.slice(0, 2).map((team: Teams) => (
