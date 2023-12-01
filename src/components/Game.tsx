@@ -5,9 +5,8 @@ import { GameResult, Schedule, Teams } from "../data/types";
 import { schedule, scheduleList } from "../data/schedule";
 import Sheet from "./Sheet";
 import UpcomingGame from "./UpcomingGame";
-import GamePlayOff from "./GamePlayOff";
-import SheetPlayOff from "./SheetPlayOff";
 
+const { Meta } = Card;
 const { Title } = Typography;
 schedule();
 
@@ -52,7 +51,6 @@ function Game() {
       points: 0,
       rating: 0,
       wins: 0,
-      wins_play_off: 0,
     };
     let away: Teams = {
       abbreviation: "",
@@ -70,7 +68,6 @@ function Game() {
       points: 0,
       rating: 0,
       wins: 0,
-      wins_play_off: 0,
     };
     function getGoals(min: number, max: number) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -227,24 +224,52 @@ function Game() {
                     />
                   }
                 >
-                  <Meta
-                    title={
+                  <Title level={4}>
+                    {
                       teams.find(
                         (element) =>
                           element.abbreviation ===
                           scheduleList[gameCounter].away
                       )?.abbreviation
                     }
-                    description={
-                      awayRating === 1
-                        ? awayRating + "st"
-                        : awayRating === 2
-                        ? awayRating + "nd"
-                        : awayRating === 3
-                        ? awayRating + "rd"
-                        : awayRating + "th"
+                  </Title>
+                  <Title
+                    level={5}
+                    className="row-panel-cards-info-position-away"
+                  >
+                    {awayRating === 1
+                      ? awayRating + "st"
+                      : awayRating === 2
+                      ? awayRating + "nd"
+                      : awayRating === 3
+                      ? awayRating + "rd"
+                      : awayRating + "th"}
+                  </Title>
+                  <Title level={5} className="row-panel-cards-info-result-away">
+                    {
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].away
+                      )?.wins
                     }
-                  />
+                    -
+                    {
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].away
+                      )?.loses
+                    }
+                    -
+                    {
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].away
+                      )?.loses_ot
+                    }
+                  </Title>
                 </Card>
               </Col>
               <Col span={12}>
@@ -269,24 +294,52 @@ function Game() {
                     />
                   }
                 >
-                  <Meta
-                    title={
+                  <Title level={4}>
+                    {
                       teams.find(
                         (element) =>
                           element.abbreviation ===
                           scheduleList[gameCounter].home
                       )?.abbreviation
                     }
-                    description={
-                      homeRating === 1
-                        ? homeRating + "st"
-                        : homeRating === 2
-                        ? homeRating + "nd"
-                        : homeRating === 3
-                        ? homeRating + "rd"
-                        : homeRating + "th"
+                  </Title>
+                  <Title
+                    level={5}
+                    className="row-panel-cards-info-position-home"
+                  >
+                    {homeRating === 1
+                      ? homeRating + "st"
+                      : homeRating === 2
+                      ? homeRating + "nd"
+                      : homeRating === 3
+                      ? homeRating + "rd"
+                      : homeRating + "th"}
+                  </Title>
+                  <Title level={5} className="row-panel-cards-info-result-home">
+                    {
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].home
+                      )?.wins
                     }
-                  />
+                    -
+                    {
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].home
+                      )?.loses
+                    }
+                    -
+                    {
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].home
+                      )?.loses_ot
+                    }
+                  </Title>
                 </Card>
               </Col>
             </Row>
@@ -328,7 +381,7 @@ function Game() {
             <Row className="upcoming-games">
               <Title level={2}>Upcoming Games</Title>
               <UpcomingGame
-                schedule={scheduleList.slice(gameCounter + 1, gameCounter + 4)}
+                schedule={scheduleList.slice(gameCounter + 1, gameCounter + 7)}
               />
             </Row>
           </Col>
@@ -344,7 +397,7 @@ function Game() {
           </Col>
           <Col span={10} className="champion-container-panel">
             <Title level={2} className="champion-container-panel">
-              There are no Games. The Regular Season Winner is
+              There are no Games. The Champion is
               <div>
                 <img
                   src={teamsUpdate[0].logo}
@@ -353,8 +406,6 @@ function Game() {
                 {" " + teamsUpdate[0].name}
               </div>
             </Title>
-            {/* <GamePlayOff />
-            <SheetPlayOff teamsData={teamsUpdate.slice(0, 4)} /> */}
           </Col>
         </Row>
       </div>
