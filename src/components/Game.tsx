@@ -5,6 +5,7 @@ import { GameResult, Schedule, Teams } from "../data/types";
 import { schedule, scheduleList } from "../data/schedule";
 import Sheet from "./Sheet";
 import UpcomingGame from "./UpcomingGame";
+import PlayOffTree from "./PlayOffTree";
 
 const { Meta } = Card;
 const { Title } = Typography;
@@ -391,7 +392,7 @@ function Game() {
   } else {
     return (
       <div className="champion">
-        <Row className="champion-container">
+        {/* <Row className="champion-container">
           <Col span={14} className="champion-container-panel">
             <Sheet teamsData={teamsUpdate} />
           </Col>
@@ -406,6 +407,25 @@ function Game() {
                 {" " + teamsUpdate[0].name}
               </div>
             </Title>
+          </Col>
+        </Row> */}
+        <Row className="">
+          <Col span={14} className="">
+            <PlayOffTree />
+          </Col>
+          <Col span={10} className=""></Col>
+        </Row>
+        <Row>
+          <Col span={14} className="">
+            <Sheet teamsData={teamsUpdate} />
+          </Col>
+          <Col span={10} className="">
+            <Row className="upcoming-games">
+              <Title level={2}>Upcoming Games</Title>
+              <UpcomingGame
+                schedule={scheduleList.slice(gameCounter + 1, gameCounter + 7)}
+              />
+            </Row>
           </Col>
         </Row>
       </div>
