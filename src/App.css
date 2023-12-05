@@ -83,6 +83,10 @@ body {
   text-align: center;
 }
 
+.table-column-rank {
+  text-align: center;
+}
+
 th {
   font-weight: 700 !important;
   text-align: center !important;

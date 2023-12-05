@@ -18,6 +18,7 @@ function Sheet(props: { teamsData: Teams[] }) {
             </div>
           );
         }}
+        className="table-column-rank"
       />
       <Table.Column
         title="Team"

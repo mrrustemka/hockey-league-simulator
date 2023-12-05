@@ -411,7 +411,7 @@ function Game() {
         </Row> */}
         <Row className="">
           <Col span={14} className="">
-            <PlayOffTree />
+            <PlayOffTree teamsData={teamsUpdate.slice(0, 4)} />
           </Col>
           <Col span={10} className=""></Col>
         </Row>
