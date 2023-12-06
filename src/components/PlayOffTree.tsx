@@ -3,24 +3,23 @@ import { Teams } from "../data/types";
 
 function PlayOffTree(props: { teamsData: Teams[] }) {
   let rank: number = 0;
+  let playOff: Teams[] = [];
+  let copy: Teams[] = props.teamsData.slice().reverse();
   props.teamsData.map((team): void => {
     team.playOffPosition = props.teamsData.indexOf(team) + 1;
   });
-  console.log(props.teamsData);
+
+  for (let i: number = 0; i < 8; i++) {
+    playOff.unshift(props.teamsData[i]);
+    playOff.unshift(copy[i]);
+  }
+  console.log(playOff);
   return (
-    <Table dataSource={[...props.teamsData]} pagination={false} size="small">
+    <Table dataSource={[...playOff]} pagination={false} size="small">
       <Table.Column
         title="Rank"
-        dataIndex=""
-        key="rank"
-        render={() => {
-          rank++;
-          return (
-            <div>
-              <p>{rank > props.teamsData.length ? (rank = 0) : rank}</p>
-            </div>
-          );
-        }}
+        dataIndex="playOffPosition"
+        key="playOffPosition"
         className="table-column-rank"
       />
       <Table.Column
@@ -28,7 +27,7 @@ function PlayOffTree(props: { teamsData: Teams[] }) {
         dataIndex="name"
         key="name"
         render={(dataIndex) => {
-          const logo = props.teamsData.find(
+          const logo = playOff.find(
             (item: { name: any }) => item.name === dataIndex
           )?.logo;
           return (
