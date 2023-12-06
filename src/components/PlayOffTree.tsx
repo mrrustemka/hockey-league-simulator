@@ -3,7 +3,10 @@ import { Teams } from "../data/types";
 
 function PlayOffTree(props: { teamsData: Teams[] }) {
   let rank: number = 0;
-
+  let homeTeams: Teams[] = props.teamsData.slice(0, 8);
+  let awayTeams: Teams[] = props.teamsData.slice(8).reverse();
+  console.log(homeTeams);
+  console.log(awayTeams);
   return (
     <Table dataSource={[...props.teamsData]} pagination={false} size="small">
       <Table.Column
