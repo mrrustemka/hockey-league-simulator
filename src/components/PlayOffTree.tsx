@@ -1,8 +1,8 @@
 import { Table } from "antd";
 import { Teams } from "../data/types";
+import { schedulePlayOff } from "../data/schedulePlayOff";
 
 function PlayOffTree(props: { teamsData: Teams[] }) {
-  let rank: number = 0;
   let playOff: Teams[] = [];
   let copy: Teams[] = props.teamsData.slice().reverse();
   props.teamsData.map((team): void => {
@@ -10,10 +10,10 @@ function PlayOffTree(props: { teamsData: Teams[] }) {
   });
 
   for (let i: number = 0; i < 8; i++) {
-    playOff.unshift(props.teamsData[i]);
-    playOff.unshift(copy[i]);
+    playOff.push(props.teamsData[i]);
+    playOff.push(copy[i]);
   }
-  console.log(playOff);
+  schedulePlayOff(playOff);
   return (
     <Table dataSource={[...playOff]} pagination={false} size="small">
       <Table.Column
