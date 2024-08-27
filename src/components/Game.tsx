@@ -74,16 +74,18 @@ function Game() {
 
     }
 
-    const homeType: Teams | undefined = teams.find(
-      (element) => element.abbreviation === game.home
-    );
+    function getTeamInfo(team: string): any {
+      return teams.find(
+        (element) => element.abbreviation === team
+      );
+    }
+
+    const homeType: Teams | undefined = getTeamInfo(game.home);
     if (homeType !== undefined) {
       home = homeType;
     }
 
-    const awayType: Teams | undefined = teams.find(
-      (element) => element.abbreviation === game.away
-    );
+    const awayType: Teams | undefined = getTeamInfo(game.away);
     if (awayType !== undefined) {
       away = awayType;
     }
@@ -122,21 +124,23 @@ function Game() {
     if (hGoals > aGoals) {
       home.points += 2;
       home.wins += 1;
-      overtime === "Shootout" || overtime === "Overtime"
-        ? (away.loses_ot += 1)
-        : (away.loses += 1);
-      overtime === "Shootout" || overtime === "Overtime"
-        ? (away.points += 1)
-        : (away.points += 0);
+      if (overtime === "Shootout" || overtime === "Overtime") {
+        away.loses_ot += 1;
+        away.points += 1
+      } else {
+        away.loses += 1;
+        away.points += 0;
+      }
     } else {
       away.points += 2;
       away.wins += 1;
-      overtime === "Shootout" || overtime === "Overtime"
-        ? (home.loses_ot += 1)
-        : (home.loses += 1);
-      overtime === "Shootout" || overtime === "Overtime"
-        ? (home.points += 1)
-        : (home.points += 0);
+      if (overtime === "Shootout" || overtime === "Overtime") {
+        home.loses_ot += 1;
+        home.points += 1;
+      } else {
+        home.loses += 1;
+        home.points += 0;
+      }
     }
 
     // Goals & Games Stats
@@ -186,15 +190,13 @@ function Game() {
     );
   }
 
+  function getTeamRating(team: string): number {
+    return teams.findIndex((element) => element.abbreviation === team) + 1;
+  } 
+
   if (scheduleList && gameCounter < scheduleList.length) {
-    let homeRating: number =
-      teams.findIndex(
-        (element) => element.abbreviation === scheduleList[gameCounter].home
-      ) + 1;
-    let awayRating: number =
-      teams.findIndex(
-        (element) => element.abbreviation === scheduleList[gameCounter].away
-      ) + 1;
+    let homeRating: number = getTeamRating(scheduleList[gameCounter].home);
+    let awayRating: number = getTeamRating(scheduleList[gameCounter].away);
     return (
       <div>
         <Row>
