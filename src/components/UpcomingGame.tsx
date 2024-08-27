@@ -55,7 +55,6 @@ function UpcomingGame(props: { schedule: Schedule[] }) {
                 }
               />
               <h3>
-                {" "}
                 {
                   teams.find((element) => element.abbreviation === game.home)
                     ?.wins

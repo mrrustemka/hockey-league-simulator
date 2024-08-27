@@ -5,7 +5,6 @@ import { GameResult, Schedule, Teams } from "../data/types";
 import { schedule, scheduleList } from "../data/schedule";
 import Sheet from "./Sheet";
 import UpcomingGame from "./UpcomingGame";
-import PlayOffTree from "./PlayOffTree";
 
 const { Meta } = Card;
 const { Title } = Typography;
@@ -52,8 +51,6 @@ function Game() {
       points: 0,
       rating: 0,
       wins: 0,
-      playOffPosition: 0,
-      playOffWins: 0,
     };
     let away: Teams = {
       abbreviation: "",
@@ -71,11 +68,9 @@ function Game() {
       points: 0,
       rating: 0,
       wins: 0,
-      playOffPosition: 0,
-      playOffWins: 0,
     };
-    function getGoals(min: number, max: number, rating: number) {
-      return Math.round(((Math.floor(Math.random() * (max - min + 1)) + min) * rating) / 100)
+    function getGoals(min: number, max: number) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
     const homeType: Teams | undefined = teams.find(
@@ -93,8 +88,8 @@ function Game() {
     }
 
     //Goals
-    let hGoals: number = getGoals(0, 9, home.rating);
-    let aGoals: number = getGoals(0, 9, away.rating);
+    let hGoals: number = Math.round((getGoals(0, 9) * home.rating) / 100);
+    let aGoals: number = Math.round((getGoals(0, 9) * away.rating) / 100);
 
     // Make more realistic game score
 
@@ -190,213 +185,213 @@ function Game() {
     );
   }
 
-  // if (scheduleList && gameCounter < scheduleList.length) {
-  //   let homeRating: number =
-  //     teams.findIndex(
-  //       (element) => element.abbreviation === scheduleList[gameCounter].home
-  //     ) + 1;
-  //   let awayRating: number =
-  //     teams.findIndex(
-  //       (element) => element.abbreviation === scheduleList[gameCounter].away
-  //     ) + 1;
-  //   return (
-  //     <div>
-  //       <Row>
-  //         <Col span={14}>
-  //           <Sheet teamsData={teamsUpdate} />
-  //         </Col>
-  //         <Col span={10}>
-  //           <Row className="row-panel-cards">
-  //             <Col span={12}>
-  //               <Card
-  //                 hoverable
-  //                 cover={
-  //                   <img
-  //                     alt={
-  //                       teams.find(
-  //                         (element) =>
-  //                           element.abbreviation ===
-  //                           scheduleList[gameCounter].away
-  //                       )?.name + "Logo"
-  //                     }
-  //                     src={
-  //                       teams.find(
-  //                         (element) =>
-  //                           element.abbreviation ===
-  //                           scheduleList[gameCounter].away
-  //                       )?.logo
-  //                     }
-  //                   />
-  //                 }
-  //               >
-  //                 <Title level={4}>
-  //                   {
-  //                     teams.find(
-  //                       (element) =>
-  //                         element.abbreviation ===
-  //                         scheduleList[gameCounter].away
-  //                     )?.abbreviation
-  //                   }
-  //                 </Title>
-  //                 <Title
-  //                   level={5}
-  //                   className="row-panel-cards-info-position-away"
-  //                 >
-  //                   {awayRating === 1
-  //                     ? awayRating + "st"
-  //                     : awayRating === 2
-  //                     ? awayRating + "nd"
-  //                     : awayRating === 3
-  //                     ? awayRating + "rd"
-  //                     : awayRating + "th"}
-  //                 </Title>
-  //                 <Title level={5} className="row-panel-cards-info-result-away">
-  //                   {
-  //                     teams.find(
-  //                       (element) =>
-  //                         element.abbreviation ===
-  //                         scheduleList[gameCounter].away
-  //                     )?.wins
-  //                   }
-  //                   -
-  //                   {
-  //                     teams.find(
-  //                       (element) =>
-  //                         element.abbreviation ===
-  //                         scheduleList[gameCounter].away
-  //                     )?.loses
-  //                   }
-  //                   -
-  //                   {
-  //                     teams.find(
-  //                       (element) =>
-  //                         element.abbreviation ===
-  //                         scheduleList[gameCounter].away
-  //                     )?.loses_ot
-  //                   }
-  //                 </Title>
-  //               </Card>
-  //             </Col>
-  //             <Col span={12}>
-  //               <Card
-  //                 hoverable
-  //                 cover={
-  //                   <img
-  //                     alt={
-  //                       teams.find(
-  //                         (element) =>
-  //                           element.abbreviation ===
-  //                           scheduleList[gameCounter].home
-  //                       )?.name + "Logo"
-  //                     }
-  //                     src={
-  //                       teams.find(
-  //                         (element) =>
-  //                           element.abbreviation ===
-  //                           scheduleList[gameCounter].home
-  //                       )?.logo
-  //                     }
-  //                   />
-  //                 }
-  //               >
-  //                 <Title level={4}>
-  //                   {
-  //                     teams.find(
-  //                       (element) =>
-  //                         element.abbreviation ===
-  //                         scheduleList[gameCounter].home
-  //                     )?.abbreviation
-  //                   }
-  //                 </Title>
-  //                 <Title
-  //                   level={5}
-  //                   className="row-panel-cards-info-position-home"
-  //                 >
-  //                   {homeRating === 1
-  //                     ? homeRating + "st"
-  //                     : homeRating === 2
-  //                     ? homeRating + "nd"
-  //                     : homeRating === 3
-  //                     ? homeRating + "rd"
-  //                     : homeRating + "th"}
-  //                 </Title>
-  //                 <Title level={5} className="row-panel-cards-info-result-home">
-  //                   {
-  //                     teams.find(
-  //                       (element) =>
-  //                         element.abbreviation ===
-  //                         scheduleList[gameCounter].home
-  //                     )?.wins
-  //                   }
-  //                   -
-  //                   {
-  //                     teams.find(
-  //                       (element) =>
-  //                         element.abbreviation ===
-  //                         scheduleList[gameCounter].home
-  //                     )?.loses
-  //                   }
-  //                   -
-  //                   {
-  //                     teams.find(
-  //                       (element) =>
-  //                         element.abbreviation ===
-  //                         scheduleList[gameCounter].home
-  //                     )?.loses_ot
-  //                   }
-  //                 </Title>
-  //               </Card>
-  //             </Col>
-  //           </Row>
-  //           <Row className="panel-score">
-  //             <Col span={24} className="panel-simulate">
-  //               <Card hoverable>
-  //                 <Title>{isSimulate ? awayGoals : " "}</Title>
-  //                 <Title>-</Title>
-  //                 <Title>{isSimulate ? homeGoals : " "}</Title>
-  //                 <Title level={3}>{isSimulate ? typeOfOt : ""}</Title>
-  //               </Card>
-  //             </Col>
-  //           </Row>
-  //           <Row className="row-panel-simulate">
-  //             <Col span={24} className="panel-simulate">
-  //               <Button
-  //                 onClick={buttonHandler}
-  //                 disabled={isSimulate}
-  //                 size="large"
-  //               >
-  //                 Simulate
-  //               </Button>
-  //               <Button
-  //                 onClick={updateCounter}
-  //                 disabled={!isSimulate}
-  //                 size="large"
-  //               >
-  //                 Next Game
-  //               </Button>
-  //             </Col>
-  //             <Card>
-  //               <Col span={24} className="panel-counter">
-  //                 <Title level={3}>
-  //                   {gameIndex}/{scheduleList.length}
-  //                 </Title>
-  //               </Col>
-  //             </Card>
-  //           </Row>
-  //           <Row className="upcoming-games">
-  //             <Title level={2}>Upcoming Games</Title>
-  //             <UpcomingGame
-  //               schedule={scheduleList.slice(gameCounter + 1, gameCounter + 7)}
-  //             />
-  //           </Row>
-  //         </Col>
-  //       </Row>
-  //     </div>
-  //   );
-  // } else {
-  return (
-    <div className="champion">
-      {/* <Row className="champion-container">
+  if (scheduleList && gameCounter < scheduleList.length) {
+    let homeRating: number =
+      teams.findIndex(
+        (element) => element.abbreviation === scheduleList[gameCounter].home
+      ) + 1;
+    let awayRating: number =
+      teams.findIndex(
+        (element) => element.abbreviation === scheduleList[gameCounter].away
+      ) + 1;
+    return (
+      <div>
+        <Row>
+          <Col span={14}>
+            <Sheet teamsData={teamsUpdate} />
+          </Col>
+          <Col span={10}>
+            <Row className="row-panel-cards">
+              <Col span={12}>
+                <Card
+                  hoverable
+                  cover={
+                    <img
+                      alt={
+                        teams.find(
+                          (element) =>
+                            element.abbreviation ===
+                            scheduleList[gameCounter].away
+                        )?.name + "Logo"
+                      }
+                      src={
+                        teams.find(
+                          (element) =>
+                            element.abbreviation ===
+                            scheduleList[gameCounter].away
+                        )?.logo
+                      }
+                    />
+                  }
+                >
+                  <Title level={4}>
+                    {
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].away
+                      )?.abbreviation
+                    }
+                  </Title>
+                  <Title
+                    level={5}
+                    className="row-panel-cards-info-position-away"
+                  >
+                    {awayRating === 1
+                      ? awayRating + "st"
+                      : awayRating === 2
+                      ? awayRating + "nd"
+                      : awayRating === 3
+                      ? awayRating + "rd"
+                      : awayRating + "th"}
+                  </Title>
+                  <Title level={5} className="row-panel-cards-info-result-away">
+                    {
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].away
+                      )?.wins
+                    }
+                    -
+                    {
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].away
+                      )?.loses
+                    }
+                    -
+                    {
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].away
+                      )?.loses_ot
+                    }
+                  </Title>
+                </Card>
+              </Col>
+              <Col span={12}>
+                <Card
+                  hoverable
+                  cover={
+                    <img
+                      alt={
+                        teams.find(
+                          (element) =>
+                            element.abbreviation ===
+                            scheduleList[gameCounter].home
+                        )?.name + "Logo"
+                      }
+                      src={
+                        teams.find(
+                          (element) =>
+                            element.abbreviation ===
+                            scheduleList[gameCounter].home
+                        )?.logo
+                      }
+                    />
+                  }
+                >
+                  <Title level={4}>
+                    {
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].home
+                      )?.abbreviation
+                    }
+                  </Title>
+                  <Title
+                    level={5}
+                    className="row-panel-cards-info-position-home"
+                  >
+                    {homeRating === 1
+                      ? homeRating + "st"
+                      : homeRating === 2
+                      ? homeRating + "nd"
+                      : homeRating === 3
+                      ? homeRating + "rd"
+                      : homeRating + "th"}
+                  </Title>
+                  <Title level={5} className="row-panel-cards-info-result-home">
+                    {
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].home
+                      )?.wins
+                    }
+                    -
+                    {
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].home
+                      )?.loses
+                    }
+                    -
+                    {
+                      teams.find(
+                        (element) =>
+                          element.abbreviation ===
+                          scheduleList[gameCounter].home
+                      )?.loses_ot
+                    }
+                  </Title>
+                </Card>
+              </Col>
+            </Row>
+            <Row className="panel-score">
+              <Col span={24} className="panel-simulate">
+                <Card hoverable>
+                  <Title>{isSimulate ? awayGoals : " "}</Title>
+                  <Title>-</Title>
+                  <Title>{isSimulate ? homeGoals : " "}</Title>
+                  <Title level={3}>{isSimulate ? typeOfOt : ""}</Title>
+                </Card>
+              </Col>
+            </Row>
+            <Row className="row-panel-simulate">
+              <Col span={24} className="panel-simulate">
+                <Button
+                  onClick={buttonHandler}
+                  disabled={isSimulate}
+                  size="large"
+                >
+                  Simulate
+                </Button>
+                <Button
+                  onClick={updateCounter}
+                  disabled={!isSimulate}
+                  size="large"
+                >
+                  Next Game
+                </Button>
+              </Col>
+              <Card>
+                <Col span={24} className="panel-counter">
+                  <Title level={3}>
+                    {gameIndex}/{scheduleList.length}
+                  </Title>
+                </Col>
+              </Card>
+            </Row>
+            <Row className="upcoming-games">
+              <Title level={2}>Upcoming Games</Title>
+              <UpcomingGame
+                schedule={scheduleList.slice(gameCounter + 1, gameCounter + 7)}
+              />
+            </Row>
+          </Col>
+        </Row>
+      </div>
+    );
+  } else {
+    return (
+      <div className="champion">
+        <Row className="champion-container">
           <Col span={14} className="champion-container-panel">
             <Sheet teamsData={teamsUpdate} />
           </Col>
@@ -412,29 +407,10 @@ function Game() {
               </div>
             </Title>
           </Col>
-        </Row> */}
-      <Row className="">
-        <Col span={14} className="">
-          <PlayOffTree teamsData={teamsUpdate.slice(0, 16)} />
-        </Col>
-        <Col span={10} className=""></Col>
-      </Row>
-      <Row>
-        <Col span={14} className="">
-          <Sheet teamsData={teamsUpdate} />
-        </Col>
-        <Col span={10} className="">
-          <Row className="upcoming-games">
-            <Title level={2}>Upcoming Games</Title>
-            <UpcomingGame
-              schedule={scheduleList.slice(gameCounter + 1, gameCounter + 7)}
-            />
-          </Row>
-        </Col>
-      </Row>
-    </div>
-  );
+        </Row>
+      </div>
+    );
+  }
 }
-// }
 
 export default Game;
