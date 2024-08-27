@@ -74,8 +74,8 @@ function Game() {
       playOffPosition: 0,
       playOffWins: 0,
     };
-    function getGoals(min: number, max: number) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
+    function getGoals(min: number, max: number, rating: number) {
+      return Math.round(((Math.floor(Math.random() * (max - min + 1)) + min) * rating) / 100)
     }
 
     const homeType: Teams | undefined = teams.find(
@@ -93,8 +93,8 @@ function Game() {
     }
 
     //Goals
-    let hGoals: number = Math.round((getGoals(0, 9) * home.rating) / 100);
-    let aGoals: number = Math.round((getGoals(0, 9) * away.rating) / 100);
+    let hGoals: number = getGoals(0, 9, home.rating);
+    let aGoals: number = getGoals(0, 9, away.rating);
 
     // Make more realistic game score
 
