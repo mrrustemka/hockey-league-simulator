@@ -41,6 +41,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 2,
@@ -58,6 +60,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 3,
@@ -75,6 +79,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 4,
@@ -92,6 +98,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 5,
@@ -109,6 +117,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 6,
@@ -126,6 +136,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 7,
@@ -143,6 +155,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 8,
@@ -160,6 +174,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 9,
@@ -177,6 +193,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 10,
@@ -194,6 +212,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 11,
@@ -211,6 +231,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 12,
@@ -228,6 +250,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 13,
@@ -245,6 +269,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 14,
@@ -262,6 +288,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 15,
@@ -279,6 +307,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 16,
@@ -296,6 +326,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 17,
@@ -313,6 +345,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 18,
@@ -330,6 +364,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 19,
@@ -347,6 +383,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 20,
@@ -364,6 +402,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 21,
@@ -381,6 +421,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 22,
@@ -398,6 +440,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 23,
@@ -415,6 +459,8 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
   {
     id: 24,
@@ -432,5 +478,7 @@ export const teams: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
+    playOffPosition: 0,
+    playOffWins: 0,
   },
 ];

@@ -14,6 +14,8 @@ export type Teams = {
   points: number;
   rating: number;
   wins: number;
+  playOffPosition: number;
+  playOffWins: number;
 };
 
 export type TeamsList = string[];
