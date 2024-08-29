@@ -1,8 +1,13 @@
 ﻿import React from 'react'
 
-function Round({abv}: any) {
+function Round({abv, pairs}: any) {
   return (
-    <div>{'Round ' + abv}</div>
+    <div>
+      {abv}
+      <div>
+        {pairs.length === 0 ? 'waiting pairs...' : ''}
+      </div>
+    </div>
   )
 }
 

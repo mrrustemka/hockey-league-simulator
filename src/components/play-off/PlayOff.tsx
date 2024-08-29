@@ -10,16 +10,16 @@ function PlayOff() {
     const location = useLocation();
     // const { teams } = location.state || {};
     const teams = mock;
+    const tree = Array.from({ length: Math.log2(teams.length) }, () => []);
+    
+    for (let i = 0; i < teams.length / 2; i++) {
+    }
 
-    let tree = Array.from({ length: Math.log2(teams.length) }, () => []);
-    // for (let i = 0; i < teams.length / 2; i++) {
-    //     tree.push([teams[i], teams[teams.length - i - 1]])
-    // }
     console.log(tree)
 
   return (
     <div>
-        {tree.map((value, index) => <Round key={uuidv4()} abv={index + 1} />)}
+        {tree.map((value, index) => <Round key={uuidv4()} abv={index === Math.log2(teams.length) - 1 ? 'Final' : 'Round ' + (index + 1) } pairs={[]}/>)}
     </div>
   )
 }
