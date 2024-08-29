@@ -420,11 +420,7 @@ function Game() {
               </div>
             </Title> */}
             <Title level={2} className="champion-container-panel">
-              <Button
-                  size="large"
-                >
-                <Link to="playoff">Start Play-Off</Link>
-              </Button>
+              <Link to="playoff" state={{ teams: teamsUpdate.slice(0, teamsUpdate.length >= 16 ? 16 : teamsUpdate.length >= 8 ? 8 : teamsUpdate.length >= 4 ? 4 : 2) }}>Start Play-Off</Link>
             </Title>
           </Col>
         </Row>
