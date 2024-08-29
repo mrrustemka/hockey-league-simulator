@@ -18,10 +18,14 @@ function Game() {
   let [typeOfOt, setTypeOfOt] = useState<string>("");
   const [isSimulate, setIsSimulate] = useState<boolean>(false);
   const [gameIndex, setGameIndex] = useState<number>(0);
+  const [isPlayOff, setIsPlayOff] = useState(false);
 
   const updateCounter = () => {
     setGameCounter(gameCounter + 1);
     setIsSimulate(false);
+    if (scheduleList.length - 1 === gameCounter) {
+      setIsPlayOff(true);
+    }
   };
 
   const buttonHandler = () => {
@@ -399,7 +403,7 @@ function Game() {
             <Sheet teamsData={teamsUpdate} />
           </Col>
           <Col span={10} className="champion-container-panel">
-            <Title level={2} className="champion-container-panel">
+            {/* <Title level={2} className="champion-container-panel">
               There are no Games. The Champion is
               <div>
                 <img
@@ -408,7 +412,8 @@ function Game() {
                 />
                 {" " + teamsUpdate[0].name}
               </div>
-            </Title>
+            </Title> */}
+            <Title level={2} className="champion-container-panel">{isPlayOff.toString()}</Title>
           </Col>
         </Row>
       </div>
