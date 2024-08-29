@@ -24,7 +24,7 @@ function Game() {
   let [typeOfOt, setTypeOfOt] = useState<string>("");
   const [isSimulate, setIsSimulate] = useState<boolean>(false);
   const [gameIndex, setGameIndex] = useState<number>(0);
-  const [isPlayOff, setIsPlayOff] = useState(false);
+  const [isPlayOff, setIsPlayOff] = useState<boolean>(false);
 
   const updateCounter = () => {
     setGameCounter(gameCounter + 1);

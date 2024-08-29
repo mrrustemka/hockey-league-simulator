@@ -1,8 +1,8 @@
 ﻿import React from 'react'
 
-function Round() {
+function Round({abv}: any) {
   return (
-    <div>Round</div>
+    <div>{'Round ' + abv}</div>
   )
 }
 
