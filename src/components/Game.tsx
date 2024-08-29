@@ -5,6 +5,12 @@ import { GameResult, Schedule, Teams } from "../data/types";
 import { schedule, scheduleList } from "../data/schedule";
 import Sheet from "./Sheet";
 import UpcomingGame from "./UpcomingGame";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
 
 const { Meta } = Card;
 const { Title } = Typography;
@@ -413,7 +419,13 @@ function Game() {
                 {" " + teamsUpdate[0].name}
               </div>
             </Title> */}
-            <Title level={2} className="champion-container-panel">{isPlayOff.toString()}</Title>
+            <Title level={2} className="champion-container-panel">
+              <Button
+                  size="large"
+                >
+                <Link to="playoff">Start Play-Off</Link>
+              </Button>
+            </Title>
           </Col>
         </Row>
       </div>
