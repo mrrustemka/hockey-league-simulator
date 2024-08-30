@@ -61,6 +61,8 @@ function Game() {
       points: 0,
       rating: 0,
       wins: 0,
+      play_off_rank: 0,
+      play_off_round_wins: 0,
     };
     let away: Teams = {
       abbreviation: "",
@@ -78,6 +80,8 @@ function Game() {
       points: 0,
       rating: 0,
       wins: 0,
+      play_off_rank: 0,
+      play_off_round_wins: 0,
     };
     function getGoals(min: number, max: number, rating: number) {
       return Math.round(((Math.floor(Math.random() * (max - min + 1)) + min) * rating) / 100);
