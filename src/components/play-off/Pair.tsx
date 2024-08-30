@@ -1,8 +1,10 @@
 ﻿import React from 'react'
 
-function Pair() {
+function Pair({teams}: any) {
   return (
-    <div>Pair</div>
+    <div>
+      {teams[0].abbreviation} - {teams[1].abbreviation}
+    </div>
   )
 }
 
