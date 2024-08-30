@@ -1,27 +1,41 @@
 ﻿import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Round from './Round';
-import { Schedule } from '../../data/types';
 import { v4 as uuidv4 } from "uuid";
 import { teams as mock } from "../../data/teams";
 
-
 function PlayOff() {
-    const location = useLocation();
-    // const { teams } = location.state || {};
-    const teams = mock;
-    const tree = Array.from({ length: Math.log2(teams.length) }, () => []);
-    
+  const [isRound, setIsRound] = useState<boolean>(true);
+  let [curRound, setCurRound] = useState<number>(0);
+  const [tree, setTree] = useState<Array<any>>([]);
+  const teams = mock;
+
+  const location = useLocation();
+  // const { teams } = location.state || {};
+
+  if (isRound) {
+    let newRound: Array<any> = [];
+
     for (let i = 0; i < teams.length / 2; i++) {
+      newRound.push([teams[i], teams[teams.length - i - 1]]);
     }
 
-    console.log(tree)
+    setTree((prevTree) => [newRound, ...prevTree]);
+    setCurRound(curRound + 1);
+    setIsRound(!isRound);
+  }
 
   return (
     <div>
-        {tree.map((value, index) => <Round key={uuidv4()} abv={index === Math.log2(teams.length) - 1 ? 'Final' : 'Round ' + (index + 1) } pairs={[]}/>)}
+      {tree.map((value, index) => (
+        <Round
+          key={uuidv4()}
+          abv={index === Math.log2(teams.length) - 1 ? 'Final' : 'Round ' + (index + 1)}
+          pairs={value}
+        />
+      ))}
     </div>
-  )
+  );
 }
 
-export default PlayOff
+export default PlayOff;
