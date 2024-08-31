@@ -9,7 +9,7 @@ import {
   createBrowserRouter,
   RouterProvider,
   Route,
-  Link,
+  Link
 } from "react-router-dom";
 
 const { Meta } = Card;
@@ -62,7 +62,7 @@ function Game() {
       rating: 0,
       wins: 0,
       play_off_rank: 0,
-      play_off_round_wins: 0,
+      play_off_round_wins: 0
     };
     let away: Teams = {
       abbreviation: "",
@@ -81,17 +81,16 @@ function Game() {
       rating: 0,
       wins: 0,
       play_off_rank: 0,
-      play_off_round_wins: 0,
+      play_off_round_wins: 0
     };
     function getGoals(min: number, max: number, rating: number) {
-      return Math.round(((Math.floor(Math.random() * (max - min + 1)) + min) * rating) / 100);
-
+      return Math.round(
+        ((Math.floor(Math.random() * (max - min + 1)) + min) * rating) / 100
+      );
     }
 
     function getTeamInfo(team: string): any {
-      return teams.find(
-        (element) => element.abbreviation === team
-      );
+      return teams.find((element) => element.abbreviation === team);
     }
 
     const homeType: Teams | undefined = getTeamInfo(game.home);
@@ -140,7 +139,7 @@ function Game() {
       home.wins += 1;
       if (overtime === "Shootout" || overtime === "Overtime") {
         away.loses_ot += 1;
-        away.points += 1
+        away.points += 1;
       } else {
         away.loses += 1;
         away.points += 0;
@@ -173,7 +172,7 @@ function Game() {
       away: away.abbreviation,
       homeGoals: hGoals,
       awayGoals: aGoals,
-      overtime: overtime,
+      overtime: overtime
     };
     setTeamsUpdate(teamsSort(teams));
     setIsSimulate(true);
@@ -206,7 +205,7 @@ function Game() {
 
   function getTeamRating(team: string): number {
     return teams.findIndex((element) => element.abbreviation === team) + 1;
-  } 
+  }
 
   if (scheduleList && gameCounter < scheduleList.length) {
     let homeRating: number = getTeamRating(scheduleList[gameCounter].home);
@@ -424,7 +423,23 @@ function Game() {
               </div>
             </Title> */}
             <Title level={2} className="champion-container-panel">
-              <Link to="playoff" state={{ teams: teamsUpdate.slice(0, teamsUpdate.length >= 16 ? 16 : teamsUpdate.length >= 8 ? 8 : teamsUpdate.length >= 4 ? 4 : 2) }}>Start Play-Off</Link>
+              <Link
+                to="playoff"
+                state={{
+                  teams: teamsUpdate.slice(
+                    0,
+                    teamsUpdate.length >= 16
+                      ? 16
+                      : teamsUpdate.length >= 8
+                      ? 8
+                      : teamsUpdate.length >= 4
+                      ? 4
+                      : 2
+                  )
+                }}
+              >
+                Start Play-Off
+              </Link>
             </Title>
           </Col>
         </Row>
