@@ -32,18 +32,29 @@ function Pair({ teams }: any) {
   ]);
 
   function addGame() {
-    if (
-      (teams[0].play_off_round_wins < teams[1].play_off_round_wins &&
-        teams[0].play_off_round_wins !== 0 &&
-        teams[1].play_off_round_wins !== 4 &&
-        teams[0].play_off_round_wins + 4 !== games.length) ||
-      (teams[1].play_off_round_wins < teams[0].play_off_round_wins &&
-        teams[1].play_off_round_wins !== 0 &&
-        teams[0].play_off_round_wins !== 4 &&
-        teams[1].play_off_round_wins + 4 !== games.length) ||
-      teams[0].play_off_round_wins === teams[1].play_off_round_wins
-    ) {
-      const newGame: any = [
+    const team0Wins = teams[0].play_off_round_wins;
+    const team1Wins = teams[1].play_off_round_wins;
+    const maxWins = 4;
+    const totalGames = games.length;
+
+    const canAddGame = () => {
+      const bothTeamsEqualWins = team0Wins === team1Wins;
+      const team0CanWin =
+        team0Wins < team1Wins &&
+        team0Wins !== 0 &&
+        team1Wins !== maxWins &&
+        team0Wins + maxWins !== totalGames;
+      const team1CanWin =
+        team1Wins < team0Wins &&
+        team1Wins !== 0 &&
+        team0Wins !== maxWins &&
+        team1Wins + maxWins !== totalGames;
+
+      return bothTeamsEqualWins || team0CanWin || team1CanWin;
+    };
+
+    if (canAddGame()) {
+      const newGame = [
         ...games,
         {
           id: uuidv4(),
@@ -54,8 +65,9 @@ function Pair({ teams }: any) {
       ];
       setGames(newGame);
     }
-    console.log(teams[0].abbreviation, teams[0].play_off_round_wins);
-    console.log(teams[1].abbreviation, teams[1].play_off_round_wins);
+
+    console.log(teams[0].abbreviation, team0Wins);
+    console.log(teams[1].abbreviation, team1Wins);
   }
 
   return (
