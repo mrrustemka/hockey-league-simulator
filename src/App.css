@@ -162,9 +162,13 @@ th {
 }
 
 .champion-container-panel > div > img {
+  margin-left: 4px;
   width: 24px;
 }
 
+.champion-container-panel > div {
+  display: inline-block;
+}
 .row-panel-cards-info-result-away {
   opacity: 0.45;
   float: inline-start;

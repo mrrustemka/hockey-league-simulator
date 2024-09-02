@@ -412,16 +412,6 @@ function Game() {
             <Sheet teamsData={teamsUpdate} />
           </Col>
           <Col span={10} className="champion-container-panel">
-            {/* <Title level={2} className="champion-container-panel">
-              There are no Games. The Champion is
-              <div>
-                <img
-                  src={teamsUpdate[0].logo}
-                  alt={teamsUpdate[0].name + " Logo"}
-                />
-                {" " + teamsUpdate[0].name}
-              </div>
-            </Title> */}
             <Title level={2} className="champion-container-panel">
               <Link
                 to="playoff"

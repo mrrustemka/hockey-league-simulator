@@ -31,18 +31,30 @@ function PlayOff() {
     setIsRound(!isRound);
   }
 
+  function nextRound() {
+    const newTeams = teams.filter((team) => team.play_off_round_wins === 4);
+    newTeams.forEach((team) => (team.play_off_round_wins = 0));
+    setTeams(newTeams);
+    setIsRound(!isRound);
+  }
+
   return (
     <div>
       {tree.map((value, index) => (
-        <Round
-          key={uuidv4()}
-          abv={
-            index === Math.log2(teams.length) - 1
-              ? "Final"
-              : "Round " + (index + 1)
-          }
-          pairs={value}
-        />
+        <div key={uuidv4()}>
+          <Round
+            key={uuidv4()}
+            abv={
+              index === Math.log2(teams.length) - 1
+                ? "Final"
+                : "Round " + (index + 1)
+            }
+            pairs={value}
+          />
+          <button key={uuidv4()} onClick={() => nextRound()}>
+            Next
+          </button>
+        </div>
       ))}
     </div>
   );

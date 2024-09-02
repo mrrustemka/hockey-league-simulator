@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import { GameResult, Teams } from "../../data/types";
 import PlayOffGame from "./PlayOffGame";
 
-function Pair({ teams }: any) {
+function Pair({ teams, handlerIsRoundEnd }: any) {
   const [games, setGames] = useState([
     {
       id: uuidv4(),
@@ -66,8 +66,11 @@ function Pair({ teams }: any) {
       setGames(newGame);
     }
 
-    console.log(teams[0].abbreviation, team0Wins);
-    console.log(teams[1].abbreviation, team1Wins);
+    if (team0Wins === maxWins || team1Wins === maxWins) {
+      console.log(teams[0].abbreviation, team0Wins);
+      console.log(teams[1].abbreviation, team1Wins);
+      handlerIsRoundEnd();
+    }
   }
 
   return (
