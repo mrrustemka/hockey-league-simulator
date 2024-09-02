@@ -9,11 +9,13 @@ function PlayOff() {
   const [isRound, setIsRound] = useState<boolean>(true);
   let [curRound, setCurRound] = useState<number>(0);
   const [tree, setTree] = useState<Array<any>>([]);
-  const [teams, setTeams] = useState<Array<Teams>>(mock);
+  const location = useLocation();
+  const [teams, setTeams] = useState<Array<Teams>>(location.state.teams || {});
   // const teams = mock;
 
-  const location = useLocation();
   // const { teams } = location.state || {};
+  // setTeams(location.state || {});
+  // console.log(location.state.teams || {});
 
   for (let i = 0; i < teams.length; i++) {
     teams[i].play_off_rank = i + 1;

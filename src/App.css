@@ -164,6 +164,7 @@ th {
 .champion-container-panel > div > img {
   margin-left: 4px;
   width: 24px;
+  border-radius: 100%;
 }
 
 .champion-container-panel > div {

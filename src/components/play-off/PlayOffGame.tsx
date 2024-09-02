@@ -117,6 +117,12 @@ function PlayOffGame({ game, updateGames, index }: any) {
 
     updateGames();
     setIsSimulated(!isSimulated);
+    console.log(
+      home.abbreviation,
+      away.abbreviation,
+      home.play_off_round_wins,
+      away.play_off_round_wins
+    );
     // setTeamsUpdate(teamsSort(teams));
     // setIsSimulate(true);
     return result;

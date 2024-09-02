@@ -23,16 +23,16 @@ function Round({ abv, pairs }: any) {
       {isChampion ? (
         <div>
           <h2 className="champion-container-panel">
-            There are no Games. The Champion is
+            The Champion is{" "}
             {pairs[0][0].play_off_round_wins === 4 ? (
               <div>
+                {pairs[0][0].name + " "}
                 <img src={pairs[0][0].logo} alt={pairs[0][0].name + " Logo"} />
-                {" " + pairs[0][0].name}
               </div>
             ) : (
               <div>
+                {pairs[0][1].name + " "}
                 <img src={pairs[0][1].logo} alt={pairs[0][1].name + " Logo"} />
-                {" " + pairs[0][1].name}
               </div>
             )}
           </h2>
