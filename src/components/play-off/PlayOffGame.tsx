@@ -1,8 +1,9 @@
-﻿import React from "react";
+﻿import React, { useState } from "react";
 import { GameResult, Teams } from "../../data/types";
 import { teams } from "../../data/teams";
 
 function PlayOffGame({ game, updateGames, index }: any) {
+  const [isSimulated, setIsSimulated] = useState<boolean>(false);
   function simulate(game: any) {
     // setGameIndex(scheduleList.indexOf(game) + 1);
     let home: Teams = {
@@ -115,6 +116,7 @@ function PlayOffGame({ game, updateGames, index }: any) {
     };
 
     updateGames();
+    setIsSimulated(!isSimulated);
     // setTeamsUpdate(teamsSort(teams));
     // setIsSimulate(true);
     return result;
@@ -123,7 +125,9 @@ function PlayOffGame({ game, updateGames, index }: any) {
   return (
     <div>
       {index + 1}. {game.home} - {game.away}
-      <button onClick={() => simulate(game)}>Simulate</button>
+      <button onClick={() => simulate(game)} disabled={isSimulated}>
+        Simulate
+      </button>
     </div>
   );
 }
