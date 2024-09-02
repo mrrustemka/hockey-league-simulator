@@ -3,12 +3,14 @@ import { useLocation } from "react-router-dom";
 import Round from "./Round";
 import { v4 as uuidv4 } from "uuid";
 import { teams as mock } from "../../data/teams";
+import { Teams } from "../../data/types";
 
 function PlayOff() {
   const [isRound, setIsRound] = useState<boolean>(true);
   let [curRound, setCurRound] = useState<number>(0);
   const [tree, setTree] = useState<Array<any>>([]);
-  const teams = mock;
+  const [teams, setTeams] = useState<Array<Teams>>(mock);
+  // const teams = mock;
 
   const location = useLocation();
   // const { teams } = location.state || {};
@@ -28,8 +30,6 @@ function PlayOff() {
     setCurRound(curRound + 1);
     setIsRound(!isRound);
   }
-
-  console.log(teams);
 
   return (
     <div>
