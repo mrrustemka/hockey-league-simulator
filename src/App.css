@@ -189,3 +189,7 @@ th {
   opacity: 0.45;
   float: inline-start;
 }
+
+.start-play-off {
+  margin-top: 12px;
+}

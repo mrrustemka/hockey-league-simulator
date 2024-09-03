@@ -412,7 +412,7 @@ function Game() {
             <Sheet teamsData={teamsUpdate} />
           </Col>
           <Col span={10} className="champion-container-panel">
-            <Title level={2} className="champion-container-panel">
+            <Button className="start-play-off" size="large">
               <Link
                 to="playoff"
                 state={{
@@ -430,7 +430,7 @@ function Game() {
               >
                 Start Play-Off
               </Link>
-            </Title>
+            </Button>
           </Col>
         </Row>
       </div>
