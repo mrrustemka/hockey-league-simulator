@@ -6,23 +6,27 @@ import {
   createBrowserRouter,
   RouterProvider,
   Route,
-  Link,
+  Link
 } from "react-router-dom";
 import PlayOff from "./components/play-off/PlayOff";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "hockey-league-simulator",
     element: (
       <div>
         <Game />
       </div>
-    ),
+    )
   },
   {
-    path: "playoff",
-    element: <div><PlayOff /></div>,
-  },
+    path: "hockey-league-simulator/playoff",
+    element: (
+      <div>
+        <PlayOff />
+      </div>
+    )
+  }
 ]);
 
 const App: FC = () => (
