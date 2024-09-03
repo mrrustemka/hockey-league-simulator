@@ -1,3 +1,9 @@
+# Ignore README.md
+README.md
+
+# Ignore TypeScript data file
+src/data/teams.ts
+
 # Logs
 logs
 *.log
