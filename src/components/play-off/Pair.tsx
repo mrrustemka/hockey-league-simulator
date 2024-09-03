@@ -56,12 +56,19 @@ function Pair({ teams, handlerIsRoundEnd, status }: any) {
     if (canAddGame()) {
       const newGame = [
         ...games,
-        {
-          id: uuidv4(),
-          home: teams[0].abbreviation,
-          away: teams[1].abbreviation,
-          winner: ""
-        }
+        games.length === 5
+          ? {
+              id: uuidv4(),
+              home: teams[1].abbreviation,
+              away: teams[0].abbreviation,
+              winner: ""
+            }
+          : {
+              id: uuidv4(),
+              home: teams[0].abbreviation,
+              away: teams[1].abbreviation,
+              winner: ""
+            }
       ];
       setGames(newGame);
     }
