@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import { GameResult, Teams } from "../../data/types";
 import PlayOffGame from "./PlayOffGame";
 
-function Pair({ teams, handlerIsRoundEnd }: any) {
+function Pair({ teams, handlerIsRoundEnd, status }: any) {
   const [games, setGames] = useState([
     {
       id: uuidv4(),
@@ -82,6 +82,7 @@ function Pair({ teams, handlerIsRoundEnd }: any) {
           key={game.id}
           updateGames={addGame}
           index={index}
+          status={status}
         />
       ))}
     </div>

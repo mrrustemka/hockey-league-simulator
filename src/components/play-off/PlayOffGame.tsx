@@ -2,8 +2,9 @@
 import { GameResult, Teams } from "../../data/types";
 import { teams } from "../../data/teams";
 
-function PlayOffGame({ game, updateGames, index }: any) {
+function PlayOffGame({ game, updateGames, index, status }: any) {
   const [isSimulated, setIsSimulated] = useState<boolean>(false);
+  console.log(status);
   function simulate(game: any) {
     // setGameIndex(scheduleList.indexOf(game) + 1);
     let home: Teams = {
@@ -131,7 +132,7 @@ function PlayOffGame({ game, updateGames, index }: any) {
   return (
     <div>
       {index + 1}. {game.home} - {game.away}
-      <button onClick={() => simulate(game)} disabled={isSimulated}>
+      <button onClick={() => simulate(game)} disabled={isSimulated || !status}>
         Simulate
       </button>
     </div>

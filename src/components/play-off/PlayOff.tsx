@@ -10,7 +10,9 @@ function PlayOff() {
   let [curRound, setCurRound] = useState<number>(0);
   const [tree, setTree] = useState<Array<any>>([]);
   const location = useLocation();
-  const [teams, setTeams] = useState<Array<Teams>>(location.state.teams || {});
+  // const [teams, setTeams] = useState<Array<Teams>>(location.state.teams || {});
+  const [teams, setTeams] = useState<Array<Teams>>(mock);
+
   // const teams = mock;
 
   // const { teams } = location.state || {};
@@ -52,8 +54,13 @@ function PlayOff() {
                 : "Round " + (index + 1)
             }
             pairs={value}
+            status={index === 0}
           />
-          <button key={uuidv4()} onClick={() => nextRound()}>
+          <button
+            key={uuidv4()}
+            onClick={() => nextRound()}
+            disabled={index !== 0}
+          >
             Next
           </button>
         </div>

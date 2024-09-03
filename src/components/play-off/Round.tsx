@@ -2,8 +2,9 @@
 import Pair from "./Pair";
 import { v4 as uuidv4 } from "uuid";
 
-function Round({ abv, pairs }: any) {
+function Round({ abv, pairs, status }: any) {
   const [isChampion, setIsChampion] = useState<boolean>(false);
+  console.log(status);
 
   function handlerIsRoundEnd() {
     if (
@@ -46,6 +47,7 @@ function Round({ abv, pairs }: any) {
                 key={uuidv4()}
                 teams={pair}
                 handlerIsRoundEnd={handlerIsRoundEnd}
+                status={status}
               />
             ))}
           </div>
