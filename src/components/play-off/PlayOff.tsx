@@ -37,6 +37,10 @@ function PlayOff() {
 
   function nextRound() {
     const newTeams = teams.filter((team) => team.play_off_round_wins === 4);
+    if (newTeams.length !== teams.length / 2) {
+      console.log("Please simulate all games before go to the next round");
+      return;
+    }
     newTeams.forEach((team) => (team.play_off_round_wins = 0));
     setTeams(newTeams);
     setIsRound(!isRound);
@@ -55,14 +59,8 @@ function PlayOff() {
             }
             pairs={value}
             status={index === 0}
+            updateRound={nextRound}
           />
-          <button
-            key={uuidv4()}
-            onClick={() => nextRound()}
-            disabled={index !== 0}
-          >
-            Next
-          </button>
         </div>
       ))}
     </div>

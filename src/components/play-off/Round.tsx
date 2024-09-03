@@ -2,9 +2,8 @@
 import Pair from "./Pair";
 import { v4 as uuidv4 } from "uuid";
 
-function Round({ abv, pairs, status }: any) {
+function Round({ abv, pairs, status, updateRound }: any) {
   const [isChampion, setIsChampion] = useState<boolean>(false);
-  console.log(status);
 
   function handlerIsRoundEnd() {
     if (
@@ -17,6 +16,10 @@ function Round({ abv, pairs, status }: any) {
       }
       console.log("round is end");
     }
+  }
+
+  function handlerNextRound() {
+    updateRound();
   }
 
   return (
@@ -51,6 +54,13 @@ function Round({ abv, pairs, status }: any) {
               />
             ))}
           </div>
+          <button
+            key={uuidv4()}
+            onClick={() => handlerNextRound()}
+            disabled={!status}
+          >
+            Next Round
+          </button>
         </div>
       )}
     </div>

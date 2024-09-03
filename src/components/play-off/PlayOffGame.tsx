@@ -4,7 +4,6 @@ import { teams } from "../../data/teams";
 
 function PlayOffGame({ game, updateGames, index, status }: any) {
   const [isSimulated, setIsSimulated] = useState<boolean>(false);
-  console.log(status);
   function simulate(game: any) {
     // setGameIndex(scheduleList.indexOf(game) + 1);
     let home: Teams = {
