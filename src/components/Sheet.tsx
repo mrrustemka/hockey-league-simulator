@@ -75,7 +75,7 @@ function Sheet(props: { teamsData: Teams[] }) {
             className = "table-column-stats-high";
           } else if (gameCounter > [...props.teamsData].length * 0.5) {
             className = "table-column-stats-medium";
-          } else {
+          } else if (gameCounter > [...props.teamsData].length * 0.25) {
             className = "table-column-stats-low";
           }
 
