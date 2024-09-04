@@ -10,8 +10,8 @@ function PlayOff() {
   let [curRound, setCurRound] = useState<number>(0);
   const [tree, setTree] = useState<Array<any>>([]);
   const location = useLocation();
-  // const [teams, setTeams] = useState<Array<Teams>>(location.state.teams || {});
-  const [teams, setTeams] = useState<Array<Teams>>(mock);
+  const [teams, setTeams] = useState<Array<Teams>>(location.state.teams || {});
+  // const [teams, setTeams] = useState<Array<Teams>>(mock);
   const [isChampion, setIsChampion] = useState<boolean>(false);
 
   for (let i = 0; i < teams.length; i++) {
@@ -31,7 +31,6 @@ function PlayOff() {
   }
 
   function nextRound() {
-    // console.log(teams);
     const newTeams = teams.filter((team) => team.play_off_round_wins === 4);
     if (newTeams.length !== teams.length / 2) {
       console.log("Please simulate all games before go to the next round");
@@ -47,34 +46,34 @@ function PlayOff() {
   }
 
   return (
-    <div>
+    <div className="playoff">
       {isChampion ? (
-        <div>
-          <h2 className="champion-container-panel">
+        <div className="playoff__champion">
+          <h2 className="playoff__champion-heading">
             The Champion is
-            <div>
-              <img src={teams[0].logo} alt={teams[0].name + " Logo"} />
-              {teams[0].name}
+            <div className="playoff__champion-details">
+              <img
+                className="playoff__champion-logo"
+                src={teams[0].logo}
+                alt={teams[0].name + " Logo"}
+              />
+              <span className="playoff__champion-name">{teams[0].name}</span>
             </div>
           </h2>
         </div>
       ) : (
-        tree.map((value, index) => (
-          <div key={uuidv4()}>
-            <Round
-              key={uuidv4()}
-              // abv={
-              //   index === Math.log2(teams.length) - 1
-              //     ? "Final"
-              //     : "Round " + (index + 1)
-              // }
-              abv={"Round " + (tree.length - index)}
-              pairs={value}
-              status={index === 0}
-              updateRound={nextRound}
-            />
-          </div>
-        ))
+        <div className="playoff__rounds">
+          {tree.map((value, index) => (
+            <div className="playoff__round" key={uuidv4()}>
+              <Round
+                abv={"Round " + (tree.length - index)}
+                pairs={value}
+                status={index === 0}
+                updateRound={nextRound}
+              />
+            </div>
+          ))}
+        </div>
       )}
     </div>
   );

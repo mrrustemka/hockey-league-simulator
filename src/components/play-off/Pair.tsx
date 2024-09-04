@@ -2,6 +2,10 @@
 import { v4 as uuidv4 } from "uuid";
 import { GameResult, Teams } from "../../data/types";
 import PlayOffGame from "./PlayOffGame";
+import { Button, Card, Col, Row, Typography } from "antd";
+// import Title from "antd/es/skeleton/Title";
+
+const { Title } = Typography;
 
 function Pair({ teams, handlerIsRoundEnd, status }: any) {
   const [games, setGames] = useState([
@@ -192,25 +196,43 @@ function Pair({ teams, handlerIsRoundEnd, status }: any) {
   }
 
   return (
-    <div>
-      {teams[0].abbreviation} - {teams[1].abbreviation}
-      <button
-        onClick={() => simulate(games[curGame])}
-        disabled={isFinished || !status}
-      >
-        Simulate
-      </button>
-      <div>
-        {teams[0].play_off_round_wins} {teams[1].play_off_round_wins}
-      </div>
-      {games.map((game, index) => (
-        <PlayOffGame
-          game={game}
-          key={game.id}
-          index={index}
-          result={results[index]}
+    <div className="pair">
+      <div className="pair__column">
+        <img
+          className="pair__team-logo-home"
+          src={teams[0].logo}
+          alt={teams[0].name + " Logo"}
         />
-      ))}
+        <img
+          className="pair__team-logo-away"
+          src={teams[1].logo}
+          alt={teams[1].name + " Logo"}
+        />
+        {/* <div className="pair__scores"> */}
+        <Title className="pair__scores" level={4}>
+          {teams[0].play_off_round_wins} {teams[1].play_off_round_wins}
+        </Title>
+        <div className="pair__button-container">
+          <Button
+            className="pair__simulate-button"
+            onClick={() => simulate(games[curGame])}
+            disabled={isFinished || !status}
+          >
+            Simulate
+          </Button>
+        </div>
+        <div className="pair__games">
+          {games.map((game, index) => (
+            <PlayOffGame
+              game={game}
+              key={game.id}
+              index={index}
+              result={results[index]}
+              className="pair__game"
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

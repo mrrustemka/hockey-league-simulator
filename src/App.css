@@ -99,7 +99,7 @@ th {
 }
 
 .table-team-logo {
-  border-radius: 50%;
+  border-radius: 100%;
 }
 
 .table-column-name {
@@ -131,9 +131,10 @@ th {
   width: 65%;
 }
 
-.upcoming-games h2 {
+.upcoming-games h2,
+.playoff__header {
   margin: auto;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .upcoming-games-card-container-away,
@@ -161,7 +162,8 @@ th {
   color: #ffffff;
 }
 
-.champion-container-panel > div > img {
+.champion-container-panel > div > img,
+.playoff__champion-logo {
   margin: 0 4px;
   width: 24px;
   border-radius: 100%;
@@ -189,4 +191,66 @@ th {
 
 .start-play-off {
   margin-top: 12px;
+}
+
+.playoff {
+  text-align: center;
+}
+
+.playoff__round-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0 24px;
+}
+
+.pair {
+  width: 40vh;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.pair__column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  padding-bottom: 8px;
+}
+
+.pair__team-logo-home {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  display: grid;
+  width: 100%;
+  border-top-left-radius: 8px;
+}
+
+.pair__team-logo-away {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: grid;
+  width: 100%;
+  border-top-right-radius: 8px;
+}
+
+.pair__button-container {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: inline-grid;
+  padding: 8px 48px;
+}
+
+.pair__scores,
+.pair__games {
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: inline-grid;
+}
+
+.game-result__score {
+  margin: 0 4px;
+}
+
+.playoff__next-round-button {
+  margin-top: 8px;
 }
