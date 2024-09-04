@@ -3,6 +3,7 @@ import { Teams } from "../data/types";
 
 function Sheet(props: { teamsData: Teams[] }) {
   let rank: number = 0;
+  console.log([...props.teamsData].length);
 
   return (
     <Table dataSource={[...props.teamsData]} pagination={false} size="small">
@@ -65,7 +66,24 @@ function Sheet(props: { teamsData: Teams[] }) {
         sorter={{
           compare: (a: { game_counter: number }, b: { game_counter: number }) =>
             b.game_counter - a.game_counter,
-          multiple: 4,
+          multiple: 4
+        }}
+        render={(gameCounter) => {
+          let className = "table-column-stats";
+
+          if (gameCounter > [...props.teamsData].length * 0.75) {
+            className = "table-column-stats-high";
+          } else if (gameCounter > [...props.teamsData].length * 0.5) {
+            className = "table-column-stats-medium";
+          } else {
+            className = "table-column-stats-low";
+          }
+
+          return (
+            <div className={className}>
+              <p>{gameCounter}</p>
+            </div>
+          );
         }}
         className="table-column-stats"
       />
@@ -77,7 +95,7 @@ function Sheet(props: { teamsData: Teams[] }) {
         sorter={{
           compare: (a: { wins: number }, b: { wins: number }) =>
             a.wins - b.wins,
-          multiple: 3,
+          multiple: 3
         }}
         className="table-column-stats"
       />
@@ -85,10 +103,6 @@ function Sheet(props: { teamsData: Teams[] }) {
         title="L"
         dataIndex="loses"
         key="loses"
-        // sorter={{
-        //   compare: (a: { game_counter: number }, b: { game_counter: number }) =>
-        //     b.game_counter - a.game_counter,
-        // }}
         className="table-column-stats"
       />
       <Table.Column
@@ -97,9 +111,9 @@ function Sheet(props: { teamsData: Teams[] }) {
         key="loses_ot"
         defaultSortOrder="descend"
         sorter={{
-          compare: (a: { game_counter: number }, b: { game_counter: number }) =>
-            b.game_counter - a.game_counter,
-          multiple: 2,
+          compare: (a: { loses_ot: number }, b: { loses_ot: number }) =>
+            b.loses_ot - a.loses_ot,
+          multiple: 2
         }}
         className="table-column-stats"
       />
@@ -111,7 +125,7 @@ function Sheet(props: { teamsData: Teams[] }) {
         sorter={{
           compare: (a: { points: number }, b: { points: number }) =>
             a.points - b.points,
-          multiple: 5,
+          multiple: 5
         }}
         className="table-column-points table-table-column-stats"
       />
@@ -123,7 +137,7 @@ function Sheet(props: { teamsData: Teams[] }) {
         sorter={{
           compare: (a: { goals_diff: number }, b: { goals_diff: number }) =>
             a.goals_diff - b.goals_diff,
-          multiple: 1,
+          multiple: 1
         }}
         render={(dataIndex) => {
           return (
