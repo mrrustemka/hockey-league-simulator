@@ -33,7 +33,7 @@ function Pair({ teams, handlerIsRoundEnd, status }: any) {
   let [curGame, setCurGame] = useState<number>(0);
   const [curResult, setCurResult] = useState<any>(null);
   const [isFinished, setIsFinished] = useState<boolean>(false);
-  console.log(status);
+  // console.log(status);
 
   function addGame() {
     const team0Wins = teams[0].play_off_round_wins;
@@ -231,6 +231,13 @@ function Pair({ teams, handlerIsRoundEnd, status }: any) {
   return (
     <div>
       {teams[0].abbreviation} - {teams[1].abbreviation}
+      <button
+        onClick={() => simulate(games[curGame])}
+        disabled={isFinished || !status}
+        // style={{ display: isSimulated || !status ? "none" : "inline-block" }}
+      >
+        Simulate
+      </button>
       <div>
         {teams[0].play_off_round_wins} {teams[1].play_off_round_wins}
       </div>
@@ -244,13 +251,6 @@ function Pair({ teams, handlerIsRoundEnd, status }: any) {
           // status={status}
         />
       ))}
-      <button
-        onClick={() => simulate(games[curGame])}
-        disabled={isFinished || !status}
-        // style={{ display: isSimulated || !status ? "none" : "inline-block" }}
-      >
-        Simulate
-      </button>
     </div>
   );
 }

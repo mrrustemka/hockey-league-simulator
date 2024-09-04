@@ -12,12 +12,7 @@ function PlayOff() {
   const location = useLocation();
   // const [teams, setTeams] = useState<Array<Teams>>(location.state.teams || {});
   const [teams, setTeams] = useState<Array<Teams>>(mock);
-
-  // const teams = mock;
-
-  // const { teams } = location.state || {};
-  // setTeams(location.state || {});
-  // console.log(location.state.teams || {});
+  const [isChampion, setIsChampion] = useState<boolean>(false);
 
   for (let i = 0; i < teams.length; i++) {
     teams[i].play_off_rank = i + 1;
@@ -36,33 +31,53 @@ function PlayOff() {
   }
 
   function nextRound() {
+    // console.log(teams);
     const newTeams = teams.filter((team) => team.play_off_round_wins === 4);
     if (newTeams.length !== teams.length / 2) {
       console.log("Please simulate all games before go to the next round");
       return;
     }
-    newTeams.forEach((team) => (team.play_off_round_wins = 0));
+    if (newTeams.length < 2) {
+      setIsChampion(!isChampion);
+    } else {
+      setIsRound(!isRound);
+      newTeams.forEach((team) => (team.play_off_round_wins = 0));
+    }
     setTeams(newTeams);
-    setIsRound(!isRound);
   }
+
+  console.log(teams);
 
   return (
     <div>
-      {tree.map((value, index) => (
-        <div key={uuidv4()}>
-          <Round
-            key={uuidv4()}
-            abv={
-              index === Math.log2(teams.length) - 1
-                ? "Final"
-                : "Round " + (index + 1)
-            }
-            pairs={value}
-            status={index === 0}
-            updateRound={nextRound}
-          />
+      {isChampion ? (
+        <div>
+          <h2 className="champion-container-panel">
+            The Champion is
+            <div>
+              <img src={teams[0].logo} alt={teams[0].name + " Logo"} />
+              {teams[0].name}
+            </div>
+          </h2>
         </div>
-      ))}
+      ) : (
+        tree.map((value, index) => (
+          <div key={uuidv4()}>
+            <Round
+              key={uuidv4()}
+              // abv={
+              //   index === Math.log2(teams.length) - 1
+              //     ? "Final"
+              //     : "Round " + (index + 1)
+              // }
+              abv={"Round " + (tree.length - index)}
+              pairs={value}
+              status={index === 0}
+              updateRound={nextRound}
+            />
+          </div>
+        ))
+      )}
     </div>
   );
 }

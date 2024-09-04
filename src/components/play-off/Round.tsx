@@ -3,7 +3,7 @@ import Pair from "./Pair";
 import { v4 as uuidv4 } from "uuid";
 
 function Round({ abv, pairs, status, updateRound }: any) {
-  const [isChampion, setIsChampion] = useState<boolean>(false);
+  // const [isChampion, setIsChampion] = useState<boolean>(false);
 
   function handlerIsRoundEnd() {
     if (
@@ -11,9 +11,9 @@ function Round({ abv, pairs, status, updateRound }: any) {
         pair.find((team) => team.play_off_round_wins === 4)
       )
     ) {
-      if (abv === "Final") {
-        setIsChampion(!isChampion);
-      }
+      // if (abv === "Final") {
+      //   setIsChampion(!isChampion);
+      // }
       console.log("round is end");
     }
   }
@@ -24,7 +24,7 @@ function Round({ abv, pairs, status, updateRound }: any) {
 
   return (
     <div>
-      {isChampion ? (
+      {/* {isChampion ? (
         <div>
           <h2 className="champion-container-panel">
             The Champion is
@@ -47,28 +47,28 @@ function Round({ abv, pairs, status, updateRound }: any) {
             </div>
           </h2>
         </div>
-      ) : (
+      ) : ( */}
+      <div>
+        {pairs.length === 1 ? "Final" : abv}
         <div>
-          {abv}
-          <div>
-            {pairs.map((pair: any) => (
-              <Pair
-                key={uuidv4()}
-                teams={pair}
-                handlerIsRoundEnd={handlerIsRoundEnd}
-                status={status}
-              />
-            ))}
-          </div>
-          <button
-            key={uuidv4()}
-            onClick={() => handlerNextRound()}
-            disabled={!status}
-          >
-            Next Round
-          </button>
+          {pairs.map((pair: any) => (
+            <Pair
+              key={uuidv4()}
+              teams={pair}
+              handlerIsRoundEnd={handlerIsRoundEnd}
+              status={status}
+            />
+          ))}
         </div>
-      )}
+        <button
+          key={uuidv4()}
+          onClick={() => handlerNextRound()}
+          disabled={!status}
+        >
+          Next Round
+        </button>
+      </div>
+      {/* )} */}
     </div>
   );
 }
