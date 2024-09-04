@@ -8,32 +8,27 @@ function Pair({ teams, handlerIsRoundEnd, status }: any) {
     {
       id: uuidv4(),
       home: teams[0].abbreviation,
-      away: teams[1].abbreviation,
-      winner: ""
+      away: teams[1].abbreviation
     },
     {
       id: uuidv4(),
       home: teams[0].abbreviation,
-      away: teams[1].abbreviation,
-      winner: ""
+      away: teams[1].abbreviation
     },
     {
       id: uuidv4(),
       home: teams[1].abbreviation,
-      away: teams[0].abbreviation,
-      winner: ""
+      away: teams[0].abbreviation
     },
     {
       id: uuidv4(),
       home: teams[1].abbreviation,
-      away: teams[0].abbreviation,
-      winner: ""
+      away: teams[0].abbreviation
     }
   ]);
   let [curGame, setCurGame] = useState<number>(0);
-  const [curResult, setCurResult] = useState<any>(null);
   const [isFinished, setIsFinished] = useState<boolean>(false);
-  // console.log(status);
+  const [results, setResults] = useState<GameResult[]>([]);
 
   function addGame() {
     const team0Wins = teams[0].play_off_round_wins;
@@ -82,14 +77,11 @@ function Pair({ teams, handlerIsRoundEnd, status }: any) {
     }
 
     if (team0Wins === maxWins || team1Wins === maxWins) {
-      console.log(teams[0].abbreviation, team0Wins);
-      console.log(teams[1].abbreviation, team1Wins);
       handlerIsRoundEnd();
     }
   }
 
   function simulate(game: any) {
-    // setCurGame(scheduleList.indexOf(game) + 1);
     let home: Teams = {
       abbreviation: "",
       city: "",
@@ -181,52 +173,23 @@ function Pair({ teams, handlerIsRoundEnd, status }: any) {
       away.play_off_round_wins += 1;
     }
 
-    // Goals & Games Stats
-    // home.goals_for += hGoals;
-    // home.goals_against += aGoals;
-    // home.game_counter += 1;
-    // home.goals_diff += hGoals - aGoals;
-    // away.goals_for += aGoals;
-    // away.goals_against += hGoals;
-    // away.game_counter += 1;
-    // away.goals_diff += aGoals - hGoals;
+    setCurGame(++curGame);
+    game.homeGoals = hGoals;
+    game.awayGoals = aGoals;
 
-    // let result: GameResult = {
-    //   home: home.abbreviation,
-    //   away: away.abbreviation,
-    //   homeGoals: hGoals,
-    //   awayGoals: aGoals,
-    //   overtime: overtime
-    // };
-    setCurGame(curGame++);
-    setCurResult({
-      home: home.abbreviation,
-      away: away.abbreviation,
-      homeGoals: hGoals,
-      awayGoals: aGoals,
-      overtime: overtime
-    });
+    setResults((prevResults) => [
+      ...prevResults,
+      {
+        home: home.abbreviation,
+        away: away.abbreviation,
+        homeGoals: hGoals,
+        awayGoals: aGoals,
+        overtime: overtime
+      }
+    ]);
 
     addGame();
-    // setIsSimulated(!isSimulated);
-    console.log(
-      home.abbreviation,
-      away.abbreviation,
-      home.play_off_round_wins,
-      away.play_off_round_wins
-    );
-    // setTeamsUpdate(teamsSort(teams));
-    // setIsSimulate(true);
-    // return result;
   }
-
-  // if (
-  //   teams.find(
-  //     (team: { play_off_round_wins: number }) => team.play_off_round_wins === 4
-  //   )
-  // ) {
-  //   setIsFinished(!isFinished);
-  // }
 
   return (
     <div>
@@ -234,7 +197,6 @@ function Pair({ teams, handlerIsRoundEnd, status }: any) {
       <button
         onClick={() => simulate(games[curGame])}
         disabled={isFinished || !status}
-        // style={{ display: isSimulated || !status ? "none" : "inline-block" }}
       >
         Simulate
       </button>
@@ -245,10 +207,8 @@ function Pair({ teams, handlerIsRoundEnd, status }: any) {
         <PlayOffGame
           game={game}
           key={game.id}
-          // updateGames={addGame}
           index={index}
-          result={curResult}
-          // status={status}
+          result={results[index]}
         />
       ))}
     </div>

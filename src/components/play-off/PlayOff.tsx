@@ -46,8 +46,6 @@ function PlayOff() {
     setTeams(newTeams);
   }
 
-  console.log(teams);
-
   return (
     <div>
       {isChampion ? (
