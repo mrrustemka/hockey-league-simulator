@@ -411,7 +411,7 @@ function Game() {
           <Col span={14} className="champion-container-panel">
             <Sheet teamsData={teamsUpdate} />
           </Col>
-          <Col span={10} className="champion-container-panel">
+          <Col span={10}>
             <Button className="start-play-off" size="large">
               <Link
                 to="playoff"

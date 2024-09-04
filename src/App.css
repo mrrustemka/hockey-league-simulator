@@ -162,14 +162,11 @@ th {
 }
 
 .champion-container-panel > div > img {
-  margin-left: 4px;
+  margin: 0 4px;
   width: 24px;
   border-radius: 100%;
 }
 
-.champion-container-panel > div {
-  display: inline-block;
-}
 .row-panel-cards-info-result-away {
   opacity: 0.45;
   float: inline-start;
