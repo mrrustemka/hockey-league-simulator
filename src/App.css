@@ -70,10 +70,10 @@ body {
   padding: 20px 40px;
 }
 
-.header h1 {
+.header__title {
   margin: 0 auto;
   text-align: center;
-  color: #ffffff;
+  color: #ffffff !important;
   font-weight: 700;
 }
 

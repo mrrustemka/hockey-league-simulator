@@ -5,7 +5,7 @@ const { Title } = Typography;
 function Header() {
   return (
     <header className="header">
-      <Title>Hockey World Championship</Title>
+      <Title className="header__title">Hockey World Championship</Title>
     </header>
   );
 }
