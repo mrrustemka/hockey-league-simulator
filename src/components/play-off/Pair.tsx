@@ -1,9 +1,8 @@
-﻿import React, { useState } from "react";
+﻿import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { GameResult, Teams } from "../../data/types";
 import PlayOffGame from "./PlayOffGame";
-import { Button, Card, Col, Row, Typography } from "antd";
-// import Title from "antd/es/skeleton/Title";
+import { Button, Typography } from "antd";
 
 const { Title } = Typography;
 
