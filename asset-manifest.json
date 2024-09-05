@@ -1,22 +1,15 @@
 {
   "files": {
-    "main.css": "/hockey-league-simulator/static/css/main.3171b2ec.css",
-    "main.js": "/hockey-league-simulator/static/js/main.29598517.js",
+    "main.css": "/hockey-league-simulator/static/css/main.7f570bd0.css",
+    "main.js": "/hockey-league-simulator/static/js/main.3a92af41.js",
     "static/media/usa.jpg": "/hockey-league-simulator/static/media/usa.970731614dcc483a7b7a.jpg",
-    "static/media/slk.jpg": "/hockey-league-simulator/static/media/slk.fc88f1e51653b4b29139.jpg",
-    "static/media/swe.jpg": "/hockey-league-simulator/static/media/swe.7c6bf24e07ebbef477d5.jpg",
     "static/media/can.jpg": "/hockey-league-simulator/static/media/can.e16d14a7d1bf090c913e.jpg",
-    "static/media/fin.jpg": "/hockey-league-simulator/static/media/fin.ff12f418b2f858ef5b94.jpg",
-    "static/media/swi.jpg": "/hockey-league-simulator/static/media/swi.4937d621d4a5e7b01429.jpg",
-    "static/media/ger.jpg": "/hockey-league-simulator/static/media/ger.db937a915a3db6195b9a.jpg",
-    "static/media/cze.jpg": "/hockey-league-simulator/static/media/cze.edc794cd30675ae0f5e7.jpg",
-    "static/media/den.jpg": "/hockey-league-simulator/static/media/den.66181e077859cdd5a0eb.jpg",
     "index.html": "/hockey-league-simulator/index.html",
-    "main.3171b2ec.css.map": "/hockey-league-simulator/static/css/main.3171b2ec.css.map",
-    "main.29598517.js.map": "/hockey-league-simulator/static/js/main.29598517.js.map"
+    "main.7f570bd0.css.map": "/hockey-league-simulator/static/css/main.7f570bd0.css.map",
+    "main.3a92af41.js.map": "/hockey-league-simulator/static/js/main.3a92af41.js.map"
   },
   "entrypoints": [
-    "static/css/main.3171b2ec.css",
-    "static/js/main.29598517.js"
+    "static/css/main.7f570bd0.css",
+    "static/js/main.3a92af41.js"
   ]
 }
