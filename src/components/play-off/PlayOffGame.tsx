@@ -1,4 +1,4 @@
-﻿function PlayOffGame({ game, index, result }: any) {
+function PlayOffGame({ game, index, result }: any) {
   return (
     <div className="game-result">
       <span className="game-result__index">{index + 1}.</span>

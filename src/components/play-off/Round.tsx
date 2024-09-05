@@ -1,4 +1,4 @@
-﻿import { Button, Typography } from "antd";
+import { Button, Typography } from "antd";
 import Pair from "./Pair";
 import { v4 as uuidv4 } from "uuid";
 
