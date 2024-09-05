@@ -5,14 +5,8 @@ import { GameResult, Schedule, Teams } from "../data/types";
 import { schedule, scheduleList } from "../data/schedule";
 import Sheet from "./Sheet";
 import UpcomingGame from "./UpcomingGame";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const { Meta } = Card;
 const { Title } = Typography;
 schedule();
 
@@ -24,14 +18,10 @@ function Game() {
   let [typeOfOt, setTypeOfOt] = useState<string>("");
   const [isSimulate, setIsSimulate] = useState<boolean>(false);
   const [gameIndex, setGameIndex] = useState<number>(0);
-  const [isPlayOff, setIsPlayOff] = useState<boolean>(false);
 
   const updateCounter = () => {
     setGameCounter(gameCounter + 1);
     setIsSimulate(false);
-    if (scheduleList.length - 1 === gameCounter) {
-      setIsPlayOff(true);
-    }
   };
 
   const buttonHandler = () => {
