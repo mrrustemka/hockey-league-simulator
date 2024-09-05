@@ -3,7 +3,6 @@ import { Teams } from "../data/types";
 
 function Sheet(props: { teamsData: Teams[] }) {
   let rank: number = 0;
-  console.log([...props.teamsData].length);
 
   return (
     <Table dataSource={[...props.teamsData]} pagination={false} size="small">

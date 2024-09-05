@@ -32,7 +32,6 @@ function Pair({ teams, handlerIsRoundEnd, status }: any) {
   let [curGame, setCurGame] = useState<number>(0);
   const [isFinished, setIsFinished] = useState<boolean>(false);
   const [results, setResults] = useState<GameResult[]>([]);
-  console.log(status);
 
   function addGame() {
     const team0Wins = teams[0].play_off_round_wins;
