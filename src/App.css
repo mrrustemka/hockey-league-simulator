@@ -9,15 +9,15 @@ body {
   margin: 0;
 }
 
-.row-panel-cards {
+.cards-row {
   margin: 18px;
 }
 
-.row-panel-cards > div > div {
+.card--hoverable {
   width: 240px;
 }
 
-.row-panel-simulate {
+.controls-panel {
   text-align: center;
   margin: 18px;
 }
@@ -32,12 +32,12 @@ body {
   text-align: center;
 }
 
-.panel-score {
+.simulate-panel {
   width: 26%;
   margin: 0 auto;
 }
 
-.panel-score h1 {
+.simulate-panel__score {
   display: inline;
 }
 
@@ -45,16 +45,16 @@ body {
   border-radius: revert !important;
 }
 
-.panel-simulate button {
+.controls-panel__buttons {
   margin: 8px;
 }
 
-.panel-simulate button:hover {
+.controls-panel__buttons:hover {
   border: #ffffff;
   color: #000000;
 }
 
-.panel-simulate button:hover > span {
+.controls-panel__buttons:hover > span {
   color: #000000 !important;
 }
 
@@ -138,7 +138,7 @@ th {
   width: 65%;
 }
 
-.upcoming-games h2,
+.upcoming-games__title,
 .playoff__header {
   margin: auto;
   color: #ffffff !important;
@@ -166,10 +166,6 @@ th {
   margin: auto;
 }
 
-.champion-container-panel > h2 {
-  color: #ffffff;
-}
-
 .champion-container-panel > div > img,
 .playoff__champion-logo {
   margin: 0 4px;
@@ -177,27 +173,27 @@ th {
   border-radius: 100%;
 }
 
-.row-panel-cards-info-result-away {
+.card__info--result-away {
   opacity: 0.45;
   float: inline-start;
 }
 
-.row-panel-cards-info-position-away {
+.card__info--position-away {
   opacity: 0.45;
   float: inline-end;
 }
 
-.row-panel-cards-info-result-home {
+.card__info--result-home {
   opacity: 0.45;
   float: inline-end;
 }
 
-.row-panel-cards-info-position-home {
+.card__info--position-home {
   opacity: 0.45;
   float: inline-start;
 }
 
-.start-play-off {
+.playoff__start-play-off {
   margin-top: 12px;
 }
 

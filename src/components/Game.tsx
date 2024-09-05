@@ -212,14 +212,15 @@ function Game() {
     let awayRating: number = getTeamRating(scheduleList[gameCounter].away);
     return (
       <div>
-        <Row>
-          <Col span={14}>
+        <Row className="layout">
+          <Col className="layout__content" span={14}>
             <Sheet teamsData={teamsUpdate} />
           </Col>
-          <Col span={10}>
-            <Row className="row-panel-cards">
-              <Col span={12}>
+          <Col className="layout__side-panel" span={10}>
+            <Row className="cards-row">
+              <Col className="cards-row__card-column" span={12}>
                 <Card
+                  className="card card--hoverable"
                   hoverable
                   cover={
                     <img
@@ -240,7 +241,7 @@ function Game() {
                     />
                   }
                 >
-                  <Title level={4}>
+                  <Title className="card__title" level={4}>
                     {
                       teams.find(
                         (element) =>
@@ -251,7 +252,7 @@ function Game() {
                   </Title>
                   <Title
                     level={5}
-                    className="row-panel-cards-info-position-away"
+                    className="card__info card__info--position-away"
                   >
                     {awayRating === 1
                       ? awayRating + "st"
@@ -261,7 +262,10 @@ function Game() {
                       ? awayRating + "rd"
                       : awayRating + "th"}
                   </Title>
-                  <Title level={5} className="row-panel-cards-info-result-away">
+                  <Title
+                    level={5}
+                    className="card__info card__info--result-away"
+                  >
                     {
                       teams.find(
                         (element) =>
@@ -288,8 +292,9 @@ function Game() {
                   </Title>
                 </Card>
               </Col>
-              <Col span={12}>
+              <Col className="cards-row__card-column" span={12}>
                 <Card
+                  className="card card--hoverable"
                   hoverable
                   cover={
                     <img
@@ -310,7 +315,7 @@ function Game() {
                     />
                   }
                 >
-                  <Title level={4}>
+                  <Title className="card__title" level={4}>
                     {
                       teams.find(
                         (element) =>
@@ -321,7 +326,7 @@ function Game() {
                   </Title>
                   <Title
                     level={5}
-                    className="row-panel-cards-info-position-home"
+                    className="card__info card__info--position-home"
                   >
                     {homeRating === 1
                       ? homeRating + "st"
@@ -331,7 +336,10 @@ function Game() {
                       ? homeRating + "rd"
                       : homeRating + "th"}
                   </Title>
-                  <Title level={5} className="row-panel-cards-info-result-home">
+                  <Title
+                    level={5}
+                    className="card__info card__info--result-home"
+                  >
                     {
                       teams.find(
                         (element) =>
@@ -359,19 +367,23 @@ function Game() {
                 </Card>
               </Col>
             </Row>
-            <Row className="panel-score">
-              <Col span={24} className="panel-simulate">
+            <Row className="simulate-panel">
+              <Col span={24} className="simulate-panel__card">
                 <Card hoverable>
-                  <Title>{isSimulate ? awayGoals : " "}</Title>
-                  <Title>-</Title>
-                  <Title>{isSimulate ? homeGoals : " "}</Title>
-                  <Title level={3}>{isSimulate ? typeOfOt : ""}</Title>
+                  <Title className="simulate-panel__score" level={2}>
+                    {isSimulate ? awayGoals : " "} -{" "}
+                    {isSimulate ? homeGoals : " "}
+                  </Title>
+                  <Title className="simulate-panel__ot-type" level={3}>
+                    {isSimulate ? typeOfOt : ""}
+                  </Title>
                 </Card>
               </Col>
             </Row>
-            <Row className="row-panel-simulate">
-              <Col span={24} className="panel-simulate">
+            <Row className="controls-panel">
+              <Col span={24} className="controls-panel__buttons">
                 <Button
+                  className="controls-panel__button controls-panel__button--simulate"
                   onClick={buttonHandler}
                   disabled={isSimulate}
                   size="large"
@@ -379,6 +391,7 @@ function Game() {
                   Simulate
                 </Button>
                 <Button
+                  className="controls-panel__button controls-panel__button--next"
                   onClick={updateCounter}
                   disabled={!isSimulate}
                   size="large"
@@ -387,7 +400,7 @@ function Game() {
                 </Button>
               </Col>
               <Card>
-                <Col span={24} className="panel-counter">
+                <Col span={24} className="controls-panel__counter">
                   <Title level={3}>
                     {gameIndex}/{scheduleList.length}
                   </Title>
@@ -395,7 +408,9 @@ function Game() {
               </Card>
             </Row>
             <Row className="upcoming-games">
-              <Title level={2}>Upcoming Games</Title>
+              <Title className="upcoming-games__title" level={2}>
+                Upcoming Games
+              </Title>
               <UpcomingGame
                 schedule={scheduleList.slice(gameCounter + 1, gameCounter + 7)}
               />
@@ -406,13 +421,13 @@ function Game() {
     );
   } else {
     return (
-      <div className="champion">
-        <Row className="champion-container">
-          <Col span={14} className="champion-container-panel">
+      <div className="playoff">
+        <Row className="playoff__container">
+          <Col span={14} className="playoff__container-panel">
             <Sheet teamsData={teamsUpdate} />
           </Col>
           <Col span={10}>
-            <Button className="start-play-off" size="large">
+            <Button className="playoff__start-play-off" size="large">
               <Link
                 to="playoff"
                 state={{
