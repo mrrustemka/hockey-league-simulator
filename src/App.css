@@ -144,23 +144,24 @@ th {
   color: #ffffff !important;
 }
 
-.upcoming-games-card-container-away,
-.upcoming-games-card-container-home {
+.upcoming-games-card__team-logo--away,
+.upcoming-games-card__team-logo--home {
   width: 100px;
   height: 100px;
   display: inline;
 }
 
-.upcoming-games-card-container-away {
+.upcoming-games-card__team-logo--away {
   margin-left: auto;
 }
 
-.upcoming-games-card-container {
+.upcoming-games-card__container {
   display: grid !important;
   grid-template-columns: 1fr auto auto auto 1fr;
 }
 
-.upcoming-games-card-container > h3 {
+.upcoming-games-card__score,
+.upcoming-games-card__vs {
   color: #000000;
   margin: auto;
 }

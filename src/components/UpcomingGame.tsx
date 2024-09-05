@@ -1,9 +1,6 @@
-import React from "react";
 import { Card } from "antd";
 import { teams } from "../data/teams";
 import { Schedule } from "../data/types";
-
-// type Props = { schedule: Schedule[] };
 
 function UpcomingGame(props: { schedule: Schedule[] }) {
   return (
@@ -14,8 +11,8 @@ function UpcomingGame(props: { schedule: Schedule[] }) {
           className="upcoming-games-card"
           key={game.id}
           cover={
-            <div className="upcoming-games-card-container">
-              <h3>
+            <div className="upcoming-games-card__container">
+              <h3 className="upcoming-games-card__score">
                 {
                   teams.find((element) => element.abbreviation === game.away)
                     ?.wins
@@ -32,7 +29,7 @@ function UpcomingGame(props: { schedule: Schedule[] }) {
                 }
               </h3>
               <img
-                className="upcoming-games-card-container-away"
+                className="upcoming-games-card__team-logo upcoming-games-card__team-logo--away"
                 alt={
                   teams.find((element) => element.abbreviation === game.away)
                     ?.name + " Logo"
@@ -42,9 +39,9 @@ function UpcomingGame(props: { schedule: Schedule[] }) {
                     ?.logo
                 }
               />
-              <h3>@</h3>
+              <h3 className="upcoming-games-card__vs">@</h3>
               <img
-                className="upcoming-games-card-container-home"
+                className="upcoming-games-card__team-logo upcoming-games-card__team-logo--home"
                 alt={
                   teams.find((element) => element.abbreviation === game.home)
                     ?.name + " Logo"
@@ -54,7 +51,7 @@ function UpcomingGame(props: { schedule: Schedule[] }) {
                     ?.logo
                 }
               />
-              <h3>
+              <h3 className="upcoming-games-card__score">
                 {
                   teams.find((element) => element.abbreviation === game.home)
                     ?.wins
