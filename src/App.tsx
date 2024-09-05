@@ -1,13 +1,8 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import "./App.css";
 import Game from "./components/Game";
 import Header from "./components/Header";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PlayOff from "./components/play-off/PlayOff";
 
 const router = createBrowserRouter([
