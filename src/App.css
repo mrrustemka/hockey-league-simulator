@@ -89,32 +89,39 @@ th {
   font-size: 14px;
 }
 
-.column-name {
+.table__column table__column--name {
   text-align: left !important;
 }
 
-.table-team-logo,
-.table-column-name {
+.table__team-logo,
+.table__column-name {
   display: inline;
 }
 
-.table-team-logo {
+.table__team-logo {
   border-radius: 100%;
 }
 
-.table-column-name {
+.table__column-name {
   font-size: 20px;
 }
 
-.table-column-stats {
+.table__column--rating,
+.table__column--city,
+.table__column--games,
+.table__column--wins,
+.table__column--loses,
+.table__column--loses-ot,
+.table__column--points,
+.table__column--diff {
   text-align: center;
 }
 
-.table-column-diff-positive {
+.table__column-diff--positive {
   color: rgb(75, 148, 72);
 }
 
-.table-column-diff-negative {
+.table__column-diff--negative {
   color: rgb(208, 2, 27);
 }
 
@@ -256,13 +263,13 @@ th {
   margin-top: 8px;
 }
 
-.table-column-stats-high {
+.table__column-games--high {
   background-color: #b8dbf3;
 }
 
-.table-column-stats-medium {
+.table__column-games--medium {
   background-color: #d0e6f57b;
 }
-.table-column-stats-low {
+.table__column-games--low {
   background-color: #d0e6f527;
 }
