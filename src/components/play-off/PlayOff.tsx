@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import Round from "./Round";
 import { v4 as uuidv4 } from "uuid";
-// import { teams as mock } from "../../data/teams"; // use for tests
+import { teams as mock } from "../../data/teams"; // use for tests
 import { Teams } from "../../data/types";
 
 function PlayOff() {
@@ -10,8 +10,8 @@ function PlayOff() {
   let [curRound, setCurRound] = useState<number>(0);
   const [tree, setTree] = useState<Array<Teams[][]>>([]);
   const location = useLocation();
-  const [teams, setTeams] = useState<Array<Teams>>(location.state.teams || {});
-  // const [teams, setTeams] = useState<Array<Teams>>(mock); // use for tests
+  // const [teams, setTeams] = useState<Array<Teams>>(location.state.teams || {});
+  const [teams, setTeams] = useState<Array<Teams>>(mock); // use for tests
   const [isChampion, setIsChampion] = useState<boolean>(false);
 
   for (let i = 0; i < teams.length; i++) {

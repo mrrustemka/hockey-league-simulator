@@ -91,7 +91,6 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
   }
 
   function simulate(game: PlayOffGameResult) {
-    console.log(game);
     let home: Teams = {
       abbreviation: "",
       city: "",
@@ -240,7 +239,6 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
                   key={game.id}
                   index={index}
                   result={results[index]}
-                  className="pair__game"
                 />
               ))}
             </div>
