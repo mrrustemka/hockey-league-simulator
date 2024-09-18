@@ -28,7 +28,7 @@ function Sheet(props: { teamsData: Teams[] }) {
         key="name"
         render={(dataIndex) => {
           const logo = props.teamsData.find(
-            (item: { name: any }) => item.name === dataIndex
+            (item: { name: string }) => item.name === dataIndex
           )?.logo;
           return (
             <div className="table__team">
