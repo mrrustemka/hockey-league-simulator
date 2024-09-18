@@ -1,13 +1,21 @@
 import { Button, Typography } from "antd";
 import Pair from "./Pair";
 import { v4 as uuidv4 } from "uuid";
+import { Teams } from "../../data/types";
 
 const { Title } = Typography;
 
-function Round({ abv, pairs, status, updateRound }: any) {
+interface Round {
+  abv: string;
+  pairs: Teams[][];
+  status: boolean;
+  updateRound: () => void;
+}
+
+function Round({ abv, pairs, status, updateRound }: Round) {
   function handlerIsRoundEnd() {
     if (
-      pairs.every((pair: any[]) =>
+      pairs.every((pair: Teams[]) =>
         pair.find((team) => team.play_off_round_wins === 4)
       )
     ) {
@@ -25,7 +33,7 @@ function Round({ abv, pairs, status, updateRound }: any) {
         {pairs.length === 1 ? "Final" : abv}
       </Title>
       <div className="playoff__round-panel">
-        {pairs.map((pair: any) => (
+        {pairs.map((pair: Teams[]) => (
           <Pair
             key={uuidv4()}
             teams={pair}
