@@ -1,19 +1,27 @@
 import { Table } from "antd";
 import { Teams } from "../data/types";
+import { v4 as uuidv4 } from "uuid";
 
 function Sheet(props: { teamsData: Teams[] }) {
   let rank: number = 0;
 
   return (
-    <Table dataSource={[...props.teamsData]} pagination={false} size="small">
+    <Table
+      dataSource={[
+        ...props.teamsData.map((team, index) => ({ ...team, key: index }))
+      ]}
+      pagination={false}
+      size="small"
+      rowKey={(record) => record.name}
+    >
       <Table.Column
         title="Rank"
         dataIndex=""
         key="rank"
-        render={() => {
+        render={(text, record, index) => {
           rank++;
           return (
-            <div>
+            <div key={uuidv4()}>
               <p className="table__column-rank">
                 {rank > props.teamsData.length ? (rank = 0) : rank}
               </p>
@@ -25,13 +33,13 @@ function Sheet(props: { teamsData: Teams[] }) {
       <Table.Column
         title="Team"
         dataIndex="name"
-        key="name"
-        render={(dataIndex) => {
+        key="team"
+        render={(dataIndex, record) => {
           const logo = props.teamsData.find(
             (item: { name: string }) => item.name === dataIndex
           )?.logo;
           return (
-            <div className="table__team">
+            <div className="table__team" key={uuidv4()}>
               <img
                 src={logo}
                 alt={dataIndex + " Logo"}
@@ -69,9 +77,8 @@ function Sheet(props: { teamsData: Teams[] }) {
             b.game_counter - a.game_counter,
           multiple: 4
         }}
-        render={(gameCounter) => {
+        render={(gameCounter, record) => {
           let className = "table__column-games";
-
           if (gameCounter > [...props.teamsData].length * 0.75) {
             className = "table__column-games--high";
           } else if (gameCounter > [...props.teamsData].length * 0.5) {
@@ -81,7 +88,7 @@ function Sheet(props: { teamsData: Teams[] }) {
           }
 
           return (
-            <div className={className}>
+            <div className={className} key={uuidv4()}>
               <p>{gameCounter}</p>
             </div>
           );
@@ -140,9 +147,9 @@ function Sheet(props: { teamsData: Teams[] }) {
             a.goals_diff - b.goals_diff,
           multiple: 1
         }}
-        render={(dataIndex) => {
+        render={(dataIndex, record) => {
           return (
-            <div>
+            <div key={uuidv4()}>
               <p
                 className={
                   dataIndex > 0
