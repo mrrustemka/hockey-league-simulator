@@ -174,28 +174,32 @@ function Game() {
     return result;
   }
 
-  function teamsSort(teams: Teams[]) {
-    return teams.sort((team1, team2) =>
-      team1.points > team2.points
-        ? -1
-        : team1.points === team2.points
-        ? team1.game_counter < team2.game_counter
+  function teamsSort(teams: Teams[]): Teams[] {
+    if (scheduleList && gameCounter < scheduleList.length) {
+      return teams.sort((team1, team2) =>
+        team1.points > team2.points
           ? -1
-          : team1.game_counter === team2.game_counter
-          ? team1.goals_diff > team2.goals_diff
+          : team1.points === team2.points
+          ? team1.game_counter < team2.game_counter
             ? -1
-              ? team1.goals_diff === team2.goals_diff
-                ? team1.rating > team2.rating
+            : team1.game_counter === team2.game_counter
+            ? team1.goals_diff > team2.goals_diff
+              ? -1
+                ? team1.goals_diff === team2.goals_diff
+                  ? team1.rating > team2.rating
+                    ? -1
+                    : 1
+                  : 1
                   ? -1
                   : 1
-                : 1
-                ? -1
                 : 1
               : 1
             : 1
           : 1
-        : 1
-    );
+      );
+    } else {
+      return teams;
+    }
   }
 
   function getTeamRating(team: string): number {

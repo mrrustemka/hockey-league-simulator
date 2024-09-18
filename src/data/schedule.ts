@@ -19,7 +19,7 @@ export function schedule() {
         let game: Schedule = {
           id: uuidv4(),
           home: teamInfo.abbreviation,
-          away: team,
+          away: team
         };
         if (
           scheduleList.find(
