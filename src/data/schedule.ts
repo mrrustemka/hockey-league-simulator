@@ -1,12 +1,11 @@
 import { v4 as uuidv4 } from "uuid";
-import { teams } from "./teams";
-import { Schedule, TeamsList } from "./types";
+import { Schedule, Teams, TeamsList } from "./types";
 
 let teamsList: TeamsList = [];
 export let scheduleList: Schedule[] = [];
 let i: number = 0;
 
-export function schedule() {
+export function schedule(teams: Teams[]) {
   teams.map((team) => {
     if (team) return teamsList.push(team.abbreviation);
   });

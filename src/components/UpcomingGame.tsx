@@ -1,8 +1,8 @@
 import { Card } from "antd";
-import { teams } from "../data/teams";
-import { Schedule } from "../data/types";
+import { worldChampionship as teams } from "../data/teams";
+import { Schedule, Teams } from "../data/types";
 
-function UpcomingGame(props: { schedule: Schedule[] }) {
+function UpcomingGame(props: { schedule: Schedule[]; teams: Teams[] }) {
   return (
     <>
       {props.schedule.map((game) => (
@@ -14,57 +14,67 @@ function UpcomingGame(props: { schedule: Schedule[] }) {
             <div className="upcoming-games-card__container">
               <h3 className="upcoming-games-card__score">
                 {
-                  teams.find((element) => element.abbreviation === game.away)
-                    ?.wins
+                  props.teams.find(
+                    (element) => element.abbreviation === game.away
+                  )?.wins
                 }
                 -
                 {
-                  teams.find((element) => element.abbreviation === game.away)
-                    ?.loses
+                  props.teams.find(
+                    (element) => element.abbreviation === game.away
+                  )?.loses
                 }
                 -
                 {
-                  teams.find((element) => element.abbreviation === game.away)
-                    ?.loses_ot
+                  props.teams.find(
+                    (element) => element.abbreviation === game.away
+                  )?.loses_ot
                 }
               </h3>
               <img
                 className="upcoming-games-card__team-logo upcoming-games-card__team-logo--away"
                 alt={
-                  teams.find((element) => element.abbreviation === game.away)
-                    ?.name + " Logo"
+                  props.teams.find(
+                    (element) => element.abbreviation === game.away
+                  )?.name + " Logo"
                 }
                 src={
-                  teams.find((element) => element.abbreviation === game.away)
-                    ?.logo
+                  props.teams.find(
+                    (element) => element.abbreviation === game.away
+                  )?.logo
                 }
               />
               <h3 className="upcoming-games-card__vs">@</h3>
               <img
                 className="upcoming-games-card__team-logo upcoming-games-card__team-logo--home"
                 alt={
-                  teams.find((element) => element.abbreviation === game.home)
-                    ?.name + " Logo"
+                  props.teams.find(
+                    (element) => element.abbreviation === game.home
+                  )?.name + " Logo"
                 }
                 src={
-                  teams.find((element) => element.abbreviation === game.home)
-                    ?.logo
+                  props.teams.find(
+                    (element) => element.abbreviation === game.home
+                  )?.logo
                 }
               />
               <h3 className="upcoming-games-card__score">
                 {
-                  teams.find((element) => element.abbreviation === game.home)
-                    ?.wins
+                  props.teams.find(
+                    (element) => element.abbreviation === game.home
+                  )?.wins
                 }
                 -
                 {
-                  teams.find((element) => element.abbreviation === game.home)
-                    ?.loses
+                  props.teams.find(
+                    (element) => element.abbreviation === game.home
+                  )?.loses
                 }
                 -
                 {
-                  teams.find((element) => element.abbreviation === game.home)
-                    ?.loses_ot
+                  props.teams.find(
+                    (element) => element.abbreviation === game.home
+                  )?.loses_ot
                 }
               </h3>
             </div>

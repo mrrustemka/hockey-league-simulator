@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import { Button, Card, Col, Row, Typography } from "antd";
-import { teams } from "../data/teams";
 import { GameResult, Schedule, Teams } from "../data/types";
-import { schedule, scheduleList } from "../data/schedule";
+import { scheduleList } from "../data/schedule";
 import Sheet from "./Sheet";
 import UpcomingGame from "./UpcomingGame";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const { Title } = Typography;
-schedule();
 
 function Game() {
-  let [teamsUpdate, setTeamsUpdate] = useState<Teams[]>(teams);
+  const location = useLocation();
+  const teams = location.state.teams;
+  let [teamsUpdate, setTeamsUpdate] = useState<Teams[]>(teams || {});
   let [gameCounter, setGameCounter] = useState<number>(0);
   let [homeGoals, setHomeGoals] = useState<number>(0);
   let [awayGoals, setAwayGoals] = useState<number>(0);
@@ -81,7 +82,9 @@ function Game() {
     }
 
     function getTeamInfo(team: string): Teams {
-      const foundTeam = teams.find((element) => element.abbreviation === team);
+      const foundTeam = teams.find(
+        (element: { abbreviation: string }) => element.abbreviation === team
+      );
       if (!foundTeam) {
         throw new Error(`Team with abbreviation "${team}" not found`);
       }
@@ -203,7 +206,11 @@ function Game() {
   }
 
   function getTeamRating(team: string): number {
-    return teams.findIndex((element) => element.abbreviation === team) + 1;
+    return (
+      teams.findIndex(
+        (element: { abbreviation: string }) => element.abbreviation === team
+      ) + 1
+    );
   }
 
   if (scheduleList && gameCounter < scheduleList.length) {
@@ -225,14 +232,14 @@ function Game() {
                     <img
                       alt={
                         teams.find(
-                          (element) =>
+                          (element: { abbreviation: string }) =>
                             element.abbreviation ===
                             scheduleList[gameCounter].away
                         )?.name + "Logo"
                       }
                       src={
                         teams.find(
-                          (element) =>
+                          (element: { abbreviation: string }) =>
                             element.abbreviation ===
                             scheduleList[gameCounter].away
                         )?.logo
@@ -243,7 +250,7 @@ function Game() {
                   <Title className="card__title" level={4}>
                     {
                       teams.find(
-                        (element) =>
+                        (element: { abbreviation: string }) =>
                           element.abbreviation ===
                           scheduleList[gameCounter].away
                       )?.abbreviation
@@ -267,7 +274,7 @@ function Game() {
                   >
                     {
                       teams.find(
-                        (element) =>
+                        (element: { abbreviation: string }) =>
                           element.abbreviation ===
                           scheduleList[gameCounter].away
                       )?.wins
@@ -275,7 +282,7 @@ function Game() {
                     -
                     {
                       teams.find(
-                        (element) =>
+                        (element: { abbreviation: string }) =>
                           element.abbreviation ===
                           scheduleList[gameCounter].away
                       )?.loses
@@ -283,7 +290,7 @@ function Game() {
                     -
                     {
                       teams.find(
-                        (element) =>
+                        (element: { abbreviation: string }) =>
                           element.abbreviation ===
                           scheduleList[gameCounter].away
                       )?.loses_ot
@@ -299,14 +306,14 @@ function Game() {
                     <img
                       alt={
                         teams.find(
-                          (element) =>
+                          (element: { abbreviation: string }) =>
                             element.abbreviation ===
                             scheduleList[gameCounter].home
                         )?.name + "Logo"
                       }
                       src={
                         teams.find(
-                          (element) =>
+                          (element: { abbreviation: string }) =>
                             element.abbreviation ===
                             scheduleList[gameCounter].home
                         )?.logo
@@ -317,7 +324,7 @@ function Game() {
                   <Title className="card__title" level={4}>
                     {
                       teams.find(
-                        (element) =>
+                        (element: { abbreviation: string }) =>
                           element.abbreviation ===
                           scheduleList[gameCounter].home
                       )?.abbreviation
@@ -341,7 +348,7 @@ function Game() {
                   >
                     {
                       teams.find(
-                        (element) =>
+                        (element: { abbreviation: string }) =>
                           element.abbreviation ===
                           scheduleList[gameCounter].home
                       )?.wins
@@ -349,7 +356,7 @@ function Game() {
                     -
                     {
                       teams.find(
-                        (element) =>
+                        (element: { abbreviation: string }) =>
                           element.abbreviation ===
                           scheduleList[gameCounter].home
                       )?.loses
@@ -357,7 +364,7 @@ function Game() {
                     -
                     {
                       teams.find(
-                        (element) =>
+                        (element: { abbreviation: string }) =>
                           element.abbreviation ===
                           scheduleList[gameCounter].home
                       )?.loses_ot
@@ -412,6 +419,7 @@ function Game() {
               </Title>
               <UpcomingGame
                 schedule={scheduleList.slice(gameCounter + 1, gameCounter + 7)}
+                teams={teams}
               />
             </Row>
           </Col>

@@ -45,3 +45,11 @@ export type PlayOffGameResult = {
   homeGoals?: number;
   id: string;
 };
+
+export type League = {
+  id: string;
+  name: string;
+  description: string;
+  image: string;
+  teams: Teams[];
+};
