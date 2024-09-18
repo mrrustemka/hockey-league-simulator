@@ -37,3 +37,11 @@ export type GameResult = {
 export type buttonStyles = {
   display: string;
 };
+
+export type PlayOffGameResult = {
+  away: string;
+  awayGoals?: number;
+  home: string;
+  homeGoals?: number;
+  id: string;
+};

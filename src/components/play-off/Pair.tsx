@@ -1,12 +1,22 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { GameResult, Teams } from "../../data/types";
+import { GameResult, Teams, PlayOffGameResult } from "../../data/types";
 import PlayOffGame from "./PlayOffGame";
 import { Button, Typography } from "antd";
 
 const { Title } = Typography;
 
-function Pair({ teams, handlerIsRoundEnd, status }: any) {
+interface PairProps {
+  teams: Teams[];
+  handlerIsRoundEnd: () => void;
+  status: boolean;
+}
+
+function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
+  console.log(teams);
+  console.log(handlerIsRoundEnd);
+  console.log(status);
+
   const [games, setGames] = useState([
     {
       id: uuidv4(),
@@ -84,7 +94,8 @@ function Pair({ teams, handlerIsRoundEnd, status }: any) {
     }
   }
 
-  function simulate(game: any) {
+  function simulate(game: PlayOffGameResult) {
+    console.log(game);
     let home: Teams = {
       abbreviation: "",
       city: "",
@@ -123,10 +134,15 @@ function Pair({ teams, handlerIsRoundEnd, status }: any) {
       play_off_rank: 0,
       play_off_round_wins: 0
     };
-    function getTeamInfo(team: string): any {
-      return teams.find(
+    function getTeamInfo(team: string): Teams {
+      const foundTeam = teams.find(
         (element: { abbreviation: string }) => element.abbreviation === team
       );
+
+      if (!foundTeam) {
+        throw new Error(`Team with abbreviation "${team}" not found`);
+      }
+      return foundTeam;
     }
     function getGoals(min: number, max: number, rating: number) {
       return Math.round(
@@ -134,12 +150,12 @@ function Pair({ teams, handlerIsRoundEnd, status }: any) {
       );
     }
 
-    const homeType: Teams | undefined = getTeamInfo(game.home);
+    const homeType: Teams | void = getTeamInfo(game.home);
     if (homeType !== undefined) {
       home = homeType;
     }
 
-    const awayType: Teams | undefined = getTeamInfo(game.away);
+    const awayType: Teams | void = getTeamInfo(game.away);
     if (awayType !== undefined) {
       away = awayType;
     }
