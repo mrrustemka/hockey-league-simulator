@@ -79,8 +79,12 @@ function Game() {
       );
     }
 
-    function getTeamInfo(team: string): any {
-      return teams.find((element) => element.abbreviation === team);
+    function getTeamInfo(team: string): Teams {
+      const foundTeam = teams.find((element) => element.abbreviation === team);
+      if (!foundTeam) {
+        throw new Error(`Team with abbreviation "${team}" not found`);
+      }
+      return foundTeam;
     }
 
     const homeType: Teams | undefined = getTeamInfo(game.home);
