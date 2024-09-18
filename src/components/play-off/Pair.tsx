@@ -13,10 +13,6 @@ interface PairProps {
 }
 
 function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
-  console.log(teams);
-  console.log(handlerIsRoundEnd);
-  console.log(status);
-
   const [games, setGames] = useState([
     {
       id: uuidv4(),
