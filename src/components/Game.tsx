@@ -25,7 +25,8 @@ function Game() {
   };
 
   const buttonHandler = () => {
-    let lastGame: GameResult | undefined = Simulate(scheduleList[gameCounter]);
+    const lastGame: GameResult = Simulate(scheduleList[gameCounter]);
+
     if (lastGame) {
       setHomeGoals(lastGame.homeGoals);
       setAwayGoals(lastGame.awayGoals);
@@ -87,12 +88,12 @@ function Game() {
       return foundTeam;
     }
 
-    const homeType: Teams | undefined = getTeamInfo(game.home);
+    const homeType: Teams | void = getTeamInfo(game.home);
     if (homeType !== undefined) {
       home = homeType;
     }
 
-    const awayType: Teams | undefined = getTeamInfo(game.away);
+    const awayType: Teams | void = getTeamInfo(game.away);
     if (awayType !== undefined) {
       away = awayType;
     }
