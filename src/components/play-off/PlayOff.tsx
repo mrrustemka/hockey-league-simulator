@@ -8,7 +8,7 @@ import { Teams } from "../../data/types";
 function PlayOff() {
   const [isRound, setIsRound] = useState<boolean>(true);
   let [curRound, setCurRound] = useState<number>(0);
-  const [tree, setTree] = useState<Array<any>>([]);
+  const [tree, setTree] = useState<Array<Teams[][]>>([]);
   const location = useLocation();
   const [teams, setTeams] = useState<Array<Teams>>(location.state.teams || {});
   // const [teams, setTeams] = useState<Array<Teams>>(mock); // use for tests
@@ -19,7 +19,7 @@ function PlayOff() {
   }
 
   if (isRound) {
-    let newRound: Array<any> = [];
+    let newRound: Array<Teams[]> = [];
 
     for (let i = 0; i < teams.length / 2; i++) {
       newRound.push([teams[i], teams[teams.length - i - 1]]);
