@@ -6,7 +6,6 @@ import { v4 as uuidv4 } from "uuid";
 import { schedule } from "../data/schedule";
 import { champs } from "../data/champs";
 import Header from "./Header";
-// import Title from "antd/es/skeleton/Title";
 
 const { Title } = Typography;
 
@@ -24,27 +23,27 @@ function Start() {
     <>
       <Header text="Select a Championship" />
       <div className="start">
-        {champTypes.map((cham) => (
+        {champTypes.map((champ) => (
           <Card
             key={uuidv4()}
             className="start__card"
             cover={
               <img
                 alt="example"
-                src={cham.image}
+                src={champ.image}
                 className="start__card-cover"
               />
             }
           >
             <Title level={5} className="start__card-title">
-              {cham.description}
+              {champ.description}
             </Title>
             <div className="start__teams">
-              {cham.teams.map((team) => (
+              {champ.teams.map((team) => (
                 <div
                   key={uuidv4()}
                   className={`start__team ${
-                    team.id <= cham.teamsCount ? "start__team--active" : ""
+                    team.id <= champ.teamsCount ? "start__team--active" : ""
                   }`}
                 >
                   <img
@@ -56,43 +55,53 @@ function Start() {
               ))}
             </div>
             <div className="start__actions">
-              <Title level={5} className="start__actions-title">
+              <Title level={5} className="start__actions-title--play-off-count">
+                {champ.teamsCount >= 16
+                  ? 16
+                  : champ.teamsCount >= 8
+                  ? 8
+                  : champ.teamsCount >= 4
+                  ? 4
+                  : 2}{" "}
+                teams will advance to the Play-Off
+              </Title>
+              <Title level={5} className="start__actions-title--selection">
                 Select the number of teams
               </Title>
               <Input
                 className={`start__input`}
                 type="number"
-                defaultValue={cham.teamsCount}
-                value={cham.teamsCount}
-                max={cham.teams.length}
+                defaultValue={champ.teamsCount}
+                value={champ.teamsCount}
+                max={champ.teams.length}
                 min="2"
                 onChange={(e) =>
-                  updateTeamsNum(cham.id, parseInt(e.target.value))
+                  updateTeamsNum(champ.id, parseInt(e.target.value))
                 }
               />
               <Title
                 level={5}
                 className={`start__actions-error ${
-                  cham.teamsCount < 2 || cham.teamsCount > cham.teams.length
+                  champ.teamsCount < 2 || champ.teamsCount > champ.teams.length
                     ? "start__actions-error--active"
                     : "start__actions-error--inactive"
                 }`}
               >
                 Please enter a valid number of teams. From 2 to{" "}
-                {cham.teams.length}
+                {champ.teams.length}
               </Title>
               <Link
                 className={`start__link ${
-                  cham.teamsCount < 2 || cham.teamsCount > cham.teams.length
+                  champ.teamsCount < 2 || champ.teamsCount > champ.teams.length
                     ? "start__link--inactive"
                     : "start__link--active"
                 }`}
                 to="season"
                 state={{
-                  teams: cham.teams.slice(0, cham.teamsCount),
-                  name: cham.name
+                  teams: champ.teams.slice(0, champ.teamsCount),
+                  name: champ.name
                 }}
-                onClick={() => schedule(cham.teams.slice(0, cham.teamsCount))}
+                onClick={() => schedule(champ.teams.slice(0, champ.teamsCount))}
               >
                 Start
               </Link>
