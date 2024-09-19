@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 // import { teams as mock } from "../../data/teams"; // use for tests
 import { Teams } from "../../data/types";
 import Header from "../Header";
+import { Link } from "react-router-dom";
 
 function PlayOff() {
   const [isRound, setIsRound] = useState<boolean>(true);
@@ -62,6 +63,12 @@ function PlayOff() {
               <span className="playoff__champion-name">{teams[0].name}</span>
             </div>
           </h2>
+          <Link
+            to="/hockey-league-simulator"
+            className="playoff__champion-link"
+          >
+            Play Again
+          </Link>
         </div>
       ) : (
         <div className="playoff__rounds">

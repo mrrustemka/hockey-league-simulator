@@ -358,3 +358,16 @@ th {
 .start__actions-error--active {
   color: red !important;
 }
+
+.playoff__champion-link {
+  display: block;
+  border-color: #d9d9d9;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0);
+  box-shadow: none;
+  margin: 8px auto;
+  width: fit-content;
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
