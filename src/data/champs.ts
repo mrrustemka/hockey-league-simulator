@@ -10,13 +10,15 @@ export const champs: League[] = [
     name: "Hockey World Championship",
     description: "",
     image: world,
-    teams: worldChampionship
+    teams: worldChampionship,
+    teamsCount: 18
   },
   {
     id: "2",
     name: "Europe Hockey League",
     description: "",
     image: ehl,
-    teams: europeLeague
+    teams: europeLeague,
+    teamsCount: 34
   }
 ];

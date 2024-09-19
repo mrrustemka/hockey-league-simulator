@@ -4,7 +4,7 @@ import Game from "./components/Game";
 import Header from "./components/Header";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PlayOff from "./components/play-off/PlayOff";
-import Start from "./Start";
+import Start from "./components/Start";
 
 const router = createBrowserRouter([
   {

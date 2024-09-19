@@ -52,4 +52,5 @@ export type League = {
   description: string;
   image: string;
   teams: Teams[];
+  teamsCount: number;
 };
