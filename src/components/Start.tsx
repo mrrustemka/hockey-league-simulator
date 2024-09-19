@@ -1,10 +1,13 @@
-﻿import { Button, Card, Input } from "antd";
+﻿import { Button, Card, Input, Typography } from "antd";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { League } from "../data/types";
 import { v4 as uuidv4 } from "uuid";
 import { schedule } from "../data/schedule";
 import { champs } from "../data/champs";
+// import Title from "antd/es/skeleton/Title";
+
+const { Title } = Typography;
 
 function Start() {
   const [champTypes, setChampTypes] = useState<League[]>(champs);
@@ -25,6 +28,9 @@ function Start() {
           style={{ width: 480 }}
           cover={<img alt="example" src={cham.image} />}
         >
+          <Title level={5} className="card__info card__info--position-away">
+            {cham.description}
+          </Title>
           {cham.teams.map((team) => (
             <div
               key={uuidv4()}
@@ -46,6 +52,7 @@ function Start() {
               />
             </div>
           ))}
+
           <div>
             <Input
               type="number"
