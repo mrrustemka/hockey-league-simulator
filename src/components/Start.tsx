@@ -60,7 +60,7 @@ function Start() {
                 Select the number of teams
               </Title>
               <Input
-                className="start__input"
+                className={`start__input`}
                 type="number"
                 defaultValue={cham.teamsCount}
                 value={cham.teamsCount}
@@ -70,8 +70,23 @@ function Start() {
                   updateTeamsNum(cham.id, parseInt(e.target.value))
                 }
               />
+              <Title
+                level={5}
+                className={`start__actions-error ${
+                  cham.teamsCount < 2 || cham.teamsCount > cham.teams.length
+                    ? "start__actions-error--active"
+                    : "start__actions-error--inactive"
+                }`}
+              >
+                Please enter a valid number of teams. From 2 to{" "}
+                {cham.teams.length}
+              </Title>
               <Link
-                className="start__link"
+                className={`start__link ${
+                  cham.teamsCount < 2 || cham.teamsCount > cham.teams.length
+                    ? "start__link--inactive"
+                    : "start__link--active"
+                }`}
                 to="season"
                 state={{
                   teams: cham.teams.slice(0, cham.teamsCount),
