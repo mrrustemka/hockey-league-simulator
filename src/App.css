@@ -9,6 +9,17 @@ body {
   margin: 0;
 }
 
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app__div {
+  flex: 1;
+  /* margin-bottom: 20px; */
+}
+
 .cards-row {
   margin: 18px;
 }
@@ -200,6 +211,7 @@ th {
 
 .playoff {
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .playoff__round-panel {

@@ -11,7 +11,7 @@ const router = createBrowserRouter([
   {
     path: "hockey-league-simulator",
     element: (
-      <div>
+      <div className="app__div">
         <Start />
       </div>
     )
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
   {
     path: "hockey-league-simulator/season",
     element: (
-      <div>
+      <div className="app__div">
         <Game />
       </div>
     )
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
   {
     path: "hockey-league-simulator/season/playoff",
     element: (
-      <div>
+      <div className="app__div">
         <PlayOff />
       </div>
     )
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
 ]);
 
 const App: FC = () => (
-  <div className="App">
+  <div className="app">
     <RouterProvider router={router} />
     <Footer />
   </div>
