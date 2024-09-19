@@ -1,10 +1,11 @@
 import { FC } from "react";
 import "./App.css";
 import Game from "./components/Game";
-import Header from "./components/Header";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PlayOff from "./components/play-off/PlayOff";
 import Start from "./components/Start";
+import Footer from "./components/Footer";
+// import { Footer } from "antd/es/layout/layout";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
 const App: FC = () => (
   <div className="App">
     <RouterProvider router={router} />
+    <Footer />
   </div>
 );
 

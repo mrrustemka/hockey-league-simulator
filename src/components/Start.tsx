@@ -71,19 +71,15 @@ function Start() {
                 }
               />
               <Link
+                className="start__link"
                 to="season"
                 state={{
                   teams: cham.teams.slice(0, cham.teamsCount),
                   name: cham.name
                 }}
+                onClick={() => schedule(cham.teams.slice(0, cham.teamsCount))}
               >
-                <Button
-                  className="start__button"
-                  size="large"
-                  onClick={() => schedule(cham.teams.slice(0, cham.teamsCount))}
-                >
-                  Start
-                </Button>
+                Start
               </Link>
             </div>
           </Card>
