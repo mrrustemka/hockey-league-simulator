@@ -4,6 +4,7 @@ import Round from "./Round";
 import { v4 as uuidv4 } from "uuid";
 // import { teams as mock } from "../../data/teams"; // use for tests
 import { Teams } from "../../data/types";
+import Header from "../Header";
 
 function PlayOff() {
   const [isRound, setIsRound] = useState<boolean>(true);
@@ -47,6 +48,7 @@ function PlayOff() {
 
   return (
     <div className="playoff">
+      <Header text={location.state.name} />
       {isChampion ? (
         <div className="playoff__champion">
           <h2 className="playoff__champion-heading">

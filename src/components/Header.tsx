@@ -2,10 +2,10 @@ import React from "react";
 import { Typography } from "antd";
 
 const { Title } = Typography;
-function Header() {
+function Header({ text }: any) {
   return (
     <header className="header">
-      <Title className="header__title">Hockey World Championship</Title>
+      <Title className="header__title">{text}</Title>
     </header>
   );
 }

@@ -5,6 +5,7 @@ import { League } from "../data/types";
 import { v4 as uuidv4 } from "uuid";
 import { schedule } from "../data/schedule";
 import { champs } from "../data/champs";
+import Header from "./Header";
 // import Title from "antd/es/skeleton/Title";
 
 const { Title } = Typography;
@@ -20,68 +21,75 @@ function Start() {
   }
 
   return (
-    <div>
-      {champTypes.map((cham) => (
-        <Card
-          key={uuidv4()}
-          hoverable
-          style={{ width: 480 }}
-          cover={<img alt="example" src={cham.image} />}
-        >
-          <Title level={5} className="card__info card__info--position-away">
-            {cham.description}
-          </Title>
-          {cham.teams.map((team) => (
-            <div
-              key={uuidv4()}
-              style={{
-                display: "inline-block",
-                backgroundColor:
-                  team.id <= cham.teamsCount ? "rgb(81, 81, 81, 45%)" : "white",
-                height: "32px",
-                width: "32px",
-                padding: "4px",
-                textAlign: "center"
-              }}
-            >
+    <>
+      <Header text="Select a Championship" />
+      <div className="start">
+        {champTypes.map((cham) => (
+          <Card
+            key={uuidv4()}
+            className="start__card"
+            cover={
               <img
-                src={team.logo}
-                alt={team.name}
-                className="playoff__champion-logo"
-                style={{ verticalAlign: "middle" }}
+                alt="example"
+                src={cham.image}
+                className="start__card-cover"
               />
+            }
+          >
+            <Title level={5} className="start__card-title">
+              {cham.description}
+            </Title>
+            <div className="start__teams">
+              {cham.teams.map((team) => (
+                <div
+                  key={uuidv4()}
+                  className={`start__team ${
+                    team.id <= cham.teamsCount ? "start__team--active" : ""
+                  }`}
+                >
+                  <img
+                    src={team.logo}
+                    alt={team.name}
+                    className="start__team-logo"
+                  />
+                </div>
+              ))}
             </div>
-          ))}
-
-          <div>
-            <Input
-              type="number"
-              defaultValue={cham.teamsCount}
-              value={cham.teamsCount}
-              max={cham.teams.length}
-              min="2"
-              onChange={(e) =>
-                updateTeamsNum(cham.id, parseInt(e.target.value))
-              }
-            />
-            <Button
-              className="playoff__start-play-off"
-              size="large"
-              onClick={() => schedule(cham.teams.slice(0, cham.teamsCount))}
-            >
-              <Link
-                to="season"
-                state={{
-                  teams: cham.teams.slice(0, cham.teamsCount)
-                }}
+            <div className="start__actions">
+              <Title level={5} className="start__actions-title">
+                Select the number of teams
+              </Title>
+              <Input
+                className="start__input"
+                type="number"
+                defaultValue={cham.teamsCount}
+                value={cham.teamsCount}
+                max={cham.teams.length}
+                min="2"
+                onChange={(e) =>
+                  updateTeamsNum(cham.id, parseInt(e.target.value))
+                }
+              />
+              <Button
+                className="start__button"
+                size="large"
+                onClick={() => schedule(cham.teams.slice(0, cham.teamsCount))}
               >
-                Start!
-              </Link>
-            </Button>
-          </div>
-        </Card>
-      ))}
-    </div>
+                <Link
+                  to="season"
+                  state={{
+                    teams: cham.teams.slice(0, cham.teamsCount),
+                    name: cham.name
+                  }}
+                >
+                  Start
+                </Link>
+              </Button>
+            </div>
+          </Card>
+        ))}
+      </div>
+    </>
   );
 }
 

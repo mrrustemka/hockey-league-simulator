@@ -6,6 +6,7 @@ import Sheet from "./Sheet";
 import UpcomingGame from "./UpcomingGame";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import Header from "./Header";
 
 const { Title } = Typography;
 
@@ -218,6 +219,7 @@ function Game() {
     let awayRating: number = getTeamRating(scheduleList[gameCounter].away);
     return (
       <div>
+        <Header text={location.state.name} />
         <Row className="layout">
           <Col className="layout__content" span={14}>
             <Sheet teamsData={teamsUpdate} />
@@ -429,6 +431,7 @@ function Game() {
   } else {
     return (
       <div className="playoff">
+        <Header text={location.state.name} />
         <Row className="playoff__container">
           <Col span={14} className="playoff__container-panel">
             <Sheet teamsData={teamsUpdate} />
@@ -447,7 +450,8 @@ function Game() {
                       : teamsUpdate.length >= 4
                       ? 4
                       : 2
-                  )
+                  ),
+                  name: location.state.name
                 }}
               >
                 Start Play-Off

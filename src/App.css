@@ -192,7 +192,8 @@ th {
   float: inline-start;
 }
 
-.playoff__start-play-off {
+.playoff__start-play-off,
+.start__button {
   margin-top: 12px;
 }
 
@@ -268,4 +269,62 @@ th {
 }
 .table__column-games--low {
   background-color: #d0e6f527;
+}
+
+.start__team {
+  height: 32px;
+  width: 32px;
+  padding: 4px;
+  text-align: center;
+  display: inline-block;
+  background-color: transparent;
+}
+
+.start__team--active {
+  background-color: rgb(81, 81, 81, 45%);
+}
+
+.start__team-logo {
+  margin: 0 4px;
+  width: 24px;
+  border-radius: 100%;
+  vertical-align: middle;
+}
+
+.start {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.start__card {
+  margin: 0%;
+  border-radius: 0%;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.start__card-cover {
+  height: auto;
+  margin: 18px auto;
+  object-fit: none;
+  width: fit-content !important;
+}
+
+.start__actions {
+  text-align: center;
+}
+
+.start__input {
+  margin: auto;
+  width: 68px;
+  margin: 0 8px;
+}
+
+.start__button {
+  display: block;
+  margin: 8px auto;
+}
+
+.start__actions-title {
+  display: inline;
 }

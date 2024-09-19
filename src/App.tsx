@@ -35,7 +35,6 @@ const router = createBrowserRouter([
 
 const App: FC = () => (
   <div className="App">
-    <Header />
     <RouterProvider router={router} />
   </div>
 );
