@@ -70,21 +70,21 @@ function Start() {
                   updateTeamsNum(cham.id, parseInt(e.target.value))
                 }
               />
-              <Button
-                className="start__button"
-                size="large"
-                onClick={() => schedule(cham.teams.slice(0, cham.teamsCount))}
+              <Link
+                to="season"
+                state={{
+                  teams: cham.teams.slice(0, cham.teamsCount),
+                  name: cham.name
+                }}
               >
-                <Link
-                  to="season"
-                  state={{
-                    teams: cham.teams.slice(0, cham.teamsCount),
-                    name: cham.name
-                  }}
+                <Button
+                  className="start__button"
+                  size="large"
+                  onClick={() => schedule(cham.teams.slice(0, cham.teamsCount))}
                 >
                   Start
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </div>
           </Card>
         ))}

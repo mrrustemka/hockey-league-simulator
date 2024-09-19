@@ -437,26 +437,26 @@ function Game() {
             <Sheet teamsData={teamsUpdate} />
           </Col>
           <Col span={10}>
-            <Button className="playoff__start-play-off" size="large">
-              <Link
-                to="playoff"
-                state={{
-                  teams: teamsUpdate.slice(
-                    0,
-                    teamsUpdate.length >= 16
-                      ? 16
-                      : teamsUpdate.length >= 8
-                      ? 8
-                      : teamsUpdate.length >= 4
-                      ? 4
-                      : 2
-                  ),
-                  name: location.state.name
-                }}
-              >
+            <Link
+              to="playoff"
+              state={{
+                teams: teamsUpdate.slice(
+                  0,
+                  teamsUpdate.length >= 16
+                    ? 16
+                    : teamsUpdate.length >= 8
+                    ? 8
+                    : teamsUpdate.length >= 4
+                    ? 4
+                    : 2
+                ),
+                name: location.state.name
+              }}
+            >
+              <Button className="playoff__start-play-off" size="large">
                 Start Play-Off
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </Col>
         </Row>
       </div>
