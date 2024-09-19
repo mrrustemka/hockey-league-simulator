@@ -333,11 +333,6 @@ th {
   margin: 0 8px;
 }
 
-/* .start__button {
-  display: block;
-  margin: 8px auto;
-} */
-
 .start__actions-title--selection {
   display: inline;
 }
@@ -382,4 +377,8 @@ th {
   padding: 8px 20px;
   border-radius: 8px;
   text-decoration: none;
+}
+
+.ant-card-body {
+  text-align: center;
 }

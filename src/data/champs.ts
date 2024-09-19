@@ -33,7 +33,8 @@ export const champs: League[] = [
   {
     id: "3",
     name: "National Hockey League",
-    description: "",
+    description:
+      "The National Hockey League featuring US and Canadian teams. The league has the highest level of any league.",
     image: nhl_pic,
     teams: nhl,
     teamsCount: 32
@@ -41,9 +42,9 @@ export const champs: League[] = [
   {
     id: "4",
     name: "European Hockey League Division I",
-    description: "",
+    description: "Second level of World Championship.",
     image: world_2,
     teams: worldChampionship_2,
-    teamsCount: 2
+    teamsCount: 12
   }
 ];
