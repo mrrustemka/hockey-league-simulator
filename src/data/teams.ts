@@ -2226,7 +2226,7 @@ export const na: Teams[] = [
     goals_diff: 0,
     rating: 96,
     game_counter: 0,
-    logo: swi,
+    logo: scb,
     loses: 0,
     loses_ot: 0,
     wins: 0,
