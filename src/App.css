@@ -382,3 +382,26 @@ th {
 .ant-card-body {
   text-align: center;
 }
+
+.controls-panel__button--simulate,
+.controls-panel__button--next,
+.playoff__start-play-off,
+.playoff__next-round-button,
+.pair__simulate-button {
+  background-color: rgba(0, 0, 0);
+  color: #ffffff;
+  border-color: #d9d9d9;
+  margin: 8px 4px;
+  padding: 8px 20px;
+  border-radius: 8px;
+  height: auto;
+}
+
+.controls-panel__button--simulate:hover,
+.controls-panel__button--next:hover,
+.playoff__start-play-off:hover,
+.playoff__next-round-button:hover,
+.pair__simulate-button:hover {
+  color: #ffffff !important;
+  border-color: #d9d9d9 !important;
+}
