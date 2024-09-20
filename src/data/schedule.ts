@@ -6,6 +6,9 @@ export let scheduleList: Schedule[] = [];
 let i: number = 0;
 
 export function schedule(teams: Teams[]) {
+  scheduleList = [];
+  teamsList = [];
+  i = 0;
   teams.map((team) => {
     if (team) return teamsList.push(team.abbreviation);
   });

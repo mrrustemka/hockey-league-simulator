@@ -3,9 +3,10 @@ import { useLocation } from "react-router-dom";
 import Round from "./Round";
 import { v4 as uuidv4 } from "uuid";
 // import { teams as mock } from "../../data/teams"; // use for tests
-import { Teams } from "../../data/types";
+import { League, Teams } from "../../data/types";
 import Header from "../Header";
 import { Link } from "react-router-dom";
+import { champs } from "../../data/champs";
 
 function PlayOff() {
   const [isRound, setIsRound] = useState<boolean>(true);
@@ -47,6 +48,23 @@ function PlayOff() {
     setTeams(newTeams);
   }
 
+  function updateGame() {
+    champs
+      .find((champ) => champ.id === location.state.id)
+      ?.teams.map((team) => {
+        team.game_counter = 0;
+        team.goals_against = 0;
+        team.goals_diff = 0;
+        team.goals_for = 0;
+        team.loses = 0;
+        team.loses_ot = 0;
+        team.play_off_rank = 0;
+        team.play_off_round_wins = 0;
+        team.points = 0;
+        team.wins = 0;
+      });
+  }
+
   return (
     <div className="playoff">
       <Header text={location.state.name} />
@@ -66,6 +84,7 @@ function PlayOff() {
           <Link
             to="/hockey-league-simulator"
             className="playoff__champion-link"
+            onClick={() => updateGame()}
           >
             Play Again
           </Link>

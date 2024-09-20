@@ -1,5 +1,5 @@
-﻿import { Button, Card, Input, Typography } from "antd";
-import React, { useState } from "react";
+﻿import { Card, Input, Typography } from "antd";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { League } from "../data/types";
 import { v4 as uuidv4 } from "uuid";
@@ -99,7 +99,8 @@ function Start() {
                 to="season"
                 state={{
                   teams: champ.teams.slice(0, champ.teamsCount),
-                  name: champ.name
+                  name: champ.name,
+                  id: champ.id
                 }}
                 onClick={() => schedule(champ.teams.slice(0, champ.teamsCount))}
               >

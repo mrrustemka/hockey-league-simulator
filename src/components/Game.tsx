@@ -450,7 +450,8 @@ function Game() {
                     ? 4
                     : 2
                 ),
-                name: location.state.name
+                name: location.state.name,
+                id: location.state.id
               }}
             >
               <Button className="playoff__start-play-off" size="large">
