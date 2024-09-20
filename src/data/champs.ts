@@ -4,13 +4,15 @@ import world_2 from "../images/world_2.png";
 import ehl from "../images/ehl.jpg";
 import nhl_pic from "../images/nhl.png";
 import shl_pic from "../images/shl.png";
+import na_pic from "../images/na.png";
 
 import {
   europeLeague,
   worldChampionship_1,
   nhl,
   worldChampionship_2,
-  shl
+  shl,
+  na
 } from "./teams";
 
 export const champs: League[] = [
@@ -56,6 +58,15 @@ export const champs: League[] = [
       "Highest division in the Swedish ice hockey system. The league currently consists of 14 teams. The league was founded in 1975 and the winner is awarded the Le Mat Trophy.",
     image: shl_pic,
     teams: shl,
+    teamsCount: 14
+  },
+  {
+    id: "6",
+    name: "National League",
+    description:
+      "The National League a league in Switzerland and is the top tier of the Swiss league system. ",
+    image: na_pic,
+    teams: na,
     teamsCount: 14
   }
 ];
