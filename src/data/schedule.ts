@@ -9,7 +9,7 @@ export function schedule(teams: Teams[]) {
   scheduleList = [];
   teamsList = [];
   i = 0;
-  teams.map((team) => {
+  teams.forEach((team) => {
     if (team) return teamsList.push(team.abbreviation);
   });
 

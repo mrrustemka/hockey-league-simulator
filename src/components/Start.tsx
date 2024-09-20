@@ -1,4 +1,4 @@
-﻿import { Card, Input, Typography } from "antd";
+import { Card, Input, Typography } from "antd";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { League } from "../data/types";

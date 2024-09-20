@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import Round from "./Round";
 import { v4 as uuidv4 } from "uuid";
 // import { teams as mock } from "../../data/teams"; // use for tests
-import { League, Teams } from "../../data/types";
+import { Teams } from "../../data/types";
 import Header from "../Header";
 import { Link } from "react-router-dom";
 import { champs } from "../../data/champs";
@@ -51,7 +51,7 @@ function PlayOff() {
   function updateGame() {
     champs
       .find((champ) => champ.id === location.state.id)
-      ?.teams.map((team) => {
+      ?.teams.forEach((team) => {
         team.game_counter = 0;
         team.goals_against = 0;
         team.goals_diff = 0;

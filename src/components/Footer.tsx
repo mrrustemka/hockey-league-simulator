@@ -1,4 +1,4 @@
-﻿function Footer() {
+function Footer() {
   return (
     <div className="footer">
       <p>

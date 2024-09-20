@@ -1,12 +1,12 @@
 import { PlayOffGameResult, GameResult } from "../../data/types";
 
-interface PlayOffGame {
+interface IPlayOffGame {
   game: PlayOffGameResult;
   index: number;
   result: GameResult | undefined;
 }
 
-function PlayOffGame({ game, index, result }: PlayOffGame) {
+function PlayOffGame({ game, index, result }: IPlayOffGame) {
   return (
     <div className="game-result pair__game">
       <span className="game-result__index">{index + 1}.</span>

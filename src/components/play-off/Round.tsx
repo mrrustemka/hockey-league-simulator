@@ -5,14 +5,14 @@ import { Teams } from "../../data/types";
 
 const { Title } = Typography;
 
-interface Round {
+interface IRound {
   abv: string;
   pairs: Teams[][];
   status: boolean;
   updateRound: () => void;
 }
 
-function Round({ abv, pairs, status, updateRound }: Round) {
+function Round({ abv, pairs, status, updateRound }: IRound) {
   function handlerIsRoundEnd() {
     if (
       pairs.every((pair: Teams[]) =>
