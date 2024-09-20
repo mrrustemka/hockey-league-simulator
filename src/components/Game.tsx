@@ -180,28 +180,31 @@ function Game() {
 
   function teamsSort(teams: Teams[]): Teams[] {
     if (scheduleList && gameCounter < scheduleList.length) {
-      return teams.sort((team1, team2) =>
-        team1.points > team2.points
-          ? -1
-          : team1.points === team2.points
-          ? team1.game_counter < team2.game_counter
-            ? -1
-            : team1.game_counter === team2.game_counter
-            ? team1.goals_diff > team2.goals_diff
-              ? -1
-                ? team1.goals_diff === team2.goals_diff
-                  ? team1.rating > team2.rating
-                    ? -1
-                    : 1
-                  : 1
-                  ? -1
-                  : 1
-                : 1
-              : 1
-            : 1
-          : 1
-      );
+      return teams.sort((team1, team2) => {
+        if (team1.points !== team2.points) {
+          return team2.points - team1.points;
+        }
+
+        if (team1.game_counter !== team2.game_counter) {
+          return team1.game_counter - team2.game_counter;
+        }
+
+        if (team1.wins !== team2.wins) {
+          return team2.wins - team1.wins;
+        }
+
+        if (team1.loses_ot !== team2.loses_ot) {
+          return team2.loses_ot - team1.loses_ot;
+        }
+
+        if (team1.goals_diff !== team2.goals_diff) {
+          return team2.goals_diff - team1.goals_diff;
+        }
+
+        return 0;
+      });
     } else {
+      console.log(teams);
       return teams;
     }
   }

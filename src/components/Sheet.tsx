@@ -18,7 +18,7 @@ function Sheet(props: { teamsData: Teams[] }) {
         title="Rank"
         dataIndex=""
         key="rank"
-        render={(text, record, index) => {
+        render={() => {
           rank++;
           return (
             <div key={uuidv4()}>
@@ -34,7 +34,7 @@ function Sheet(props: { teamsData: Teams[] }) {
         title="Team"
         dataIndex="name"
         key="team"
-        render={(dataIndex, record) => {
+        render={(dataIndex) => {
           const logo = props.teamsData.find(
             (item: { name: string }) => item.name === dataIndex
           )?.logo;
@@ -77,7 +77,7 @@ function Sheet(props: { teamsData: Teams[] }) {
             b.game_counter - a.game_counter,
           multiple: 4
         }}
-        render={(gameCounter, record) => {
+        render={(gameCounter) => {
           let className = "table__column-games";
           if (gameCounter > [...props.teamsData].length * 0.75) {
             className = "table__column-games--high";
@@ -147,7 +147,7 @@ function Sheet(props: { teamsData: Teams[] }) {
             a.goals_diff - b.goals_diff,
           multiple: 1
         }}
-        render={(dataIndex, record) => {
+        render={(dataIndex) => {
           return (
             <div key={uuidv4()}>
               <p
