@@ -76,7 +76,7 @@ body {
 
 .header,
 .footer {
-  height: 50px;
+  height: auto;
   background: #000000;
   color: #ffffff;
   padding: 20px 40px;

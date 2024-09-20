@@ -1,12 +1,12 @@
-﻿import React from "react";
-
-function Footer() {
+﻿function Footer() {
   return (
     <div className="footer">
       <p>
-        My educationalproject is not affiliated by the Countries and Hockey
-        Leagues, including NHL, IIHF, SHL, NL, SM-liiga, DEL, ELH, Slovak
-        Extraliga.
+        My educational project is not affiliated by the Countries and Hockey
+        Leagues, including the National Hockey League (NHL), the International
+        Ice Hockey Federation (IIHF), Svenska Hockeyligan SHL (SWE), the Liiga
+        (FIN), the Penny DEL (GER), the Tipsport Extraliga (CZE), the Slovak
+        Extraliga and the Hockey Europe organization.
       </p>
     </div>
   );
