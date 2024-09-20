@@ -3,12 +3,14 @@ import world_1 from "../images/world_1.png";
 import world_2 from "../images/world_2.png";
 import ehl from "../images/ehl.jpg";
 import nhl_pic from "../images/nhl.png";
+import shl_pic from "../images/shl.png";
 
 import {
   europeLeague,
   worldChampionship_1,
   nhl,
-  worldChampionship_2
+  worldChampionship_2,
+  shl
 } from "./teams";
 
 export const champs: League[] = [
@@ -46,5 +48,14 @@ export const champs: League[] = [
     image: world_2,
     teams: worldChampionship_2,
     teamsCount: 12
+  },
+  {
+    id: "5",
+    name: "Swedish Hockey League",
+    description:
+      "Highest division in the Swedish ice hockey system. The league currently consists of 14 teams. The league was founded in 1975 and the winner is awarded the Le Mat Trophy.",
+    image: shl_pic,
+    teams: shl,
+    teamsCount: 14
   }
 ];
