@@ -92,6 +92,7 @@ import lit from "../images/lit.png";
 import net from "../images/net.png";
 import spa_world_2 from "../images/spa_world_2.png";
 import ukr from "../images/ukr.png";
+import pol from "../images/pol.png";
 import hv71 from "../images/hv71.png";
 import rbk from "../images/rbk.png";
 import iko from "../images/iko.png";
@@ -395,7 +396,7 @@ export const worldChampionship_1: Teams[] = [
     goals_diff: 0,
     goals_for: 0,
     id: 16,
-    logo: sln,
+    logo: pol,
     name: "Poland",
     points: 0,
     rating: 73,
