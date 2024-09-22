@@ -107,6 +107,7 @@ import ajo from "../images/ajo.png";
 import amb from "../images/amb.png";
 import frg from "../images/frg.png";
 import rjl from "../images/rjl.png";
+import shef from "../images/shef.png";
 
 export const worldChampionship_1: Teams[] = [
   {
@@ -1238,17 +1239,17 @@ export const europeLeague: Teams[] = [
   },
   {
     id: 32,
-    name: "Mountfield HK",
-    abbreviation: "MHK",
-    country: "Cze",
-    city: "Hradec Kralove, Cze",
+    name: "Steelers",
+    abbreviation: "SHEF",
+    country: "Eng",
+    city: "Sheffield, Eng",
     points: 0,
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
     rating: 50,
     game_counter: 0,
-    logo: mhk,
+    logo: shef,
     loses: 0,
     loses_ot: 0,
     wins: 0,
@@ -1287,6 +1288,25 @@ export const europeLeague: Teams[] = [
     rating: 67,
     game_counter: 0,
     logo: koo,
+    loses: 0,
+    loses_ot: 0,
+    wins: 0,
+    play_off_rank: 0,
+    play_off_round_wins: 0
+  },
+  {
+    id: 35,
+    name: "Mountfield HK",
+    abbreviation: "MHK",
+    country: "Cze",
+    city: "Hradec Kralove, Cze",
+    points: 0,
+    goals_for: 0,
+    goals_against: 0,
+    goals_diff: 0,
+    rating: 50,
+    game_counter: 0,
+    logo: mhk,
     loses: 0,
     loses_ot: 0,
     wins: 0,
