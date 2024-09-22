@@ -953,7 +953,7 @@ export const europeLeague: Teams[] = [
   },
   {
     id: 17,
-    name: "Iceberen ",
+    name: "Eisbären",
     abbreviation: "EBB",
     country: "Ger",
     city: "Berlin, Ger",
