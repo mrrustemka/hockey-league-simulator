@@ -1,7 +1,7 @@
 import { League } from "./types";
 import world_1 from "../images/world_1.png";
 import world_2 from "../images/world_2.png";
-import ehl from "../images/ehl.jpg";
+import ehl from "../images/ehl.png";
 import nhl_pic from "../images/nhl.png";
 import shl_pic from "../images/shl.png";
 import na_pic from "../images/na.png";
