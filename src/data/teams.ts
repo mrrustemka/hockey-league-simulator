@@ -450,7 +450,8 @@ export const worldChampionship_2: Teams[] = [
     play_off_round_wins: 0,
     loses: 0,
     loses_ot: 0,
-    wins: 0
+    wins: 0,
+    color: "#ffffff"
   },
   {
     abbreviation: "SLN",
@@ -469,7 +470,8 @@ export const worldChampionship_2: Teams[] = [
     play_off_round_wins: 0,
     loses: 0,
     loses_ot: 0,
-    wins: 0
+    wins: 0,
+    color: "#43b02a"
   },
   {
     abbreviation: "ITA",
@@ -488,7 +490,8 @@ export const worldChampionship_2: Teams[] = [
     play_off_round_wins: 0,
     loses: 0,
     loses_ot: 0,
-    wins: 0
+    wins: 0,
+    color: "#0066bc"
   },
   {
     abbreviation: "SKR",
@@ -507,7 +510,8 @@ export const worldChampionship_2: Teams[] = [
     play_off_round_wins: 0,
     loses: 0,
     loses_ot: 0,
-    wins: 0
+    wins: 0,
+    color: "#cd2e3a"
   },
   {
     abbreviation: "ROM",
@@ -526,7 +530,8 @@ export const worldChampionship_2: Teams[] = [
     play_off_round_wins: 0,
     loses: 0,
     loses_ot: 0,
-    wins: 0
+    wins: 0,
+    color: "#fcd116"
   },
   {
     abbreviation: "JAP",
@@ -545,7 +550,8 @@ export const worldChampionship_2: Teams[] = [
     play_off_round_wins: 0,
     loses: 0,
     loses_ot: 0,
-    wins: 0
+    wins: 0,
+    color: "#000000"
   },
   {
     abbreviation: "CHI",
@@ -564,7 +570,8 @@ export const worldChampionship_2: Teams[] = [
     play_off_round_wins: 0,
     loses: 0,
     loses_ot: 0,
-    wins: 0
+    wins: 0,
+    color: "#fbea0e"
   },
   {
     abbreviation: "EST",
@@ -583,7 +590,8 @@ export const worldChampionship_2: Teams[] = [
     play_off_round_wins: 0,
     loses: 0,
     loses_ot: 0,
-    wins: 0
+    wins: 0,
+    color: "#0073cf"
   },
   {
     abbreviation: "LIT",
@@ -602,7 +610,8 @@ export const worldChampionship_2: Teams[] = [
     play_off_round_wins: 0,
     loses: 0,
     loses_ot: 0,
-    wins: 0
+    wins: 0,
+    color: "#000000"
   },
   {
     abbreviation: "NET",
@@ -621,7 +630,8 @@ export const worldChampionship_2: Teams[] = [
     play_off_round_wins: 0,
     loses: 0,
     loses_ot: 0,
-    wins: 0
+    wins: 0,
+    color: "#ff5f00"
   },
   {
     abbreviation: "SPA",
@@ -640,7 +650,8 @@ export const worldChampionship_2: Teams[] = [
     play_off_round_wins: 0,
     loses: 0,
     loses_ot: 0,
-    wins: 0
+    wins: 0,
+    color: "#0000f0"
   },
   {
     abbreviation: "UKR",
@@ -659,7 +670,8 @@ export const worldChampionship_2: Teams[] = [
     play_off_round_wins: 0,
     loses: 0,
     loses_ot: 0,
-    wins: 0
+    wins: 0,
+    color: "#ffffff"
   }
 ];
 
