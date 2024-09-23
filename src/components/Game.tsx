@@ -218,8 +218,16 @@ function Game() {
   }
 
   if (scheduleList && gameCounter < scheduleList.length) {
-    let homeRating: number = getTeamRating(scheduleList[gameCounter].home);
-    let awayRating: number = getTeamRating(scheduleList[gameCounter].away);
+    const away: Teams = teams.find(
+      (element: { abbreviation: string }) =>
+        element.abbreviation === scheduleList[gameCounter].away
+    );
+    const home: Teams = teams.find(
+      (element: { abbreviation: string }) =>
+        element.abbreviation === scheduleList[gameCounter].home
+    );
+    const homeRating: number = getTeamRating(scheduleList[gameCounter].home);
+    const awayRating: number = getTeamRating(scheduleList[gameCounter].away);
     return (
       <div>
         <Header text={location.state.name} />
@@ -233,37 +241,27 @@ function Game() {
                 <Card
                   className="card card--hoverable"
                   hoverable
-                  cover={
-                    <img
-                      alt={
-                        teams.find(
-                          (element: { abbreviation: string }) =>
-                            element.abbreviation ===
-                            scheduleList[gameCounter].away
-                        )?.name + "Logo"
-                      }
-                      src={
-                        teams.find(
-                          (element: { abbreviation: string }) =>
-                            element.abbreviation ===
-                            scheduleList[gameCounter].away
-                        )?.logo
-                      }
-                    />
-                  }
+                  cover={<img alt={away.name + "Logo"} src={away.logo} />}
+                  style={{
+                    backgroundColor: away.color
+                  }}
                 >
-                  <Title className="card__title" level={4}>
-                    {
-                      teams.find(
-                        (element: { abbreviation: string }) =>
-                          element.abbreviation ===
-                          scheduleList[gameCounter].away
-                      )?.abbreviation
-                    }
+                  <Title
+                    className="card__title"
+                    level={4}
+                    style={{
+                      color: away.color === "#000000" ? "#ffffff" : "initial"
+                    }}
+                  >
+                    {away.abbreviation}
                   </Title>
                   <Title
                     level={5}
                     className="card__info card__info--position-away"
+                    style={{
+                      color: away.color === "#000000" ? "#ffffff" : "initial",
+                      opacity: away.color === "#000000" ? "1" : "0.45"
+                    }}
                   >
                     {awayRating === 1
                       ? awayRating + "st"
@@ -276,30 +274,12 @@ function Game() {
                   <Title
                     level={5}
                     className="card__info card__info--result-away"
+                    style={{
+                      color: away.color === "#000000" ? "#ffffff" : "initial",
+                      opacity: away.color === "#000000" ? "1" : "0.45"
+                    }}
                   >
-                    {
-                      teams.find(
-                        (element: { abbreviation: string }) =>
-                          element.abbreviation ===
-                          scheduleList[gameCounter].away
-                      )?.wins
-                    }
-                    -
-                    {
-                      teams.find(
-                        (element: { abbreviation: string }) =>
-                          element.abbreviation ===
-                          scheduleList[gameCounter].away
-                      )?.loses
-                    }
-                    -
-                    {
-                      teams.find(
-                        (element: { abbreviation: string }) =>
-                          element.abbreviation ===
-                          scheduleList[gameCounter].away
-                      )?.loses_ot
-                    }
+                    {away.wins}-{away.loses}-{away.loses_ot}
                   </Title>
                 </Card>
               </Col>
@@ -307,37 +287,27 @@ function Game() {
                 <Card
                   className="card card--hoverable"
                   hoverable
-                  cover={
-                    <img
-                      alt={
-                        teams.find(
-                          (element: { abbreviation: string }) =>
-                            element.abbreviation ===
-                            scheduleList[gameCounter].home
-                        )?.name + "Logo"
-                      }
-                      src={
-                        teams.find(
-                          (element: { abbreviation: string }) =>
-                            element.abbreviation ===
-                            scheduleList[gameCounter].home
-                        )?.logo
-                      }
-                    />
-                  }
+                  cover={<img alt={home.name + "Logo"} src={home.logo} />}
+                  style={{
+                    backgroundColor: home.color
+                  }}
                 >
-                  <Title className="card__title" level={4}>
-                    {
-                      teams.find(
-                        (element: { abbreviation: string }) =>
-                          element.abbreviation ===
-                          scheduleList[gameCounter].home
-                      )?.abbreviation
-                    }
+                  <Title
+                    className="card__title"
+                    level={4}
+                    style={{
+                      color: home.color === "#000000" ? "#ffffff" : "initial"
+                    }}
+                  >
+                    {home.abbreviation}
                   </Title>
                   <Title
                     level={5}
                     className="card__info card__info--position-home"
+                    style={{
+                      color: home.color === "#000000" ? "#ffffff" : "initial",
+                      opacity: home.color === "#000000" ? "1" : "0.45"
+                    }}
                   >
                     {homeRating === 1
                       ? homeRating + "st"
@@ -350,30 +320,12 @@ function Game() {
                   <Title
                     level={5}
                     className="card__info card__info--result-home"
+                    style={{
+                      color: home.color === "#000000" ? "#ffffff" : "initial",
+                      opacity: home.color === "#000000" ? "1" : "0.45"
+                    }}
                   >
-                    {
-                      teams.find(
-                        (element: { abbreviation: string }) =>
-                          element.abbreviation ===
-                          scheduleList[gameCounter].home
-                      )?.wins
-                    }
-                    -
-                    {
-                      teams.find(
-                        (element: { abbreviation: string }) =>
-                          element.abbreviation ===
-                          scheduleList[gameCounter].home
-                      )?.loses
-                    }
-                    -
-                    {
-                      teams.find(
-                        (element: { abbreviation: string }) =>
-                          element.abbreviation ===
-                          scheduleList[gameCounter].home
-                      )?.loses_ot
-                    }
+                    {home.wins}-{home.loses}-{home.loses_ot}
                   </Title>
                 </Card>
               </Col>
