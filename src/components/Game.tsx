@@ -228,6 +228,13 @@ function Game() {
     );
     const homeRating: number = getTeamRating(scheduleList[gameCounter].home);
     const awayRating: number = getTeamRating(scheduleList[gameCounter].away);
+    const whiteColors: string[] = [
+      "#000000",
+      "#002255",
+      "#0a1d3d",
+      "#003366",
+      "#15377e"
+    ];
     return (
       <div>
         <Header text={location.state.name} />
@@ -250,7 +257,10 @@ function Game() {
                     className="card__title"
                     level={4}
                     style={{
-                      color: away.color === "#000000" ? "#ffffff" : "initial"
+                      color:
+                        away.color && whiteColors.includes(away.color)
+                          ? "#ffffff"
+                          : "initial"
                     }}
                   >
                     {away.abbreviation}
@@ -259,8 +269,14 @@ function Game() {
                     level={5}
                     className="card__info card__info--position-away"
                     style={{
-                      color: away.color === "#000000" ? "#ffffff" : "initial",
-                      opacity: away.color === "#000000" ? "1" : "0.45"
+                      color:
+                        away.color && whiteColors.includes(away.color)
+                          ? "#ffffff"
+                          : "initial",
+                      opacity:
+                        away.color && whiteColors.includes(away.color)
+                          ? "1"
+                          : "0.45"
                     }}
                   >
                     {awayRating === 1
@@ -275,8 +291,14 @@ function Game() {
                     level={5}
                     className="card__info card__info--result-away"
                     style={{
-                      color: away.color === "#000000" ? "#ffffff" : "initial",
-                      opacity: away.color === "#000000" ? "1" : "0.45"
+                      color:
+                        away.color && whiteColors.includes(away.color)
+                          ? "#ffffff"
+                          : "initial",
+                      opacity:
+                        away.color && whiteColors.includes(away.color)
+                          ? "1"
+                          : "0.45"
                     }}
                   >
                     {away.wins}-{away.loses}-{away.loses_ot}
@@ -296,7 +318,10 @@ function Game() {
                     className="card__title"
                     level={4}
                     style={{
-                      color: home.color === "#000000" ? "#ffffff" : "initial"
+                      color:
+                        home.color && whiteColors.includes(home.color)
+                          ? "#ffffff"
+                          : "initial"
                     }}
                   >
                     {home.abbreviation}
@@ -305,8 +330,14 @@ function Game() {
                     level={5}
                     className="card__info card__info--position-home"
                     style={{
-                      color: home.color === "#000000" ? "#ffffff" : "initial",
-                      opacity: home.color === "#000000" ? "1" : "0.45"
+                      color:
+                        home.color && whiteColors.includes(home.color)
+                          ? "#ffffff"
+                          : "initial",
+                      opacity:
+                        home.color && whiteColors.includes(home.color)
+                          ? "1"
+                          : "0.45"
                     }}
                   >
                     {homeRating === 1
@@ -321,8 +352,14 @@ function Game() {
                     level={5}
                     className="card__info card__info--result-home"
                     style={{
-                      color: home.color === "#000000" ? "#ffffff" : "initial",
-                      opacity: home.color === "#000000" ? "1" : "0.45"
+                      color:
+                        home.color && whiteColors.includes(home.color)
+                          ? "#ffffff"
+                          : "initial",
+                      opacity:
+                        home.color && whiteColors.includes(home.color)
+                          ? "1"
+                          : "0.45"
                     }}
                   >
                     {home.wins}-{home.loses}-{home.loses_ot}

@@ -19,7 +19,7 @@ import vit from "../images/vit.png";
 import pce from "../images/pce.png";
 import spa from "../images/spa.png";
 import evz from "../images/evz.png";
-import ing from "../images/ing.gif";
+import ing from "../images/ing.png";
 import wob from "../images/wob.png";
 import tik from "../images/tik.png";
 import hcl from "../images/hcl.png";
@@ -693,7 +693,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#f07831"
   },
   {
     id: 2,
@@ -712,7 +713,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#000000"
   },
   {
     id: 3,
@@ -731,7 +733,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#c12823"
   },
   {
     id: 4,
@@ -750,7 +753,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#00573f"
   },
   {
     id: 5,
@@ -769,7 +773,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#6d182d"
   },
   {
     id: 6,
@@ -788,7 +793,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#ffcd01"
   },
   {
     id: 7,
@@ -807,7 +813,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#0068b6"
   },
   {
     id: 8,
@@ -826,7 +833,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#000000"
   },
   {
     id: 9,
@@ -845,7 +853,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#ff6600"
   },
   {
     id: 10,
@@ -864,7 +873,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#f0e68c"
   },
   {
     id: 11,
@@ -883,7 +893,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#082868"
   },
   {
     id: 12,
@@ -902,7 +913,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#000000"
   },
   {
     id: 13,
@@ -921,7 +933,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#0a1d3d"
   },
   {
     id: 14,
@@ -940,7 +953,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#004e9f"
   },
   {
     id: 15,
@@ -959,7 +973,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#e20018"
   },
   {
     id: 16,
@@ -978,7 +993,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#e30613"
   },
   {
     id: 17,
@@ -997,7 +1013,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#003366"
   },
   {
     id: 18,
@@ -1016,7 +1033,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#ffffff"
   },
   {
     id: 19,
@@ -1035,7 +1053,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#1f58ad"
   },
   {
     id: 20,
@@ -1054,7 +1073,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#1d72ae"
   },
   {
     id: 21,
@@ -1073,7 +1093,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#002255"
   },
   {
     id: 22,
@@ -1092,7 +1113,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#ec6400"
   },
   {
     id: 23,
@@ -1111,7 +1133,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#ec3e34"
   },
   {
     id: 24,
@@ -1130,7 +1153,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#ffffff"
   },
   {
     id: 25,
@@ -1149,7 +1173,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#ffffff"
   },
   {
     id: 26,
@@ -1168,7 +1193,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#ffffff"
   },
   {
     id: 27,
@@ -1187,7 +1213,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#ffffff"
   },
   {
     id: 28,
@@ -1206,7 +1233,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#ffcd00"
   },
   {
     id: 29,
@@ -1225,7 +1253,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#ffffff"
   },
   {
     id: 30,
@@ -1244,7 +1273,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#ffee00"
   },
   {
     id: 31,
@@ -1263,7 +1293,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#fdcb00"
   },
   {
     id: 32,
@@ -1282,7 +1313,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#ea5100"
   },
   {
     id: 33,
@@ -1301,7 +1333,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#15377e"
   },
   {
     id: 34,
@@ -1320,7 +1353,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#e87026"
   },
   {
     id: 35,
@@ -1339,7 +1373,8 @@ export const europeLeague: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#cda961"
   }
 ];
 
