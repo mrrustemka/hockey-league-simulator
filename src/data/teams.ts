@@ -108,6 +108,7 @@ import amb from "../images/amb.png";
 import frg from "../images/frg.png";
 import rjl from "../images/rjl.png";
 import shef from "../images/shef.png";
+import kos from "../images/kos.png";
 
 export const worldChampionship_1: Teams[] = [
   {
@@ -1178,23 +1179,23 @@ export const europeLeague: Teams[] = [
   },
   {
     id: 26,
-    name: "HC Ocelari",
-    abbreviation: "TRI",
-    country: "CZE",
-    city: "	Třinec, Cze",
+    name: "HC Košice",
+    abbreviation: "KOS",
+    country: "Slo",
+    city: "Košice, Slo",
     points: 0,
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
     rating: 83,
     game_counter: 0,
-    logo: tri,
+    logo: kos,
     loses: 0,
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffffff"
+    color: "#f67f25"
   },
   {
     id: 27,
@@ -1375,6 +1376,26 @@ export const europeLeague: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#cda961"
+  },
+  {
+    id: 36,
+    name: "HC Ocelari",
+    abbreviation: "TRI",
+    country: "CZE",
+    city: "	Třinec, Cze",
+    points: 0,
+    goals_for: 0,
+    goals_against: 0,
+    goals_diff: 0,
+    rating: 83,
+    game_counter: 0,
+    logo: tri,
+    loses: 0,
+    loses_ot: 0,
+    wins: 0,
+    play_off_rank: 0,
+    play_off_round_wins: 0,
+    color: "#ffffff"
   }
 ];
 
