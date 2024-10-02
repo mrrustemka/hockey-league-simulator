@@ -6,6 +6,7 @@ import nhl_pic from "../images/nhl.png";
 import shl_pic from "../images/shl.png";
 import na_pic from "../images/na.png";
 import del_pic from "../images/del.png";
+import sm_pic from "../images/sm.png";
 
 import {
   europeLeague,
@@ -14,7 +15,8 @@ import {
   worldChampionship_2,
   shl,
   na,
-  del
+  del,
+  sm
 } from "./teams";
 
 export const champs: League[] = [
@@ -79,5 +81,14 @@ export const champs: League[] = [
     image: del_pic,
     teams: del,
     teamsCount: 14
+  },
+  {
+    id: "8",
+    name: "SM-Liiga",
+    description:
+      "The SM-liiga, colloquially called the Finnish Elite League. The winner of the Liiga playoffs is awarded the Kanada-malja at the end of each season.",
+    image: sm_pic,
+    teams: sm,
+    teamsCount: 16
   }
 ];
