@@ -5,6 +5,7 @@ import ehl from "../images/ehl.png";
 import nhl_pic from "../images/nhl.png";
 import shl_pic from "../images/shl.png";
 import na_pic from "../images/na.png";
+import del_pic from "../images/del.png";
 
 import {
   europeLeague,
@@ -12,7 +13,8 @@ import {
   nhl,
   worldChampionship_2,
   shl,
-  na
+  na,
+  del
 } from "./teams";
 
 export const champs: League[] = [
@@ -64,9 +66,18 @@ export const champs: League[] = [
     id: "6",
     name: "National League",
     description:
-      "The National League a league in Switzerland and is the top tier of the Swiss league system. ",
+      "The National League a league in Switzerland and is the top tier of the Swiss league system.",
     image: na_pic,
     teams: na,
+    teamsCount: 14
+  },
+  {
+    id: "7",
+    name: "Deutsche Eishockey Liga",
+    description:
+      "DEL is a German professional hockey league and the highest division in German hockey. The DEL was ranked the No. 3 league in Europe.",
+    image: del_pic,
+    teams: del,
     teamsCount: 14
   }
 ];
