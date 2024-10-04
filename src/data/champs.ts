@@ -7,6 +7,7 @@ import shl_pic from "../images/shl.png";
 import na_pic from "../images/na.png";
 import del_pic from "../images/del.png";
 import sm_pic from "../images/sm.png";
+import extraliga_pic from "../images/extraliga_pic.png";
 
 import {
   europeLeague,
@@ -16,7 +17,8 @@ import {
   shl,
   na,
   del,
-  sm
+  sm,
+  extraliga
 } from "./teams";
 
 export const champs: League[] = [
@@ -90,5 +92,14 @@ export const champs: League[] = [
     image: sm_pic,
     teams: sm,
     teamsCount: 16
+  },
+  {
+    id: "9",
+    name: "Extraliga",
+    description:
+      "The highest-level hockey league in the Czech Republic. ELH was ranked the No. 5 league in Europe.",
+    image: extraliga_pic,
+    teams: extraliga,
+    teamsCount: 14
   }
 ];
