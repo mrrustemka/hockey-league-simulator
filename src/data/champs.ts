@@ -8,6 +8,7 @@ import na_pic from "../images/na.png";
 import del_pic from "../images/del.png";
 import sm_pic from "../images/sm.png";
 import extraliga_pic from "../images/extraliga_pic.png";
+import ice_pic from "../images/ice_pic.png";
 
 import {
   europeLeague,
@@ -18,7 +19,8 @@ import {
   na,
   del,
   sm,
-  extraliga
+  extraliga,
+  ice
 } from "./teams";
 
 export const champs: League[] = [
@@ -61,7 +63,7 @@ export const champs: League[] = [
     id: "5",
     name: "Swedish Hockey League",
     description:
-      "Highest division in the Swedish ice hockey system. The league currently consists of 14 teams. The league was founded in 1975 and the winner is awarded the Le Mat Trophy.",
+      "Highest division in the Swedish ice hockey system. The league was founded in 1975 and the winner is awarded the Le Mat Trophy. SHL was ranked the No. 1 league in Europe.",
     image: shl_pic,
     teams: shl,
     teamsCount: 14
@@ -70,7 +72,7 @@ export const champs: League[] = [
     id: "6",
     name: "National League",
     description:
-      "The National League a league in Switzerland and is the top tier of the Swiss league system.",
+      "The National League a league in Switzerland and is the top tier of the Swiss league system. NL was ranked the No. 2 league in Europe.",
     image: na_pic,
     teams: na,
     teamsCount: 14
@@ -88,7 +90,7 @@ export const champs: League[] = [
     id: "8",
     name: "SM-Liiga",
     description:
-      "The SM-liiga, colloquially called the Finnish Elite League. The winner of the Liiga playoffs is awarded the Kanada-malja at the end of each season.",
+      "The SM-liiga, colloquially called the Finnish Elite League. The winner of the Liiga playoffs is awarded the Kanada-malja at the end of each season. SM-liiga was ranked the No. 4 league in Europe.",
     image: sm_pic,
     teams: sm,
     teamsCount: 16
@@ -101,5 +103,14 @@ export const champs: League[] = [
     image: extraliga_pic,
     teams: extraliga,
     teamsCount: 14
+  },
+  {
+    id: "10",
+    name: "ICE Hockey League",
+    description:
+      "Central European hockey league that also serves as the top-tier ice hockey league in Austria. It currently features additional teams from Hungary, Italy, and Slovenia. ELH was ranked the No. 6 league in Europe.",
+    image: ice_pic,
+    teams: ice,
+    teamsCount: 13
   }
 ];
