@@ -147,6 +147,7 @@ import hko from "../images/ice_hko.png";
 import bwl from "../images/ice_bwl.png";
 import ash from "../images/ice_ash.png";
 import piv from "../images/ice_piv.png";
+import bel from "../images/ehl_bel.png";
 
 export const worldChampionship_1: Teams[] = [
   {
@@ -1117,26 +1118,6 @@ export const europeLeague: Teams[] = [
   },
   {
     id: 21,
-    name: "ERC Ingolstadt",
-    abbreviation: "ING",
-    country: "GER",
-    city: "Ingolstadt, Ger",
-    points: 0,
-    goals_for: 0,
-    goals_against: 0,
-    goals_diff: 0,
-    rating: 83,
-    game_counter: 0,
-    logo: ing,
-    loses: 0,
-    loses_ot: 0,
-    wins: 0,
-    play_off_rank: 0,
-    play_off_round_wins: 0,
-    color: "#002255"
-  },
-  {
-    id: 22,
     name: "Grizzlies",
     abbreviation: "WOB",
     country: "GER",
@@ -1156,7 +1137,7 @@ export const europeLeague: Teams[] = [
     color: "#ec6400"
   },
   {
-    id: 23,
+    id: 22,
     name: "Timra IK",
     abbreviation: "TIK",
     country: "SWE",
@@ -1176,7 +1157,7 @@ export const europeLeague: Teams[] = [
     color: "#ec3e34"
   },
   {
-    id: 24,
+    id: 23,
     name: "HC Lugano",
     abbreviation: "HCL",
     country: "SWI",
@@ -1196,7 +1177,7 @@ export const europeLeague: Teams[] = [
     color: "#ffffff"
   },
   {
-    id: 25,
+    id: 24,
     name: "HC TPS",
     abbreviation: "TPS",
     country: "FIN",
@@ -1216,7 +1197,7 @@ export const europeLeague: Teams[] = [
     color: "#ffffff"
   },
   {
-    id: 26,
+    id: 25,
     name: "HC Košice",
     abbreviation: "KOS",
     country: "Slo",
@@ -1225,7 +1206,7 @@ export const europeLeague: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 83,
+    rating: 50,
     game_counter: 0,
     logo: kos,
     loses: 0,
@@ -1236,7 +1217,7 @@ export const europeLeague: Teams[] = [
     color: "#f67f25"
   },
   {
-    id: 27,
+    id: 26,
     name: "Slovan",
     abbreviation: "SBA",
     country: "Slo",
@@ -1245,7 +1226,7 @@ export const europeLeague: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 67,
+    rating: 50,
     game_counter: 0,
     logo: sba,
     loses: 0,
@@ -1256,7 +1237,7 @@ export const europeLeague: Teams[] = [
     color: "#ffffff"
   },
   {
-    id: 28,
+    id: 27,
     name: "Lulea Hockey",
     abbreviation: "LHF",
     country: "Swe",
@@ -1276,7 +1257,7 @@ export const europeLeague: Teams[] = [
     color: "#ffcd00"
   },
   {
-    id: 29,
+    id: 28,
     name: "Farjestad BK",
     abbreviation: "FBK",
     country: "Swe",
@@ -1296,7 +1277,7 @@ export const europeLeague: Teams[] = [
     color: "#ffffff"
   },
   {
-    id: 30,
+    id: 29,
     name: "HC Davos",
     abbreviation: "HCD",
     country: "Swi",
@@ -1316,7 +1297,7 @@ export const europeLeague: Teams[] = [
     color: "#ffee00"
   },
   {
-    id: 31,
+    id: 30,
     name: "Kalpa",
     abbreviation: "KAL",
     country: "Fin",
@@ -1336,7 +1317,7 @@ export const europeLeague: Teams[] = [
     color: "#fdcb00"
   },
   {
-    id: 32,
+    id: 31,
     name: "Steelers",
     abbreviation: "SHEF",
     country: "Eng",
@@ -1356,7 +1337,47 @@ export const europeLeague: Teams[] = [
     color: "#ea5100"
   },
   {
+    id: 32,
+    name: "Giants",
+    abbreviation: "BEL",
+    country: "NI",
+    city: "Belfast, NI",
+    points: 0,
+    goals_for: 0,
+    goals_against: 0,
+    goals_diff: 0,
+    rating: 50,
+    game_counter: 0,
+    logo: bel,
+    loses: 0,
+    loses_ot: 0,
+    wins: 0,
+    play_off_rank: 0,
+    play_off_round_wins: 0,
+    color: "#ffffff"
+  },
+  {
     id: 33,
+    name: "ERC Ingolstadt",
+    abbreviation: "ING",
+    country: "GER",
+    city: "Ingolstadt, Ger",
+    points: 0,
+    goals_for: 0,
+    goals_against: 0,
+    goals_diff: 0,
+    rating: 83,
+    game_counter: 0,
+    logo: ing,
+    loses: 0,
+    loses_ot: 0,
+    wins: 0,
+    play_off_rank: 0,
+    play_off_round_wins: 0,
+    color: "#002255"
+  },
+  {
+    id: 34,
     name: "HC Vitkovice Ridera",
     abbreviation: "VIT",
     country: "CZE",
@@ -1376,7 +1397,7 @@ export const europeLeague: Teams[] = [
     color: "#15377e"
   },
   {
-    id: 34,
+    id: 35,
     name: "KooKoo",
     abbreviation: "KOO",
     country: "FIN",
@@ -1396,7 +1417,7 @@ export const europeLeague: Teams[] = [
     color: "#e87026"
   },
   {
-    id: 35,
+    id: 36,
     name: "Mountfield HK",
     abbreviation: "MHK",
     country: "Cze",
@@ -1416,7 +1437,7 @@ export const europeLeague: Teams[] = [
     color: "#cda961"
   },
   {
-    id: 36,
+    id: 37,
     name: "HC Ocelari",
     abbreviation: "TRI",
     country: "CZE",
