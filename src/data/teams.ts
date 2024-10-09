@@ -2104,7 +2104,7 @@ export const nhl: Teams[] = [
 export const shl: Teams[] = [
   {
     id: 1,
-    name: "Vaxjo Lakers",
+    name: "Lakers",
     abbreviation: "LAK",
     country: "Swe",
     city: "Vaxjo, Swe",
@@ -2119,11 +2119,12 @@ export const shl: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#f07831"
   },
   {
     id: 2,
-    name: "Skelleftea AIK",
+    name: "AIK",
     abbreviation: "AIK",
     country: "Swe",
     city: "Skelleftea, Swe",
@@ -2138,7 +2139,8 @@ export const shl: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#000000"
   },
   {
     id: 3,
@@ -2157,14 +2159,15 @@ export const shl: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#c12823"
   },
   {
     id: 4,
     name: "Frolunda HC",
     abbreviation: "FRO",
     country: "Swe",
-    city: "Gothenburg, Swe",
+    city: "Frolunda, Swe",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -2176,14 +2179,15 @@ export const shl: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#00573f"
   },
   {
     id: 5,
     name: "Farjestad BK",
     abbreviation: "FBK",
     country: "Swe",
-    city: "Karlstad, Swe",
+    city: "Farjestad, Swe",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -2195,13 +2199,14 @@ export const shl: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#ffffff"
   },
   {
     id: 6,
     name: "Timra IK",
     abbreviation: "TIK",
-    country: "Swe",
+    country: "SWE",
     city: "Timra, Swe",
     points: 0,
     goals_for: 0,
@@ -2214,7 +2219,8 @@ export const shl: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#ec3e34"
   },
   {
     id: 7,
@@ -2233,7 +2239,8 @@ export const shl: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#ffcd00"
   },
   {
     id: 8,
@@ -2252,7 +2259,8 @@ export const shl: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#04234d"
   },
   {
     id: 9,
@@ -2271,7 +2279,8 @@ export const shl: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#e01c21"
   },
   {
     id: 10,
@@ -2290,7 +2299,8 @@ export const shl: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#088332"
   },
   {
     id: 11,
@@ -2309,7 +2319,8 @@ export const shl: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#001489"
   },
   {
     id: 12,
@@ -2328,7 +2339,8 @@ export const shl: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#0d4082"
   },
   {
     id: 13,
@@ -2347,7 +2359,8 @@ export const shl: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#003690"
   },
   {
     id: 14,
@@ -2366,7 +2379,8 @@ export const shl: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#000000"
   }
 ];
 
