@@ -2402,13 +2402,14 @@ export const na: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#0068b6"
   },
   {
     id: 2,
     name: "EV Zug",
     abbreviation: "EVZ",
-    country: "Swi",
+    country: "SWI",
     city: "Zug, Swi",
     points: 0,
     goals_for: 0,
@@ -2421,26 +2422,28 @@ export const na: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#1d72ae"
   },
   {
     id: 3,
-    name: "Switzerland",
-    abbreviation: "SWI",
+    name: "SC BERN",
+    abbreviation: "SCB",
     country: "Swi",
-    city: "Bern",
+    city: "Bern, Swi",
     points: 0,
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 96,
+    rating: 99,
     game_counter: 0,
     logo: scb,
     loses: 0,
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#000000"
   },
   {
     id: 4,
@@ -2459,13 +2462,14 @@ export const na: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#ffee00"
   },
   {
     id: 5,
     name: "HC Lugano",
     abbreviation: "HCL",
-    country: "Swi",
+    country: "SWI",
     city: "Lugano, Swi",
     points: 0,
     goals_for: 0,
@@ -2478,7 +2482,8 @@ export const na: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#ffffff"
   },
   {
     id: 6,
@@ -2497,7 +2502,8 @@ export const na: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#6d182d"
   },
   {
     id: 7,
@@ -2516,7 +2522,8 @@ export const na: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#ffcd01"
   },
   {
     id: 8,
@@ -2535,7 +2542,8 @@ export const na: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#c21938"
   },
   {
     id: 9,
@@ -2554,7 +2562,8 @@ export const na: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#e40021"
   },
   {
     id: 10,
@@ -2573,7 +2582,8 @@ export const na: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#ffd600"
   },
   {
     id: 11,
@@ -2592,7 +2602,8 @@ export const na: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#000000"
   },
   {
     id: 12,
@@ -2611,7 +2622,8 @@ export const na: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#002361"
   },
   {
     id: 13,
@@ -2630,7 +2642,8 @@ export const na: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#000000"
   },
   {
     id: 14,
@@ -2649,7 +2662,8 @@ export const na: Teams[] = [
     loses_ot: 0,
     wins: 0,
     play_off_rank: 0,
-    play_off_round_wins: 0
+    play_off_round_wins: 0,
+    color: "#01316c"
   }
 ];
 
