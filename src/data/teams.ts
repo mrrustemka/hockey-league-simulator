@@ -27,7 +27,7 @@ import koo from "../images/koo.png";
 import tri from "../images/tri.png";
 import sba from "../images/sba.png";
 import lhf from "../images/lhf.png";
-import fbk from "../images/fbk.png";
+import fbk from "../images/ehl_fbk.png";
 import hcd from "../images/hcd.png";
 import kal from "../images/kal.png";
 import mhk from "../images/mhk.png";
@@ -57,7 +57,7 @@ import van from "../images/van.png";
 import sea from "../images/sea.png";
 import sjs from "../images/sjs.png";
 import vgs from "../images/vgs.png";
-import lak_nhl from "../images/lak_nhl.png";
+import lak_nhl from "../images/nhl_lak.png";
 import ana from "../images/ana.png";
 import col from "../images/col.png";
 import chi from "../images/chi.png";
@@ -86,27 +86,27 @@ import wnp from "../images/wnp.png";
 import skr from "../images/skr.png";
 import rom from "../images/rom.png";
 import jap from "../images/jap.png";
-import chi_world_2 from "../images/chi_world_2.png";
+import chi_world_2 from "../images/w2_chi.png";
 import est from "../images/est.png";
 import lit from "../images/lit.png";
 import net from "../images/net.png";
 import spa_world_2 from "../images/spa_world_2.png";
 import ukr from "../images/ukr.png";
 import pol from "../images/pol.png";
-import hv71 from "../images/hv71.png";
-import rbk from "../images/rbk.png";
-import iko from "../images/iko.png";
-import lhc from "../images/lhc.png";
+import hv71 from "../images/shl_hv71.png";
+import rbk from "../images/shl_rbk.png";
+import iko from "../images/shl_iko.png";
+import lhc from "../images/shl_lhc.png";
 import mif from "../images/mif.png";
 import lif from "../images/lif.png";
-import modo from "../images/modo.png";
+import modo from "../images/shl_modo.png";
 import klo from "../images/klo.png";
-import lhc_na from "../images/lhc_na.png";
+import lhc_na from "../images/na_lhc.png";
 import scl from "../images/scl.png";
-import ajo from "../images/ajo.png";
-import amb from "../images/amb.png";
+import ajo from "../images/na_ajo.png";
+import amb from "../images/na_amb.png";
 import frg from "../images/frg.png";
-import rjl from "../images/rjl.png";
+import rjl from "../images/na_rjl.png";
 import shef from "../images/shef.png";
 import kos from "../images/kos.png";
 import aug from "../images/aug.png";
@@ -2300,7 +2300,7 @@ export const shl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#088332"
+    color: "#ffffff"
   },
   {
     id: 11,
