@@ -1,27 +1,24 @@
 import { League } from "./types";
-import world_1 from "../images/world_1.png";
-import world_2 from "../images/world_2.png";
-import ehl from "../images/ehl.png";
+import world_1 from "../images/w1.png";
+import world_2 from "../images/w2.png";
+import ehl_pic from "../images/ehl.png";
 import nhl_pic from "../images/nhl.png";
 import shl_pic from "../images/shl.png";
 import na_pic from "../images/na.png";
 import del_pic from "../images/del.png";
-import sm_pic from "../images/sm.png";
-import extraliga_pic from "../images/extraliga_pic.png";
+import sml_pic from "../images/sm.png";
+import elh_pic from "../images/extraliga_pic.png";
 import ice_pic from "../images/ice_pic.png";
-
-import {
-  europeLeague,
-  worldChampionship_1,
-  nhl,
-  worldChampionship_2,
-  shl,
-  na,
-  del,
-  sm,
-  extraliga,
-  ice
-} from "./teams";
+import { w1 } from "./Teams/w1";
+import { w2 } from "./Teams/w2";
+import { ehl } from "./Teams/ehl";
+import { nhl } from "./Teams/nhl";
+import { shl } from "./Teams/shl";
+import { na } from "./Teams/na";
+import { del } from "./Teams/del";
+import { sml } from "./Teams/sml";
+import { elh } from "./Teams/elh";
+import { ice } from "./Teams/ice";
 
 export const champs: League[] = [
   {
@@ -30,7 +27,7 @@ export const champs: League[] = [
     description:
       "The World Hockey Championship is an exciting global event where the best ice hockey teams from across the world come together. It's not just about fast-paced action and sharp shooting — it's about national pride, teamwork, and intense rivalries. Fans from all walks of life come together to support their countries, creating a colorful atmosphere both in the arenas and at home.",
     image: world_1,
-    teams: worldChampionship_1,
+    teams: w1,
     teamsCount: 16
   },
   {
@@ -38,7 +35,7 @@ export const champs: League[] = [
     name: "European Hockey League Division I",
     description: "Second level of World Championship.",
     image: world_2,
-    teams: worldChampionship_2,
+    teams: w2,
     teamsCount: 12
   },
   {
@@ -55,8 +52,8 @@ export const champs: League[] = [
     name: "European Hockey League",
     description:
       "The European Hockey League is a fantasy league featuring the best hockey teams from the top hockey countries in Europe: Sweden, Finland, Switzerland, Germany, Czech Republic, England and Slovakia.",
-    image: ehl,
-    teams: europeLeague,
+    image: ehl_pic,
+    teams: ehl,
     teamsCount: 37
   },
   {
@@ -91,8 +88,8 @@ export const champs: League[] = [
     name: "SM-Liiga",
     description:
       "The SM-liiga, colloquially called the Finnish Elite League. The winner of the Liiga playoffs is awarded the Kanada-malja at the end of each season. SM-liiga was ranked the No. 4 league in Europe.",
-    image: sm_pic,
-    teams: sm,
+    image: sml_pic,
+    teams: sml,
     teamsCount: 16
   },
   {
@@ -100,8 +97,8 @@ export const champs: League[] = [
     name: "Extraliga",
     description:
       "The highest-level hockey league in the Czech Republic. ELH was ranked the No. 5 league in Europe.",
-    image: extraliga_pic,
-    teams: extraliga,
+    image: elh_pic,
+    teams: elh,
     teamsCount: 14
   },
   {
