@@ -1,21 +1,21 @@
-﻿import { Teams } from "../types";
-import kac from "../../images/ice_kac.png";
-import vic from "../../images/ice_vic.png";
-import hci from "../../images/ice_hci.png";
-import vsv from "../../images/ice_vsv.png";
-import rbs from "../../images/ice_rbs.png";
-import g99 from "../../images/ice_g99.png";
-import hcb from "../../images/ice_hcb.png";
-import hcp from "../../images/ice_hcp.png";
-import avs from "../../images/ice_avs.png";
-import hko from "../../images/ice_hko.png";
-import bwl from "../../images/ice_bwl.png";
-import ash from "../../images/ice_ash.png";
-import piv from "../../images/ice_piv.png";
-import ita from "../../images/w1_ita.png";
-import sln from "../../images/w1_sln.png";
-import aus from "../../images/w1_aus.jpg";
-import hun from "../../images/w2_hun.jpg";
+import { Teams } from "../types";
+import kac from "../../Images/ice_kac.png";
+import vic from "../../Images/ice_vic.png";
+import hci from "../../Images/ice_hci.png";
+import vsv from "../../Images/ice_vsv.png";
+import rbs from "../../Images/ice_rbs.png";
+import g99 from "../../Images/ice_g99.png";
+import hcb from "../../Images/ice_hcb.png";
+import hcp from "../../Images/ice_hcp.png";
+import avs from "../../Images/ice_avs.png";
+import hko from "../../Images/ice_hko.png";
+import bwl from "../../Images/ice_bwl.png";
+import ash from "../../Images/ice_ash.png";
+import piv from "../../Images/ice_piv.png";
+import ita from "../../Images/w1_ita.png";
+import sln from "../../Images/w1_sln.png";
+import aus from "../../Images/w1_aus.jpg";
+import hun from "../../Images/w2_hun.jpg";
 
 export const ice: Teams[] = [
   {

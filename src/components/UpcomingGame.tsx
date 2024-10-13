@@ -1,5 +1,5 @@
 import { Card } from "antd";
-import { Schedule, Teams } from "../data/types";
+import { Schedule, Teams } from "../Data/types";
 
 function UpcomingGame(props: { schedule: Schedule[]; teams: Teams[] }) {
   return (

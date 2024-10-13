@@ -1,18 +1,18 @@
-﻿import { Teams } from "../types";
-import aik from "../../images/ehl_aik.png";
-import lak from "../../images/ehl_lak.png";
-import fro from "../../images/ehl_fro.png";
-import fbk from "../../images/ehl_fbk.png";
-import tik from "../../images/ehl_tik.png";
-import lhf from "../../images/ehl_lhf.png";
-import ore from "../../images/shl_ore.png";
-import hv71 from "../../images/shl_hv71.png";
-import rbk from "../../images/shl_rbk.png";
-import iko from "../../images/shl_iko.png";
-import lhc from "../../images/shl_lhc.png";
-import mif from "../../images/shl_mif.png";
-import lif from "../../images/shl_lif.png";
-import modo from "../../images/shl_modo.png";
+import { Teams } from "../types";
+import aik from "../../Images/ehl_aik.png";
+import lak from "../../Images/ehl_lak.png";
+import fro from "../../Images/ehl_fro.png";
+import fbk from "../../Images/ehl_fbk.png";
+import tik from "../../Images/ehl_tik.png";
+import lhf from "../../Images/ehl_lhf.png";
+import ore from "../../Images/shl_ore.png";
+import hv71 from "../../Images/shl_hv71.png";
+import rbk from "../../Images/shl_rbk.png";
+import iko from "../../Images/shl_iko.png";
+import lhc from "../../Images/shl_lhc.png";
+import mif from "../../Images/shl_mif.png";
+import lif from "../../Images/shl_lif.png";
+import modo from "../../Images/shl_modo.png";
 
 export const shl: Teams[] = [
   {

@@ -1,20 +1,20 @@
-﻿import { Teams } from "../types";
-import tap from "../../images/ehl_tap.png";
-import pel from "../../images/ehl_pel.png";
-import ifk from "../../images/ehl_ifk.png";
-import ilv from "../../images/ehl_ilv.png";
-import tps from "../../images/ehl_tps.png";
-import kal from "../../images/sml_kal.png";
-import koo from "../../images/sml_koo.png";
-import jyp from "../../images/sml_jyp.png";
-import kar from "../../images/sml_kar.png";
-import luk from "../../images/sml_luk.png";
-import sai from "../../images/sml_sai.png";
-import spo from "../../images/sml_spo.png";
-import ass from "../../images/sml_ass.png";
-import juk from "../../images/sml_juk.png";
-import hpk from "../../images/sml_hpk.png";
-import kes from "../../images/sml_kes.png";
+import { Teams } from "../types";
+import tap from "../../Images/ehl_tap.png";
+import pel from "../../Images/ehl_pel.png";
+import ifk from "../../Images/ehl_ifk.png";
+import ilv from "../../Images/ehl_ilv.png";
+import tps from "../../Images/ehl_tps.png";
+import kal from "../../Images/sml_kal.png";
+import koo from "../../Images/sml_koo.png";
+import jyp from "../../Images/sml_jyp.png";
+import kar from "../../Images/sml_kar.png";
+import luk from "../../Images/sml_luk.png";
+import sai from "../../Images/sml_sai.png";
+import spo from "../../Images/sml_spo.png";
+import ass from "../../Images/sml_ass.png";
+import juk from "../../Images/sml_juk.png";
+import hpk from "../../Images/sml_hpk.png";
+import kes from "../../Images/sml_kes.png";
 
 export const sml: Teams[] = [
   {

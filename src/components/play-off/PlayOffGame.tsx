@@ -1,4 +1,4 @@
-import { PlayOffGameResult, GameResult } from "../../data/types";
+import { PlayOffGameResult, GameResult } from "../../Data/types";
 
 interface IPlayOffGame {
   game: PlayOffGameResult;

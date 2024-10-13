@@ -2,11 +2,11 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import Round from "./Round";
 import { v4 as uuidv4 } from "uuid";
-// import { teams as mock } from "../../data/teams"; // use for tests
-import { Teams } from "../../data/types";
+// import { teams as mock } from "../../Data/teams"; // use for tests
+import { Teams } from "../../Data/types";
 import Header from "../Header";
 import { Link } from "react-router-dom";
-import { champs } from "../../data/champs";
+import { champs } from "../../Data/champs";
 
 function PlayOff() {
   const [isRound, setIsRound] = useState<boolean>(true);

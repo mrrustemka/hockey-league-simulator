@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Card, Col, Row, Typography } from "antd";
-import { GameResult, Schedule, Teams } from "../data/types";
-import { scheduleList } from "../data/schedule";
+import { GameResult, Schedule, Teams } from "../Data/types";
+import { scheduleList } from "../Data/schedule";
 import Sheet from "./Sheet";
 import UpcomingGame from "./UpcomingGame";
 import { Link } from "react-router-dom";

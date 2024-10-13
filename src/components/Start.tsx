@@ -1,10 +1,10 @@
 import { Card, Input, Typography } from "antd";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { League } from "../data/types";
+import { League } from "../Data/types";
 import { v4 as uuidv4 } from "uuid";
-import { schedule } from "../data/schedule";
-import { champs } from "../data/champs";
+import { schedule } from "../Data/schedule";
+import { champs } from "../Data/champs";
 import Header from "./Header";
 
 const { Title } = Typography;

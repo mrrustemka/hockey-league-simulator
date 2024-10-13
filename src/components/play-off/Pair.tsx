@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { GameResult, Teams, PlayOffGameResult } from "../../data/types";
+import { GameResult, Teams, PlayOffGameResult } from "../../Data/types";
 import PlayOffGame from "./PlayOffGame";
 import { Button, Typography } from "antd";
 

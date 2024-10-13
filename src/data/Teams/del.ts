@@ -1,18 +1,18 @@
-﻿import { Teams } from "../types";
-import deg from "../../images/del_deg.png";
-import ing from "../../images/del_ing.png";
-import ebb from "../../images/del_ebb.png";
-import aug from "../../images/del_aug.png";
-import iec from "../../images/del_iec.png";
-import sww from "../../images/del_sww.png";
-import nit from "../../images/del_nit.png";
-import str from "../../images/del_str.png";
-import rbm from "../../images/ehl_rbm.png";
-import man from "../../images/ehl_man.png";
-import kec from "../../images/ehl_kec.png";
-import wob from "../../images/ehl_wob.png";
-import fra from "../../images/del_fra.png";
-import bhv from "../../images/del_bhv.png";
+import { Teams } from "../types";
+import deg from "../../Images/del_deg.png";
+import ing from "../../Images/del_ing.png";
+import ebb from "../../Images/del_ebb.png";
+import aug from "../../Images/del_aug.png";
+import iec from "../../Images/del_iec.png";
+import sww from "../../Images/del_sww.png";
+import nit from "../../Images/del_nit.png";
+import str from "../../Images/del_str.png";
+import rbm from "../../Images/ehl_rbm.png";
+import man from "../../Images/ehl_man.png";
+import kec from "../../Images/ehl_kec.png";
+import wob from "../../Images/ehl_wob.png";
+import fra from "../../Images/del_fra.png";
+import bhv from "../../Images/del_bhv.png";
 
 export const del: Teams[] = [
   {

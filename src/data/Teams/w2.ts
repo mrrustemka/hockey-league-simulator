@@ -1,16 +1,16 @@
-﻿import { Teams } from "../types";
-import hun from "../../images/w2_hun.jpg";
-import sln from "../../images/w1_sln.png";
-import ita from "../../images/w1_ita.png";
-import skr from "../../images/w2_skr.png";
-import rom from "../../images/w2_rom.png";
-import jap from "../../images/w2_jap.png";
-import chi from "../../images/w2_chi.png";
-import est from "../../images/w2_est.png";
-import lit from "../../images/w2_lit.png";
-import net from "../../images/w2_net.png";
-import spa from "../../images/w2_spa.png";
-import ukr from "../../images/w2_ukr.png";
+import { Teams } from "../types";
+import hun from "../../Images/w2_hun.jpg";
+import sln from "../../Images/w1_sln.png";
+import ita from "../../Images/w1_ita.png";
+import skr from "../../Images/w2_skr.png";
+import rom from "../../Images/w2_rom.png";
+import jap from "../../Images/w2_jap.png";
+import chi from "../../Images/w2_chi.png";
+import est from "../../Images/w2_est.png";
+import lit from "../../Images/w2_lit.png";
+import net from "../../Images/w2_net.png";
+import spa from "../../Images/w2_spa.png";
+import ukr from "../../Images/w2_ukr.png";
 
 export const w2: Teams[] = [
   {

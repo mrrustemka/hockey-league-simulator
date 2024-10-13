@@ -1,18 +1,18 @@
-﻿import { Teams } from "../types";
-import vit from "../../images/elh_vit.png";
-import tri from "../../images/elh_tri.png";
-import mhk from "../../images/elh_mhk.png";
-import mbl from "../../images/elh_mbl.png";
-import plz from "../../images/elh_plz.png";
-import kva from "../../images/elh_kva.png";
-import lit from "../../images/elh_lit.png";
-import lib from "../../images/elh_lib.png";
-import kom from "../../images/elh_kom.png";
-import kla from "../../images/elh_kla.png";
-import olo from "../../images/elh_olo.png";
-import ceb from "../../images/elh_ceb.png";
-import pce from "../../images/ehl_pce.png";
-import spa from "../../images/ehl_spa.png";
+import { Teams } from "../types";
+import vit from "../../Images/elh_vit.png";
+import tri from "../../Images/elh_tri.png";
+import mhk from "../../Images/elh_mhk.png";
+import mbl from "../../Images/elh_mbl.png";
+import plz from "../../Images/elh_plz.png";
+import kva from "../../Images/elh_kva.png";
+import lit from "../../Images/elh_lit.png";
+import lib from "../../Images/elh_lib.png";
+import kom from "../../Images/elh_kom.png";
+import kla from "../../Images/elh_kla.png";
+import olo from "../../Images/elh_olo.png";
+import ceb from "../../Images/elh_ceb.png";
+import pce from "../../Images/ehl_pce.png";
+import spa from "../../Images/ehl_spa.png";
 
 export const elh: Teams[] = [
   {

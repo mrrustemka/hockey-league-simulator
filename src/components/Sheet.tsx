@@ -1,5 +1,5 @@
 import { Table } from "antd";
-import { Teams } from "../data/types";
+import { Teams } from "../Data/types";
 import { v4 as uuidv4 } from "uuid";
 
 function Sheet(props: { teamsData: Teams[]; id: string }) {

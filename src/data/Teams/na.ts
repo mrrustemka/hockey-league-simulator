@@ -1,18 +1,18 @@
-﻿import { Teams } from "../types";
-import klo from "../../images/na_klo.png";
-import lhc from "../../images/na_lhc.png";
-import scl from "../../images/na_scl.png";
-import ajo from "../../images/na_ajo.png";
-import amb from "../../images/na_amb.png";
-import frg from "../../images/na_frg.png";
-import rjl from "../../images/na_rjl.png";
-import gen from "../../images/ehl_gen.png";
-import hcb from "../../images/ehl_hcb.png";
-import zsc from "../../images/ehl_zsc.png";
-import scb from "../../images/ehl_scb.png";
-import evz from "../../images/ehl_evz.png";
-import hcd from "../../images/ehl_hcd.png";
-import hcl from "../../images/ehl_hcl.png";
+import { Teams } from "../types";
+import klo from "../../Images/na_klo.png";
+import lhc from "../../Images/na_lhc.png";
+import scl from "../../Images/na_scl.png";
+import ajo from "../../Images/na_ajo.png";
+import amb from "../../Images/na_amb.png";
+import frg from "../../Images/na_frg.png";
+import rjl from "../../Images/na_rjl.png";
+import gen from "../../Images/ehl_gen.png";
+import hcb from "../../Images/ehl_hcb.png";
+import zsc from "../../Images/ehl_zsc.png";
+import scb from "../../Images/ehl_scb.png";
+import evz from "../../Images/ehl_evz.png";
+import hcd from "../../Images/ehl_hcd.png";
+import hcl from "../../Images/ehl_hcl.png";
 
 export const na: Teams[] = [
   {
