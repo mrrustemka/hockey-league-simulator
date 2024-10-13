@@ -36,7 +36,7 @@ export const w2: Teams[] = [
   {
     abbreviation: "SLN",
     city: "Ljubljana",
-    country: "Slo",
+    country: "Sln",
     game_counter: 0,
     goals_against: 0,
     goals_diff: 0,

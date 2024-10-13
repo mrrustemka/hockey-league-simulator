@@ -2,8 +2,10 @@ import { Table } from "antd";
 import { Teams } from "../data/types";
 import { v4 as uuidv4 } from "uuid";
 
-function Sheet(props: { teamsData: Teams[] }) {
+function Sheet(props: { teamsData: Teams[]; id: string }) {
   let rank: number = 0;
+  const worldChamps: string[] = ["1", "2"];
+  const internationalChamps: string[] = ["3", "4", "10"];
 
   return (
     <Table
@@ -61,12 +63,33 @@ function Sheet(props: { teamsData: Teams[] }) {
         }
         className="table__column table__column--rating"
       />
-      <Table.Column
-        title="City"
-        dataIndex="city"
-        key="city"
-        className="table__column table__column--city"
-      />
+      {worldChamps.includes(props.id) ? (
+        <></>
+      ) : (
+        <Table.Column
+          title="City"
+          key="city"
+          className="table__column table__column--city"
+          render={(record) => {
+            const { city, flag } = record;
+            return (
+              <div>
+                <p className="table__column-city">{city + " "}</p>
+                {internationalChamps.includes(props.id) ? (
+                  <img
+                    src={flag}
+                    alt={city + " Logo"}
+                    width={"16px"}
+                    className="table__column-flag"
+                  />
+                ) : (
+                  <></>
+                )}
+              </div>
+            );
+          }}
+        />
+      )}
       <Table.Column
         title="GP"
         dataIndex="game_counter"

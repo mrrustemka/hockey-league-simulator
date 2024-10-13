@@ -140,7 +140,7 @@ export const w1: Teams[] = [
   {
     abbreviation: "SLK",
     city: "Bratislava",
-    country: "Slo",
+    country: "Slk",
     game_counter: 0,
     goals_against: 0,
     goals_diff: 0,

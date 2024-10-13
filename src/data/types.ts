@@ -16,7 +16,8 @@ export type Teams = {
   wins: number;
   play_off_rank: number;
   play_off_round_wins: number;
-  color?: string;
+  color: string;
+  flag?: string;
 };
 
 export type TeamsList = string[];

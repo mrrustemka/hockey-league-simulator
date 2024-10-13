@@ -36,6 +36,14 @@ import tps from "../../images/ehl_tps.png";
 import shef from "../../images/ehl_shef.png";
 import kos from "../../images/ehl_kos.png";
 import bel from "../../images/ehl_bel.png";
+import swe from "../../images/w1_swe.jpg";
+import swi from "../../images/w1_swi.jpg";
+import fin from "../../images/w1_fin.jpg";
+import ger from "../../images/w1_ger.jpg";
+import cze from "../../images/w1_cze.jpg";
+import slk from "../../images/w1_slk.jpg";
+import eng from "../../images/ehl_eng.png";
+import gbr from "../../images/w1_gbr.jpg";
 
 export const ehl: Teams[] = [
   {
@@ -43,7 +51,7 @@ export const ehl: Teams[] = [
     name: "Lakers",
     abbreviation: "LAK",
     country: "Swe",
-    city: "Vaxjo, Swe",
+    city: "Vaxjo",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -56,14 +64,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#f07831"
+    color: "#f07831",
+    flag: swe
   },
   {
     id: 2,
     name: "AIK",
     abbreviation: "AIK",
     country: "Swe",
-    city: "Skelleftea, Swe",
+    city: "Skelleftea",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -76,14 +85,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#000000"
+    color: "#000000",
+    flag: swe
   },
   {
     id: 3,
     name: "Orebro Hockey",
     abbreviation: "ORE",
     country: "Swe",
-    city: "Orebro, Swe",
+    city: "Orebro",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -96,14 +106,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#c12823"
+    color: "#c12823",
+    flag: swe
   },
   {
     id: 4,
     name: "Frolunda HC",
     abbreviation: "FRO",
     country: "Swe",
-    city: "Frolunda, Swe",
+    city: "Frolunda",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -116,14 +127,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#00573f"
+    color: "#00573f",
+    flag: swe
   },
   {
     id: 5,
     name: "Geneve Servette HC",
     abbreviation: "GEN",
     country: "Swi",
-    city: "Geneva, Swi",
+    city: "Geneva",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -136,14 +148,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#6d182d"
+    color: "#6d182d",
+    flag: swi
   },
   {
     id: 6,
     name: "EHC Biel-Bienne",
     abbreviation: "HCB",
     country: "Swi",
-    city: "Biel, Swi",
+    city: "Biel",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -156,14 +169,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffcd01"
+    color: "#ffcd01",
+    flag: swi
   },
   {
     id: 7,
     name: "ZSC LIONS",
     abbreviation: "ZSC",
     country: "Swi",
-    city: "Zurich, Swi",
+    city: "Zurich",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -176,14 +190,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#0068b6"
+    color: "#0068b6",
+    flag: swi
   },
   {
     id: 8,
     name: "SC BERN",
     abbreviation: "SCB",
     country: "Swi",
-    city: "Bern, Swi",
+    city: "Bern",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -196,14 +211,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#000000"
+    color: "#000000",
+    flag: swi
   },
   {
     id: 9,
     name: "Tappara",
     abbreviation: "TAP",
     country: "Fin",
-    city: "Tampere, Fin",
+    city: "Tampere",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -216,14 +232,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ff6600"
+    color: "#ff6600",
+    flag: fin
   },
   {
     id: 10,
     name: "Pelicans",
     abbreviation: "PEL",
     country: "Fin",
-    city: "Lahti, Fin",
+    city: "Lahti",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -236,14 +253,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#f0e68c"
+    color: "#f0e68c",
+    flag: fin
   },
   {
     id: 11,
     name: "HIFK",
     abbreviation: "IFK",
     country: "Fin",
-    city: "Helsinki, Fin",
+    city: "Helsinki",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -256,14 +274,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#082868"
+    color: "#082868",
+    flag: fin
   },
   {
     id: 12,
     name: "Ilves",
     abbreviation: "ILV",
     country: "Fin",
-    city: "Tampere, Fin",
+    city: "Tampere",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -276,14 +295,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#000000"
+    color: "#000000",
+    flag: fin
   },
   {
     id: 13,
     name: "EHC Red Bull",
     abbreviation: "RBM",
     country: "Ger",
-    city: "Munich, Ger",
+    city: "Munich",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -296,14 +316,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#0a1d3d"
+    color: "#0a1d3d",
+    flag: ger
   },
   {
     id: 14,
     name: "Adler",
     abbreviation: "MAN",
     country: "Ger",
-    city: "Mannheim, Ger",
+    city: "Mannheim",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -316,14 +337,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#004e9f"
+    color: "#004e9f",
+    flag: ger
   },
   {
     id: 15,
     name: "Dusseldorf EG",
     abbreviation: "DEG",
     country: "Ger",
-    city: "Dusseldorf, Ger",
+    city: "Dusseldorf",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -336,14 +358,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#e20018"
+    color: "#e20018",
+    flag: ger
   },
   {
     id: 16,
     name: "Kolner Haie",
     abbreviation: "KEC",
     country: "Ger",
-    city: "Koln, Ger",
+    city: "Koln",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -356,14 +379,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#e30613"
+    color: "#e30613",
+    flag: ger
   },
   {
     id: 17,
     name: "Eisbären",
     abbreviation: "EBB",
     country: "Ger",
-    city: "Berlin, Ger",
+    city: "Berlin",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -376,14 +400,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#003366"
+    color: "#003366",
+    flag: ger
   },
   {
     id: 18,
     name: "HC Dynamo",
     abbreviation: "PCE",
     country: "CZE",
-    city: "Pardubice, Cze",
+    city: "Pardubice",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -396,14 +421,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    flag: cze
   },
   {
     id: 19,
     name: "HC Sparta",
     abbreviation: "SPA",
     country: "CZE",
-    city: "Praha, Cze",
+    city: "Praha",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -416,14 +442,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#1f58ad"
+    color: "#1f58ad",
+    flag: cze
   },
   {
     id: 20,
     name: "EV Zug",
     abbreviation: "EVZ",
     country: "SWI",
-    city: "Zug, Swi",
+    city: "Zug",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -436,14 +463,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#1d72ae"
+    color: "#1d72ae",
+    flag: swi
   },
   {
     id: 21,
     name: "Grizzlies",
     abbreviation: "WOB",
     country: "GER",
-    city: "Wolfsburg, Ger",
+    city: "Wolfsburg",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -456,14 +484,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ec6400"
+    color: "#ec6400",
+    flag: ger
   },
   {
     id: 22,
     name: "Timra IK",
     abbreviation: "TIK",
     country: "SWE",
-    city: "Timra, Swe",
+    city: "Timra",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -476,14 +505,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ec3e34"
+    color: "#ec3e34",
+    flag: swe
   },
   {
     id: 23,
     name: "HC Lugano",
     abbreviation: "HCL",
     country: "SWI",
-    city: "Lugano, Swi",
+    city: "Lugano",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -496,14 +526,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    flag: swi
   },
   {
     id: 24,
     name: "HC TPS",
     abbreviation: "TPS",
     country: "FIN",
-    city: "Turku, Fin",
+    city: "Turku",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -516,14 +547,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    flag: fin
   },
   {
     id: 25,
     name: "HC Košice",
     abbreviation: "KOS",
-    country: "Slo",
-    city: "Košice, Slo",
+    country: "Slk",
+    city: "Košice",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -536,14 +568,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#f67f25"
+    color: "#f67f25",
+    flag: slk
   },
   {
     id: 26,
     name: "Slovan",
     abbreviation: "SBA",
-    country: "Slo",
-    city: "Bratislava, Slo",
+    country: "Slk",
+    city: "Bratislava",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -556,14 +589,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    flag: slk
   },
   {
     id: 27,
     name: "Lulea Hockey",
     abbreviation: "LHF",
     country: "Swe",
-    city: "Lulea, Swe",
+    city: "Lulea",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -576,14 +610,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffcd00"
+    color: "#ffcd00",
+    flag: swe
   },
   {
     id: 28,
     name: "Farjestad BK",
     abbreviation: "FBK",
     country: "Swe",
-    city: "Farjestad, Swe",
+    city: "Farjestad",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -596,14 +631,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    flag: swe
   },
   {
     id: 29,
     name: "HC Davos",
     abbreviation: "HCD",
     country: "Swi",
-    city: "Davos, Swi",
+    city: "Davos",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -616,14 +652,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffee00"
+    color: "#ffee00",
+    flag: swi
   },
   {
     id: 30,
     name: "Kalpa",
     abbreviation: "KAL",
     country: "Fin",
-    city: "Kuopio, Fin",
+    city: "Kuopio",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -636,14 +673,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#fdcb00"
+    color: "#fdcb00",
+    flag: fin
   },
   {
     id: 31,
     name: "Steelers",
     abbreviation: "SHEF",
     country: "Eng",
-    city: "Sheffield, Eng",
+    city: "Sheffield",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -656,14 +694,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ea5100"
+    color: "#ea5100",
+    flag: eng
   },
   {
     id: 32,
     name: "Giants",
     abbreviation: "BEL",
-    country: "NI",
-    city: "Belfast, NI",
+    country: "GBR",
+    city: "Belfast",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -676,14 +715,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    flag: gbr
   },
   {
     id: 33,
     name: "ERC Ingolstadt",
     abbreviation: "ING",
     country: "GER",
-    city: "Ingolstadt, Ger",
+    city: "Ingolstadt",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -696,14 +736,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#002255"
+    color: "#002255",
+    flag: ger
   },
   {
     id: 34,
     name: "HC Vitkovice Ridera",
     abbreviation: "VIT",
     country: "CZE",
-    city: "Ostrava, Cze",
+    city: "Ostrava",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -716,14 +757,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#15377e"
+    color: "#15377e",
+    flag: cze
   },
   {
     id: 35,
     name: "KooKoo",
     abbreviation: "KOO",
     country: "FIN",
-    city: "Kouvola, Fin",
+    city: "Kouvola",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -736,14 +778,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#e87026"
+    color: "#e87026",
+    flag: fin
   },
   {
     id: 36,
     name: "Mountfield HK",
     abbreviation: "MHK",
     country: "Cze",
-    city: "Hradec Kralove, Cze",
+    city: "Hradec Kralove",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -756,14 +799,15 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#cda961"
+    color: "#cda961",
+    flag: cze
   },
   {
     id: 37,
     name: "HC Ocelari",
     abbreviation: "TRI",
     country: "CZE",
-    city: "	Třinec, Cze",
+    city: "	Třinec",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -776,6 +820,7 @@ export const ehl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    flag: cze
   }
 ];

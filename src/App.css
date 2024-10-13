@@ -107,11 +107,14 @@ th {
 }
 
 .table__team-logo,
-.table__column-name {
+.table__column-name,
+.table__column-city,
+.table__column-flag {
   display: inline;
 }
 
-.table__team-logo {
+.table__team-logo,
+.table__column-flag {
   border-radius: 100%;
 }
 

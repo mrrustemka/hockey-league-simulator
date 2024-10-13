@@ -12,14 +12,18 @@ import hko from "../../images/ice_hko.png";
 import bwl from "../../images/ice_bwl.png";
 import ash from "../../images/ice_ash.png";
 import piv from "../../images/ice_piv.png";
+import ita from "../../images/w1_ita.png";
+import sln from "../../images/w1_sln.png";
+import aus from "../../images/w1_aus.jpg";
+import hun from "../../images/w2_hun.jpg";
 
 export const ice: Teams[] = [
   {
     id: 1,
     name: "EC KAC",
     abbreviation: "KAC",
-    country: "AUT",
-    city: "Klagenfurt, AUT",
+    country: "AUS",
+    city: "Klagenfurt",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -32,14 +36,15 @@ export const ice: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    flag: aus
   },
   {
     id: 2,
     name: "Vienna Capitals",
     abbreviation: "VIC",
-    country: "AUT",
-    city: "Vienna, AUT",
+    country: "AUS",
+    city: "Vienna",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -52,14 +57,15 @@ export const ice: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffed00"
+    color: "#ffed00",
+    flag: aus
   },
   {
     id: 3,
     name: "HC Innsbruck",
     abbreviation: "HCI",
-    country: "AUT",
-    city: "Innsbruck, AUT",
+    country: "AUS",
+    city: "Innsbruck",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -72,14 +78,15 @@ export const ice: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#d6271f"
+    color: "#d6271f",
+    flag: aus
   },
   {
     id: 4,
     name: "EC VSV",
     abbreviation: "VSV",
-    country: "AUT",
-    city: "Villach, AUT",
+    country: "AUS",
+    city: "Villach",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -92,14 +99,15 @@ export const ice: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#001489"
+    color: "#001489",
+    flag: aus
   },
   {
     id: 5,
     name: "Red Bull Salzburg",
     abbreviation: "RBS",
-    country: "AUT",
-    city: "Salzburg, AUT",
+    country: "AUS",
+    city: "Salzburg",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -112,14 +120,15 @@ export const ice: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#df003c"
+    color: "#df003c",
+    flag: aus
   },
   {
     id: 6,
     name: "Graz 99ers",
     abbreviation: "G99",
-    country: "AUT",
-    city: "Graz, AUT",
+    country: "AUS",
+    city: "Graz",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -132,14 +141,15 @@ export const ice: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#000000"
+    color: "#000000",
+    flag: aus
   },
   {
     id: 7,
     name: "HC Bolzano",
     abbreviation: "HCB",
     country: "ITA",
-    city: "Bolzano, ITA",
+    city: "Bolzano",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -152,14 +162,15 @@ export const ice: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#e73025"
+    color: "#e73025",
+    flag: ita
   },
   {
     id: 8,
     name: "HC Pustertal",
     abbreviation: "HCP",
     country: "ITA",
-    city: "Brunico, ITA",
+    city: "Brunico",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -172,14 +183,15 @@ export const ice: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffc734"
+    color: "#ffc734",
+    flag: ita
   },
   {
     id: 9,
     name: "Hydro Fehérvár AV19",
     abbreviation: "AVS",
     country: "HUN",
-    city: "Székesfehérvár, HUN",
+    city: "Székesfehérvár",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -192,14 +204,15 @@ export const ice: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#0a84ff"
+    color: "#0a84ff",
+    flag: hun
   },
   {
     id: 10,
     name: "Pioneers Vorarlberg",
     abbreviation: "PIV",
-    country: "AUT",
-    city: "Feldkirch, AUT",
+    country: "AUS",
+    city: "Feldkirch",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -212,14 +225,15 @@ export const ice: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    flag: aus
   },
   {
     id: 11,
     name: "HK Olimpija",
     abbreviation: "HKO",
-    country: "SLO",
-    city: "Ljubljana, SLO",
+    country: "SLN",
+    city: "Ljubljana",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -232,14 +246,15 @@ export const ice: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#00b050"
+    color: "#00b050",
+    flag: sln
   },
   {
     id: 12,
     name: "Migross Supermercato Asiago Hockey",
     abbreviation: "ASH",
     country: "ITA",
-    city: "Asiago, ITA",
+    city: "Asiago",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -252,14 +267,15 @@ export const ice: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    flag: ita
   },
   {
     id: 13,
     name: "Black Wings Linz",
     abbreviation: "BWL",
-    country: "AUT",
-    city: "Linz, AUT",
+    country: "AUS",
+    city: "Linz",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -272,6 +288,7 @@ export const ice: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#000000"
+    color: "#000000",
+    flag: aus
   }
 ];

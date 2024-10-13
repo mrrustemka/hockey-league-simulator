@@ -31,6 +31,8 @@ import njd from "../../images/nhl_njd.png";
 import cbj from "../../images/nhl_cbj.png";
 import uta from "../../images/nhl_uta.png";
 import wnp from "../../images/nhl_wnp.png";
+import can from "../../images/w1_can.jpg";
+import usa from "../../images/w1_usa.jpg";
 
 export const nhl: Teams[] = [
   {
@@ -38,7 +40,7 @@ export const nhl: Teams[] = [
     name: "Oilers",
     abbreviation: "EDM",
     country: "Can",
-    city: "Edmonton, Can",
+    city: "Edmonton",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -51,14 +53,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#00205b"
+    color: "#00205b",
+    flag: can
   },
   {
     id: 2,
     name: "Flames",
     abbreviation: "CAL",
     country: "Can",
-    city: "Calgary, Can",
+    city: "Calgary",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -71,14 +74,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#c8102e"
+    color: "#c8102e",
+    flag: can
   },
   {
     id: 3,
     name: "Canucks",
     abbreviation: "VAN",
     country: "Can",
-    city: "Vancouver, Can",
+    city: "Vancouver",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -91,14 +95,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#00205b"
+    color: "#00205b",
+    flag: can
   },
   {
     id: 4,
     name: "Kraken",
     abbreviation: "SEA",
     country: "USA",
-    city: "Seattle, USA",
+    city: "Seattle",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -111,14 +116,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#96d8d8"
+    color: "#96d8d8",
+    flag: usa
   },
   {
     id: 5,
     name: "Sharks",
     abbreviation: "SJS",
     country: "USA",
-    city: "San Jose, USA",
+    city: "San Jose",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -131,14 +137,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#00617f"
+    color: "#00617f",
+    flag: usa
   },
   {
     id: 6,
     name: "Golden Knights",
     abbreviation: "VGS",
     country: "USA",
-    city: "Vegas, USA",
+    city: "Vegas",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -151,14 +158,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#333f48"
+    color: "#333f48",
+    flag: usa
   },
   {
     id: 7,
     name: "Kings",
     abbreviation: "LAK",
     country: "USA",
-    city: "Los Angeles, USA",
+    city: "Los Angeles",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -171,14 +179,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#a2aaad"
+    color: "#a2aaad",
+    flag: usa
   },
   {
     id: 8,
     name: "Ducks",
     abbreviation: "ANA",
     country: "USA",
-    city: "Anaheim, USA",
+    city: "Anaheim",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -191,14 +200,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#cf4520"
+    color: "#cf4520",
+    flag: usa
   },
   {
     id: 9,
     name: "Avalanche",
     abbreviation: "COL",
     country: "USA",
-    city: "Colorado, USA",
+    city: "Colorado",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -211,14 +221,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#8a2432"
+    color: "#8a2432",
+    flag: usa
   },
   {
     id: 10,
     name: "Blackhawks",
     abbreviation: "CHI",
     country: "USA",
-    city: "Chicago, USA",
+    city: "Chicago",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -231,14 +242,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ce1126"
+    color: "#ce1126",
+    flag: usa
   },
   {
     id: 11,
     name: "Red Wings",
     abbreviation: "DET",
     country: "USA",
-    city: "Detroit, USA",
+    city: "Detroit",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -251,14 +263,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#c8102e"
+    color: "#c8102e",
+    flag: usa
   },
   {
     id: 12,
     name: "Bruins",
     abbreviation: "BOS",
     country: "USA",
-    city: "Boston, USA",
+    city: "Boston",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -271,14 +284,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#000000"
+    color: "#000000",
+    flag: usa
   },
   {
     id: 13,
     name: "Sabres",
     abbreviation: "BUF",
     country: "USA",
-    city: "Buffalo, USA",
+    city: "Buffalo",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -291,14 +305,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#003087"
+    color: "#003087",
+    flag: usa
   },
   {
     id: 14,
     name: "Hurricanes",
     abbreviation: "CAR",
     country: "USA",
-    city: "Carolina, USA",
+    city: "Carolina",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -311,14 +326,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#000000"
+    color: "#000000",
+    flag: usa
   },
   {
     id: 15,
     name: "Panthers",
     abbreviation: "FLA",
     country: "USA",
-    city: "Florida, USA",
+    city: "Florida",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -331,14 +347,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#b9975b"
+    color: "#b9975b",
+    flag: usa
   },
   {
     id: 16,
     name: "Canadiens",
     abbreviation: "MTL",
     country: "Can",
-    city: "Montreal, Can",
+    city: "Montreal",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -351,14 +368,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#a6192e"
+    color: "#a6192e",
+    flag: can
   },
   {
     id: 17,
     name: "Senators",
     abbreviation: "OTT",
     country: "Can",
-    city: "Ottawa, Can",
+    city: "Ottawa",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -371,14 +389,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#c8102e"
+    color: "#c8102e",
+    flag: can
   },
   {
     id: 18,
     name: "Maple Leafs",
     abbreviation: "TOR",
     country: "Can",
-    city: "Toronto, Can",
+    city: "Toronto",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -391,14 +410,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    flag: can
   },
   {
     id: 19,
     name: "Penguins",
     abbreviation: "PIT",
     country: "USA",
-    city: "Pittsburgh, USA",
+    city: "Pittsburgh",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -411,14 +431,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#000000"
+    color: "#000000",
+    flag: usa
   },
   {
     id: 20,
     name: "Rangers",
     abbreviation: "NYR",
     country: "USA",
-    city: "New York, USA",
+    city: "New York",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -431,14 +452,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#0033a0"
+    color: "#0033a0",
+    flag: usa
   },
   {
     id: 21,
     name: "Capitals",
     abbreviation: "WSH",
     country: "USA",
-    city: "Washington, USA",
+    city: "Washington",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -451,14 +473,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    flag: usa
   },
   {
     id: 22,
     name: "Lightning",
     abbreviation: "TBL",
     country: "USA",
-    city: "Tampa Bay, USA",
+    city: "Tampa Bay",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -471,14 +494,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    flag: usa
   },
   {
     id: 23,
     name: "Predators",
     abbreviation: "NSH",
     country: "USA",
-    city: "Nashville, USA",
+    city: "Nashville",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -491,14 +515,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffb81c"
+    color: "#ffb81c",
+    flag: usa
   },
   {
     id: 24,
     name: "Flyers",
     abbreviation: "PHI",
     country: "USA",
-    city: "Philadelphia, USA",
+    city: "Philadelphia",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -511,14 +536,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#d24303"
+    color: "#d24303",
+    flag: usa
   },
   {
     id: 25,
     name: "Blues",
     abbreviation: "STL",
     country: "USA",
-    city: "St. Louis, USA",
+    city: "St. Louis",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -531,14 +557,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#003087"
+    color: "#003087",
+    flag: usa
   },
   {
     id: 26,
     name: "Wild",
     abbreviation: "MIN",
     country: "USA",
-    city: "Minnesota, USA",
+    city: "Minnesota",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -551,14 +578,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#0e4431"
+    color: "#0e4431",
+    flag: usa
   },
   {
     id: 27,
     name: "Stars",
     abbreviation: "DAL",
     country: "USA",
-    city: "Dallas, USA",
+    city: "Dallas",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -571,14 +599,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#00823e"
+    color: "#00823e",
+    flag: usa
   },
   {
     id: 28,
     name: "Islanders",
     abbreviation: "NYI",
     country: "USA",
-    city: "New York, USA",
+    city: "New York",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -591,14 +620,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#f26924"
+    color: "#f26924",
+    flag: usa
   },
   {
     id: 29,
     name: "Devils",
     abbreviation: "NJD",
     country: "USA",
-    city: "New Jersey, USA",
+    city: "New Jersey",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -611,14 +641,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#cc0000"
+    color: "#cc0000",
+    flag: usa
   },
   {
     id: 30,
     name: "Blue Jackets",
     abbreviation: "CBJ",
     country: "USA",
-    city: "Columbus, USA",
+    city: "Columbus",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -631,14 +662,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#041e42"
+    color: "#041e42",
+    flag: usa
   },
   {
     id: 31,
     name: "HC UTAH",
     abbreviation: "UTA",
     country: "USA",
-    city: "Utah, USA",
+    city: "Utah",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -651,14 +683,15 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    flag: usa
   },
   {
     id: 32,
     name: "Jets",
     abbreviation: "WNP",
     country: "Can",
-    city: "Winnipeg, Can",
+    city: "Winnipeg",
     points: 0,
     goals_for: 0,
     goals_against: 0,
@@ -671,6 +704,7 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#004a98"
+    color: "#004a98",
+    flag: can
   }
 ];

@@ -32,7 +32,7 @@ export const champs: League[] = [
   },
   {
     id: "2",
-    name: "European Hockey League Division I",
+    name: "Hockey World Championship Division I",
     description: "Second level of World Championship.",
     image: world_2,
     teams: w2,

@@ -55,7 +55,9 @@ function Game() {
       rating: 0,
       wins: 0,
       play_off_rank: 0,
-      play_off_round_wins: 0
+      play_off_round_wins: 0,
+      color: "#ffffff",
+      flag: ""
     };
     let away: Teams = {
       abbreviation: "",
@@ -74,7 +76,9 @@ function Game() {
       rating: 0,
       wins: 0,
       play_off_rank: 0,
-      play_off_round_wins: 0
+      play_off_round_wins: 0,
+      color: "#ffffff",
+      flag: ""
     };
     function getGoals(min: number, max: number, rating: number) {
       return Math.round(
@@ -241,7 +245,7 @@ function Game() {
         <Header text={location.state.name} />
         <Row className="layout">
           <Col className="layout__content" span={14}>
-            <Sheet teamsData={teamsUpdate} />
+            <Sheet teamsData={teamsUpdate} id={location.state.id} />
           </Col>
           <Col className="layout__side-panel" span={10}>
             <Row className="cards-row">
@@ -427,7 +431,7 @@ function Game() {
         <Header text={location.state.name} />
         <Row className="playoff__container">
           <Col span={14} className="playoff__container-panel">
-            <Sheet teamsData={teamsUpdate} />
+            <Sheet teamsData={teamsUpdate} id={location.state.id} />
           </Col>
           <Col span={10}>
             <Link
