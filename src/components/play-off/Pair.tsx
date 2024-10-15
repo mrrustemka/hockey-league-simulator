@@ -218,11 +218,17 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
               className="pair__team-logo-home"
               src={teams[0].logo}
               alt={teams[0].name + " Logo"}
+              style={{
+                backgroundColor: teams[0].color
+              }}
             />
             <img
               className="pair__team-logo-away"
               src={teams[1].logo}
               alt={teams[1].name + " Logo"}
+              style={{
+                backgroundColor: teams[1].color
+              }}
             />
             <Title className="pair__scores" level={4}>
               {teams[0].play_off_round_wins} {teams[1].play_off_round_wins}

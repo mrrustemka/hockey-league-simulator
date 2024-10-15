@@ -74,7 +74,6 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
             const { city, flag } = record;
             return (
               <div>
-                <p className="table__column-city">{city + " "}</p>
                 {internationalChamps.includes(props.id) ? (
                   <img
                     src={flag}
@@ -85,6 +84,7 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
                 ) : (
                   <></>
                 )}
+                <p className="table__column-city">{" " + city}</p>
               </div>
             );
           }}

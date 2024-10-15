@@ -111,6 +111,7 @@ th {
 .table__column-city,
 .table__column-flag {
   display: inline;
+  vertical-align: middle;
 }
 
 .table__team-logo,
