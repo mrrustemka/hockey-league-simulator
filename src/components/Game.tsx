@@ -251,7 +251,7 @@ function Game() {
           </Col>
           <Col className="layout__side-panel" span={10}>
             <Row className="cards-row">
-              <Col className="cards-row__card-column" span={12}>
+              <Col className="cards-row__card-column slide-in-left" span={12}>
                 <Card
                   className="card card--hoverable"
                   hoverable
@@ -377,7 +377,10 @@ function Game() {
             <Row className="simulate-panel">
               <Col span={24} className="simulate-panel__card">
                 <Card hoverable>
-                  <Title className="simulate-panel__score" level={2}>
+                  <Title
+                    className="simulate-panel__score slide-in-left"
+                    level={2}
+                  >
                     {isSimulate ? awayGoals : " "} -{" "}
                     {isSimulate ? homeGoals : " "}
                   </Title>
@@ -390,7 +393,7 @@ function Game() {
             <Row className="controls-panel">
               <Col span={24} className="controls-panel__buttons">
                 <Button
-                  className="controls-panel__button controls-panel__button--simulate"
+                  className="controls-panel__button controls-panel__button--simulate pulse"
                   onClick={buttonHandler}
                   disabled={isSimulate}
                   size="large"
@@ -414,7 +417,7 @@ function Game() {
                 </Col>
               </Card>
             </Row>
-            <Row className="upcoming-games">
+            <Row className="upcoming-games slide-in-left">
               <Title className="upcoming-games__title" level={2}>
                 Upcoming Games
               </Title>

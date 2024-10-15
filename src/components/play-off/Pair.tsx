@@ -235,7 +235,7 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
             </Title>
             <div className="pair__button-container">
               <Button
-                className="pair__simulate-button"
+                className="pair__simulate-button pulse"
                 onClick={() => simulate(games[curGame])}
                 disabled={isFinished || !status}
               >

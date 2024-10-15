@@ -23,7 +23,7 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
         render={() => {
           rank++;
           return (
-            <div key={uuidv4()}>
+            <div key={uuidv4()} className="table-slide-in-left">
               <p className="table__column-rank">
                 {rank > props.teamsData.length ? (rank = 0) : rank}
               </p>

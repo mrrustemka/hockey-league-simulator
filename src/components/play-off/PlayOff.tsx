@@ -83,7 +83,7 @@ function PlayOff() {
           </h2>
           <Link
             to="/hockey-league-simulator"
-            className="playoff__champion-link"
+            className="playoff__champion-link pulse"
             onClick={() => updateGame()}
           >
             Play Again

@@ -26,6 +26,12 @@ body {
 
 .card--hoverable {
   width: 240px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card--hoverable:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .controls-panel {
@@ -58,6 +64,7 @@ body {
 
 .controls-panel__button {
   margin: 8px;
+  transition: opacity 0.3s ease;
 }
 
 .controls-panel__buttons:hover {
@@ -67,6 +74,19 @@ body {
 
 .controls-panel__buttons:hover > span {
   color: #000000 !important;
+}
+
+.controls-panel__button:disabled {
+  opacity: 0.5;
+}
+
+.controls-panel__button:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+.controls-panel__button--simulate.pulse {
+  animation: pulse 1.5s infinite;
 }
 
 :where(.css-dev-only-do-not-override-xu9wm8).ant-btn-default:disabled,
@@ -155,10 +175,23 @@ th {
   width: 65%;
 }
 
+.upcoming-games-card:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
 .upcoming-games__title,
 .playoff__header {
   margin: auto;
   color: #ffffff !important;
+}
+
+.playoff__header {
+  animation: slideInTop 0.6s ease-out forwards;
+}
+
+.upcoming-games-card__team-logo {
+  animation: upcomingPulse 2s infinite;
 }
 
 .upcoming-games-card__team-logo--away,
@@ -183,10 +216,24 @@ th {
   margin: auto;
 }
 
+.upcoming-games-card__vs:hover {
+  animation: shake 0.5s ease;
+}
+
+.upcoming-games-card__container > img {
+  border-radius: 0% !important;
+  margin: 0 4px;
+}
+
+.playoff__champion-details {
+  animation: championEntrance 0.8s ease-in-out forwards;
+}
+
 .playoff__champion-logo {
   margin: 0 4px;
   width: 24px;
   border-radius: 100%;
+  animation: pop 0.6s ease-in-out;
 }
 
 .card__info--result-away {
@@ -223,6 +270,43 @@ th {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: 0 24px;
   gap: 18px 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+.playoff__round-panel > * {
+  animation: fadeIn 0.4s ease forwards;
+  opacity: 0;
+}
+
+.playoff__round-panel > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.playoff__round-panel > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.playoff__round-panel > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.playoff__round-panel > *:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.playoff__round-panel > *:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.playoff__round-panel > *:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.playoff__round-panel > *:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.playoff__round-panel > *:nth-child(8) {
+  animation-delay: 0.8s;
 }
 
 .pair {
@@ -269,12 +353,32 @@ th {
   display: inline-grid;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pair__games {
+  animation: fadeIn 0.6s ease;
+}
+
 .game-result__score {
   margin: 0 4px;
 }
 
 .playoff__next-round-button {
   margin-top: 8px;
+}
+
+.playoff__next-round-button:hover:enabled {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 .table__column-games--high {
@@ -286,6 +390,10 @@ th {
 }
 .table__column-games--low {
   background-color: #d0e6f527;
+}
+
+.table__column-rank {
+  text-align: center;
 }
 
 .start__team {
@@ -318,6 +426,7 @@ th {
   margin: 0%;
   border-radius: 0%;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  overflow: hidden;
 }
 
 .start__card-cover {
@@ -325,6 +434,11 @@ th {
   margin: 18px auto;
   object-fit: none;
   width: fit-content !important;
+  transition: transform 0.3s ease;
+}
+
+.start__card:hover .start__card-cover {
+  transform: scale(1.1);
 }
 
 .start__actions {
@@ -366,6 +480,16 @@ th {
 .start__actions-error--active {
   display: block;
 }
+
+.start__link--active {
+  animation: pulse 1.5s infinite ease-in-out;
+  transition: background-color 0.3s ease;
+}
+
+.start__link--active:hover {
+  background-color: #515151;
+}
+
 .start__actions-error--active {
   color: red !important;
 }
@@ -381,6 +505,11 @@ th {
   padding: 8px 20px;
   border-radius: 8px;
   text-decoration: none;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.playoff__champion-heading {
+  animation: textGlow 2s infinite alternate;
 }
 
 .ant-card-body {
@@ -408,4 +537,113 @@ th {
 .pair__simulate-button:hover {
   color: #ffffff !important;
   border-color: #d9d9d9 !important;
+}
+
+.pair__simulate-button {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+.table-slide-in-left {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: tableSlideInLeft 0.5s forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes tableSlideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes championEntrance {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes textGlow {
+  0%,
+  100% {
+    color: #c0c0c0;
+    text-shadow: 0 0 8px #ffd700, 0 0 12px #ffd700;
+  }
+  50% {
+    color: #fff;
+    text-shadow: 0 0 12px #ffd700, 0 0 20px #ffd700;
+  }
+}
+
+@keyframes pop {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes slideInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes upcomingPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(2px);
+  }
 }
