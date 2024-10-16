@@ -17,7 +17,6 @@ body {
 
 .app__div {
   flex: 1;
-  /* margin-bottom: 20px; */
 }
 
 .cards-row {
@@ -25,7 +24,7 @@ body {
 }
 
 .card--hoverable {
-  width: 240px;
+  width: 98%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -170,7 +169,6 @@ th {
 }
 
 .upcoming-games-card {
-  height: 100px;
   margin: 18px auto;
   width: 65%;
 }
@@ -514,6 +512,7 @@ th {
 
 .ant-card-body {
   text-align: center;
+  padding: 0 !important;
 }
 
 .controls-panel__button--simulate,
