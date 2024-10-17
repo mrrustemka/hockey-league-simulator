@@ -1,14 +1,14 @@
 import { League } from "./types";
 import world_1 from "../Images/w1.png";
 import world_2 from "../Images/w2.png";
-import ehl_pic from "../Images/ehl.png";
-import nhl_pic from "../Images/nhl.png";
-import shl_pic from "../Images/shl.png";
-import na_pic from "../Images/na.png";
-import del_pic from "../Images/del.png";
-import sml_pic from "../Images/sm.png";
-import elh_pic from "../Images/extraliga_pic.png";
-import ice_pic from "../Images/ice_pic.png";
+import ehl_logo from "../Images/ehl.png";
+import nhl_logo from "../Images/nhl.png";
+import shl_logo from "../Images/shl.png";
+import na_logo from "../Images/na.png";
+import del_logo from "../Images/del.png";
+import sml_logo from "../Images/sml.png";
+import elh_logo from "../Images/elh.png";
+import ice_logo from "../Images/ice.png";
 import { w1 } from "./Teams/w1";
 import { w2 } from "./Teams/w2";
 import { ehl } from "./Teams/ehl";
@@ -43,7 +43,7 @@ export const champs: League[] = [
     name: "National Hockey League",
     description:
       "The National Hockey League featuring US and Canadian teams. The league has the highest level of any league.",
-    image: nhl_pic,
+    image: nhl_logo,
     teams: nhl,
     teamsCount: 32
   },
@@ -52,16 +52,16 @@ export const champs: League[] = [
     name: "European Hockey League",
     description:
       "The European Hockey League is a fantasy league featuring the best hockey teams from the top hockey countries in Europe: Sweden, Finland, Switzerland, Germany, Czech Republic, England and Slovakia.",
-    image: ehl_pic,
+    image: ehl_logo,
     teams: ehl,
-    teamsCount: 37
+    teamsCount: 39
   },
   {
     id: "5",
     name: "Swedish Hockey League",
     description:
       "Highest division in the Swedish ice hockey system. The league was founded in 1975 and the winner is awarded the Le Mat Trophy. SHL was ranked the No. 1 league in Europe.",
-    image: shl_pic,
+    image: shl_logo,
     teams: shl,
     teamsCount: 14
   },
@@ -70,7 +70,7 @@ export const champs: League[] = [
     name: "National League",
     description:
       "The National League a league in Switzerland and is the top tier of the Swiss league system. NL was ranked the No. 2 league in Europe.",
-    image: na_pic,
+    image: na_logo,
     teams: na,
     teamsCount: 14
   },
@@ -79,7 +79,7 @@ export const champs: League[] = [
     name: "Deutsche Eishockey Liga",
     description:
       "DEL is a German professional hockey league and the highest division in German hockey. The DEL was ranked the No. 3 league in Europe.",
-    image: del_pic,
+    image: del_logo,
     teams: del,
     teamsCount: 14
   },
@@ -88,7 +88,7 @@ export const champs: League[] = [
     name: "SM-Liiga",
     description:
       "The SM-liiga, colloquially called the Finnish Elite League. The winner of the Liiga playoffs is awarded the Kanada-malja at the end of each season. SM-liiga was ranked the No. 4 league in Europe.",
-    image: sml_pic,
+    image: sml_logo,
     teams: sml,
     teamsCount: 16
   },
@@ -97,7 +97,7 @@ export const champs: League[] = [
     name: "Extraliga",
     description:
       "The highest-level hockey league in the Czech Republic. ELH was ranked the No. 5 league in Europe.",
-    image: elh_pic,
+    image: elh_logo,
     teams: elh,
     teamsCount: 14
   },
@@ -106,7 +106,7 @@ export const champs: League[] = [
     name: "ICE Hockey League",
     description:
       "Central European hockey league that also serves as the top-tier ice hockey league in Austria. It currently features additional teams from Hungary, Italy, and Slovenia. ELH was ranked the No. 6 league in Europe.",
-    image: ice_pic,
+    image: ice_logo,
     teams: ice,
     teamsCount: 13
   }
