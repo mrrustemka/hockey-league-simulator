@@ -208,7 +208,8 @@ th {
   grid-template-columns: 1fr auto auto auto 1fr;
 }
 
-.upcoming-games-card__score,
+.upcoming-games-card__score--home,
+.upcoming-games-card__score--away,
 .upcoming-games-card__vs {
   color: #000000;
   margin: auto;
@@ -220,7 +221,11 @@ th {
 
 .upcoming-games-card__container > img {
   border-radius: 0% !important;
-  margin: 0 4px;
+  margin: 0 0.5em;
+}
+
+.playoff__container {
+  display: grid;
 }
 
 .playoff__champion-details {
@@ -541,7 +546,7 @@ th {
 .layout {
   display: grid;
   grid-template-columns: 3 fr 2fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: auto;
 }
 
 .layout__content {
@@ -552,7 +557,8 @@ th {
   grid-column-start: 2;
 }
 
-.layout__content {
+.layout__content,
+.playoff__container-panel {
   max-width: 100%;
 }
 
@@ -695,7 +701,7 @@ th {
 @media (max-width: 360px) {
   .start {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     grid-template-rows: auto;
   }
 
@@ -724,5 +730,66 @@ th {
   .table__column--diff,
   .table__column--city {
     display: none;
+  }
+
+  .start__card-cover {
+    overflow: visible;
+  }
+
+  .layout,
+  .playoff__container {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    overflow: hidden;
+  }
+
+  .layout__content {
+    grid-row-start: 1;
+  }
+
+  .layout__side-panel {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    max-width: 95%;
+  }
+
+  .simulate-panel {
+    width: 40%;
+  }
+
+  .upcoming-games-card {
+    width: auto;
+  }
+  .upcoming-games-card__container {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  .upcoming-games-card__team-logo--away {
+    grid-column-start: 1;
+  }
+
+  .upcoming-games-card__team-logo--home {
+    grid-column-start: 3;
+  }
+
+  .upcoming-games-card__score--home {
+    grid-row-start: 2;
+    grid-column-start: 3;
+  }
+
+  .upcoming-games-card__score--away {
+    grid-row-start: 2;
+    grid-column-start: 1;
+  }
+
+  .playoff__container > div:nth-child(2) {
+    margin: auto;
+  }
+  .playoff__round-panel {
+    grid-template-columns: auto;
+  }
+  .pair {
+    margin: auto;
   }
 }

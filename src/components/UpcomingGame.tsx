@@ -11,7 +11,7 @@ function UpcomingGame(props: { schedule: Schedule[]; teams: Teams[] }) {
           key={game.id}
           cover={
             <div className="upcoming-games-card__container">
-              <h3 className="upcoming-games-card__score">
+              <h3 className="upcoming-games-card__score--away">
                 {
                   props.teams.find(
                     (element) => element.abbreviation === game.away
@@ -57,7 +57,7 @@ function UpcomingGame(props: { schedule: Schedule[]; teams: Teams[] }) {
                   )?.logo
                 }
               />
-              <h3 className="upcoming-games-card__score">
+              <h3 className="upcoming-games-card__score--home">
                 {
                   props.teams.find(
                     (element) => element.abbreviation === game.home
