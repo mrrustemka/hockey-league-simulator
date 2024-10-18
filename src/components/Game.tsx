@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Card, Col, Row, Typography } from "antd";
 import { GameResult, Schedule, Teams } from "../Data/types";
 import { scheduleList } from "../Data/schedule";
@@ -20,6 +20,10 @@ function Game() {
   let [typeOfOt, setTypeOfOt] = useState<string>("");
   const [isSimulate, setIsSimulate] = useState<boolean>(false);
   const [gameIndex, setGameIndex] = useState<number>(0);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const updateCounter = () => {
     setGameCounter(gameCounter + 1);

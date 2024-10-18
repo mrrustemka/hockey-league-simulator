@@ -90,27 +90,6 @@ function Start() {
                 Please enter a valid number of teams. From 2 to{" "}
                 {champ.teams.length}
               </Title>
-              {/* <Link
-                className={`start__link ${
-                  champ.teamsCount < 2 || champ.teamsCount > champ.teams.length
-                    ? "start__link--inactive"
-                    : "start__link--active pulse"
-                }`}
-                // className={`start__link ${
-                //   champ.teamsCount < 2 || champ.teamsCount > champ.teams.length
-                //     ? "start__link--inactive"
-                //     : "start__link--active"
-                // }`}
-                to="season"
-                state={{
-                  teams: champ.teams.slice(0, champ.teamsCount),
-                  name: champ.name,
-                  id: champ.id
-                }}
-                onClick={() => schedule(champ.teams.slice(0, champ.teamsCount))}
-              >
-                Start
-              </Link> */}
               <Link
                 className={`start__link ${
                   champ.teamsCount < 2 || champ.teamsCount > champ.teams.length
