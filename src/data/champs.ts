@@ -51,7 +51,7 @@ export const champs: League[] = [
     id: "4",
     name: "European Hockey League",
     description:
-      "The European Hockey League is a fantasy league featuring the best hockey teams from the top hockey countries in Europe: Sweden, Finland, Switzerland, Germany, Czech Republic, England and Slovakia.",
+      "The European Hockey League is a fantasy league featuring the best hockey teams from the top hockey countries in Europe: Sweden, Finland, Switzerland, Germany, Czech Republic, England, Slovakia, North Ireland, Norway and Italy.",
     image: ehl_logo,
     teams: ehl,
     teamsCount: 39
