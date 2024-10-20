@@ -21,7 +21,7 @@ function Start() {
 
   return (
     <>
-      <Header text="Select a Championship" />
+      <Header id="" />
       <div className="start">
         {champTypes.map((champ) => (
           <Card

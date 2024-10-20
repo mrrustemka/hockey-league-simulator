@@ -67,7 +67,7 @@ function PlayOff() {
 
   return (
     <div className="playoff">
-      <Header text={location.state.name} />
+      <Header id={location.state.id} />
       {isChampion ? (
         <div className="playoff__champion">
           <h2 className="playoff__champion-heading">

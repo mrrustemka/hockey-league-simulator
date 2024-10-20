@@ -248,7 +248,7 @@ function Game() {
     ];
     return (
       <div>
-        <Header text={location.state.name} />
+        <Header id={location.state.id} />
         <Row className="layout">
           <Col className="layout__content" span={14}>
             <Sheet teamsData={teamsUpdate} id={location.state.id} />
@@ -437,7 +437,7 @@ function Game() {
   } else {
     return (
       <div className="playoff">
-        <Header text={location.state.name} />
+        <Header id={location.state.id} />
         <Row className="playoff__container">
           <Col span={14} className="playoff__container-panel">
             <Sheet teamsData={teamsUpdate} id={location.state.id} />

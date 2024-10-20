@@ -103,10 +103,11 @@ body {
 }
 
 .header__title {
-  margin: 0 auto;
+  margin: 0 auto 0 !important;
   text-align: center;
   color: #ffffff !important;
   font-weight: 700;
+  display: inline-block;
 }
 
 .table-column-points,
@@ -585,6 +586,12 @@ th {
   margin: 0.4em;
 }
 
+.header__image {
+  height: 46px;
+  display: inline-block;
+  vertical-align: top;
+}
+
 /* Animations */
 
 .pair__simulate-button {
@@ -818,6 +825,14 @@ th {
   .header,
   .footer {
     padding: 8px;
+  }
+
+  .header h1 {
+    font-size: x-large;
+  }
+
+  .header__image {
+    height: 28px;
   }
 
   .table__column--wins,
