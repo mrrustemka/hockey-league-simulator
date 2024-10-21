@@ -14,8 +14,8 @@ import ash from "../../Images/ice_ash.png";
 import piv from "../../Images/ice_piv.png";
 import ita from "../../Images/w1_ita.png";
 import sln from "../../Images/w1_sln.png";
-import aus from "../../Images/w1_aus.jpg";
-import hun from "../../Images/w2_hun.jpg";
+import aus from "../../Images/w1_aus.png";
+import hun from "../../Images/w2_hun.png";
 
 export const ice: Teams[] = [
   {

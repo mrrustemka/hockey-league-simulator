@@ -31,8 +31,8 @@ import njd from "../../Images/nhl_njd.png";
 import cbj from "../../Images/nhl_cbj.png";
 import uta from "../../Images/nhl_uta.png";
 import wnp from "../../Images/nhl_wnp.png";
-import can from "../../Images/w1_can.jpg";
-import usa from "../../Images/w1_usa.jpg";
+import can from "../../Images/w1_can.png";
+import usa from "../../Images/w1_usa.png";
 
 export const nhl: Teams[] = [
   {

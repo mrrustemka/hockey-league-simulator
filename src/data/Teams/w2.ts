@@ -1,5 +1,5 @@
 import { Teams } from "../types";
-import hun from "../../Images/w2_hun.jpg";
+import hun from "../../Images/w2_hun.png";
 import sln from "../../Images/w1_sln.png";
 import ita from "../../Images/w1_ita.png";
 import skr from "../../Images/w2_skr.png";

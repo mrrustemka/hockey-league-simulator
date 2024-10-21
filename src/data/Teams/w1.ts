@@ -1,19 +1,19 @@
 import { Teams } from "../types";
-import can from "../../Images/w1_can.jpg";
-import usa from "../../Images/w1_usa.jpg";
-import swe from "../../Images/w1_swe.jpg";
-import fin from "../../Images/w1_fin.jpg";
-import cze from "../../Images/w1_cze.jpg";
-import ger from "../../Images/w1_ger.jpg";
-import slk from "../../Images/w1_slk.jpg";
-import swi from "../../Images/w1_swi.jpg";
-import lat from "../../Images/w1_lat.jpg";
-import den from "../../Images/w1_den.jpg";
-import nor from "../../Images/w1_nor.jpg";
-import fra from "../../Images/w1_fra.jpg";
+import can from "../../Images/w1_can.png";
+import usa from "../../Images/w1_usa.png";
+import swe from "../../Images/w1_swe.png";
+import fin from "../../Images/w1_fin.png";
+import cze from "../../Images/w1_cze.png";
+import ger from "../../Images/w1_ger.png";
+import slk from "../../Images/w1_slk.png";
+import swi from "../../Images/w1_swi.png";
+import lat from "../../Images/w1_lat.png";
+import den from "../../Images/w1_den.png";
+import nor from "../../Images/w1_nor.png";
+import fra from "../../Images/w1_fra.png";
 import kaz from "../../Images/w1_kaz.png";
-import aus from "../../Images/w1_aus.jpg";
-import gbr from "../../Images/w1_gbr.jpg";
+import aus from "../../Images/w1_aus.png";
+import gbr from "../../Images/w1_gbr.png";
 import pol from "../../Images/w1_pol.png";
 
 export const w1: Teams[] = [
