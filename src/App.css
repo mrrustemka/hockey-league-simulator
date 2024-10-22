@@ -1,11 +1,40 @@
 /* @import "~antd/dist/antd.css"; */
+@property --grey-dark {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #515151;
+}
+
+@property --black {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #000000;
+}
+
+@property --white {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #ffffff;
+}
+
+@property --grey-light {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #d9d9d9;
+}
+
+@property --yellow {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #ffd700;
+}
 
 * {
   font-family: "Inter", "Arial", sans-serif !important;
 }
 
 body {
-  background-color: #515151;
+  background-color: var(--grey-dark);
   margin: 0;
 }
 
@@ -67,12 +96,12 @@ body {
 }
 
 .controls-panel__buttons:hover {
-  border: #ffffff;
-  color: #000000;
+  border: var(--white);
+  color: var(--black);
 }
 
 .controls-panel__buttons:hover > span {
-  color: #000000 !important;
+  color: var(--black) !important;
 }
 
 .controls-panel__button:disabled {
@@ -90,14 +119,14 @@ body {
 
 :where(.css-dev-only-do-not-override-xu9wm8).ant-btn-default:disabled,
 :where(.css-dev-only-do-not-override-xu9wm8).ant-btn-default.ant-btn-disabled {
-  color: #ffffff;
+  color: var(--white);
 }
 
 .header,
 .footer {
   height: auto;
-  background: #000000;
-  color: #ffffff;
+  background: var(--black);
+  color: var(--white);
   padding: 20px 40px;
   text-align: center;
 }
@@ -105,7 +134,7 @@ body {
 .header__title {
   margin: 0 auto 0 !important;
   text-align: center;
-  color: #ffffff !important;
+  color: var(--white) !important;
   font-weight: 700;
   display: inline-block;
 }
@@ -166,7 +195,7 @@ th {
   .ant-table-column-sorter-up.active,
 :where(.css-dev-only-do-not-override-xu9wm8).ant-table-wrapper
   .ant-table-column-sorter-down.active {
-  color: #000000;
+  color: var(--black);
 }
 
 .upcoming-games-card {
@@ -182,7 +211,7 @@ th {
 .upcoming-games__title,
 .playoff__header {
   margin: auto;
-  color: #ffffff !important;
+  color: var(--white) !important;
 }
 
 .playoff__header {
@@ -212,7 +241,7 @@ th {
 .upcoming-games-card__score--home,
 .upcoming-games-card__score--away,
 .upcoming-games-card__vs {
-  color: #000000;
+  color: var(--black);
   margin: auto;
 }
 
@@ -461,8 +490,8 @@ th {
 
 .start__link {
   display: block;
-  border-color: #d9d9d9;
-  color: #ffffff;
+  border-color: var(--grey-light);
+  color: var(--white);
   background-color: rgba(0, 0, 0);
   box-shadow: none;
   margin: 8px auto;
@@ -472,7 +501,7 @@ th {
 }
 
 .start__link:hover {
-  color: #ffffff;
+  color: var(--white);
 }
 
 .start__link--inactive,
@@ -491,7 +520,7 @@ th {
 }
 
 .start__link--active:hover {
-  background-color: #515151;
+  background-color: var(--grey-dark);
 }
 
 .start__actions-error--active {
@@ -500,8 +529,8 @@ th {
 
 .playoff__champion-link {
   display: block;
-  border-color: #d9d9d9;
-  color: #ffffff;
+  border-color: var(--grey-light);
+  color: var(--white);
   background-color: rgba(0, 0, 0);
   box-shadow: none;
   margin: 8px auto;
@@ -527,8 +556,8 @@ th {
 .playoff__next-round-button,
 .pair__simulate-button {
   background-color: rgba(0, 0, 0);
-  color: #ffffff;
-  border-color: #d9d9d9;
+  color: var(--white);
+  border-color: var(--grey-light);
   margin: 8px 4px;
   padding: 8px 20px;
   border-radius: 8px;
@@ -540,8 +569,8 @@ th {
 .playoff__start-play-off:hover,
 .playoff__next-round-button:hover,
 .pair__simulate-button:hover {
-  color: #ffffff !important;
-  border-color: #d9d9d9 !important;
+  color: var(--white) !important;
+  border-color: var(--grey-light) !important;
 }
 
 .layout {
@@ -651,11 +680,11 @@ th {
   0%,
   100% {
     color: #c0c0c0;
-    text-shadow: 0 0 8px #ffd700, 0 0 12px #ffd700;
+    text-shadow: 0 0 8px var(--yellow), 0 0 12px var(--yellow);
   }
   50% {
-    color: #fff;
-    text-shadow: 0 0 12px #ffd700, 0 0 20px #ffd700;
+    color: var(--white);
+    text-shadow: 0 0 12px var(--yellow), 0 0 20px var(--yellow);
   }
 }
 
