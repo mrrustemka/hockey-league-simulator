@@ -13,8 +13,8 @@ import nor from "../../Images/w1_nor.png";
 import fra from "../../Images/w1_fra.png";
 import kaz from "../../Images/w1_kaz.png";
 import aus from "../../Images/w1_aus.png";
-import gbr from "../../Images/w1_gbr.png";
-import pol from "../../Images/w1_pol.png";
+import sln from "../../Images/w1_sln.png";
+import hun from "../../Images/w2_hun.png";
 
 export const w1: Teams[] = [
   {
@@ -298,16 +298,16 @@ export const w1: Teams[] = [
     color: "#000000"
   },
   {
-    abbreviation: "GBR",
-    city: "London",
-    country: "Gbr",
+    abbreviation: "HUN",
+    city: "Budapest",
+    country: "Hun",
     game_counter: 0,
     goals_against: 0,
     goals_diff: 0,
     goals_for: 0,
-    id: 15,
-    logo: gbr,
-    name: "Great Britain",
+    id: 1,
+    logo: hun,
+    name: "Hungary",
     points: 0,
     rating: 75,
     play_off_rank: 0,
@@ -318,23 +318,23 @@ export const w1: Teams[] = [
     color: "#ffffff"
   },
   {
-    abbreviation: "POL",
-    city: "Warsaw",
-    country: "Pol",
+    abbreviation: "SLN",
+    city: "Ljubljana",
+    country: "Sln",
     game_counter: 0,
     goals_against: 0,
     goals_diff: 0,
     goals_for: 0,
-    id: 16,
-    logo: pol,
-    name: "Poland",
+    id: 2,
+    logo: sln,
+    name: "Slovenia",
     points: 0,
-    rating: 73,
+    rating: 75,
     play_off_rank: 0,
     play_off_round_wins: 0,
     loses: 0,
     loses_ot: 0,
     wins: 0,
-    color: "#ffffff"
+    color: "#43b02a"
   }
 ];

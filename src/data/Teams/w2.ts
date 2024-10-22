@@ -1,6 +1,6 @@
 import { Teams } from "../types";
-import hun from "../../Images/w2_hun.png";
-import sln from "../../Images/w1_sln.png";
+import gbr from "../../Images/w1_gbr.png";
+import pol from "../../Images/w1_pol.png";
 import ita from "../../Images/w1_ita.png";
 import skr from "../../Images/w2_skr.png";
 import rom from "../../Images/w2_rom.png";
@@ -8,22 +8,22 @@ import jap from "../../Images/w2_jap.png";
 import chi from "../../Images/w2_chi.png";
 import est from "../../Images/w2_est.png";
 import lit from "../../Images/w2_lit.png";
-import net from "../../Images/w2_net.png";
+import cro from "../../Images/w2_cro.png";
 import spa from "../../Images/w2_spa.png";
 import ukr from "../../Images/w2_ukr.png";
 
 export const w2: Teams[] = [
   {
-    abbreviation: "HUN",
-    city: "Budapest",
-    country: "Hun",
+    abbreviation: "GBR",
+    city: "London",
+    country: "Gbr",
     game_counter: 0,
     goals_against: 0,
     goals_diff: 0,
     goals_for: 0,
-    id: 1,
-    logo: hun,
-    name: "Hungary",
+    id: 15,
+    logo: gbr,
+    name: "Great Britain",
     points: 0,
     rating: 75,
     play_off_rank: 0,
@@ -34,24 +34,24 @@ export const w2: Teams[] = [
     color: "#ffffff"
   },
   {
-    abbreviation: "SLN",
-    city: "Ljubljana",
-    country: "Sln",
+    abbreviation: "POL",
+    city: "Warsaw",
+    country: "Pol",
     game_counter: 0,
     goals_against: 0,
     goals_diff: 0,
     goals_for: 0,
-    id: 2,
-    logo: sln,
-    name: "Slovenia",
+    id: 16,
+    logo: pol,
+    name: "Poland",
     points: 0,
-    rating: 75,
+    rating: 73,
     play_off_rank: 0,
     play_off_round_wins: 0,
     loses: 0,
     loses_ot: 0,
     wins: 0,
-    color: "#43b02a"
+    color: "#ffffff"
   },
   {
     abbreviation: "ITA",
@@ -194,24 +194,24 @@ export const w2: Teams[] = [
     color: "#000000"
   },
   {
-    abbreviation: "NET",
-    city: "Amsterdam",
-    country: "Net",
+    abbreviation: "CRO",
+    city: "Zagreb",
+    country: "Cro",
     game_counter: 0,
     goals_against: 0,
     goals_diff: 0,
     goals_for: 0,
     id: 10,
-    logo: net,
-    name: "Netherlands",
+    logo: cro,
+    name: "Croatia",
     points: 0,
-    rating: 60,
+    rating: 57,
     play_off_rank: 0,
     play_off_round_wins: 0,
     loses: 0,
     loses_ot: 0,
     wins: 0,
-    color: "#ff5f00"
+    color: "#ffffff"
   },
   {
     abbreviation: "SPA",
@@ -253,4 +253,24 @@ export const w2: Teams[] = [
     wins: 0,
     color: "#ffffff"
   }
+  // {
+  //   abbreviation: "NET",
+  //   city: "Amsterdam",
+  //   country: "Net",
+  //   game_counter: 0,
+  //   goals_against: 0,
+  //   goals_diff: 0,
+  //   goals_for: 0,
+  //   id: 10,
+  //   logo: net,
+  //   name: "Netherlands",
+  //   points: 0,
+  //   rating: 60,
+  //   play_off_rank: 0,
+  //   play_off_round_wins: 0,
+  //   loses: 0,
+  //   loses_ot: 0,
+  //   wins: 0,
+  //   color: "#ff5f00"
+  // }
 ];
