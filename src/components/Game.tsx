@@ -20,6 +20,14 @@ function Game() {
   let [typeOfOt, setTypeOfOt] = useState<string>("");
   const [isSimulate, setIsSimulate] = useState<boolean>(false);
   const [gameIndex, setGameIndex] = useState<number>(0);
+  const playOffTeam: number =
+    teamsUpdate.length > 16
+      ? 16
+      : teamsUpdate.length > 8
+      ? 8
+      : teamsUpdate.length > 4
+      ? 4
+      : 2;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -61,7 +69,8 @@ function Game() {
       play_off_rank: 0,
       play_off_round_wins: 0,
       color: "#ffffff",
-      flag: ""
+      flag: "",
+      isPlayOff: false
     };
     let away: Teams = {
       abbreviation: "",
@@ -82,7 +91,8 @@ function Game() {
       play_off_rank: 0,
       play_off_round_wins: 0,
       color: "#ffffff",
-      flag: ""
+      flag: "",
+      isPlayOff: false
     };
     function getGoals(min: number, max: number, rating: number) {
       return Math.round(
@@ -183,6 +193,19 @@ function Game() {
     };
     setTeamsUpdate(teamsSort(teams));
     setIsSimulate(true);
+    teams
+      .slice(0, playOffTeam)
+      .map((checkTeam: Teams) =>
+        teams
+          .slice(playOffTeam)
+          .every(
+            (team: Teams) =>
+              (teams.length - 1 - team.game_counter) * 2 + team.points <
+              checkTeam.points
+          )
+          ? (checkTeam.isPlayOff = true)
+          : { ...checkTeam }
+      );
     return result;
   }
 
@@ -212,7 +235,6 @@ function Game() {
         return 0;
       });
     } else {
-      console.log(teams);
       return teams;
     }
   }
@@ -446,16 +468,7 @@ function Game() {
             <Link
               to="playoff"
               state={{
-                teams: teamsUpdate.slice(
-                  0,
-                  teamsUpdate.length >= 16
-                    ? 16
-                    : teamsUpdate.length >= 8
-                    ? 8
-                    : teamsUpdate.length >= 4
-                    ? 4
-                    : 2
-                ),
+                teams: teamsUpdate.slice(0, playOffTeam),
                 name: location.state.name,
                 id: location.state.id
               }}

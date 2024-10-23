@@ -110,7 +110,8 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
       play_off_rank: 0,
       play_off_round_wins: 0,
       color: "#ffffff",
-      flag: ""
+      flag: "",
+      isPlayOff: false
     };
     let away: Teams = {
       abbreviation: "",
@@ -131,7 +132,8 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
       play_off_rank: 0,
       play_off_round_wins: 0,
       color: "#ffffff",
-      flag: ""
+      flag: "",
+      isPlayOff: false
     };
     function getTeamInfo(team: string): Teams {
       const foundTeam = teams.find(

@@ -69,7 +69,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#f07831",
-    flag: swe
+    flag: swe,
+    isPlayOff: false
   },
   {
     id: 2,
@@ -90,7 +91,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#000000",
-    flag: swe
+    flag: swe,
+    isPlayOff: false
   },
   {
     id: 3,
@@ -111,7 +113,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#00573f",
-    flag: swe
+    flag: swe,
+    isPlayOff: false
   },
   {
     id: 4,
@@ -132,7 +135,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#6d182d",
-    flag: swi
+    flag: swi,
+    isPlayOff: false
   },
   {
     id: 5,
@@ -153,7 +157,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#0068b6",
-    flag: swi
+    flag: swi,
+    isPlayOff: false
   },
   {
     id: 6,
@@ -174,7 +179,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#000000",
-    flag: swi
+    flag: swi,
+    isPlayOff: false
   },
   {
     id: 7,
@@ -195,7 +201,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ff6600",
-    flag: fin
+    flag: fin,
+    isPlayOff: false
   },
   {
     id: 8,
@@ -216,7 +223,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#f0e68c",
-    flag: fin
+    flag: fin,
+    isPlayOff: false
   },
   {
     id: 9,
@@ -237,7 +245,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#082868",
-    flag: fin
+    flag: fin,
+    isPlayOff: false
   },
   {
     id: 10,
@@ -258,7 +267,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#000000",
-    flag: fin
+    flag: fin,
+    isPlayOff: false
   },
   {
     id: 11,
@@ -279,7 +289,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#0a1d3d",
-    flag: ger
+    flag: ger,
+    isPlayOff: false
   },
   {
     id: 12,
@@ -300,7 +311,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#004e9f",
-    flag: ger
+    flag: ger,
+    isPlayOff: false
   },
   {
     id: 13,
@@ -321,7 +333,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#e20018",
-    flag: ger
+    flag: ger,
+    isPlayOff: false
   },
   {
     id: 14,
@@ -342,7 +355,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#e30613",
-    flag: ger
+    flag: ger,
+    isPlayOff: false
   },
   {
     id: 15,
@@ -363,7 +377,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#003366",
-    flag: ger
+    flag: ger,
+    isPlayOff: false
   },
   {
     id: 16,
@@ -384,7 +399,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffffff",
-    flag: cze
+    flag: cze,
+    isPlayOff: false
   },
   {
     id: 17,
@@ -405,7 +421,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#1f58ad",
-    flag: cze
+    flag: cze,
+    isPlayOff: false
   },
   {
     id: 18,
@@ -426,7 +443,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#1d72ae",
-    flag: swi
+    flag: swi,
+    isPlayOff: false
   },
   {
     id: 19,
@@ -447,7 +465,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ec6400",
-    flag: ger
+    flag: ger,
+    isPlayOff: false
   },
   {
     id: 20,
@@ -468,7 +487,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ec3e34",
-    flag: swe
+    flag: swe,
+    isPlayOff: false
   },
   {
     id: 21,
@@ -489,7 +509,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffffff",
-    flag: swi
+    flag: swi,
+    isPlayOff: false
   },
   {
     id: 22,
@@ -510,7 +531,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffffff",
-    flag: fin
+    flag: fin,
+    isPlayOff: false
   },
   {
     id: 23,
@@ -531,7 +553,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#f67f25",
-    flag: slk
+    flag: slk,
+    isPlayOff: false
   },
   {
     id: 24,
@@ -552,7 +575,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffffff",
-    flag: slk
+    flag: slk,
+    isPlayOff: false
   },
   {
     id: 25,
@@ -573,7 +597,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffcd00",
-    flag: swe
+    flag: swe,
+    isPlayOff: false
   },
   {
     id: 26,
@@ -594,7 +619,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffffff",
-    flag: swe
+    flag: swe,
+    isPlayOff: false
   },
   {
     id: 27,
@@ -615,7 +641,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffee00",
-    flag: swi
+    flag: swi,
+    isPlayOff: false
   },
   {
     id: 28,
@@ -636,7 +663,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#fdcb00",
-    flag: fin
+    flag: fin,
+    isPlayOff: false
   },
   {
     id: 29,
@@ -657,7 +685,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ea5100",
-    flag: eng
+    flag: eng,
+    isPlayOff: false
   },
   {
     id: 30,
@@ -678,7 +707,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffffff",
-    flag: gbr
+    flag: gbr,
+    isPlayOff: false
   },
   {
     id: 31,
@@ -699,7 +729,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffdf1c",
-    flag: nor
+    flag: nor,
+    isPlayOff: false
   },
   {
     id: 32,
@@ -720,7 +751,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#e73025",
-    flag: ita
+    flag: ita,
+    isPlayOff: false
   },
   {
     id: 33,
@@ -741,7 +773,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#c12823",
-    flag: swe
+    flag: swe,
+    isPlayOff: false
   },
   {
     id: 34,
@@ -762,7 +795,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffcd01",
-    flag: swi
+    flag: swi,
+    isPlayOff: false
   },
   {
     id: 35,
@@ -783,7 +817,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#002255",
-    flag: ger
+    flag: ger,
+    isPlayOff: false
   },
   {
     id: 36,
@@ -804,7 +839,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffffff",
-    flag: cze
+    flag: cze,
+    isPlayOff: false
   },
   {
     id: 37,
@@ -825,7 +861,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#e87026",
-    flag: fin
+    flag: fin,
+    isPlayOff: false
   },
   {
     id: 38,
@@ -846,7 +883,8 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#15377e",
-    flag: cze
+    flag: cze,
+    isPlayOff: false
   },
   {
     id: 39,
@@ -867,6 +905,7 @@ export const ehl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#cda961",
-    flag: cze
+    flag: cze,
+    isPlayOff: false
   }
 ];

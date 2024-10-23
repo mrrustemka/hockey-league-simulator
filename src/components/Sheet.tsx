@@ -40,8 +40,16 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
           const logo = props.teamsData.find(
             (item: { name: string }) => item.name === dataIndex
           )?.logo;
+          const isPlayOff = props.teamsData.find(
+            (item: { name: string }) => item.name === dataIndex
+          )?.isPlayOff;
           return (
             <div className="table__team" key={uuidv4()}>
+              {isPlayOff ? (
+                <div className="table__column-name--isPlayOff">x</div>
+              ) : (
+                <></>
+              )}
               <img
                 src={logo}
                 alt={dataIndex + " Logo"}

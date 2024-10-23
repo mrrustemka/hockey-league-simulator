@@ -56,11 +56,11 @@ function Start() {
             </div>
             <div className="start__actions">
               <Title level={5} className="start__actions-title--play-off-count">
-                {champ.teamsCount >= 16
+                {champ.teamsCount > 16
                   ? 16
-                  : champ.teamsCount >= 8
+                  : champ.teamsCount > 8
                   ? 8
-                  : champ.teamsCount >= 4
+                  : champ.teamsCount > 4
                   ? 4
                   : 2}{" "}
                 teams will advance to the Play-Off

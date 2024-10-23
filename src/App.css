@@ -369,17 +369,6 @@ th {
   display: inline-grid;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .pair__games {
   animation: fadeIn 0.6s ease;
 }
@@ -586,6 +575,22 @@ th {
   max-width: 100%;
 }
 
+.table__column-name--isPlayOff {
+  display: inline-block;
+  text-align: center;
+  line-height: 12px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  color: #121212;
+  background: #dddddd;
+  margin: 2px 4px;
+}
+
 /* Animations */
 
 .pair__simulate-button {
@@ -694,6 +699,17 @@ th {
   }
   75% {
     transform: translateX(2px);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

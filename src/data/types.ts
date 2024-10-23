@@ -18,6 +18,7 @@ export type Teams = {
   play_off_round_wins: number;
   color: string;
   flag?: string;
+  isPlayOff?: boolean;
 };
 
 export type TeamsList = string[];
