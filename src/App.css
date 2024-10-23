@@ -57,11 +57,6 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card--hoverable:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
 .controls-panel {
   text-align: center;
   margin: 18px;
@@ -93,15 +88,6 @@ body {
 .controls-panel__button {
   margin: 8px;
   transition: opacity 0.3s ease;
-}
-
-.controls-panel__buttons:hover {
-  border: var(--white);
-  color: var(--black);
-}
-
-.controls-panel__buttons:hover > span {
-  color: var(--black) !important;
 }
 
 .controls-panel__button:disabled {
@@ -139,8 +125,7 @@ body {
   display: inline-block;
 }
 
-.table-column-points,
-.table-column-points:hover {
+.table-column-points {
   background-color: #d0e6f5 !important;
   text-align: center;
 }
@@ -203,11 +188,6 @@ th {
   width: 65%;
 }
 
-.upcoming-games-card:hover {
-  transform: scale(1.02);
-  transition: transform 0.3s ease;
-}
-
 .upcoming-games__title,
 .playoff__header {
   margin: auto;
@@ -230,7 +210,11 @@ th {
 }
 
 .upcoming-games-card__team-logo--away {
-  margin-left: auto;
+  margin: 0 0.5em 0 0;
+}
+
+.upcoming-games-card__team-logo--home {
+  margin: 0 0 0 0.5em;
 }
 
 .upcoming-games-card__container {
@@ -245,13 +229,8 @@ th {
   margin: auto;
 }
 
-.upcoming-games-card__vs:hover {
-  animation: shake 0.5s ease;
-}
-
 .upcoming-games-card__container > img {
   border-radius: 0% !important;
-  margin: 0 0.5em;
 }
 
 .playoff__container {
@@ -409,11 +388,6 @@ th {
   margin-top: 8px;
 }
 
-.playoff__next-round-button:hover:enabled {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-}
-
 .table__column-games--high {
   background-color: #b8dbf3;
 }
@@ -470,10 +444,6 @@ th {
   transition: transform 0.3s ease;
 }
 
-.start__card:hover .start__card-cover {
-  transform: scale(1.1);
-}
-
 .start__actions {
   text-align: center;
 }
@@ -500,10 +470,6 @@ th {
   border-radius: 8px;
 }
 
-.start__link:hover {
-  color: var(--white);
-}
-
 .start__link--inactive,
 .start__actions-error--inactive {
   display: none;
@@ -517,10 +483,6 @@ th {
 .start__link--active {
   animation: pulse 1.5s infinite ease-in-out;
   transition: background-color 0.3s ease;
-}
-
-.start__link--active:hover {
-  background-color: var(--grey-dark);
 }
 
 .start__actions-error--active {
@@ -562,15 +524,6 @@ th {
   padding: 8px 20px;
   border-radius: 8px;
   height: auto;
-}
-
-.controls-panel__button--simulate:hover,
-.controls-panel__button--next:hover,
-.playoff__start-play-off:hover,
-.playoff__next-round-button:hover,
-.pair__simulate-button:hover {
-  color: var(--white) !important;
-  border-color: var(--grey-light) !important;
 }
 
 .layout {
@@ -619,6 +572,14 @@ th {
   height: 46px;
   display: inline-block;
   vertical-align: top;
+}
+
+.upcoming-games {
+  flex-direction: column;
+}
+
+.playoff__container > div {
+  max-width: 100%;
 }
 
 /* Animations */
@@ -733,7 +694,48 @@ th {
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+
+@media (max-width: 1242px) {
+  .upcoming-games-card {
+    width: 75%;
+  }
+}
+
+@media (max-width: 1154px) {
+  .upcoming-games-card {
+    width: 95%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .upcoming-games-card {
+    width: auto;
+  }
+  .upcoming-games-card__container {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  .upcoming-games-card__team-logo--away {
+    grid-column-start: 1;
+  }
+
+  .upcoming-games-card__team-logo--home {
+    grid-column-start: 3;
+  }
+
+  .upcoming-games-card__score--home {
+    grid-row-start: 2;
+    grid-column-start: 3;
+  }
+
+  .upcoming-games-card__score--away {
+    grid-row-start: 2;
+    grid-column-start: 1;
+  }
+}
+
+@media (max-width: 900px) {
   .start__card-cover {
     scale: 0.7;
     margin: 0;
@@ -807,32 +809,6 @@ th {
     grid-column-end: 3;
   }
 
-  .upcoming-games-card {
-    width: auto;
-  }
-  .upcoming-games-card__container {
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
-  }
-
-  .upcoming-games-card__team-logo--away {
-    grid-column-start: 1;
-  }
-
-  .upcoming-games-card__team-logo--home {
-    grid-column-start: 3;
-  }
-
-  .upcoming-games-card__score--home {
-    grid-row-start: 2;
-    grid-column-start: 3;
-  }
-
-  .upcoming-games-card__score--away {
-    grid-row-start: 2;
-    grid-column-start: 1;
-  }
-
   .playoff__container > div:nth-child(2) {
     margin: auto;
   }
@@ -844,13 +820,66 @@ th {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 670px) {
+  .playoff__round-panel {
+    grid-template-columns: auto auto;
+  }
+  .pair {
+    margin: auto;
+  }
+}
+
+@media (max-width: 650px) {
+  .upcoming-games {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .table__column--city {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
   .start {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
   }
 
+  .table__column--diff {
+    display: none;
+  }
+
+  .start__card-cover {
+    scale: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .table__column--wins,
+  .table__column--loses,
+  .table__column--loses-ot {
+    display: none;
+  }
+
+  .playoff__round-panel {
+    grid-template-columns: auto;
+  }
+  .pair {
+    margin: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .start__card-cover {
+    scale: 0.9;
+  }
+}
+
+@media (max-width: 360px) {
   .header,
   .footer {
     padding: 8px;
@@ -864,31 +893,65 @@ th {
     height: 28px;
   }
 
-  .table__column--wins,
-  .table__column--loses,
-  .table__column--loses-ot,
-  .table__column--diff,
-  .table__column--city {
-    display: none;
-  }
-
   .layout__side-panel {
     max-width: 95%;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto;
   }
+}
 
-  .upcoming-games {
-    grid-row-start: 4;
-    grid-row-end: 5;
-    grid-column-start: 1;
-    grid-column-end: 2;
+@media (hover: hover) {
+  .card--hoverable:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   }
 
-  .playoff__round-panel {
-    grid-template-columns: auto;
+  .controls-panel__buttons:hover {
+    border: var(--white);
+    color: var(--black);
   }
-  .pair {
-    margin: auto;
+
+  .controls-panel__buttons:hover > span {
+    color: var(--black) !important;
+  }
+
+  .table-column-points:hover {
+    background-color: #d0e6f5 !important;
+    text-align: center;
+  }
+
+  .upcoming-games-card:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+  }
+
+  .upcoming-games-card__vs:hover {
+    animation: shake 0.5s ease;
+  }
+
+  .playoff__next-round-button:hover:enabled {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+  .start__card:hover .start__card-cover {
+    transform: scale(1.1);
+  }
+
+  .start__link:hover {
+    color: var(--white);
+  }
+
+  .start__link--active:hover {
+    background-color: var(--grey-dark);
+  }
+
+  .controls-panel__button--simulate:hover,
+  .controls-panel__button--next:hover,
+  .playoff__start-play-off:hover,
+  .playoff__next-round-button:hover,
+  .pair__simulate-button:hover {
+    color: var(--white) !important;
+    border-color: var(--grey-light) !important;
   }
 }
