@@ -242,10 +242,14 @@ th {
 }
 
 .playoff__champion-logo {
-  margin: 0 4px;
-  width: 24px;
-  border-radius: 100%;
+  margin: 8px;
+  width: auto;
   animation: pop 0.6s ease-in-out;
+  max-width: 50%;
+}
+
+.playoff__champion-name {
+  display: block;
 }
 
 .card__info--result-away {
