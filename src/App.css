@@ -591,6 +591,31 @@ th {
   margin: 2px 4px;
 }
 
+.legend {
+  background: var(--white);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+
+.legend__column-one,
+.legend__column-two {
+  text-align: left;
+  margin: 16px;
+}
+
+.legend__column-one {
+  vertical-align: text-bottom;
+  grid-column-start: 1;
+}
+
+.legend__header {
+  margin: 0;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
 /* Animations */
 
 .pair__simulate-button {
