@@ -31,7 +31,8 @@ export const w2: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    isPlayOff: false
   },
   {
     abbreviation: "POL",
@@ -51,7 +52,8 @@ export const w2: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    isPlayOff: false
   },
   {
     abbreviation: "ITA",
@@ -71,7 +73,8 @@ export const w2: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
-    color: "#0066bc"
+    color: "#0066bc",
+    isPlayOff: false
   },
   {
     abbreviation: "SKR",
@@ -91,7 +94,8 @@ export const w2: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
-    color: "#cd2e3a"
+    color: "#cd2e3a",
+    isPlayOff: false
   },
   {
     abbreviation: "ROM",
@@ -111,7 +115,8 @@ export const w2: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
-    color: "#fcd116"
+    color: "#fcd116",
+    isPlayOff: false
   },
   {
     abbreviation: "JAP",
@@ -131,7 +136,8 @@ export const w2: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
-    color: "#000000"
+    color: "#000000",
+    isPlayOff: false
   },
   {
     abbreviation: "CHI",
@@ -151,7 +157,8 @@ export const w2: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
-    color: "#fbea0e"
+    color: "#fbea0e",
+    isPlayOff: false
   },
   {
     abbreviation: "EST",
@@ -171,7 +178,8 @@ export const w2: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
-    color: "#0073cf"
+    color: "#0073cf",
+    isPlayOff: false
   },
   {
     abbreviation: "LIT",
@@ -191,7 +199,8 @@ export const w2: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
-    color: "#000000"
+    color: "#000000",
+    isPlayOff: false
   },
   {
     abbreviation: "CRO",
@@ -211,7 +220,8 @@ export const w2: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    isPlayOff: false
   },
   {
     abbreviation: "SPA",
@@ -231,7 +241,8 @@ export const w2: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
-    color: "#0000f0"
+    color: "#0000f0",
+    isPlayOff: false
   },
   {
     abbreviation: "UKR",
@@ -251,7 +262,8 @@ export const w2: Teams[] = [
     loses: 0,
     loses_ot: 0,
     wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    isPlayOff: false
   }
   // {
   //   abbreviation: "NET",
@@ -272,5 +284,5 @@ export const w2: Teams[] = [
   //   loses_ot: 0,
   //   wins: 0,
   //   color: "#ff5f00"
-  // }
+  // , isPlayOff: false}
 ];

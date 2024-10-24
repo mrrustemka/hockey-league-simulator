@@ -191,21 +191,32 @@ function Game() {
       awayGoals: aGoals,
       overtime: overtime
     };
-    setTeamsUpdate(teamsSort(teams));
-    setIsSimulate(true);
-    teams
-      .slice(0, playOffTeam)
-      .map((checkTeam: Teams) =>
-        teams
-          .slice(playOffTeam)
-          .every(
-            (team: Teams) =>
-              (teams.length - 1 - team.game_counter) * 2 + team.points <
-              checkTeam.points
-          )
-          ? (checkTeam.isPlayOff = true)
-          : { ...checkTeam }
+    const sortedTeams: Teams[] = teamsSort(teams);
+    if (gameCounter + 1 === scheduleList.length) {
+      sortedTeams.map((team: Teams, index: number) =>
+        index < playOffTeam ? (team.isPlayOff = true) : { team }
       );
+    } else {
+      sortedTeams
+        .slice(0, playOffTeam)
+        .map((checkTeam: Teams, index: number) =>
+          sortedTeams
+            .slice(index + 1)
+            .filter(
+              (team: Teams) =>
+                team.points +
+                  2 * (sortedTeams.length - 1 - team.game_counter) >=
+                checkTeam.points
+            ).length +
+            index +
+            1 <=
+          playOffTeam
+            ? (checkTeam.isPlayOff = true)
+            : { ...checkTeam }
+        );
+    }
+    setTeamsUpdate(sortedTeams);
+    setIsSimulate(true);
     return result;
   }
 
@@ -235,6 +246,12 @@ function Game() {
         return 0;
       });
     } else {
+      // teamsUpdate.slice(0, playOffTeam).map((team: Teams) => {
+      //   if (!team.isPlayOff) {
+      //     return { ...team, isPlayOff: true };
+      //   }
+      //   return team;
+      // });
       return teams;
     }
   }

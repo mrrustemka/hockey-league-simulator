@@ -33,7 +33,8 @@ export const na: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#0068b6"
+    color: "#0068b6",
+    isPlayOff: false
   },
   {
     id: 2,
@@ -53,7 +54,8 @@ export const na: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#1d72ae"
+    color: "#1d72ae",
+    isPlayOff: false
   },
   {
     id: 3,
@@ -73,7 +75,8 @@ export const na: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#000000"
+    color: "#000000",
+    isPlayOff: false
   },
   {
     id: 4,
@@ -93,7 +96,8 @@ export const na: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffee00"
+    color: "#ffee00",
+    isPlayOff: false
   },
   {
     id: 5,
@@ -113,7 +117,8 @@ export const na: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#e40021"
+    color: "#e40021",
+    isPlayOff: false
   },
   {
     id: 6,
@@ -133,7 +138,8 @@ export const na: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#000000"
+    color: "#000000",
+    isPlayOff: false
   },
   {
     id: 7,
@@ -153,7 +159,8 @@ export const na: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    isPlayOff: false
   },
   {
     id: 8,
@@ -173,7 +180,8 @@ export const na: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#002361"
+    color: "#002361",
+    isPlayOff: false
   },
   {
     id: 9,
@@ -193,7 +201,8 @@ export const na: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#6d182d"
+    color: "#6d182d",
+    isPlayOff: false
   },
   {
     id: 10,
@@ -213,7 +222,8 @@ export const na: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffcd01"
+    color: "#ffcd01",
+    isPlayOff: false
   },
   {
     id: 11,
@@ -233,7 +243,8 @@ export const na: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffd600"
+    color: "#ffd600",
+    isPlayOff: false
   },
   {
     id: 12,
@@ -253,7 +264,8 @@ export const na: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#01316c"
+    color: "#01316c",
+    isPlayOff: false
   },
   {
     id: 13,
@@ -273,7 +285,8 @@ export const na: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#c21938"
+    color: "#c21938",
+    isPlayOff: false
   },
   {
     id: 14,
@@ -293,6 +306,7 @@ export const na: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#000000"
+    color: "#000000",
+    isPlayOff: false
   }
 ];

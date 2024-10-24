@@ -33,7 +33,8 @@ export const del: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#000000"
+    color: "#000000",
+    isPlayOff: false
   },
   {
     id: 2,
@@ -53,7 +54,8 @@ export const del: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#003366"
+    color: "#003366",
+    isPlayOff: false
   },
   {
     id: 3,
@@ -73,7 +75,8 @@ export const del: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#6b88d3"
+    color: "#6b88d3",
+    isPlayOff: false
   },
   {
     id: 4,
@@ -93,7 +96,8 @@ export const del: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#0a1d3d"
+    color: "#0a1d3d",
+    isPlayOff: false
   },
   {
     id: 5,
@@ -113,7 +117,8 @@ export const del: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ec6400"
+    color: "#ec6400",
+    isPlayOff: false
   },
   {
     id: 6,
@@ -133,7 +138,8 @@ export const del: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#e6e6e6"
+    color: "#e6e6e6",
+    isPlayOff: false
   },
   {
     id: 7,
@@ -153,7 +159,8 @@ export const del: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#004e9f"
+    color: "#004e9f",
+    isPlayOff: false
   },
   {
     id: 8,
@@ -173,7 +180,8 @@ export const del: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#e30613"
+    color: "#e30613",
+    isPlayOff: false
   },
   {
     id: 9,
@@ -193,7 +201,8 @@ export const del: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#002255"
+    color: "#002255",
+    isPlayOff: false
   },
   {
     id: 10,
@@ -213,7 +222,8 @@ export const del: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    isPlayOff: false
   },
   {
     id: 11,
@@ -233,7 +243,8 @@ export const del: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#e20018"
+    color: "#e20018",
+    isPlayOff: false
   },
   {
     id: 12,
@@ -253,7 +264,8 @@ export const del: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#b0baba"
+    color: "#b0baba",
+    isPlayOff: false
   },
   {
     id: 13,
@@ -273,7 +285,8 @@ export const del: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#003399"
+    color: "#003399",
+    isPlayOff: false
   },
   {
     id: 14,
@@ -293,6 +306,7 @@ export const del: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffffff"
+    color: "#ffffff",
+    isPlayOff: false
   }
 ];

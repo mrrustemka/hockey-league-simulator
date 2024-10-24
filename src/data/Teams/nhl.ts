@@ -54,7 +54,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#00205b",
-    flag: can
+    flag: can,
+    isPlayOff: false
   },
   {
     id: 2,
@@ -75,7 +76,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#c8102e",
-    flag: can
+    flag: can,
+    isPlayOff: false
   },
   {
     id: 3,
@@ -96,7 +98,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#00205b",
-    flag: can
+    flag: can,
+    isPlayOff: false
   },
   {
     id: 4,
@@ -117,7 +120,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#96d8d8",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 5,
@@ -138,7 +142,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#00617f",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 6,
@@ -159,7 +164,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#333f48",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 7,
@@ -180,7 +186,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#a2aaad",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 8,
@@ -201,7 +208,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#cf4520",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 9,
@@ -222,7 +230,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#8a2432",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 10,
@@ -243,7 +252,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ce1126",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 11,
@@ -264,7 +274,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#c8102e",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 12,
@@ -285,7 +296,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#000000",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 13,
@@ -306,7 +318,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#003087",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 14,
@@ -327,7 +340,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#000000",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 15,
@@ -348,7 +362,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#b9975b",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 16,
@@ -369,7 +384,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#a6192e",
-    flag: can
+    flag: can,
+    isPlayOff: false
   },
   {
     id: 17,
@@ -390,7 +406,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#c8102e",
-    flag: can
+    flag: can,
+    isPlayOff: false
   },
   {
     id: 18,
@@ -411,7 +428,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffffff",
-    flag: can
+    flag: can,
+    isPlayOff: false
   },
   {
     id: 19,
@@ -432,7 +450,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#000000",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 20,
@@ -453,7 +472,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#0033a0",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 21,
@@ -474,7 +494,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffffff",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 22,
@@ -495,7 +516,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffffff",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 23,
@@ -516,7 +538,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffb81c",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 24,
@@ -537,7 +560,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#d24303",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 25,
@@ -558,7 +582,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#003087",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 26,
@@ -579,7 +604,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#0e4431",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 27,
@@ -600,7 +626,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#00823e",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 28,
@@ -621,7 +648,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#f26924",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 29,
@@ -642,7 +670,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#cc0000",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 30,
@@ -663,7 +692,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#041e42",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 31,
@@ -684,7 +714,8 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffffff",
-    flag: usa
+    flag: usa,
+    isPlayOff: false
   },
   {
     id: 32,
@@ -705,6 +736,7 @@ export const nhl: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#004a98",
-    flag: can
+    flag: can,
+    isPlayOff: false
   }
 ];

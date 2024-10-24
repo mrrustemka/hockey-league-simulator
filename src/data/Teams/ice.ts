@@ -37,7 +37,8 @@ export const ice: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffffff",
-    flag: aus
+    flag: aus,
+    isPlayOff: false
   },
   {
     id: 2,
@@ -58,7 +59,8 @@ export const ice: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#d6271f",
-    flag: aus
+    flag: aus,
+    isPlayOff: false
   },
   {
     id: 3,
@@ -79,7 +81,8 @@ export const ice: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#001489",
-    flag: aus
+    flag: aus,
+    isPlayOff: false
   },
   {
     id: 4,
@@ -100,7 +103,8 @@ export const ice: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#df003c",
-    flag: aus
+    flag: aus,
+    isPlayOff: false
   },
   {
     id: 5,
@@ -121,7 +125,8 @@ export const ice: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#000000",
-    flag: aus
+    flag: aus,
+    isPlayOff: false
   },
   {
     id: 6,
@@ -142,7 +147,8 @@ export const ice: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#e73025",
-    flag: ita
+    flag: ita,
+    isPlayOff: false
   },
   {
     id: 7,
@@ -163,7 +169,8 @@ export const ice: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffc734",
-    flag: ita
+    flag: ita,
+    isPlayOff: false
   },
   {
     id: 8,
@@ -184,7 +191,8 @@ export const ice: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#0a84ff",
-    flag: hun
+    flag: hun,
+    isPlayOff: false
   },
   {
     id: 9,
@@ -205,7 +213,8 @@ export const ice: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#00b050",
-    flag: sln
+    flag: sln,
+    isPlayOff: false
   },
   {
     id: 10,
@@ -226,7 +235,8 @@ export const ice: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffffff",
-    flag: aus
+    flag: aus,
+    isPlayOff: false
   },
   {
     id: 11,
@@ -247,7 +257,8 @@ export const ice: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffed00",
-    flag: aus
+    flag: aus,
+    isPlayOff: false
   },
   {
     id: 12,
@@ -268,7 +279,8 @@ export const ice: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffffff",
-    flag: ita
+    flag: ita,
+    isPlayOff: false
   },
   {
     id: 13,
@@ -289,6 +301,7 @@ export const ice: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#000000",
-    flag: aus
+    flag: aus,
+    isPlayOff: false
   }
 ];
