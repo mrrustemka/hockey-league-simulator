@@ -460,15 +460,22 @@ function Game() {
                 </Col>
               </Card>
             </Row>
-            <Row className="upcoming-games slide-in-left">
-              <Title className="upcoming-games__title" level={2}>
-                Upcoming Games
-              </Title>
-              <UpcomingGame
-                schedule={scheduleList.slice(gameCounter + 1, gameCounter + 7)}
-                teams={teams}
-              />
-            </Row>
+            {scheduleList.slice(gameCounter + 1).length > 0 ? (
+              <Row className="upcoming-games slide-in-left">
+                <Title className="upcoming-games__title" level={2}>
+                  Upcoming Games
+                </Title>
+                <UpcomingGame
+                  schedule={scheduleList.slice(
+                    gameCounter + 1,
+                    gameCounter + 7
+                  )}
+                  teams={teams}
+                />
+              </Row>
+            ) : (
+              <></>
+            )}
           </Col>
         </Row>
       </div>
