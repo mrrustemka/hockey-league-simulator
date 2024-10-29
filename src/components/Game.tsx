@@ -221,39 +221,24 @@ function Game() {
   }
 
   function teamsSort(teams: Teams[]): Teams[] {
-    if (scheduleList && gameCounter < scheduleList.length) {
-      return teams.sort((team1, team2) => {
-        if (team1.points !== team2.points) {
-          return team2.points - team1.points;
-        }
-
-        if (team1.game_counter !== team2.game_counter) {
-          return team1.game_counter - team2.game_counter;
-        }
-
-        if (team1.wins !== team2.wins) {
-          return team2.wins - team1.wins;
-        }
-
-        if (team1.loses_ot !== team2.loses_ot) {
-          return team2.loses_ot - team1.loses_ot;
-        }
-
-        if (team1.goals_diff !== team2.goals_diff) {
-          return team2.goals_diff - team1.goals_diff;
-        }
-
-        return 0;
-      });
-    } else {
-      // teamsUpdate.slice(0, playOffTeam).map((team: Teams) => {
-      //   if (!team.isPlayOff) {
-      //     return { ...team, isPlayOff: true };
-      //   }
-      //   return team;
-      // });
+    if (!scheduleList || gameCounter >= scheduleList.length) {
       return teams;
     }
+
+    return teams.sort((team1, team2) => {
+      const comparisons = [
+        team2.points - team1.points,
+        team1.game_counter - team2.game_counter,
+        team2.wins - team1.wins,
+        team2.loses_ot - team1.loses_ot,
+        team2.goals_diff - team1.goals_diff
+      ];
+
+      for (const comparison of comparisons) {
+        if (comparison !== 0) return comparison;
+      }
+      return 0;
+    });
   }
 
   function getTeamRating(team: string): number {
