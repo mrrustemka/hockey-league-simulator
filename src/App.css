@@ -412,6 +412,7 @@ th {
 .start__team-logo {
   margin: 0 4px;
   width: 24px;
+  height: 24px;
   border-radius: 100%;
   vertical-align: middle;
 }

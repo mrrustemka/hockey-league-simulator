@@ -3,13 +3,17 @@ import { v4 as uuidv4 } from "uuid";
 import { schedule } from "../Data/schedule";
 import { Link } from "react-router-dom";
 import { League as TLeague } from "../Data/types";
+import { useState } from "react";
 
 const { Title } = Typography;
 
-function League(props: {
-  league: TLeague;
-  updateTeamsNum: (id: string, value: number) => void;
-}) {
+function League(props: { league: TLeague }) {
+  const [champ, setChamp] = useState<TLeague>(props.league);
+
+  function updateTeamsNum(value: number): void {
+    const newChamp: TLeague = { ...champ, teamsCount: value };
+    setChamp(newChamp);
+  }
   return (
     <div>
       <Card
@@ -37,9 +41,7 @@ function League(props: {
               <div
                 key={uuidv4()}
                 className={`start__team ${
-                  team.id <= props.league.teamsCount
-                    ? "start__team--active"
-                    : ""
+                  team.id <= champ.teamsCount ? "start__team--active" : ""
                 }`}
               >
                 <img
@@ -54,11 +56,11 @@ function League(props: {
         </div>
         <div className="start__actions">
           <Title level={5} className="start__actions-title--play-off-count">
-            {props.league.teamsCount > 16
+            {champ.teamsCount > 16
               ? 16
-              : props.league.teamsCount > 8
+              : champ.teamsCount > 8
               ? 8
-              : props.league.teamsCount > 4
+              : champ.teamsCount > 4
               ? 4
               : 2}{" "}
             teams will advance to the Play-Off
@@ -69,19 +71,17 @@ function League(props: {
           <Input
             className={`start__input`}
             type="number"
-            defaultValue={props.league.teamsCount}
-            value={props.league.teamsCount}
+            defaultValue={champ.teamsCount}
+            value={champ.teamsCount}
             max={props.league.teams.length}
             min="2"
-            onChange={(e) =>
-              props.updateTeamsNum(props.league.id, parseInt(e.target.value))
-            }
+            onChange={(e) => updateTeamsNum(parseInt(e.target.value))}
           />
           <Title
             level={5}
             className={`start__actions-error ${
-              props.league.teamsCount < 2 ||
-              props.league.teamsCount > props.league.teams.length
+              champ.teamsCount < 2 ||
+              champ.teamsCount > props.league.teams.length
                 ? "start__actions-error--active"
                 : "start__actions-error--inactive"
             }`}
@@ -91,19 +91,19 @@ function League(props: {
           </Title>
           <Link
             className={`start__link ${
-              props.league.teamsCount < 2 ||
-              props.league.teamsCount > props.league.teams.length
+              champ.teamsCount < 2 ||
+              champ.teamsCount > props.league.teams.length
                 ? "start__link--inactive"
                 : "start__link--active pulse"
             }`}
             to="season"
             state={{
-              teams: props.league.teams.slice(0, props.league.teamsCount),
+              teams: props.league.teams.slice(0, champ.teamsCount),
               name: props.league.name,
               id: props.league.id
             }}
             onClick={() =>
-              schedule(props.league.teams.slice(0, props.league.teamsCount))
+              schedule(props.league.teams.slice(0, champ.teamsCount))
             }
           >
             Start
