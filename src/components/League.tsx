@@ -20,6 +20,7 @@ function League(props: {
             alt="example"
             src={props.league.image}
             className="start__card-cover"
+            loading="lazy"
           />
         }
       >
@@ -45,6 +46,7 @@ function League(props: {
                   src={team.logo}
                   alt={team.name}
                   className="start__team-logo"
+                  loading="lazy"
                 />
               </div>
             )

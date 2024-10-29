@@ -77,6 +77,7 @@ function PlayOff() {
                 className="playoff__champion-logo"
                 src={teams[0].logo}
                 alt={teams[0].name + " Logo"}
+                loading="lazy"
               />
               <span className="playoff__champion-name">{teams[0].name}</span>
             </div>

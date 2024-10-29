@@ -56,6 +56,7 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
                   alt={dataIndex + " Logo"}
                   width={"16px"}
                   className="table__team-logo"
+                  loading="lazy"
                 />
                 <p className="table__column-name">{" " + dataIndex}</p>
               </div>
@@ -89,6 +90,7 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
                       alt={city + " Logo"}
                       width={"16px"}
                       className="table__column-flag"
+                      loading="lazy"
                     />
                   ) : (
                     <></>

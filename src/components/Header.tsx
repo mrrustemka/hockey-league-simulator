@@ -18,6 +18,7 @@ function Header(props: { id: string }) {
               ? "#ffffff"
               : "transparent"
           }}
+          loading="lazy"
         />
       )}
       <Title className="header__title">

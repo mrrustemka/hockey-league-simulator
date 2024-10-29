@@ -42,6 +42,7 @@ function UpcomingGame(props: { schedule: Schedule[]; teams: Teams[] }) {
                     (element) => element.abbreviation === game.away
                   )?.logo
                 }
+                loading="lazy"
               />
               <h3 className="upcoming-games-card__vs">@</h3>
               <img
@@ -56,6 +57,7 @@ function UpcomingGame(props: { schedule: Schedule[]; teams: Teams[] }) {
                     (element) => element.abbreviation === game.home
                   )?.logo
                 }
+                loading="lazy"
               />
               <h3 className="upcoming-games-card__score--home">
                 {
