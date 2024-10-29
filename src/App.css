@@ -857,6 +857,10 @@ th {
     grid-column-end: 3;
   }
 
+  .upcoming-games__title {
+    margin: revert;
+  }
+
   .playoff__container > div:nth-child(2) {
     margin: auto;
   }

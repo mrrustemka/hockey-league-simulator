@@ -1,7 +1,7 @@
 import { Teams } from "../types";
-import gbr from "../../Images/w1_gbr.png";
-import pol from "../../Images/w1_pol.png";
-import ita from "../../Images/w1_ita.png";
+import gbr from "../../Images/w2_gbr.png";
+import pol from "../../Images/w2_pol.png";
+import ita from "../../Images/w2_ita.png";
 import skr from "../../Images/w2_skr.png";
 import rom from "../../Images/w2_rom.png";
 import jap from "../../Images/w2_jap.png";

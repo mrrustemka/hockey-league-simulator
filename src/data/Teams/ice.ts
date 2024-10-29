@@ -12,7 +12,7 @@ import hko from "../../Images/ice_hko.png";
 import bwl from "../../Images/ice_bwl.png";
 import ash from "../../Images/ice_ash.png";
 import piv from "../../Images/ice_piv.png";
-import ita from "../../Images/w1_ita.png";
+import ita from "../../Images/w2_ita.png";
 import sln from "../../Images/w1_sln.png";
 import aus from "../../Images/w1_aus.png";
 import hun from "../../Images/w2_hun.png";

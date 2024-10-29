@@ -43,10 +43,10 @@ import ger from "../../Images/w1_ger.png";
 import cze from "../../Images/w1_cze.png";
 import slk from "../../Images/w1_slk.png";
 import eng from "../../Images/ehl_eng.png";
-import gbr from "../../Images/w1_gbr.png";
+import gbr from "../../Images/w2_gbr.png";
 import sil from "../../Images/ehl_sil.png";
 import nor from "../../Images/w1_nor.png";
-import ita from "../../Images/w1_ita.png";
+import ita from "../../Images/w2_ita.png";
 import hcb from "../../Images/ice_hcb.png";
 
 export const ehl: Teams[] = [
