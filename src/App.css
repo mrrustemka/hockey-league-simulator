@@ -73,7 +73,7 @@ body {
 }
 
 .simulate-panel {
-  width: 30%;
+  width: fit-content;
   margin: 0 auto;
 }
 
@@ -836,7 +836,6 @@ th {
   }
 
   .simulate-panel {
-    width: 40%;
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
