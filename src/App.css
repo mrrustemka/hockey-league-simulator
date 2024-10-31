@@ -186,7 +186,8 @@ th {
 
 .upcoming-games-card {
   margin: 18px auto;
-  width: 65%;
+  width: auto;
+  padding: 8px;
 }
 
 .upcoming-games__title,
@@ -210,12 +211,9 @@ th {
   display: inline;
 }
 
-.upcoming-games-card__team-logo--away {
-  margin: 0 0.5em 0 0;
-}
-
+.upcoming-games-card__team-logo--away,
 .upcoming-games-card__team-logo--home {
-  margin: 0 0 0 0.5em;
+  margin: 0 0.5em 0 0.5em;
 }
 
 .upcoming-games-card__container {
@@ -755,13 +753,13 @@ th {
 
 @media (max-width: 1242px) {
   .upcoming-games-card {
-    width: 75%;
+    width: auto;
   }
 }
 
 @media (max-width: 1154px) {
   .upcoming-games-card {
-    width: 95%;
+    width: auto;
   }
 }
 
