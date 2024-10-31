@@ -429,6 +429,7 @@ th {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   overflow: hidden;
   height: 100%;
+  padding: 16px;
 }
 
 .start__card-cover {
@@ -764,6 +765,9 @@ th {
 }
 
 @media (max-width: 1000px) {
+  .start__card {
+    padding: 12px;
+  }
   .upcoming-games-card {
     width: auto;
   }
