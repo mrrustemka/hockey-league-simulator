@@ -43,4 +43,8 @@ export function schedule(teams: Teams[]) {
     }
     return teamInfo;
   });
+
+  localStorage.setItem("teamsList", JSON.stringify(teams));
+  localStorage.setItem("scheduleList", JSON.stringify(scheduleList));
+  localStorage.setItem("gameIndex", JSON.stringify(0));
 }

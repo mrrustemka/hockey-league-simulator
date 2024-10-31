@@ -1,25 +1,27 @@
 import React, { useState, useEffect } from "react";
 import { Button, Card, Col, Row, Typography } from "antd";
 import { GameResult, Schedule, Teams } from "../Data/types";
-import { scheduleList } from "../Data/schedule";
 import Sheet from "./Sheet";
 import UpcomingGame from "./UpcomingGame";
 import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import Header from "./Header";
 
 const { Title } = Typography;
 
 function Game() {
-  const location = useLocation();
-  const teams = location.state.teams;
+  const teams = JSON.parse(localStorage.getItem("teamsList") || "[]");
+  const leagueId: string = JSON.parse(localStorage.getItem("leagueId") || "");
+  const scheduleList: Schedule[] = JSON.parse(
+    localStorage.getItem("scheduleList") || "[]"
+  );
   let [teamsUpdate, setTeamsUpdate] = useState<Teams[]>(teams || {});
-  let [gameCounter, setGameCounter] = useState<number>(0);
+  let [gameCounter, setGameCounter] = useState<number>(
+    JSON.parse(localStorage.getItem("gameIndex") || "0")
+  );
   let [homeGoals, setHomeGoals] = useState<number>(0);
   let [awayGoals, setAwayGoals] = useState<number>(0);
   let [typeOfOt, setTypeOfOt] = useState<string>("");
   const [isSimulate, setIsSimulate] = useState<boolean>(false);
-  const [gameIndex, setGameIndex] = useState<number>(0);
   const playOffTeam: number =
     teamsUpdate.length > 16
       ? 16
@@ -49,7 +51,6 @@ function Game() {
   };
 
   function Simulate(game: Schedule) {
-    setGameIndex(scheduleList.indexOf(game) + 1);
     let home: Teams = {
       abbreviation: "",
       city: "",
@@ -217,6 +218,11 @@ function Game() {
     }
     setTeamsUpdate(sortedTeams);
     setIsSimulate(true);
+    localStorage.setItem("teamsList", JSON.stringify(sortedTeams));
+    localStorage.setItem(
+      "gameIndex",
+      JSON.stringify(scheduleList.indexOf(game) + 1)
+    );
     return result;
   }
 
@@ -249,6 +255,13 @@ function Game() {
     );
   }
 
+  function getPlayOffTeams(): void {
+    localStorage.setItem(
+      "teamsList",
+      JSON.stringify(teamsUpdate.slice(0, playOffTeam))
+    );
+  }
+
   if (scheduleList && gameCounter < scheduleList.length) {
     const away: Teams = teams.find(
       (element: { abbreviation: string }) =>
@@ -272,10 +285,10 @@ function Game() {
     ];
     return (
       <div>
-        <Header id={location.state.id} />
+        <Header id={leagueId} />
         <Row className="layout">
           <Col className="layout__content" span={14}>
-            <Sheet teamsData={teamsUpdate} id={location.state.id} />
+            <Sheet teamsData={teamsUpdate} id={leagueId} />
           </Col>
           <Col className="layout__side-panel" span={10}>
             <Row className="cards-row">
@@ -446,7 +459,7 @@ function Game() {
               <Card>
                 <Col span={24} className="controls-panel__counter">
                   <Title level={3}>
-                    {gameIndex}/{scheduleList.length}
+                    {gameCounter + 1}/{scheduleList.length}
                   </Title>
                 </Col>
               </Card>
@@ -474,21 +487,20 @@ function Game() {
   } else {
     return (
       <div className="playoff">
-        <Header id={location.state.id} />
+        <Header id={leagueId} />
         <Row className="playoff__container">
           <Col span={14} className="playoff__container-panel">
-            <Sheet teamsData={teamsUpdate} id={location.state.id} />
+            <Sheet teamsData={teamsUpdate} id={leagueId} />
           </Col>
           <Col span={10}>
-            <Link
-              to="playoff"
-              state={{
-                teams: teamsUpdate.slice(0, playOffTeam),
-                name: location.state.name,
-                id: location.state.id
-              }}
-            >
-              <Button className="playoff__start-play-off" size="large">
+            <Link to="playoff">
+              <Button
+                className="playoff__start-play-off"
+                size="large"
+                onClick={() => {
+                  getPlayOffTeams();
+                }}
+              >
                 Start Play-Off
               </Button>
             </Link>

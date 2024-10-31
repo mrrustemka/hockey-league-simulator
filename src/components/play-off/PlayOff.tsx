@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
 import Round from "./Round";
 import { v4 as uuidv4 } from "uuid";
 // import { teams as mock } from "../../Data/teams"; // use for tests
@@ -12,8 +11,11 @@ function PlayOff() {
   const [isRound, setIsRound] = useState<boolean>(true);
   let [curRound, setCurRound] = useState<number>(0);
   const [tree, setTree] = useState<Array<Teams[][]>>([]);
-  const location = useLocation();
-  const [teams, setTeams] = useState<Array<Teams>>(location.state.teams || {});
+  const [teams, setTeams] = useState<Array<Teams>>(
+    JSON.parse(localStorage.getItem("teamsList") || "[]")
+  );
+  const leagueId: string = JSON.parse(localStorage.getItem("leagueId") || "");
+
   // const [teams, setTeams] = useState<Array<Teams>>(mock); // use for tests
   const [isChampion, setIsChampion] = useState<boolean>(false);
 
@@ -50,7 +52,7 @@ function PlayOff() {
 
   function updateGame() {
     champs
-      .find((champ) => champ.id === location.state.id)
+      .find((champ) => champ.id === leagueId)
       ?.teams.forEach((team) => {
         team.game_counter = 0;
         team.goals_against = 0;
@@ -63,11 +65,15 @@ function PlayOff() {
         team.points = 0;
         team.wins = 0;
       });
+    localStorage.removeItem("leagueId");
+    localStorage.removeItem("scheduleList");
+    localStorage.removeItem("teamsList");
+    localStorage.removeItem("gameIndex");
   }
 
   return (
     <div className="playoff">
-      <Header id={location.state.id} />
+      <Header id={leagueId} />
       {isChampion ? (
         <div className="playoff__champion">
           <h2 className="playoff__champion-heading">

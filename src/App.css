@@ -99,7 +99,8 @@ body {
   transition: transform 0.1s ease;
 }
 
-.controls-panel__button--simulate.pulse {
+.controls-panel__button--simulate.pulse,
+.start__card__button.pulse {
   animation: pulse 1.5s infinite;
 }
 
@@ -619,6 +620,16 @@ th {
   grid-column-end: 3;
 }
 
+.start__card__button {
+  background-color: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+  margin: 8px 4px;
+  padding: 8px 20px;
+  border-radius: 8px;
+  height: auto;
+}
+
 /* Animations */
 
 .pair__simulate-button {
@@ -1001,7 +1012,8 @@ th {
   .controls-panel__button--next:hover,
   .playoff__start-play-off:hover,
   .playoff__next-round-button:hover,
-  .pair__simulate-button:hover {
+  .pair__simulate-button:hover,
+  .start__card__button:hover {
     color: var(--white) !important;
     border-color: var(--grey-light) !important;
   }
