@@ -33,7 +33,7 @@ function League(props: { league: TLeague }) {
     JSON.parse(localStorage.getItem("leagueId") || "") === props.league.id
   ) {
     return (
-      <div>
+      <>
         <Card
           key={uuidv4()}
           className="start__card"
@@ -82,11 +82,11 @@ function League(props: { league: TLeague }) {
             Start New
           </button>
         </Card>
-      </div>
+      </>
     );
   } else {
     return (
-      <div>
+      <>
         <Card
           key={uuidv4()}
           className="start__card"
@@ -174,7 +174,7 @@ function League(props: { league: TLeague }) {
             </Link>
           </div>
         </Card>
-      </div>
+      </>
     );
   }
 }

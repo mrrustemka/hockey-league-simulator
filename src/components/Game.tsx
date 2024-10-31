@@ -284,7 +284,7 @@ function Game() {
       "#001489"
     ];
     return (
-      <div>
+      <>
         <Header id={leagueId} />
         <Row className="layout">
           <Col className="layout__content" span={14}>
@@ -482,7 +482,7 @@ function Game() {
             )}
           </Col>
         </Row>
-      </div>
+      </>
     );
   } else {
     return (

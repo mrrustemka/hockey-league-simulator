@@ -83,7 +83,7 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
             render={(record) => {
               const { city, flag } = record;
               return (
-                <div>
+                <>
                   {internationalChamps.includes(props.id) ? (
                     <img
                       src={flag}
@@ -96,7 +96,7 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
                     <></>
                   )}
                   <p className="table__column-city">{" " + city}</p>
-                </div>
+                </>
               );
             }}
           />
@@ -207,7 +207,6 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
         <h3 className="legend__header">Legend</h3>
         <div className="legend__column-one">
           <div>x - Clinched Playoff spot</div>
-          {/* p - President's Trophy  */}
           <div>GP - Games Started</div>
           <div>W - Wins (worth two points)</div>
         </div>
