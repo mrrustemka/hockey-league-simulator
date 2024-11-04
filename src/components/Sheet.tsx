@@ -45,6 +45,9 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
             const isPlayOff = props.teamsData.find(
               (item: { name: string }) => item.name === dataIndex
             )?.isPlayOff;
+            const status = props.teamsData.find(
+              (item: { name: string }) => item.name === dataIndex
+            )?.status;
             return (
               <div className="table__team" key={uuidv4()}>
                 {isPlayOff ? (
@@ -59,7 +62,9 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
                   className="table__team-logo"
                   loading="lazy"
                 />
-                <p className="table__column-name">{" " + dataIndex}</p>
+                <p className="table__column-name">
+                  {" " + dataIndex + "" + status}
+                </p>
               </div>
             );
           }}

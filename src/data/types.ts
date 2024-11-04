@@ -19,6 +19,8 @@ export type Teams = {
   color: string;
   flag?: string;
   isPlayOff?: boolean;
+  status?: string;
+  curStatusLength?: number;
 };
 
 export type TeamsList = string[];

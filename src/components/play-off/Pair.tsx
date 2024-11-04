@@ -111,7 +111,9 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
       play_off_round_wins: 0,
       color: "#ffffff",
       flag: "",
-      isPlayOff: false
+      isPlayOff: false,
+      status: "",
+      curStatusLength: 0
     };
     let away: Teams = {
       abbreviation: "",
@@ -133,7 +135,9 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
       play_off_round_wins: 0,
       color: "#ffffff",
       flag: "",
-      isPlayOff: false
+      isPlayOff: false,
+      status: "",
+      curStatusLength: 0
     };
     function getTeamInfo(team: string): Teams {
       const foundTeam = teams.find(
@@ -154,39 +158,75 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
     const homeType: Teams | void = getTeamInfo(game.home);
     if (homeType !== undefined) {
       home = homeType;
+      if (Math.random() < 0.25 && home.status === "") {
+        home.status = Math.random() < 0.5 ? "\u{1F525}" : "\u{1F9CA}";
+        home.curStatusLength = Math.floor(Math.random() * 3) + 1;
+      } else if (home.status !== "" && home.curStatusLength) {
+        home.curStatusLength--;
+        if (home.curStatusLength === 0) {
+          home.status = "";
+        }
+      }
     }
 
     const awayType: Teams | void = getTeamInfo(game.away);
     if (awayType !== undefined) {
       away = awayType;
+      if (Math.random() < 0.4 && away.status === "") {
+        away.status = Math.random() < 0.5 ? "\u{1F525}" : "\u{1F9CA}";
+        away.curStatusLength = Math.floor(Math.random() * 3) + 1;
+      } else if (away.status !== "" && away.curStatusLength) {
+        away.curStatusLength--;
+        if (home.curStatusLength === 0) {
+          away.status = "";
+        }
+      }
     }
 
     //Goals
-    let hGoals: number = getGoals(0, 9, home.rating);
-    let aGoals: number = getGoals(0, 9, away.rating);
+    let hGoals: number = getGoals(
+      0,
+      9,
+      home.status === "\u{1F525}"
+        ? 99
+        : home.status === "\u{1F9CA}"
+        ? 50
+        : home.rating
+    );
+    let aGoals: number = getGoals(
+      0,
+      9,
+      away.status === "\u{1F525}"
+        ? 99
+        : away.status === "\u{1F9CA}"
+        ? 50
+        : away.rating
+    );
 
     // Make more realistic game score
 
     if (hGoals - aGoals >= 4 || aGoals - hGoals >= 4) {
-      if (Math.random() < 0.9) {
-        aGoals += 1;
+      if (Math.random() < 0.75) {
+        if (hGoals < aGoals) {
+          aGoals = hGoals;
+        } else {
+          hGoals = aGoals;
+        }
       }
     }
 
-    // OT or S/O
+    // OT
     let overtime: string = "";
     if (hGoals === aGoals) {
       if (Math.random() > 0.5) {
         hGoals += 1;
-        // away.points += 1;
       } else {
         aGoals += 1;
-        // home.points += 1;
       }
       overtime = "OT";
     }
 
-    // Points
+    // Play Off wins
     if (hGoals > aGoals) {
       home.play_off_round_wins += 1;
     } else {
@@ -234,8 +274,16 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
               }}
               loading="lazy"
             />
+            <Title className="pair__team-status-home" level={4}>
+              {teams[0].status !== "" ? teams[0].status : ""}
+            </Title>
             <Title className="pair__scores" level={4}>
-              {teams[0].play_off_round_wins} {teams[1].play_off_round_wins}
+              {teams[0].play_off_round_wins +
+                " - " +
+                teams[1].play_off_round_wins}
+            </Title>
+            <Title className="pair__team-status-away" level={4}>
+              {teams[1].status !== "" ? teams[1].status : ""}
             </Title>
             <div className="pair__button-container">
               <Button

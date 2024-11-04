@@ -271,6 +271,30 @@ th {
   float: inline-start;
 }
 
+.card__info--position-away,
+.card__info--position-home {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.card__info--status-away,
+.card__info--status-home {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.card__info--result-away,
+.card__info--result-home {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
 .playoff__start-play-off {
   margin-top: 12px;
 }
@@ -332,22 +356,22 @@ th {
 
 .pair__column {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto;
   padding-bottom: 8px;
 }
 
 .pair__team-logo-home {
   grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column-end: 3;
   display: grid;
   width: 100%;
   border-top-left-radius: 8px;
 }
 
 .pair__team-logo-away {
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 5;
   display: grid;
   width: 100%;
   border-top-right-radius: 8px;
@@ -355,16 +379,22 @@ th {
 
 .pair__button-container {
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 5;
   display: inline-grid;
   padding: 8px 48px;
 }
 
-.pair__scores,
+.pair__scores {
+  text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  display: inline-grid;
+}
+
 .pair__games {
   text-align: center;
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 5;
   display: inline-grid;
 }
 
@@ -547,9 +577,17 @@ th {
 
 .cards-row__card-column > .card--hoverable > .ant-card-body {
   margin: 0 16px 16px;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto 1fr auto;
 }
+
 .cards-row__card-column > .card--hoverable > .ant-card-body > .card__title {
   margin-bottom: 0;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .simulate-panel__card > .ant-card > .ant-card-body {

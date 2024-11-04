@@ -36,7 +36,9 @@ export const sml: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ff6600",
-    isPlayOff: false
+    isPlayOff: false,
+    status: "",
+    curStatusLength: 0
   },
   {
     id: 2,
@@ -57,7 +59,9 @@ export const sml: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#f0e68c",
-    isPlayOff: false
+    isPlayOff: false,
+    status: "",
+    curStatusLength: 0
   },
   {
     id: 3,
@@ -78,7 +82,9 @@ export const sml: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#082868",
-    isPlayOff: false
+    isPlayOff: false,
+    status: "",
+    curStatusLength: 0
   },
   {
     id: 4,
@@ -99,7 +105,9 @@ export const sml: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#000000",
-    isPlayOff: false
+    isPlayOff: false,
+    status: "",
+    curStatusLength: 0
   },
   {
     id: 5,
@@ -120,7 +128,9 @@ export const sml: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffffff",
-    isPlayOff: false
+    isPlayOff: false,
+    status: "",
+    curStatusLength: 0
   },
   {
     id: 6,
@@ -141,7 +151,9 @@ export const sml: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#fdcb00",
-    isPlayOff: false
+    isPlayOff: false,
+    status: "",
+    curStatusLength: 0
   },
   {
     id: 7,
@@ -162,7 +174,9 @@ export const sml: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#e87026",
-    isPlayOff: false
+    isPlayOff: false,
+    status: "",
+    curStatusLength: 0
   },
   {
     id: 8,
@@ -183,7 +197,9 @@ export const sml: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#e6e6e6",
-    isPlayOff: false
+    isPlayOff: false,
+    status: "",
+    curStatusLength: 0
   },
   {
     id: 9,
@@ -204,7 +220,9 @@ export const sml: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#000000",
-    isPlayOff: false
+    isPlayOff: false,
+    status: "",
+    curStatusLength: 0
   },
   {
     id: 10,
@@ -225,7 +243,9 @@ export const sml: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ffd300",
-    isPlayOff: false
+    isPlayOff: false,
+    status: "",
+    curStatusLength: 0
   },
   {
     id: 11,
@@ -246,7 +266,9 @@ export const sml: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#000000",
-    isPlayOff: false
+    isPlayOff: false,
+    status: "",
+    curStatusLength: 0
   },
   {
     id: 12,
@@ -267,7 +289,9 @@ export const sml: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#ed1c24",
-    isPlayOff: false
+    isPlayOff: false,
+    status: "",
+    curStatusLength: 0
   },
   {
     id: 13,
@@ -288,7 +312,9 @@ export const sml: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#d8000b",
-    isPlayOff: false
+    isPlayOff: false,
+    status: "",
+    curStatusLength: 0
   },
   {
     id: 14,
@@ -309,7 +335,9 @@ export const sml: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#003172",
-    isPlayOff: false
+    isPlayOff: false,
+    status: "",
+    curStatusLength: 0
   },
   {
     id: 15,
@@ -330,7 +358,9 @@ export const sml: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#d77f21",
-    isPlayOff: false
+    isPlayOff: false,
+    status: "",
+    curStatusLength: 0
   },
   {
     id: 16,
@@ -351,6 +381,8 @@ export const sml: Teams[] = [
     play_off_rank: 0,
     play_off_round_wins: 0,
     color: "#000080",
-    isPlayOff: false
+    isPlayOff: false,
+    status: "",
+    curStatusLength: 0
   }
 ];

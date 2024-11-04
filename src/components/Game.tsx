@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Button, Card, Col, Row, Typography } from "antd";
 import { GameResult, Schedule, Teams } from "../Data/types";
 import Sheet from "./Sheet";
@@ -41,7 +41,7 @@ function Game() {
   };
 
   const buttonHandler = () => {
-    const lastGame: GameResult = Simulate(scheduleList[gameCounter]);
+    const lastGame: GameResult = simulate(scheduleList[gameCounter]);
 
     if (lastGame) {
       setHomeGoals(lastGame.homeGoals);
@@ -50,7 +50,7 @@ function Game() {
     }
   };
 
-  function Simulate(game: Schedule) {
+  function simulate(game: Schedule) {
     let home: Teams = {
       abbreviation: "",
       city: "",
@@ -71,7 +71,9 @@ function Game() {
       play_off_round_wins: 0,
       color: "#ffffff",
       flag: "",
-      isPlayOff: false
+      isPlayOff: false,
+      status: "",
+      curStatusLength: 0
     };
     let away: Teams = {
       abbreviation: "",
@@ -93,7 +95,9 @@ function Game() {
       play_off_round_wins: 0,
       color: "#ffffff",
       flag: "",
-      isPlayOff: false
+      isPlayOff: false,
+      status: "",
+      curStatusLength: 0
     };
     function getGoals(min: number, max: number, rating: number) {
       return Math.round(
@@ -114,22 +118,61 @@ function Game() {
     const homeType: Teams | void = getTeamInfo(game.home);
     if (homeType !== undefined) {
       home = homeType;
+
+      if (Math.random() < 0.25 && home.status === "") {
+        home.status = Math.random() < 0.5 ? "\u{1F525}" : "\u{1F9CA}";
+        home.curStatusLength = Math.floor(Math.random() * 3) + 1;
+      } else if (home.status !== "" && home.curStatusLength) {
+        home.curStatusLength--;
+        if (home.curStatusLength === 0) {
+          home.status = "";
+        }
+      }
     }
 
     const awayType: Teams | void = getTeamInfo(game.away);
     if (awayType !== undefined) {
       away = awayType;
+      if (Math.random() < 0.4 && away.status === "") {
+        away.status = Math.random() < 0.5 ? "\u{1F525}" : "\u{1F9CA}";
+        away.curStatusLength = Math.floor(Math.random() * 3) + 1;
+      } else if (away.status !== "" && away.curStatusLength) {
+        away.curStatusLength--;
+        if (home.curStatusLength === 0) {
+          away.status = "";
+        }
+      }
     }
 
     //Goals
-    let hGoals: number = getGoals(0, 9, home.rating);
-    let aGoals: number = getGoals(0, 9, away.rating);
+    let hGoals: number = getGoals(
+      0,
+      9,
+      home.status === "\u{1F525}"
+        ? 99
+        : home.status === "\u{1F9CA}"
+        ? 50
+        : home.rating
+    );
+    let aGoals: number = getGoals(
+      0,
+      9,
+      away.status === "\u{1F525}"
+        ? 99
+        : away.status === "\u{1F9CA}"
+        ? 50
+        : away.rating
+    );
 
     // Make more realistic game score
 
     if (hGoals - aGoals >= 4 || aGoals - hGoals >= 4) {
-      if (Math.random() < 0.9) {
-        aGoals += 1;
+      if (Math.random() < 0.75) {
+        if (hGoals < aGoals) {
+          aGoals = hGoals;
+        } else {
+          hGoals = aGoals;
+        }
       }
     }
 
@@ -343,6 +386,12 @@ function Game() {
                   </Title>
                   <Title
                     level={5}
+                    className="card__info card__info--status-away"
+                  >
+                    {away.status !== "" ? away.status : ""}
+                  </Title>
+                  <Title
+                    level={5}
                     className="card__info card__info--result-away"
                     style={{
                       color:
@@ -401,6 +450,12 @@ function Game() {
                       : homeRating === 3
                       ? homeRating + "rd"
                       : homeRating + "th"}
+                  </Title>
+                  <Title
+                    level={5}
+                    className="card__info card__info--status-home"
+                  >
+                    {home.status !== "" ? home.status : ""}
                   </Title>
                   <Title
                     level={5}
