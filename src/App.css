@@ -596,9 +596,10 @@ th {
 
 .controls-panel__counter {
   padding: 0 8px !important;
+  margin: 0.8em auto;
 }
 
-.controls-panel__counter > h3 {
+.controls-panel__counter > div > div > h3 {
   margin: 0.4em;
 }
 

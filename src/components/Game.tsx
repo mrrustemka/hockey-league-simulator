@@ -337,6 +337,15 @@ function Game() {
             <Sheet teamsData={teamsUpdate} id={leagueId} />
           </Col>
           <Col className="layout__side-panel" span={10}>
+            <Row>
+              <Card className="controls-panel__counter">
+                <Col span={24}>
+                  <Title level={3}>
+                    Games Left: {scheduleList.length - gameCounter}
+                  </Title>
+                </Col>
+              </Card>
+            </Row>
             <Row className="cards-row">
               <Col className="cards-row__card-column slide-in-left" span={12}>
                 <Card
@@ -514,13 +523,6 @@ function Game() {
                   Next Game
                 </Button>
               </Col>
-              <Card>
-                <Col span={24} className="controls-panel__counter">
-                  <Title level={3}>
-                    {gameCounter + 1}/{scheduleList.length}
-                  </Title>
-                </Col>
-              </Card>
             </Row>
             {scheduleList.slice(gameCounter + 1).length > 0 ? (
               <Row className="upcoming-games slide-in-left">
