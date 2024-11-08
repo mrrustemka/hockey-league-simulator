@@ -58,4 +58,5 @@ export type League = {
   image: string;
   teams: Teams[];
   teamsCount: number;
+  cup: string;
 };
