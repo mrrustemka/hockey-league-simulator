@@ -1,4 +1,4 @@
-﻿import { Input, Typography } from "antd";
+import { Input, Typography } from "antd";
 import { League as TLeague } from "../Data/types";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
