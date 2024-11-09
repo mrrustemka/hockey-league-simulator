@@ -1,0 +1,34 @@
+﻿:root {
+  --padding-default: 20px 40px;
+  --padding-medium: 12px;
+  --padding-small: 8px;
+}
+
+.header,
+.footer {
+  height: auto;
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+}
+
+.header {
+  padding: var(--padding-default);
+}
+
+.footer {
+  padding: var(--padding-default);
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+  .footer {
+    padding: var(--padding-medium);
+  }
+}
+
+@media (max-width: 360px) {
+  .footer {
+    padding: var(--padding-small);
+  }
+}

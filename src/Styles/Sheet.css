@@ -1,0 +1,117 @@
+﻿:root {
+  --table-column-font-size: 20px;
+  --table-column-border-radius: 100%;
+  --table-column-name-height: auto;
+  --table-column-name-width: 18px;
+  --table-column-playoff-bg: #dddddd;
+  --table-column-playoff-color: #121212;
+  --table-column-playoff-font-weight: 500;
+  --table-column-playoff-padding: 1px 0 2px;
+  --table-column-playoff-margin: 2px 4px;
+  --table-column-games-high-bg: #b8dbf3;
+  --table-column-games-medium-bg: #d0e6f57b;
+  --table-column-games-low-bg: #d0e6f527;
+}
+
+.table__column .table__column--name {
+  text-align: left !important;
+}
+
+.table__team-logo,
+.table__column-name,
+.table__column-city,
+.table__column-flag {
+  display: inline;
+  vertical-align: middle;
+}
+
+.table__team-logo,
+.table__column-flag {
+  border-radius: var(--table-column-border-radius);
+}
+
+.table__column-name {
+  font-size: var(--table-column-font-size);
+}
+
+.table__column--rating,
+.table__column--city,
+.table__column--games,
+.table__column--wins,
+.table__column--loses,
+.table__column--loses-ot,
+.table__column--points,
+.table__column--diff {
+  text-align: center;
+}
+
+.table__column-diff--positive {
+  color: rgb(75, 148, 72);
+}
+
+.table__column-diff--negative {
+  color: rgb(208, 2, 27);
+}
+
+.table__column-games--high {
+  background-color: var(--table-column-games-high-bg);
+}
+
+.table__column-games--medium {
+  background-color: var(--table-column-games-medium-bg);
+}
+
+.table__column-games--low {
+  background-color: var(--table-column-games-low-bg);
+}
+
+.table__column-rank {
+  text-align: center;
+}
+
+.table__column-name--isPlayOff {
+  display: inline-block;
+  text-align: center;
+  line-height: 12px;
+  font-weight: var(--table-column-playoff-font-weight);
+  letter-spacing: 0px;
+  width: var(--table-column-name-width);
+  height: var(--table-column-name-height);
+  border-radius: 4px;
+  color: var(--table-column-playoff-color);
+  background: var(--table-column-playoff-bg);
+  margin: var(--table-column-playoff-margin);
+  padding: var(--table-column-playoff-padding);
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+.table-slide-in-left {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: tableSlideInLeft 0.5s forwards;
+}
+
+/* Media Queries */
+
+@media (max-width: 650px) {
+  .table__column--city {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .table__column--diff {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .table__column--wins,
+  .table__column--loses,
+  .table__column--loses-ot {
+    display: none;
+  }
+}

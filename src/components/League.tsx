@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { League as TLeague } from "../Data/types";
 import { useState } from "react";
 import TeamsNumber from "./TeamsNumber";
+import "../Styles/League.css";
 
 const { Title } = Typography;
 

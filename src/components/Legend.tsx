@@ -1,5 +1,4 @@
-import React from "react";
-
+import "../Styles/Legend.css";
 function Legend() {
   return (
     <div className="legend">

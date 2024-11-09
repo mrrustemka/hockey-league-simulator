@@ -1,5 +1,6 @@
 import { Typography } from "antd";
 import { champs } from "../Data/champs";
+import "../Styles/Header.css";
 
 const { Title } = Typography;
 function Header(props: { id: string }) {

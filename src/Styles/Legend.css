@@ -1,0 +1,28 @@
+﻿:root {
+  --legend-margin: 16px;
+  --legend-grid-cols: 1fr 1fr;
+}
+
+.legend {
+  background: var(--white);
+  display: grid;
+  grid-template-columns: var(--legend-grid-cols);
+  grid-template-rows: auto auto;
+}
+
+.legend__column-one,
+.legend__column-two {
+  text-align: left;
+  margin: var(--legend-margin);
+}
+
+.legend__column-one {
+  vertical-align: text-bottom;
+  grid-column: 1;
+}
+
+.legend__header {
+  margin: 0;
+  grid-row: 1;
+  grid-column: 1 / -1;
+}

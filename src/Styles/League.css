@@ -1,0 +1,128 @@
+﻿:root {
+  --team-size: 32px;
+  --team-padding: 4px;
+  --logo-size: 24px;
+  --card-padding: 16px;
+  --link-padding: 8px 20px;
+  --border-radius: 8px;
+  --shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  --transition-time: 0.3s;
+  --hover-scale: 1.1;
+}
+
+.start__team {
+  height: var(--team-size);
+  width: var(--team-size);
+  padding: var(--team-padding);
+  text-align: center;
+  display: inline-block;
+  background-color: transparent;
+}
+
+.start__team--active {
+  background-color: rgba(81, 81, 81, 45%);
+}
+
+.start__team-logo {
+  margin: 0 4px;
+  width: var(--logo-size);
+  height: var(--logo-size);
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.start__card {
+  margin: 0;
+  border-radius: 0;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  height: 100%;
+  padding: var(--card-padding);
+}
+
+.start__card-cover {
+  height: auto;
+  margin: 18px auto;
+  object-fit: none;
+  width: fit-content !important;
+  transition: transform var(--transition-time) ease;
+}
+
+.start__link {
+  display: block;
+  border-color: var(--grey-light);
+  color: var(--white);
+  background-color: rgba(0, 0, 0);
+  box-shadow: none;
+  margin: 8px auto;
+  width: min-content;
+  padding: var(--link-padding);
+  border-radius: var(--border-radius);
+}
+
+.start__link--active {
+  display: block;
+  animation: pulse 1.5s infinite ease-in-out;
+  transition: background-color var(--transition-time) ease;
+}
+
+.start__card__button {
+  background-color: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+  margin: 8px 4px;
+  padding: var(--link-padding);
+  border-radius: var(--border-radius);
+  height: auto;
+}
+
+.start__card__button.pulse {
+  animation: pulse 1.5s infinite;
+}
+
+/* Media Queries */
+@media (max-width: 1000px) {
+  .start__card {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .start__card-cover {
+    scale: 0.7;
+    margin: 0;
+    width: 100% !important;
+    overflow: visible;
+  }
+}
+
+@media (max-width: 550px) {
+  .start__card-cover {
+    scale: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  .start__card-cover {
+    scale: 0.9;
+  }
+}
+
+@media (hover: hover) {
+  .start__card:hover .start__card-cover {
+    transform: scale(var(--hover-scale));
+  }
+
+  .start__link:hover {
+    color: var(--white);
+  }
+
+  .start__link--active:hover {
+    background-color: var(--grey-dark);
+  }
+
+  .start__card__button:hover {
+    color: var(--white) !important;
+    border-color: var(--grey-light) !important;
+  }
+}

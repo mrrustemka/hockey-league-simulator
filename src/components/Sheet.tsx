@@ -2,6 +2,7 @@ import { Table } from "antd";
 import { Teams } from "../Data/types";
 import { v4 as uuidv4 } from "uuid";
 import Legend from "./Legend";
+import "../Styles/Sheet.css";
 
 function Sheet(props: { teamsData: Teams[]; id: string }) {
   let rank: number = 0;

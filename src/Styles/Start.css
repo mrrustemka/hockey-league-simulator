@@ -1,0 +1,15 @@
+﻿.start {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  background-color: var(--white);
+}
+
+/* Media Queries */
+
+@media (max-width: 550px) {
+  .start {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}

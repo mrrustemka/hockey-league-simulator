@@ -1,0 +1,172 @@
+﻿:root {
+  --padding-small: 8px;
+  --padding-medium: 18px;
+  --padding-large: 20px 40px;
+  --transition-ease: 0.3s ease;
+  --button-bg-color: rgba(0, 0, 0);
+  --button-color: var(--white);
+  --button-border-color: var(--grey-light);
+  --button-padding: 8px 20px;
+  --button-radius: 8px;
+  --grid-auto: auto;
+  --grid-full-width: 100%;
+}
+
+.cards-row,
+.controls-panel {
+  margin: var(--padding-medium);
+}
+
+.card--hoverable {
+  width: 98%;
+  transition: transform var(--transition-ease),
+    box-shadow var(--transition-ease);
+}
+
+.simulate-panel {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.simulate-panel__score,
+.controls-panel__counter > div > div > h3 {
+  display: inline;
+}
+
+.controls-panel__button {
+  margin: var(--padding-small);
+  transition: opacity var(--transition-ease);
+}
+
+.controls-panel__button:disabled {
+  opacity: 0.5;
+}
+
+.controls-panel__button:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+.controls-panel__button--simulate.pulse {
+  animation: pulse 1.5s infinite;
+}
+
+.playoff__container,
+.layout {
+  display: grid;
+}
+
+.playoff__start-play-off,
+.controls-panel__button--simulate,
+.controls-panel__button--next {
+  background-color: var(--button-bg-color);
+  color: var(--button-color);
+  border-color: var(--button-border-color);
+  margin: 8px 4px;
+  padding: var(--button-padding);
+  border-radius: var(--button-radius);
+  height: auto;
+}
+
+.layout {
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: var(--grid-auto);
+}
+
+.layout__content,
+.playoff__container-panel,
+.layout__side-panel {
+  max-width: var(--grid-full-width);
+}
+
+.cards-row__card-column > .card--hoverable > .ant-card-body {
+  margin: 0 var(--padding-medium);
+  display: grid;
+  grid-template-rows: var(--grid-auto) var(--grid-auto);
+  grid-template-columns: var(--grid-auto) 1fr var(--grid-auto);
+}
+
+.controls-panel__counter {
+  padding: 0 var(--padding-small) !important;
+  margin: 0.8em auto;
+}
+
+.upcoming-games {
+  flex-direction: column;
+}
+
+.playoff__container > div {
+  max-width: var(--grid-full-width);
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+.upcoming-games__title {
+  margin: auto;
+  color: var(--button-color) !important;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+  .layout,
+  .playoff__container {
+    grid-template-columns: var(--grid-auto);
+    grid-template-rows: var(--grid-auto) var(--grid-auto);
+    overflow: hidden;
+  }
+
+  .layout__side-panel {
+    display: grid;
+    grid-template-columns: var(--grid-auto) var(--grid-auto);
+    grid-template-rows: repeat(3, var(--grid-auto));
+    max-width: var(--grid-full-width);
+  }
+
+  .simulate-panel,
+  .controls-panel {
+    grid-column: 1 / span 2;
+  }
+
+  .upcoming-games {
+    grid-column: 2 / span 1;
+  }
+}
+
+@media (max-width: 650px) {
+  .upcoming-games {
+    grid-row: 4 / span 1;
+  }
+}
+
+@media (max-width: 360px) {
+  .layout__side-panel {
+    max-width: 95%;
+    grid-template-columns: var(--grid-auto);
+    grid-template-rows: repeat(4, var(--grid-auto));
+  }
+}
+
+@media (hover: hover) {
+  .card--hoverable:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .controls-panel__buttons:hover {
+    border-color: var(--button-color);
+    color: var(--button-bg-color);
+  }
+
+  .controls-panel__buttons:hover > span {
+    color: var(--button-bg-color) !important;
+  }
+
+  .controls-panel__button--simulate:hover,
+  .controls-panel__button--next:hover,
+  .playoff__start-play-off:hover {
+    color: var(--button-color) !important;
+    border-color: var(--button-border-color) !important;
+  }
+}

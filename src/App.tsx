@@ -1,10 +1,10 @@
 import { FC } from "react";
-import "./App.css";
-import Game from "./Components/Game";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Game from "./Components/Game";
 import PlayOff from "./Components/Play-off/PlayOff";
 import Start from "./Components/Start";
 import Footer from "./Components/Footer";
+import "./Styles/App.css";
 
 const router = createBrowserRouter([
   {

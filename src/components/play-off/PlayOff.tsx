@@ -6,6 +6,7 @@ import { Teams } from "../../Data/types";
 import Header from "../Header";
 import { Link } from "react-router-dom";
 import { champs } from "../../Data/champs";
+import "../../Styles/PlayOff.css";
 
 function PlayOff() {
   const [isRound, setIsRound] = useState<boolean>(true);

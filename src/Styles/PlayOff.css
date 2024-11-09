@@ -1,0 +1,48 @@
+﻿:root {
+  --playoff-padding-bottom: 20px;
+  --playoff-link-padding: 8px 20px;
+  --playoff-border-radius: 8px;
+  --playoff-bg-color: rgba(0, 0, 0);
+  --playoff-color: var(--white);
+  --playoff-border-color: var(--grey-light);
+  --playoff-link-animation: pulse 1.5s infinite ease-in-out;
+  --playoff-logo-max-width: 50%;
+}
+
+.playoff {
+  text-align: center;
+  padding-bottom: var(--playoff-padding-bottom);
+}
+
+.playoff__champion-details {
+  animation: championEntrance 0.8s ease-in-out forwards;
+}
+
+.playoff__champion-logo {
+  margin: 8px;
+  width: auto;
+  max-width: var(--playoff-logo-max-width);
+  animation: pop 0.6s ease-in-out;
+}
+
+.playoff__champion-name,
+.playoff__champion-link {
+  display: block;
+}
+
+.playoff__champion-link {
+  border-color: var(--playoff-border-color);
+  color: var(--playoff-color);
+  background-color: var(--playoff-bg-color);
+  box-shadow: none;
+  margin: 8px auto;
+  padding: var(--playoff-link-padding);
+  border-radius: var(--playoff-border-radius);
+  width: fit-content;
+  text-decoration: none;
+  animation: var(--playoff-link-animation);
+}
+
+.playoff__champion-heading {
+  animation: textGlow 2s infinite alternate;
+}
