@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button, Card, Col, Row, Typography } from "antd";
 import { GameResult, Schedule, Teams } from "../Data/types";
+import { whiteTeams } from "../Data/whiteList";
 import Sheet from "./Sheet";
 import UpcomingGame from "./UpcomingGame";
 import { Link } from "react-router-dom";
@@ -74,7 +75,9 @@ function Game() {
       flag: "",
       isPlayOff: false,
       status: "",
-      curStatusLength: 0
+      curStatusLength: 0,
+      chartData: [],
+      chartLabels: []
     };
     let away: Teams = {
       abbreviation: "",
@@ -98,7 +101,9 @@ function Game() {
       flag: "",
       isPlayOff: false,
       status: "",
-      curStatusLength: 0
+      curStatusLength: 0,
+      chartData: [],
+      chartLabels: []
     };
     function getGoals(min: number, max: number, rating: number) {
       return Math.round(
@@ -168,7 +173,7 @@ function Game() {
     // Make more realistic game score
 
     if (hGoals - aGoals >= 4 || aGoals - hGoals >= 4) {
-      if (Math.random() < 0.75) {
+      if (Math.random() < 0.4) {
         if (hGoals < aGoals) {
           aGoals = hGoals;
         } else {
@@ -224,10 +229,12 @@ function Game() {
     home.goals_against += aGoals;
     home.game_counter += 1;
     home.goals_diff += hGoals - aGoals;
+    home.chartLabels?.push(away.abbreviation);
     away.goals_for += aGoals;
     away.goals_against += hGoals;
     away.game_counter += 1;
     away.goals_diff += aGoals - hGoals;
+    away.chartLabels?.push(home.abbreviation);
 
     let result: GameResult = {
       home: home.abbreviation,
@@ -260,6 +267,8 @@ function Game() {
             : { ...checkTeam }
         );
     }
+    home.chartData?.push(sortedTeams.indexOf(home) + 1);
+    away.chartData?.push(sortedTeams.indexOf(away) + 1);
     setTeamsUpdate(sortedTeams);
     setIsSimulate(true);
     localStorage.setItem("teamsList", JSON.stringify(sortedTeams));
@@ -317,19 +326,6 @@ function Game() {
     );
     const homeRating: number = getTeamRating(scheduleList[gameCounter].home);
     const awayRating: number = getTeamRating(scheduleList[gameCounter].away);
-    const whiteColors: string[] = [
-      "#000000",
-      "#002255",
-      "#0a1d3d",
-      "#003366",
-      "#15377e",
-      "#000080",
-      "#082868",
-      "#001489",
-      "#041e42",
-      "#00205b",
-      "#00205b"
-    ];
     return (
       <>
         <Header id={leagueId} />
@@ -349,144 +345,148 @@ function Game() {
             </Row>
             <Row className="cards-row">
               <Col className="cards-row__card-column slide-in-left" span={12}>
-                <Card
-                  className="card card--hoverable"
-                  hoverable
-                  cover={
-                    <img
-                      alt={away.name + "Logo"}
-                      src={away.logo}
-                      loading="lazy"
-                    />
-                  }
-                  style={{
-                    backgroundColor: away.color
-                  }}
-                >
-                  <Title
-                    className="card__title"
-                    level={4}
+                <Link to={`/hockey-league-simulator/season/team/${away.id}`}>
+                  <Card
+                    className="card card--hoverable"
+                    hoverable
+                    cover={
+                      <img
+                        alt={away.name + "Logo"}
+                        src={away.logo}
+                        loading="lazy"
+                      />
+                    }
                     style={{
-                      color:
-                        away.color && whiteColors.includes(away.color)
-                          ? "#ffffff"
-                          : "initial"
+                      backgroundColor: away.color
                     }}
                   >
-                    {away.abbreviation}
-                  </Title>
-                  <Title
-                    level={5}
-                    className="card__info card__info--position-away"
-                    style={{
-                      color:
-                        away.color && whiteColors.includes(away.color)
-                          ? "#ffffff"
-                          : "initial",
-                      opacity:
-                        away.color && whiteColors.includes(away.color)
-                          ? "1"
-                          : "0.45"
-                    }}
-                  >
-                    {awayRating === 1
-                      ? awayRating + "st"
-                      : awayRating === 2
-                      ? awayRating + "nd"
-                      : awayRating === 3
-                      ? awayRating + "rd"
-                      : awayRating + "th"}
-                  </Title>
-                  <Title
-                    level={5}
-                    className="card__info card__info--status-away"
-                  >
-                    {away.status !== "" ? away.status : ""}
-                  </Title>
-                  <Title
-                    level={5}
-                    className="card__info card__info--result-away"
-                    style={{
-                      color:
-                        away.color && whiteColors.includes(away.color)
-                          ? "#ffffff"
-                          : "initial",
-                      opacity:
-                        away.color && whiteColors.includes(away.color)
-                          ? "1"
-                          : "0.45"
-                    }}
-                  >
-                    {away.wins}-{away.loses}-{away.loses_ot}
-                  </Title>
-                </Card>
+                    <Title
+                      className="card__title"
+                      level={4}
+                      style={{
+                        color:
+                          away.color && whiteTeams.includes(away.color)
+                            ? "#ffffff"
+                            : "initial"
+                      }}
+                    >
+                      {away.abbreviation}
+                    </Title>
+                    <Title
+                      level={5}
+                      className="card__info card__info--position-away"
+                      style={{
+                        color:
+                          away.color && whiteTeams.includes(away.color)
+                            ? "#ffffff"
+                            : "initial",
+                        opacity:
+                          away.color && whiteTeams.includes(away.color)
+                            ? "1"
+                            : "0.45"
+                      }}
+                    >
+                      {awayRating === 1
+                        ? awayRating + "st"
+                        : awayRating === 2
+                        ? awayRating + "nd"
+                        : awayRating === 3
+                        ? awayRating + "rd"
+                        : awayRating + "th"}
+                    </Title>
+                    <Title
+                      level={5}
+                      className="card__info card__info--status-away"
+                    >
+                      {away.status !== "" ? away.status : ""}
+                    </Title>
+                    <Title
+                      level={5}
+                      className="card__info card__info--result-away"
+                      style={{
+                        color:
+                          away.color && whiteTeams.includes(away.color)
+                            ? "#ffffff"
+                            : "initial",
+                        opacity:
+                          away.color && whiteTeams.includes(away.color)
+                            ? "1"
+                            : "0.45"
+                      }}
+                    >
+                      {away.wins}-{away.loses}-{away.loses_ot}
+                    </Title>
+                  </Card>
+                </Link>
               </Col>
               <Col className="cards-row__card-column" span={12}>
-                <Card
-                  className="card card--hoverable"
-                  hoverable
-                  cover={<img alt={home.name + "Logo"} src={home.logo} />}
-                  style={{
-                    backgroundColor: home.color
-                  }}
-                >
-                  <Title
-                    className="card__title"
-                    level={4}
+                <Link to={`/hockey-league-simulator/season/team/${home.id}`}>
+                  <Card
+                    className="card card--hoverable"
+                    hoverable
+                    cover={<img alt={home.name + "Logo"} src={home.logo} />}
                     style={{
-                      color:
-                        home.color && whiteColors.includes(home.color)
-                          ? "#ffffff"
-                          : "initial"
+                      backgroundColor: home.color
                     }}
                   >
-                    {home.abbreviation}
-                  </Title>
-                  <Title
-                    level={5}
-                    className="card__info card__info--position-home"
-                    style={{
-                      color:
-                        home.color && whiteColors.includes(home.color)
-                          ? "#ffffff"
-                          : "initial",
-                      opacity:
-                        home.color && whiteColors.includes(home.color)
-                          ? "1"
-                          : "0.45"
-                    }}
-                  >
-                    {homeRating === 1
-                      ? homeRating + "st"
-                      : homeRating === 2
-                      ? homeRating + "nd"
-                      : homeRating === 3
-                      ? homeRating + "rd"
-                      : homeRating + "th"}
-                  </Title>
-                  <Title
-                    level={5}
-                    className="card__info card__info--status-home"
-                  >
-                    {home.status !== "" ? home.status : ""}
-                  </Title>
-                  <Title
-                    level={5}
-                    className="card__info card__info--result-home"
-                    style={{
-                      color:
-                        home.color && whiteColors.includes(home.color)
-                          ? "#ffffff"
-                          : "initial",
-                      opacity:
-                        home.color && whiteColors.includes(home.color)
-                          ? "1"
-                          : "0.45"
-                    }}
-                  >
-                    {home.wins}-{home.loses}-{home.loses_ot}
-                  </Title>
-                </Card>
+                    <Title
+                      className="card__title"
+                      level={4}
+                      style={{
+                        color:
+                          home.color && whiteTeams.includes(home.color)
+                            ? "#ffffff"
+                            : "initial"
+                      }}
+                    >
+                      {home.abbreviation}
+                    </Title>
+                    <Title
+                      level={5}
+                      className="card__info card__info--position-home"
+                      style={{
+                        color:
+                          home.color && whiteTeams.includes(home.color)
+                            ? "#ffffff"
+                            : "initial",
+                        opacity:
+                          home.color && whiteTeams.includes(home.color)
+                            ? "1"
+                            : "0.45"
+                      }}
+                    >
+                      {homeRating === 1
+                        ? homeRating + "st"
+                        : homeRating === 2
+                        ? homeRating + "nd"
+                        : homeRating === 3
+                        ? homeRating + "rd"
+                        : homeRating + "th"}
+                    </Title>
+                    <Title
+                      level={5}
+                      className="card__info card__info--status-home"
+                    >
+                      {home.status !== "" ? home.status : ""}
+                    </Title>
+                    <Title
+                      level={5}
+                      className="card__info card__info--result-home"
+                      style={{
+                        color:
+                          home.color && whiteTeams.includes(home.color)
+                            ? "#ffffff"
+                            : "initial",
+                        opacity:
+                          home.color && whiteTeams.includes(home.color)
+                            ? "1"
+                            : "0.45"
+                      }}
+                    >
+                      {home.wins}-{home.loses}-{home.loses_ot}
+                    </Title>
+                  </Card>
+                </Link>
               </Col>
             </Row>
             <Row className="simulate-panel">

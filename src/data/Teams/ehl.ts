@@ -72,7 +72,9 @@ export const ehl: Teams[] = [
     flag: swe,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 2,
@@ -96,7 +98,9 @@ export const ehl: Teams[] = [
     flag: swe,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 3,
@@ -120,7 +124,9 @@ export const ehl: Teams[] = [
     flag: swe,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 4,
@@ -144,7 +150,9 @@ export const ehl: Teams[] = [
     flag: swi,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 5,
@@ -168,7 +176,9 @@ export const ehl: Teams[] = [
     flag: swi,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 6,
@@ -192,7 +202,9 @@ export const ehl: Teams[] = [
     flag: swi,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 7,
@@ -216,7 +228,9 @@ export const ehl: Teams[] = [
     flag: fin,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 8,
@@ -240,7 +254,9 @@ export const ehl: Teams[] = [
     flag: fin,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 9,
@@ -264,7 +280,9 @@ export const ehl: Teams[] = [
     flag: fin,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 10,
@@ -288,7 +306,9 @@ export const ehl: Teams[] = [
     flag: fin,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 11,
@@ -312,7 +332,9 @@ export const ehl: Teams[] = [
     flag: ger,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 12,
@@ -336,7 +358,9 @@ export const ehl: Teams[] = [
     flag: ger,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 13,
@@ -360,7 +384,9 @@ export const ehl: Teams[] = [
     flag: ger,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 14,
@@ -384,7 +410,9 @@ export const ehl: Teams[] = [
     flag: ger,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 15,
@@ -408,7 +436,9 @@ export const ehl: Teams[] = [
     flag: ger,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 16,
@@ -432,7 +462,9 @@ export const ehl: Teams[] = [
     flag: cze,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 17,
@@ -456,7 +488,9 @@ export const ehl: Teams[] = [
     flag: cze,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 18,
@@ -480,7 +514,9 @@ export const ehl: Teams[] = [
     flag: swi,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 19,
@@ -504,7 +540,9 @@ export const ehl: Teams[] = [
     flag: ger,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 20,
@@ -528,7 +566,9 @@ export const ehl: Teams[] = [
     flag: swe,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 21,
@@ -552,7 +592,9 @@ export const ehl: Teams[] = [
     flag: swi,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 22,
@@ -576,7 +618,9 @@ export const ehl: Teams[] = [
     flag: fin,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 23,
@@ -600,7 +644,9 @@ export const ehl: Teams[] = [
     flag: slk,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 24,
@@ -624,7 +670,9 @@ export const ehl: Teams[] = [
     flag: slk,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 25,
@@ -648,7 +696,9 @@ export const ehl: Teams[] = [
     flag: swe,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 26,
@@ -672,7 +722,9 @@ export const ehl: Teams[] = [
     flag: swe,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 27,
@@ -696,7 +748,9 @@ export const ehl: Teams[] = [
     flag: swi,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 28,
@@ -720,7 +774,9 @@ export const ehl: Teams[] = [
     flag: fin,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 29,
@@ -744,7 +800,9 @@ export const ehl: Teams[] = [
     flag: eng,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 30,
@@ -768,7 +826,9 @@ export const ehl: Teams[] = [
     flag: gbr,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 31,
@@ -792,7 +852,9 @@ export const ehl: Teams[] = [
     flag: nor,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 32,
@@ -816,7 +878,9 @@ export const ehl: Teams[] = [
     flag: ita,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 33,
@@ -840,7 +904,9 @@ export const ehl: Teams[] = [
     flag: swe,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 34,
@@ -864,7 +930,9 @@ export const ehl: Teams[] = [
     flag: swi,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 35,
@@ -888,7 +956,9 @@ export const ehl: Teams[] = [
     flag: ger,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 36,
@@ -912,7 +982,9 @@ export const ehl: Teams[] = [
     flag: cze,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 37,
@@ -936,7 +1008,9 @@ export const ehl: Teams[] = [
     flag: fin,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 38,
@@ -960,7 +1034,9 @@ export const ehl: Teams[] = [
     flag: cze,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 39,
@@ -984,6 +1060,8 @@ export const ehl: Teams[] = [
     flag: cze,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   }
 ];

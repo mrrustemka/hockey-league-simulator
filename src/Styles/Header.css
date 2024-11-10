@@ -26,7 +26,8 @@
   display: inline-block;
 }
 
-.header__image {
+.header__image,
+.header__cup {
   height: var(--image-height-large);
   display: inline-block;
   vertical-align: top;
@@ -53,7 +54,8 @@
     font-size: x-large;
   }
 
-  .header__image {
+  .header__image,
+  .header__cup {
     height: var(--image-height-small);
   }
 }

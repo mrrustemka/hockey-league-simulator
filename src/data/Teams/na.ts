@@ -36,7 +36,9 @@ export const na: Teams[] = [
     color: "#0068b6",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 2,
@@ -59,7 +61,9 @@ export const na: Teams[] = [
     color: "#1d72ae",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 3,
@@ -82,7 +86,9 @@ export const na: Teams[] = [
     color: "#000000",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 4,
@@ -105,7 +111,9 @@ export const na: Teams[] = [
     color: "#ffee00",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 5,
@@ -128,7 +136,9 @@ export const na: Teams[] = [
     color: "#e40021",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 6,
@@ -151,7 +161,9 @@ export const na: Teams[] = [
     color: "#000000",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 7,
@@ -174,7 +186,9 @@ export const na: Teams[] = [
     color: "#ffffff",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 8,
@@ -197,7 +211,9 @@ export const na: Teams[] = [
     color: "#002361",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 9,
@@ -220,7 +236,9 @@ export const na: Teams[] = [
     color: "#6d182d",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 10,
@@ -243,7 +261,9 @@ export const na: Teams[] = [
     color: "#ffcd01",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 11,
@@ -266,7 +286,9 @@ export const na: Teams[] = [
     color: "#ffd600",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 12,
@@ -289,7 +311,9 @@ export const na: Teams[] = [
     color: "#01316c",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 13,
@@ -312,7 +336,9 @@ export const na: Teams[] = [
     color: "#c21938",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 14,
@@ -335,6 +361,8 @@ export const na: Teams[] = [
     color: "#000000",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   }
 ];

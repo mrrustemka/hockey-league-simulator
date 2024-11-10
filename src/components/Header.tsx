@@ -1,10 +1,10 @@
 import { Typography } from "antd";
 import { champs } from "../Data/champs";
+import { whiteLeagues } from "../Data/whiteList";
 import "../Styles/Header.css";
 
 const { Title } = Typography;
 function Header(props: { id: string }) {
-  const whiteList: string[] = ["5"];
   return (
     <header className="header">
       {props.id === "" ? (
@@ -15,7 +15,7 @@ function Header(props: { id: string }) {
           src={champs.find((champ) => champ.id === props.id)?.image}
           alt={champs.find((champ) => champ.id === props.id)?.name + " Logo"}
           style={{
-            backgroundColor: whiteList.includes(props.id)
+            backgroundColor: whiteLeagues.includes(props.id)
               ? "#ffffff"
               : "transparent"
           }}
@@ -32,7 +32,7 @@ function Header(props: { id: string }) {
         <></>
       ) : (
         <img
-          className="header__image"
+          className="header__cup"
           src={champs.find((champ) => champ.id === props.id)?.cup}
           alt={champs.find((champ) => champ.id === props.id)?.name + " Logo"}
           loading="lazy"

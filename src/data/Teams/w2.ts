@@ -34,7 +34,9 @@ export const w2: Teams[] = [
     color: "#ffffff",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     abbreviation: "POL",
@@ -57,7 +59,9 @@ export const w2: Teams[] = [
     color: "#ffffff",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     abbreviation: "ITA",
@@ -80,7 +84,9 @@ export const w2: Teams[] = [
     color: "#0066bc",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     abbreviation: "SKR",
@@ -103,7 +109,9 @@ export const w2: Teams[] = [
     color: "#cd2e3a",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     abbreviation: "ROM",
@@ -126,7 +134,9 @@ export const w2: Teams[] = [
     color: "#fcd116",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     abbreviation: "JAP",
@@ -149,7 +159,9 @@ export const w2: Teams[] = [
     color: "#000000",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     abbreviation: "CHI",
@@ -172,7 +184,9 @@ export const w2: Teams[] = [
     color: "#fbea0e",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     abbreviation: "EST",
@@ -195,7 +209,9 @@ export const w2: Teams[] = [
     color: "#0073cf",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     abbreviation: "LIT",
@@ -218,7 +234,9 @@ export const w2: Teams[] = [
     color: "#000000",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     abbreviation: "CRO",
@@ -241,7 +259,9 @@ export const w2: Teams[] = [
     color: "#ffffff",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     abbreviation: "SPA",
@@ -264,7 +284,9 @@ export const w2: Teams[] = [
     color: "#0000f0",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     abbreviation: "UKR",
@@ -287,7 +309,9 @@ export const w2: Teams[] = [
     color: "#ffffff",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   }
   // {
   //   abbreviation: "NET",
@@ -311,5 +335,7 @@ export const w2: Teams[] = [
   // , isPlayOff: false,
   //   status: "",
   //   curStatusLength: 0
+  //   ,chartData: [],
+  // chartLabels: []
   // }
 ];

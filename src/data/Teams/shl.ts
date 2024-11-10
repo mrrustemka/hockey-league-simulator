@@ -36,7 +36,9 @@ export const shl: Teams[] = [
     color: "#f07831",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 2,
@@ -59,7 +61,9 @@ export const shl: Teams[] = [
     color: "#000000",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 3,
@@ -82,7 +86,9 @@ export const shl: Teams[] = [
     color: "#00573f",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 4,
@@ -105,7 +111,9 @@ export const shl: Teams[] = [
     color: "#ffffff",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 5,
@@ -128,7 +136,9 @@ export const shl: Teams[] = [
     color: "#ec3e34",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 6,
@@ -151,7 +161,9 @@ export const shl: Teams[] = [
     color: "#ffcd00",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 7,
@@ -174,7 +186,9 @@ export const shl: Teams[] = [
     color: "#001489",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 8,
@@ -197,7 +211,9 @@ export const shl: Teams[] = [
     color: "#003690",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 9,
@@ -220,7 +236,9 @@ export const shl: Teams[] = [
     color: "#ffffff",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 10,
@@ -243,7 +261,9 @@ export const shl: Teams[] = [
     color: "#c12823",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 11,
@@ -266,7 +286,9 @@ export const shl: Teams[] = [
     color: "#e01c21",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 12,
@@ -289,7 +311,9 @@ export const shl: Teams[] = [
     color: "#000000",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 13,
@@ -312,7 +336,9 @@ export const shl: Teams[] = [
     color: "#04234d",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 14,
@@ -335,6 +361,8 @@ export const shl: Teams[] = [
     color: "#0d4082",
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   }
 ];

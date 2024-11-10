@@ -3,6 +3,7 @@ import { Teams } from "../Data/types";
 import { v4 as uuidv4 } from "uuid";
 import Legend from "./Legend";
 import "../Styles/Sheet.css";
+import { Link } from "react-router-dom";
 
 function Sheet(props: { teamsData: Teams[]; id: string }) {
   let rank: number = 0;
@@ -40,31 +41,31 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
           dataIndex="name"
           key="team"
           render={(dataIndex) => {
-            const logo = props.teamsData.find(
+            const team = props.teamsData.find(
               (item: { name: string }) => item.name === dataIndex
-            )?.logo;
-            const isPlayOff = props.teamsData.find(
-              (item: { name: string }) => item.name === dataIndex
-            )?.isPlayOff;
-            const status = props.teamsData.find(
-              (item: { name: string }) => item.name === dataIndex
-            )?.status;
+            );
+
+            const logo = team?.logo;
+            const isPlayOff = team?.isPlayOff;
+            const status = team?.status;
+            const teamId = team?.id;
+
             return (
               <div className="table__team" key={uuidv4()}>
-                {isPlayOff ? (
+                {isPlayOff && (
                   <div className="table__column-name--isPlayOff">x</div>
-                ) : (
-                  <></>
                 )}
                 <img
                   src={logo}
-                  alt={dataIndex + " Logo"}
-                  width={"16px"}
+                  alt={`${dataIndex} Logo`}
+                  width="16px"
                   className="table__team-logo"
                   loading="lazy"
                 />
                 <p className="table__column-name">
-                  {" " + dataIndex + "" + status}
+                  <Link to={`/hockey-league-simulator/season/team/${teamId}`}>
+                    {` ${dataIndex} ${status}`}
+                  </Link>
                 </p>
               </div>
             );

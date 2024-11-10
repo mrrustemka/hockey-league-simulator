@@ -57,7 +57,9 @@ export const nhl: Teams[] = [
     flag: can,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 2,
@@ -81,7 +83,9 @@ export const nhl: Teams[] = [
     flag: can,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 3,
@@ -105,7 +109,9 @@ export const nhl: Teams[] = [
     flag: can,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 4,
@@ -129,7 +135,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 5,
@@ -153,7 +161,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 6,
@@ -177,7 +187,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 7,
@@ -201,7 +213,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 8,
@@ -225,7 +239,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 9,
@@ -249,7 +265,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 10,
@@ -273,7 +291,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 11,
@@ -297,7 +317,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 12,
@@ -321,7 +343,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 13,
@@ -345,7 +369,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 14,
@@ -369,7 +395,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 15,
@@ -393,7 +421,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 16,
@@ -417,7 +447,9 @@ export const nhl: Teams[] = [
     flag: can,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 17,
@@ -441,7 +473,9 @@ export const nhl: Teams[] = [
     flag: can,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 18,
@@ -465,7 +499,9 @@ export const nhl: Teams[] = [
     flag: can,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 19,
@@ -489,7 +525,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 20,
@@ -513,7 +551,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 21,
@@ -537,7 +577,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 22,
@@ -561,7 +603,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 23,
@@ -585,7 +629,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 24,
@@ -609,7 +655,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 25,
@@ -633,7 +681,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 26,
@@ -657,7 +707,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 27,
@@ -681,7 +733,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 28,
@@ -705,7 +759,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 29,
@@ -729,7 +785,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 30,
@@ -753,7 +811,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 31,
@@ -777,7 +837,9 @@ export const nhl: Teams[] = [
     flag: usa,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   },
   {
     id: 32,
@@ -801,6 +863,8 @@ export const nhl: Teams[] = [
     flag: can,
     isPlayOff: false,
     status: "",
-    curStatusLength: 0
+    curStatusLength: 0,
+    chartData: [],
+    chartLabels: []
   }
 ];

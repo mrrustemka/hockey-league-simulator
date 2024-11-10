@@ -5,10 +5,11 @@ import PlayOff from "./Components/Play-off/PlayOff";
 import Start from "./Components/Start";
 import Footer from "./Components/Footer";
 import "./Styles/App.css";
+import Team from "./Components/Team";
 
 const router = createBrowserRouter([
   {
-    path: "hockey-league-simulator",
+    path: "/hockey-league-simulator",
     element: (
       <div className="app__div">
         <Start />
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
     )
   },
   {
-    path: "hockey-league-simulator/season",
+    path: "/hockey-league-simulator/season",
     element: (
       <div className="app__div">
         <Game />
@@ -24,10 +25,18 @@ const router = createBrowserRouter([
     )
   },
   {
-    path: "hockey-league-simulator/season/playoff",
+    path: "/hockey-league-simulator/season/playoff",
     element: (
       <div className="app__div">
         <PlayOff />
+      </div>
+    )
+  },
+  {
+    path: "/hockey-league-simulator/season/team/:teamId",
+    element: (
+      <div className="app__div">
+        <Team />
       </div>
     )
   }

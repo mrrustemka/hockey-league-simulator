@@ -31,6 +31,10 @@
   border-radius: 0 !important;
 }
 
+.ant-card {
+  margin: 8px auto;
+}
+
 /* Media Queries */
 @media (max-width: 1000px) {
   .upcoming-games-card__container {

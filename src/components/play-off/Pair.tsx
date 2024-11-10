@@ -114,7 +114,9 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
       flag: "",
       isPlayOff: false,
       status: "",
-      curStatusLength: 0
+      curStatusLength: 0,
+      chartData: [],
+      chartLabels: []
     };
     let away: Teams = {
       abbreviation: "",
@@ -138,7 +140,9 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
       flag: "",
       isPlayOff: false,
       status: "",
-      curStatusLength: 0
+      curStatusLength: 0,
+      chartData: [],
+      chartLabels: []
     };
     function getTeamInfo(team: string): Teams {
       const foundTeam = teams.find(
