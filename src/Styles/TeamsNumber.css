@@ -64,11 +64,13 @@
 }
 
 @media (hover: hover) {
-  .start__link:hover {
+  .start__link:hover,
+  .start__card__button:hover {
     color: var(--white);
   }
 
-  .start__link--active:hover {
+  .start__link--active:hover,
+  .start__card__button:hover {
     background-color: var(--grey-dark);
   }
 }

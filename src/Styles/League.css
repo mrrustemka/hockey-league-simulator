@@ -38,6 +38,7 @@
   overflow: hidden;
   height: 100%;
   padding: var(--card-padding);
+  width: 100%;
 }
 
 .start__card-cover {
@@ -74,6 +75,7 @@
   padding: var(--link-padding);
   border-radius: var(--border-radius);
   height: auto;
+  cursor: pointer;
 }
 
 .start__card__button.pulse {
@@ -123,6 +125,5 @@
 
   .start__card__button:hover {
     color: var(--white) !important;
-    border-color: var(--grey-light) !important;
   }
 }
