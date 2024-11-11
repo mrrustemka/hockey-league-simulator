@@ -130,10 +130,11 @@ function Game() {
         home.curStatusLength = Math.floor(Math.random() * 3) + 1;
       } else if (home.status !== "" && home.curStatusLength) {
         home.curStatusLength--;
-        if (home.curStatusLength === 0) {
-          home.status = "";
-        }
       }
+    }
+
+    if (home.curStatusLength === 0) {
+      home.status = "";
     }
 
     const awayType: Teams | void = getTeamInfo(game.away);
@@ -144,10 +145,11 @@ function Game() {
         away.curStatusLength = Math.floor(Math.random() * 3) + 1;
       } else if (away.status !== "" && away.curStatusLength) {
         away.curStatusLength--;
-        if (home.curStatusLength === 0) {
-          away.status = "";
-        }
       }
+    }
+
+    if (away.curStatusLength === 0) {
+      away.status = "";
     }
 
     //Goals
@@ -173,7 +175,7 @@ function Game() {
     // Make more realistic game score
 
     if (hGoals - aGoals >= 4 || aGoals - hGoals >= 4) {
-      if (Math.random() < 0.4) {
+      if (Math.random() < 0.5) {
         if (hGoals < aGoals) {
           aGoals = hGoals;
         } else {
