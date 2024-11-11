@@ -20,18 +20,40 @@ function Team() {
   const chartLabels = team.chartLabels || [];
   const color = team.color || "";
   const leagueId: string = JSON.parse(localStorage.getItem("leagueId") || "");
+  const playOffTeams: number =
+    JSON.parse(localStorage.getItem("teamsList") || "[]").length > 16
+      ? 16
+      : JSON.parse(localStorage.getItem("teamsList") || "[]").length > 8
+      ? 8
+      : JSON.parse(localStorage.getItem("teamsList") || "[]").length > 4
+      ? 4
+      : 2;
 
   return (
     <div className="team">
       <Header id={leagueId} />
-      <div className="team__subheader">
+      <div
+        className="team__subheader"
+        style={{
+          backgroundColor: team.color,
+          color: whiteTeams.includes(team.color) ? "#fff" : "#000000"
+        }}
+      >
         <button
-          className="team__button team__button--back pulse"
+          className="team__button team__button--back"
           onClick={() => navigate(-1)}
         >
           Back to the Season
         </button>
-        <h1 className="team__name">{team.name + " " + team.status}</h1>
+        {team.isPlayOff ? (
+          <div>
+            <div className="team__name--isPlayOff">x</div>
+            <h1 className="team__name">{team.name + " " + team.status}</h1>
+          </div>
+        ) : (
+          <h1 className="team__name">{team.name + " " + team.status}</h1>
+        )}
+
         <img className="team__logo" src={team.logo} alt={team.name} />
       </div>
       <div
@@ -55,7 +77,12 @@ function Team() {
         <h3 className="team__detail-title">Goals Diff: {team.goals_diff}</h3>
         <h3 className="team__detail-title">Rating: {team.rating}</h3>
       </div>
-      <Chart rank={chartData} labels={chartLabels} color={color} />
+      <Chart
+        rank={chartData}
+        labels={chartLabels}
+        color={color}
+        playOff={playOffTeams}
+      />
     </div>
   );
 }
