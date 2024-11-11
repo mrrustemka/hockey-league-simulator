@@ -13,6 +13,25 @@ function UpcomingGame(props: { schedule: Schedule[]; teams: Teams[] }) {
           key={game.id}
           cover={
             <div className="upcoming-games-card__container">
+              <h3 className="upcoming-games-card__score--away">
+                {
+                  props.teams.find(
+                    (element) => element.abbreviation === game.away
+                  )?.wins
+                }
+                -
+                {
+                  props.teams.find(
+                    (element) => element.abbreviation === game.away
+                  )?.loses
+                }
+                -
+                {
+                  props.teams.find(
+                    (element) => element.abbreviation === game.away
+                  )?.loses_ot
+                }
+              </h3>
               <Link
                 to={`/hockey-league-simulator/season/team/${
                   props.teams.find(
@@ -20,25 +39,6 @@ function UpcomingGame(props: { schedule: Schedule[]; teams: Teams[] }) {
                   )?.id
                 }`}
               >
-                <h3 className="upcoming-games-card__score--away">
-                  {
-                    props.teams.find(
-                      (element) => element.abbreviation === game.away
-                    )?.wins
-                  }
-                  -
-                  {
-                    props.teams.find(
-                      (element) => element.abbreviation === game.away
-                    )?.loses
-                  }
-                  -
-                  {
-                    props.teams.find(
-                      (element) => element.abbreviation === game.away
-                    )?.loses_ot
-                  }
-                </h3>
                 <img
                   className="upcoming-games-card__team-logo upcoming-games-card__team-logo--away"
                   alt={
@@ -77,26 +77,26 @@ function UpcomingGame(props: { schedule: Schedule[]; teams: Teams[] }) {
                   }
                   loading="lazy"
                 />
-                <h3 className="upcoming-games-card__score--home">
-                  {
-                    props.teams.find(
-                      (element) => element.abbreviation === game.home
-                    )?.wins
-                  }
-                  -
-                  {
-                    props.teams.find(
-                      (element) => element.abbreviation === game.home
-                    )?.loses
-                  }
-                  -
-                  {
-                    props.teams.find(
-                      (element) => element.abbreviation === game.home
-                    )?.loses_ot
-                  }
-                </h3>
               </Link>
+              <h3 className="upcoming-games-card__score--home">
+                {
+                  props.teams.find(
+                    (element) => element.abbreviation === game.home
+                  )?.wins
+                }
+                -
+                {
+                  props.teams.find(
+                    (element) => element.abbreviation === game.home
+                  )?.loses
+                }
+                -
+                {
+                  props.teams.find(
+                    (element) => element.abbreviation === game.home
+                  )?.loses_ot
+                }
+              </h3>
             </div>
           }
         ></Card>

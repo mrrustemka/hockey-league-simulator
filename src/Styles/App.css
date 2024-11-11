@@ -25,12 +25,6 @@ body {
   flex: 1;
 }
 
-.ant-card {
-  margin: auto;
-  overflow: hidden;
-  border: none;
-}
-
 .ant-col {
   text-align: center;
 }

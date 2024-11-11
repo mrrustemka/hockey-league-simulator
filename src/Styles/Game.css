@@ -108,6 +108,11 @@
   color: var(--button-color) !important;
 }
 
+.card {
+  border: none;
+  overflow: hidden;
+}
+
 /* Media Queries */
 @media (max-width: 900px) {
   .layout,
@@ -120,23 +125,37 @@
   .layout__side-panel {
     display: grid;
     grid-template-columns: var(--grid-auto) var(--grid-auto);
-    grid-template-rows: repeat(3, var(--grid-auto));
+    grid-template-rows: repeat(3, var(--grid-auto)) 1fr;
     max-width: var(--grid-full-width);
   }
 
   .simulate-panel,
-  .controls-panel {
-    grid-column: 1 / span 2;
+  .controls-panel,
+  .ant-row:nth-child(1),
+  .ant-row:nth-child(2) {
+    grid-column: 1 / span 1;
   }
 
   .upcoming-games {
     grid-column: 2 / span 1;
+    grid-row: 1 / span 4;
+  }
+  .ant-row:nth-child(1) {
+    height: fit-content;
   }
 }
 
 @media (max-width: 650px) {
+  .layout__side-panel {
+    display: grid;
+    grid-template-columns: var(--grid-auto);
+    grid-template-rows: repeat(4, var(--grid-auto)) 1fr;
+    max-width: var(--grid-full-width);
+  }
+
   .upcoming-games {
-    grid-row: 4 / span 1;
+    grid-row: 5 / span 1;
+    grid-column: 1 / span 1;
   }
 }
 
