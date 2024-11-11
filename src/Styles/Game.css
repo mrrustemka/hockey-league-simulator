@@ -97,6 +97,7 @@
 
 .upcoming-games {
   flex-direction: column;
+  margin: 0.8rem;
 }
 
 .playoff__container > div {
