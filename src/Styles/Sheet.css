@@ -11,6 +11,7 @@
   --table-column-games-high-bg: #b8dbf3;
   --table-column-games-medium-bg: #d0e6f57b;
   --table-column-games-low-bg: #d0e6f527;
+  --table-column-name-color: #000000;
 }
 
 .table__column .table__column--name {
@@ -32,6 +33,7 @@
 
 .table__column-name {
   font-size: var(--table-column-font-size);
+  color: var(--table-column-name-color);
 }
 
 .table__column--rating,

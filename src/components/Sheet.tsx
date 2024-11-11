@@ -62,11 +62,12 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
                   className="table__team-logo"
                   loading="lazy"
                 />
-                <p className="table__column-name">
-                  <Link to={`/hockey-league-simulator/season/team/${teamId}`}>
-                    {` ${dataIndex} ${status}`}
-                  </Link>
-                </p>
+                <Link
+                  to={`/hockey-league-simulator/season/team/${teamId}`}
+                  className="table__column-name"
+                >
+                  {` ${dataIndex} ${status}`}
+                </Link>
               </div>
             );
           }}
