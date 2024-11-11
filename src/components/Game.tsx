@@ -193,9 +193,9 @@ function Game() {
         // home.points += 1;
       }
       if (Math.random() > 0.5) {
-        overtime = "Overtime";
+        overtime = "OT";
       } else {
-        overtime = "Shootout";
+        overtime = "SO";
       }
     }
 
@@ -204,7 +204,14 @@ function Game() {
     if (hGoals > aGoals) {
       home.points += 2;
       home.wins += 1;
-      if (overtime === "Shootout" || overtime === "Overtime") {
+      home.chartLabels?.push(
+        away.abbreviation + " W " + hGoals + " - " + aGoals + " " + overtime
+      );
+      away.chartLabels?.push(
+        home.abbreviation + " L " + aGoals + " - " + hGoals + " " + overtime
+      );
+
+      if (overtime === "SO" || overtime === "OT") {
         away.loses_ot += 1;
         away.points += 1;
       } else {
@@ -214,7 +221,13 @@ function Game() {
     } else {
       away.points += 2;
       away.wins += 1;
-      if (overtime === "Shootout" || overtime === "Overtime") {
+      away.chartLabels?.push(
+        away.abbreviation + " W " + aGoals + " - " + hGoals + " " + overtime
+      );
+      home.chartLabels?.push(
+        home.abbreviation + " L " + hGoals + " - " + aGoals + " " + overtime
+      );
+      if (overtime === "SO" || overtime === "OT") {
         home.loses_ot += 1;
         home.points += 1;
       } else {
@@ -229,12 +242,10 @@ function Game() {
     home.goals_against += aGoals;
     home.game_counter += 1;
     home.goals_diff += hGoals - aGoals;
-    home.chartLabels?.push(away.abbreviation);
     away.goals_for += aGoals;
     away.goals_against += hGoals;
     away.game_counter += 1;
     away.goals_diff += aGoals - hGoals;
-    away.chartLabels?.push(home.abbreviation);
 
     let result: GameResult = {
       home: home.abbreviation,
