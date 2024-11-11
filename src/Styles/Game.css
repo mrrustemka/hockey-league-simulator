@@ -79,11 +79,15 @@
   max-width: var(--grid-full-width);
 }
 
-.cards-row__card-column > .card--hoverable > .ant-card-body {
+.card--hoverable > .ant-card-body {
   margin: 0 var(--padding-medium);
   display: grid;
   grid-template-rows: var(--grid-auto) var(--grid-auto);
   grid-template-columns: var(--grid-auto) 1fr var(--grid-auto);
+}
+
+.card__title {
+  grid-column: 1 / span 3;
 }
 
 .controls-panel__counter {
