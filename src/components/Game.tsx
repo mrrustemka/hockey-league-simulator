@@ -248,6 +248,14 @@ function Game() {
       sortedTeams.map((team: Teams, index: number) =>
         index < playOffTeam ? (team.isPlayOff = true) : { team }
       );
+      const updatedTeams: Teams[] = sortedTeams.map((team, i) => {
+        team.chartData?.push(i + 1);
+        team.chartLabels?.push("Play-Off");
+        return team;
+      });
+      home.chartData?.push(sortedTeams.indexOf(home) + 1);
+      away.chartData?.push(sortedTeams.indexOf(away) + 1);
+      localStorage.setItem("teamsList", JSON.stringify(updatedTeams));
     } else {
       sortedTeams
         .slice(0, playOffTeam)
@@ -266,9 +274,10 @@ function Game() {
             ? (checkTeam.isPlayOff = true)
             : { ...checkTeam }
         );
+      home.chartData?.push(sortedTeams.indexOf(home) + 1);
+      away.chartData?.push(sortedTeams.indexOf(away) + 1);
     }
-    home.chartData?.push(sortedTeams.indexOf(home) + 1);
-    away.chartData?.push(sortedTeams.indexOf(away) + 1);
+
     setTeamsUpdate(sortedTeams);
     setIsSimulate(true);
     localStorage.setItem("teamsList", JSON.stringify(sortedTeams));
