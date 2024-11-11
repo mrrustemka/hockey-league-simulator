@@ -67,7 +67,10 @@ function Chart(props: {
       y: {
         reverse: true,
         min: 0,
-        max: JSON.parse(localStorage.getItem("teamsList") || "[]").length
+        max: JSON.parse(localStorage.getItem("teamsList") || "[]").length,
+        ticks: {
+          stepSize: 1
+        }
       }
     }
   };

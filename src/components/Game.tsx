@@ -205,10 +205,24 @@ function Game() {
       home.points += 2;
       home.wins += 1;
       home.chartLabels?.push(
-        away.abbreviation + " W " + hGoals + " - " + aGoals + " " + overtime
+        home.status +
+          away.abbreviation +
+          " W " +
+          hGoals +
+          " - " +
+          aGoals +
+          " " +
+          overtime
       );
       away.chartLabels?.push(
-        home.abbreviation + " L " + aGoals + " - " + hGoals + " " + overtime
+        away.status +
+          home.abbreviation +
+          " L " +
+          aGoals +
+          " - " +
+          hGoals +
+          " " +
+          overtime
       );
 
       if (overtime === "SO" || overtime === "OT") {
@@ -222,10 +236,24 @@ function Game() {
       away.points += 2;
       away.wins += 1;
       away.chartLabels?.push(
-        away.abbreviation + " W " + aGoals + " - " + hGoals + " " + overtime
+        away.status +
+          away.abbreviation +
+          " W " +
+          aGoals +
+          " - " +
+          hGoals +
+          " " +
+          overtime
       );
       home.chartLabels?.push(
-        home.abbreviation + " L " + hGoals + " - " + aGoals + " " + overtime
+        home.status +
+          home.abbreviation +
+          " L " +
+          hGoals +
+          " - " +
+          aGoals +
+          " " +
+          overtime
       );
       if (overtime === "SO" || overtime === "OT") {
         home.loses_ot += 1;
