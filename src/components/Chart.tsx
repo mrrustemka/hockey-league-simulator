@@ -20,7 +20,12 @@ ChartJS.register(
   Legend
 );
 
-function Chart(props: { rank: number[]; labels: string[]; color: string }) {
+function Chart(props: {
+  rank: number[];
+  labels: string[];
+  color: string;
+  playOff: number;
+}) {
   const data = {
     labels: props.labels,
     datasets: [
@@ -29,11 +34,20 @@ function Chart(props: { rank: number[]; labels: string[]; color: string }) {
         data: props.rank,
         backgroundColor: props.color,
         borderColor: props.color,
-        pointBackgroundColor: "#fff",
-        pointRadius: 0,
+        pointBackgroundColor: "#515151",
+        pointRadius: 2,
         borderWidth: 1,
         fill: true,
         tension: 0.4
+      },
+      {
+        label: "Play-Off Line",
+        data: Array(props.labels.length).fill(props.playOff),
+        borderColor: "rgba(255, 99, 132, 0.7)",
+        borderWidth: 1,
+        borderDash: [5, 5],
+        pointRadius: 0,
+        fill: true
       }
     ]
   };
