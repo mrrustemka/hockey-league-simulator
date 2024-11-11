@@ -237,7 +237,7 @@ function Game() {
       away.wins += 1;
       away.chartLabels?.push(
         away.status +
-          away.abbreviation +
+          home.abbreviation +
           " W " +
           aGoals +
           " - " +
@@ -247,7 +247,7 @@ function Game() {
       );
       home.chartLabels?.push(
         home.status +
-          home.abbreviation +
+          away.abbreviation +
           " L " +
           hGoals +
           " - " +
