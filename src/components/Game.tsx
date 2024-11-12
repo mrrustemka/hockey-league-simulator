@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
 import { Button, Card, Col, Row, Typography } from "antd";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { GameResult, Schedule, Teams } from "../Data/types";
-import { whiteTeams } from "../Data/whiteList";
+import Header from "./Header";
 import Sheet from "./Sheet";
 import UpcomingGame from "./UpcomingGame";
-import { Link } from "react-router-dom";
-import Header from "./Header";
+import { whiteTeams } from "../Data/whiteList";
 import "../Styles/Game.css";
 
 const { Title } = Typography;

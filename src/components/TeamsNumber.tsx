@@ -1,8 +1,8 @@
 import { Input, Typography } from "antd";
-import { League as TLeague } from "../Data/types";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { Link } from "react-router-dom";
+import { League as TLeague } from "../Data/types";
 import { schedule } from "../Data/schedule";
 import "../Styles/TeamsNumber.css";
 

@@ -1,8 +1,8 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { Teams } from "../Data/types";
-import { whiteTeams } from "../Data/whiteList";
 import Chart from "./Chart";
 import Header from "./Header";
+import { Teams } from "../Data/types";
+import { whiteTeams } from "../Data/whiteList";
 import "../Styles/Team.css";
 
 function Team() {
