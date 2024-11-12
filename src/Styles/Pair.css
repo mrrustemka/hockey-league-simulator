@@ -1,5 +1,4 @@
 ﻿:root {
-  --pair-width: 40vh;
   --pair-bg-color: #fff;
   --pair-border-radius: 8px;
   --pair-padding: 8px 20px;
@@ -9,7 +8,7 @@
 }
 
 .pair {
-  width: var(--pair-width);
+  width: auto;
   background-color: var(--pair-bg-color);
   border-radius: var(--pair-border-radius);
   margin: auto;

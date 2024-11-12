@@ -21,9 +21,9 @@
 
 .playoff__round-panel {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, auto);
   margin: 0 24px;
-  gap: 18px 0;
+  gap: 16px 8px;
   animation: fadeIn 0.5s ease forwards;
 }
 
