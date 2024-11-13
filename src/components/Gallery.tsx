@@ -8,7 +8,7 @@ function Gallery(props: { photos: string[]; team: string }) {
       <Carousel adaptiveHeight draggable autoplay speed={2000}>
         {props.photos.map((photo: string, i: number) => (
           <div key={uuidv4()}>
-            <img src={photo} alt={`${props.team} ${i}`} />
+            <img src={photo} alt={`${props.team} ${i}`} loading="lazy" />
           </div>
         ))}
       </Carousel>

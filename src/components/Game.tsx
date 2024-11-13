@@ -474,7 +474,13 @@ function Game() {
                   <Card
                     className="card card--hoverable"
                     hoverable
-                    cover={<img alt={home.name + "Logo"} src={home.logo} />}
+                    cover={
+                      <img
+                        alt={home.name + "Logo"}
+                        src={home.logo}
+                        loading="lazy"
+                      />
+                    }
                     style={{
                       backgroundColor: home.color
                     }}

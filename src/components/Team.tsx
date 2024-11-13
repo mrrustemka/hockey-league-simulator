@@ -56,7 +56,12 @@ function Team() {
           <h1 className="team__name">{team.name + " " + team.status}</h1>
         )}
 
-        <img className="team__logo" src={team.logo} alt={team.name} />
+        <img
+          className="team__logo"
+          src={team.logo}
+          alt={team.name}
+          loading="lazy"
+        />
       </div>
       <div
         className="team__details"
