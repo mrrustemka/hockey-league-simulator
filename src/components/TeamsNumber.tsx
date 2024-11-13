@@ -17,7 +17,7 @@ function TeamsNumber({ league }: any) {
   }
 
   function start() {
-    schedule(league.teams.slice(0, champ.teamsCount));
+    schedule(league.teams.slice(0, champ.teamsCount), league.id);
     localStorage.setItem("leagueId", JSON.stringify(league.id));
   }
 
