@@ -21,8 +21,9 @@ export type Teams = {
   isPlayOff: boolean;
   status: string;
   curStatusLength: number;
-  chartData?: number[];
-  chartLabels?: string[];
+  chartData: number[];
+  chartLabels: string[];
+  photos?: string[];
 };
 
 export type TeamsList = string[];

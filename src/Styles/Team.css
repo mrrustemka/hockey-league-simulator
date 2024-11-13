@@ -6,9 +6,9 @@
 
 .team {
   display: grid;
-  grid-template-rows: var(--grid-auto) var(--grid-auto) var(--grid-auto) var(
-      --grid-auto
-    );
+  grid-template-rows:
+    var(--grid-auto) var(--grid-auto) var(--grid-auto) var(--grid-auto)
+    var(--grid-auto);
   grid-template-columns: var(--grid-auto);
 }
 

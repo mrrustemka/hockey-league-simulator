@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
+import Gallery from "./Gallery";
 import Chart from "./Chart";
 import Header from "./Header";
 import { Teams } from "../Data/types";
@@ -28,6 +29,7 @@ function Team() {
       : JSON.parse(localStorage.getItem("teamsList") || "[]").length > 4
       ? 4
       : 2;
+  const photos: string[] = team.photos || [];
 
   return (
     <div className="team">
@@ -83,6 +85,7 @@ function Team() {
         color={color}
         playOff={playOffTeams}
       />
+      <Gallery photos={photos} team={team.name} />
     </div>
   );
 }
