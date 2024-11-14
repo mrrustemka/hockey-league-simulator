@@ -306,7 +306,11 @@ function Game() {
             .filter(
               (team: Teams) =>
                 team.points +
-                  2 * (sortedTeams.length - 1 - team.game_counter) >=
+                  2 *
+                    (sortedTeams.length *
+                      (leagueId === "1" || leagueId === "2" ? 1 : 2) -
+                      1 -
+                      team.game_counter) >=
                 checkTeam.points
             ).length +
             index +
@@ -554,9 +558,7 @@ function Game() {
                   >
                     {isSimulate ? awayGoals : " "} -{" "}
                     {isSimulate ? homeGoals : " "}
-                  </Title>
-                  <Title className="simulate-panel__ot-type" level={3}>
-                    {isSimulate ? typeOfOt : ""}
+                    {isSimulate ? " " + typeOfOt : ""}
                   </Title>
                 </Card>
               </Col>

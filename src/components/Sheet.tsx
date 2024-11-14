@@ -124,11 +124,23 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
           }}
           render={(gameCounter) => {
             let className = "table__column-games";
-            if (gameCounter > [...props.teamsData].length * 0.75) {
+            if (
+              gameCounter >
+              [...props.teamsData].length *
+                (props.id === "1" || props.id === "2" ? 0.75 : 1.5)
+            ) {
               className = "table__column-games--high";
-            } else if (gameCounter > [...props.teamsData].length * 0.5) {
+            } else if (
+              gameCounter >
+              [...props.teamsData].length *
+                (props.id === "1" || props.id === "2" ? 0.5 : 1)
+            ) {
               className = "table__column-games--medium";
-            } else if (gameCounter > [...props.teamsData].length * 0.25) {
+            } else if (
+              gameCounter >
+              [...props.teamsData].length *
+                (props.id === "1" || props.id === "2" ? 0.25 : 0.5)
+            ) {
               className = "table__column-games--low";
             }
 
