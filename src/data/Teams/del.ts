@@ -1,18 +1,70 @@
 import { Teams } from "../types";
-import deg from "../../Images/del_deg.png";
-import ing from "../../Images/del_ing.png";
-import ebb from "../../Images/del_ebb.png";
 import aug from "../../Images/del_aug.png";
-import iec from "../../Images/del_iec.png";
-import sww from "../../Images/del_sww.png";
-import nit from "../../Images/del_nit.png";
-import str from "../../Images/del_str.png";
-import rbm from "../../Images/ehl_rbm.png";
-import man from "../../Images/ehl_man.png";
-import kec from "../../Images/ehl_kec.png";
-import wob from "../../Images/ehl_wob.png";
-import fra from "../../Images/del_fra.png";
+import aug_1 from "../../Images/Gallery/Del/Aug/aug_1.jpg";
+import aug_2 from "../../Images/Gallery/Del/Aug/aug_2.jpg";
+import aug_3 from "../../Images/Gallery/Del/Aug/aug_3.jpg";
+import aug_4 from "../../Images/Gallery/Del/Aug/aug_4.jpg";
 import bhv from "../../Images/del_bhv.png";
+import bhv_1 from "../../Images/Gallery/Del/Bhv/bhv_1.jpg";
+import bhv_2 from "../../Images/Gallery/Del/Bhv/bhv_2.jpg";
+import bhv_3 from "../../Images/Gallery/Del/Bhv/bhv_3.jpg";
+import deg from "../../Images/del_deg.png";
+import deg_1 from "../../Images/Gallery/Del/Deg/deg_1.jpg";
+import deg_2 from "../../Images/Gallery/Del/Deg/deg_2.jpg";
+import deg_3 from "../../Images/Gallery/Del/Deg/deg_3.jpg";
+import deg_4 from "../../Images/Gallery/Del/Deg/deg_4.jpg";
+import ebb from "../../Images/del_ebb.png";
+import ebb_1 from "../../Images/Gallery/Del/Ebb/ebb_1.jpg";
+import ebb_2 from "../../Images/Gallery/Del/Ebb/ebb_2.jpg";
+import ebb_3 from "../../Images/Gallery/Del/Ebb/ebb_3.jpg";
+import ebb_4 from "../../Images/Gallery/Del/Ebb/ebb_4.jpg";
+import fra from "../../Images/del_fra.png";
+import fra_1 from "../../Images/Gallery/Del/Fra/fra_1.jpg";
+import fra_2 from "../../Images/Gallery/Del/Fra/fra_2.jpg";
+import fra_3 from "../../Images/Gallery/Del/Fra/fra_3.jpg";
+import iec from "../../Images/del_iec.png";
+import iec_1 from "../../Images/Gallery/Del/Iec/iec_1.jpg";
+import iec_2 from "../../Images/Gallery/Del/Iec/iec_2.jpg";
+import ing from "../../Images/del_ing.png";
+import ing_1 from "../../Images/Gallery/Del/Ing/ing_1.jpg";
+import ing_2 from "../../Images/Gallery/Del/Ing/ing_2.jpg";
+import ing_3 from "../../Images/Gallery/Del/Ing/ing_3.jpg";
+import ing_4 from "../../Images/Gallery/Del/Ing/ing_4.jpg";
+import ing_5 from "../../Images/Gallery/Del/Ing/ing_5.jpg";
+import kec from "../../Images/ehl_kec.png";
+import kec_1 from "../../Images/Gallery/Del/Kec/kec_1.jpg";
+import kec_2 from "../../Images/Gallery/Del/Kec/kec_2.jpg";
+import kec_3 from "../../Images/Gallery/Del/Kec/kec_3.jpg";
+import kec_4 from "../../Images/Gallery/Del/Kec/kec_4.jpg";
+import kec_5 from "../../Images/Gallery/Del/Kec/kec_5.jpg";
+import man from "../../Images/ehl_man.png";
+import man_1 from "../../Images/Gallery/Del/Man/man_1.jpg";
+import man_2 from "../../Images/Gallery/Del/Man/man_2.jpg";
+import man_3 from "../../Images/Gallery/Del/Man/man_3.jpg";
+import man_4 from "../../Images/Gallery/Del/Man/man_4.jpg";
+import nit from "../../Images/del_nit.png";
+import nit_1 from "../../Images/Gallery/Del/Nit/nit_1.jpg";
+import nit_2 from "../../Images/Gallery/Del/Nit/nit_2.jpg";
+import nit_3 from "../../Images/Gallery/Del/Nit/nit_3.jpg";
+import rbm from "../../Images/ehl_rbm.png";
+import rbm_1 from "../../Images/Gallery/Del/Rbm/rbm_1.jpg";
+import rbm_2 from "../../Images/Gallery/Del/Rbm/rbm_2.jpg";
+import rbm_3 from "../../Images/Gallery/Del/Rbm/rbm_3.jpg";
+import rbm_4 from "../../Images/Gallery/Del/Rbm/rbm_4.jpg";
+import str from "../../Images/del_str.png";
+import str_1 from "../../Images/Gallery/Del/Str/str_1.jpg";
+import str_2 from "../../Images/Gallery/Del/Str/str_2.jpg";
+import str_3 from "../../Images/Gallery/Del/Str/str_3.jpg";
+import sww from "../../Images/del_sww.png";
+import sww_1 from "../../Images/Gallery/Del/Sww/sww_1.jpg";
+import sww_2 from "../../Images/Gallery/Del/Sww/sww_2.jpg";
+import sww_3 from "../../Images/Gallery/Del/Sww/sww_3.jpg";
+import sww_4 from "../../Images/Gallery/Del/Sww/sww_4.jpg";
+import wob from "../../Images/ehl_wob.png";
+import wob_1 from "../../Images/Gallery/Del/Wob/wob_1.jpg";
+import wob_2 from "../../Images/Gallery/Del/Wob/wob_2.jpg";
+import wob_3 from "../../Images/Gallery/Del/Wob/wob_3.jpg";
+import wob_4 from "../../Images/Gallery/Del/Wob/wob_4.jpg";
 
 export const del: Teams[] = [
   {
@@ -38,7 +90,8 @@ export const del: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [bhv_1, bhv_2, bhv_3]
   },
   {
     id: 2,
@@ -63,7 +116,8 @@ export const del: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [ebb_1, ebb_2, ebb_3, ebb_4]
   },
   {
     id: 3,
@@ -88,7 +142,8 @@ export const del: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [str_1, str_2, str_3]
   },
   {
     id: 4,
@@ -113,7 +168,8 @@ export const del: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [rbm_1, rbm_2, rbm_3, rbm_4]
   },
   {
     id: 5,
@@ -138,7 +194,8 @@ export const del: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [wob_1, wob_2, wob_3, wob_4]
   },
   {
     id: 6,
@@ -163,7 +220,8 @@ export const del: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [sww_1, sww_2, sww_3, sww_4]
   },
   {
     id: 7,
@@ -188,7 +246,8 @@ export const del: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [man_1, man_2, man_3, man_4]
   },
   {
     id: 8,
@@ -213,7 +272,8 @@ export const del: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [kec_1, kec_2, kec_3, kec_4, kec_5]
   },
   {
     id: 9,
@@ -238,7 +298,8 @@ export const del: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [ing_1, ing_2, ing_3, ing_4, ing_5]
   },
   {
     id: 10,
@@ -263,7 +324,8 @@ export const del: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [nit_1, nit_2, nit_3]
   },
   {
     id: 11,
@@ -288,7 +350,8 @@ export const del: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [deg_1, deg_2, deg_3, deg_4]
   },
   {
     id: 12,
@@ -313,7 +376,8 @@ export const del: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [fra_1, fra_2, fra_3]
   },
   {
     id: 13,
@@ -338,7 +402,8 @@ export const del: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [iec_1, iec_2]
   },
   {
     id: 14,
@@ -363,6 +428,7 @@ export const del: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [aug_1, aug_2, aug_3, aug_4]
   }
 ];
