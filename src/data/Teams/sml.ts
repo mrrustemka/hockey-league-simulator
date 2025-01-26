@@ -1,20 +1,75 @@
 import { Teams } from "../types";
-import tap from "../../Images/ehl_tap.png";
-import pel from "../../Images/ehl_pel.png";
-import ifk from "../../Images/ehl_ifk.png";
-import ilv from "../../Images/ehl_ilv.png";
-import tps from "../../Images/ehl_tps.png";
-import kal from "../../Images/sml_kal.png";
-import koo from "../../Images/sml_koo.png";
-import jyp from "../../Images/sml_jyp.png";
-import kar from "../../Images/sml_kar.png";
-import luk from "../../Images/sml_luk.png";
-import sai from "../../Images/sml_sai.png";
-import spo from "../../Images/sml_spo.png";
 import ass from "../../Images/sml_ass.png";
-import juk from "../../Images/sml_juk.png";
+import ass_1 from "../../Images/Gallery/Sml/Ass/ass_1.jpg";
+import ass_2 from "../../Images/Gallery/Sml/Ass/ass_2.jpg";
+import ass_3 from "../../Images/Gallery/Sml/Ass/ass_3.jpg";
 import hpk from "../../Images/sml_hpk.png";
+import hpk_1 from "../../Images/Gallery/Sml/Hpk/hpk_1.jpg";
+import hpk_2 from "../../Images/Gallery/Sml/Hpk/hpk_2.jpg";
+import hpk_3 from "../../Images/Gallery/Sml/Hpk/hpk_3.jpg";
+import hpk_4 from "../../Images/Gallery/Sml/Hpk/hpk_4.jpg";
+import ifk from "../../Images/ehl_ifk.png";
+import ifk_1 from "../../Images/Gallery/Sml/Ifk/ifk_1.jpg";
+import ifk_2 from "../../Images/Gallery/Sml/Ifk/ifk_2.jpg";
+import ifk_3 from "../../Images/Gallery/Sml/Ifk/ifk_3.jpg";
+import ifk_4 from "../../Images/Gallery/Sml/Ifk/ifk_4.jpg";
+import ilv from "../../Images/ehl_ilv.png";
+import ilv_1 from "../../Images/Gallery/Sml/Ilv/ilv_1.jpg";
+import ilv_2 from "../../Images/Gallery/Sml/Ilv/ilv_2.jpg";
+import ilv_3 from "../../Images/Gallery/Sml/Ilv/ilv_3.jpg";
+import ilv_4 from "../../Images/Gallery/Sml/Ilv/ilv_4.jpg";
+import ilv_5 from "../../Images/Gallery/Sml/Ilv/ilv_5.jpg";
+import juk from "../../Images/sml_juk.png";
+import juk_1 from "../../Images/Gallery/Sml/Juk/juk_1.jpg";
+import juk_2 from "../../Images/Gallery/Sml/Juk/juk_2.jpg";
+import juk_3 from "../../Images/Gallery/Sml/Juk/juk_3.jpg";
+import jyp from "../../Images/sml_jyp.png";
+import jyp_1 from "../../Images/Gallery/Sml/Jyp/jyp_1.jpg";
+import jyp_2 from "../../Images/Gallery/Sml/Jyp/jyp_2.jpg";
+import jyp_3 from "../../Images/Gallery/Sml/Jyp/jyp_3.jpg";
+import kal from "../../Images/sml_kal.png";
+import kal_1 from "../../Images/Gallery/Sml/Kal/kal_1.jpg";
+import kal_2 from "../../Images/Gallery/Sml/Kal/kal_2.jpg";
+import kal_3 from "../../Images/Gallery/Sml/Kal/kal_3.jpg";
+import kal_4 from "../../Images/Gallery/Sml/Kal/kal_4.jpg";
+import kar from "../../Images/sml_kar.png";
+import kar_1 from "../../Images/Gallery/Sml/Kar/kar_1.jpg";
+import kar_2 from "../../Images/Gallery/Sml/Kar/kar_2.jpg";
+import kar_3 from "../../Images/Gallery/Sml/Kar/kar_3.jpg";
 import kes from "../../Images/sml_kes.png";
+import kes_1 from "../../Images/Gallery/Sml/Kes/kes_1.jpg";
+import kes_2 from "../../Images/Gallery/Sml/Kes/kes_2.jpg";
+import kes_3 from "../../Images/Gallery/Sml/Kes/kes_3.jpg";
+import koo from "../../Images/sml_koo.png";
+import koo_1 from "../../Images/Gallery/Sml/Koo/koo_1.jpg";
+import koo_2 from "../../Images/Gallery/Sml/Koo/koo_2.jpg";
+import koo_3 from "../../Images/Gallery/Sml/Koo/koo_3.jpg";
+import luk from "../../Images/sml_luk.png";
+import luk_1 from "../../Images/Gallery/Sml/Luk/luk_1.jpg";
+import luk_2 from "../../Images/Gallery/Sml/Luk/luk_2.jpg";
+import luk_3 from "../../Images/Gallery/Sml/Luk/luk_3.jpg";
+import luk_4 from "../../Images/Gallery/Sml/Luk/luk_4.jpg";
+import pel from "../../Images/ehl_pel.png";
+import pel_1 from "../../Images/Gallery/Sml/Pel/pel_1.jpg";
+import pel_2 from "../../Images/Gallery/Sml/Pel/pel_2.jpg";
+import pel_3 from "../../Images/Gallery/Sml/Pel/pel_3.jpg";
+import pel_4 from "../../Images/Gallery/Sml/Pel/pel_4.jpg";
+import sai from "../../Images/sml_sai.png";
+import sai_1 from "../../Images/Gallery/Sml/Sai/sai_1.jpg";
+import sai_2 from "../../Images/Gallery/Sml/Sai/sai_2.jpg";
+import spo from "../../Images/sml_spo.png";
+import spo_1 from "../../Images/Gallery/Sml/Spo/spo_1.jpg";
+import spo_2 from "../../Images/Gallery/Sml/Spo/spo_2.jpg";
+import tap from "../../Images/ehl_tap.png";
+import tap_1 from "../../Images/Gallery/Sml/Tap/tap_1.jpg";
+import tap_2 from "../../Images/Gallery/Sml/Tap/tap_2.jpeg";
+import tap_3 from "../../Images/Gallery/Sml/Tap/tap_3.jpg";
+import tap_4 from "../../Images/Gallery/Sml/Tap/tap_4.jpg";
+import tps from "../../Images/ehl_tps.png";
+import tps_1 from "../../Images/Gallery/Sml/Tps/tps_1.jpg";
+import tps_2 from "../../Images/Gallery/Sml/Tps/tps_2.jpg";
+import tps_3 from "../../Images/Gallery/Sml/Tps/tps_3.jpg";
+import tps_4 from "../../Images/Gallery/Sml/Tps/tps_4.jpg";
 
 export const sml: Teams[] = [
   {
@@ -40,7 +95,8 @@ export const sml: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [tap_1, tap_2, tap_3, tap_4]
   },
   {
     id: 2,
@@ -65,7 +121,8 @@ export const sml: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [pel_1, pel_2, pel_3, pel_4]
   },
   {
     id: 3,
@@ -90,7 +147,8 @@ export const sml: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [ifk_1, ifk_2, ifk_3, ifk_4]
   },
   {
     id: 4,
@@ -115,7 +173,8 @@ export const sml: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [ilv_1, ilv_2, ilv_3, ilv_4, ilv_5]
   },
   {
     id: 5,
@@ -140,7 +199,8 @@ export const sml: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [tps_1, tps_2, tps_3, tps_4]
   },
   {
     id: 6,
@@ -165,7 +225,8 @@ export const sml: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [kal_1, kal_2, kal_3, kal_4]
   },
   {
     id: 7,
@@ -190,7 +251,8 @@ export const sml: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [koo_1, koo_2, koo_3]
   },
   {
     id: 8,
@@ -215,7 +277,8 @@ export const sml: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [jyp_1, jyp_2, jyp_3]
   },
   {
     id: 9,
@@ -240,7 +303,8 @@ export const sml: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [kar_1, kar_2, kar_3]
   },
   {
     id: 10,
@@ -265,7 +329,8 @@ export const sml: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [luk_1, luk_2, luk_3, luk_4]
   },
   {
     id: 11,
@@ -290,7 +355,8 @@ export const sml: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [sai_1, sai_2]
   },
   {
     id: 12,
@@ -315,7 +381,8 @@ export const sml: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [spo_1, spo_2]
   },
   {
     id: 13,
@@ -340,7 +407,8 @@ export const sml: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [ass_1, ass_2, ass_3]
   },
   {
     id: 14,
@@ -365,7 +433,8 @@ export const sml: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [juk_1, juk_2, juk_3]
   },
   {
     id: 15,
@@ -390,7 +459,8 @@ export const sml: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [hpk_1, hpk_2, hpk_3, hpk_4]
   },
   {
     id: 16,
@@ -415,6 +485,7 @@ export const sml: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [kes_1, kes_2, kes_3]
   }
 ];
