@@ -1,21 +1,48 @@
 import { Teams } from "../types";
-import kac from "../../Images/ice_kac.png";
-import vic from "../../Images/ice_vic.png";
-import hci from "../../Images/ice_hci.png";
-import vsv from "../../Images/ice_vsv.png";
-import rbs from "../../Images/ice_rbs.png";
-import g99 from "../../Images/ice_g99.png";
-import hcb from "../../Images/ice_hcb.png";
-import hcp from "../../Images/ice_hcp.png";
-import avs from "../../Images/ice_avs.png";
-import hko from "../../Images/ice_hko.png";
-import bwl from "../../Images/ice_bwl.png";
 import ash from "../../Images/ice_ash.png";
-import piv from "../../Images/ice_piv.png";
-import ita from "../../Images/w2_ita.png";
-import sln from "../../Images/w1_sln.png";
+import ash_1 from "../../Images/Gallery/Ice/Ash/ash_1.jpg";
+import ash_2 from "../../Images/Gallery/Ice/Ash/ash_2.jpg";
 import aus from "../../Images/w1_aus.png";
+import avs from "../../Images/ice_avs.png";
+import avs_1 from "../../Images/Gallery/Ice/Avs/avs_1.jpg";
+import avs_2 from "../../Images/Gallery/Ice/Avs/avs_2.jpg";
+import bwl from "../../Images/ice_bwl.png";
+import bwl_1 from "../../Images/Gallery/Ice/Bwl/bwl_1.jpg";
+import bwl_2 from "../../Images/Gallery/Ice/Bwl/bwl_2.jpg";
+import g99 from "../../Images/ice_g99.png";
+import g99_1 from "../../Images/Gallery/Ice/G99/g99_1.jpeg";
+import g99_2 from "../../Images/Gallery/Ice/G99/g99_2.jpeg";
+import hcb from "../../Images/ice_hcb.png";
+import hcb_1 from "../../Images/Gallery/Ice/Hcb/hcb_1.jpg";
+import hcb_2 from "../../Images/Gallery/Ice/Hcb/hcb_2.jpg";
+import hcb_3 from "../../Images/Gallery/Ice/Hcb/hcb_3.jpg";
+import hci from "../../Images/ice_hci.png";
+import hci_1 from "../../Images/Gallery/Ice/Hci/hci_1.jpg";
+import hci_2 from "../../Images/Gallery/Ice/Hci/hci_2.jpg";
+import hcp from "../../Images/ice_hcp.png";
+import hcp_1 from "../../Images/Gallery/Ice/Hcp/hcp_1.jpg";
+import hcp_2 from "../../Images/Gallery/Ice/Hcp/hcp_2.jpg";
+import hko from "../../Images/ice_hko.png";
+import hko_1 from "../../Images/Gallery/Ice/Hko/hko_1.jpg";
+import hko_2 from "../../Images/Gallery/Ice/Hko/hko_2.jpg";
 import hun from "../../Images/w2_hun.png";
+import ita from "../../Images/w2_ita.png";
+import kac from "../../Images/ice_kac.png";
+import kac_1 from "../../Images/Gallery/Ice/Kac/kac_1.jpg";
+import kac_2 from "../../Images/Gallery/Ice/Kac/kac_2.jpg";
+import piv from "../../Images/ice_piv.png";
+import piv_1 from "../../Images/Gallery/Ice/Piv/piv_1.jpg";
+import piv_2 from "../../Images/Gallery/Ice/Piv/piv_2.jpg";
+import rbs from "../../Images/ice_rbs.png";
+import rbs_1 from "../../Images/Gallery/Ice/Rbs/rbs_1.jpg";
+import rbs_2 from "../../Images/Gallery/Ice/Rbs/rbs_2.jpg";
+import sln from "../../Images/w1_sln.png";
+import vic from "../../Images/ice_vic.png";
+import vic_1 from "../../Images/Gallery/Ice/Vic/vic_1.jpg";
+import vic_2 from "../../Images/Gallery/Ice/Vic/vic_2.jpg";
+import vsv from "../../Images/ice_vsv.png";
+import vsv_1 from "../../Images/Gallery/Ice/Vsv/vsv_1.jpg";
+import vsv_2 from "../../Images/Gallery/Ice/Vsv/vsv_2.jpg";
 
 export const ice: Teams[] = [
   {
@@ -42,7 +69,8 @@ export const ice: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [kac_1, kac_2]
   },
   {
     id: 2,
@@ -68,7 +96,8 @@ export const ice: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [hci_1, hci_2]
   },
   {
     id: 3,
@@ -94,7 +123,8 @@ export const ice: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [vsv_1, vsv_2]
   },
   {
     id: 4,
@@ -120,7 +150,8 @@ export const ice: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [rbs_1, rbs_2]
   },
   {
     id: 5,
@@ -146,7 +177,8 @@ export const ice: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [bwl_1, bwl_2]
   },
   {
     id: 6,
@@ -172,7 +204,8 @@ export const ice: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [hcb_1, hcb_2, hcb_3]
   },
   {
     id: 7,
@@ -198,7 +231,8 @@ export const ice: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [hcp_1, hcp_2]
   },
   {
     id: 8,
@@ -224,7 +258,8 @@ export const ice: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [avs_1, avs_2]
   },
   {
     id: 9,
@@ -250,7 +285,8 @@ export const ice: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [hko_1, hko_2]
   },
   {
     id: 10,
@@ -276,7 +312,8 @@ export const ice: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [piv_1, piv_2]
   },
   {
     id: 11,
@@ -302,7 +339,8 @@ export const ice: Teams[] = [
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [vic_1, vic_2]
   },
   {
     id: 12,
@@ -322,13 +360,14 @@ export const ice: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#ffffff",
+    color: "#345baf",
     flag: ita,
     isPlayOff: false,
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [ash_1, ash_2]
   },
   {
     id: 13,
@@ -348,12 +387,13 @@ export const ice: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: "#000000",
+    color: "#b96535",
     flag: aus,
     isPlayOff: false,
     status: "",
     curStatusLength: 0,
     chartData: [],
-    chartLabels: []
+    chartLabels: [],
+    photos: [g99_1, g99_2]
   }
 ];
