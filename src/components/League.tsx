@@ -1,9 +1,11 @@
+import AOS from "aos";
 import { Card, Typography } from "antd";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { League as TLeague } from "../Data/types";
 import TeamsNumber from "./TeamsNumber";
+import "aos/dist/aos.css";
 import "../Styles/League.css";
 
 const { Title } = Typography;
@@ -17,6 +19,11 @@ function League(props: { league: TLeague }) {
     localStorage.removeItem("teamsList");
     setRefresh(!refresh);
   }
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   if (
     localStorage.getItem("leagueId") !== null &&
@@ -34,6 +41,9 @@ function League(props: { league: TLeague }) {
               className="start__card-cover"
               loading="lazy"
             />
+          }
+          data-aos={
+            Number(props.league.id) % 2 === 0 ? "fade-left" : "fade-right"
           }
         >
           <Title level={5} className="start__card-title">
@@ -82,6 +92,9 @@ function League(props: { league: TLeague }) {
               className="start__card-cover"
               loading="lazy"
             />
+          }
+          data-aos={
+            Number(props.league.id) % 2 === 0 ? "fade-left" : "fade-right"
           }
         >
           <Title level={5} className="start__card-title">
