@@ -1,10 +1,14 @@
 import { useParams, useNavigate } from "react-router-dom";
-import Gallery from "./Gallery";
 import Chart from "./Chart";
 import Header from "./Header";
+import { Image } from "antd";
+import Gallery from "./Gallery";
 import { Teams } from "../Data/types";
 import { whiteTeams } from "../Data/whiteList";
+import { Typography } from "antd";
 import "../Styles/Team.css";
+
+const { Title } = Typography;
 
 function Team() {
   const { teamId } = useParams();
@@ -50,10 +54,14 @@ function Team() {
         {team.isPlayOff ? (
           <div>
             <div className="team__name--isPlayOff">x</div>
-            <h1 className="team__name">{team.name + " " + team.status}</h1>
+            <Title level={1} className="team__name">
+              {team.name + " " + team.status}
+            </Title>
           </div>
         ) : (
-          <h1 className="team__name">{team.name + " " + team.status}</h1>
+          <Title level={1} className="team__name">
+            {team.name + " " + team.status}
+          </Title>
         )}
 
         <img
@@ -70,27 +78,54 @@ function Team() {
           color: whiteTeams.includes(team.color) ? "#fff" : "#000000"
         }}
       >
-        <h3 className="team__detail-title">Points: {team.points}</h3>
-        <h3 className="team__detail-title">
+        <Title level={3} className="team__detail-title">
+          Points: {team.points}
+        </Title>
+        <Title level={3} className="team__detail-title">
           Games Played: {team.game_counter}
-        </h3>
-        <h3 className="team__detail-title">Wins: {team.wins}</h3>
-        <h3 className="team__detail-title">Losses: {team.loses}</h3>
-        <h3 className="team__detail-title">Losses OT: {team.loses_ot}</h3>
-        <h3 className="team__detail-title">Goals For: {team.goals_for}</h3>
-        <h3 className="team__detail-title">
+        </Title>
+        <Title level={3} className="team__detail-title">
+          Wins: {team.wins}
+        </Title>
+        <Title level={3} className="team__detail-title">
+          Losses: {team.loses}
+        </Title>
+        <Title level={3} className="team__detail-title">
+          Losses OT: {team.loses_ot}
+        </Title>
+        <Title level={3} className="team__detail-title">
+          Goals For: {team.goals_for}
+        </Title>
+        <Title level={3} className="team__detail-title">
           Goals Against: {team.goals_against}
-        </h3>
-        <h3 className="team__detail-title">Goals Diff: {team.goals_diff}</h3>
-        <h3 className="team__detail-title">Rating: {team.rating}</h3>
+        </Title>
+        <Title level={3} className="team__detail-title">
+          Goals Diff: {team.goals_diff}
+        </Title>
+        <Title level={3} className="team__detail-title">
+          Rating: {team.rating}
+        </Title>
       </div>
+      <Gallery photos={photos} team={team.name} />
       <Chart
         rank={chartData}
         labels={chartLabels}
         color={color}
         playOff={playOffTeams}
       />
-      <Gallery photos={photos} team={team.name} />
+      <Title level={2} className="team__header">
+        {team.city + " " + team.name + " plays at " + team.arena_name}{" "}
+      </Title>
+      <Image
+        className="team__arena"
+        width="auto"
+        src={team.arena_photo}
+        preview={false}
+        loading="lazy"
+      />
+      <Title level={5} className="team__description">
+        {team.arena_dedcription}
+      </Title>
     </div>
   );
 }

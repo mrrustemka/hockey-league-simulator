@@ -23,7 +23,11 @@ export type Teams = {
   curStatusLength: number;
   chartData: number[];
   chartLabels: string[];
-  photos?: string[];
+  photos: string[];
+  arena_name?: string;
+  arena_dedcription?: string;
+  arena_capacity?: number;
+  arena_photo?: string;
 };
 
 export type TeamsList = string[];

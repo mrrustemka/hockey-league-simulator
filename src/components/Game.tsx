@@ -77,7 +77,12 @@ function Game() {
       status: "",
       curStatusLength: 0,
       chartData: [],
-      chartLabels: []
+      chartLabels: [],
+      photos: [],
+      arena_name: "",
+      arena_dedcription: "",
+      arena_capacity: 0,
+      arena_photo: ""
     };
     let away: Teams = {
       abbreviation: "",
@@ -103,7 +108,12 @@ function Game() {
       status: "",
       curStatusLength: 0,
       chartData: [],
-      chartLabels: []
+      chartLabels: [],
+      photos: [],
+      arena_name: "",
+      arena_dedcription: "",
+      arena_capacity: 0,
+      arena_photo: ""
     };
     function getGoals(min: number, max: number, rating: number) {
       return Math.round(
