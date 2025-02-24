@@ -4,44 +4,52 @@ import aik_1 from "../../Images/Gallery/Shl/Aik/aik_1.jpg";
 import aik_2 from "../../Images/Gallery/Shl/Aik/aik_2.jpg";
 import aik_3 from "../../Images/Gallery/Shl/Aik/aik_3.jpg";
 import aik_4 from "../../Images/Gallery/Shl/Aik/aik_4.jpg";
+import aik_5 from "../../Images/Gallery/Shl/Aik/aik_5.jpg";
 import bel from "../../Images/ehl_bel.png";
 import bel_1 from "../../Images/Gallery/Ehl/Bel/bel_1.jpg";
 import bel_2 from "../../Images/Gallery/Ehl/Bel/bel_2.jpg";
 import bel_3 from "../../Images/Gallery/Ehl/Bel/bel_3.jpg";
 import bel_4 from "../../Images/Gallery/Ehl/Bel/bel_4.jpg";
+import bel_5 from "../../Images/Gallery/Ehl/Bel/bel_5.webp";
 import cze from "../../Images/w1_cze.png";
 import deg from "../../Images/del_deg.png";
 import deg_1 from "../../Images/Gallery/Del/Deg/deg_1.jpg";
 import deg_2 from "../../Images/Gallery/Del/Deg/deg_2.jpg";
 import deg_3 from "../../Images/Gallery/Del/Deg/deg_3.jpg";
 import deg_4 from "../../Images/Gallery/Del/Deg/deg_4.jpg";
+import deg_5 from "../../Images/Gallery/Del/Deg/deg_5.webp";
 import ebb from "../../Images/del_ebb.png";
 import ebb_1 from "../../Images/Gallery/Del/Ebb/ebb_1.jpg";
 import ebb_2 from "../../Images/Gallery/Del/Ebb/ebb_2.jpg";
 import ebb_3 from "../../Images/Gallery/Del/Ebb/ebb_3.jpg";
 import ebb_4 from "../../Images/Gallery/Del/Ebb/ebb_4.jpg";
+import ebb_5 from "../../Images/Gallery/Del/Ebb/ebb_5.webp";
 import eng from "../../Images/ehl_eng.png";
 import evz from "../../Images/ehl_evz.png";
 import evz_1 from "../../Images/Gallery/Na/Evz/evz_1.jpg";
 import evz_2 from "../../Images/Gallery/Na/Evz/evz_2.jpg";
 import evz_3 from "../../Images/Gallery/Na/Evz/evz_3.jpg";
 import evz_4 from "../../Images/Gallery/Na/Evz/evz_4.jpg";
+import evz_5 from "../../Images/Gallery/Na/Evz/evz_5.webp";
 import fbk from "../../Images/ehl_fbk.png";
 import fbk_1 from "../../Images/Gallery/Shl/Fbk/fbk_1.jpg";
 import fbk_2 from "../../Images/Gallery/Shl/Fbk/fbk_2.jpg";
 import fbk_3 from "../../Images/Gallery/Shl/Fbk/fbk_3.jpg";
 import fbk_4 from "../../Images/Gallery/Shl/Fbk/fbk_4.jpg";
+import fbk_5 from "../../Images/Gallery/Shl/Fbk/fbk_5.webp";
 import fin from "../../Images/w1_fin.png";
 import fro from "../../Images/ehl_fro.png";
 import fro_1 from "../../Images/Gallery/Shl/Fro/fro_1.jpg";
 import fro_2 from "../../Images/Gallery/Shl/Fro/fro_2.jpg";
 import fro_3 from "../../Images/Gallery/Shl/Fro/fro_3.jpg";
 import fro_4 from "../../Images/Gallery/Shl/Fro/fro_4.jpg";
+import fro_5 from "../../Images/Gallery/Shl/Fro/fro_5.jpg";
 import gen from "../../Images/ehl_gen.png";
 import gen_1 from "../../Images/Gallery/Na/Gen/gen_1.jpg";
 import gen_2 from "../../Images/Gallery/Na/Gen/gen_2.jpg";
 import gen_3 from "../../Images/Gallery/Na/Gen/gen_3.jpg";
 import gen_4 from "../../Images/Gallery/Na/Gen/gen_4.jpg";
+import gen_5 from "../../Images/Gallery/Na/Gen/gen_5.jpg";
 import gbr from "../../Images/w2_gbr.png";
 import ger from "../../Images/w1_ger.png";
 import hcb from "../../Images/ice_hcb.png";
@@ -50,124 +58,148 @@ import hcbb_1 from "../../Images/Gallery/Na/Hcb/hcb_1.jpg";
 import hcbb_2 from "../../Images/Gallery/Na/Hcb/hcb_2.jpg";
 import hcbb_3 from "../../Images/Gallery/Na/Hcb/hcb_3.jpg";
 import hcbb_4 from "../../Images/Gallery/Na/Hcb/hcb_4.jpg";
+import hcbb_5 from "../../Images/Gallery/Na/Hcb/hcb_5.webp";
 import hcd from "../../Images/ehl_hcd.png";
 import hcd_1 from "../../Images/Gallery/Na/Hcd/hcd_1.jpg";
 import hcd_2 from "../../Images/Gallery/Na/Hcd/hcd_2.jpg";
 import hcd_3 from "../../Images/Gallery/Na/Hcd/hcd_3.jpg";
 import hcd_4 from "../../Images/Gallery/Na/Hcd/hcd_4.jpg";
+import hcd_5 from "../../Images/Gallery/Na/Hcd/hcd_5.webp";
 import hcl from "../../Images/ehl_hcl.png";
 import hcl_1 from "../../Images/Gallery/Na/Hcl/hcl_1.jpg";
 import hcl_2 from "../../Images/Gallery/Na/Hcl/hcl_2.jpg";
 import hcl_3 from "../../Images/Gallery/Na/Hcl/hcl_3.jpg";
 import hcl_4 from "../../Images/Gallery/Na/Hcl/hcl_4.jpg";
+import hcl_5 from "../../Images/Gallery/Na/Hcl/hcl_5.webp";
 import ilv from "../../Images/ehl_ilv.png";
 import ilv_1 from "../../Images/Gallery/Sml/Ilv/ilv_1.jpg";
 import ilv_2 from "../../Images/Gallery/Sml/Ilv/ilv_2.jpg";
 import ilv_3 from "../../Images/Gallery/Sml/Ilv/ilv_3.jpg";
 import ilv_4 from "../../Images/Gallery/Sml/Ilv/ilv_4.jpg";
 import ilv_5 from "../../Images/Gallery/Sml/Ilv/ilv_5.jpg";
+import ilv_6 from "../../Images/Gallery/Sml/Ilv/ilv_6.jpg";
 import ing from "../../Images/del_ing.png";
 import ing_1 from "../../Images/Gallery/Del/Ing/ing_1.jpg";
 import ing_2 from "../../Images/Gallery/Del/Ing/ing_2.jpg";
 import ing_3 from "../../Images/Gallery/Del/Ing/ing_3.jpg";
 import ing_4 from "../../Images/Gallery/Del/Ing/ing_4.jpg";
 import ing_5 from "../../Images/Gallery/Del/Ing/ing_5.jpg";
+import ing_6 from "../../Images/Gallery/Del/Ing/ing_6.webp";
 import ifk from "../../Images/ehl_ifk.png";
 import ifk_1 from "../../Images/Gallery/Sml/Ifk/ifk_1.jpg";
 import ifk_2 from "../../Images/Gallery/Sml/Ifk/ifk_2.jpg";
 import ifk_3 from "../../Images/Gallery/Sml/Ifk/ifk_3.jpg";
 import ifk_4 from "../../Images/Gallery/Sml/Ifk/ifk_4.jpg";
+import ifk_5 from "../../Images/Gallery/Sml/Ifk/ifk_5.jpeg";
 import ita from "../../Images/w2_ita.png";
 import kal from "../../Images/sml_kal.png";
 import kal_1 from "../../Images/Gallery/Sml/Kal/kal_1.jpg";
 import kal_2 from "../../Images/Gallery/Sml/Kal/kal_2.jpg";
 import kal_3 from "../../Images/Gallery/Sml/Kal/kal_3.jpg";
 import kal_4 from "../../Images/Gallery/Sml/Kal/kal_4.jpg";
+import kal_5 from "../../Images/Gallery/Sml/Kal/kal_5.webp";
 import kec from "../../Images/ehl_kec.png";
 import kec_1 from "../../Images/Gallery/Del/Kec/kec_1.jpg";
 import kec_2 from "../../Images/Gallery/Del/Kec/kec_2.jpg";
 import kec_3 from "../../Images/Gallery/Del/Kec/kec_3.jpg";
 import kec_4 from "../../Images/Gallery/Del/Kec/kec_4.jpg";
 import kec_5 from "../../Images/Gallery/Del/Kec/kec_5.jpg";
+import kec_6 from "../../Images/Gallery/Del/Kec/kec_6.webp";
 import koo from "../../Images/sml_koo.png";
 import koo_1 from "../../Images/Gallery/Sml/Koo/koo_1.jpg";
 import koo_2 from "../../Images/Gallery/Sml/Koo/koo_2.jpg";
 import koo_3 from "../../Images/Gallery/Sml/Koo/koo_3.jpg";
+import koo_4 from "../../Images/Gallery/Sml/Koo/koo_4.webp";
 import kos from "../../Images/ehl_kos.png";
 import kos_1 from "../../Images/Gallery/Ehl/Kos/kos_1.jpg";
 import kos_2 from "../../Images/Gallery/Ehl/Kos/kos_2.jpg";
 import kos_3 from "../../Images/Gallery/Ehl/Kos/kos_3.jpg";
 import kos_4 from "../../Images/Gallery/Ehl/Kos/kos_4.jpg";
+import kos_5 from "../../Images/Gallery/Ehl/Kos/kos_5.webp";
 import lak from "../../Images/ehl_lak.png";
 import lak_1 from "../../Images/Gallery/Shl/Lak/lak_1.jpg";
 import lak_2 from "../../Images/Gallery/Shl/Lak/lak_2.jpg";
 import lak_3 from "../../Images/Gallery/Shl/Lak/lak_3.jpg";
 import lak_4 from "../../Images/Gallery/Shl/Lak/lak_4.jpg";
+import lak_5 from "../../Images/Gallery/Shl/Lak/lak_5.jpg";
 import lhf from "../../Images/ehl_lhf.png";
 import lhf_1 from "../../Images/Gallery/Shl/Lhf/lhf_1.jpg";
 import lhf_2 from "../../Images/Gallery/Shl/Lhf/lhf_2.jpg";
 import lhf_3 from "../../Images/Gallery/Shl/Lhf/lhf_3.jpg";
 import lhf_4 from "../../Images/Gallery/Shl/Lhf/lhf_4.jpg";
+import lhf_5 from "../../Images/Gallery/Shl/Lhf/lhf_5.webp";
 import hcb_1 from "../../Images/Gallery/Ice/Hcb/hcb_1.jpg";
 import hcb_2 from "../../Images/Gallery/Ice/Hcb/hcb_2.jpg";
 import hcb_3 from "../../Images/Gallery/Ice/Hcb/hcb_3.jpg";
+import hcb_4 from "../../Images/Gallery/Ice/Hcb/hcb_4.webp";
 import man from "../../Images/ehl_man.png";
 import man_1 from "../../Images/Gallery/Del/Man/man_1.jpg";
 import man_2 from "../../Images/Gallery/Del/Man/man_2.jpg";
 import man_3 from "../../Images/Gallery/Del/Man/man_3.jpg";
 import man_4 from "../../Images/Gallery/Del/Man/man_4.jpg";
+import man_5 from "../../Images/Gallery/Del/Man/man_5.webp";
 import mhk from "../../Images/elh_mhk.png";
 import mhk_1 from "../../Images/Gallery/Elh/Mhk/mhk_1.jpg";
 import mhk_2 from "../../Images/Gallery/Elh/Mhk/mhk_2.jpg";
 import mhk_3 from "../../Images/Gallery/Elh/Mhk/mhk_3.jpg";
 import mhk_4 from "../../Images/Gallery/Elh/Mhk/mhk_4.jpg";
+import mhk_5 from "../../Images/Gallery/Elh/Mhk/mhk_5.webp";
 import nor from "../../Images/w1_nor.png";
 import ore from "../../Images/shl_ore.png";
 import ore_1 from "../../Images/Gallery/Shl/Ore/ore_1.jpg";
 import ore_2 from "../../Images/Gallery/Shl/Ore/ore_2.jpg";
 import ore_3 from "../../Images/Gallery/Shl/Ore/ore_3.jpg";
 import ore_4 from "../../Images/Gallery/Shl/Ore/ore_4.jpg";
+import ore_5 from "../../Images/Gallery/Shl/Ore/ore_5.webp";
 import pce from "../../Images/ehl_pce.png";
 import pce_1 from "../../Images/Gallery/Elh/Pce/pce_1.jpg";
 import pce_2 from "../../Images/Gallery/Elh/Pce/pce_2.jpg";
 import pce_3 from "../../Images/Gallery/Elh/Pce/pce_3.jpg";
 import pce_4 from "../../Images/Gallery/Elh/Pce/pce_4.jpg";
 import pce_5 from "../../Images/Gallery/Elh/Pce/pce_5.jpg";
+import pce_6 from "../../Images/Gallery/Elh/Pce/pce_6.webp";
 import pel from "../../Images/ehl_pel.png";
 import pel_1 from "../../Images/Gallery/Sml/Pel/pel_1.jpg";
 import pel_2 from "../../Images/Gallery/Sml/Pel/pel_2.jpg";
 import pel_3 from "../../Images/Gallery/Sml/Pel/pel_3.jpg";
 import pel_4 from "../../Images/Gallery/Sml/Pel/pel_4.jpg";
+import pel_5 from "../../Images/Gallery/Sml/Pel/pel_5.jpg";
 import rbm from "../../Images/ehl_rbm.png";
 import rbm_1 from "../../Images/Gallery/Del/Rbm/rbm_1.jpg";
 import rbm_2 from "../../Images/Gallery/Del/Rbm/rbm_2.jpg";
 import rbm_3 from "../../Images/Gallery/Del/Rbm/rbm_3.jpg";
 import rbm_4 from "../../Images/Gallery/Del/Rbm/rbm_4.jpg";
+import rbm_5 from "../../Images/Gallery/Del/Rbm/rbm_5.webp";
 import scb from "../../Images/ehl_scb.png";
 import scb_1 from "../../Images/Gallery/Na/Scb/scb_1.jpg";
 import scb_2 from "../../Images/Gallery/Na/Scb/scb_2.jpg";
 import scb_3 from "../../Images/Gallery/Na/Scb/scb_3.jpg";
 import scb_4 from "../../Images/Gallery/Na/Scb/scb_4.jpg";
+import scb_5 from "../../Images/Gallery/Na/Scb/scb_5.jpg";
 import shef from "../../Images/ehl_shef.png";
 import shef_1 from "../../Images/Gallery/Ehl/Shef/shef_1.jpg";
 import shef_2 from "../../Images/Gallery/Ehl/Shef/shef_2.jpg";
 import shef_3 from "../../Images/Gallery/Ehl/Shef/shef_3.jpg";
 import shef_4 from "../../Images/Gallery/Ehl/Shef/shef_4.jpg";
+import shef_5 from "../../Images/Gallery/Ehl/Shef/shef_5.webp";
 import sil from "../../Images/ehl_sil.png";
 import sil_1 from "../../Images/Gallery/Ehl/Sil/sil_1.jpg";
 import sil_2 from "../../Images/Gallery/Ehl/Sil/sil_2.jpg";
 import sil_3 from "../../Images/Gallery/Ehl/Sil/sil_3.jpg";
 import sil_4 from "../../Images/Gallery/Ehl/Sil/sil_4.jpg";
+import sil_5 from "../../Images/Gallery/Ehl/Sil/sil_5.webp";
 import slk from "../../Images/w1_slk.png";
 import spa from "../../Images/ehl_spa.png";
 import spa_1 from "../../Images/Gallery/Elh/Spa/spa_1.jpg";
 import spa_2 from "../../Images/Gallery/Elh/Spa/spa_2.jpg";
 import spa_3 from "../../Images/Gallery/Elh/Spa/spa_3.jpg";
 import spa_4 from "../../Images/Gallery/Elh/Spa/spa_4.jpg";
+import spa_5 from "../../Images/Gallery/Elh/Spa/spa_5.webp";
 import sba from "../../Images/ehl_sba.png";
 import sba_1 from "../../Images/Gallery/Ehl/Sba/sba_1.jpg";
 import sba_2 from "../../Images/Gallery/Ehl/Sba/sba_2.jpg";
 import sba_3 from "../../Images/Gallery/Ehl/Sba/sba_3.jpg";
+import sba_4 from "../../Images/Gallery/Ehl/Sba/sba_4.webp";
 import swe from "../../Images/w1_swe.png";
 import swi from "../../Images/w1_swi.png";
 import tap from "../../Images/ehl_tap.png";
@@ -175,36 +207,43 @@ import tap_1 from "../../Images/Gallery/Sml/Tap/tap_1.jpg";
 import tap_2 from "../../Images/Gallery/Sml/Tap/tap_2.jpeg";
 import tap_3 from "../../Images/Gallery/Sml/Tap/tap_3.jpg";
 import tap_4 from "../../Images/Gallery/Sml/Tap/tap_4.jpg";
+import tap_5 from "../../Images/Gallery/Sml/Tap/tap_5.jpg";
 import tik from "../../Images/ehl_tik.png";
 import tik_1 from "../../Images/Gallery/Shl/Tik/tik_1.jpg";
 import tik_2 from "../../Images/Gallery/Shl/Tik/tik_2.jpg";
 import tik_3 from "../../Images/Gallery/Shl/Tik/tik_3.jpg";
 import tik_4 from "../../Images/Gallery/Shl/Tik/tik_4.jpg";
+import tik_5 from "../../Images/Gallery/Shl/Tik/tik_5.webp";
 import tps from "../../Images/ehl_tps.png";
 import tps_1 from "../../Images/Gallery/Sml/Tps/tps_1.jpg";
 import tps_2 from "../../Images/Gallery/Sml/Tps/tps_2.jpg";
 import tps_3 from "../../Images/Gallery/Sml/Tps/tps_3.jpg";
 import tps_4 from "../../Images/Gallery/Sml/Tps/tps_4.jpg";
+import tps_5 from "../../Images/Gallery/Sml/Tps/tps_5.webp";
 import tri from "../../Images/elh_tri.png";
 import tri_1 from "../../Images/Gallery/Elh/Tri/tri_1.jpg";
 import tri_2 from "../../Images/Gallery/Elh/Tri/tri_2.jpg";
 import tri_3 from "../../Images/Gallery/Elh/Tri/tri_3.jpg";
 import tri_4 from "../../Images/Gallery/Elh/Tri/tri_4.jpg";
+import tri_5 from "../../Images/Gallery/Elh/Tri/tri_5.webp";
 import vit from "../../Images/elh_vit.png";
 import vit_1 from "../../Images/Gallery/Elh/Vit/vit_1.jpg";
 import vit_2 from "../../Images/Gallery/Elh/Vit/vit_2.jpg";
 import vit_3 from "../../Images/Gallery/Elh/Vit/vit_3.jpg";
 import vit_4 from "../../Images/Gallery/Elh/Vit/vit_4.jpg";
+import vit_5 from "../../Images/Gallery/Elh/Vit/vit_5.webp";
 import wob from "../../Images/ehl_wob.png";
 import wob_1 from "../../Images/Gallery/Del/Wob/wob_1.jpg";
 import wob_2 from "../../Images/Gallery/Del/Wob/wob_2.jpg";
 import wob_3 from "../../Images/Gallery/Del/Wob/wob_3.jpg";
 import wob_4 from "../../Images/Gallery/Del/Wob/wob_4.jpg";
+import wob_5 from "../../Images/Gallery/Del/Wob/wob_5.webp";
 import zsc from "../../Images/ehl_zsc.png";
 import zsc_1 from "../../Images/Gallery/Na/Zsc/zsc_1.jpg";
 import zsc_2 from "../../Images/Gallery/Na/Zsc/zsc_2.jpg";
 import zsc_3 from "../../Images/Gallery/Na/Zsc/zsc_3.jpg";
 import zsc_4 from "../../Images/Gallery/Na/Zsc/zsc_4.jpg";
+import zsc_5 from "../../Images/Gallery/Na/Zsc/zsc_5.jpg";
 
 export const ehl: Teams[] = [
   {
@@ -232,7 +271,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [lak_1, lak_2, lak_3, lak_4]
+    photos: [lak_1, lak_2, lak_3, lak_4],
+    arena_name: "Vida Arena",
+    arena_dedcription:
+      "Vida Arena (branded as VIDA Arena) is a multi-purpose indoor arena located in Växjö, Sweden. The arena opened in September 2011.",
+    arena_capacity: 5750,
+    arena_photo: lak_5
   },
   {
     id: 2,
@@ -259,7 +303,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [aik_1, aik_2, aik_3, aik_4]
+    photos: [aik_1, aik_2, aik_3, aik_4],
+    arena_name: "Skellefteå Kraft Arena",
+    arena_dedcription:
+      "Skellefteå Kraft Arena is an indoor sporting arena located in Skellefteå, Sweden. It was built in 1966, and inaugurated on 6 January 1967. The arena is named after Skellefteå Kraft, a Swedish power company.",
+    arena_capacity: 5801,
+    arena_photo: aik_5
   },
   {
     id: 3,
@@ -286,7 +335,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [fro_1, fro_2, fro_3, fro_4]
+    photos: [fro_1, fro_2, fro_3, fro_4],
+    arena_name: "Scandinavium",
+    arena_dedcription:
+      "Scandinavium is an indoor arena located in Gothenburg, Sweden. Construction on Scandinavium began in 1969 after decades of setbacks, and was inaugurated on 18 May 1971. Scandinavium has been selected as a championship arena at least fifty times, hosting events such as World Championships in handball and ice hockey, European championships, Davis Cup finals, and in 1985 the Eurovision Song Contest.",
+    arena_capacity: 12044,
+    arena_photo: fro_5
   },
   {
     id: 4,
@@ -313,7 +367,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [gen_1, gen_2, gen_3, gen_4]
+    photos: [gen_1, gen_2, gen_3, gen_4],
+    arena_name: "Patinoire des Vernets",
+    arena_dedcription:
+      "Patinoire des Vernets is an indoor arena located in Geneva, Switzerland. Opened in 1958.",
+    arena_capacity: 7135,
+    arena_photo: gen_5
   },
   {
     id: 5,
@@ -340,7 +399,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [zsc_1, zsc_2, zsc_3, zsc_4]
+    photos: [zsc_1, zsc_2, zsc_3, zsc_4],
+    arena_name: "Swiss Life Arena",
+    arena_dedcription:
+      "The Swiss Life Arena is an ice hockey and entertainment arena in the Altstetten quarter of Zürich, Switzerland. It is located approximately seven kilometers west of downtown Zürich. The arena officially opened in October 2022.",
+    arena_capacity: 12000,
+    arena_photo: zsc_5
   },
   {
     id: 6,
@@ -367,7 +431,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [scb_1, scb_2, scb_3, scb_4]
+    photos: [scb_1, scb_2, scb_3, scb_4],
+    arena_name: "PostFinance Arena",
+    arena_dedcription:
+      "The PostFinance-Arena (originally known as Eisstadion Allmend and Bern Arena) is an indoor arena in Bern, Switzerland. It was opened in October 1967.",
+    arena_capacity: 17031,
+    arena_photo: scb_5
   },
   {
     id: 7,
@@ -394,7 +463,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [tap_1, tap_2, tap_3, tap_4]
+    photos: [tap_1, tap_2, tap_3, tap_4],
+    arena_name: "Nokia Arena",
+    arena_dedcription:
+      "The Nokia Arena, also known by its non-sponsored name Tampere Deck Arena, is an indoor arena in Tampere, Finland, which hosts ice hockey games and large cultural events. Its construction was approved by the City Council of Tampere on 19 May 2010, and it was officially opened on 3 December 2021.",
+    arena_capacity: 13455,
+    arena_photo: tap_5
   },
   {
     id: 8,
@@ -421,7 +495,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [pel_1, pel_2, pel_3, pel_4]
+    photos: [pel_1, pel_2, pel_3, pel_4],
+    arena_name: "Isku Areena",
+    arena_dedcription:
+      "Isku Areena is an ice rink located at the Lahti Sports Center in Lahti, Finland.The hall has 16 stalls and a 200-seat lunch restaurant with a view of the rink.",
+    arena_capacity: 5371,
+    arena_photo: pel_5
   },
   {
     id: 9,
@@ -448,7 +527,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [ifk_1, ifk_2, ifk_3, ifk_4]
+    photos: [ifk_1, ifk_2, ifk_3, ifk_4],
+    arena_name: "Helsinki Ice Hall",
+    arena_dedcription:
+      "Helsinki Ice Hall, colloquially called Nordis, is an indoor arena located in Helsinki, Finland.",
+    arena_capacity: 8200,
+    arena_photo: ifk_5
   },
   {
     id: 10,
@@ -475,7 +559,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [ilv_1, ilv_2, ilv_3, ilv_4, ilv_5]
+    photos: [ilv_1, ilv_2, ilv_3, ilv_4, ilv_5],
+    arena_name: "Nokia Arena",
+    arena_dedcription:
+      "The Nokia Arena, also known by its non-sponsored name Tampere Deck Arena, is an indoor arena in Tampere, Finland, which hosts ice hockey games and large cultural events. Its construction was approved by the City Council of Tampere on 19 May 2010, and it was officially opened on 3 December 2021.",
+    arena_capacity: 13455,
+    arena_photo: ilv_6
   },
   {
     id: 11,
@@ -502,7 +591,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [rbm_1, rbm_2, rbm_3, rbm_4]
+    photos: [rbm_1, rbm_2, rbm_3, rbm_4],
+    arena_name: "SAP Garden",
+    arena_dedcription:
+      "SAP Garden is an indoor arena, in Olympiapark, Munich. The arena was completed in summer 2024. The site was built at the location of the former Radstadion which was demolished in 2015.",
+    arena_capacity: 10796,
+    arena_photo: rbm_5
   },
   {
     id: 12,
@@ -529,7 +623,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [man_1, man_2, man_3, man_4]
+    photos: [man_1, man_2, man_3, man_4],
+    arena_name: "SAP Arena",
+    arena_dedcription:
+      "SAP Arena is a multi-purpose arena in Mannheim, Germany. Inaugurated in 2005. The SAP Arena is one of the largest in Germany and one of the most high-tech in Europe. The arena is named after its sponsor SAP.",
+    arena_capacity: 13600,
+    arena_photo: man_5
   },
   {
     id: 13,
@@ -556,7 +655,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [deg_1, deg_2, deg_3, deg_4]
+    photos: [deg_1, deg_2, deg_3, deg_4],
+    arena_name: "PSD Bank Dome",
+    arena_dedcription:
+      "The PSD Bank Dome is a multi-use indoor arena in Düsseldorf, Germany, it opened in 2006.",
+    arena_capacity: 14282,
+    arena_photo: deg_5
   },
   {
     id: 14,
@@ -583,7 +687,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [kec_1, kec_2, kec_3, kec_4, kec_5]
+    photos: [kec_1, kec_2, kec_3, kec_4, kec_5],
+    arena_name: "Lanxess Arena",
+    arena_dedcription:
+      "Lanxess Arena is an indoor arena, in Cologne, North Rhine-Westphalia, Germany. The arena is spanned by a steel arch supporting the roof via steel cables. The height of the arch is 76 m (249 ft) and its weight is 480 tons. On June 2, 2008, it was announced that Kölnarena would be renamed Lanxess Arena, for a period of ten years. The sponsor, Lanxess AG, is a specialty chemicals group based in the Lanxess Tower in Deutz, Cologne. This naming-rights deal was extended in 2017 until December 31, 2023. Then in October 2023, it was announced that the cooperation between the arena and Lanxess had been extended for another 5 years until 2028.",
+    arena_capacity: 18500,
+    arena_photo: kec_6
   },
   {
     id: 15,
@@ -610,7 +719,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [ebb_1, ebb_2, ebb_3, ebb_4]
+    photos: [ebb_1, ebb_2, ebb_3, ebb_4],
+    arena_name: "Uber Arena",
+    arena_dedcription:
+      "Uber Arena (previously branded as O2 World and Mercedes-Benz Arena) is a multipurpose indoor arena in the Friedrichshain neighborhood of Berlin, Germany, which opened in 2008. The venue became known as Uber Arena following a long-term deal with venue operators AEG Europe in 2024. The arena was one of the most prominent elements of the Mediaspree urban redevelopment project, quickly gaining emblematic status in the debates surrounding the project's impact.",
+    arena_capacity: 14200,
+    arena_photo: ebb_5
   },
   {
     id: 16,
@@ -637,7 +751,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [pce_1, pce_2, pce_3, pce_4, pce_5]
+    photos: [pce_1, pce_2, pce_3, pce_4, pce_5],
+    arena_name: "Enteria arena",
+    arena_dedcription:
+      "Enteria arena (formerly Tipsport Arena or ČEZ Arena) is an indoor sporting arena in Pardubice, Czech Republic.",
+    arena_capacity: 10194,
+    arena_photo: pce_6
   },
   {
     id: 17,
@@ -664,7 +783,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [spa_1, spa_2, spa_3, spa_4]
+    photos: [spa_1, spa_2, spa_3, spa_4],
+    arena_name: "O2 Arena",
+    arena_dedcription:
+      "O2 Arena (stylised as O2 arena) is a multi-purpose arena, in Prague, Czech Republic.It is the third-largest ice hockey arena in Europe. It has hosted important sporting events such as three Ice Hockey World Championships (2004, 2015 and 2024), a handful of NHL games.",
+    arena_capacity: 17383,
+    arena_photo: spa_5
   },
   {
     id: 18,
@@ -691,7 +815,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [evz_1, evz_2, evz_3, evz_4]
+    photos: [evz_1, evz_2, evz_3, evz_4],
+    arena_name: "Bossard Arena",
+    arena_dedcription:
+      "Bossard Arena is an indoor sporting arena located in Zug, Switzerland. Opened in 2010.The venue is named after Bossard Holding, an international logistics company headquartered in the city.",
+    arena_capacity: 7800,
+    arena_photo: evz_5
   },
   {
     id: 19,
@@ -718,7 +847,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [wob_1, wob_2, wob_3, wob_4]
+    photos: [wob_1, wob_2, wob_3, wob_4],
+    arena_name: "Eis Arena",
+    arena_dedcription:
+      "Eis Arena is an arena in Wolfsburg, Germany. Eisarena Wolfsburg opened in 2006.",
+    arena_capacity: 4660,
+    arena_photo: wob_5
   },
   {
     id: 20,
@@ -745,7 +879,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [tik_1, tik_2, tik_3, tik_4]
+    photos: [tik_1, tik_2, tik_3, tik_4],
+    arena_name: "NHC Arena",
+    arena_dedcription:
+      "NHC Arena is an indoor sporting arena located in Timrå, Västernorrland County, Sweden. Construction began in 1964 and was inaugurated on 4 September 1966. Since then the venue has undergone several renovations and expansions.",
+    arena_capacity: 6000,
+    arena_photo: tik_5
   },
   {
     id: 21,
@@ -772,7 +911,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [hcl_1, hcl_2, hcl_3, hcl_4]
+    photos: [hcl_1, hcl_2, hcl_3, hcl_4],
+    arena_name: "Cornèr Arena",
+    arena_dedcription:
+      "Cornèr Arena is an arena in Porza, Switzerland, near the city of Lugano.",
+    arena_capacity: 7200,
+    arena_photo: hcl_5
   },
   {
     id: 22,
@@ -799,7 +943,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [tps_1, tps_2, tps_3, tps_4]
+    photos: [tps_1, tps_2, tps_3, tps_4],
+    arena_name: "Gatorade Center",
+    arena_dedcription:
+      "The Gatorade Center (formerly HK Areena, Elysée Arena, Typhoon Arena) is a multi-functional indoor arena in the district of Artukainen in Turku, Finland. Opened in November 1990. A record attendance of 12,041 for a hockey match was registered in 1991. Gatorade Center is a member of the European Arenas Association (EAA).",
+    arena_capacity: 10500,
+    arena_photo: tps_5
   },
   {
     id: 23,
@@ -826,7 +975,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [kos_1, kos_2, kos_3, kos_4]
+    photos: [kos_1, kos_2, kos_3, kos_4],
+    arena_name: "Steel Arena",
+    arena_dedcription:
+      "Steel Arena – Ladislav Troják Stadium in Košice. The arena opened on February 24, 2006, and was named in honor of the general sponsor of the club, U. S. Steel Košice (a member of the United States Steel Corporation) and also in honor of Ladislav Troják, a Košice-born hockey player who was the first Slovak to win the World Championship with the Czechoslovakian national team.",
+    arena_capacity: 8378,
+    arena_photo: kos_5
   },
   {
     id: 24,
@@ -853,7 +1007,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [sba_1, sba_2, sba_3]
+    photos: [sba_1, sba_2, sba_3],
+    arena_name: "Tipos aréna",
+    arena_dedcription:
+      "The Ondrej Nepela Arena (also known as Orange Arena during the 2011 IIHF Championship and later as Tipos Aréna, previously Slovnaft Arena, for sponsorship reasons) is an indoor arena in Bratislava, Slovakia.",
+    arena_capacity: 10055,
+    arena_photo: sba_4
   },
   {
     id: 25,
@@ -880,7 +1039,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [lhf_1, lhf_2, lhf_3, lhf_4]
+    photos: [lhf_1, lhf_2, lhf_3, lhf_4],
+    arena_name: "Coop Norrbotten Arena",
+    arena_dedcription:
+      "Coop Norrbotten Arena is an indoor sporting arena located in Luleå, Sweden.",
+    arena_capacity: 6150,
+    arena_photo: lhf_5
   },
   {
     id: 26,
@@ -907,7 +1071,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [fbk_1, fbk_2, fbk_3, fbk_4]
+    photos: [fbk_1, fbk_2, fbk_3, fbk_4],
+    arena_name: "Löfbergs Arena",
+    arena_dedcription:
+      "Löfbergs Arena is an arena located in Karlstad, Sweden, situated just above the river delta of Klarälven. It opened in 2001 following a complete overhaul and major expansion of the previously existing arena Färjestads Ishall. The name of the arena comes from the coffee roastery Löfbergs.",
+    arena_capacity: 8645,
+    arena_photo: fbk_5
   },
   {
     id: 27,
@@ -934,7 +1103,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [hcd_1, hcd_2, hcd_3, hcd_4]
+    photos: [hcd_1, hcd_2, hcd_3, hcd_4],
+    arena_name: "zondacrypto Arena",
+    arena_dedcription:
+      "zondacrypto Arena is an indoor arena in Davos, Switzerland. Every year the Spengler Cup is played in this arena.Major renovation of the arena started at the conclusion of the 2017–18 season to upgrade most of the stands and the concourse. The seating capacity was not increased and the total cost was around CHF 27 million. Construction began in 2018 and was completed in 2021.",
+    arena_capacity: 7080,
+    arena_photo: hcd_5
   },
   {
     id: 28,
@@ -961,7 +1135,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [kal_1, kal_2, kal_3, kal_4]
+    photos: [kal_1, kal_2, kal_3, kal_4],
+    arena_name: "Kuopio Ice Hall",
+    arena_dedcription:
+      "Kuopio Ice Hall or Olvi Arena, is the ice hockey arena located in the Hatsala district of Kuopio, Finland. The arena is built in 1979.",
+    arena_capacity: 5300,
+    arena_photo: kal_5
   },
   {
     id: 29,
@@ -988,7 +1167,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [shef_1, shef_2, shef_3, shef_4]
+    photos: [shef_1, shef_2, shef_3, shef_4],
+    arena_name: "Sheffield Arena",
+    arena_dedcription:
+      "Sheffield Arena, known for sponsorship purposes as Utilita Arena Sheffield, is a multi-purpose arena located in Sheffield, England. It is situated near Meadowhall and lies between Sheffield city centre and Rotherham town centre. Opened in 1991.",
+    arena_capacity: 9300,
+    arena_photo: shef_5
   },
   {
     id: 30,
@@ -1015,7 +1199,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [bel_1, bel_2, bel_3, bel_4]
+    photos: [bel_1, bel_2, bel_3, bel_4],
+    arena_name: "SSE Arena",
+    arena_dedcription:
+      "The SSE Arena was known as the Odyssey Arena from 2000 to 2015. Northern Ireland's biggest indoor arena.",
+    arena_capacity: 8700,
+    arena_photo: bel_5
   },
   {
     id: 31,
@@ -1042,7 +1231,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [sil_1, sil_2, sil_3, sil_4]
+    photos: [sil_1, sil_2, sil_3, sil_4],
+    arena_name: "CC Amfi",
+    arena_dedcription:
+      "CC Amfi, also known as Nordlyshallen ('The Northern Light Hall'), is an indoor sports arena in Hamar, Norway. Construction of CC Amfi started in August 1991 and it was inaugurated on 25 November 1992, with construction costing 83 million Norwegian krone (NOK). The venues are owned by Hamar Olympiske Anlegg, a subsidiary of Hamar Municipality.",
+    arena_capacity: 7500,
+    arena_photo: sil_5
   },
   {
     id: 32,
@@ -1069,7 +1263,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [hcb_1, hcb_2, hcb_3]
+    photos: [hcb_1, hcb_2, hcb_3],
+    arena_name: "Sparkasse Arena",
+    arena_dedcription:
+      "The Sparkasse Arena, formerly called PalaOnda or Eiswelle, is an indoor sports arena in Bolzano, Italy. It was built to host the 1994 Men's World Ice Hockey Championships along with Forum di Assago.",
+    arena_capacity: 7200,
+    arena_photo: hcb_4
   },
   {
     id: 33,
@@ -1096,7 +1295,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [ore_1, ore_2, ore_3, ore_4]
+    photos: [ore_1, ore_2, ore_3, ore_4],
+    arena_name: "Behrn Arena",
+    arena_dedcription:
+      "Behrn Arena is an indoor arena located in Örebro, Sweden. The arena opened on 1 January 1965.On 27 March 1967, the Rolling Stones performed two shows at the arena, during their sixth European tour. Which was the only concert that was held at the venue.",
+    arena_capacity: 5500,
+    arena_photo: ore_5
   },
   {
     id: 34,
@@ -1123,7 +1327,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [hcbb_1, hcbb_2, hcbb_3, hcbb_4]
+    photos: [hcbb_1, hcbb_2, hcbb_3, hcbb_4],
+    arena_name: "Tissot Arena",
+    arena_dedcription:
+      "Tissot Arena is a combined multi-purpose stadium and arena in Biel/Bienne, Canton of Bern, Switzerland.",
+    arena_capacity: 6521,
+    arena_photo: hcbb_5
   },
   {
     id: 35,
@@ -1150,7 +1359,11 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [ing_1, ing_2, ing_3, ing_4, ing_5]
+    photos: [ing_1, ing_2, ing_3, ing_4, ing_5],
+    arena_name: "Saturn Arena",
+    arena_dedcription: "Saturn Arena is an arena in Ingolstadt, Germany.",
+    arena_capacity: 4815,
+    arena_photo: ing_6
   },
   {
     id: 36,
@@ -1177,7 +1390,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [tri_1, tri_2, tri_3, tri_4]
+    photos: [tri_1, tri_2, tri_3, tri_4],
+    arena_name: "Werk Arena",
+    arena_dedcription:
+      "Werk Arena is an indoor sporting arena located in Třinec, Czech Republic.",
+    arena_capacity: 5400,
+    arena_photo: tri_5
   },
   {
     id: 37,
@@ -1204,7 +1422,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [koo_1, koo_2, koo_3]
+    photos: [koo_1, koo_2, koo_3],
+    arena_name: "Lumon arena",
+    arena_dedcription:
+      "Lumon arena is an ice hockey arena located in Kouvola, Finland. The name of the Kouvolan jäähalli changed in 2015 as a continuation of the arena when KooKoo and Lumon entered into a co-operation agreement.",
+    arena_capacity: 5950,
+    arena_photo: koo_4
   },
   {
     id: 38,
@@ -1231,7 +1454,12 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [vit_1, vit_2, vit_3, vit_4]
+    photos: [vit_1, vit_2, vit_3, vit_4],
+    arena_name: "Ostravar Aréna",
+    arena_dedcription:
+      "OSTRAVAR Aréna is an indoor arena used mainly for ice hockey matches, in Vítkovice, Ostrava, Czech Republic. It opened in 1986, and underwent a € 23.3 million renovation between 2003 and 2004.",
+    arena_capacity: 10004,
+    arena_photo: vit_5
   },
   {
     id: 39,
@@ -1258,6 +1486,11 @@ export const ehl: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [mhk_1, mhk_2, mhk_3, mhk_4]
+    photos: [mhk_1, mhk_2, mhk_3, mhk_4],
+    arena_name: "ČPP Arena",
+    arena_dedcription:
+      "ČPP Arena, is an arena in Hradec Králové, Czech Republic. It opened in 1957.",
+    arena_capacity: 6890,
+    arena_photo: mhk_5
   }
 ];
