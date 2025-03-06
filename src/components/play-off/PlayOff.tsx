@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { champs } from "../../Data/champs";
+import { champs } from "../../data/champs";
 import Header from "../Header";
 import Round from "./Round";
-// import { teams as mock } from "../../Data/teams"; // use for tests
-import { Teams } from "../../Data/types";
+// import { teams as mock } from "../../data/teams"; // use for tests
+import { Teams } from "../../data/types";
 import "../../Styles/PlayOff.css";
 
 function PlayOff() {

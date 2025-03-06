@@ -3,8 +3,8 @@ import Chart from "./Chart";
 import Header from "./Header";
 import { Image } from "antd";
 import Gallery from "./Gallery";
-import { Teams } from "../Data/types";
-import { whiteTeams } from "../Data/whiteList";
+import { Teams } from "../data/types";
+import { whiteTeams } from "../data/whiteList";
 import { Typography } from "antd";
 import "../Styles/Team.css";
 

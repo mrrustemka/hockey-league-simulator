@@ -1,4 +1,4 @@
-import { champs } from "../Data/champs";
+import { champs } from "../data/champs";
 import Header from "./Header";
 import League from "./League";
 import "../Styles/Start.css";

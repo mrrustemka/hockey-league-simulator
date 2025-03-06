@@ -1,4 +1,4 @@
-import { PlayOffGameResult, GameResult } from "../../Data/types";
+import { PlayOffGameResult, GameResult } from "../../data/types";
 import "../../Styles/PlayOffGame.css";
 
 interface IPlayOffGame {

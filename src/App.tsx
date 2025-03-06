@@ -1,11 +1,11 @@
 import { FC } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Game from "./Components/Game";
-import PlayOff from "./Components/Play-off/PlayOff";
-import Start from "./Components/Start";
-import Footer from "./Components/Footer";
+import Game from "./components/Game";
+import PlayOff from "./components/play-off/PlayOff";
+import Start from "./components/Start";
+import Footer from "./components/Footer";
 import "./Styles/App.css";
-import Team from "./Components/Team";
+import Team from "./components/Team";
 
 const router = createBrowserRouter([
   {

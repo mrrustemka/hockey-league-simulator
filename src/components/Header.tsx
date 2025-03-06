@@ -1,6 +1,6 @@
 import { Typography } from "antd";
-import { champs } from "../Data/champs";
-import { whiteLeagues } from "../Data/whiteList";
+import { champs } from "../data/champs";
+import { whiteLeagues } from "../data/whiteList";
 import "../Styles/Header.css";
 
 const { Title } = Typography;

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Table } from "antd";
 import { v4 as uuidv4 } from "uuid";
 import Legend from "./Legend";
-import { Teams } from "../Data/types";
+import { Teams } from "../data/types";
 import "../Styles/Sheet.css";
 
 function Sheet(props: { teamsData: Teams[]; id: string }) {

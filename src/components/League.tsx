@@ -3,7 +3,7 @@ import { Card, Typography } from "antd";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { League as TLeague } from "../Data/types";
+import { League as TLeague } from "../data/types";
 import TeamsNumber from "./TeamsNumber";
 import "aos/dist/aos.css";
 import "../Styles/League.css";

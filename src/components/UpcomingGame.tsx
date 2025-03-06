@@ -1,6 +1,6 @@
 import { Card } from "antd";
 import { Link } from "react-router-dom";
-import { Schedule, Teams } from "../Data/types";
+import { Schedule, Teams } from "../data/types";
 import "../Styles/UpcomingGame.css";
 
 function UpcomingGame(props: { schedule: Schedule[]; teams: Teams[] }) {

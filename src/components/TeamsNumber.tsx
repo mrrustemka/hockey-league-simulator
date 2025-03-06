@@ -2,8 +2,8 @@ import { Input, Typography } from "antd";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { League as TLeague } from "../Data/types";
-import { schedule } from "../Data/schedule";
+import { League as TLeague } from "../data/types";
+import { schedule } from "../data/schedule";
 import "../Styles/TeamsNumber.css";
 
 const { Title } = Typography;
