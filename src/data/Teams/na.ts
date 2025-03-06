@@ -3,67 +3,81 @@ import ajo from "../../images/na_ajo.png";
 import ajo_1 from "../../images/Gallery/Na/Ajo/ajo_1.jpg";
 import ajo_2 from "../../images/Gallery/Na/Ajo/ajo_2.jpg";
 import ajo_3 from "../../images/Gallery/Na/Ajo/ajo_3.jpg";
+import ajo_4 from "../../images/Gallery/Na/Ajo/ajo_4.webp";
 import amb from "../../images/na_amb.png";
 import amb_1 from "../../images/Gallery/Na/Amb/amb_1.jpg";
 import amb_2 from "../../images/Gallery/Na/Amb/amb_2.jpg";
 import amb_3 from "../../images/Gallery/Na/Amb/amb_3.jpg";
+import amb_4 from "../../images/Gallery/Na/Amb/amb_4.webp";
 import evz from "../../images/ehl_evz.png";
 import evz_1 from "../../images/Gallery/Na/Evz/evz_1.jpg";
 import evz_2 from "../../images/Gallery/Na/Evz/evz_2.jpg";
 import evz_3 from "../../images/Gallery/Na/Evz/evz_3.jpg";
 import evz_4 from "../../images/Gallery/Na/Evz/evz_4.jpg";
+import evz_5 from "../../images/Gallery/Na/Evz/evz_5.webp";
 import frg from "../../images/na_frg.png";
 import frg_1 from "../../images/Gallery/Na/Frg/frg_1.jpg";
 import frg_2 from "../../images/Gallery/Na/Frg/frg_2.jpg";
 import frg_3 from "../../images/Gallery/Na/Frg/frg_3.jpg";
 import frg_4 from "../../images/Gallery/Na/Frg/frg_4.jpg";
+import frg_5 from "../../images/Gallery/Na/Frg/frg_5.webp";
 import gen from "../../images/ehl_gen.png";
 import gen_1 from "../../images/Gallery/Na/Gen/gen_1.jpg";
 import gen_2 from "../../images/Gallery/Na/Gen/gen_2.jpg";
 import gen_3 from "../../images/Gallery/Na/Gen/gen_3.jpg";
 import gen_4 from "../../images/Gallery/Na/Gen/gen_4.jpg";
+import gen_5 from "../../images/Gallery/Na/Gen/gen_5.jpg";
 import hcb from "../../images/ehl_hcb.png";
 import hcb_1 from "../../images/Gallery/Na/Hcb/hcb_1.jpg";
 import hcb_2 from "../../images/Gallery/Na/Hcb/hcb_2.jpg";
 import hcb_3 from "../../images/Gallery/Na/Hcb/hcb_3.jpg";
 import hcb_4 from "../../images/Gallery/Na/Hcb/hcb_4.jpg";
+import hcb_5 from "../../images/Gallery/Na/Hcb/hcb_5.webp";
 import hcd from "../../images/ehl_hcd.png";
 import hcd_1 from "../../images/Gallery/Na/Hcd/hcd_1.jpg";
 import hcd_2 from "../../images/Gallery/Na/Hcd/hcd_2.jpg";
 import hcd_3 from "../../images/Gallery/Na/Hcd/hcd_3.jpg";
 import hcd_4 from "../../images/Gallery/Na/Hcd/hcd_4.jpg";
+import hcd_5 from "../../images/Gallery/Na/Hcd/hcd_5.webp";
 import hcl from "../../images/ehl_hcl.png";
 import hcl_1 from "../../images/Gallery/Na/Hcl/hcl_1.jpg";
 import hcl_2 from "../../images/Gallery/Na/Hcl/hcl_2.jpg";
 import hcl_3 from "../../images/Gallery/Na/Hcl/hcl_3.jpg";
 import hcl_4 from "../../images/Gallery/Na/Hcl/hcl_4.jpg";
+import hcl_5 from "../../images/Gallery/Na/Hcl/hcl_5.webp";
 import klo from "../../images/na_klo.png";
 import klo_1 from "../../images/Gallery/Na/Klo/klo_1.jpg";
 import klo_2 from "../../images/Gallery/Na/Klo/klo_2.jpg";
 import klo_3 from "../../images/Gallery/Na/Klo/klo_3.jpg";
 import klo_4 from "../../images/Gallery/Na/Klo/klo_4.jpg";
+import klo_5 from "../../images/Gallery/Na/Klo/klo_5.webp";
 import lhc from "../../images/na_lhc.png";
 import lhc_1 from "../../images/Gallery/Na/Lhc/lhc_1.jpg";
 import lhc_2 from "../../images/Gallery/Na/Lhc/lhc_2.jpg";
 import lhc_3 from "../../images/Gallery/Na/Lhc/lhc_3.jpg";
+import lhc_4 from "../../images/Gallery/Na/Lhc/lhc_4.webp";
 import rjl from "../../images/na_rjl.png";
 import rjl_1 from "../../images/Gallery/Na/Rjl/rjl_1.jpg";
 import rjl_2 from "../../images/Gallery/Na/Rjl/rjl_2.jpg";
 import rjl_3 from "../../images/Gallery/Na/Rjl/rjl_3.jpg";
+import rjl_4 from "../../images/Gallery/Na/Rjl/rjl_4.webp";
 import scb from "../../images/ehl_scb.png";
 import scb_1 from "../../images/Gallery/Na/Scb/scb_1.jpg";
 import scb_2 from "../../images/Gallery/Na/Scb/scb_2.jpg";
 import scb_3 from "../../images/Gallery/Na/Scb/scb_3.jpg";
 import scb_4 from "../../images/Gallery/Na/Scb/scb_4.jpg";
+import scb_5 from "../../images/Gallery/Na/Scb/scb_5.jpg";
 import scl from "../../images/na_scl.png";
 import scl_1 from "../../images/Gallery/Na/Scl/scl_1.jpg";
 import scl_2 from "../../images/Gallery/Na/Scl/scl_2.jpg";
 import scl_3 from "../../images/Gallery/Na/Scl/scl_3.jpg";
+import scl_4 from "../../images/Gallery/Na/Scl/scl_4.webp";
 import zsc from "../../images/ehl_zsc.png";
 import zsc_1 from "../../images/Gallery/Na/Zsc/zsc_1.jpg";
 import zsc_2 from "../../images/Gallery/Na/Zsc/zsc_2.jpg";
 import zsc_3 from "../../images/Gallery/Na/Zsc/zsc_3.jpg";
 import zsc_4 from "../../images/Gallery/Na/Zsc/zsc_4.jpg";
+import zsc_5 from "../../images/Gallery/Na/Zsc/zsc_5.jpg";
 
 export const na: Teams[] = [
   {
@@ -90,7 +104,12 @@ export const na: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [zsc_1, zsc_2, zsc_3, zsc_4]
+    photos: [zsc_1, zsc_2, zsc_3, zsc_4],
+    arena_name: "Swiss Life Arena",
+    arena_dedcription:
+      "The Swiss Life Arena is an ice hockey and entertainment arena in the Altstetten quarter of Zürich, Switzerland. It is located approximately seven kilometers west of downtown Zürich. The arena officially opened in October 2022.",
+    arena_capacity: 12000,
+    arena_photo: zsc_5
   },
   {
     id: 2,
@@ -116,7 +135,12 @@ export const na: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [evz_1, evz_2, evz_3, evz_4]
+    photos: [evz_1, evz_2, evz_3, evz_4],
+    arena_name: "Bossard Arena",
+    arena_dedcription:
+      "Bossard Arena is an indoor sporting arena located in Zug, Switzerland. Opened in 2010.The venue is named after Bossard Holding, an international logistics company headquartered in the city.",
+    arena_capacity: 7800,
+    arena_photo: evz_5
   },
   {
     id: 3,
@@ -142,7 +166,12 @@ export const na: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [scb_1, scb_2, scb_3, scb_4]
+    photos: [scb_1, scb_2, scb_3, scb_4],
+    arena_name: "PostFinance Arena",
+    arena_dedcription:
+      "The PostFinance-Arena (originally known as Eisstadion Allmend and Bern Arena) is an indoor arena in Bern, Switzerland. It was opened in October 1967.",
+    arena_capacity: 17031,
+    arena_photo: scb_5
   },
   {
     id: 4,
@@ -168,7 +197,12 @@ export const na: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [hcd_1, hcd_2, hcd_3, hcd_4]
+    photos: [hcd_1, hcd_2, hcd_3, hcd_4],
+    arena_name: "zondacrypto Arena",
+    arena_dedcription:
+      "zondacrypto Arena is an indoor arena in Davos, Switzerland. Every year the Spengler Cup is played in this arena.Major renovation of the arena started at the conclusion of the 2017–18 season to upgrade most of the stands and the concourse. The seating capacity was not increased and the total cost was around CHF 27 million. Construction began in 2018 and was completed in 2021.",
+    arena_capacity: 7080,
+    arena_photo: hcd_5
   },
   {
     id: 5,
@@ -194,7 +228,12 @@ export const na: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [lhc_1, lhc_2, lhc_3]
+    photos: [lhc_1, lhc_2, lhc_3],
+    arena_name: "Vaudoise Aréna",
+    arena_dedcription:
+      "The Vaudoise Aréna (provisionally known as Espace Malley) is a multi-purpose indoor arena located in Prilly, a western suburb of Lausanne in Switzerland. Opened in September 2019, it was built on the site of the former, now demolished, CIG de Malley which it replaced to host the 2020 Winter Youth Olympics.",
+    arena_capacity: 9600,
+    arena_photo: lhc_4
   },
   {
     id: 6,
@@ -220,7 +259,12 @@ export const na: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [frg_1, frg_2, frg_3, frg_4]
+    photos: [frg_1, frg_2, frg_3, frg_4],
+    arena_name: "BCF Arena",
+    arena_dedcription:
+      "BCF Arena (formerly Patinoire Saint-Léonard) is an indoor sporting arena in Fribourg, Switzerland. Built in 1983 and then completely rebuilt from 2018 to 2020. Major renovations began in the summer of 2018 to increase the arena's capacity from 6,500 to 8,934 and were completed two years later in the summer of 2020.There are also 6 restaurants and 12 concessions stands, 336 seats in various suites and 76 Dine & View seats.",
+    arena_capacity: 9262,
+    arena_photo: frg_5
   },
   {
     id: 7,
@@ -246,7 +290,12 @@ export const na: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [hcl_1, hcl_2, hcl_3, hcl_4]
+    photos: [hcl_1, hcl_2, hcl_3, hcl_4],
+    arena_name: "Cornèr Arena",
+    arena_dedcription:
+      "Cornèr Arena is an arena in Porza, Switzerland, near the city of Lugano.",
+    arena_capacity: 7200,
+    arena_photo: hcl_5
   },
   {
     id: 8,
@@ -272,7 +321,12 @@ export const na: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [amb_1, amb_2, amb_3]
+    photos: [amb_1, amb_2, amb_3],
+    arena_name: "Gottardo Arena",
+    arena_dedcription:
+      "The NuoValascia, or Gottardo Arena is an ice hockey arena in Ambrì, Ticino, Switzerland. It is located only a few feet away from the former Valascia. The inauguration took place on September 11, 2021.",
+    arena_capacity: 6775,
+    arena_photo: amb_4
   },
   {
     id: 9,
@@ -298,7 +352,12 @@ export const na: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [gen_1, gen_2, gen_3, gen_4]
+    photos: [gen_1, gen_2, gen_3, gen_4],
+    arena_name: "Patinoire des Vernets",
+    arena_dedcription:
+      "Patinoire des Vernets is an indoor arena located in Geneva, Switzerland. Opened in 1958.",
+    arena_capacity: 7135,
+    arena_photo: gen_5
   },
   {
     id: 10,
@@ -324,7 +383,12 @@ export const na: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [hcb_1, hcb_2, hcb_3, hcb_4]
+    photos: [hcb_1, hcb_2, hcb_3, hcb_4],
+    arena_name: "Tissot Arena",
+    arena_dedcription:
+      "Tissot Arena is a combined multi-purpose stadium and arena in Biel/Bienne, Canton of Bern, Switzerland.",
+    arena_capacity: 6521,
+    arena_photo: hcb_5
   },
   {
     id: 11,
@@ -350,7 +414,12 @@ export const na: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [scl_1, scl_2, scl_3]
+    photos: [scl_1, scl_2, scl_3],
+    arena_name: "Emmental Versicherung Arena",
+    arena_dedcription:
+      "The Emmental Versicherung Arena (officially written as emmental versicherung arena) is an ice sports and event centre located in the Swiss municipality of Langnau im Emmental, in the canton of Bern. It was completed in 1975. The arena is the second-smallest ice rink among all the National League teams. Its original name is derived from the nearby river Ilfis.",
+    arena_capacity: 6050,
+    arena_photo: scl_4
   },
   {
     id: 12,
@@ -376,7 +445,12 @@ export const na: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [rjl_1, rjl_2, rjl_3]
+    photos: [rjl_1, rjl_2, rjl_3],
+    arena_name: "St. Galler Kantonalbank Arena",
+    arena_dedcription:
+      "St. Galler Kantonalbank Arena, formerly the Diners Club Arena, and originally known as Eishalle Lido, is an indoor sporting arena located in Rapperswil, Switzerland. Was built in 1987. The arena was completely re-done in 2005, and changed its name following corporate sponsorship from Diners Club International. Its name was changed again in 2016 after a new sponsorship deal with naming rights was agreed with St. Galler Kantonalbank.",
+    arena_capacity: 6100,
+    arena_photo: rjl_4
   },
   {
     id: 13,
@@ -402,7 +476,12 @@ export const na: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [klo_1, klo_2, klo_3, klo_4]
+    photos: [klo_1, klo_2, klo_3, klo_4],
+    arena_name: "Swiss Arena",
+    arena_dedcription:
+      "SWISS Arena is an indoor arena in Kloten, Switzerland. In 2008 the Eishalle Schluefweg was renamed Kolping Arena due to a sponsoring deal. In 2015 it was then again renamed to Swiss Arena. In 2009 it was one of the hosts of the IIHF World Championships.",
+    arena_capacity: 7624,
+    arena_photo: klo_5
   },
   {
     id: 14,
@@ -428,6 +507,11 @@ export const na: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [ajo_1, ajo_2, ajo_3]
+    photos: [ajo_1, ajo_2, ajo_3],
+    arena_name: "Raiffeisen Arena",
+    arena_dedcription:
+      "The Raiffeisen Arena is an ice hockey arena in Porrentruy, Switzerland.",
+    arena_capacity: 5078,
+    arena_photo: ajo_4
   }
 ];
