@@ -24,10 +24,10 @@ export type Teams = {
   chartData: number[];
   chartLabels: string[];
   photos: string[];
-  arena_names: string;
-  arena_dedcription: string;
-  arena_capacity: number;
-  arena_photo: string;
+  arena_name?: string;
+  arena_dedcription?: string;
+  arena_capacity?: number;
+  arena_photo?: string;
 };
 
 export type TeamsList = string[];

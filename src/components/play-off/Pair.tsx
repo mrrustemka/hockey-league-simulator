@@ -118,8 +118,10 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
       chartData: [],
       chartLabels: [],
       photos: [],
+      arena_name: "",
       arena_dedcription: "",
-      arena_capacity: 0
+      arena_capacity: 0,
+      arena_photo: "",
     };
     let away: Teams = {
       abbreviation: "",
@@ -147,8 +149,10 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
       chartData: [],
       chartLabels: [],
       photos: [],
+      arena_name: "",
       arena_dedcription: "",
-      arena_capacity: 0
+      arena_capacity: 0,
+      arena_photo: "",
     };
     function getTeamInfo(team: string): Teams {
       const foundTeam = teams.find(
