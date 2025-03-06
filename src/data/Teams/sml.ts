@@ -3,73 +3,89 @@ import ass from "../../images/sml_ass.png";
 import ass_1 from "../../images/Gallery/Sml/Ass/ass_1.jpg";
 import ass_2 from "../../images/Gallery/Sml/Ass/ass_2.jpg";
 import ass_3 from "../../images/Gallery/Sml/Ass/ass_3.jpg";
+import ass_4 from "../../images/Gallery/Sml/Ass/ass_4.webp";
 import hpk from "../../images/sml_hpk.png";
 import hpk_1 from "../../images/Gallery/Sml/Hpk/hpk_1.jpg";
 import hpk_2 from "../../images/Gallery/Sml/Hpk/hpk_2.jpg";
 import hpk_3 from "../../images/Gallery/Sml/Hpk/hpk_3.jpg";
 import hpk_4 from "../../images/Gallery/Sml/Hpk/hpk_4.jpg";
+import hpk_5 from "../../images/Gallery/Sml/Hpk/hpk_5.webp";
 import ifk from "../../images/ehl_ifk.png";
 import ifk_1 from "../../images/Gallery/Sml/Ifk/ifk_1.jpg";
 import ifk_2 from "../../images/Gallery/Sml/Ifk/ifk_2.jpg";
 import ifk_3 from "../../images/Gallery/Sml/Ifk/ifk_3.jpg";
 import ifk_4 from "../../images/Gallery/Sml/Ifk/ifk_4.jpg";
+import ifk_5 from "../../images/Gallery/Sml/Ifk/ifk_5.jpeg";
 import ilv from "../../images/ehl_ilv.png";
 import ilv_1 from "../../images/Gallery/Sml/Ilv/ilv_1.jpg";
 import ilv_2 from "../../images/Gallery/Sml/Ilv/ilv_2.jpg";
 import ilv_3 from "../../images/Gallery/Sml/Ilv/ilv_3.jpg";
 import ilv_4 from "../../images/Gallery/Sml/Ilv/ilv_4.jpg";
 import ilv_5 from "../../images/Gallery/Sml/Ilv/ilv_5.jpg";
+import ilv_6 from "../../images/Gallery/Sml/Ilv/ilv_6.jpg";
 import juk from "../../images/sml_juk.png";
 import juk_1 from "../../images/Gallery/Sml/Juk/juk_1.jpg";
 import juk_2 from "../../images/Gallery/Sml/Juk/juk_2.jpg";
 import juk_3 from "../../images/Gallery/Sml/Juk/juk_3.jpg";
+import juk_4 from "../../images/Gallery/Sml/Juk/juk_4.webp";
 import jyp from "../../images/sml_jyp.png";
 import jyp_1 from "../../images/Gallery/Sml/Jyp/jyp_1.jpg";
 import jyp_2 from "../../images/Gallery/Sml/Jyp/jyp_2.jpg";
 import jyp_3 from "../../images/Gallery/Sml/Jyp/jyp_3.jpg";
+import jyp_4 from "../../images/Gallery/Sml/Jyp/jyp_4.webp";
 import kal from "../../images/sml_kal.png";
 import kal_1 from "../../images/Gallery/Sml/Kal/kal_1.jpg";
 import kal_2 from "../../images/Gallery/Sml/Kal/kal_2.jpg";
 import kal_3 from "../../images/Gallery/Sml/Kal/kal_3.jpg";
 import kal_4 from "../../images/Gallery/Sml/Kal/kal_4.jpg";
+import kal_5 from "../../images/Gallery/Sml/Kal/kal_5.webp";
 import kar from "../../images/sml_kar.png";
 import kar_1 from "../../images/Gallery/Sml/Kar/kar_1.jpg";
 import kar_2 from "../../images/Gallery/Sml/Kar/kar_2.jpg";
 import kar_3 from "../../images/Gallery/Sml/Kar/kar_3.jpg";
+import kar_4 from "../../images/Gallery/Sml/Kar/kar_4.webp";
 import kes from "../../images/sml_kes.png";
 import kes_1 from "../../images/Gallery/Sml/Kes/kes_1.jpg";
 import kes_2 from "../../images/Gallery/Sml/Kes/kes_2.jpg";
 import kes_3 from "../../images/Gallery/Sml/Kes/kes_3.jpg";
+import kes_4 from "../../images/Gallery/Sml/Kes/kes_4.webp";
 import koo from "../../images/sml_koo.png";
 import koo_1 from "../../images/Gallery/Sml/Koo/koo_1.jpg";
 import koo_2 from "../../images/Gallery/Sml/Koo/koo_2.jpg";
 import koo_3 from "../../images/Gallery/Sml/Koo/koo_3.jpg";
+import koo_4 from "../../images/Gallery/Sml/Koo/koo_4.webp";
 import luk from "../../images/sml_luk.png";
 import luk_1 from "../../images/Gallery/Sml/Luk/luk_1.jpg";
 import luk_2 from "../../images/Gallery/Sml/Luk/luk_2.jpg";
 import luk_3 from "../../images/Gallery/Sml/Luk/luk_3.jpg";
 import luk_4 from "../../images/Gallery/Sml/Luk/luk_4.jpg";
+import luk_5 from "../../images/Gallery/Sml/Luk/luk_5.webp";
 import pel from "../../images/ehl_pel.png";
 import pel_1 from "../../images/Gallery/Sml/Pel/pel_1.jpg";
 import pel_2 from "../../images/Gallery/Sml/Pel/pel_2.jpg";
 import pel_3 from "../../images/Gallery/Sml/Pel/pel_3.jpg";
 import pel_4 from "../../images/Gallery/Sml/Pel/pel_4.jpg";
+import pel_5 from "../../images/Gallery/Sml/Pel/pel_5.jpg";
 import sai from "../../images/sml_sai.png";
 import sai_1 from "../../images/Gallery/Sml/Sai/sai_1.jpg";
 import sai_2 from "../../images/Gallery/Sml/Sai/sai_2.jpg";
+import sai_3 from "../../images/Gallery/Sml/Sai/sai_3.webp";
 import spo from "../../images/sml_spo.png";
 import spo_1 from "../../images/Gallery/Sml/Spo/spo_1.jpg";
 import spo_2 from "../../images/Gallery/Sml/Spo/spo_2.jpg";
+import spo_3 from "../../images/Gallery/Sml/Spo/spo_3.jpg";
 import tap from "../../images/ehl_tap.png";
 import tap_1 from "../../images/Gallery/Sml/Tap/tap_1.jpg";
 import tap_2 from "../../images/Gallery/Sml/Tap/tap_2.jpeg";
 import tap_3 from "../../images/Gallery/Sml/Tap/tap_3.jpg";
 import tap_4 from "../../images/Gallery/Sml/Tap/tap_4.jpg";
+import tap_5 from "../../images/Gallery/Sml/Tap/tap_5.jpg";
 import tps from "../../images/ehl_tps.png";
 import tps_1 from "../../images/Gallery/Sml/Tps/tps_1.jpg";
 import tps_2 from "../../images/Gallery/Sml/Tps/tps_2.jpg";
 import tps_3 from "../../images/Gallery/Sml/Tps/tps_3.jpg";
 import tps_4 from "../../images/Gallery/Sml/Tps/tps_4.jpg";
+import tps_5 from "../../images/Gallery/Sml/Tps/tps_5.webp";
 
 export const sml: Teams[] = [
   {
@@ -96,7 +112,12 @@ export const sml: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [tap_1, tap_2, tap_3, tap_4]
+    photos: [tap_1, tap_2, tap_3, tap_4],
+    arena_name: "Nokia Arena",
+    arena_dedcription:
+      "The Nokia Arena, also known by its non-sponsored name Tampere Deck Arena, is an indoor arena in Tampere, Finland, which hosts ice hockey games and large cultural events. Its construction was approved by the City Council of Tampere on 19 May 2010, and it was officially opened on 3 December 2021.",
+    arena_capacity: 13455,
+    arena_photo: tap_5
   },
   {
     id: 2,
@@ -122,7 +143,12 @@ export const sml: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [pel_1, pel_2, pel_3, pel_4]
+    photos: [pel_1, pel_2, pel_3, pel_4],
+    arena_name: "Isku Areena",
+    arena_dedcription:
+      "Isku Areena is an ice rink located at the Lahti Sports Center in Lahti, Finland.The hall has 16 stalls and a 200-seat lunch restaurant with a view of the rink.",
+    arena_capacity: 5371,
+    arena_photo: pel_5
   },
   {
     id: 3,
@@ -148,7 +174,12 @@ export const sml: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [ifk_1, ifk_2, ifk_3, ifk_4]
+    photos: [ifk_1, ifk_2, ifk_3, ifk_4],
+    arena_name: "Helsinki Ice Hall",
+    arena_dedcription:
+      "Helsinki Ice Hall, colloquially called Nordis, is an indoor arena located in Helsinki, Finland.",
+    arena_capacity: 8200,
+    arena_photo: ifk_5
   },
   {
     id: 4,
@@ -174,7 +205,12 @@ export const sml: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [ilv_1, ilv_2, ilv_3, ilv_4, ilv_5]
+    photos: [ilv_1, ilv_2, ilv_3, ilv_4, ilv_5],
+    arena_name: "Nokia Arena",
+    arena_dedcription:
+      "The Nokia Arena, also known by its non-sponsored name Tampere Deck Arena, is an indoor arena in Tampere, Finland, which hosts ice hockey games and large cultural events. Its construction was approved by the City Council of Tampere on 19 May 2010, and it was officially opened on 3 December 2021.",
+    arena_capacity: 13455,
+    arena_photo: ilv_6
   },
   {
     id: 5,
@@ -200,7 +236,12 @@ export const sml: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [tps_1, tps_2, tps_3, tps_4]
+    photos: [tps_1, tps_2, tps_3, tps_4],
+    arena_name: "Gatorade Center",
+    arena_dedcription:
+      "The Gatorade Center (formerly HK Areena, Elysée Arena, Typhoon Arena) is a multi-functional indoor arena in the district of Artukainen in Turku, Finland. Opened in November 1990. A record attendance of 12,041 for a hockey match was registered in 1991. Gatorade Center is a member of the European Arenas Association (EAA).",
+    arena_capacity: 10500,
+    arena_photo: tps_5
   },
   {
     id: 6,
@@ -226,7 +267,12 @@ export const sml: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [kal_1, kal_2, kal_3, kal_4]
+    photos: [kal_1, kal_2, kal_3, kal_4],
+    arena_name: "Kuopio Ice Hall",
+    arena_dedcription:
+      "Kuopio Ice Hall or Olvi Arena, is the ice hockey arena located in the Hatsala district of Kuopio, Finland. The arena is built in 1979.",
+    arena_capacity: 5300,
+    arena_photo: kal_5
   },
   {
     id: 7,
@@ -252,7 +298,12 @@ export const sml: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [koo_1, koo_2, koo_3]
+    photos: [koo_1, koo_2, koo_3],
+    arena_name: "Lumon arena",
+    arena_dedcription:
+      "Lumon arena is an ice hockey arena located in Kouvola, Finland. The name of the Kouvolan jäähalli changed in 2015 as a continuation of the arena when KooKoo and Lumon entered into a co-operation agreement.",
+    arena_capacity: 5950,
+    arena_photo: koo_4
   },
   {
     id: 8,
@@ -278,7 +329,12 @@ export const sml: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [jyp_1, jyp_2, jyp_3]
+    photos: [jyp_1, jyp_2, jyp_3],
+    arena_name: "Synergia-areena",
+    arena_dedcription:
+      "Synergia-areena is an arena in Jyväskylä, Finland. It is primarily used for ice hockey, and is the home arena of JYP and JYP-Akatemia. The arena originally opened in 1982 and was then known as Jyväskylän jäähalli. It was renovated and renamed in 2008.",
+    arena_capacity: 4628,
+    arena_photo: jyp_4
   },
   {
     id: 9,
@@ -304,7 +360,12 @@ export const sml: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [kar_1, kar_2, kar_3]
+    photos: [kar_1, kar_2, kar_3],
+    arena_name: "Oulun Energia Areena",
+    arena_dedcription:
+      "Oulu Ice Hall, previously known as Raksilan jäähalli and called Oulun Energia Areena since 2006 for sponsorship reasons, is an ice sport arena in the Raksila Sports Centre, located in the Raksila district of Oulu, Finland. It is operated by the City of Oulu.",
+    arena_capacity: 6485,
+    arena_photo: kar_4
   },
   {
     id: 10,
@@ -330,7 +391,12 @@ export const sml: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [luk_1, luk_2, luk_3, luk_4]
+    photos: [luk_1, luk_2, luk_3, luk_4],
+    arena_name: "Kivikylän areena",
+    arena_dedcription:
+      "Kivikylän areena is an arena in Rauma, Finland. It opened in 1970. The name of the arena was changed to 'Lännen Puhelin Areena' in autumn 2006. And it changed in year 2007 to DNA Areena, when DNA bought/formed with Lännen Puhelin. Now the name is 'Kivikylän areena'.",
+    arena_capacity: 5400,
+    arena_photo: luk_5
   },
   {
     id: 11,
@@ -356,7 +422,12 @@ export const sml: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [sai_1, sai_2]
+    photos: [sai_1, sai_2],
+    arena_name: "Kisapuisto",
+    arena_dedcription:
+      "Lappeenrannan kisapuiston jäähalli, often shortened to Kisapuiston jäähalli, is an ice hockey arena in the Lappeenrannan kisapuisto of Lappeenranta, Finland.",
+    arena_capacity: 4820,
+    arena_photo: sai_3
   },
   {
     id: 12,
@@ -382,7 +453,12 @@ export const sml: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [spo_1, spo_2]
+    photos: [spo_1, spo_2],
+    arena_name: "Vaasa Arena",
+    arena_dedcription:
+      "Vaasan Sähkö Areena is a multipurpose arena in Vaasa, Finland. It was previously called the Kuparisaaren jäähalli (Copper Island Ice Rink) and locals often use the old name in conversation. The arena first opened in 1971 and has undergone renovation and expansion several times. It is located approximately three kilometres (roughly two miles) south-east of downtown Vaasa.",
+    arena_capacity: 5200,
+    arena_photo: spo_3
   },
   {
     id: 13,
@@ -408,7 +484,12 @@ export const sml: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [ass_1, ass_2, ass_3]
+    photos: [ass_1, ass_2, ass_3],
+    arena_name: "Isomäki Ice Hall",
+    arena_dedcription:
+      "Isomäen jäähalli, also known as Enersense Areena for sponsorship reasons is a multi-purpose arena located in Pori, Finland. The arena was opened in 1971.",
+    arena_capacity: 6400,
+    arena_photo: ass_4
   },
   {
     id: 14,
@@ -434,7 +515,12 @@ export const sml: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [juk_1, juk_2, juk_3]
+    photos: [juk_1, juk_2, juk_3],
+    arena_name: "Ikioma Areena",
+    arena_dedcription:
+      "Kalevankankaan jäähalli, also known as Let's Go Areena for sponsorship reasons, is a multipurpose indoor arena located in the Kalevankangas neighborhood in Mikkeli, Finland. The arena opened in 1982. Since 2016 the arena has been known with its sponsorship name Ikioma Areena, named after a local health care provider. In 2000 a practice rink was opened next to the arena. These two are the only indoor ice rinks in Mikkeli. The arena underwent a major renovation in 2011-13 when suites, restaurants, and an extended entrance area were added together with completely new dressing room areas. Some of the dressing rooms dated to the open air rink times and were completely outdated. The arena is part of the city's largest sport area which includes a multipurpose indoor arena Saimaa Stadium, a horse racing track Mikkelin Ravirata, a practice rink for ice sports, several football fields, tennis courts, badminton halls, dog training area, and several kilometers of running and cross-country skiing tracks.",
+    arena_capacity: 4200,
+    arena_photo: juk_4
   },
   {
     id: 15,
@@ -460,7 +546,12 @@ export const sml: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [hpk_1, hpk_2, hpk_3, hpk_4]
+    photos: [hpk_1, hpk_2, hpk_3, hpk_4],
+    arena_name: "Hämeenlinna Ice Hall",
+    arena_dedcription:
+      "Hämeenlinna Ice Hall (also known as Patria-areena, Rinkelinmäen jäähalli or Hämeenlinnan jäähalli or Ritari-areena) is an arena in Rinkelinmäki, Hämeenlinna, Finland.",
+    arena_capacity: 5360,
+    arena_photo: hpk_5
   },
   {
     id: 16,
@@ -486,6 +577,11 @@ export const sml: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [kes_1, kes_2, kes_3]
+    photos: [kes_1, kes_2, kes_3],
+    arena_name: "Espoo Metro Areena",
+    arena_dedcription:
+      "Espoo Metro Areena (known from 1999 to January 2009 as LänsiAuto Areena, and from 2009 to October 2015 as Barona Areena) is an arena in the Tapiola District of Espoo, Finland. The arena is sponsored by Hesburger, Finland's largest fast food hamburger chain and is part of the Tapiolan Urheilupuisto (Tapiola Sports Park). It was inaugurated in 1999.",
+    arena_capacity: 6982,
+    arena_photo: kes_4
   }
 ];
