@@ -6,7 +6,7 @@ export type Teams = {
   goals_against: number;
   goals_diff: number;
   goals_for: number;
-  id: number;
+  readonly id: number;
   logo: string;
   loses: number;
   loses_ot: number;
@@ -33,7 +33,7 @@ export type Teams = {
 export type TeamsList = string[];
 
 export type Schedule = {
-  id: string;
+  readonly id: string;
   away: string;
   home: string;
 };
@@ -55,11 +55,11 @@ export type PlayOffGameResult = {
   awayGoals?: number;
   home: string;
   homeGoals?: number;
-  id: string;
+  readonly id: string;
 };
 
 export type League = {
-  id: string;
+  readonly id: string;
   name: string;
   description: string;
   image: string;
