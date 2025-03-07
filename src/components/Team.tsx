@@ -78,31 +78,94 @@ function Team() {
           color: whiteTeams.includes(team.color) ? "#fff" : "#000000"
         }}
       >
-        <Title level={3} className="team__detail-title">
+        <Title 
+          level={3} 
+          className="team__detail-title"
+          style={{
+            backgroundColor: team.color,
+            color: whiteTeams.includes(team.color) ? "#fff" : "#000000",
+            borderColor: whiteTeams.includes(team.color) ? "#fff" : "#000000"
+          }}>
           Points: {team.points}
         </Title>
-        <Title level={3} className="team__detail-title">
+        <Title 
+          level={3} 
+          className="team__detail-title"
+          style={{
+            backgroundColor: team.color,
+            color: whiteTeams.includes(team.color) ? "#fff" : "#000000",
+            borderColor: whiteTeams.includes(team.color) ? "#fff" : "#000000"
+          }}>
           Games Played: {team.game_counter}
         </Title>
-        <Title level={3} className="team__detail-title">
+        <Title 
+          level={3} 
+          className="team__detail-title"
+          style={{
+            backgroundColor: team.color,
+            color: whiteTeams.includes(team.color) ? "#fff" : "#000000",
+            borderColor: whiteTeams.includes(team.color) ? "#fff" : "#000000"
+          }}>
           Wins: {team.wins}
         </Title>
-        <Title level={3} className="team__detail-title">
+        <Title 
+          level={3} 
+          className="team__detail-title"
+          style={{
+            backgroundColor: team.color,
+            color: whiteTeams.includes(team.color) ? "#fff" : "#000000",
+            borderColor: whiteTeams.includes(team.color) ? "#fff" : "#000000"
+          }}>
           Losses: {team.loses}
         </Title>
-        <Title level={3} className="team__detail-title">
+        <Title 
+          level={3} 
+          className="team__detail-title"
+          style={{
+            backgroundColor: team.color,
+            color: whiteTeams.includes(team.color) ? "#fff" : "#000000",
+            borderColor: whiteTeams.includes(team.color) ? "#fff" : "#000000"
+          }}>
           Losses OT: {team.loses_ot}
         </Title>
-        <Title level={3} className="team__detail-title">
+        <Title 
+          level={3} 
+          className="team__detail-title"
+          style={{
+            backgroundColor: team.color,
+            color: whiteTeams.includes(team.color) ? "#fff" : "#000000",
+            borderColor: whiteTeams.includes(team.color) ? "#fff" : "#000000"
+          }}>
           Goals For: {team.goals_for}
         </Title>
-        <Title level={3} className="team__detail-title">
+        <Title 
+          level={3} 
+          className="team__detail-title"
+          style={{
+            backgroundColor: team.color,
+            color: whiteTeams.includes(team.color) ? "#fff" : "#000000",
+            borderColor: whiteTeams.includes(team.color) ? "#fff" : "#000000"
+          }}>
           Goals Against: {team.goals_against}
         </Title>
-        <Title level={3} className="team__detail-title">
+        <Title 
+          level={3} 
+          className="team__detail-title"
+          style={{
+            backgroundColor: team.color,
+            color: whiteTeams.includes(team.color) ? "#fff" : "#000000",
+            borderColor: whiteTeams.includes(team.color) ? "#fff" : "#000000"
+          }}>
           Goals Diff: {team.goals_diff}
         </Title>
-        <Title level={3} className="team__detail-title">
+        <Title 
+          level={3} 
+          className="team__detail-title"
+          style={{
+            backgroundColor: team.color,
+            color: whiteTeams.includes(team.color) ? "#fff" : "#000000",
+            borderColor: whiteTeams.includes(team.color) ? "#fff" : "#000000"
+          }}>
           Rating: {team.rating}
         </Title>
       </div>
