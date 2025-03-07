@@ -35,6 +35,7 @@ function Team() {
       : 2;
   const photos: string[] = team.photos || [];
 
+
   return (
     <div className="team">
       <Header id={leagueId} />
@@ -175,7 +176,8 @@ function Team() {
         labels={chartLabels}
         color={color}
         playOff={playOffTeams}
-      />
+        />
+      {leagueId !== '1' && leagueId !== '2' ? <>
       <Title level={2} className="team__header">
         {team.city + " " + team.name + " plays at " + team.arena_name}{" "}
       </Title>
@@ -185,10 +187,13 @@ function Team() {
         src={team.arena_photo}
         preview={false}
         loading="lazy"
-      />
+        />
       <Title level={5} className="team__description">
         {team.arena_dedcription}
-      </Title>
+      </Title> 
+        </>
+      : <></>
+        }
     </div>
   );
 }
