@@ -31,9 +31,8 @@ import ger_3 from "../../images/Gallery/W1/Ger/ger_3.jpg";
 import ger_4 from "../../images/Gallery/W1/Ger/ger_4.jpg";
 import ger_5 from "../../images/Gallery/W1/Ger/ger_5.jpg";
 import slk_1 from "../../images/Gallery/W1/Slk/slk_1.jpg";
-import slk_2 from "../../images/Gallery/W1/Slk/slk_2.jpg";
-import slk_3 from "../../images/Gallery/W1/Slk/slk_3.jpeg";
-import slk_4 from "../../images/Gallery/W1/Slk/slk_4.jpg";
+import slk_2 from "../../images/Gallery/W1/Slk/slk_2.webp";
+import slk_3 from "../../images/Gallery/W1/Slk/slk_3.jpg";
 import swi_1 from "../../images/Gallery/W1/Swi/swi_1.jpg";
 import swi_2 from "../../images/Gallery/W1/Swi/swi_2.jpg";
 import swi_3 from "../../images/Gallery/W1/Swi/swi_3.jpg";
@@ -276,7 +275,7 @@ export const w1: Teams[] = [
     curStatusLength: 0,
     chartData: [],
     chartLabels: [],
-    photos: [slk_1, slk_2, slk_3, slk_4]
+    photos: [slk_1, slk_2, slk_3]
   },
   {
     abbreviation: "SWI",
