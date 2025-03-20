@@ -244,7 +244,7 @@ export const elh: Teams[] = [
 		tiktok: '',
 		snapchat: '',
 		linkedin: '',
-		website: '',
+		website: 'https://www.hc-kometa.cz/',
 		twitch: '',
 	},
 	{
@@ -285,7 +285,7 @@ export const elh: Teams[] = [
 		tiktok: '',
 		snapchat: '',
 		linkedin: '',
-		website: '',
+		website: 'https://hcmotor.cz/',
 		twitch: '',
 	},
 	{
@@ -367,7 +367,7 @@ export const elh: Teams[] = [
 		tiktok: '',
 		snapchat: '',
 		linkedin: '',
-		website: '',
+		website: 'https://www.hcbilitygri.cz/',
 		twitch: '',
 	},
 	{
@@ -449,7 +449,7 @@ export const elh: Teams[] = [
 		tiktok: '',
 		snapchat: '',
 		linkedin: '',
-		website: '',
+		website: 'https://www.hc-olomouc.cz/',
 		twitch: '',
 	},
 	{
@@ -489,7 +489,7 @@ export const elh: Teams[] = [
 		tiktok: '',
 		snapchat: '',
 		linkedin: '',
-		website: '',
+		website: 'https://www.hcverva.cz/',
 		twitch: '',
 	},
 	{
@@ -530,7 +530,7 @@ export const elh: Teams[] = [
 		tiktok: '',
 		snapchat: '',
 		linkedin: '',
-		website: '',
+		website: 'https://hokejkv.cz/',
 		twitch: '',
 	},
 	{
@@ -571,7 +571,7 @@ export const elh: Teams[] = [
 		tiktok: '',
 		snapchat: '',
 		linkedin: '',
-		website: '',
+		website: 'https://www.hcplzen.cz/',
 		twitch: '',
 	},
 	{
@@ -612,7 +612,7 @@ export const elh: Teams[] = [
 		tiktok: '',
 		snapchat: '',
 		linkedin: '',
-		website: '',
+		website: 'https://www.bkboleslav.cz/',
 		twitch: '',
 	},
 	{
@@ -653,7 +653,7 @@ export const elh: Teams[] = [
 		tiktok: '',
 		snapchat: '',
 		linkedin: '',
-		website: '',
+		website: 'https://rytirikladno.cz/',
 		twitch: '',
 	},
 ];
