@@ -28,16 +28,16 @@ export type Teams = {
 	arena_dedcription?: string;
 	arena_capacity?: number;
 	arena_photo?: string;
-	facebook?: string;
-	youtube?: string;
-	instagram?: string;
-	x?: string;
-	threads?: string;
-	tiktok?: string;
-	snapchat?: string;
-	linkedin?: string;
-	website?: string;
-	twitch?: string;
+	facebook: string;
+	youtube: string;
+	instagram: string;
+	x: string;
+	threads: string;
+	tiktok: string;
+	snapchat: string;
+	linkedin: string;
+	website: string;
+	twitch: string;
 };
 
 export type TeamsList = string[];
