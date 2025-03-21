@@ -287,6 +287,7 @@ export const ehl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/75553479',
 		website: 'https://www.vaxjolakers.se/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 2,
@@ -329,6 +330,7 @@ export const ehl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/78380572/',
 		website: 'https://www.skellefteaaik.se/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 3,
@@ -371,6 +373,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'http://frolundahockey.com/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 4,
@@ -413,6 +416,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.gshc.ch/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 5,
@@ -455,6 +459,7 @@ export const ehl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/zsclions/',
 		website: 'https://www.zsclions.ch/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 6,
@@ -497,6 +502,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.scb.ch/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 7,
@@ -539,6 +545,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.tappara.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 8,
@@ -581,6 +588,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.pelicans.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 9,
@@ -623,6 +631,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://hifk.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 10,
@@ -665,6 +674,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.ilves.com/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 11,
@@ -707,6 +717,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.redbullmuenchen.de/de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 12,
@@ -749,6 +760,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://adler-mannheim.de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 13,
@@ -791,6 +803,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.deg-eishockey.de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 14,
@@ -833,6 +846,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.haie.de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 15,
@@ -875,6 +889,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.eisbaeren.de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 16,
@@ -917,6 +932,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.hcdynamo.cz/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 17,
@@ -959,6 +975,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.hcsparta.cz/index.asp',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 18,
@@ -1001,6 +1018,7 @@ export const ehl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/evz-eissportverein-zug',
 		website: 'https://www.evz.ch/en/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 19,
@@ -1043,6 +1061,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.grizzlys.de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 20,
@@ -1085,6 +1104,7 @@ export const ehl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/timr%C3%A5-ik',
 		website: 'https://www.timraik.se/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 21,
@@ -1127,6 +1147,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.hclugano.ch/en/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 22,
@@ -1169,6 +1190,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://hc.tps.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 23,
@@ -1211,6 +1233,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.hckosice.sk/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 24,
@@ -1253,6 +1276,7 @@ export const ehl: Teams[] = [
 		linkedin: 'https://sk.linkedin.com/company/hc-slovan-bratislava',
 		website: 'https://www.hcslovan.sk/sk/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 25,
@@ -1295,6 +1319,7 @@ export const ehl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/luleahockey/',
 		website: 'https://www.luleahockey.se/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 26,
@@ -1337,6 +1362,7 @@ export const ehl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/f%C3%A4rjestad-bk/',
 		website: 'https://www.farjestadbk.se/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 27,
@@ -1379,6 +1405,7 @@ export const ehl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/hockey-club-davos-ag-1921/',
 		website: 'https://www.hcd.ch/de',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 28,
@@ -1421,6 +1448,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://kalpa.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 29,
@@ -1463,6 +1491,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.sheffieldsteelers.co.uk/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 30,
@@ -1506,6 +1535,7 @@ export const ehl: Teams[] = [
 			'https://www.linkedin.com/company/belfast-giants/?originalSubdomain=uk',
 		website: 'https://www.belfastgiants.com/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 31,
@@ -1548,6 +1578,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.sil.no/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 32,
@@ -1590,6 +1621,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.hcb.net/de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 33,
@@ -1632,6 +1664,7 @@ export const ehl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/%C3%B6rebro-hockey',
 		website: 'https://www.orebrohockey.se/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 34,
@@ -1674,6 +1707,7 @@ export const ehl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/ehc-biel-bienne',
 		website: 'https://www.ehcb.ch/de',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 35,
@@ -1715,6 +1749,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.erc-ingolstadt.de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 36,
@@ -1757,6 +1792,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.hcocelari.cz/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 37,
@@ -1799,6 +1835,7 @@ export const ehl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/kouvolan-kookoo/',
 		website: 'https://www.kookoo.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 38,
@@ -1841,6 +1878,7 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.hc-vitkovice.cz/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 39,
@@ -1883,5 +1921,6 @@ export const ehl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.mountfieldhk.cz/',
 		twitch: '',
+		points_percentage: 0,
 	},
 ];

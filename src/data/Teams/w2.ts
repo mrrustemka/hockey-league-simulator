@@ -75,6 +75,7 @@ export const w2: Teams[] = [
 		linkedin: '',
 		website: 'http://www.icehockeyuk.co.uk/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'POL',
@@ -111,6 +112,7 @@ export const w2: Teams[] = [
 		linkedin: '',
 		website: 'http://www.pzhl.org.pl/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'ITA',
@@ -147,6 +149,7 @@ export const w2: Teams[] = [
 		linkedin: '',
 		website: 'http://www.fisg.it/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'SKR',
@@ -183,6 +186,7 @@ export const w2: Teams[] = [
 		linkedin: '',
 		website: 'http://www.kiha.or.kr/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'ROM',
@@ -219,6 +223,7 @@ export const w2: Teams[] = [
 		linkedin: '',
 		website: 'https://www.frhg.ro/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'JAP',
@@ -255,6 +260,7 @@ export const w2: Teams[] = [
 		linkedin: '',
 		website: 'http://www.jihf.or.jp/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'CHI',
@@ -291,6 +297,7 @@ export const w2: Teams[] = [
 		linkedin: '',
 		website: 'http://icehockey.sport.org.cn/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'EST',
@@ -328,6 +335,7 @@ export const w2: Teams[] = [
 		linkedin: '',
 		website: 'http://www.eestihoki.ee/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'LIT',
@@ -364,6 +372,7 @@ export const w2: Teams[] = [
 		linkedin: '',
 		website: 'http://www.hockey.lt/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'CRO',
@@ -400,6 +409,7 @@ export const w2: Teams[] = [
 		linkedin: '',
 		website: 'http://www.hshl.hr/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'SPA',
@@ -436,6 +446,7 @@ export const w2: Teams[] = [
 		linkedin: '',
 		website: 'https://www.rfedh.es/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'UKR',
@@ -472,6 +483,7 @@ export const w2: Teams[] = [
 		linkedin: '',
 		website: 'https://fhu.com.ua/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	// {
 	//   abbreviation: "NET",
@@ -507,5 +519,5 @@ export const w2: Teams[] = [
 	// linkedin: '',
 	// website: 'http://www.ijnl.nl/',
 	// twitch: '',
-	//}
+	//points_percentage: 0,}
 ];

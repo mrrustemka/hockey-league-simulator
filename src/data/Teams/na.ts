@@ -120,6 +120,7 @@ export const na: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/zsclions/',
 		website: 'https://www.zsclions.ch/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 2,
@@ -161,6 +162,7 @@ export const na: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/evz-eissportverein-zug',
 		website: 'https://www.evz.ch/en/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 3,
@@ -202,6 +204,7 @@ export const na: Teams[] = [
 		linkedin: '',
 		website: 'https://www.scb.ch/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 4,
@@ -243,6 +246,7 @@ export const na: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/hockey-club-davos-ag-1921/',
 		website: 'https://www.hcd.ch/de',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 5,
@@ -284,6 +288,7 @@ export const na: Teams[] = [
 		linkedin: '',
 		website: 'https://lausannehc.ch/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 6,
@@ -325,6 +330,7 @@ export const na: Teams[] = [
 		linkedin: '',
 		website: 'https://www.gotteron.ch/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 7,
@@ -366,6 +372,7 @@ export const na: Teams[] = [
 		linkedin: '',
 		website: 'https://www.hclugano.ch/en/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 8,
@@ -408,6 +415,7 @@ export const na: Teams[] = [
 		linkedin: '',
 		website: 'https://hcap.ch/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 9,
@@ -449,6 +457,7 @@ export const na: Teams[] = [
 		linkedin: '',
 		website: 'https://www.gshc.ch/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 10,
@@ -490,6 +499,7 @@ export const na: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/ehc-biel-bienne',
 		website: 'https://www.ehcb.ch/de',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 11,
@@ -531,6 +541,7 @@ export const na: Teams[] = [
 		linkedin: '',
 		website: '',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 12,
@@ -572,6 +583,7 @@ export const na: Teams[] = [
 		linkedin: '',
 		website: 'https://www.scltigers.ch/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 13,
@@ -613,6 +625,7 @@ export const na: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/ehc-kloten-sport-ag/',
 		website: 'https://ehc-kloten.ch/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 14,
@@ -654,5 +667,6 @@ export const na: Teams[] = [
 		linkedin: '',
 		website: 'https://www.hc-ajoie.ch/',
 		twitch: '',
+		points_percentage: 0,
 	},
 ];

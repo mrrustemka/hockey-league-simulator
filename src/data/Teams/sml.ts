@@ -128,6 +128,7 @@ export const sml: Teams[] = [
 		linkedin: '',
 		website: 'https://www.tappara.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 2,
@@ -169,6 +170,7 @@ export const sml: Teams[] = [
 		linkedin: '',
 		website: 'https://www.pelicans.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 3,
@@ -210,6 +212,7 @@ export const sml: Teams[] = [
 		linkedin: '',
 		website: 'https://hifk.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 4,
@@ -251,6 +254,7 @@ export const sml: Teams[] = [
 		linkedin: '',
 		website: 'https://www.ilves.com/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 5,
@@ -292,6 +296,7 @@ export const sml: Teams[] = [
 		linkedin: '',
 		website: 'https://hc.tps.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 6,
@@ -333,6 +338,7 @@ export const sml: Teams[] = [
 		linkedin: '',
 		website: 'https://kalpa.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 7,
@@ -374,6 +380,7 @@ export const sml: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/kouvolan-kookoo/',
 		website: 'https://www.kookoo.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 8,
@@ -416,6 +423,7 @@ export const sml: Teams[] = [
 		linkedin: '',
 		website: 'http://www.jypliiga.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 9,
@@ -457,6 +465,7 @@ export const sml: Teams[] = [
 		linkedin: '',
 		website: 'https://karpat.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 10,
@@ -498,6 +507,7 @@ export const sml: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/rauman-lukko-oy',
 		website: 'https://www.raumanlukko.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 11,
@@ -539,6 +549,7 @@ export const sml: Teams[] = [
 		linkedin: 'https://saipa.fi/linkedin',
 		website: 'https://saipa.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 12,
@@ -580,6 +591,7 @@ export const sml: Teams[] = [
 		linkedin: '',
 		website: 'https://vaasansport.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 13,
@@ -621,6 +633,7 @@ export const sml: Teams[] = [
 		linkedin: '',
 		website: 'http://www.assat.com/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 14,
@@ -662,6 +675,7 @@ export const sml: Teams[] = [
 		linkedin: '',
 		website: 'https://jukurit.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 15,
@@ -703,6 +717,7 @@ export const sml: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/hpk-liiga-oy/mycompany/',
 		website: 'https://hpk.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 16,
@@ -744,5 +759,6 @@ export const sml: Teams[] = [
 		linkedin: '',
 		website: 'https://kiekko-espoo.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 ];

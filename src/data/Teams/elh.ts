@@ -122,6 +122,7 @@ export const elh: Teams[] = [
 		linkedin: '',
 		website: 'https://www.hcdynamo.cz/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 2,
@@ -163,6 +164,7 @@ export const elh: Teams[] = [
 		linkedin: '',
 		website: 'https://www.hcsparta.cz/index.asp',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 3,
@@ -204,6 +206,7 @@ export const elh: Teams[] = [
 		linkedin: '',
 		website: 'https://www.hcocelari.cz/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 4,
@@ -246,6 +249,7 @@ export const elh: Teams[] = [
 		linkedin: '',
 		website: 'https://www.hc-kometa.cz/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 5,
@@ -287,6 +291,7 @@ export const elh: Teams[] = [
 		linkedin: '',
 		website: 'https://hcmotor.cz/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 6,
@@ -328,6 +333,7 @@ export const elh: Teams[] = [
 		linkedin: '',
 		website: 'https://www.mountfieldhk.cz/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 7,
@@ -369,6 +375,7 @@ export const elh: Teams[] = [
 		linkedin: '',
 		website: 'https://www.hcbilitygri.cz/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 8,
@@ -410,6 +417,7 @@ export const elh: Teams[] = [
 		linkedin: '',
 		website: 'https://www.hc-vitkovice.cz/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 9,
@@ -451,6 +459,7 @@ export const elh: Teams[] = [
 		linkedin: '',
 		website: 'https://www.hc-olomouc.cz/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 10,
@@ -491,6 +500,7 @@ export const elh: Teams[] = [
 		linkedin: '',
 		website: 'https://www.hcverva.cz/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 11,
@@ -532,6 +542,7 @@ export const elh: Teams[] = [
 		linkedin: '',
 		website: 'https://hokejkv.cz/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 12,
@@ -573,6 +584,7 @@ export const elh: Teams[] = [
 		linkedin: '',
 		website: 'https://www.hcplzen.cz/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 13,
@@ -614,6 +626,7 @@ export const elh: Teams[] = [
 		linkedin: '',
 		website: 'https://www.bkboleslav.cz/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 14,
@@ -655,5 +668,6 @@ export const elh: Teams[] = [
 		linkedin: '',
 		website: 'https://rytirikladno.cz/',
 		twitch: '',
+		points_percentage: 0,
 	},
 ];

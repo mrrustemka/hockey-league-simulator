@@ -38,6 +38,7 @@ export type Teams = {
 	linkedin: string;
 	website: string;
 	twitch: string;
+	points_percentage: number;
 };
 
 export type TeamsList = string[];

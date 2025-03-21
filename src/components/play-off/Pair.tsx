@@ -132,6 +132,7 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
 			linkedin: '',
 			website: '',
 			twitch: '',
+			points_percentage: 0,
 		};
 		let away: Teams = {
 			abbreviation: '',
@@ -173,6 +174,7 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
 			linkedin: '',
 			website: '',
 			twitch: '',
+			points_percentage: 0,
 		};
 		function getTeamInfo(team: string): Teams {
 			const foundTeam = teams.find(

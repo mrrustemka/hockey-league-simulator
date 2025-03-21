@@ -361,6 +361,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/oilers/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 2,
@@ -403,6 +404,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/flames/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 3,
@@ -446,6 +448,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/canucks/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 4,
@@ -488,6 +491,7 @@ export const nhl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/seattlekraken',
 		website: 'https://www.nhl.com/kraken/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 5,
@@ -530,6 +534,7 @@ export const nhl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/san-jose-sharks/index',
 		website: 'https://www.nhl.com/sharks/',
 		twitch: 'https://www.twitch.tv/sanjosesharks',
+		points_percentage: 0,
 	},
 	{
 		id: 6,
@@ -572,6 +577,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/goldenknights/',
 		twitch: 'https://www.twitch.tv/vgktwitch',
+		points_percentage: 0,
 	},
 	{
 		id: 7,
@@ -614,6 +620,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/kings/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 8,
@@ -656,6 +663,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/ducks/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 9,
@@ -698,6 +706,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/avalanche/',
 		twitch: 'https://www.twitch.tv/NHLAvalanche',
+		points_percentage: 0,
 	},
 	{
 		id: 10,
@@ -740,6 +749,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/blackhawks/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 11,
@@ -782,6 +792,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/redwings/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 12,
@@ -824,6 +835,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/bruins/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 13,
@@ -866,6 +878,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/sabres/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 14,
@@ -908,6 +921,7 @@ export const nhl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/carolina-hurricanes',
 		website: 'https://www.nhl.com/hurricanes/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 15,
@@ -950,6 +964,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/panthers/',
 		twitch: 'https://www.twitch.tv/flapanthers',
+		points_percentage: 0,
 	},
 	{
 		id: 16,
@@ -992,6 +1007,7 @@ export const nhl: Teams[] = [
 		linkedin: 'https://ca.linkedin.com/company/canadiensdemontreal',
 		website: 'https://www.nhl.com/canadiens/',
 		twitch: 'https://www.twitch.tv/canadiensmtl',
+		points_percentage: 0,
 	},
 	{
 		id: 17,
@@ -1035,6 +1051,7 @@ export const nhl: Teams[] = [
 			'https://www.linkedin.com/company/senators-sports-&-entertainment',
 		website: 'https://www.nhl.com/senators/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 18,
@@ -1077,6 +1094,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/mapleleafs/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 19,
@@ -1130,6 +1148,7 @@ export const nhl: Teams[] = [
 		linkedin: 'https://linkedin.com/company/pittsburgh-penguins',
 		website: 'https://www.nhl.com/penguins/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 20,
@@ -1172,6 +1191,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/rangers/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 21,
@@ -1214,6 +1234,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/capitals/',
 		twitch: 'https://www.twitch.tv/capitals',
+		points_percentage: 0,
 	},
 	{
 		id: 22,
@@ -1256,6 +1277,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/lightning/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 23,
@@ -1298,6 +1320,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/predators/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 24,
@@ -1340,6 +1363,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/flyers/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 25,
@@ -1382,6 +1406,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/blues/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 26,
@@ -1424,6 +1449,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/wild/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 27,
@@ -1466,6 +1492,7 @@ export const nhl: Teams[] = [
 		linkedin: 'https://ru.linkedin.com/company/dallas-stars',
 		website: 'https://www.nhl.com/stars/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 28,
@@ -1508,6 +1535,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/islanders/',
 		twitch: 'https://www.twitch.tv/NYIslanders_',
+		points_percentage: 0,
 	},
 	{
 		id: 29,
@@ -1561,6 +1589,7 @@ export const nhl: Teams[] = [
 		linkedin: 'https://linkedin.com/company/new-jersey-devils',
 		website: 'https://www.nhl.com/devils/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 30,
@@ -1614,6 +1643,7 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/bluejackets/',
 		twitch: 'https://www.twitch.tv/nhlbluejackets',
+		points_percentage: 0,
 	},
 	{
 		id: 31,
@@ -1656,6 +1686,7 @@ export const nhl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/utah-hockey-club',
 		website: 'https://www.nhl.com/utah/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 32,
@@ -1698,5 +1729,6 @@ export const nhl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.nhl.com/jets/',
 		twitch: 'https://www.twitch.tv/winnipegjetsofficial',
+		points_percentage: 0,
 	},
 ];

@@ -98,6 +98,7 @@ export const ice: Teams[] = [
 		linkedin: '',
 		website: 'https://www.kac.at/impressum/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 2,
@@ -140,6 +141,7 @@ export const ice: Teams[] = [
 		linkedin: 'https://at.linkedin.com/company/hc-tiwag-innsbruck-die-haie',
 		website: 'https://www.hcinnsbruck.at/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 3,
@@ -182,6 +184,7 @@ export const ice: Teams[] = [
 		linkedin: '',
 		website: 'https://www.ecvsv.at/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 4,
@@ -224,6 +227,7 @@ export const ice: Teams[] = [
 		linkedin: '',
 		website: 'https://ecrbs.redbulls.com/en/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 5,
@@ -265,6 +269,7 @@ export const ice: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/black-wings-linz',
 		website: 'https://www.blackwings.at/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 6,
@@ -307,6 +312,7 @@ export const ice: Teams[] = [
 		linkedin: '',
 		website: 'https://www.hcb.net/de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 7,
@@ -348,6 +354,7 @@ export const ice: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/hc-pustertal/',
 		website: 'https://www.hcpustertal.com/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 8,
@@ -389,6 +396,7 @@ export const ice: Teams[] = [
 		linkedin: '',
 		website: 'https://www.fehervarav19.hu/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 9,
@@ -433,6 +441,7 @@ export const ice: Teams[] = [
 			'https://www.linkedin.com/company/hk-sz-olimpija/?originalSubdomain=si',
 		website: 'https://www.hkolimpija.si/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 10,
@@ -475,6 +484,7 @@ export const ice: Teams[] = [
 		linkedin: '',
 		website: 'https://www.pioneers.hockey/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 11,
@@ -517,6 +527,7 @@ export const ice: Teams[] = [
 		linkedin: '',
 		website: 'https://www.vienna-capitals.at/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 12,
@@ -558,6 +569,7 @@ export const ice: Teams[] = [
 		linkedin: '',
 		website: 'https://www.asiagohockey.it/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 13,
@@ -600,5 +612,6 @@ export const ice: Teams[] = [
 		linkedin: '',
 		website: 'https://99ers.at/',
 		twitch: '',
+		points_percentage: 0,
 	},
 ];

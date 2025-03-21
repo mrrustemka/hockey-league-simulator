@@ -130,6 +130,7 @@ export const w1: Teams[] = [
 		linkedin: 'http://www.linkedin.com/company/hockey-canada/',
 		website: 'https://www.hockeycanada.ca/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'USA',
@@ -166,6 +167,7 @@ export const w1: Teams[] = [
 		linkedin: '',
 		website: 'https://teamusa.usahockey.com/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'SWE',
@@ -202,6 +204,7 @@ export const w1: Teams[] = [
 		linkedin: '',
 		website: 'https://www.swehockey.se/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'FIN',
@@ -238,6 +241,7 @@ export const w1: Teams[] = [
 		linkedin: '',
 		website: 'https://www.finhockey.fi/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'CZE',
@@ -274,6 +278,7 @@ export const w1: Teams[] = [
 		linkedin: '',
 		website: 'https://www.ceskyhokej.cz/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'GER',
@@ -310,6 +315,7 @@ export const w1: Teams[] = [
 		linkedin: '',
 		website: 'http://www.deb-online.de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'SLK',
@@ -346,6 +352,7 @@ export const w1: Teams[] = [
 		linkedin: '',
 		website: 'http://www.hockeyslovakia.sk/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'SWI',
@@ -382,6 +389,7 @@ export const w1: Teams[] = [
 		linkedin: '',
 		website: 'http://www.sihf.ch/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'LAT',
@@ -418,6 +426,7 @@ export const w1: Teams[] = [
 		linkedin: '',
 		website: 'http://www.lhf.lv/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'DEN',
@@ -454,6 +463,7 @@ export const w1: Teams[] = [
 		linkedin: '',
 		website: 'http://www.ishockey.dk/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'NOR',
@@ -490,6 +500,7 @@ export const w1: Teams[] = [
 		linkedin: '',
 		website: 'http://www.hockey.no/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'FRA',
@@ -526,6 +537,7 @@ export const w1: Teams[] = [
 		linkedin: '',
 		website: 'http://www.hockeyfrance.com/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'KAZ',
@@ -562,6 +574,7 @@ export const w1: Teams[] = [
 		linkedin: '',
 		website: 'http://www.icehockey.kz/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'AUS',
@@ -598,6 +611,7 @@ export const w1: Teams[] = [
 		linkedin: '',
 		website: 'http://www.eishockey.at/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'HUN',
@@ -634,6 +648,7 @@ export const w1: Teams[] = [
 		linkedin: '',
 		website: 'http://www.jegkorongszovetseg.hu/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		abbreviation: 'SLN',
@@ -670,5 +685,6 @@ export const w1: Teams[] = [
 		linkedin: '',
 		website: 'http://www.hokej.si/',
 		twitch: '',
+		points_percentage: 0,
 	},
 ];

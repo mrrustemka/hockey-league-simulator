@@ -93,6 +93,7 @@ function Game() {
 			linkedin: '',
 			website: '',
 			twitch: '',
+			points_percentage: 0,
 		};
 		let away: Teams = {
 			abbreviation: '',
@@ -134,6 +135,7 @@ function Game() {
 			linkedin: '',
 			website: '',
 			twitch: '',
+			points_percentage: 0,
 		};
 		function getGoals(min: number, max: number, rating: number) {
 			return Math.round(
@@ -304,10 +306,12 @@ function Game() {
 		home.goals_against += aGoals;
 		home.game_counter += 1;
 		home.goals_diff += hGoals - aGoals;
+		home.points_percentage = home.points / (home.game_counter * 2);
 		away.goals_for += aGoals;
 		away.goals_against += hGoals;
 		away.game_counter += 1;
 		away.goals_diff += aGoals - hGoals;
+		away.points_percentage = away.points / (away.game_counter * 2);
 
 		let result: GameResult = {
 			home: home.abbreviation,

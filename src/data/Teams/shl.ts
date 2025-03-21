@@ -125,6 +125,7 @@ export const shl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/75553479',
 		website: 'https://www.vaxjolakers.se/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 2,
@@ -166,6 +167,7 @@ export const shl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/78380572/',
 		website: 'https://www.skellefteaaik.se/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 3,
@@ -207,6 +209,7 @@ export const shl: Teams[] = [
 		linkedin: '',
 		website: 'http://frolundahockey.com/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 4,
@@ -248,6 +251,7 @@ export const shl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/f%C3%A4rjestad-bk/',
 		website: 'https://www.farjestadbk.se/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 5,
@@ -289,6 +293,7 @@ export const shl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/timr%C3%A5-ik',
 		website: 'https://www.timraik.se/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 6,
@@ -330,6 +335,7 @@ export const shl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/luleahockey/',
 		website: 'https://www.luleahockey.se/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 7,
@@ -371,6 +377,7 @@ export const shl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.leksandsif.se/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 8,
@@ -412,6 +419,7 @@ export const shl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/linkopinghockeyclub/',
 		website: 'https://www.lhc.eu/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 9,
@@ -453,6 +461,7 @@ export const shl: Teams[] = [
 		linkedin: '',
 		website: 'http://roglebk.se/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 10,
@@ -494,6 +503,7 @@ export const shl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/%C3%B6rebro-hockey',
 		website: 'https://www.orebrohockey.se/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 11,
@@ -535,6 +545,7 @@ export const shl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.modohockey.se/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 12,
@@ -576,6 +587,7 @@ export const shl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/malmo-redhawks/',
 		website: 'https://www.malmoredhawks.com/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 13,
@@ -617,6 +629,7 @@ export const shl: Teams[] = [
 		linkedin: '',
 		website: 'https://www.hv71.se/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 14,
@@ -658,5 +671,6 @@ export const shl: Teams[] = [
 		linkedin: 'https://www.linkedin.com/company/27073906/admin/',
 		website: 'https://www.ikoskarshamn.se/',
 		twitch: '',
+		points_percentage: 0,
 	},
 ];

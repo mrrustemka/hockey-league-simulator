@@ -120,6 +120,7 @@ export const del: Teams[] = [
 		linkedin: '',
 		website: 'https://www.fischtown-pinguins.de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 2,
@@ -161,6 +162,7 @@ export const del: Teams[] = [
 		linkedin: '',
 		website: 'https://www.eisbaeren.de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 3,
@@ -202,6 +204,7 @@ export const del: Teams[] = [
 		linkedin: '',
 		website: 'https://www.straubing-tigers.de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 4,
@@ -243,6 +246,7 @@ export const del: Teams[] = [
 		linkedin: '',
 		website: 'https://www.redbullmuenchen.de/de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 5,
@@ -284,6 +288,7 @@ export const del: Teams[] = [
 		linkedin: '',
 		website: 'https://www.grizzlys.de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 6,
@@ -325,6 +330,7 @@ export const del: Teams[] = [
 		linkedin: '',
 		website: 'https://www.wildwings.de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 7,
@@ -366,6 +372,7 @@ export const del: Teams[] = [
 		linkedin: '',
 		website: 'https://adler-mannheim.de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 8,
@@ -407,6 +414,7 @@ export const del: Teams[] = [
 		linkedin: '',
 		website: 'https://www.haie.de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 9,
@@ -447,6 +455,7 @@ export const del: Teams[] = [
 		linkedin: '',
 		website: 'https://www.erc-ingolstadt.de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 10,
@@ -488,6 +497,7 @@ export const del: Teams[] = [
 		linkedin: '',
 		website: 'https://www.icetigers.de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 11,
@@ -529,6 +539,7 @@ export const del: Teams[] = [
 		linkedin: '',
 		website: 'https://www.deg-eishockey.de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 12,
@@ -570,6 +581,7 @@ export const del: Teams[] = [
 		linkedin: '',
 		website: 'https://www.loewen-frankfurt.de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 13,
@@ -610,6 +622,7 @@ export const del: Teams[] = [
 		linkedin: '',
 		website: 'https://iserlohn-roosters.de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 	{
 		id: 14,
@@ -651,5 +664,6 @@ export const del: Teams[] = [
 		linkedin: '',
 		website: 'https://www.aev-panther.de/',
 		twitch: '',
+		points_percentage: 0,
 	},
 ];
