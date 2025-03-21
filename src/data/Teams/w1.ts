@@ -1,514 +1,674 @@
-import { Teams } from "../types";
-import aus from "../../images/w1_aus.png";
-import aus_1 from "../../images/Gallery/W1/Aus/aus_1.jpg";
-import aus_2 from "../../images/Gallery/W1/Aus/aus_2.jpg";
-import aus_3 from "../../images/Gallery/W1/Aus/aus_3.jpg";
-import aus_4 from "../../images/Gallery/W1/Aus/aus_4.jpg";
-import aus_5 from "../../images/Gallery/W1/Aus/aus_5.jpg";
-import aus_6 from "../../images/Gallery/W1/Aus/aus_6.jpg";
-import can from "../../images/w1_can.png";
-import can_1 from "../../images/Gallery/W1/Can/can_1.png";
-import can_2 from "../../images/Gallery/W1/Can/can_2.jpg";
-import can_3 from "../../images/Gallery/W1/Can/can_3.jpg";
-import can_4 from "../../images/Gallery/W1/Can/can_4.jpg";
-import cze from "../../images/w1_cze.png";
-import cze_1 from "../../images/Gallery/W1/Cze/cze_1.png";
-import cze_2 from "../../images/Gallery/W1/Cze/cze_2.jpg";
-import cze_3 from "../../images/Gallery/W1/Cze/cze_3.jpeg";
-import cze_4 from "../../images/Gallery/W1/Cze/cze_4.jpg";
-import den from "../../images/w1_den.png";
-import den_1 from "../../images/Gallery/W1/Den/den_1.jpg";
-import den_2 from "../../images/Gallery/W1/Den/den_2.jpg";
-import den_3 from "../../images/Gallery/W1/Den/den_3.jpg";
-import den_4 from "../../images/Gallery/W1/Den/den_4.jpg";
-import den_5 from "../../images/Gallery/W1/Den/den_5.jpg";
-import fin from "../../images/w1_fin.png";
-import fin_1 from "../../images/Gallery/W1/Fin/fin_1.png";
-import fin_2 from "../../images/Gallery/W1/Fin/fin_2.jpg";
-import fin_3 from "../../images/Gallery/W1/Fin/fin_3.jpeg";
-import fin_4 from "../../images/Gallery/W1/Fin/fin_4.jpg";
-import fin_5 from "../../images/Gallery/W1/Fin/fin_5.jpg";
-import fin_6 from "../../images/Gallery/W1/Fin/fin_6.jpg";
-import fin_7 from "../../images/Gallery/W1/Fin/fin_7.jpg";
-import fra from "../../images/w1_fra.png";
-import fra_1 from "../../images/Gallery/W1/Fra/fra_1.jpg";
-import fra_2 from "../../images/Gallery/W1/Fra/fra_2.jpg";
-import fra_3 from "../../images/Gallery/W1/Fra/fra_3.jpg";
-import fra_4 from "../../images/Gallery/W1/Fra/fra_4.jpg";
-import ger from "../../images/w1_ger.png";
-import ger_1 from "../../images/Gallery/W1/Ger/ger_1.jpg";
-import ger_2 from "../../images/Gallery/W1/Ger/ger_2.png";
-import ger_3 from "../../images/Gallery/W1/Ger/ger_3.jpg";
-import ger_4 from "../../images/Gallery/W1/Ger/ger_4.jpg";
-import ger_5 from "../../images/Gallery/W1/Ger/ger_5.jpg";
-import hun from "../../images/w2_hun.png";
-import hun_1 from "../../images/Gallery/W1/Hun/hun_1.jpg";
-import hun_2 from "../../images/Gallery/W1/Hun/hun_2.jpg";
-import hun_3 from "../../images/Gallery/W1/Hun/hun_3.jpg";
-import hun_4 from "../../images/Gallery/W1/Hun/hun_4.jpg";
-import kaz from "../../images/w1_kaz.png";
-import kaz_1 from "../../images/Gallery/W1/Kaz/kaz_1.jpg";
-import kaz_2 from "../../images/Gallery/W1/Kaz/kaz_2.jpg";
-import kaz_3 from "../../images/Gallery/W1/Kaz/kaz_3.jpg";
-import kaz_4 from "../../images/Gallery/W1/Kaz/kaz_4.jpg";
-import kaz_5 from "../../images/Gallery/W1/Kaz/kaz_5.jpg";
-import lat from "../../images/w1_lat.png";
-import lat_1 from "../../images/Gallery/W1/Lat/lat_1.jpg";
-import lat_2 from "../../images/Gallery/W1/Lat/lat_2.jpg";
-import lat_3 from "../../images/Gallery/W1/Lat/lat_3.jpg";
-import lat_4 from "../../images/Gallery/W1/Lat/lat_4.jpg";
-import lat_5 from "../../images/Gallery/W1/Lat/lat_5.jpg";
-import nor from "../../images/w1_nor.png";
-import nor_1 from "../../images/Gallery/W1/Nor/nor_1.jpg";
-import nor_2 from "../../images/Gallery/W1/Nor/nor_2.jpg";
-import nor_3 from "../../images/Gallery/W1/Nor/nor_3.jpg";
-import nor_4 from "../../images/Gallery/W1/Nor/nor_4.jpg";
-import slk from "../../images/w1_slk.png";
-import slk_1 from "../../images/Gallery/W1/Slk/slk_1.jpg";
-import slk_2 from "../../images/Gallery/W1/Slk/slk_2.webp";
-import slk_3 from "../../images/Gallery/W1/Slk/slk_3.jpg";
-import sln from "../../images/w1_sln.png";
-import sln_1 from "../../images/Gallery/W1/Sln/sln_1.jpg";
-import sln_2 from "../../images/Gallery/W1/Sln/sln_2.jpg";
-import sln_3 from "../../images/Gallery/W1/Sln/sln_3.jpg";
-import sln_4 from "../../images/Gallery/W1/Sln/sln_4.jpg";
-import sln_5 from "../../images/Gallery/W1/Sln/sln_5.jpg";
-import sln_6 from "../../images/Gallery/W1/Sln/sln_6.jpg";
-import swe from "../../images/w1_swe.png";
-import swe_1 from "../../images/Gallery/W1/Swe/swe_1.png";
-import swe_2 from "../../images/Gallery/W1/Swe/swe_2.jpg";
-import swe_3 from "../../images/Gallery/W1/Swe/swe_3.jpg";
-import swe_4 from "../../images/Gallery/W1/Swe/swe_4.jpg";
-import swe_5 from "../../images/Gallery/W1/Swe/swe_5.jpg";
-import swi from "../../images/w1_swi.png";
-import swi_1 from "../../images/Gallery/W1/Swi/swi_1.jpg";
-import swi_2 from "../../images/Gallery/W1/Swi/swi_2.jpg";
-import swi_3 from "../../images/Gallery/W1/Swi/swi_3.jpg";
-import swi_4 from "../../images/Gallery/W1/Swi/swi_4.jpg";
-import swi_5 from "../../images/Gallery/W1/Swi/swi_5.jpg";
-import swi_6 from "../../images/Gallery/W1/Swi/swi_6.jpg";
-import usa from "../../images/w1_usa.png";
-import usa_1 from "../../images/Gallery/W1/USA/usa_1.jpg";
-import usa_2 from "../../images/Gallery/W1/USA/usa_2.png";
-import usa_3 from "../../images/Gallery/W1/USA/usa_3.jpg";
-import usa_4 from "../../images/Gallery/W1/USA/usa_4.jpg";
-import usa_5 from "../../images/Gallery/W1/USA/usa_5.png";
+import { Teams } from '../types';
+import aus from '../../images/w1_aus.png';
+import aus_1 from '../../images/Gallery/W1/Aus/aus_1.jpg';
+import aus_2 from '../../images/Gallery/W1/Aus/aus_2.jpg';
+import aus_3 from '../../images/Gallery/W1/Aus/aus_3.jpg';
+import aus_4 from '../../images/Gallery/W1/Aus/aus_4.jpg';
+import aus_5 from '../../images/Gallery/W1/Aus/aus_5.jpg';
+import aus_6 from '../../images/Gallery/W1/Aus/aus_6.jpg';
+import can from '../../images/w1_can.png';
+import can_1 from '../../images/Gallery/W1/Can/can_1.png';
+import can_2 from '../../images/Gallery/W1/Can/can_2.jpg';
+import can_3 from '../../images/Gallery/W1/Can/can_3.jpg';
+import can_4 from '../../images/Gallery/W1/Can/can_4.jpg';
+import cze from '../../images/w1_cze.png';
+import cze_1 from '../../images/Gallery/W1/Cze/cze_1.png';
+import cze_2 from '../../images/Gallery/W1/Cze/cze_2.jpg';
+import cze_3 from '../../images/Gallery/W1/Cze/cze_3.jpeg';
+import cze_4 from '../../images/Gallery/W1/Cze/cze_4.jpg';
+import den from '../../images/w1_den.png';
+import den_1 from '../../images/Gallery/W1/Den/den_1.jpg';
+import den_2 from '../../images/Gallery/W1/Den/den_2.jpg';
+import den_3 from '../../images/Gallery/W1/Den/den_3.jpg';
+import den_4 from '../../images/Gallery/W1/Den/den_4.jpg';
+import den_5 from '../../images/Gallery/W1/Den/den_5.jpg';
+import fin from '../../images/w1_fin.png';
+import fin_1 from '../../images/Gallery/W1/Fin/fin_1.png';
+import fin_2 from '../../images/Gallery/W1/Fin/fin_2.jpg';
+import fin_3 from '../../images/Gallery/W1/Fin/fin_3.jpeg';
+import fin_4 from '../../images/Gallery/W1/Fin/fin_4.jpg';
+import fin_5 from '../../images/Gallery/W1/Fin/fin_5.jpg';
+import fin_6 from '../../images/Gallery/W1/Fin/fin_6.jpg';
+import fin_7 from '../../images/Gallery/W1/Fin/fin_7.jpg';
+import fra from '../../images/w1_fra.png';
+import fra_1 from '../../images/Gallery/W1/Fra/fra_1.jpg';
+import fra_2 from '../../images/Gallery/W1/Fra/fra_2.jpg';
+import fra_3 from '../../images/Gallery/W1/Fra/fra_3.jpg';
+import fra_4 from '../../images/Gallery/W1/Fra/fra_4.jpg';
+import ger from '../../images/w1_ger.png';
+import ger_1 from '../../images/Gallery/W1/Ger/ger_1.jpg';
+import ger_2 from '../../images/Gallery/W1/Ger/ger_2.png';
+import ger_3 from '../../images/Gallery/W1/Ger/ger_3.jpg';
+import ger_4 from '../../images/Gallery/W1/Ger/ger_4.jpg';
+import ger_5 from '../../images/Gallery/W1/Ger/ger_5.jpg';
+import hun from '../../images/w2_hun.png';
+import hun_1 from '../../images/Gallery/W1/Hun/hun_1.jpg';
+import hun_2 from '../../images/Gallery/W1/Hun/hun_2.jpg';
+import hun_3 from '../../images/Gallery/W1/Hun/hun_3.jpg';
+import hun_4 from '../../images/Gallery/W1/Hun/hun_4.jpg';
+import kaz from '../../images/w1_kaz.png';
+import kaz_1 from '../../images/Gallery/W1/Kaz/kaz_1.jpg';
+import kaz_2 from '../../images/Gallery/W1/Kaz/kaz_2.jpg';
+import kaz_3 from '../../images/Gallery/W1/Kaz/kaz_3.jpg';
+import kaz_4 from '../../images/Gallery/W1/Kaz/kaz_4.jpg';
+import kaz_5 from '../../images/Gallery/W1/Kaz/kaz_5.jpg';
+import lat from '../../images/w1_lat.png';
+import lat_1 from '../../images/Gallery/W1/Lat/lat_1.jpg';
+import lat_2 from '../../images/Gallery/W1/Lat/lat_2.jpg';
+import lat_3 from '../../images/Gallery/W1/Lat/lat_3.jpg';
+import lat_4 from '../../images/Gallery/W1/Lat/lat_4.jpg';
+import lat_5 from '../../images/Gallery/W1/Lat/lat_5.jpg';
+import nor from '../../images/w1_nor.png';
+import nor_1 from '../../images/Gallery/W1/Nor/nor_1.jpg';
+import nor_2 from '../../images/Gallery/W1/Nor/nor_2.jpg';
+import nor_3 from '../../images/Gallery/W1/Nor/nor_3.jpg';
+import nor_4 from '../../images/Gallery/W1/Nor/nor_4.jpg';
+import slk from '../../images/w1_slk.png';
+import slk_1 from '../../images/Gallery/W1/Slk/slk_1.jpg';
+import slk_2 from '../../images/Gallery/W1/Slk/slk_2.webp';
+import slk_3 from '../../images/Gallery/W1/Slk/slk_3.jpg';
+import sln from '../../images/w1_sln.png';
+import sln_1 from '../../images/Gallery/W1/Sln/sln_1.jpg';
+import sln_2 from '../../images/Gallery/W1/Sln/sln_2.jpg';
+import sln_3 from '../../images/Gallery/W1/Sln/sln_3.jpg';
+import sln_4 from '../../images/Gallery/W1/Sln/sln_4.jpg';
+import sln_5 from '../../images/Gallery/W1/Sln/sln_5.jpg';
+import sln_6 from '../../images/Gallery/W1/Sln/sln_6.jpg';
+import swe from '../../images/w1_swe.png';
+import swe_1 from '../../images/Gallery/W1/Swe/swe_1.png';
+import swe_2 from '../../images/Gallery/W1/Swe/swe_2.jpg';
+import swe_3 from '../../images/Gallery/W1/Swe/swe_3.jpg';
+import swe_4 from '../../images/Gallery/W1/Swe/swe_4.jpg';
+import swe_5 from '../../images/Gallery/W1/Swe/swe_5.jpg';
+import swi from '../../images/w1_swi.png';
+import swi_1 from '../../images/Gallery/W1/Swi/swi_1.jpg';
+import swi_2 from '../../images/Gallery/W1/Swi/swi_2.jpg';
+import swi_3 from '../../images/Gallery/W1/Swi/swi_3.jpg';
+import swi_4 from '../../images/Gallery/W1/Swi/swi_4.jpg';
+import swi_5 from '../../images/Gallery/W1/Swi/swi_5.jpg';
+import swi_6 from '../../images/Gallery/W1/Swi/swi_6.jpg';
+import usa from '../../images/w1_usa.png';
+import usa_1 from '../../images/Gallery/W1/USA/usa_1.jpg';
+import usa_2 from '../../images/Gallery/W1/USA/usa_2.png';
+import usa_3 from '../../images/Gallery/W1/USA/usa_3.jpg';
+import usa_4 from '../../images/Gallery/W1/USA/usa_4.jpg';
+import usa_5 from '../../images/Gallery/W1/USA/usa_5.png';
 
 export const w1: Teams[] = [
-  {
-    abbreviation: "CAN",
-    city: "Ottawa",
-    country: "Can",
-    game_counter: 0,
-    goals_against: 0,
-    goals_diff: 0,
-    goals_for: 0,
-    id: 1,
-    logo: can,
-    loses: 0,
-    loses_ot: 0,
-    name: "Canada",
-    points: 0,
-    rating: 99,
-    wins: 0,
-    play_off_rank: 0,
-    play_off_round_wins: 0,
-    color: "#000000",
-    isPlayOff: false,
-    status: "",
-    curStatusLength: 0,
-    chartData: [],
-    chartLabels: [],
-    photos: [can_1, can_2, can_3, can_4]
-  },
-  {
-    abbreviation: "USA",
-    city: "Washington",
-    country: "USA",
-    game_counter: 0,
-    goals_against: 0,
-    goals_diff: 0,
-    goals_for: 0,
-    id: 2,
-    logo: usa,
-    loses: 0,
-    loses_ot: 0,
-    name: "USA",
-    points: 0,
-    rating: 96,
-    wins: 0,
-    play_off_rank: 0,
-    play_off_round_wins: 0,
-    color: "#002868",
-    isPlayOff: false,
-    status: "",
-    curStatusLength: 0,
-    chartData: [],
-    chartLabels: [],
-    photos: [usa_1, usa_2, usa_3, usa_4, usa_5]
-  },
-  {
-    abbreviation: "SWE",
-    city: "Stockholm",
-    country: "Swe",
-    game_counter: 0,
-    goals_against: 0,
-    goals_diff: 0,
-    goals_for: 0,
-    id: 3,
-    logo: swe,
-    loses: 0,
-    loses_ot: 0,
-    name: "Sweden",
-    points: 0,
-    rating: 95,
-    wins: 0,
-    play_off_rank: 0,
-    play_off_round_wins: 0,
-    color: "#f7db09",
-    isPlayOff: false,
-    status: "",
-    curStatusLength: 0,
-    chartData: [],
-    chartLabels: [],
-    photos: [swe_1, swe_2, swe_3, swe_4, swe_5]
-  },
-  {
-    abbreviation: "FIN",
-    city: "Helsinki",
-    country: "Fin",
-    game_counter: 0,
-    goals_against: 0,
-    goals_diff: 0,
-    goals_for: 0,
-    id: 4,
-    logo: fin,
-    loses: 0,
-    loses_ot: 0,
-    name: "Finland",
-    points: 0,
-    rating: 96,
-    wins: 0,
-    play_off_rank: 0,
-    play_off_round_wins: 0,
-    color: "#0075c8",
-    isPlayOff: false,
-    status: "",
-    curStatusLength: 0,
-    chartData: [],
-    chartLabels: [],
-    photos: [fin_1, fin_2, fin_3, fin_4, fin_5, fin_6, fin_7]
-  },
-  {
-    abbreviation: "CZE",
-    city: "Prague",
-    country: "Cze",
-    game_counter: 0,
-    goals_against: 0,
-    goals_diff: 0,
-    goals_for: 0,
-    id: 5,
-    logo: cze,
-    loses: 0,
-    loses_ot: 0,
-    name: "Czech Republic",
-    points: 0,
-    rating: 96,
-    wins: 0,
-    play_off_rank: 0,
-    play_off_round_wins: 0,
-    color: "#11457e",
-    isPlayOff: false,
-    status: "",
-    curStatusLength: 0,
-    chartData: [],
-    chartLabels: [],
-    photos: [cze_1, cze_2, cze_3, cze_4]
-  },
-  {
-    abbreviation: "GER",
-    city: "Berlin",
-    country: "Ger",
-    game_counter: 0,
-    goals_against: 0,
-    goals_diff: 0,
-    goals_for: 0,
-    id: 6,
-    logo: ger,
-    loses: 0,
-    loses_ot: 0,
-    name: "Germany",
-    points: 0,
-    rating: 94,
-    wins: 0,
-    play_off_rank: 0,
-    play_off_round_wins: 0,
-    color: "#000000",
-    isPlayOff: false,
-    status: "",
-    curStatusLength: 0,
-    chartData: [],
-    chartLabels: [],
-    photos: [ger_1, ger_2, ger_3, ger_4, ger_5]
-  },
-  {
-    abbreviation: "SLK",
-    city: "Bratislava",
-    country: "Slk",
-    game_counter: 0,
-    goals_against: 0,
-    goals_diff: 0,
-    goals_for: 0,
-    id: 7,
-    logo: slk,
-    loses: 0,
-    loses_ot: 0,
-    name: "Slovakia",
-    points: 0,
-    rating: 91,
-    wins: 0,
-    play_off_rank: 0,
-    play_off_round_wins: 0,
-    color: "#ffffff",
-    isPlayOff: false,
-    status: "",
-    curStatusLength: 0,
-    chartData: [],
-    chartLabels: [],
-    photos: [slk_1, slk_2, slk_3]
-  },
-  {
-    abbreviation: "SWI",
-    city: "Bern",
-    country: "Swi",
-    game_counter: 0,
-    goals_against: 0,
-    goals_diff: 0,
-    goals_for: 0,
-    id: 8,
-    logo: swi,
-    loses: 0,
-    loses_ot: 0,
-    name: "Switzerland",
-    points: 0,
-    rating: 96,
-    wins: 0,
-    play_off_rank: 0,
-    play_off_round_wins: 0,
-    color: "#000000",
-    isPlayOff: false,
-    status: "",
-    curStatusLength: 0,
-    chartData: [],
-    chartLabels: [],
-    photos: [swi_1, swi_2, swi_3, swi_4, swi_5, swi_6]
-  },
-  {
-    abbreviation: "LAT",
-    city: "Riga",
-    country: "Lat",
-    game_counter: 0,
-    goals_against: 0,
-    goals_diff: 0,
-    goals_for: 0,
-    id: 9,
-    logo: lat,
-    name: "Latvia",
-    points: 0,
-    rating: 89,
-    play_off_rank: 0,
-    play_off_round_wins: 0,
-    loses: 0,
-    loses_ot: 0,
-    wins: 0,
-    color: "#ffffff",
-    isPlayOff: false,
-    status: "",
-    curStatusLength: 0,
-    chartData: [],
-    chartLabels: [],
-    photos: [lat_1, lat_2, lat_3, lat_4, lat_5]
-  },
-  {
-    abbreviation: "DEN",
-    city: "Copenhagen",
-    country: "Den",
-    game_counter: 0,
-    goals_against: 0,
-    goals_diff: 0,
-    goals_for: 0,
-    id: 10,
-    logo: den,
-    name: "Denmark",
-    points: 0,
-    rating: 85,
-    play_off_rank: 0,
-    play_off_round_wins: 0,
-    loses: 0,
-    loses_ot: 0,
-    wins: 0,
-    color: "#ffffff",
-    isPlayOff: false,
-    status: "",
-    curStatusLength: 0,
-    chartData: [],
-    chartLabels: [],
-    photos: [den_1, den_2, den_3, den_4, den_5]
-  },
-  {
-    abbreviation: "NOR",
-    city: "Oslo",
-    country: "Nor",
-    game_counter: 0,
-    goals_against: 0,
-    goals_diff: 0,
-    goals_for: 0,
-    id: 11,
-    logo: nor,
-    name: "Norway",
-    points: 0,
-    rating: 82,
-    play_off_rank: 0,
-    play_off_round_wins: 0,
-    loses: 0,
-    loses_ot: 0,
-    wins: 0,
-    color: "#ffffff",
-    isPlayOff: false,
-    status: "",
-    curStatusLength: 0,
-    chartData: [],
-    chartLabels: [],
-    photos: [nor_1, nor_2, nor_3, nor_4]
-  },
-  {
-    abbreviation: "FRA",
-    city: "Paris",
-    country: "Fra",
-    game_counter: 0,
-    goals_against: 0,
-    goals_diff: 0,
-    goals_for: 0,
-    id: 12,
-    logo: fra,
-    name: "France",
-    points: 0,
-    rating: 81,
-    play_off_rank: 0,
-    play_off_round_wins: 0,
-    loses: 0,
-    loses_ot: 0,
-    wins: 0,
-    color: "#ffffff",
-    isPlayOff: false,
-    status: "",
-    curStatusLength: 0,
-    chartData: [],
-    chartLabels: [],
-    photos: [fra_1, fra_2, fra_3, fra_4]
-  },
-  {
-    abbreviation: "KAZ",
-    city: "Astana",
-    country: "Kaz",
-    game_counter: 0,
-    goals_against: 0,
-    goals_diff: 0,
-    goals_for: 0,
-    id: 13,
-    logo: kaz,
-    name: "Kazakhstan",
-    points: 0,
-    rating: 81,
-    play_off_rank: 0,
-    play_off_round_wins: 0,
-    loses: 0,
-    loses_ot: 0,
-    wins: 0,
-    color: "#ffcb05",
-    isPlayOff: false,
-    status: "",
-    curStatusLength: 0,
-    chartData: [],
-    chartLabels: [],
-    photos: [kaz_1, kaz_2, kaz_3, kaz_4, kaz_5]
-  },
-  {
-    abbreviation: "AUS",
-    city: "Vienna",
-    country: "Aus",
-    game_counter: 0,
-    goals_against: 0,
-    goals_diff: 0,
-    goals_for: 0,
-    id: 14,
-    logo: aus,
-    name: "Austria",
-    points: 0,
-    rating: 81,
-    play_off_rank: 0,
-    play_off_round_wins: 0,
-    loses: 0,
-    loses_ot: 0,
-    wins: 0,
-    color: "#000000",
-    isPlayOff: false,
-    status: "",
-    curStatusLength: 0,
-    chartData: [],
-    chartLabels: [],
-    photos: [aus_1, aus_2, aus_3, aus_4, aus_5, aus_6]
-  },
-  {
-    abbreviation: "HUN",
-    city: "Budapest",
-    country: "Hun",
-    game_counter: 0,
-    goals_against: 0,
-    goals_diff: 0,
-    goals_for: 0,
-    id: 15,
-    logo: hun,
-    name: "Hungary",
-    points: 0,
-    rating: 75,
-    play_off_rank: 0,
-    play_off_round_wins: 0,
-    loses: 0,
-    loses_ot: 0,
-    wins: 0,
-    color: "#ffffff",
-    isPlayOff: false,
-    status: "",
-    curStatusLength: 0,
-    chartData: [],
-    chartLabels: [],
-    photos: [hun_1, hun_2, hun_3, hun_4]
-  },
-  {
-    abbreviation: "SLN",
-    city: "Ljubljana",
-    country: "Sln",
-    game_counter: 0,
-    goals_against: 0,
-    goals_diff: 0,
-    goals_for: 0,
-    id: 16,
-    logo: sln,
-    name: "Slovenia",
-    points: 0,
-    rating: 75,
-    play_off_rank: 0,
-    play_off_round_wins: 0,
-    loses: 0,
-    loses_ot: 0,
-    wins: 0,
-    color: "#43b02a",
-    isPlayOff: false,
-    status: "",
-    curStatusLength: 0,
-    chartData: [],
-    chartLabels: [],
-    photos: [sln_1, sln_2, sln_3, sln_4, sln_5, sln_6]
-  }
+	{
+		abbreviation: 'CAN',
+		city: 'Ottawa',
+		country: 'Can',
+		game_counter: 0,
+		goals_against: 0,
+		goals_diff: 0,
+		goals_for: 0,
+		id: 1,
+		logo: can,
+		loses: 0,
+		loses_ot: 0,
+		name: 'Canada',
+		points: 0,
+		rating: 99,
+		wins: 0,
+		play_off_rank: 0,
+		play_off_round_wins: 0,
+		color: '#000000',
+		isPlayOff: false,
+		status: '',
+		curStatusLength: 0,
+		chartData: [],
+		chartLabels: [],
+		photos: [can_1, can_2, can_3, can_4],
+		facebook: 'http://www.facebook.com/HockeyCanada',
+		youtube: 'http://www.youtube.com/hockeycanadavideos',
+		instagram: 'http://instagram.com/hockeycanada',
+		x: 'https://twitter.com/HockeyCanada',
+		threads: '',
+		tiktok: 'https://www.tiktok.com/@officialhockeycanada',
+		snapchat: '',
+		linkedin: 'http://www.linkedin.com/company/hockey-canada/',
+		website: 'https://www.hockeycanada.ca/',
+		twitch: '',
+	},
+	{
+		abbreviation: 'USA',
+		city: 'Washington',
+		country: 'USA',
+		game_counter: 0,
+		goals_against: 0,
+		goals_diff: 0,
+		goals_for: 0,
+		id: 2,
+		logo: usa,
+		loses: 0,
+		loses_ot: 0,
+		name: 'USA',
+		points: 0,
+		rating: 96,
+		wins: 0,
+		play_off_rank: 0,
+		play_off_round_wins: 0,
+		color: '#002868',
+		isPlayOff: false,
+		status: '',
+		curStatusLength: 0,
+		chartData: [],
+		chartLabels: [],
+		photos: [usa_1, usa_2, usa_3, usa_4, usa_5],
+		facebook: 'https://www.facebook.com/USAHockey/',
+		youtube: 'https://www.youtube.com/user/USAHOCKEYHQ',
+		instagram: 'https://www.instagram.com/usahockey/?hl=en',
+		x: 'https://twitter.com/usahockey',
+		threads: '',
+		tiktok: '',
+		snapchat: '',
+		linkedin: '',
+		website: 'https://teamusa.usahockey.com/',
+		twitch: '',
+	},
+	{
+		abbreviation: 'SWE',
+		city: 'Stockholm',
+		country: 'Swe',
+		game_counter: 0,
+		goals_against: 0,
+		goals_diff: 0,
+		goals_for: 0,
+		id: 3,
+		logo: swe,
+		loses: 0,
+		loses_ot: 0,
+		name: 'Sweden',
+		points: 0,
+		rating: 95,
+		wins: 0,
+		play_off_rank: 0,
+		play_off_round_wins: 0,
+		color: '#f7db09',
+		isPlayOff: false,
+		status: '',
+		curStatusLength: 0,
+		chartData: [],
+		chartLabels: [],
+		photos: [swe_1, swe_2, swe_3, swe_4, swe_5],
+		facebook: 'https://www.facebook.com/trekronorse',
+		youtube: '',
+		instagram: 'https://www.instagram.com/trekronorse',
+		x: 'https://twitter.com/Trekronorse',
+		threads: '',
+		tiktok: '',
+		snapchat: '',
+		linkedin: '',
+		website: 'https://www.swehockey.se/',
+		twitch: '',
+	},
+	{
+		abbreviation: 'FIN',
+		city: 'Helsinki',
+		country: 'Fin',
+		game_counter: 0,
+		goals_against: 0,
+		goals_diff: 0,
+		goals_for: 0,
+		id: 4,
+		logo: fin,
+		loses: 0,
+		loses_ot: 0,
+		name: 'Finland',
+		points: 0,
+		rating: 96,
+		wins: 0,
+		play_off_rank: 0,
+		play_off_round_wins: 0,
+		color: '#0075c8',
+		isPlayOff: false,
+		status: '',
+		curStatusLength: 0,
+		chartData: [],
+		chartLabels: [],
+		photos: [fin_1, fin_2, fin_3, fin_4, fin_5, fin_6, fin_7],
+		facebook: 'https://www.facebook.com/leijonatface',
+		youtube: 'https://www.youtube.com/user/leijonattv',
+		instagram: 'https://www.instagram.com/leijonatfi',
+		x: 'https://twitter.com/leijonat',
+		threads: '',
+		tiktok: '',
+		snapchat: '',
+		linkedin: '',
+		website: 'https://www.finhockey.fi/',
+		twitch: '',
+	},
+	{
+		abbreviation: 'CZE',
+		city: 'Prague',
+		country: 'Cze',
+		game_counter: 0,
+		goals_against: 0,
+		goals_diff: 0,
+		goals_for: 0,
+		id: 5,
+		logo: cze,
+		loses: 0,
+		loses_ot: 0,
+		name: 'Czech Republic',
+		points: 0,
+		rating: 96,
+		wins: 0,
+		play_off_rank: 0,
+		play_off_round_wins: 0,
+		color: '#11457e',
+		isPlayOff: false,
+		status: '',
+		curStatusLength: 0,
+		chartData: [],
+		chartLabels: [],
+		photos: [cze_1, cze_2, cze_3, cze_4],
+		facebook: 'https://www.facebook.com/narodnisport',
+		youtube: 'https://www.youtube.com/@ceskyhokej',
+		instagram: 'https://www.instagram.com/ceskyhokej.cz/',
+		x: 'https://twitter.com/czehockey',
+		threads: '',
+		tiktok: '',
+		snapchat: '',
+		linkedin: '',
+		website: 'https://www.ceskyhokej.cz/',
+		twitch: '',
+	},
+	{
+		abbreviation: 'GER',
+		city: 'Berlin',
+		country: 'Ger',
+		game_counter: 0,
+		goals_against: 0,
+		goals_diff: 0,
+		goals_for: 0,
+		id: 6,
+		logo: ger,
+		loses: 0,
+		loses_ot: 0,
+		name: 'Germany',
+		points: 0,
+		rating: 94,
+		wins: 0,
+		play_off_rank: 0,
+		play_off_round_wins: 0,
+		color: '#000000',
+		isPlayOff: false,
+		status: '',
+		curStatusLength: 0,
+		chartData: [],
+		chartLabels: [],
+		photos: [ger_1, ger_2, ger_3, ger_4, ger_5],
+		facebook: 'https://www.facebook.com/deb.teams',
+		youtube: '',
+		instagram: 'https://www.instagram.com/deb_teams',
+		x: 'https://twitter.com/deb_teams',
+		threads: '',
+		tiktok: '',
+		snapchat: '',
+		linkedin: '',
+		website: 'http://www.deb-online.de/',
+		twitch: '',
+	},
+	{
+		abbreviation: 'SLK',
+		city: 'Bratislava',
+		country: 'Slk',
+		game_counter: 0,
+		goals_against: 0,
+		goals_diff: 0,
+		goals_for: 0,
+		id: 7,
+		logo: slk,
+		loses: 0,
+		loses_ot: 0,
+		name: 'Slovakia',
+		points: 0,
+		rating: 91,
+		wins: 0,
+		play_off_rank: 0,
+		play_off_round_wins: 0,
+		color: '#ffffff',
+		isPlayOff: false,
+		status: '',
+		curStatusLength: 0,
+		chartData: [],
+		chartLabels: [],
+		photos: [slk_1, slk_2, slk_3],
+		facebook: 'https://www.facebook.com/Hockeyslovakia',
+		youtube: '',
+		instagram: 'https://www.instagram.com/hockeyslovakia/',
+		x: 'https://www.twitter.com/hockeyslovakia/',
+		threads: '',
+		tiktok: '',
+		snapchat: '',
+		linkedin: '',
+		website: 'http://www.hockeyslovakia.sk/',
+		twitch: '',
+	},
+	{
+		abbreviation: 'SWI',
+		city: 'Bern',
+		country: 'Swi',
+		game_counter: 0,
+		goals_against: 0,
+		goals_diff: 0,
+		goals_for: 0,
+		id: 8,
+		logo: swi,
+		loses: 0,
+		loses_ot: 0,
+		name: 'Switzerland',
+		points: 0,
+		rating: 96,
+		wins: 0,
+		play_off_rank: 0,
+		play_off_round_wins: 0,
+		color: '#000000',
+		isPlayOff: false,
+		status: '',
+		curStatusLength: 0,
+		chartData: [],
+		chartLabels: [],
+		photos: [swi_1, swi_2, swi_3, swi_4, swi_5, swi_6],
+		facebook: 'https://www.facebook.com/SwissIceHockey',
+		youtube: 'https://www.youtube.com/user/SwissIceHockey1',
+		instagram: 'https://www.instagram.com/swissicehockeyfederation',
+		x: 'https://twitter.com/SwissIceHockey',
+		threads: '',
+		tiktok: '',
+		snapchat: '',
+		linkedin: '',
+		website: 'http://www.sihf.ch/',
+		twitch: '',
+	},
+	{
+		abbreviation: 'LAT',
+		city: 'Riga',
+		country: 'Lat',
+		game_counter: 0,
+		goals_against: 0,
+		goals_diff: 0,
+		goals_for: 0,
+		id: 9,
+		logo: lat,
+		name: 'Latvia',
+		points: 0,
+		rating: 89,
+		play_off_rank: 0,
+		play_off_round_wins: 0,
+		loses: 0,
+		loses_ot: 0,
+		wins: 0,
+		color: '#ffffff',
+		isPlayOff: false,
+		status: '',
+		curStatusLength: 0,
+		chartData: [],
+		chartLabels: [],
+		photos: [lat_1, lat_2, lat_3, lat_4, lat_5],
+		facebook: 'https://www.facebook.com/lhf.lv',
+		youtube: '',
+		instagram: 'https://www.instagram.com/latvijashokejafederacija',
+		x: 'https://twitter.com/lhf_lv',
+		threads: '',
+		tiktok: '',
+		snapchat: '',
+		linkedin: '',
+		website: 'http://www.lhf.lv/',
+		twitch: '',
+	},
+	{
+		abbreviation: 'DEN',
+		city: 'Copenhagen',
+		country: 'Den',
+		game_counter: 0,
+		goals_against: 0,
+		goals_diff: 0,
+		goals_for: 0,
+		id: 10,
+		logo: den,
+		name: 'Denmark',
+		points: 0,
+		rating: 85,
+		play_off_rank: 0,
+		play_off_round_wins: 0,
+		loses: 0,
+		loses_ot: 0,
+		wins: 0,
+		color: '#ffffff',
+		isPlayOff: false,
+		status: '',
+		curStatusLength: 0,
+		chartData: [],
+		chartLabels: [],
+		photos: [den_1, den_2, den_3, den_4, den_5],
+		facebook: 'https://www.facebook.com/ishockeylandsholdene',
+		youtube: '',
+		instagram: 'https://www.instagram.com/dkishockey',
+		x: 'https://twitter.com/dkishockey',
+		threads: '',
+		tiktok: '',
+		snapchat: '',
+		linkedin: '',
+		website: 'http://www.ishockey.dk/',
+		twitch: '',
+	},
+	{
+		abbreviation: 'NOR',
+		city: 'Oslo',
+		country: 'Nor',
+		game_counter: 0,
+		goals_against: 0,
+		goals_diff: 0,
+		goals_for: 0,
+		id: 11,
+		logo: nor,
+		name: 'Norway',
+		points: 0,
+		rating: 82,
+		play_off_rank: 0,
+		play_off_round_wins: 0,
+		loses: 0,
+		loses_ot: 0,
+		wins: 0,
+		color: '#ffffff',
+		isPlayOff: false,
+		status: '',
+		curStatusLength: 0,
+		chartData: [],
+		chartLabels: [],
+		photos: [nor_1, nor_2, nor_3, nor_4],
+		facebook: 'https://www.facebook.com/norskishockey',
+		youtube: '',
+		instagram: 'https://www.instagram.com/norskishockey',
+		x: 'https://twitter.com/norskishockey',
+		threads: '',
+		tiktok: '',
+		snapchat: '',
+		linkedin: '',
+		website: 'http://www.hockey.no/',
+		twitch: '',
+	},
+	{
+		abbreviation: 'FRA',
+		city: 'Paris',
+		country: 'Fra',
+		game_counter: 0,
+		goals_against: 0,
+		goals_diff: 0,
+		goals_for: 0,
+		id: 12,
+		logo: fra,
+		name: 'France',
+		points: 0,
+		rating: 81,
+		play_off_rank: 0,
+		play_off_round_wins: 0,
+		loses: 0,
+		loses_ot: 0,
+		wins: 0,
+		color: '#ffffff',
+		isPlayOff: false,
+		status: '',
+		curStatusLength: 0,
+		chartData: [],
+		chartLabels: [],
+		photos: [fra_1, fra_2, fra_3, fra_4],
+		facebook: 'https://www.facebook.com/hockeyfrance',
+		youtube: 'https://www.youtube.com/channel/UCbogoGXrvRiTQ6C-kbIkOTQ',
+		instagram: 'https://www.instagram.com/hockey_fra',
+		x: 'https://twitter.com/Hockey_FRA',
+		threads: '',
+		tiktok: '',
+		snapchat: '',
+		linkedin: '',
+		website: 'http://www.hockeyfrance.com/',
+		twitch: '',
+	},
+	{
+		abbreviation: 'KAZ',
+		city: 'Astana',
+		country: 'Kaz',
+		game_counter: 0,
+		goals_against: 0,
+		goals_diff: 0,
+		goals_for: 0,
+		id: 13,
+		logo: kaz,
+		name: 'Kazakhstan',
+		points: 0,
+		rating: 81,
+		play_off_rank: 0,
+		play_off_round_wins: 0,
+		loses: 0,
+		loses_ot: 0,
+		wins: 0,
+		color: '#ffcb05',
+		isPlayOff: false,
+		status: '',
+		curStatusLength: 0,
+		chartData: [],
+		chartLabels: [],
+		photos: [kaz_1, kaz_2, kaz_3, kaz_4, kaz_5],
+		facebook: 'https://www.facebook.com/kazakhstanhockey/',
+		youtube: '',
+		instagram: 'https://www.instagram.com/kazakhstanhockey',
+		x: '',
+		threads: '',
+		tiktok: '',
+		snapchat: '',
+		linkedin: '',
+		website: 'http://www.icehockey.kz/',
+		twitch: '',
+	},
+	{
+		abbreviation: 'AUS',
+		city: 'Vienna',
+		country: 'Aus',
+		game_counter: 0,
+		goals_against: 0,
+		goals_diff: 0,
+		goals_for: 0,
+		id: 14,
+		logo: aus,
+		name: 'Austria',
+		points: 0,
+		rating: 81,
+		play_off_rank: 0,
+		play_off_round_wins: 0,
+		loses: 0,
+		loses_ot: 0,
+		wins: 0,
+		color: '#000000',
+		isPlayOff: false,
+		status: '',
+		curStatusLength: 0,
+		chartData: [],
+		chartLabels: [],
+		photos: [aus_1, aus_2, aus_3, aus_4, aus_5, aus_6],
+		facebook: 'https://www.facebook.com/OesterreichischerEishockeyverband',
+		youtube: '',
+		instagram: 'https://www.instagram.com/eishockey_oesterreich',
+		x: 'https://twitter.com/hockeyaustria',
+		threads: '',
+		tiktok: '',
+		snapchat: '',
+		linkedin: '',
+		website: 'http://www.eishockey.at/',
+		twitch: '',
+	},
+	{
+		abbreviation: 'HUN',
+		city: 'Budapest',
+		country: 'Hun',
+		game_counter: 0,
+		goals_against: 0,
+		goals_diff: 0,
+		goals_for: 0,
+		id: 15,
+		logo: hun,
+		name: 'Hungary',
+		points: 0,
+		rating: 75,
+		play_off_rank: 0,
+		play_off_round_wins: 0,
+		loses: 0,
+		loses_ot: 0,
+		wins: 0,
+		color: '#ffffff',
+		isPlayOff: false,
+		status: '',
+		curStatusLength: 0,
+		chartData: [],
+		chartLabels: [],
+		photos: [hun_1, hun_2, hun_3, hun_4],
+		facebook: 'https://www.facebook.com/magyarjegkorong',
+		youtube: 'https://www.youtube.com/user/magyarjegkorong',
+		instagram: 'https://www.instagram.com/hockeyhungary',
+		x: 'https://twitter.com/hockeyhungary',
+		threads: '',
+		tiktok: '',
+		snapchat: '',
+		linkedin: '',
+		website: 'http://www.jegkorongszovetseg.hu/',
+		twitch: '',
+	},
+	{
+		abbreviation: 'SLN',
+		city: 'Ljubljana',
+		country: 'Sln',
+		game_counter: 0,
+		goals_against: 0,
+		goals_diff: 0,
+		goals_for: 0,
+		id: 16,
+		logo: sln,
+		name: 'Slovenia',
+		points: 0,
+		rating: 75,
+		play_off_rank: 0,
+		play_off_round_wins: 0,
+		loses: 0,
+		loses_ot: 0,
+		wins: 0,
+		color: '#43b02a',
+		isPlayOff: false,
+		status: '',
+		curStatusLength: 0,
+		chartData: [],
+		chartLabels: [],
+		photos: [sln_1, sln_2, sln_3, sln_4, sln_5, sln_6],
+		facebook: 'https://www.facebook.com/lovehokej',
+		youtube: 'https://www.youtube.com/channel/UCH0JvUnmR4EtKnglfwD7twQ',
+		instagram: 'https://www.instagram.com/lovehokej',
+		x: 'https://twitter.com/lovehokej',
+		threads: '',
+		tiktok: '',
+		snapchat: '',
+		linkedin: '',
+		website: 'http://www.hokej.si/',
+		twitch: '',
+	},
 ];
