@@ -6,7 +6,7 @@ export type Teams = {
 	goals_against: number;
 	goals_diff: number;
 	goals_for: number;
-	readonly id: number;
+	readonly id: number | string;
 	logo: string;
 	loses: number;
 	loses_ot: number;
@@ -39,6 +39,8 @@ export type Teams = {
 	website: string;
 	twitch: string;
 	points_percentage: number;
+	conference?: string;
+	division?: string;
 };
 
 export type TeamsList = string[];

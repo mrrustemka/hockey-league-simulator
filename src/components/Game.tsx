@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { GameResult, Schedule, Teams } from '../data/types';
 import Header from './Header';
+import Legend from './Legend';
 import Sheet from './Sheet';
 import UpcomingGame from './UpcomingGame';
 import { whiteTeams } from '../data/whiteList';
@@ -393,6 +394,27 @@ function Game() {
 		});
 	}
 
+	function getDiffConferencesPlayoffPositions(teams: Teams[]): Teams[] {
+		// if (!scheduleList || gameCounter >= scheduleList.length) { output of sorting before playoff start
+		// 	return teams;
+		// }
+
+		return teams.sort((team1, team2) => {
+			const comparisons = [
+				team2.points - team1.points,
+				team1.game_counter - team2.game_counter,
+				team2.wins - team1.wins,
+				team2.loses_ot - team1.loses_ot,
+				team2.goals_diff - team1.goals_diff,
+			];
+
+			for (const comparison of comparisons) {
+				if (comparison !== 0) return comparison;
+			}
+			return 0;
+		});
+	}
+
 	function getTeamRating(team: string): number {
 		return (
 			teams.findIndex(
@@ -402,11 +424,53 @@ function Game() {
 		);
 	}
 
-	function getPlayOffTeams(): void {
-		localStorage.setItem(
-			'teamsList',
-			JSON.stringify(teamsUpdate.slice(0, playOffTeam))
-		);
+	function getPlayOffTeams(id: string): void {
+		if (id === '3') {
+			const atlantic: Teams[] = teamsUpdate
+				.filter((team) => team.division === 'atlantic')
+				.slice(0, 3);
+			const metropolitan: Teams[] = teamsUpdate
+				.filter((team) => team.division === 'metropolitan')
+				.slice(0, 3);
+			const central: Teams[] = teamsUpdate
+				.filter((team) => team.division === 'central')
+				.slice(0, 3);
+			const pacific: Teams[] = teamsUpdate
+				.filter((team) => team.division === 'pacific')
+				.slice(0, 3);
+			const eastWildCard = teamsUpdate
+				.filter(
+					(team) =>
+						team.division === 'atlantic' ||
+						team.division === 'metropolitan'
+				)
+				.slice(6, 8);
+			const westWildCard = teamsUpdate
+				.filter(
+					(team) =>
+						team.division === 'central' ||
+						team.division === 'pacific'
+				)
+				.slice(6, 8);
+			localStorage.setItem(
+				'teamsList',
+				JSON.stringify(
+					getDiffConferencesPlayoffPositions([
+						...atlantic,
+						...metropolitan,
+						...eastWildCard,
+						...central,
+						...pacific,
+						...westWildCard,
+					])
+				)
+			);
+		} else {
+			localStorage.setItem(
+				'teamsList',
+				JSON.stringify(teamsUpdate.slice(0, playOffTeam))
+			);
+		}
 	}
 
 	if (scheduleList && gameCounter < scheduleList.length) {
@@ -431,10 +495,143 @@ function Game() {
 					<Col
 						className='layout__content'
 						span={14}>
-						<Sheet
-							teamsData={teamsUpdate}
-							id={leagueId}
-						/>
+						{leagueId === '3' ? (
+							<>
+								<Title
+									level={3}
+									className='standings__title standings__title--level-3'>
+									Eastern
+								</Title>
+								<Title
+									level={5}
+									className='standings__title standings__title--level-5'>
+									Atlantic
+								</Title>
+								<Sheet
+									teamsData={teamsUpdate
+										.filter(
+											(team) =>
+												team.division === 'atlantic'
+										)
+										.slice(0, 3)}
+									id={leagueId}
+								/>
+								<Title
+									level={5}
+									className='standings__title standings__title--level-5'>
+									Metropolitan
+								</Title>
+								<Sheet
+									teamsData={teamsUpdate
+										.filter(
+											(team) =>
+												team.division === 'metropolitan'
+										)
+										.slice(0, 3)}
+									id={leagueId}
+								/>
+								<Title
+									level={5}
+									className='standings__title standings__title--level-5'>
+									Wild Card
+								</Title>
+								<Sheet
+									teamsData={teamsUpdate
+										.filter(
+											(team) =>
+												team.division === 'atlantic' ||
+												team.division === 'metropolitan'
+										)
+										.reduce<Teams[][]>(
+											(acc, team) => {
+												if (
+													team.division === 'atlantic'
+												) {
+													acc[0].push(team);
+												} else {
+													acc[1].push(team);
+												}
+												return acc;
+											},
+											[[], []]
+										)
+										.map((arr) => arr.slice(3))
+										.flat()}
+									id={leagueId}
+								/>
+								<Title
+									level={3}
+									className='standings__title standings__title--level-3'>
+									Western
+								</Title>
+								<Title
+									level={5}
+									className='standings__title standings__title--level-5'>
+									Central
+								</Title>
+								<Sheet
+									teamsData={teamsUpdate
+										.filter(
+											(team) =>
+												team.division === 'central'
+										)
+										.slice(0, 3)}
+									id={leagueId}
+								/>
+								<Title
+									level={5}
+									className='standings__title standings__title--level-5'>
+									Pacific
+								</Title>
+								<Sheet
+									teamsData={teamsUpdate
+										.filter(
+											(team) =>
+												team.division === 'pacific'
+										)
+										.slice(0, 3)}
+									id={leagueId}
+								/>
+								<Title
+									level={5}
+									className='standings__title standings__title--level-5'>
+									Wild Card
+								</Title>
+								<Sheet
+									teamsData={teamsUpdate
+										.filter(
+											(team) =>
+												team.division === 'central' ||
+												team.division === 'pacific'
+										)
+										.reduce<Teams[][]>(
+											(acc, team) => {
+												if (
+													team.division === 'central'
+												) {
+													acc[0].push(team);
+												} else {
+													acc[1].push(team);
+												}
+												return acc;
+											},
+											[[], []]
+										)
+										.map((arr) => arr.slice(3))
+										.flat()}
+									id={leagueId}
+								/>
+								<Legend />
+							</>
+						) : (
+							<>
+								<Sheet
+									teamsData={teamsUpdate}
+									id={leagueId}
+								/>
+								<Legend />
+							</>
+						)}
 					</Col>
 					<Col
 						className='layout__side-panel'
@@ -709,7 +906,7 @@ function Game() {
 								className='playoff__start-play-off'
 								size='large'
 								onClick={() => {
-									getPlayOffTeams();
+									getPlayOffTeams(leagueId);
 								}}>
 								Start Play-Off
 							</Button>

@@ -10,6 +10,7 @@ const { Title } = Typography;
 
 function TeamsNumber({ league }: any) {
 	const [champ, setChamp] = useState<TLeague>(league);
+	const minTeams: number = champ.id === '3' ? 16 : 2;
 
 	function updateTeamsNum(value: number): void {
 		const newChamp: TLeague = { ...champ, teamsCount: value };
@@ -74,23 +75,23 @@ function TeamsNumber({ league }: any) {
 					defaultValue={league.teamsCount}
 					value={champ.teamsCount}
 					max={league.teams.length}
-					min='2'
+					min={String(minTeams)}
 					onChange={(e) => updateTeamsNum(parseInt(e.target.value))}
 				/>
 				<Title
 					level={5}
 					className={`start__actions-error ${
-						champ.teamsCount < 2 ||
+						champ.teamsCount < minTeams ||
 						champ.teamsCount > league.teams.length
 							? 'start__actions-error--active'
 							: 'start__actions-error--inactive'
 					}`}>
-					Please enter a valid number of teams. From 2 to{' '}
+					Please enter a valid number of teams. From {minTeams} to{' '}
 					{league.teams.length}
 				</Title>
 				<Link
 					className={`start__link ${
-						champ.teamsCount < 2 ||
+						champ.teamsCount < minTeams ||
 						champ.teamsCount > league.teams.length
 							? 'start__link--inactive'
 							: 'start__link--active pulse'
