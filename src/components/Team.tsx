@@ -15,7 +15,7 @@ function Team() {
 	const navigate = useNavigate();
 	const team: Teams | undefined = JSON.parse(
 		localStorage.getItem('teamsList') || '[]'
-	).find((team: Teams) => team.id === Number(teamId));
+	).find((team: Teams) => team.id === String(teamId));
 
 	if (!team) {
 		return <div className='team__not-found'>Team not found</div>;
