@@ -8,6 +8,7 @@ import Sheet from './Sheet';
 import UpcomingGame from './UpcomingGame';
 import { whiteTeams } from '../data/whiteList';
 import '../Styles/Game.css';
+import { champs } from '../data/champs';
 
 const { Title } = Typography;
 
@@ -52,6 +53,8 @@ function Game() {
 			setTypeOfOt(lastGame.overtime);
 		}
 	};
+
+	const League = champs.find((champ) => champ.id === leagueId);
 
 	function simulate(game: Schedule) {
 		let home: Teams = {
@@ -428,43 +431,38 @@ function Game() {
 		);
 	}
 
-	function getPlayOffTeams(id: string): void {
+	function getPlayOffTeams(): void {
 		let selectedTeams: Teams[];
 
-		if (id === '3') {
-			const divisions = [
-				'atlantic',
-				'metropolitan',
-				'central',
-				'pacific',
-			];
+		if (leagueId === '3' || leagueId === '4') {
+			const divisions = ['1', '2', '3', '4'];
 			const divisionTeams = Object.fromEntries(
 				divisions.map((division) => [
 					division,
 					teamsUpdate
-						.filter((team) => team.division === division)
+						.filter((team) => team.divisionId === division)
 						.slice(0, 3),
 				])
 			);
 
 			const eastWildCard = teamsSort(
 				teamsUpdate.filter((team) =>
-					['atlantic', 'metropolitan'].includes(team.division ?? '')
+					['1', '2'].includes(team.divisionId ?? '')
 				)
 			).slice(6, 8);
 
 			const westWildCard = teamsSort(
 				teamsUpdate.filter((team) =>
-					['central', 'pacific'].includes(team.division ?? '')
+					['3', '4'].includes(team.divisionId ?? '')
 				)
 			).slice(6, 8);
 
 			selectedTeams = getDiffConferencesPlayoffPositions([
-				...divisionTeams['atlantic'],
-				...divisionTeams['metropolitan'],
+				...divisionTeams['1'],
+				...divisionTeams['2'],
 				...eastWildCard,
-				...divisionTeams['central'],
-				...divisionTeams['pacific'],
+				...divisionTeams['3'],
+				...divisionTeams['4'],
 				...westWildCard,
 			]);
 		} else {
@@ -496,23 +494,24 @@ function Game() {
 					<Col
 						className='layout__content'
 						span={14}>
-						{leagueId === '3' ? (
+						{(leagueId === '3' || leagueId === '4') &&
+						League?.divisions &&
+						League.conferences ? (
 							<>
 								<Title
 									level={3}
 									className='standings__title standings__title--level-3'>
-									Eastern
+									{League.conferences[0].name}
 								</Title>
 								<Title
 									level={5}
 									className='standings__title standings__title--level-5'>
-									Atlantic
+									{League.divisions[0].name}
 								</Title>
 								<Sheet
 									teamsData={teamsUpdate
 										.filter(
-											(team) =>
-												team.division === 'atlantic'
+											(team) => team.divisionId === '1'
 										)
 										.slice(0, 3)}
 									id={leagueId}
@@ -520,13 +519,12 @@ function Game() {
 								<Title
 									level={5}
 									className='standings__title standings__title--level-5'>
-									Metropolitan
+									{League.divisions[1].name}
 								</Title>
 								<Sheet
 									teamsData={teamsUpdate
 										.filter(
-											(team) =>
-												team.division === 'metropolitan'
+											(team) => team.divisionId === '2'
 										)
 										.slice(0, 3)}
 									id={leagueId}
@@ -540,14 +538,12 @@ function Game() {
 									teamsData={teamsUpdate
 										.filter(
 											(team) =>
-												team.division === 'atlantic' ||
-												team.division === 'metropolitan'
+												team.divisionId === '1' ||
+												team.divisionId === '2'
 										)
 										.reduce<Teams[][]>(
 											(acc, team) => {
-												if (
-													team.division === 'atlantic'
-												) {
+												if (team.divisionId === '1') {
 													acc[0].push(team);
 												} else {
 													acc[1].push(team);
@@ -563,18 +559,17 @@ function Game() {
 								<Title
 									level={3}
 									className='standings__title standings__title--level-3'>
-									Western
+									{League.conferences[1].name}
 								</Title>
 								<Title
 									level={5}
 									className='standings__title standings__title--level-5'>
-									Central
+									{League.divisions[2].name}
 								</Title>
 								<Sheet
 									teamsData={teamsUpdate
 										.filter(
-											(team) =>
-												team.division === 'central'
+											(team) => team.divisionId === '3'
 										)
 										.slice(0, 3)}
 									id={leagueId}
@@ -582,13 +577,12 @@ function Game() {
 								<Title
 									level={5}
 									className='standings__title standings__title--level-5'>
-									Pacific
+									{League.divisions[3].name}
 								</Title>
 								<Sheet
 									teamsData={teamsUpdate
 										.filter(
-											(team) =>
-												team.division === 'pacific'
+											(team) => team.divisionId === '4'
 										)
 										.slice(0, 3)}
 									id={leagueId}
@@ -602,14 +596,12 @@ function Game() {
 									teamsData={teamsUpdate
 										.filter(
 											(team) =>
-												team.division === 'central' ||
-												team.division === 'pacific'
+												team.divisionId === '3' ||
+												team.divisionId === '4'
 										)
 										.reduce<Teams[][]>(
 											(acc, team) => {
-												if (
-													team.division === 'central'
-												) {
+												if (team.divisionId === '3') {
 													acc[0].push(team);
 												} else {
 													acc[1].push(team);
@@ -911,8 +903,7 @@ function Game() {
 								<Sheet
 									teamsData={teamsUpdate
 										.filter(
-											(team) =>
-												team.division === 'atlantic'
+											(team) => team.divisionId === '1'
 										)
 										.slice(0, 3)}
 									id={leagueId}
@@ -925,8 +916,7 @@ function Game() {
 								<Sheet
 									teamsData={teamsUpdate
 										.filter(
-											(team) =>
-												team.division === 'metropolitan'
+											(team) => team.divisionId === '2'
 										)
 										.slice(0, 3)}
 									id={leagueId}
@@ -940,14 +930,12 @@ function Game() {
 									teamsData={teamsUpdate
 										.filter(
 											(team) =>
-												team.division === 'atlantic' ||
-												team.division === 'metropolitan'
+												team.divisionId === '1' ||
+												team.divisionId === '2'
 										)
 										.reduce<Teams[][]>(
 											(acc, team) => {
-												if (
-													team.division === 'atlantic'
-												) {
+												if (team.divisionId === '1') {
 													acc[0].push(team);
 												} else {
 													acc[1].push(team);
@@ -973,8 +961,7 @@ function Game() {
 								<Sheet
 									teamsData={teamsUpdate
 										.filter(
-											(team) =>
-												team.division === 'central'
+											(team) => team.divisionId === '3'
 										)
 										.slice(0, 3)}
 									id={leagueId}
@@ -987,8 +974,7 @@ function Game() {
 								<Sheet
 									teamsData={teamsUpdate
 										.filter(
-											(team) =>
-												team.division === 'pacific'
+											(team) => team.divisionId === '4'
 										)
 										.slice(0, 3)}
 									id={leagueId}
@@ -1002,14 +988,12 @@ function Game() {
 									teamsData={teamsUpdate
 										.filter(
 											(team) =>
-												team.division === 'central' ||
-												team.division === 'pacific'
+												team.divisionId === '3' ||
+												team.divisionId === '4'
 										)
 										.reduce<Teams[][]>(
 											(acc, team) => {
-												if (
-													team.division === 'central'
-												) {
+												if (team.divisionId === '3') {
 													acc[0].push(team);
 												} else {
 													acc[1].push(team);
@@ -1033,10 +1017,6 @@ function Game() {
 								<Legend />
 							</>
 						)}
-						{/* <Sheet
-							teamsData={teamsUpdate}
-							id={leagueId}
-						/> */}
 					</Col>
 					<Col span={10}>
 						<Link to='playoff'>
@@ -1044,7 +1024,7 @@ function Game() {
 								className='playoff__start-play-off'
 								size='large'
 								onClick={() => {
-									getPlayOffTeams(leagueId);
+									getPlayOffTeams();
 								}}>
 								Start Play-Off
 							</Button>

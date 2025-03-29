@@ -58,6 +58,16 @@ export const champs: League[] = [
 		teams: nhl,
 		teamsCount: 32,
 		cup: nhl_cup,
+		conferences: [
+			{ conferenceId: '1', name: 'Eastern' },
+			{ conferenceId: '2', name: 'Western' },
+		],
+		divisions: [
+			{ name: 'Atlantic', conferenceId: '1', divisionId: '1' },
+			{ name: 'Metropolitan', conferenceId: '1', divisionId: '2' },
+			{ name: 'Central', conferenceId: '2', divisionId: '3' },
+			{ name: 'Pacific', conferenceId: '2', divisionId: '4' },
+		],
 	},
 	{
 		id: '4',
@@ -68,6 +78,16 @@ export const champs: League[] = [
 		teams: ehl,
 		teamsCount: 39,
 		cup: ehl_cup,
+		conferences: [
+			{ conferenceId: '1', name: 'North' },
+			{ conferenceId: '2', name: 'South' },
+		],
+		divisions: [
+			{ name: 'Baltic', conferenceId: '1', divisionId: '1' },
+			{ name: 'Athlantic', conferenceId: '1', divisionId: '2' },
+			{ name: 'Alpine', conferenceId: '2', divisionId: '3' },
+			{ name: 'Central', conferenceId: '2', divisionId: '4' },
+		],
 	},
 	{
 		id: '5',

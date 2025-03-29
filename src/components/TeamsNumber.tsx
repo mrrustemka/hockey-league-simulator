@@ -10,7 +10,7 @@ const { Title } = Typography;
 
 function TeamsNumber({ league }: any) {
 	const [champ, setChamp] = useState<TLeague>(league);
-	const minTeams: number = champ.id === '3' ? 16 : 2;
+	const minTeams: number = champ.id === '3' || champ.id === '4' ? 16 : 2;
 
 	function updateTeamsNum(value: number): void {
 		const newChamp: TLeague = { ...champ, teamsCount: value };

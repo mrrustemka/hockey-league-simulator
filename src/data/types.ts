@@ -39,8 +39,8 @@ export type Teams = {
 	website: string;
 	twitch: string;
 	points_percentage: number;
-	conference?: string;
-	division?: string;
+	conferenceId?: string;
+	divisionId?: string;
 };
 
 export type TeamsList = string[];
@@ -79,4 +79,17 @@ export type League = {
 	teams: Teams[];
 	teamsCount: number;
 	cup: string;
+	conferences?: Conference[];
+	divisions?: Division[];
+};
+
+export type Conference = {
+	conferenceId: string;
+	name: string;
+};
+
+export type Division = {
+	name: string;
+	divisionId: string;
+	conferenceId: string;
 };
