@@ -370,6 +370,10 @@ function Game() {
 			'gameIndex',
 			JSON.stringify(scheduleList.indexOf(game) + 1)
 		);
+		console.log(
+			gameCounter,
+			JSON.parse(localStorage.getItem('teamsList') || '[]')
+		);
 		return result;
 	}
 
@@ -425,52 +429,49 @@ function Game() {
 	}
 
 	function getPlayOffTeams(id: string): void {
+		let selectedTeams: Teams[];
+
 		if (id === '3') {
-			const atlantic: Teams[] = teamsUpdate
-				.filter((team) => team.division === 'atlantic')
-				.slice(0, 3);
-			const metropolitan: Teams[] = teamsUpdate
-				.filter((team) => team.division === 'metropolitan')
-				.slice(0, 3);
-			const central: Teams[] = teamsUpdate
-				.filter((team) => team.division === 'central')
-				.slice(0, 3);
-			const pacific: Teams[] = teamsUpdate
-				.filter((team) => team.division === 'pacific')
-				.slice(0, 3);
-			const eastWildCard = teamsUpdate
-				.filter(
-					(team) =>
-						team.division === 'atlantic' ||
-						team.division === 'metropolitan'
-				)
-				.slice(6, 8);
-			const westWildCard = teamsUpdate
-				.filter(
-					(team) =>
-						team.division === 'central' ||
-						team.division === 'pacific'
-				)
-				.slice(6, 8);
-			localStorage.setItem(
-				'teamsList',
-				JSON.stringify(
-					getDiffConferencesPlayoffPositions([
-						...atlantic,
-						...metropolitan,
-						...eastWildCard,
-						...central,
-						...pacific,
-						...westWildCard,
-					])
-				)
+			const divisions = [
+				'atlantic',
+				'metropolitan',
+				'central',
+				'pacific',
+			];
+			const divisionTeams = Object.fromEntries(
+				divisions.map((division) => [
+					division,
+					teamsUpdate
+						.filter((team) => team.division === division)
+						.slice(0, 3),
+				])
 			);
+
+			const eastWildCard = teamsSort(
+				teamsUpdate.filter((team) =>
+					['atlantic', 'metropolitan'].includes(team.division ?? '')
+				)
+			).slice(6, 8);
+
+			const westWildCard = teamsSort(
+				teamsUpdate.filter((team) =>
+					['central', 'pacific'].includes(team.division ?? '')
+				)
+			).slice(6, 8);
+
+			selectedTeams = getDiffConferencesPlayoffPositions([
+				...divisionTeams['atlantic'],
+				...divisionTeams['metropolitan'],
+				...eastWildCard,
+				...divisionTeams['central'],
+				...divisionTeams['pacific'],
+				...westWildCard,
+			]);
 		} else {
-			localStorage.setItem(
-				'teamsList',
-				JSON.stringify(teamsUpdate.slice(0, playOffTeam))
-			);
+			selectedTeams = teamsUpdate.slice(0, playOffTeam);
 		}
+
+		localStorage.setItem('teamsList', JSON.stringify(selectedTeams));
 	}
 
 	if (scheduleList && gameCounter < scheduleList.length) {
@@ -895,10 +896,147 @@ function Game() {
 					<Col
 						span={14}
 						className='playoff__container-panel'>
-						<Sheet
+						{leagueId === '3' ? (
+							<>
+								<Title
+									level={3}
+									className='standings__title standings__title--level-3'>
+									Eastern
+								</Title>
+								<Title
+									level={5}
+									className='standings__title standings__title--level-5'>
+									Atlantic
+								</Title>
+								<Sheet
+									teamsData={teamsUpdate
+										.filter(
+											(team) =>
+												team.division === 'atlantic'
+										)
+										.slice(0, 3)}
+									id={leagueId}
+								/>
+								<Title
+									level={5}
+									className='standings__title standings__title--level-5'>
+									Metropolitan
+								</Title>
+								<Sheet
+									teamsData={teamsUpdate
+										.filter(
+											(team) =>
+												team.division === 'metropolitan'
+										)
+										.slice(0, 3)}
+									id={leagueId}
+								/>
+								<Title
+									level={5}
+									className='standings__title standings__title--level-5'>
+									Wild Card
+								</Title>
+								<Sheet
+									teamsData={teamsUpdate
+										.filter(
+											(team) =>
+												team.division === 'atlantic' ||
+												team.division === 'metropolitan'
+										)
+										.reduce<Teams[][]>(
+											(acc, team) => {
+												if (
+													team.division === 'atlantic'
+												) {
+													acc[0].push(team);
+												} else {
+													acc[1].push(team);
+												}
+												return acc;
+											},
+											[[], []]
+										)
+										.map((arr) => arr.slice(3))
+										.flat()}
+									id={leagueId}
+								/>
+								<Title
+									level={3}
+									className='standings__title standings__title--level-3'>
+									Western
+								</Title>
+								<Title
+									level={5}
+									className='standings__title standings__title--level-5'>
+									Central
+								</Title>
+								<Sheet
+									teamsData={teamsUpdate
+										.filter(
+											(team) =>
+												team.division === 'central'
+										)
+										.slice(0, 3)}
+									id={leagueId}
+								/>
+								<Title
+									level={5}
+									className='standings__title standings__title--level-5'>
+									Pacific
+								</Title>
+								<Sheet
+									teamsData={teamsUpdate
+										.filter(
+											(team) =>
+												team.division === 'pacific'
+										)
+										.slice(0, 3)}
+									id={leagueId}
+								/>
+								<Title
+									level={5}
+									className='standings__title standings__title--level-5'>
+									Wild Card
+								</Title>
+								<Sheet
+									teamsData={teamsUpdate
+										.filter(
+											(team) =>
+												team.division === 'central' ||
+												team.division === 'pacific'
+										)
+										.reduce<Teams[][]>(
+											(acc, team) => {
+												if (
+													team.division === 'central'
+												) {
+													acc[0].push(team);
+												} else {
+													acc[1].push(team);
+												}
+												return acc;
+											},
+											[[], []]
+										)
+										.map((arr) => arr.slice(3))
+										.flat()}
+									id={leagueId}
+								/>
+								<Legend />
+							</>
+						) : (
+							<>
+								<Sheet
+									teamsData={teamsUpdate}
+									id={leagueId}
+								/>
+								<Legend />
+							</>
+						)}
+						{/* <Sheet
 							teamsData={teamsUpdate}
 							id={leagueId}
-						/>
+						/> */}
 					</Col>
 					<Col span={10}>
 						<Link to='playoff'>
