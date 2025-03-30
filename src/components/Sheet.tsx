@@ -8,6 +8,13 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
 	let rank: number = 0;
 	const worldChamps: string[] = ['1', '2'];
 	const internationalChamps: string[] = ['3', '4', '10'];
+	const totalTeams: number = JSON.parse(
+		localStorage.getItem('teamsList') || '[]'
+	).length;
+	const totalGames: number =
+		(JSON.parse(localStorage.getItem('scheduleList') || '[]').length /
+			totalTeams) *
+		2;
 
 	return (
 		<>
@@ -136,7 +143,7 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
 						let className = 'table__column-games';
 						if (
 							gameCounter >
-							[...props.teamsData].length *
+							totalTeams *
 								(props.id === '1' || props.id === '2'
 									? 0.75
 									: 1.5)
@@ -144,13 +151,13 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
 							className = 'table__column-games--high';
 						} else if (
 							gameCounter >
-							[...props.teamsData].length *
+							totalTeams *
 								(props.id === '1' || props.id === '2' ? 0.5 : 1)
 						) {
 							className = 'table__column-games--medium';
 						} else if (
 							gameCounter >
-							[...props.teamsData].length *
+							totalTeams *
 								(props.id === '1' || props.id === '2'
 									? 0.25
 									: 0.5)
