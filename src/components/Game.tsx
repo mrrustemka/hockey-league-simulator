@@ -888,17 +888,19 @@ function Game() {
 					<Col
 						span={14}
 						className='playoff__container-panel'>
-						{leagueId === '3' ? (
+						{(leagueId === '3' || leagueId === '4') &&
+						League?.divisions &&
+						League.conferences ? (
 							<>
 								<Title
 									level={3}
 									className='standings__title standings__title--level-3'>
-									Eastern
+									{League.conferences[0].name}
 								</Title>
 								<Title
 									level={5}
 									className='standings__title standings__title--level-5'>
-									Atlantic
+									{League.divisions[0].name}
 								</Title>
 								<Sheet
 									teamsData={teamsUpdate
@@ -911,7 +913,7 @@ function Game() {
 								<Title
 									level={5}
 									className='standings__title standings__title--level-5'>
-									Metropolitan
+									{League.divisions[1].name}
 								</Title>
 								<Sheet
 									teamsData={teamsUpdate
@@ -951,12 +953,12 @@ function Game() {
 								<Title
 									level={3}
 									className='standings__title standings__title--level-3'>
-									Western
+									{League.conferences[1].name}
 								</Title>
 								<Title
 									level={5}
 									className='standings__title standings__title--level-5'>
-									Central
+									{League.divisions[2].name}
 								</Title>
 								<Sheet
 									teamsData={teamsUpdate
@@ -969,7 +971,7 @@ function Game() {
 								<Title
 									level={5}
 									className='standings__title standings__title--level-5'>
-									Pacific
+									{League.divisions[3].name}
 								</Title>
 								<Sheet
 									teamsData={teamsUpdate
