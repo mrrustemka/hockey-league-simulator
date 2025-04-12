@@ -56,6 +56,30 @@ function Game() {
 
 	const League = champs.find((champ) => champ.id === leagueId);
 
+	// Test simulation
+	// useEffect(() => {
+	// 	if (gameCounter < scheduleList.length) {
+	// 		const interval = setInterval(() => {
+	// 			const lastGame: GameResult = simulate(
+	// 				scheduleList[gameCounter]
+	// 			);
+	// 			if (lastGame) {
+	// 				setHomeGoals(lastGame.homeGoals);
+	// 				setAwayGoals(lastGame.awayGoals);
+	// 				setTypeOfOt(lastGame.overtime);
+	// 				setIsSimulate(true);
+
+	// 				setTimeout(() => {
+	// 					setGameCounter((prev) => prev + 1);
+	// 					setIsSimulate(false);
+	// 				}, 50); // small delay before next game
+	// 			}
+	// 		}, 100); // run each simulation every second
+
+	// 		return () => clearInterval(interval);
+	// 	}
+	// });
+
 	function simulate(game: Schedule) {
 		let home: Teams = {
 			abbreviation: '',
@@ -324,11 +348,14 @@ function Game() {
 			awayGoals: aGoals,
 			overtime: overtime,
 		};
-		const sortedTeams: Teams[] = teamsSort(teams);
+		let sortedTeams: Teams[] = teamsSort(teams);
 		if (gameCounter + 1 === scheduleList.length) {
-			sortedTeams.map((team: Teams, index: number) =>
-				index < playOffTeam ? (team.isPlayOff = true) : { team }
-			);
+			if (leagueId !== '3' && leagueId !== '4') {
+				// Fix clinched teams
+				sortedTeams.map((team: Teams, index: number) =>
+					index < playOffTeam ? (team.isPlayOff = true) : { team }
+				);
+			}
 			const updatedTeams: Teams[] = sortedTeams.map((team, i) => {
 				team.chartData?.push(i + 1);
 				team.chartLabels?.push('Play-Off');
@@ -338,32 +365,35 @@ function Game() {
 			away.chartData?.push(sortedTeams.indexOf(away) + 1);
 			localStorage.setItem('teamsList', JSON.stringify(updatedTeams));
 		} else {
-			sortedTeams
-				.slice(0, playOffTeam)
-				.map((checkTeam: Teams, index: number) =>
-					sortedTeams
-						.slice(index + 1)
-						.filter(
-							(team: Teams) =>
-								team.points +
-									2 *
-										(sortedTeams.length *
-											(leagueId === '1' ||
-											leagueId === '2'
-												? 1
-												: 2) -
-											1 -
-											team.game_counter) >=
-								checkTeam.points
-						).length +
-						index +
-						1 <=
-					playOffTeam
-						? (checkTeam.isPlayOff = true)
-						: { ...checkTeam }
-				);
-			home.chartData?.push(sortedTeams.indexOf(home) + 1);
-			away.chartData?.push(sortedTeams.indexOf(away) + 1);
+			if (leagueId !== '3' && leagueId !== '4') {
+				// Fix clinched teams
+				sortedTeams
+					.slice(0, playOffTeam)
+					.map((checkTeam: Teams, index: number) =>
+						sortedTeams
+							.slice(index + 1)
+							.filter(
+								(team: Teams) =>
+									team.points +
+										2 *
+											(sortedTeams.length *
+												(leagueId === '1' ||
+												leagueId === '2'
+													? 1
+													: 2) -
+												1 -
+												team.game_counter) >=
+									checkTeam.points
+							).length +
+							index +
+							1 <=
+						playOffTeam
+							? (checkTeam.isPlayOff = true)
+							: { ...checkTeam }
+					);
+				home.chartData?.push(sortedTeams.indexOf(home) + 1);
+				away.chartData?.push(sortedTeams.indexOf(away) + 1);
+			}
 		}
 
 		setTeamsUpdate(sortedTeams);
@@ -373,10 +403,6 @@ function Game() {
 			'gameIndex',
 			JSON.stringify(scheduleList.indexOf(game) + 1)
 		);
-		console.log(
-			gameCounter,
-			JSON.parse(localStorage.getItem('teamsList') || '[]')
-		);
 		return result;
 	}
 
@@ -384,27 +410,6 @@ function Game() {
 		if (!scheduleList || gameCounter >= scheduleList.length) {
 			return teams;
 		}
-
-		return teams.sort((team1, team2) => {
-			const comparisons = [
-				team2.points - team1.points,
-				team1.game_counter - team2.game_counter,
-				team2.wins - team1.wins,
-				team2.loses_ot - team1.loses_ot,
-				team2.goals_diff - team1.goals_diff,
-			];
-
-			for (const comparison of comparisons) {
-				if (comparison !== 0) return comparison;
-			}
-			return 0;
-		});
-	}
-
-	function getDiffConferencesPlayoffPositions(teams: Teams[]): Teams[] {
-		// if (!scheduleList || gameCounter >= scheduleList.length) { output of sorting before playoff start
-		// 	return teams;
-		// }
 
 		return teams.sort((team1, team2) => {
 			const comparisons = [
@@ -432,44 +437,50 @@ function Game() {
 	}
 
 	function getPlayOffTeams(): void {
-		let selectedTeams: Teams[];
-
-		if (leagueId === '3' || leagueId === '4') {
-			const divisions = ['1', '2', '3', '4'];
-			const divisionTeams = Object.fromEntries(
-				divisions.map((division) => [
-					division,
+		const d1: Teams[] = teamsUpdate
+			.filter((team) => team.divisionId === '1')
+			.slice(0, 3);
+		d1.forEach((team) => (team.isPlayOff = true));
+		const d2: Teams[] = teamsUpdate
+			.filter((team) => team.divisionId === '2')
+			.slice(0, 3);
+		d2.forEach((team) => (team.isPlayOff = true));
+		const wc1: Teams[] = teamsSort(
+			teamsUpdate
+				.filter((team) => team.divisionId === '1')
+				.slice(3, 5)
+				.concat(
 					teamsUpdate
-						.filter((team) => team.divisionId === division)
-						.slice(0, 3),
-				])
-			);
-
-			const eastWildCard = teamsSort(
-				teamsUpdate.filter((team) =>
-					['1', '2'].includes(team.divisionId ?? '')
+						.filter((team) => team.divisionId === '2')
+						.slice(3, 5)
 				)
-			).slice(6, 8);
-
-			const westWildCard = teamsSort(
-				teamsUpdate.filter((team) =>
-					['3', '4'].includes(team.divisionId ?? '')
+		).slice(0, 2);
+		wc1.forEach((team) => (team.isPlayOff = true));
+		const d3: Teams[] = teamsUpdate
+			.filter((team) => team.divisionId === '3')
+			.slice(0, 3);
+		d3.forEach((team) => (team.isPlayOff = true));
+		const d4: Teams[] = teamsUpdate
+			.filter((team) => team.divisionId === '4')
+			.slice(0, 3);
+		d4.forEach((team) => (team.isPlayOff = true));
+		const wc2: Teams[] = teamsSort(
+			teamsUpdate
+				.filter((team) => team.divisionId === '3')
+				.slice(3, 5)
+				.concat(
+					teamsUpdate
+						.filter((team) => team.divisionId === '4')
+						.slice(3, 5)
 				)
-			).slice(6, 8);
-
-			selectedTeams = getDiffConferencesPlayoffPositions([
-				...divisionTeams['1'],
-				...divisionTeams['2'],
-				...eastWildCard,
-				...divisionTeams['3'],
-				...divisionTeams['4'],
-				...westWildCard,
-			]);
-		} else {
-			selectedTeams = teamsUpdate.slice(0, playOffTeam);
-		}
-
-		localStorage.setItem('teamsList', JSON.stringify(selectedTeams));
+		).slice(0, 2);
+		wc2.forEach((team) => (team.isPlayOff = true));
+		localStorage.setItem(
+			'teamsList',
+			JSON.stringify(
+				teamsSort([...d1, ...d2, ...d3, ...d4, ...wc1, ...wc2])
+			)
+		);
 	}
 
 	if (scheduleList && gameCounter < scheduleList.length) {

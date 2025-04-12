@@ -11,10 +11,6 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
 	const totalTeams: number = JSON.parse(
 		localStorage.getItem('teamsList') || '[]'
 	).length;
-	const totalGames: number =
-		(JSON.parse(localStorage.getItem('scheduleList') || '[]').length /
-			totalTeams) *
-		2;
 
 	return (
 		<>
