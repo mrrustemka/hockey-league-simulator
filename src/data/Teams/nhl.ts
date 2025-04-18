@@ -295,9 +295,6 @@ import vgs_4 from '../../images/Gallery/Nhl/Vgs/vgs_4.jpg';
 import vgs_5 from '../../images/Gallery/Nhl/Vgs/vgs_5.jpg';
 import vgs_6 from '../../images/Gallery/Nhl/Vgs/vgs_6.jpg';
 import vgs_7 from '../../images/Gallery/Nhl/Vgs/vgs_7.jpg';
-import vgs_8 from '../../images/Gallery/Nhl/Vgs/vgs_8.jpg';
-import vgs_9 from '../../images/Gallery/Nhl/Vgs/vgs_9.jpg';
-import vgs_10 from '../../images/Gallery/Nhl/Vgs/vgs_10.jpg';
 import wnp from '../../images/nhl_wnp.png';
 import wnp_1 from '../../images/Gallery/Nhl/Wnp/wnp_1.jpg';
 import wnp_2 from '../../images/Gallery/Nhl/Wnp/wnp_2.jpg';
@@ -1303,11 +1300,11 @@ export const nhl: Teams[] = [
 		curStatusLength: 0,
 		chartData: [],
 		chartLabels: [],
-		photos: [vgs_1, vgs_2, vgs_3, vgs_4, vgs_5, vgs_6, vgs_7, vgs_8, vgs_9],
+		photos: [vgs_1, vgs_2, vgs_3, vgs_4, vgs_5, vgs_6],
 		arena_dedcription:
 			'T-Mobile Arena is a multi-purpose indoor arena in Paradise, Nevada, United States. Opened on April 6, 2016.',
 		arena_capacity: 17367,
-		arena_photo: vgs_10,
+		arena_photo: vgs_7,
 		arena_name: 'T-Mobile Arena',
 		facebook: 'https://www.facebook.com/vegasgoldenknights',
 		youtube: 'https://www.youtube.com/channel/UCyUzGmp1kAmlkNUzAqW9xJw',
