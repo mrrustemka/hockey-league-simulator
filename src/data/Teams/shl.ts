@@ -1,83 +1,88 @@
 import { Teams } from '../types';
 import aik from '../../images/ehl_aik.png';
-import fbk from '../../images/ehl_fbk.png';
-import fro from '../../images/ehl_fro.png';
-import lak from '../../images/ehl_lak.png';
-import lhf from '../../images/ehl_lhf.png';
-import tik from '../../images/ehl_tik.png';
-import hv71 from '../../images/shl_hv71.png';
-import iko from '../../images/shl_iko.png';
-import lhc from '../../images/shl_lhc.png';
-import lif from '../../images/shl_lif.png';
-import mif from '../../images/shl_mif.png';
-import modo from '../../images/shl_modo.png';
-import ore from '../../images/shl_ore.png';
-import rbk from '../../images/shl_rbk.png';
 import aik_1 from '../../images/Gallery/Shl/Aik/aik_1.jpg';
 import aik_2 from '../../images/Gallery/Shl/Aik/aik_2.jpg';
 import aik_3 from '../../images/Gallery/Shl/Aik/aik_3.jpg';
 import aik_4 from '../../images/Gallery/Shl/Aik/aik_4.jpg';
 import aik_5 from '../../images/Gallery/Shl/Aik/aik_5.jpg';
+import bif from '../../images/shl_bif.png';
+import bif_1 from '../../images/Gallery/Shl/Bif/bif_1.webp';
+import bif_2 from '../../images/Gallery/Shl/Bif/bif_2.webp';
+import bif_3 from '../../images/Gallery/Shl/Bif/bif_3.webp';
+import bif_4 from '../../images/Gallery/Shl/Bif/bif_4.webp';
+import fbk from '../../images/ehl_fbk.png';
 import fbk_1 from '../../images/Gallery/Shl/Fbk/fbk_1.jpg';
 import fbk_2 from '../../images/Gallery/Shl/Fbk/fbk_2.jpg';
 import fbk_3 from '../../images/Gallery/Shl/Fbk/fbk_3.jpg';
 import fbk_4 from '../../images/Gallery/Shl/Fbk/fbk_4.jpg';
 import fbk_5 from '../../images/Gallery/Shl/Fbk/fbk_5.webp';
+import fro from '../../images/ehl_fro.png';
 import fro_1 from '../../images/Gallery/Shl/Fro/fro_1.jpg';
 import fro_2 from '../../images/Gallery/Shl/Fro/fro_2.jpg';
 import fro_3 from '../../images/Gallery/Shl/Fro/fro_3.jpg';
 import fro_4 from '../../images/Gallery/Shl/Fro/fro_4.jpg';
 import fro_5 from '../../images/Gallery/Shl/Fro/fro_5.jpg';
+import hv71 from '../../images/shl_hv71.png';
 import hv71_1 from '../../images/Gallery/Shl/Hv71/hv71_1.jpg';
 import hv71_2 from '../../images/Gallery/Shl/Hv71/hv71_2.jpg';
 import hv71_3 from '../../images/Gallery/Shl/Hv71/hv71_3.jpg';
 import hv71_4 from '../../images/Gallery/Shl/Hv71/hv71_4.jpg';
 import hv71_5 from '../../images/Gallery/Shl/Hv71/hv71_5.webp';
-import iko_1 from '../../images/Gallery/Shl/Iko/iko_1.jpg';
-import iko_2 from '../../images/Gallery/Shl/Iko/iko_2.jpg';
-import iko_3 from '../../images/Gallery/Shl/Iko/iko_3.jpg';
-import iko_4 from '../../images/Gallery/Shl/Iko/iko_4.jpg';
-import iko_5 from '../../images/Gallery/Shl/Iko/iko_5.webp';
+// import iko from '../../images/shl_iko.png';
+// import iko_1 from '../../images/Gallery/Shl/Iko/iko_1.jpg';
+// import iko_2 from '../../images/Gallery/Shl/Iko/iko_2.jpg';
+// import iko_3 from '../../images/Gallery/Shl/Iko/iko_3.jpg';
+// import iko_4 from '../../images/Gallery/Shl/Iko/iko_4.jpg';
+// import iko_5 from '../../images/Gallery/Shl/Iko/iko_5.webp';
+import lak from '../../images/ehl_lak.png';
 import lak_1 from '../../images/Gallery/Shl/Lak/lak_1.jpg';
 import lak_2 from '../../images/Gallery/Shl/Lak/lak_2.jpg';
 import lak_3 from '../../images/Gallery/Shl/Lak/lak_3.jpg';
 import lak_4 from '../../images/Gallery/Shl/Lak/lak_4.jpg';
 import lak_5 from '../../images/Gallery/Shl/Lak/lak_5.jpg';
+import lhc from '../../images/shl_lhc.png';
 import lhc_1 from '../../images/Gallery/Shl/Lhc/lhc_1.jpg';
 import lhc_2 from '../../images/Gallery/Shl/Lhc/lhc_2.jpg';
 import lhc_3 from '../../images/Gallery/Shl/Lhc/lhc_3.jpg';
 import lhc_4 from '../../images/Gallery/Shl/Lhc/lhc_4.jpg';
 import lhc_5 from '../../images/Gallery/Shl/Lhc/lhc_5.webp';
+import lhf from '../../images/ehl_lhf.png';
 import lhf_1 from '../../images/Gallery/Shl/Lhf/lhf_1.jpg';
 import lhf_2 from '../../images/Gallery/Shl/Lhf/lhf_2.jpg';
 import lhf_3 from '../../images/Gallery/Shl/Lhf/lhf_3.jpg';
 import lhf_4 from '../../images/Gallery/Shl/Lhf/lhf_4.jpg';
 import lhf_5 from '../../images/Gallery/Shl/Lhf/lhf_5.webp';
+import lif from '../../images/shl_lif.png';
 import lif_1 from '../../images/Gallery/Shl/Lif/lif_1.jpg';
 import lif_2 from '../../images/Gallery/Shl/Lif/lif_2.jpg';
 import lif_3 from '../../images/Gallery/Shl/Lif/lif_3.jpg';
 import lif_4 from '../../images/Gallery/Shl/Lif/lif_4.jpg';
 import lif_5 from '../../images/Gallery/Shl/Lif/lif_5.webp';
+import mif from '../../images/shl_mif.png';
 import mif_1 from '../../images/Gallery/Shl/Mif/mif_1.jpg';
 import mif_2 from '../../images/Gallery/Shl/Mif/mif_2.jpg';
 import mif_3 from '../../images/Gallery/Shl/Mif/mif_3.jpg';
 import mif_4 from '../../images/Gallery/Shl/Mif/mif_4.jpg';
 import mif_5 from '../../images/Gallery/Shl/Mif/mif_5.webp';
+import modo from '../../images/shl_modo.png';
 import modo_1 from '../../images/Gallery/Shl/Modo/modo_1.jpg';
 import modo_2 from '../../images/Gallery/Shl/Modo/modo_2.jpg';
 import modo_3 from '../../images/Gallery/Shl/Modo/modo_3.jpg';
 import modo_4 from '../../images/Gallery/Shl/Modo/modo_4.jpg';
 import modo_5 from '../../images/Gallery/Shl/Modo/modo_5.webp';
+import ore from '../../images/shl_ore.png';
 import ore_1 from '../../images/Gallery/Shl/Ore/ore_1.jpg';
 import ore_2 from '../../images/Gallery/Shl/Ore/ore_2.jpg';
 import ore_3 from '../../images/Gallery/Shl/Ore/ore_3.jpg';
 import ore_4 from '../../images/Gallery/Shl/Ore/ore_4.jpg';
 import ore_5 from '../../images/Gallery/Shl/Ore/ore_5.webp';
+import rbk from '../../images/shl_rbk.png';
 import rbk_1 from '../../images/Gallery/Shl/Rbk/rbk_1.jpg';
 import rbk_2 from '../../images/Gallery/Shl/Rbk/rbk_2.jpg';
 import rbk_3 from '../../images/Gallery/Shl/Rbk/rbk_3.jpg';
 import rbk_4 from '../../images/Gallery/Shl/Rbk/rbk_4.jpg';
 import rbk_5 from '../../images/Gallery/Shl/Rbk/rbk_5.webp';
+import tik from '../../images/ehl_tik.png';
 import tik_1 from '../../images/Gallery/Shl/Tik/tik_1.jpg';
 import tik_2 from '../../images/Gallery/Shl/Tik/tik_2.jpg';
 import tik_3 from '../../images/Gallery/Shl/Tik/tik_3.jpg';
@@ -632,45 +637,88 @@ export const shl: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 14,
-		name: 'IK Oskarshamn',
-		abbreviation: 'IKO',
+		id: 15,
+		name: 'Brynäs IF',
+		abbreviation: 'BIF',
 		country: 'Swe',
-		city: 'Oskarshamn',
+		city: 'Gävle',
 		points: 0,
 		goals_for: 0,
 		goals_against: 0,
 		goals_diff: 0,
 		rating: 50,
 		game_counter: 0,
-		logo: iko,
+		logo: bif,
 		loses: 0,
 		loses_ot: 0,
 		wins: 0,
 		play_off_rank: 0,
 		play_off_round_wins: 0,
-		color: '#0d4082',
+		color: '#000000',
 		isPlayOff: false,
 		status: '',
 		curStatusLength: 0,
 		chartData: [],
 		chartLabels: [],
-		photos: [iko_1, iko_2, iko_3, iko_4],
-		arena_name: 'Be-Ge Hockey Center',
+		photos: [bif_1, bif_2, bif_3],
+		arena_name: 'Monitor ERP Arena',
 		arena_dedcription:
-			'Be-Ge Hockey Center, formerly Arena Oskarshamn, is the home ice of Swedish ice-hockey team IK Oskarshamn, located in the south-east of Sweden. The arena was completely rebuilt and renovated in 2004-2005. The arena, earlier known as Oskarshamns ishall, was inaugurated on 10 November 1974, with a game where Old Team Sweden defeated IK Oskarshamn, back then known as IK70, 6–2, in front of 2,600 spectators. The first international game inside the arena was played on 15 December 1974, a junior game where the Soviet Union defeated Sweden, 5–2.',
-		arena_capacity: 3275,
-		arena_photo: iko_5,
-		facebook: 'https://www.facebook.com/ikoskarshamn',
-		youtube: 'https://www.youtube.com/channel/UCdB3c6jUn6ktWRqs0mzyBWw',
-		instagram: 'https://www.instagram.com/iko_officiell',
-		x: 'https://twitter.com/iko_officiell',
+			'Monitor ERP Arena, located in Gävle, Sweden. Opened in 1967 and renovated in 2006, it has undergone several name changes, previously known as Gavlerinken, Läkerol Arena, and Gavlerinken Arena.',
+		arena_capacity: 7909,
+		arena_photo: bif_4,
+		facebook: 'https://www.facebook.com/brynasif',
+		youtube: 'https://www.youtube.com/user/brynasmedia',
+		instagram: 'https://www.instagram.com/brynas__if',
+		x: 'https://twitter.com/Brynas',
 		threads: '',
-		tiktok: 'https://www.tiktok.com/@iko_officiell',
+		tiktok: '',
 		snapchat: '',
-		linkedin: 'https://www.linkedin.com/company/27073906/admin/',
-		website: 'https://www.ikoskarshamn.se/',
+		linkedin: '',
+		website: 'https://www.brynas.se/',
 		twitch: '',
 		points_percentage: 0,
 	},
+
+	// {
+	// 	id: 14,
+	// 	name: 'IK Oskarshamn',
+	// 	abbreviation: 'IKO',
+	// 	country: 'Swe',
+	// 	city: 'Oskarshamn',
+	// 	points: 0,
+	// 	goals_for: 0,
+	// 	goals_against: 0,
+	// 	goals_diff: 0,
+	// 	rating: 50,
+	// 	game_counter: 0,
+	// 	logo: iko,
+	// 	loses: 0,
+	// 	loses_ot: 0,
+	// 	wins: 0,
+	// 	play_off_rank: 0,
+	// 	play_off_round_wins: 0,
+	// 	color: '#0d4082',
+	// 	isPlayOff: false,
+	// 	status: '',
+	// 	curStatusLength: 0,
+	// 	chartData: [],
+	// 	chartLabels: [],
+	// 	photos: [iko_1, iko_2, iko_3, iko_4],
+	// 	arena_name: 'Be-Ge Hockey Center',
+	// 	arena_dedcription:
+	// 		'Be-Ge Hockey Center, formerly Arena Oskarshamn, is the home ice of Swedish ice-hockey team IK Oskarshamn, located in the south-east of Sweden. The arena was completely rebuilt and renovated in 2004-2005. The arena, earlier known as Oskarshamns ishall, was inaugurated on 10 November 1974, with a game where Old Team Sweden defeated IK Oskarshamn, back then known as IK70, 6–2, in front of 2,600 spectators. The first international game inside the arena was played on 15 December 1974, a junior game where the Soviet Union defeated Sweden, 5–2.',
+	// 	arena_capacity: 3275,
+	// 	arena_photo: iko_5,
+	// 	facebook: 'https://www.facebook.com/ikoskarshamn',
+	// 	youtube: 'https://www.youtube.com/channel/UCdB3c6jUn6ktWRqs0mzyBWw',
+	// 	instagram: 'https://www.instagram.com/iko_officiell',
+	// 	x: 'https://twitter.com/iko_officiell',
+	// 	threads: '',
+	// 	tiktok: 'https://www.tiktok.com/@iko_officiell',
+	// 	snapchat: '',
+	// 	linkedin: 'https://www.linkedin.com/company/27073906/admin/',
+	// 	website: 'https://www.ikoskarshamn.se/',
+	// 	twitch: '',
+	// 	points_percentage: 0,
+	// },
 ];
