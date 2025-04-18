@@ -54,14 +54,24 @@ function Team() {
 						<div className='team__name--isPlayOff'>x</div>
 						<Title
 							level={1}
-							className='team__name'>
+							className='team__name'
+							style={{
+								color: whiteTeams.includes(team.color)
+									? '#fff'
+									: '#000000',
+							}}>
 							{team.name + ' ' + team.status}
 						</Title>
 					</div>
 				) : (
 					<Title
 						level={1}
-						className='team__name'>
+						className='team__name'
+						style={{
+							color: whiteTeams.includes(team.color)
+								? '#fff'
+								: '#000000',
+						}}>
 						{team.name + ' ' + team.status}
 					</Title>
 				)}
