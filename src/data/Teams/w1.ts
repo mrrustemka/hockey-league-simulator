@@ -131,6 +131,7 @@ export const w1: Teams[] = [
 		website: 'https://www.hockeycanada.ca/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '1',
 	},
 	{
 		abbreviation: 'USA',
@@ -168,6 +169,7 @@ export const w1: Teams[] = [
 		website: 'https://teamusa.usahockey.com/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '2',
 	},
 	{
 		abbreviation: 'SWE',
@@ -205,6 +207,7 @@ export const w1: Teams[] = [
 		website: 'https://www.swehockey.se/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '1',
 	},
 	{
 		abbreviation: 'FIN',
@@ -242,6 +245,7 @@ export const w1: Teams[] = [
 		website: 'https://www.finhockey.fi/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '1',
 	},
 	{
 		abbreviation: 'CZE',
@@ -279,6 +283,7 @@ export const w1: Teams[] = [
 		website: 'https://www.ceskyhokej.cz/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '2',
 	},
 	{
 		abbreviation: 'GER',
@@ -316,6 +321,7 @@ export const w1: Teams[] = [
 		website: 'http://www.deb-online.de/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '2',
 	},
 	{
 		abbreviation: 'SLK',
@@ -353,9 +359,10 @@ export const w1: Teams[] = [
 		website: 'http://www.hockeyslovakia.sk/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '1',
 	},
 	{
-		abbreviation: 'SWI',
+		abbreviation: 'SUI',
 		city: 'Bern',
 		country: 'Swi',
 		game_counter: 0,
@@ -390,6 +397,7 @@ export const w1: Teams[] = [
 		website: 'http://www.sihf.ch/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '2',
 	},
 	{
 		abbreviation: 'LAT',
@@ -427,6 +435,7 @@ export const w1: Teams[] = [
 		website: 'http://www.lhf.lv/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '1',
 	},
 	{
 		abbreviation: 'DEN',
@@ -464,6 +473,7 @@ export const w1: Teams[] = [
 		website: 'http://www.ishockey.dk/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '2',
 	},
 	{
 		abbreviation: 'NOR',
@@ -501,6 +511,7 @@ export const w1: Teams[] = [
 		website: 'http://www.hockey.no/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '2',
 	},
 	{
 		abbreviation: 'FRA',
@@ -538,6 +549,7 @@ export const w1: Teams[] = [
 		website: 'http://www.hockeyfrance.com/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '1',
 	},
 	{
 		abbreviation: 'KAZ',
@@ -575,9 +587,10 @@ export const w1: Teams[] = [
 		website: 'http://www.icehockey.kz/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '2',
 	},
 	{
-		abbreviation: 'AUS',
+		abbreviation: 'AUT',
 		city: 'Vienna',
 		country: 'Aus',
 		game_counter: 0,
@@ -612,6 +625,7 @@ export const w1: Teams[] = [
 		website: 'http://www.eishockey.at/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '1',
 	},
 	{
 		abbreviation: 'HUN',
@@ -649,9 +663,10 @@ export const w1: Teams[] = [
 		website: 'http://www.jegkorongszovetseg.hu/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '2',
 	},
 	{
-		abbreviation: 'SLN',
+		abbreviation: 'SVK',
 		city: 'Ljubljana',
 		country: 'Sln',
 		game_counter: 0,
@@ -686,5 +701,6 @@ export const w1: Teams[] = [
 		website: 'http://www.hokej.si/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '1',
 	},
 ];

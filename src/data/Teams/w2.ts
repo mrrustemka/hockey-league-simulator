@@ -76,6 +76,7 @@ export const w2: Teams[] = [
 		website: 'http://www.icehockeyuk.co.uk/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '1',
 	},
 	{
 		abbreviation: 'POL',
@@ -113,6 +114,7 @@ export const w2: Teams[] = [
 		website: 'http://www.pzhl.org.pl/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '1',
 	},
 	{
 		abbreviation: 'ITA',
@@ -150,6 +152,7 @@ export const w2: Teams[] = [
 		website: 'http://www.fisg.it/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '1',
 	},
 	{
 		abbreviation: 'SKR',
@@ -187,6 +190,7 @@ export const w2: Teams[] = [
 		website: 'http://www.kiha.or.kr/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '2',
 	},
 	{
 		abbreviation: 'ROM',
@@ -224,6 +228,7 @@ export const w2: Teams[] = [
 		website: 'https://www.frhg.ro/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '1',
 	},
 	{
 		abbreviation: 'JAP',
@@ -261,6 +266,7 @@ export const w2: Teams[] = [
 		website: 'http://www.jihf.or.jp/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '1',
 	},
 	{
 		abbreviation: 'CHI',
@@ -298,6 +304,7 @@ export const w2: Teams[] = [
 		website: 'http://icehockey.sport.org.cn/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '2',
 	},
 	{
 		abbreviation: 'EST',
@@ -336,6 +343,7 @@ export const w2: Teams[] = [
 		website: 'http://www.eestihoki.ee/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '2',
 	},
 	{
 		abbreviation: 'LIT',
@@ -373,6 +381,7 @@ export const w2: Teams[] = [
 		website: 'http://www.hockey.lt/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '2',
 	},
 	{
 		abbreviation: 'CRO',
@@ -410,6 +419,7 @@ export const w2: Teams[] = [
 		website: 'http://www.hshl.hr/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '2',
 	},
 	{
 		abbreviation: 'SPA',
@@ -447,6 +457,7 @@ export const w2: Teams[] = [
 		website: 'https://www.rfedh.es/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '2',
 	},
 	{
 		abbreviation: 'UKR',
@@ -484,6 +495,7 @@ export const w2: Teams[] = [
 		website: 'https://fhu.com.ua/',
 		twitch: '',
 		points_percentage: 0,
+		conferenceId: '1',
 	},
 	// {
 	//   abbreviation: "NET",
@@ -519,5 +531,5 @@ export const w2: Teams[] = [
 	// linkedin: '',
 	// website: 'http://www.ijnl.nl/',
 	// twitch: '',
-	//points_percentage: 0,}
+	//points_percentage: 0,conferenceId: '1',}
 ];

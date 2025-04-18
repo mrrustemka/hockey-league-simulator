@@ -39,6 +39,10 @@ export const champs: League[] = [
 		teams: w1,
 		teamsCount: 16,
 		cup: w1_cup,
+		conferences: [
+			{ conferenceId: '1', name: 'Group A' },
+			{ conferenceId: '2', name: 'Group B' },
+		],
 	},
 	{
 		id: '2',
@@ -48,6 +52,10 @@ export const champs: League[] = [
 		teams: w2,
 		teamsCount: 12,
 		cup: w1_cup,
+		conferences: [
+			{ conferenceId: '1', name: 'Group A' },
+			{ conferenceId: '2', name: 'Group B' },
+		],
 	},
 	{
 		id: '3',
