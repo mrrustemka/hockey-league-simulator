@@ -247,7 +247,7 @@ function Team() {
 					<Title
 						level={5}
 						className='team__description'>
-						{team.arena_dedcription}
+						{team.arena_description}
 					</Title>
 				</>
 			) : (

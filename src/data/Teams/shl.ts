@@ -116,7 +116,7 @@ export const shl: Teams[] = [
 		chartLabels: [],
 		photos: [lak_1, lak_2, lak_3, lak_4],
 		arena_name: 'Vida Arena',
-		arena_dedcription:
+		arena_description:
 			'Vida Arena (branded as VIDA Arena) is a multi-purpose indoor arena located in Växjö, Sweden. The arena opened in September 2011.',
 		arena_capacity: 5750,
 		arena_photo: lak_5,
@@ -158,7 +158,7 @@ export const shl: Teams[] = [
 		chartLabels: [],
 		photos: [aik_1, aik_2, aik_3, aik_4],
 		arena_name: 'Skellefteå Kraft Arena',
-		arena_dedcription:
+		arena_description:
 			'Skellefteå Kraft Arena is an indoor sporting arena located in Skellefteå, Sweden. It was built in 1966, and inaugurated on 6 January 1967. The arena is named after Skellefteå Kraft, a Swedish power company.',
 		arena_capacity: 5801,
 		arena_photo: aik_5,
@@ -200,7 +200,7 @@ export const shl: Teams[] = [
 		chartLabels: [],
 		photos: [fro_1, fro_2, fro_3, fro_4],
 		arena_name: 'Scandinavium',
-		arena_dedcription:
+		arena_description:
 			'Scandinavium is an indoor arena located in Gothenburg, Sweden. Construction on Scandinavium began in 1969 after decades of setbacks, and was inaugurated on 18 May 1971. Scandinavium has been selected as a championship arena at least fifty times, hosting events such as World Championships in handball and ice hockey, European championships, Davis Cup finals, and in 1985 the Eurovision Song Contest.',
 		arena_capacity: 12044,
 		arena_photo: fro_5,
@@ -242,7 +242,7 @@ export const shl: Teams[] = [
 		chartLabels: [],
 		photos: [fbk_1, fbk_2, fbk_3, fbk_4],
 		arena_name: 'Löfbergs Arena',
-		arena_dedcription:
+		arena_description:
 			'Löfbergs Arena is an arena located in Karlstad, Sweden, situated just above the river delta of Klarälven. It opened in 2001 following a complete overhaul and major expansion of the previously existing arena Färjestads Ishall. The name of the arena comes from the coffee roastery Löfbergs.',
 		arena_capacity: 8645,
 		arena_photo: fbk_5,
@@ -284,7 +284,7 @@ export const shl: Teams[] = [
 		chartLabels: [],
 		photos: [tik_1, tik_2, tik_3, tik_4],
 		arena_name: 'NHC Arena',
-		arena_dedcription:
+		arena_description:
 			'NHC Arena is an indoor sporting arena located in Timrå, Västernorrland County, Sweden. Construction began in 1964 and was inaugurated on 4 September 1966. Since then the venue has undergone several renovations and expansions.',
 		arena_capacity: 6000,
 		arena_photo: tik_5,
@@ -326,7 +326,7 @@ export const shl: Teams[] = [
 		chartLabels: [],
 		photos: [lhf_1, lhf_2, lhf_3, lhf_4],
 		arena_name: 'Coop Norrbotten Arena',
-		arena_dedcription:
+		arena_description:
 			'Coop Norrbotten Arena is an indoor sporting arena located in Luleå, Sweden.',
 		arena_capacity: 6150,
 		arena_photo: lhf_5,
@@ -368,7 +368,7 @@ export const shl: Teams[] = [
 		chartLabels: [],
 		photos: [lif_1, lif_2, lif_3, lif_4],
 		arena_name: 'Tegera Arena',
-		arena_dedcription:
+		arena_description:
 			'Tegera Arena (formerly Ejendals Arena) is an arena in Leksand, Sweden primarily. It was opened in October 2005.',
 		arena_capacity: 7650,
 		arena_photo: lif_5,
@@ -410,7 +410,7 @@ export const shl: Teams[] = [
 		chartLabels: [],
 		photos: [lhc_1, lhc_2, lhc_3, lhc_4],
 		arena_name: 'Saab Arena',
-		arena_dedcription:
+		arena_description:
 			'Saab Arena, formerly named Cloetta Center between 2004 and 2014, is an arena in Linköping, Sweden. It opened in September 2004.',
 		arena_capacity: 8500,
 		arena_photo: lhc_5,
@@ -452,7 +452,7 @@ export const shl: Teams[] = [
 		chartLabels: [],
 		photos: [rbk_1, rbk_2, rbk_3, rbk_4],
 		arena_name: 'Catena Arena',
-		arena_dedcription:
+		arena_description:
 			'Catena Arena is an indoor arena in Ängelholm, Sweden. It was inaugurated on 20 September 2008.',
 		arena_capacity: 6310,
 		arena_photo: rbk_5,
@@ -494,7 +494,7 @@ export const shl: Teams[] = [
 		chartLabels: [],
 		photos: [ore_1, ore_2, ore_3, ore_4],
 		arena_name: 'Behrn Arena',
-		arena_dedcription:
+		arena_description:
 			'Behrn Arena is an indoor arena located in Örebro, Sweden. The arena opened on 1 January 1965.On 27 March 1967, the Rolling Stones performed two shows at the arena, during their sixth European tour. Which was the only concert that was held at the venue.',
 		arena_capacity: 5500,
 		arena_photo: ore_5,
@@ -536,7 +536,7 @@ export const shl: Teams[] = [
 		chartLabels: [],
 		photos: [modo_1, modo_2, modo_3, modo_4],
 		arena_name: 'Hägglunds Arena',
-		arena_dedcription:
+		arena_description:
 			'Hägglunds Arena (formerly Swedbank Arena and Fjällräven Center) is an indoor sporting arena located in Örnsköldsvik, Sweden. The arena was opened on 26 August 2006.',
 		arena_capacity: 7265,
 		arena_photo: modo_5,
@@ -578,7 +578,7 @@ export const shl: Teams[] = [
 		chartLabels: [],
 		photos: [mif_1, mif_2, mif_3, mif_4],
 		arena_name: 'Malmö Arena',
-		arena_dedcription:
+		arena_description:
 			'Malmö Arena is a multi-purpose indoor arena in Malmö, Sweden. It is the largest arena in the SHL, and the second-largest indoor arena in Sweden.Owned and operated by Parkfast AB, the arena was designed by Mats Matson of MM Matsson Konsult AB, Hannu Helkiö of Pöyry Architects, and Gert Wingårdh of Wingårdh arkitektkontor.Naming rights for the venue are owned by Malmö Stad, in a ten-year contract, agreed in 2007. The venue hosted the 2014 World Junior Ice Hockey Championships from 26 December 2013 to 5 January 2014. Ground was broken on 10 January 2007, and the arena was inaugurated on 6 November 2008. The final construction cost for the arena was 750 million SEK. The arena is located about 80 m (260 ft) from Hyllie railway station, from where there are rail and bus connections to Malmö Central Station, Copenhagen Airport, and Copenhagen Central Station.',
 		arena_capacity: 12600,
 		arena_photo: mif_5,
@@ -620,7 +620,7 @@ export const shl: Teams[] = [
 		chartLabels: [],
 		photos: [hv71_1, hv71_2, hv71_3, hv71_4],
 		arena_name: 'Husqvarna Garden',
-		arena_dedcription:
+		arena_description:
 			'The Husqvarna Garden, formerly Kinnarps Arena, is an indoor arena.',
 		arena_capacity: 7000,
 		arena_photo: hv71_5,
@@ -662,7 +662,7 @@ export const shl: Teams[] = [
 		chartLabels: [],
 		photos: [bif_1, bif_2, bif_3],
 		arena_name: 'Monitor ERP Arena',
-		arena_dedcription:
+		arena_description:
 			'Monitor ERP Arena, located in Gävle, Sweden. Opened in 1967 and renovated in 2006, it has undergone several name changes, previously known as Gavlerinken, Läkerol Arena, and Gavlerinken Arena.',
 		arena_capacity: 7909,
 		arena_photo: bif_4,
@@ -705,7 +705,7 @@ export const shl: Teams[] = [
 	// 	chartLabels: [],
 	// 	photos: [iko_1, iko_2, iko_3, iko_4],
 	// 	arena_name: 'Be-Ge Hockey Center',
-	// 	arena_dedcription:
+	// 	arena_description:
 	// 		'Be-Ge Hockey Center, formerly Arena Oskarshamn, is the home ice of Swedish ice-hockey team IK Oskarshamn, located in the south-east of Sweden. The arena was completely rebuilt and renovated in 2004-2005. The arena, earlier known as Oskarshamns ishall, was inaugurated on 10 November 1974, with a game where Old Team Sweden defeated IK Oskarshamn, back then known as IK70, 6–2, in front of 2,600 spectators. The first international game inside the arena was played on 15 December 1974, a junior game where the Soviet Union defeated Sweden, 5–2.',
 	// 	arena_capacity: 3275,
 	// 	arena_photo: iko_5,

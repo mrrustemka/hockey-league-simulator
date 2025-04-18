@@ -273,7 +273,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [lhf_1, lhf_2, lhf_3, lhf_4],
 		arena_name: 'Coop Norrbotten Arena',
-		arena_dedcription:
+		arena_description:
 			'Coop Norrbotten Arena is an indoor sporting arena located in Luleå, Sweden.',
 		arena_capacity: 6150,
 		arena_photo: lhf_5,
@@ -318,7 +318,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [tps_1, tps_2, tps_3, tps_4],
 		arena_name: 'Gatorade Center',
-		arena_dedcription:
+		arena_description:
 			'The Gatorade Center (formerly HK Areena, Elysée Arena, Typhoon Arena) is a multi-functional indoor arena in the district of Artukainen in Turku, Finland. Opened in November 1990. A record attendance of 12,041 for a hockey match was registered in 1991. Gatorade Center is a member of the European Arenas Association (EAA).',
 		arena_capacity: 10500,
 		arena_photo: tps_5,
@@ -363,7 +363,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [hcd_1, hcd_2, hcd_3, hcd_4],
 		arena_name: 'zondacrypto Arena',
-		arena_dedcription:
+		arena_description:
 			'zondacrypto Arena is an indoor arena in Davos, Switzerland. Every year the Spengler Cup is played in this arena.Major renovation of the arena started at the conclusion of the 2017–18 season to upgrade most of the stands and the concourse. The seating capacity was not increased and the total cost was around CHF 27 million. Construction began in 2018 and was completed in 2021.',
 		arena_capacity: 7080,
 		arena_photo: hcd_5,
@@ -408,7 +408,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [kos_1, kos_2, kos_3, kos_4],
 		arena_name: 'Steel Arena',
-		arena_dedcription:
+		arena_description:
 			'Steel Arena – Ladislav Troják Stadium in Košice. The arena opened on February 24, 2006, and was named in honor of the general sponsor of the club, U. S. Steel Košice (a member of the United States Steel Corporation) and also in honor of Ladislav Troják, a Košice-born hockey player who was the first Slovak to win the World Championship with the Czechoslovakian national team.',
 		arena_capacity: 8378,
 		arena_photo: kos_5,
@@ -453,7 +453,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [aik_1, aik_2, aik_3, aik_4],
 		arena_name: 'Skellefteå Kraft Arena',
-		arena_dedcription:
+		arena_description:
 			'Skellefteå Kraft Arena is an indoor sporting arena located in Skellefteå, Sweden. It was built in 1966, and inaugurated on 6 January 1967. The arena is named after Skellefteå Kraft, a Swedish power company.',
 		arena_capacity: 5801,
 		arena_photo: aik_5,
@@ -498,7 +498,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [sil_1, sil_2, sil_3, sil_4],
 		arena_name: 'CC Amfi',
-		arena_dedcription:
+		arena_description:
 			"CC Amfi, also known as Nordlyshallen ('The Northern Light Hall'), is an indoor sports arena in Hamar, Norway. Construction of CC Amfi started in August 1991 and it was inaugurated on 25 November 1992, with construction costing 83 million Norwegian krone (NOK). The venues are owned by Hamar Olympiske Anlegg, a subsidiary of Hamar Municipality.",
 		arena_capacity: 7500,
 		arena_photo: sil_5,
@@ -543,7 +543,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [hcl_1, hcl_2, hcl_3, hcl_4],
 		arena_name: 'Cornèr Arena',
-		arena_dedcription:
+		arena_description:
 			'Cornèr Arena is an arena in Porza, Switzerland, near the city of Lugano.',
 		arena_capacity: 7200,
 		arena_photo: hcl_5,
@@ -588,7 +588,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [spa_1, spa_2, spa_3, spa_4],
 		arena_name: 'O2 Arena',
-		arena_dedcription:
+		arena_description:
 			'O2 Arena (stylised as O2 arena) is a multi-purpose arena, in Prague, Czech Republic.It is the third-largest ice hockey arena in Europe. It has hosted important sporting events such as three Ice Hockey World Championships (2004, 2015 and 2024), a handful of NHL games.',
 		arena_capacity: 17383,
 		arena_photo: spa_5,
@@ -633,7 +633,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [kal_1, kal_2, kal_3, kal_4],
 		arena_name: 'Kuopio Ice Hall',
-		arena_dedcription:
+		arena_description:
 			'Kuopio Ice Hall or Olvi Arena, is the ice hockey arena located in the Hatsala district of Kuopio, Finland. The arena is built in 1979.',
 		arena_capacity: 5300,
 		arena_photo: kal_5,
@@ -678,7 +678,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [fro_1, fro_2, fro_3, fro_4],
 		arena_name: 'Scandinavium',
-		arena_dedcription:
+		arena_description:
 			'Scandinavium is an indoor arena located in Gothenburg, Sweden. Construction on Scandinavium began in 1969 after decades of setbacks, and was inaugurated on 18 May 1971. Scandinavium has been selected as a championship arena at least fifty times, hosting events such as World Championships in handball and ice hockey, European championships, Davis Cup finals, and in 1985 the Eurovision Song Contest.',
 		arena_capacity: 12044,
 		arena_photo: fro_5,
@@ -723,7 +723,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [zsc_1, zsc_2, zsc_3, zsc_4],
 		arena_name: 'Swiss Life Arena',
-		arena_dedcription:
+		arena_description:
 			'The Swiss Life Arena is an ice hockey and entertainment arena in the Altstetten quarter of Zürich, Switzerland. It is located approximately seven kilometers west of downtown Zürich. The arena officially opened in October 2022.',
 		arena_capacity: 12000,
 		arena_photo: zsc_5,
@@ -768,7 +768,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [sba_1, sba_2, sba_3],
 		arena_name: 'Tipos aréna',
-		arena_dedcription:
+		arena_description:
 			'The Ondrej Nepela Arena (also known as Orange Arena during the 2011 IIHF Championship and later as Tipos Aréna, previously Slovnaft Arena, for sponsorship reasons) is an indoor arena in Bratislava, Slovakia.',
 		arena_capacity: 10055,
 		arena_photo: sba_4,
@@ -813,7 +813,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [tik_1, tik_2, tik_3, tik_4],
 		arena_name: 'NHC Arena',
-		arena_dedcription:
+		arena_description:
 			'NHC Arena is an indoor sporting arena located in Timrå, Västernorrland County, Sweden. Construction began in 1964 and was inaugurated on 4 September 1966. Since then the venue has undergone several renovations and expansions.',
 		arena_capacity: 6000,
 		arena_photo: tik_5,
@@ -858,7 +858,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [lak_1, lak_2, lak_3, lak_4],
 		arena_name: 'Vida Arena',
-		arena_dedcription:
+		arena_description:
 			'Vida Arena (branded as VIDA Arena) is a multi-purpose indoor arena located in Växjö, Sweden. The arena opened in September 2011.',
 		arena_capacity: 5750,
 		arena_photo: lak_5,
@@ -903,7 +903,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [evz_1, evz_2, evz_3, evz_4],
 		arena_name: 'Bossard Arena',
-		arena_dedcription:
+		arena_description:
 			'Bossard Arena is an indoor sporting arena located in Zug, Switzerland. Opened in 2010.The venue is named after Bossard Holding, an international logistics company headquartered in the city.',
 		arena_capacity: 7800,
 		arena_photo: evz_5,
@@ -948,7 +948,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [pce_1, pce_2, pce_3, pce_4, pce_5],
 		arena_name: 'Enteria arena',
-		arena_dedcription:
+		arena_description:
 			'Enteria arena (formerly Tipsport Arena or ČEZ Arena) is an indoor sporting arena in Pardubice, Czech Republic.',
 		arena_capacity: 10194,
 		arena_photo: pce_6,
@@ -993,7 +993,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [tap_1, tap_2, tap_3, tap_4],
 		arena_name: 'Nokia Arena',
-		arena_dedcription:
+		arena_description:
 			'The Nokia Arena, also known by its non-sponsored name Tampere Deck Arena, is an indoor arena in Tampere, Finland, which hosts ice hockey games and large cultural events. Its construction was approved by the City Council of Tampere on 19 May 2010, and it was officially opened on 3 December 2021.',
 		arena_capacity: 13455,
 		arena_photo: tap_5,
@@ -1038,7 +1038,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [fbk_1, fbk_2, fbk_3, fbk_4],
 		arena_name: 'Löfbergs Arena',
-		arena_dedcription:
+		arena_description:
 			'Löfbergs Arena is an arena located in Karlstad, Sweden, situated just above the river delta of Klarälven. It opened in 2001 following a complete overhaul and major expansion of the previously existing arena Färjestads Ishall. The name of the arena comes from the coffee roastery Löfbergs.',
 		arena_capacity: 8645,
 		arena_photo: fbk_5,
@@ -1083,7 +1083,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [scb_1, scb_2, scb_3, scb_4],
 		arena_name: 'PostFinance Arena',
-		arena_dedcription:
+		arena_description:
 			'The PostFinance-Arena (originally known as Eisstadion Allmend and Bern Arena) is an indoor arena in Bern, Switzerland. It was opened in October 1967.',
 		arena_capacity: 17031,
 		arena_photo: scb_5,
@@ -1128,7 +1128,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [ebb_1, ebb_2, ebb_3, ebb_4],
 		arena_name: 'Uber Arena',
-		arena_dedcription:
+		arena_description:
 			"Uber Arena (previously branded as O2 World and Mercedes-Benz Arena) is a multipurpose indoor arena in the Friedrichshain neighborhood of Berlin, Germany, which opened in 2008. The venue became known as Uber Arena following a long-term deal with venue operators AEG Europe in 2024. The arena was one of the most prominent elements of the Mediaspree urban redevelopment project, quickly gaining emblematic status in the debates surrounding the project's impact.",
 		arena_capacity: 14200,
 		arena_photo: ebb_5,
@@ -1173,7 +1173,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [ilv_1, ilv_2, ilv_3, ilv_4, ilv_5],
 		arena_name: 'Nokia Arena',
-		arena_dedcription:
+		arena_description:
 			'The Nokia Arena, also known by its non-sponsored name Tampere Deck Arena, is an indoor arena in Tampere, Finland, which hosts ice hockey games and large cultural events. Its construction was approved by the City Council of Tampere on 19 May 2010, and it was officially opened on 3 December 2021.',
 		arena_capacity: 13455,
 		arena_photo: ilv_6,
@@ -1218,7 +1218,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [bel_1, bel_2, bel_3, bel_4],
 		arena_name: 'SSE Arena',
-		arena_dedcription:
+		arena_description:
 			"The SSE Arena was known as the Odyssey Arena from 2000 to 2015. Northern Ireland's biggest indoor arena.",
 		arena_capacity: 8700,
 		arena_photo: bel_5,
@@ -1264,7 +1264,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [gen_1, gen_2, gen_3, gen_4],
 		arena_name: 'Patinoire des Vernets',
-		arena_dedcription:
+		arena_description:
 			'Patinoire des Vernets is an indoor arena located in Geneva, Switzerland. Opened in 1958.',
 		arena_capacity: 7135,
 		arena_photo: gen_5,
@@ -1309,7 +1309,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [kec_1, kec_2, kec_3, kec_4, kec_5],
 		arena_name: 'Lanxess Arena',
-		arena_dedcription:
+		arena_description:
 			'Lanxess Arena is an indoor arena, in Cologne, North Rhine-Westphalia, Germany. The arena is spanned by a steel arch supporting the roof via steel cables. The height of the arch is 76 m (249 ft) and its weight is 480 tons. On June 2, 2008, it was announced that Kölnarena would be renamed Lanxess Arena, for a period of ten years. The sponsor, Lanxess AG, is a specialty chemicals group based in the Lanxess Tower in Deutz, Cologne. This naming-rights deal was extended in 2017 until December 31, 2023. Then in October 2023, it was announced that the cooperation between the arena and Lanxess had been extended for another 5 years until 2028.',
 		arena_capacity: 18500,
 		arena_photo: kec_6,
@@ -1354,7 +1354,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [pel_1, pel_2, pel_3, pel_4],
 		arena_name: 'Isku Areena',
-		arena_dedcription:
+		arena_description:
 			'Isku Areena is an ice rink located at the Lahti Sports Center in Lahti, Finland.The hall has 16 stalls and a 200-seat lunch restaurant with a view of the rink.',
 		arena_capacity: 5371,
 		arena_photo: pel_5,
@@ -1399,7 +1399,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [shef_1, shef_2, shef_3, shef_4],
 		arena_name: 'Sheffield Arena',
-		arena_dedcription:
+		arena_description:
 			'Sheffield Arena, known for sponsorship purposes as Utilita Arena Sheffield, is a multi-purpose arena located in Sheffield, England. It is situated near Meadowhall and lies between Sheffield city centre and Rotherham town centre. Opened in 1991.',
 		arena_capacity: 9300,
 		arena_photo: shef_5,
@@ -1444,7 +1444,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [rbm_1, rbm_2, rbm_3, rbm_4],
 		arena_name: 'SAP Garden',
-		arena_dedcription:
+		arena_description:
 			'SAP Garden is an indoor arena, in Olympiapark, Munich. The arena was completed in summer 2024. The site was built at the location of the former Radstadion which was demolished in 2015.',
 		arena_capacity: 10796,
 		arena_photo: rbm_5,
@@ -1489,7 +1489,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [man_1, man_2, man_3, man_4],
 		arena_name: 'SAP Arena',
-		arena_dedcription:
+		arena_description:
 			'SAP Arena is a multi-purpose arena in Mannheim, Germany. Inaugurated in 2005. The SAP Arena is one of the largest in Germany and one of the most high-tech in Europe. The arena is named after its sponsor SAP.',
 		arena_capacity: 13600,
 		arena_photo: man_5,
@@ -1534,7 +1534,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [ifk_1, ifk_2, ifk_3, ifk_4],
 		arena_name: 'Helsinki Ice Hall',
-		arena_dedcription:
+		arena_description:
 			'Helsinki Ice Hall, colloquially called Nordis, is an indoor arena located in Helsinki, Finland.',
 		arena_capacity: 8200,
 		arena_photo: ifk_5,
@@ -1579,7 +1579,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [wob_1, wob_2, wob_3, wob_4],
 		arena_name: 'Eis Arena',
-		arena_dedcription:
+		arena_description:
 			'Eis Arena is an arena in Wolfsburg, Germany. Eisarena Wolfsburg opened in 2006.',
 		arena_capacity: 4660,
 		arena_photo: wob_5,
@@ -1624,7 +1624,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [hcb_1, hcb_2, hcb_3],
 		arena_name: 'Sparkasse Arena',
-		arena_dedcription:
+		arena_description:
 			"The Sparkasse Arena, formerly called PalaOnda or Eiswelle, is an indoor sports arena in Bolzano, Italy. It was built to host the 1994 Men's World Ice Hockey Championships along with Forum di Assago.",
 		arena_capacity: 7200,
 		arena_photo: hcb_4,
@@ -1669,7 +1669,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [deg_1, deg_2, deg_3, deg_4],
 		arena_name: 'PSD Bank Dome',
-		arena_dedcription:
+		arena_description:
 			'The PSD Bank Dome is a multi-use indoor arena in Düsseldorf, Germany, it opened in 2006.',
 		arena_capacity: 14282,
 		arena_photo: deg_5,
@@ -1714,7 +1714,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [koo_1, koo_2, koo_3],
 		arena_name: 'Lumon arena',
-		arena_dedcription:
+		arena_description:
 			'Lumon arena is an ice hockey arena located in Kouvola, Finland. The name of the Kouvolan jäähalli changed in 2015 as a continuation of the arena when KooKoo and Lumon entered into a co-operation agreement.',
 		arena_capacity: 5950,
 		arena_photo: koo_4,
@@ -1759,7 +1759,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [ore_1, ore_2, ore_3, ore_4],
 		arena_name: 'Behrn Arena',
-		arena_dedcription:
+		arena_description:
 			'Behrn Arena is an indoor arena located in Örebro, Sweden. The arena opened on 1 January 1965.On 27 March 1967, the Rolling Stones performed two shows at the arena, during their sixth European tour. Which was the only concert that was held at the venue.',
 		arena_capacity: 5500,
 		arena_photo: ore_5,
@@ -1804,7 +1804,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [hcbb_1, hcbb_2, hcbb_3, hcbb_4],
 		arena_name: 'Tissot Arena',
-		arena_dedcription:
+		arena_description:
 			'Tissot Arena is a combined multi-purpose stadium and arena in Biel/Bienne, Canton of Bern, Switzerland.',
 		arena_capacity: 6521,
 		arena_photo: hcbb_5,
@@ -1849,7 +1849,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [vit_1, vit_2, vit_3, vit_4],
 		arena_name: 'Ostravar Aréna',
-		arena_dedcription:
+		arena_description:
 			'OSTRAVAR Aréna is an indoor arena used mainly for ice hockey matches, in Vítkovice, Ostrava, Czech Republic. It opened in 1986, and underwent a € 23.3 million renovation between 2003 and 2004.',
 		arena_capacity: 10004,
 		arena_photo: vit_5,
@@ -1894,7 +1894,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [ing_1, ing_2, ing_3, ing_4, ing_5],
 		arena_name: 'Saturn Arena',
-		arena_dedcription: 'Saturn Arena is an arena in Ingolstadt, Germany.',
+		arena_description: 'Saturn Arena is an arena in Ingolstadt, Germany.',
 		arena_capacity: 4815,
 		arena_photo: ing_6,
 		facebook: 'http://www.facebook.com/ercingolstadt/',
@@ -1938,7 +1938,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [tri_1, tri_2, tri_3, tri_4],
 		arena_name: 'Werk Arena',
-		arena_dedcription:
+		arena_description:
 			'Werk Arena is an indoor sporting arena located in Třinec, Czech Republic.',
 		arena_capacity: 5400,
 		arena_photo: tri_5,
@@ -1983,7 +1983,7 @@ export const ehl: Teams[] = [
 		chartLabels: [],
 		photos: [mhk_1, mhk_2, mhk_3, mhk_4],
 		arena_name: 'ČPP Arena',
-		arena_dedcription:
+		arena_description:
 			'ČPP Arena, is an arena in Hradec Králové, Czech Republic. It opened in 1957.',
 		arena_capacity: 6890,
 		arena_photo: mhk_5,

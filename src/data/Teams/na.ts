@@ -106,7 +106,7 @@ export const na: Teams[] = [
 		chartLabels: [],
 		photos: [zsc_1, zsc_2, zsc_3, zsc_4],
 		arena_name: 'Swiss Life Arena',
-		arena_dedcription:
+		arena_description:
 			'The Swiss Life Arena is an ice hockey and entertainment arena in the Altstetten quarter of Zürich, Switzerland. It is located approximately seven kilometers west of downtown Zürich. The arena officially opened in October 2022.',
 		arena_capacity: 12000,
 		arena_photo: zsc_5,
@@ -148,7 +148,7 @@ export const na: Teams[] = [
 		chartLabels: [],
 		photos: [evz_1, evz_2, evz_3, evz_4],
 		arena_name: 'Bossard Arena',
-		arena_dedcription:
+		arena_description:
 			'Bossard Arena is an indoor sporting arena located in Zug, Switzerland. Opened in 2010.The venue is named after Bossard Holding, an international logistics company headquartered in the city.',
 		arena_capacity: 7800,
 		arena_photo: evz_5,
@@ -190,7 +190,7 @@ export const na: Teams[] = [
 		chartLabels: [],
 		photos: [scb_1, scb_2, scb_3, scb_4],
 		arena_name: 'PostFinance Arena',
-		arena_dedcription:
+		arena_description:
 			'The PostFinance-Arena (originally known as Eisstadion Allmend and Bern Arena) is an indoor arena in Bern, Switzerland. It was opened in October 1967.',
 		arena_capacity: 17031,
 		arena_photo: scb_5,
@@ -232,7 +232,7 @@ export const na: Teams[] = [
 		chartLabels: [],
 		photos: [hcd_1, hcd_2, hcd_3, hcd_4],
 		arena_name: 'zondacrypto Arena',
-		arena_dedcription:
+		arena_description:
 			'zondacrypto Arena is an indoor arena in Davos, Switzerland. Every year the Spengler Cup is played in this arena.Major renovation of the arena started at the conclusion of the 2017–18 season to upgrade most of the stands and the concourse. The seating capacity was not increased and the total cost was around CHF 27 million. Construction began in 2018 and was completed in 2021.',
 		arena_capacity: 7080,
 		arena_photo: hcd_5,
@@ -274,7 +274,7 @@ export const na: Teams[] = [
 		chartLabels: [],
 		photos: [lhc_1, lhc_2, lhc_3],
 		arena_name: 'Vaudoise Aréna',
-		arena_dedcription:
+		arena_description:
 			'The Vaudoise Aréna (provisionally known as Espace Malley) is a multi-purpose indoor arena located in Prilly, a western suburb of Lausanne in Switzerland. Opened in September 2019, it was built on the site of the former, now demolished, CIG de Malley which it replaced to host the 2020 Winter Youth Olympics.',
 		arena_capacity: 9600,
 		arena_photo: lhc_4,
@@ -316,7 +316,7 @@ export const na: Teams[] = [
 		chartLabels: [],
 		photos: [frg_1, frg_2, frg_3, frg_4],
 		arena_name: 'BCF Arena',
-		arena_dedcription:
+		arena_description:
 			"BCF Arena (formerly Patinoire Saint-Léonard) is an indoor sporting arena in Fribourg, Switzerland. Built in 1983 and then completely rebuilt from 2018 to 2020. Major renovations began in the summer of 2018 to increase the arena's capacity from 6,500 to 8,934 and were completed two years later in the summer of 2020.There are also 6 restaurants and 12 concessions stands, 336 seats in various suites and 76 Dine & View seats.",
 		arena_capacity: 9262,
 		arena_photo: frg_5,
@@ -358,7 +358,7 @@ export const na: Teams[] = [
 		chartLabels: [],
 		photos: [hcl_1, hcl_2, hcl_3, hcl_4],
 		arena_name: 'Cornèr Arena',
-		arena_dedcription:
+		arena_description:
 			'Cornèr Arena is an arena in Porza, Switzerland, near the city of Lugano.',
 		arena_capacity: 7200,
 		arena_photo: hcl_5,
@@ -400,7 +400,7 @@ export const na: Teams[] = [
 		chartLabels: [],
 		photos: [amb_1, amb_2, amb_3],
 		arena_name: 'Gottardo Arena',
-		arena_dedcription:
+		arena_description:
 			'The NuoValascia, or Gottardo Arena is an ice hockey arena in Ambrì, Ticino, Switzerland. It is located only a few feet away from the former Valascia. The inauguration took place on September 11, 2021.',
 		arena_capacity: 6775,
 		arena_photo: amb_4,
@@ -443,7 +443,7 @@ export const na: Teams[] = [
 		chartLabels: [],
 		photos: [gen_1, gen_2, gen_3, gen_4],
 		arena_name: 'Patinoire des Vernets',
-		arena_dedcription:
+		arena_description:
 			'Patinoire des Vernets is an indoor arena located in Geneva, Switzerland. Opened in 1958.',
 		arena_capacity: 7135,
 		arena_photo: gen_5,
@@ -485,7 +485,7 @@ export const na: Teams[] = [
 		chartLabels: [],
 		photos: [hcb_1, hcb_2, hcb_3, hcb_4],
 		arena_name: 'Tissot Arena',
-		arena_dedcription:
+		arena_description:
 			'Tissot Arena is a combined multi-purpose stadium and arena in Biel/Bienne, Canton of Bern, Switzerland.',
 		arena_capacity: 6521,
 		arena_photo: hcb_5,
@@ -527,7 +527,7 @@ export const na: Teams[] = [
 		chartLabels: [],
 		photos: [scl_1, scl_2, scl_3],
 		arena_name: 'Emmental Versicherung Arena',
-		arena_dedcription:
+		arena_description:
 			'The Emmental Versicherung Arena (officially written as emmental versicherung arena) is an ice sports and event centre located in the Swiss municipality of Langnau im Emmental, in the canton of Bern. It was completed in 1975. The arena is the second-smallest ice rink among all the National League teams. Its original name is derived from the nearby river Ilfis.',
 		arena_capacity: 6050,
 		arena_photo: scl_4,
@@ -569,7 +569,7 @@ export const na: Teams[] = [
 		chartLabels: [],
 		photos: [rjl_1, rjl_2, rjl_3],
 		arena_name: 'St. Galler Kantonalbank Arena',
-		arena_dedcription:
+		arena_description:
 			'St. Galler Kantonalbank Arena, formerly the Diners Club Arena, and originally known as Eishalle Lido, is an indoor sporting arena located in Rapperswil, Switzerland. Was built in 1987. The arena was completely re-done in 2005, and changed its name following corporate sponsorship from Diners Club International. Its name was changed again in 2016 after a new sponsorship deal with naming rights was agreed with St. Galler Kantonalbank.',
 		arena_capacity: 6100,
 		arena_photo: rjl_4,
@@ -611,7 +611,7 @@ export const na: Teams[] = [
 		chartLabels: [],
 		photos: [klo_1, klo_2, klo_3, klo_4],
 		arena_name: 'Swiss Arena',
-		arena_dedcription:
+		arena_description:
 			'SWISS Arena is an indoor arena in Kloten, Switzerland. In 2008 the Eishalle Schluefweg was renamed Kolping Arena due to a sponsoring deal. In 2015 it was then again renamed to Swiss Arena. In 2009 it was one of the hosts of the IIHF World Championships.',
 		arena_capacity: 7624,
 		arena_photo: klo_5,
@@ -653,7 +653,7 @@ export const na: Teams[] = [
 		chartLabels: [],
 		photos: [ajo_1, ajo_2, ajo_3],
 		arena_name: 'Raiffeisen Arena',
-		arena_dedcription:
+		arena_description:
 			'The Raiffeisen Arena is an ice hockey arena in Porrentruy, Switzerland.',
 		arena_capacity: 5078,
 		arena_photo: ajo_4,

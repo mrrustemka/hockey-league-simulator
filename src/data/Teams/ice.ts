@@ -85,7 +85,7 @@ export const ice: Teams[] = [
 		chartLabels: [],
 		photos: [kac_1, kac_2],
 		arena_name: 'Stadthalle',
-		arena_dedcription: '',
+		arena_description: '',
 		arena_capacity: 5500,
 		arena_photo: kac_3,
 		facebook: 'http://facebook.com/eckac/',
@@ -127,7 +127,7 @@ export const ice: Teams[] = [
 		chartLabels: [],
 		photos: [hci_1, hci_2],
 		arena_name: 'Tiroler Wasserkraft Arena',
-		arena_dedcription:
+		arena_description:
 			'Tiroler Wasserkraft Arena is an indoor sporting arena located in Innsbruck, Austria. The arena was built in 2005.',
 		arena_capacity: 7212,
 		arena_photo: hci_3,
@@ -170,7 +170,7 @@ export const ice: Teams[] = [
 		chartLabels: [],
 		photos: [vsv_1, vsv_2],
 		arena_name: '	Villacher Stadthalle',
-		arena_dedcription:
+		arena_description:
 			'Stadthalle Villach is an indoor sporting arena located in Villach, Austria. The arena was built in 1969.',
 		arena_capacity: 4500,
 		arena_photo: vsv_3,
@@ -213,7 +213,7 @@ export const ice: Teams[] = [
 		chartLabels: [],
 		photos: [rbs_1, rbs_2],
 		arena_name: 'Eisarena Salzburg',
-		arena_dedcription:
+		arena_description:
 			'Eisarena Salzburg is an indoor sports arena, located in Salzburg, Austria. The arena was built in 1960.',
 		arena_capacity: 3400,
 		arena_photo: rbs_3,
@@ -256,7 +256,7 @@ export const ice: Teams[] = [
 		chartLabels: [],
 		photos: [bwl_1, bwl_2],
 		arena_name: '	Linz AG Eisarena',
-		arena_dedcription: '',
+		arena_description: '',
 		arena_capacity: 4865,
 		arena_photo: bwl_3,
 		facebook: 'https://www.facebook.com/SteinbachBlackWingslinz/',
@@ -298,7 +298,7 @@ export const ice: Teams[] = [
 		chartLabels: [],
 		photos: [hcb_1, hcb_2, hcb_3],
 		arena_name: 'Sparkasse Arena',
-		arena_dedcription:
+		arena_description:
 			"The Sparkasse Arena, formerly called PalaOnda or Eiswelle, is an indoor sports arena in Bolzano, Italy. It was built to host the 1994 Men's World Ice Hockey Championships along with Forum di Assago.",
 		arena_capacity: 7200,
 		arena_photo: hcb_4,
@@ -341,7 +341,7 @@ export const ice: Teams[] = [
 		chartLabels: [],
 		photos: [hcp_1, hcp_2],
 		arena_name: '	Intercable Arena',
-		arena_dedcription: '',
+		arena_description: '',
 		arena_capacity: 3100,
 		arena_photo: hcp_3,
 		facebook: 'https://www.facebook.com/hcpustertal',
@@ -383,7 +383,7 @@ export const ice: Teams[] = [
 		chartLabels: [],
 		photos: [avs_1, avs_2],
 		arena_name: 'AlbaAréna',
-		arena_dedcription: '',
+		arena_description: '',
 		arena_capacity: 6000,
 		arena_photo: avs_3,
 		facebook: 'https://www.facebook.com/FehervarAV19',
@@ -425,7 +425,7 @@ export const ice: Teams[] = [
 		chartLabels: [],
 		photos: [hko_1, hko_2],
 		arena_name: 'Tivoli Hall',
-		arena_dedcription:
+		arena_description:
 			'Tivoli Hall is a complex of two multi-purpose indoor sports arenas in the Tivoli City Park in Ljubljana, the capital of Slovenia. The complex was opened in 1965.',
 		arena_capacity: 6800,
 		arena_photo: hko_3,
@@ -470,7 +470,7 @@ export const ice: Teams[] = [
 		chartLabels: [],
 		photos: [piv_1, piv_2],
 		arena_name: 'Vorarlberghalle',
-		arena_dedcription:
+		arena_description:
 			'Vorarlberghalle is an indoor sporting arena located in Feldkirch, Austria. The arena was built in 1977.',
 		arena_capacity: 5200,
 		arena_photo: piv_3,
@@ -513,7 +513,7 @@ export const ice: Teams[] = [
 		chartLabels: [],
 		photos: [vic_1, vic_2],
 		arena_name: 'Steffl Arena',
-		arena_dedcription:
+		arena_description:
 			'Steffl Arena is an indoor sporting arena located in Vienna, Austria. The arena was opened in January 1995. It underwent major renovations in 2010 and 2011.',
 		arena_capacity: 7022,
 		arena_photo: vic_3,
@@ -556,7 +556,7 @@ export const ice: Teams[] = [
 		chartLabels: [],
 		photos: [ash_1, ash_2],
 		arena_name: 'Pala Hodegart',
-		arena_dedcription: '',
+		arena_description: '',
 		arena_capacity: 3000,
 		arena_photo: ash_3,
 		facebook: 'https://www.facebook.com/asiagohockey1935srl',
@@ -598,7 +598,7 @@ export const ice: Teams[] = [
 		chartLabels: [],
 		photos: [g99_1, g99_2],
 		arena_name: 'Eisstadion Liebenau',
-		arena_dedcription:
+		arena_description:
 			'Eisstadion Liebenau, currently named Merkur Eisstadion for sponsorship reasons, is an indoor sporting arena located in Graz, Austria. The arena was built in 1963.',
 		arena_capacity: 4126,
 		arena_photo: g99_3,

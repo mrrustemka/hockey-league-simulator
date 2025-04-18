@@ -25,7 +25,7 @@ export type Teams = {
 	chartLabels: string[];
 	photos: string[];
 	arena_name?: string;
-	arena_dedcription?: string;
+	arena_description?: string;
 	arena_capacity?: number;
 	arena_photo?: string;
 	facebook: string;

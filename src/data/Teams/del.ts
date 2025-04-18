@@ -107,7 +107,7 @@ export const del: Teams[] = [
 		chartLabels: [],
 		photos: [bhv_1, bhv_2, bhv_3],
 		arena_name: 'Eisarena Bremerhaven',
-		arena_dedcription: '',
+		arena_description: '',
 		arena_capacity: 4674,
 		arena_photo: bhv_4,
 		facebook: 'http://www.facebook.com/Fischtown.Pinguins/',
@@ -148,7 +148,7 @@ export const del: Teams[] = [
 		chartLabels: [],
 		photos: [ebb_1, ebb_2, ebb_3, ebb_4],
 		arena_name: 'Uber Arena',
-		arena_dedcription:
+		arena_description:
 			"Uber Arena (previously branded as O2 World and Mercedes-Benz Arena) is a multipurpose indoor arena in the Friedrichshain neighborhood of Berlin, Germany, which opened in 2008. The venue became known as Uber Arena following a long-term deal with venue operators AEG Europe in 2024. The arena was one of the most prominent elements of the Mediaspree urban redevelopment project, quickly gaining emblematic status in the debates surrounding the project's impact.",
 		arena_capacity: 14200,
 		arena_photo: ebb_5,
@@ -190,7 +190,7 @@ export const del: Teams[] = [
 		chartLabels: [],
 		photos: [str_1, str_2, str_3],
 		arena_name: 'Eisstadion am Pulverturm',
-		arena_dedcription:
+		arena_description:
 			'Eisstadion am Pulverturm is an arena in Straubing, Germany. It opened in 1967. It is one of the smallest arenas in the DEL. Eisstadion am Pulverturm is on Kinseherberg 23 in the city center.',
 		arena_capacity: 5635,
 		arena_photo: str_4,
@@ -232,7 +232,7 @@ export const del: Teams[] = [
 		chartLabels: [],
 		photos: [rbm_1, rbm_2, rbm_3, rbm_4],
 		arena_name: 'SAP Garden',
-		arena_dedcription:
+		arena_description:
 			'SAP Garden is an indoor arena, in Olympiapark, Munich. The arena was completed in summer 2024. The site was built at the location of the former Radstadion which was demolished in 2015.',
 		arena_capacity: 10796,
 		arena_photo: rbm_5,
@@ -274,7 +274,7 @@ export const del: Teams[] = [
 		chartLabels: [],
 		photos: [wob_1, wob_2, wob_3, wob_4],
 		arena_name: 'Eis Arena',
-		arena_dedcription:
+		arena_description:
 			'Eis Arena is an arena in Wolfsburg, Germany. Eisarena Wolfsburg opened in 2006.',
 		arena_capacity: 4660,
 		arena_photo: wob_5,
@@ -316,7 +316,7 @@ export const del: Teams[] = [
 		chartLabels: [],
 		photos: [sww_1, sww_2, sww_3, sww_4],
 		arena_name: 'Helios Arena',
-		arena_dedcription:
+		arena_description:
 			'Helios Arena, originally known as Eisstadion am Bauchenberg, is an arena in Villingen-Schwenningen, Germany. It opened in 1976.',
 		arena_capacity: 5135,
 		arena_photo: sww_5,
@@ -358,7 +358,7 @@ export const del: Teams[] = [
 		chartLabels: [],
 		photos: [man_1, man_2, man_3, man_4],
 		arena_name: 'SAP Arena',
-		arena_dedcription:
+		arena_description:
 			'SAP Arena is a multi-purpose arena in Mannheim, Germany. Inaugurated in 2005. The SAP Arena is one of the largest in Germany and one of the most high-tech in Europe. The arena is named after its sponsor SAP.',
 		arena_capacity: 13600,
 		arena_photo: man_5,
@@ -400,7 +400,7 @@ export const del: Teams[] = [
 		chartLabels: [],
 		photos: [kec_1, kec_2, kec_3, kec_4, kec_5],
 		arena_name: 'Lanxess Arena',
-		arena_dedcription:
+		arena_description:
 			'Lanxess Arena is an indoor arena, in Cologne, North Rhine-Westphalia, Germany. The arena is spanned by a steel arch supporting the roof via steel cables. The height of the arch is 76 m (249 ft) and its weight is 480 tons. On June 2, 2008, it was announced that Kölnarena would be renamed Lanxess Arena, for a period of ten years. The sponsor, Lanxess AG, is a specialty chemicals group based in the Lanxess Tower in Deutz, Cologne. This naming-rights deal was extended in 2017 until December 31, 2023. Then in October 2023, it was announced that the cooperation between the arena and Lanxess had been extended for another 5 years until 2028.',
 		arena_capacity: 18500,
 		arena_photo: kec_6,
@@ -442,7 +442,7 @@ export const del: Teams[] = [
 		chartLabels: [],
 		photos: [ing_1, ing_2, ing_3, ing_4, ing_5],
 		arena_name: 'Saturn Arena',
-		arena_dedcription: 'Saturn Arena is an arena in Ingolstadt, Germany.',
+		arena_description: 'Saturn Arena is an arena in Ingolstadt, Germany.',
 		arena_capacity: 4815,
 		arena_photo: ing_6,
 		facebook: 'http://www.facebook.com/ercingolstadt/',
@@ -483,7 +483,7 @@ export const del: Teams[] = [
 		chartLabels: [],
 		photos: [nit_1, nit_2, nit_3],
 		arena_name: 'Arena Nürnberger Versicherung',
-		arena_dedcription:
+		arena_description:
 			'The Arena Nürnberger Versicherung (originally known as the Nuremberg Arena) is a multi-use indoor arena that is located in Nuremberg, Germany.',
 		arena_capacity: 7809,
 		arena_photo: nit_4,
@@ -525,7 +525,7 @@ export const del: Teams[] = [
 		chartLabels: [],
 		photos: [deg_1, deg_2, deg_3, deg_4],
 		arena_name: 'PSD Bank Dome',
-		arena_dedcription:
+		arena_description:
 			'The PSD Bank Dome is a multi-use indoor arena in Düsseldorf, Germany, it opened in 2006.',
 		arena_capacity: 14282,
 		arena_photo: deg_5,
@@ -567,7 +567,7 @@ export const del: Teams[] = [
 		chartLabels: [],
 		photos: [fra_1, fra_2, fra_3],
 		arena_name: 'Eissporthalle Frankfurt',
-		arena_dedcription:
+		arena_description:
 			'Eissporthalle Frankfurt or Eissporthalle am Ratsweg is an arena in the Bornheim district of Frankfurt, Germany. It has opened on 19 December 1981.',
 		arena_capacity: 6946,
 		arena_photo: fra_4,
@@ -609,7 +609,7 @@ export const del: Teams[] = [
 		chartLabels: [],
 		photos: [iec_1, iec_2],
 		arena_name: 'Balver-Zinn Arena',
-		arena_dedcription: '',
+		arena_description: '',
 		arena_capacity: 4967,
 		arena_photo: iec_3,
 		facebook: 'https://www.facebook.com/IserlohnRoosters/',
@@ -650,7 +650,7 @@ export const del: Teams[] = [
 		chartLabels: [],
 		photos: [aug_1, aug_2, aug_3, aug_4],
 		arena_name: 'Curt Frenzel Stadium',
-		arena_dedcription:
+		arena_description:
 			'The Curt Frenzel Stadium (Curt-Frenzel-Stadion) is an arena in Augsburg, Germany. It was renamed in 1971 after Curt Frenzel, club president of the Panther, who died in 1970. Until 2013 the stadium was only covered by a roof. Not having walls, the stadium was the only in German professional ice hockey partly being an outdoor arena. Along with a complete renovation the arena was closed for the DEL season 2013/14. The renovation had begun in 2010 and was scheduled to be completed in 2012. However, after the first stand had been completed, fans discovered that they were not able to see parts of the ice. The stand had to be rebuilt, causing an estimate of 2,5 million Euro extra cost and leading to a not yet settled lawsuit against the responsible architect.',
 		arena_capacity: 6218,
 		arena_photo: aug_5,

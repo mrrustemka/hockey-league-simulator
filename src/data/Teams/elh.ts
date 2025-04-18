@@ -108,7 +108,7 @@ export const elh: Teams[] = [
 		chartLabels: [],
 		photos: [pce_1, pce_2, pce_3, pce_4, pce_5],
 		arena_name: 'Enteria arena',
-		arena_dedcription:
+		arena_description:
 			'Enteria arena (formerly Tipsport Arena or ČEZ Arena) is an indoor sporting arena in Pardubice, Czech Republic.',
 		arena_capacity: 10194,
 		arena_photo: pce_6,
@@ -150,7 +150,7 @@ export const elh: Teams[] = [
 		chartLabels: [],
 		photos: [spa_1, spa_2, spa_3, spa_4],
 		arena_name: 'O2 Arena',
-		arena_dedcription:
+		arena_description:
 			'O2 Arena (stylised as O2 arena) is a multi-purpose arena, in Prague, Czech Republic.It is the third-largest ice hockey arena in Europe. It has hosted important sporting events such as three Ice Hockey World Championships (2004, 2015 and 2024), a handful of NHL games.',
 		arena_capacity: 17383,
 		arena_photo: spa_5,
@@ -192,7 +192,7 @@ export const elh: Teams[] = [
 		chartLabels: [],
 		photos: [tri_1, tri_2, tri_3, tri_4],
 		arena_name: 'Werk Arena',
-		arena_dedcription:
+		arena_description:
 			'Werk Arena is an indoor sporting arena located in Třinec, Czech Republic.',
 		arena_capacity: 5400,
 		arena_photo: tri_5,
@@ -234,7 +234,7 @@ export const elh: Teams[] = [
 		chartLabels: [],
 		photos: [kom_1, kom_2, kom_3],
 		arena_name: 'Winning Group Arena',
-		arena_dedcription:
+		arena_description:
 			"Winning Group Arena, is an indoor arena in Brno, Czech Republic. Until 2011, the arena was named Hala Rondo. However, after Kajotbet started sponsoring the arena, it was renamed Kajot Arena. After the end of the contract, it was called 'Rondo Hall' again until a new sponsorship with DRFG was signed in 2015, renaming the arena to DRFG Arena.",
 		arena_capacity: 7700,
 		arena_photo: kom_4,
@@ -277,7 +277,7 @@ export const elh: Teams[] = [
 		chartLabels: [],
 		photos: [ceb_1, ceb_2, ceb_3, ceb_4],
 		arena_name: 'Budvar Arena',
-		arena_dedcription:
+		arena_description:
 			'Budvar Arena is an indoor sporting arena located in České Budějovice, Czech Republic. The arena opened in October 1946 and has since undergone several renovations, being almost completely rebuilt in 2002.',
 		arena_capacity: 6421,
 		arena_photo: ceb_5,
@@ -319,7 +319,7 @@ export const elh: Teams[] = [
 		chartLabels: [],
 		photos: [mhk_1, mhk_2, mhk_3, mhk_4],
 		arena_name: 'ČPP Arena',
-		arena_dedcription:
+		arena_description:
 			'ČPP Arena, is an arena in Hradec Králové, Czech Republic. It opened in 1957.',
 		arena_capacity: 6890,
 		arena_photo: mhk_5,
@@ -361,7 +361,7 @@ export const elh: Teams[] = [
 		chartLabels: [],
 		photos: [lib_1, lib_2, lib_3],
 		arena_name: 'Home Credit Arena',
-		arena_dedcription:
+		arena_description:
 			'The Home Credit Arena is an indoor sporting arena located in Liberec, Czech Republic. In its first five years of operation, the Arena welcomed 1.4 million visitors and hosted 467 events.',
 		arena_capacity: 7250,
 		arena_photo: lib_4,
@@ -403,7 +403,7 @@ export const elh: Teams[] = [
 		chartLabels: [],
 		photos: [vit_1, vit_2, vit_3, vit_4],
 		arena_name: 'Ostravar Aréna',
-		arena_dedcription:
+		arena_description:
 			'OSTRAVAR Aréna is an indoor arena used mainly for ice hockey matches, in Vítkovice, Ostrava, Czech Republic. It opened in 1986, and underwent a € 23.3 million renovation between 2003 and 2004.',
 		arena_capacity: 10004,
 		arena_photo: vit_5,
@@ -445,7 +445,7 @@ export const elh: Teams[] = [
 		chartLabels: [],
 		photos: [olo_1, olo_2, olo_3],
 		arena_name: 'Zimní stadion Olomouc',
-		arena_dedcription:
+		arena_description:
 			'The Zimní stadion Olomouc is an indoor sporting arena located in Olomouc, Czech Republic. It was built in 1948 and roofed in 1967.',
 		arena_capacity: 5500,
 		arena_photo: olo_4,
@@ -487,7 +487,7 @@ export const elh: Teams[] = [
 		chartLabels: [],
 		photos: [lit_1, lit_2, lit_3, lit_4],
 		arena_name: 'Zimní stadion Ivana Hlinky',
-		arena_dedcription: '',
+		arena_description: '',
 		arena_capacity: 6011,
 		arena_photo: lit_5,
 		facebook: 'https://www.facebook.com/hcverva/',
@@ -528,7 +528,7 @@ export const elh: Teams[] = [
 		chartLabels: [],
 		photos: [kva_1, kva_2, kva_3, kva_4, kva_5],
 		arena_name: 'KV Arena',
-		arena_dedcription:
+		arena_description:
 			'KV Arena is an indoor sporting arena located in Karlovy Vary, Czech Republic, which opened on 19 June 2009. KV Arena comprises 4 interconnecting halls: Multi-purpose Hall (Main Hall), Training Hall, Ball Sports Hall and Swimming Pool.',
 		arena_capacity: 7500,
 		arena_photo: kva_6,
@@ -570,7 +570,7 @@ export const elh: Teams[] = [
 		chartLabels: [],
 		photos: [plz_1, plz_2, plz_3],
 		arena_name: 'Logspeed CZ Aréna',
-		arena_dedcription:
+		arena_description:
 			'LOGSPEED CZ Aréna is an indoor sporting arena located in Plzeň, Czech Republic. The ice rink was established in 1950 as an open-air stadium, and between 1966 and 1970 the area was developed to cover the playing surface.',
 		arena_capacity: 7356,
 		arena_photo: plz_4,
@@ -612,7 +612,7 @@ export const elh: Teams[] = [
 		chartLabels: [],
 		photos: [mbl_1, mbl_2, mbl_3, mbl_4],
 		arena_name: 'Ško-Energo Aréna',
-		arena_dedcription:
+		arena_description:
 			'Ško-Energo Aréna is an indoor sporting arena located in Mladá Boleslav, Czech Republic.',
 		arena_capacity: 4200,
 		arena_photo: mbl_5,
@@ -654,7 +654,7 @@ export const elh: Teams[] = [
 		chartLabels: [],
 		photos: [kla_1, kla_2, kla_3],
 		arena_name: 'ČEZ Stadion',
-		arena_dedcription:
+		arena_description:
 			'ČEZ Stadion is an indoor sporting arena located in Kladno, Czech Republic. The arena, which is owned by the city of Kladno, opened in 1949, and the roof was completed in 1959.',
 		arena_capacity: 5200,
 		arena_photo: kla_4,
