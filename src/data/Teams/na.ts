@@ -81,7 +81,7 @@ import zsc_5 from '../../images/Gallery/Na/Zsc/zsc_5.jpg';
 
 export const na: Teams[] = [
 	{
-		id: 1,
+		id: '1',
 		name: 'ZSC LIONS',
 		abbreviation: 'ZSC',
 		country: 'Swi',
@@ -123,7 +123,7 @@ export const na: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 2,
+		id: '2',
 		name: 'EV Zug',
 		abbreviation: 'EVZ',
 		country: 'SWI',
@@ -165,7 +165,7 @@ export const na: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 3,
+		id: '3',
 		name: 'SC BERN',
 		abbreviation: 'SCB',
 		country: 'Swi',
@@ -207,7 +207,7 @@ export const na: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 4,
+		id: '4',
 		name: 'HC Davos',
 		abbreviation: 'HCD',
 		country: 'Swi',
@@ -249,7 +249,7 @@ export const na: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 5,
+		id: '5',
 		name: 'Lausanne HC',
 		abbreviation: 'LHC',
 		country: 'Swi',
@@ -291,7 +291,7 @@ export const na: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 6,
+		id: '6',
 		name: 'Fribourg-Gottéron',
 		abbreviation: 'FRG',
 		country: 'Swi',
@@ -333,7 +333,7 @@ export const na: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 7,
+		id: '7',
 		name: 'HC Lugano',
 		abbreviation: 'HCL',
 		country: 'SWI',
@@ -375,7 +375,7 @@ export const na: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 8,
+		id: '8',
 		name: 'HC Ambrì-Piotta',
 		abbreviation: 'AMB',
 		country: 'Swi',
@@ -418,7 +418,7 @@ export const na: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 9,
+		id: '9',
 		name: 'Geneve Servette HC',
 		abbreviation: 'GEN',
 		country: 'Swi',
@@ -460,7 +460,7 @@ export const na: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 10,
+		id: '10',
 		name: 'EHC Biel-Bienne',
 		abbreviation: 'HCB',
 		country: 'Swi',
@@ -502,7 +502,7 @@ export const na: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 11,
+		id: '11',
 		name: 'SCL Tigers',
 		abbreviation: 'SCL',
 		country: 'Swi',
@@ -544,7 +544,7 @@ export const na: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 12,
+		id: '12',
 		name: 'SC Rapperswil-Jona Lakers',
 		abbreviation: 'RJL',
 		country: 'Swi',
@@ -586,7 +586,7 @@ export const na: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 13,
+		id: '13',
 		name: 'EHC Kloten',
 		abbreviation: 'KLO',
 		country: 'Swi',
@@ -628,7 +628,7 @@ export const na: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 14,
+		id: '14',
 		name: 'HC Ajoie',
 		abbreviation: 'AJO',
 		country: 'Swi',

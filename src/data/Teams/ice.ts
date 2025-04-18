@@ -59,7 +59,7 @@ import vsv_3 from '../../images/Gallery/Ice/Vsv/vsv_3.webp';
 
 export const ice: Teams[] = [
 	{
-		id: 1,
+		id: '1',
 		name: 'EC KAC',
 		abbreviation: 'KAC',
 		country: 'AUS',
@@ -101,7 +101,7 @@ export const ice: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 2,
+		id: '2',
 		name: 'TIWAG Innsbruck - Die Haie',
 		abbreviation: 'HCI',
 		country: 'AUS',
@@ -144,7 +144,7 @@ export const ice: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 3,
+		id: '3',
 		name: 'EC VSV',
 		abbreviation: 'VSV',
 		country: 'AUS',
@@ -187,7 +187,7 @@ export const ice: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 4,
+		id: '4',
 		name: 'Red Bull Salzburg',
 		abbreviation: 'RBS',
 		country: 'AUS',
@@ -230,7 +230,7 @@ export const ice: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 5,
+		id: '5',
 		name: 'Black Wings Linz',
 		abbreviation: 'BWL',
 		country: 'AUS',
@@ -272,7 +272,7 @@ export const ice: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 6,
+		id: '6',
 		name: 'HCB Südtirol Alperia',
 		abbreviation: 'HCB',
 		country: 'ITA',
@@ -315,7 +315,7 @@ export const ice: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 7,
+		id: '7',
 		name: 'Pustertal Wölfe',
 		abbreviation: 'HCP',
 		country: 'ITA',
@@ -357,7 +357,7 @@ export const ice: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 8,
+		id: '8',
 		name: 'Hydro Fehérvár AV19',
 		abbreviation: 'AVS',
 		country: 'HUN',
@@ -399,7 +399,7 @@ export const ice: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 9,
+		id: '9',
 		name: 'HK Olimpija',
 		abbreviation: 'HKO',
 		country: 'SLN',
@@ -444,7 +444,7 @@ export const ice: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 10,
+		id: '10',
 		name: 'Pioneers Vorarlberg',
 		abbreviation: 'PIV',
 		country: 'AUS',
@@ -487,7 +487,7 @@ export const ice: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 11,
+		id: '11',
 		name: 'Vienna Capitals',
 		abbreviation: 'VIC',
 		country: 'AUS',
@@ -530,7 +530,7 @@ export const ice: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 12,
+		id: '12',
 		name: 'Asiago Hockey 1935',
 		abbreviation: 'ASH',
 		country: 'ITA',
@@ -572,7 +572,7 @@ export const ice: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 13,
+		id: '13',
 		name: 'Graz 99ers',
 		abbreviation: 'G99',
 		country: 'AUS',

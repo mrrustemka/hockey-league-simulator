@@ -89,7 +89,7 @@ import tps_5 from '../../images/Gallery/Sml/Tps/tps_5.webp';
 
 export const sml: Teams[] = [
 	{
-		id: 1,
+		id: '1',
 		name: 'Tappara',
 		abbreviation: 'TAP',
 		country: 'Fin',
@@ -131,7 +131,7 @@ export const sml: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 2,
+		id: '2',
 		name: 'Pelicans',
 		abbreviation: 'PEL',
 		country: 'Fin',
@@ -173,7 +173,7 @@ export const sml: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 3,
+		id: '3',
 		name: 'HIFK',
 		abbreviation: 'IFK',
 		country: 'Fin',
@@ -215,7 +215,7 @@ export const sml: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 4,
+		id: '4',
 		name: 'Ilves',
 		abbreviation: 'ILV',
 		country: 'Fin',
@@ -257,7 +257,7 @@ export const sml: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 5,
+		id: '5',
 		name: 'HC TPS',
 		abbreviation: 'TPS',
 		country: 'FIN',
@@ -299,7 +299,7 @@ export const sml: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 6,
+		id: '6',
 		name: 'Kalpa',
 		abbreviation: 'KAL',
 		country: 'Fin',
@@ -341,7 +341,7 @@ export const sml: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 7,
+		id: '7',
 		name: 'KooKoo',
 		abbreviation: 'KOO',
 		country: 'FIN',
@@ -383,7 +383,7 @@ export const sml: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 8,
+		id: '8',
 		name: 'JYP',
 		abbreviation: 'JYP',
 		country: 'Fin',
@@ -426,7 +426,7 @@ export const sml: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 9,
+		id: '9',
 		name: 'Kärpät',
 		abbreviation: 'KAR',
 		country: 'Fin',
@@ -468,7 +468,7 @@ export const sml: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 10,
+		id: '10',
 		name: 'Lukko',
 		abbreviation: 'LUK',
 		country: 'Fin',
@@ -510,7 +510,7 @@ export const sml: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 11,
+		id: '11',
 		name: 'SaiPa',
 		abbreviation: 'SAI',
 		country: 'Fin',
@@ -552,7 +552,7 @@ export const sml: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 12,
+		id: '12',
 		name: 'Sport',
 		abbreviation: 'SPO',
 		country: 'Fin',
@@ -594,7 +594,7 @@ export const sml: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 13,
+		id: '13',
 		name: 'Ässät',
 		abbreviation: 'ASS',
 		country: 'Fin',
@@ -636,7 +636,7 @@ export const sml: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 14,
+		id: '14',
 		name: 'Jukurit',
 		abbreviation: 'JUK',
 		country: 'Fin',
@@ -678,7 +678,7 @@ export const sml: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 15,
+		id: '15',
 		name: 'HPK',
 		abbreviation: 'HPK',
 		country: 'Fin',
@@ -720,7 +720,7 @@ export const sml: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 16,
+		id: '16',
 		name: 'Kiekko-Espoo',
 		abbreviation: 'KES',
 		country: 'Fin',

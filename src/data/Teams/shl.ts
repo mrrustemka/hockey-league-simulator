@@ -91,7 +91,7 @@ import tik_5 from '../../images/Gallery/Shl/Tik/tik_5.webp';
 
 export const shl: Teams[] = [
 	{
-		id: 1,
+		id: '1',
 		name: 'Lakers',
 		abbreviation: 'LAK',
 		country: 'Swe',
@@ -133,7 +133,7 @@ export const shl: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 2,
+		id: '2',
 		name: 'AIK',
 		abbreviation: 'AIK',
 		country: 'Swe',
@@ -175,7 +175,7 @@ export const shl: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 3,
+		id: '3',
 		name: 'Frolunda HC',
 		abbreviation: 'FRO',
 		country: 'Swe',
@@ -217,7 +217,7 @@ export const shl: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 4,
+		id: '4',
 		name: 'Farjestad BK',
 		abbreviation: 'FBK',
 		country: 'Swe',
@@ -259,7 +259,7 @@ export const shl: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 5,
+		id: '5',
 		name: 'Timra IK',
 		abbreviation: 'TIK',
 		country: 'SWE',
@@ -301,7 +301,7 @@ export const shl: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 6,
+		id: '6',
 		name: 'Lulea Hockey',
 		abbreviation: 'LHF',
 		country: 'Swe',
@@ -343,7 +343,7 @@ export const shl: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 7,
+		id: '7',
 		name: 'Leksands IF',
 		abbreviation: 'LIF',
 		country: 'Swe',
@@ -385,7 +385,7 @@ export const shl: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 8,
+		id: '8',
 		name: 'Linkoping HC',
 		abbreviation: 'LHC',
 		country: 'Swe',
@@ -427,7 +427,7 @@ export const shl: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 9,
+		id: '9',
 		name: 'Rogle BK',
 		abbreviation: 'RBK',
 		country: 'Swe',
@@ -469,7 +469,7 @@ export const shl: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 10,
+		id: '10',
 		name: 'Orebro Hockey',
 		abbreviation: 'ORE',
 		country: 'Swe',
@@ -511,7 +511,7 @@ export const shl: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 11,
+		id: '11',
 		name: 'Modo Hockey',
 		abbreviation: 'MODO',
 		country: 'Swe',
@@ -553,7 +553,7 @@ export const shl: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 12,
+		id: '12',
 		name: 'Malmö Redhawks',
 		abbreviation: 'MIF',
 		country: 'Swe',
@@ -595,7 +595,7 @@ export const shl: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 13,
+		id: '13',
 		name: 'HV71',
 		abbreviation: 'HV71',
 		country: 'Swe',
@@ -637,7 +637,7 @@ export const shl: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 15,
+		id: '15',
 		name: 'Brynäs IF',
 		abbreviation: 'BIF',
 		country: 'Swe',
@@ -680,7 +680,7 @@ export const shl: Teams[] = [
 	},
 
 	// {
-	// 	id: 14,
+	// 	id: '14',
 	// 	name: 'IK Oskarshamn',
 	// 	abbreviation: 'IKO',
 	// 	country: 'Swe',

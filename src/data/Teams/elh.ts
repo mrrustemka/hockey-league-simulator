@@ -83,7 +83,7 @@ import vit_5 from '../../images/Gallery/Elh/Vit/vit_5.webp';
 
 export const elh: Teams[] = [
 	{
-		id: 1,
+		id: '1',
 		name: 'HC Dynamo',
 		abbreviation: 'PCE',
 		country: 'CZE',
@@ -125,7 +125,7 @@ export const elh: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 2,
+		id: '2',
 		name: 'HC Sparta',
 		abbreviation: 'SPA',
 		country: 'CZE',
@@ -167,7 +167,7 @@ export const elh: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 3,
+		id: '3',
 		name: 'HC Oceláři',
 		abbreviation: 'TRI',
 		country: 'CZE',
@@ -209,7 +209,7 @@ export const elh: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 4,
+		id: '4',
 		name: 'HC Kometa Brno',
 		abbreviation: 'KOM',
 		country: 'CZE',
@@ -252,7 +252,7 @@ export const elh: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 5,
+		id: '5',
 		name: 'HC Motor České Budějovice',
 		abbreviation: 'CEB',
 		country: 'CZE',
@@ -294,7 +294,7 @@ export const elh: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 6,
+		id: '6',
 		name: 'Mountfield HK',
 		abbreviation: 'MHK',
 		country: 'CZE',
@@ -336,7 +336,7 @@ export const elh: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 7,
+		id: '7',
 		name: 'Bílí Tygři Liberec',
 		abbreviation: 'LIB',
 		country: 'CZE',
@@ -378,7 +378,7 @@ export const elh: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 8,
+		id: '8',
 		name: 'HC Vítkovice Ridera',
 		abbreviation: 'VIT',
 		country: 'CZE',
@@ -420,7 +420,7 @@ export const elh: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 9,
+		id: '9',
 		name: 'HC Olomouc',
 		abbreviation: 'OLO',
 		country: 'CZE',
@@ -462,7 +462,7 @@ export const elh: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 10,
+		id: '10',
 		name: 'HC Litvínov',
 		abbreviation: 'LIT',
 		country: 'CZE',
@@ -503,7 +503,7 @@ export const elh: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 11,
+		id: '11',
 		name: 'HC Energie Karlovy Vary',
 		abbreviation: 'KVA',
 		country: 'CZE',
@@ -545,7 +545,7 @@ export const elh: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 12,
+		id: '12',
 		name: 'HC Škoda',
 		abbreviation: 'PLZ',
 		country: 'CZE',
@@ -587,7 +587,7 @@ export const elh: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 13,
+		id: '13',
 		name: 'BK Mladá Boleslav',
 		abbreviation: 'MBL',
 		country: 'CZE',
@@ -629,7 +629,7 @@ export const elh: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 14,
+		id: '14',
 		name: 'Rytíři Kladno',
 		abbreviation: 'KLA',
 		country: 'CZE',

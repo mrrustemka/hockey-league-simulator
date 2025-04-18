@@ -82,7 +82,7 @@ import wob_5 from '../../images/Gallery/Del/Wob/wob_5.webp';
 
 export const del: Teams[] = [
 	{
-		id: 1,
+		id: '1',
 		name: 'Fischtown Pinguins',
 		abbreviation: 'BHV',
 		country: 'GER',
@@ -123,7 +123,7 @@ export const del: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 2,
+		id: '2',
 		name: 'Eisbären',
 		abbreviation: 'EBB',
 		country: 'Ger',
@@ -165,7 +165,7 @@ export const del: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 3,
+		id: '3',
 		name: 'Straubing Tigers',
 		abbreviation: 'STR',
 		country: 'GER',
@@ -207,7 +207,7 @@ export const del: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 4,
+		id: '4',
 		name: 'EHC Red Bull',
 		abbreviation: 'RBM',
 		country: 'Ger',
@@ -249,7 +249,7 @@ export const del: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 5,
+		id: '5',
 		name: 'Grizzlies',
 		abbreviation: 'WOB',
 		country: 'GER',
@@ -291,7 +291,7 @@ export const del: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 6,
+		id: '6',
 		name: 'Schwenninger Wild Wings',
 		abbreviation: 'SWW',
 		country: 'GER',
@@ -333,7 +333,7 @@ export const del: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 7,
+		id: '7',
 		name: 'Adler',
 		abbreviation: 'MAN',
 		country: 'Ger',
@@ -375,7 +375,7 @@ export const del: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 8,
+		id: '8',
 		name: 'Kolner Haie',
 		abbreviation: 'KEC',
 		country: 'Ger',
@@ -417,7 +417,7 @@ export const del: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 9,
+		id: '9',
 		name: 'ERC Ingolstadt',
 		abbreviation: 'ING',
 		country: 'GER',
@@ -458,7 +458,7 @@ export const del: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 10,
+		id: '10',
 		name: 'Nurnberg Ice Tigers',
 		abbreviation: 'NIT',
 		country: 'GER',
@@ -500,7 +500,7 @@ export const del: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 11,
+		id: '11',
 		name: 'Dusseldorf EG',
 		abbreviation: 'DEG',
 		country: 'Ger',
@@ -542,7 +542,7 @@ export const del: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 12,
+		id: '12',
 		name: 'Lowen Frankfurt',
 		abbreviation: 'FRA',
 		country: 'GER',
@@ -584,7 +584,7 @@ export const del: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 13,
+		id: '13',
 		name: 'Iserlohn Roosters',
 		abbreviation: 'IEC',
 		country: 'GER',
@@ -625,7 +625,7 @@ export const del: Teams[] = [
 		points_percentage: 0,
 	},
 	{
-		id: 14,
+		id: '14',
 		name: 'Augsburger Panther',
 		abbreviation: 'AUG',
 		country: 'GER',

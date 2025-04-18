@@ -6,7 +6,7 @@ export type Teams = {
 	goals_against: number;
 	goals_diff: number;
 	goals_for: number;
-	readonly id: number | string;
+	readonly id: string;
 	logo: string;
 	loses: number;
 	loses_ot: number;

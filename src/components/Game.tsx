@@ -89,7 +89,7 @@ function Game() {
 			goals_against: 0,
 			goals_diff: 0,
 			goals_for: 0,
-			id: 0,
+			id: '0',
 			logo: '',
 			loses: 0,
 			loses_ot: 0,
@@ -131,7 +131,7 @@ function Game() {
 			goals_against: 0,
 			goals_diff: 0,
 			goals_for: 0,
-			id: 0,
+			id: '0',
 			logo: '',
 			loses: 0,
 			loses_ot: 0,
@@ -499,7 +499,6 @@ function Game() {
 				'teamsList',
 				JSON.stringify(teamsSort([...c1, ...c2]))
 			);
-			console.log(teamsSort([...c1, ...c2]));
 		} else {
 			teamsUpdate.forEach((team, index) => {
 				team.isPlayOff = index < playOffTeam;
