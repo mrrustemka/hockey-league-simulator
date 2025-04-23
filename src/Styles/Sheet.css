@@ -96,6 +96,11 @@
   animation: tableSlideInLeft 0.5s forwards;
 }
 
+a.table__column-name:hover {
+  text-decoration: underline;
+  color: var(--table-column-name-color);
+}
+
 /* Media Queries */
 
 @media (max-width: 650px) {
