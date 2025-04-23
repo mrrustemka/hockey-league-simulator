@@ -1,5 +1,5 @@
-import { PlayOffGameResult, GameResult } from "../../data/types";
-import "../../Styles/PlayOffGame.css";
+import { PlayOffGameResult, GameResult } from '../../data/types';
+import '../../Styles/PlayOffGame.css';
 
 interface IPlayOffGame {
   game: PlayOffGameResult;
@@ -9,13 +9,13 @@ interface IPlayOffGame {
 
 function PlayOffGame({ game, index, result }: IPlayOffGame) {
   return (
-    <div className="game-result pair__game">
-      <span className="game-result__index">{index + 1}.</span>
-      <span className="game-result__teams">
+    <div className='game-result pair__game'>
+      <span className='game-result__index'>{index + 1}.</span>
+      <span className='game-result__teams'>
         {game.home} - {game.away}
       </span>
-      <span className="game-result__score">
-        {result?.homeGoals} {" - "} {result?.awayGoals}
+      <span className='game-result__score'>
+        {result?.homeGoals} {' - '} {result?.awayGoals} {result?.overtime}
       </span>
     </div>
   );
