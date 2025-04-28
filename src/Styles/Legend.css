@@ -8,6 +8,7 @@
   display: grid;
   grid-template-columns: var(--legend-grid-cols);
   grid-template-rows: auto auto;
+  padding: 1vh;
 }
 
 .legend__column-one,
