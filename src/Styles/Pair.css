@@ -11,7 +11,7 @@
   width: auto;
   background-color: var(--pair-bg-color);
   border-radius: var(--pair-border-radius);
-  margin: auto;
+  margin: 0 auto;
 }
 
 .pair__column {
