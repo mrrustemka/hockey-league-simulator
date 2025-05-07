@@ -23,6 +23,11 @@ function TeamsNumber({ league }: any) {
   }
 
   function start() {
+    const isValid =
+      champ.teamsCount >= minTeams && champ.teamsCount <= league.teams.length;
+
+    if (!isValid) return;
+
     schedule(league.teams.slice(0, champ.teamsCount), league.id);
     localStorage.setItem('leagueId', JSON.stringify(league.id));
   }
@@ -97,8 +102,22 @@ function TeamsNumber({ league }: any) {
               ? 'start__link--inactive'
               : 'start__link--active pulse'
           }`}
-          to='season'
-          onClick={() => start()}
+          to={
+            champ.teamsCount >= minTeams &&
+            champ.teamsCount <= league.teams.length
+              ? 'season'
+              : '#'
+          }
+          onClick={(e) => {
+            if (
+              champ.teamsCount < minTeams ||
+              champ.teamsCount > league.teams.length
+            ) {
+              e.preventDefault();
+              return;
+            }
+            start();
+          }}
         >
           Start
         </Link>

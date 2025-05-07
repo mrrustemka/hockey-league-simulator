@@ -63,6 +63,11 @@
   color: red !important;
 }
 
+.start__link--inactive {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 @media (hover: hover) {
   .start__link:hover,
   .start__card__button:hover {
