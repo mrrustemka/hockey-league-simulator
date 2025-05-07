@@ -57,26 +57,26 @@ function Game() {
   const League = champs.find((champ) => champ.id === leagueId);
 
   // Test simulation
-  //   useEffect(() => {
-  //     if (gameCounter < scheduleList.length) {
-  //       const interval = setInterval(() => {
-  //         const lastGame: GameResult = simulate(scheduleList[gameCounter]);
-  //         if (lastGame) {
-  //           setHomeGoals(lastGame.homeGoals);
-  //           setAwayGoals(lastGame.awayGoals);
-  //           setTypeOfOt(lastGame.overtime);
-  //           setIsSimulate(true);
+  // useEffect(() => {
+  //   if (gameCounter < scheduleList.length) {
+  //     const interval = setInterval(() => {
+  //       const lastGame: GameResult = simulate(scheduleList[gameCounter]);
+  //       if (lastGame) {
+  //         setHomeGoals(lastGame.homeGoals);
+  //         setAwayGoals(lastGame.awayGoals);
+  //         setTypeOfOt(lastGame.overtime);
+  //         setIsSimulate(true);
 
-  //           setTimeout(() => {
-  //             setGameCounter((prev) => prev + 1);
-  //             setIsSimulate(false);
-  //           }, 50); // small delay before next game
-  //         }
-  //       }, 100); // run each simulation every second
+  //         setTimeout(() => {
+  //           setGameCounter((prev) => prev + 1);
+  //           setIsSimulate(false);
+  //         }, 50); // small delay before next game
+  //       }
+  //     }, 100); // run each simulation every second
 
-  //       return () => clearInterval(interval);
-  //     }
-  //   });
+  //     return () => clearInterval(interval);
+  //   }
+  // });
 
   function simulate(game: Schedule) {
     let home: Teams = {
@@ -457,7 +457,7 @@ function Game() {
       ).slice(0, 2);
       wc2.forEach((team) => (team.isPlayOff = true));
       localStorage.setItem(
-        'teamsList',
+        'playoffList',
         JSON.stringify(teamsSort([...d1, ...d2, ...d3, ...d4, ...wc1, ...wc2]))
       );
     } else if (leagueId === '1' || leagueId === '2') {
@@ -470,7 +470,7 @@ function Game() {
       ).slice(0, 4);
       c2.forEach((team) => (team.isPlayOff = true));
       localStorage.setItem(
-        'teamsList',
+        'playoffList',
         JSON.stringify(teamsSort([...c1, ...c2]))
       );
     } else {
@@ -478,7 +478,12 @@ function Game() {
         team.isPlayOff = index < playOffTeam;
       });
 
-      localStorage.setItem('teamsList', JSON.stringify(teamsSort(teamsUpdate)));
+      localStorage.setItem(
+        'playoffList',
+        JSON.stringify(
+          teamsSort(teamsUpdate.filter((team) => team.isPlayOff === true))
+        )
+      );
     }
   }
 

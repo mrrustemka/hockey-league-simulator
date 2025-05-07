@@ -12,9 +12,7 @@ function PlayOff() {
   let [curRound, setCurRound] = useState<number>(0);
   const [tree, setTree] = useState<Array<Teams[][]>>([]);
   const [teams, setTeams] = useState<Array<Teams>>(
-    JSON.parse(localStorage.getItem('teamsList') || '[]').filter(
-      (team: { isPlayOff: boolean }) => team.isPlayOff === true
-    )
+    JSON.parse(localStorage.getItem('playoffList') || '[]')
   );
   const leagueId: string = JSON.parse(localStorage.getItem('leagueId') || '');
 

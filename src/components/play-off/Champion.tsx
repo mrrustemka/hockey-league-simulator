@@ -11,14 +11,9 @@ const { Title } = Typography;
 
 function Champion(props: { champion: Teams }) {
   const leagueId: string = JSON.parse(localStorage.getItem('leagueId') || '');
-  const playOffTeams: number =
-    JSON.parse(localStorage.getItem('teamsList') || '[]').length > 16
-      ? 16
-      : JSON.parse(localStorage.getItem('teamsList') || '[]').length > 8
-      ? 8
-      : JSON.parse(localStorage.getItem('teamsList') || '[]').length > 4
-      ? 4
-      : 2;
+  const playOffTeams: number = JSON.parse(
+    localStorage.getItem('playoffList') || '[]'
+  ).length;
   function updateGame() {
     champs
       .find((champ) => champ.id === leagueId)
@@ -37,6 +32,7 @@ function Champion(props: { champion: Teams }) {
     localStorage.removeItem('leagueId');
     localStorage.removeItem('scheduleList');
     localStorage.removeItem('teamsList');
+    localStorage.removeItem('playoffList');
     localStorage.removeItem('gameIndex');
   }
   return (
