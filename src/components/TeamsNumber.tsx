@@ -18,17 +18,17 @@ function TeamsNumber({ league }: any) {
   }
 
   function updateTeamsNum(value: number): void {
-    const newChamp: TLeague = { ...champ, teamsCount: value };
+    const newChamp: TLeague = { ...champ, teams_count: value };
     setChamp(newChamp);
   }
 
   function start() {
     const isValid =
-      champ.teamsCount >= minTeams && champ.teamsCount <= league.teams.length;
+      champ.teams_count >= minTeams && champ.teams_count <= league.teams.length;
 
     if (!isValid) return;
 
-    schedule(league.teams.slice(0, champ.teamsCount), league.id);
+    schedule(league.teams.slice(0, champ.teams_count), league.id);
     localStorage.setItem('leagueId', JSON.stringify(league.id));
   }
 
@@ -47,7 +47,7 @@ function TeamsNumber({ league }: any) {
             <div
               key={uuidv4()}
               className={`start__team ${
-                index < champ.teamsCount ? 'start__team--active' : ''
+                index < champ.teams_count ? 'start__team--active' : ''
               }`}
             >
               <img
@@ -62,11 +62,11 @@ function TeamsNumber({ league }: any) {
       </div>
       <div className='start__actions'>
         <Title level={5} className='start__actions-title--play-off-count'>
-          {champ.teamsCount > 16
+          {champ.teams_count > 16
             ? 16
-            : champ.teamsCount > 8
+            : champ.teams_count > 8
             ? 8
-            : champ.teamsCount > 4
+            : champ.teams_count > 4
             ? 4
             : 2}{' '}
           teams will advance to the Play-Off
@@ -77,8 +77,8 @@ function TeamsNumber({ league }: any) {
         <Input
           className={`start__input`}
           type='number'
-          defaultValue={league.teamsCount}
-          value={champ.teamsCount}
+          defaultValue={league.teams_count}
+          value={champ.teams_count}
           max={league.teams.length}
           min={String(minTeams)}
           onChange={(e) => updateTeamsNum(parseInt(e.target.value))}
@@ -86,8 +86,8 @@ function TeamsNumber({ league }: any) {
         <Title
           level={5}
           className={`start__actions-error ${
-            champ.teamsCount < minTeams ||
-            champ.teamsCount > league.teams.length
+            champ.teams_count < minTeams ||
+            champ.teams_count > league.teams.length
               ? 'start__actions-error--active'
               : 'start__actions-error--inactive'
           }`}
@@ -97,21 +97,21 @@ function TeamsNumber({ league }: any) {
         </Title>
         <Link
           className={`start__link ${
-            champ.teamsCount < minTeams ||
-            champ.teamsCount > league.teams.length
+            champ.teams_count < minTeams ||
+            champ.teams_count > league.teams.length
               ? 'start__link--inactive'
               : 'start__link--active pulse'
           }`}
           to={
-            champ.teamsCount >= minTeams &&
-            champ.teamsCount <= league.teams.length
+            champ.teams_count >= minTeams &&
+            champ.teams_count <= league.teams.length
               ? 'season'
               : '#'
           }
           onClick={(e) => {
             if (
-              champ.teamsCount < minTeams ||
-              champ.teamsCount > league.teams.length
+              champ.teams_count < minTeams ||
+              champ.teams_count > league.teams.length
             ) {
               e.preventDefault();
               return;

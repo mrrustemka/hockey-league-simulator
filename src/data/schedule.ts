@@ -55,7 +55,7 @@ function getNhlEhlSchedule(teams: Teams[]): Schedule[] {
 
   for (let i = 0; i < teams.length; i++) {
     for (let j = i + 1; j < teams.length; j++) {
-      if (teams[i].conferenceId === teams[j].conferenceId) {
+      if (teams[i].conference_id === teams[j].conference_id) {
         schedule.push({
           id: uuidv4(),
           home: teams[i].abbreviation,

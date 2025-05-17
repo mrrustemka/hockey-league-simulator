@@ -51,14 +51,14 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
             );
 
             const logo = team?.logo;
-            const isPlayOff = team?.isPlayOff;
+            const is_playoff = team?.is_playoff;
             const status = team?.status;
             const teamId = team?.id;
 
             return (
               <div className='table__team' key={uuidv4()}>
-                {isPlayOff && (
-                  <div className='table__column-name--isPlayOff'>x</div>
+                {is_playoff && (
+                  <div className='table__column-name--is_playoff'>x</div>
                 )}
                 <img
                   src={logo}

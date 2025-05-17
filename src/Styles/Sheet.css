@@ -71,7 +71,7 @@
   text-align: center;
 }
 
-.table__column-name--isPlayOff {
+.table__column-name--is_playoff {
   display: inline-block;
   text-align: center;
   line-height: 12px;

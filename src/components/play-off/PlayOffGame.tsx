@@ -15,7 +15,7 @@ function PlayOffGame({ game, index, result }: IPlayOffGame) {
         {game.home} - {game.away}
       </span>
       <span className='game-result__score'>
-        {result?.homeGoals} {' - '} {result?.awayGoals} {result?.overtime}
+        {result?.home_goals} {' - '} {result?.away_goals} {result?.overtime}
       </span>
     </div>
   );

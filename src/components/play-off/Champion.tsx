@@ -194,8 +194,8 @@ function Champion(props: { champion: Teams }) {
       </div>
       <Gallery photos={props.champion.photos} team={props.champion.name} />
       <Chart
-        rank={props.champion.chartData}
-        labels={props.champion.chartLabels}
+        rank={props.champion.chart_data}
+        labels={props.champion.chart_labels}
         color={props.champion.color}
         playOff={playOffTeams}
       />

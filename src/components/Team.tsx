@@ -21,8 +21,8 @@ function Team() {
     return <div className='team__not-found'>Team not found</div>;
   }
 
-  const chartData = team.chartData || [];
-  const chartLabels = team.chartLabels || [];
+  const chartData = team.chart_data || [];
+  const chartLabels = team.chart_labels || [];
   const color = team.color || '';
   const leagueId: string = JSON.parse(localStorage.getItem('leagueId') || '');
   const playOffTeams: number = JSON.parse(
@@ -46,9 +46,9 @@ function Team() {
         >
           Back to the Season
         </button>
-        {team.isPlayOff ? (
+        {team.is_playoff ? (
           <div>
-            <div className='team__name--isPlayOff'>x</div>
+            <div className='team__name--is_playoff'>x</div>
             <Title
               level={1}
               className='team__name'

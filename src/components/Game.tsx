@@ -48,8 +48,8 @@ function Game() {
     const lastGame: GameResult = simulate(scheduleList[gameCounter]);
 
     if (lastGame) {
-      setHomeGoals(lastGame.homeGoals);
-      setAwayGoals(lastGame.awayGoals);
+      setHomeGoals(lastGame.home_goals);
+      setAwayGoals(lastGame.away_goals);
       setTypeOfOt(lastGame.overtime);
     }
   };
@@ -62,8 +62,8 @@ function Game() {
   //     const interval = setInterval(() => {
   //       const lastGame: GameResult = simulate(scheduleList[gameCounter]);
   //       if (lastGame) {
-  //         setHomeGoals(lastGame.homeGoals);
-  //         setAwayGoals(lastGame.awayGoals);
+  //         setHomeGoals(lastGame.home_goals);
+  //         setAwayGoals(lastGame.away_goals);
   //         setTypeOfOt(lastGame.overtime);
   //         setIsSimulate(true);
 
@@ -99,11 +99,11 @@ function Game() {
       play_off_round_wins: 0,
       color: '#ffffff',
       flag: '',
-      isPlayOff: false,
+      is_playoff: false,
       status: '',
-      curStatusLength: 0,
-      chartData: [],
-      chartLabels: [],
+      cur_status_length: 0,
+      chart_data: [],
+      chart_labels: [],
       photos: [],
       arena_name: '',
       arena_description: '',
@@ -141,11 +141,11 @@ function Game() {
       play_off_round_wins: 0,
       color: '#ffffff',
       flag: '',
-      isPlayOff: false,
+      is_playoff: false,
       status: '',
-      curStatusLength: 0,
-      chartData: [],
-      chartLabels: [],
+      cur_status_length: 0,
+      chart_data: [],
+      chart_labels: [],
       photos: [],
       arena_name: '',
       arena_description: '',
@@ -185,13 +185,13 @@ function Game() {
 
       if (Math.random() < 0.25 && home.status === '') {
         home.status = Math.random() < 0.5 ? '\u{1F525}' : '\u{1F9CA}';
-        home.curStatusLength = Math.floor(Math.random() * 3) + 1;
-      } else if (home.status !== '' && home.curStatusLength) {
-        home.curStatusLength--;
+        home.cur_status_length = Math.floor(Math.random() * 3) + 1;
+      } else if (home.status !== '' && home.cur_status_length) {
+        home.cur_status_length--;
       }
     }
 
-    if (home.curStatusLength === 0) {
+    if (home.cur_status_length === 0) {
       home.status = '';
     }
 
@@ -200,13 +200,13 @@ function Game() {
       away = awayType;
       if (Math.random() < 0.4 && away.status === '') {
         away.status = Math.random() < 0.5 ? '\u{1F525}' : '\u{1F9CA}';
-        away.curStatusLength = Math.floor(Math.random() * 3) + 1;
-      } else if (away.status !== '' && away.curStatusLength) {
-        away.curStatusLength--;
+        away.cur_status_length = Math.floor(Math.random() * 3) + 1;
+      } else if (away.status !== '' && away.cur_status_length) {
+        away.cur_status_length--;
       }
     }
 
-    if (away.curStatusLength === 0) {
+    if (away.cur_status_length === 0) {
       away.status = '';
     }
 
@@ -261,7 +261,7 @@ function Game() {
     if (hGoals > aGoals) {
       home.points += 2;
       home.wins += 1;
-      home.chartLabels?.push(
+      home.chart_labels?.push(
         home.status +
           away.abbreviation +
           ' W ' +
@@ -271,7 +271,7 @@ function Game() {
           ' ' +
           overtime
       );
-      away.chartLabels?.push(
+      away.chart_labels?.push(
         away.status +
           home.abbreviation +
           ' L ' +
@@ -292,7 +292,7 @@ function Game() {
     } else {
       away.points += 2;
       away.wins += 1;
-      away.chartLabels?.push(
+      away.chart_labels?.push(
         away.status +
           home.abbreviation +
           ' W ' +
@@ -302,7 +302,7 @@ function Game() {
           ' ' +
           overtime
       );
-      home.chartLabels?.push(
+      home.chart_labels?.push(
         home.status +
           away.abbreviation +
           ' L ' +
@@ -336,8 +336,8 @@ function Game() {
     let result: GameResult = {
       home: home.abbreviation,
       away: away.abbreviation,
-      homeGoals: hGoals,
-      awayGoals: aGoals,
+      home_goals: hGoals,
+      away_goals: aGoals,
       overtime: overtime,
     };
     let sortedTeams: Teams[] = teamsSort(teams);
@@ -351,24 +351,24 @@ function Game() {
         // TO DO: Fix clinched teams with two conferences
       } else {
         sortedTeams.forEach((team, i) => {
-          team.isPlayOff = i < playOffTeam;
+          team.is_playoff = i < playOffTeam;
           return team;
         });
       }
       sortedTeams.forEach((team, i) => {
-        team.chartData?.push(i + 1);
-        team.chartLabels?.push('Play-Off');
+        team.chart_data?.push(i + 1);
+        team.chart_labels?.push('Play-Off');
         return team;
       });
     } else {
       if (leagueId === '1' || leagueId === '2') {
         // TO DO: Fix clinched teams in W1 & W2
         // const c1: Teams[] = getClinchedTeams(
-        //   sortedTeams.filter((team) => team.conferenceId === '1'),
+        //   sortedTeams.filter((team) => team.conference_id === '1'),
         //   playOffTeam / 2
         // );
         // const c2: Teams[] = getClinchedTeams(
-        //   sortedTeams.filter((team) => team.conferenceId === '2'),
+        //   sortedTeams.filter((team) => team.conference_id === '2'),
         //   playOffTeam / 2
         // );
         // localStorage.setItem('teamsList', JSON.stringify([...c1, ...c2]));
@@ -382,8 +382,8 @@ function Game() {
         // );
       }
     }
-    home.chartData?.push(sortedTeams.indexOf(home) + 1);
-    away.chartData?.push(sortedTeams.indexOf(away) + 1);
+    home.chart_data?.push(sortedTeams.indexOf(home) + 1);
+    away.chart_data?.push(sortedTeams.indexOf(away) + 1);
 
     setTeamsUpdate(sortedTeams);
     setIsSimulate(true);
@@ -423,65 +423,65 @@ function Game() {
   function getPlayOffTeams(): void {
     if (leagueId === '3' || leagueId === '4') {
       const d1: Teams[] = teamsUpdate
-        .filter((team) => team.divisionId === '1')
+        .filter((team) => team.division_id === '1')
         .slice(0, 3);
-      d1.forEach((team) => (team.isPlayOff = true));
+      d1.forEach((team) => (team.is_playoff = true));
       const d2: Teams[] = teamsUpdate
-        .filter((team) => team.divisionId === '2')
+        .filter((team) => team.division_id === '2')
         .slice(0, 3);
-      d2.forEach((team) => (team.isPlayOff = true));
+      d2.forEach((team) => (team.is_playoff = true));
       const wc1: Teams[] = teamsSort(
         teamsUpdate
-          .filter((team) => team.divisionId === '1')
+          .filter((team) => team.division_id === '1')
           .slice(3, 5)
           .concat(
-            teamsUpdate.filter((team) => team.divisionId === '2').slice(3, 5)
+            teamsUpdate.filter((team) => team.division_id === '2').slice(3, 5)
           )
       ).slice(0, 2);
-      wc1.forEach((team) => (team.isPlayOff = true));
+      wc1.forEach((team) => (team.is_playoff = true));
       const d3: Teams[] = teamsUpdate
-        .filter((team) => team.divisionId === '3')
+        .filter((team) => team.division_id === '3')
         .slice(0, 3);
-      d3.forEach((team) => (team.isPlayOff = true));
+      d3.forEach((team) => (team.is_playoff = true));
       const d4: Teams[] = teamsUpdate
-        .filter((team) => team.divisionId === '4')
+        .filter((team) => team.division_id === '4')
         .slice(0, 3);
-      d4.forEach((team) => (team.isPlayOff = true));
+      d4.forEach((team) => (team.is_playoff = true));
       const wc2: Teams[] = teamsSort(
         teamsUpdate
-          .filter((team) => team.divisionId === '3')
+          .filter((team) => team.division_id === '3')
           .slice(3, 5)
           .concat(
-            teamsUpdate.filter((team) => team.divisionId === '4').slice(3, 5)
+            teamsUpdate.filter((team) => team.division_id === '4').slice(3, 5)
           )
       ).slice(0, 2);
-      wc2.forEach((team) => (team.isPlayOff = true));
+      wc2.forEach((team) => (team.is_playoff = true));
       localStorage.setItem(
         'playoffList',
         JSON.stringify(teamsSort([...d1, ...d2, ...d3, ...d4, ...wc1, ...wc2]))
       );
     } else if (leagueId === '1' || leagueId === '2') {
       const c1: Teams[] = teamsSort(
-        teamsUpdate.filter((team) => team.conferenceId === '1')
+        teamsUpdate.filter((team) => team.conference_id === '1')
       ).slice(0, 4);
-      c1.forEach((team) => (team.isPlayOff = true));
+      c1.forEach((team) => (team.is_playoff = true));
       const c2: Teams[] = teamsSort(
-        teamsUpdate.filter((team) => team.conferenceId === '2')
+        teamsUpdate.filter((team) => team.conference_id === '2')
       ).slice(0, 4);
-      c2.forEach((team) => (team.isPlayOff = true));
+      c2.forEach((team) => (team.is_playoff = true));
       localStorage.setItem(
         'playoffList',
         JSON.stringify(teamsSort([...c1, ...c2]))
       );
     } else {
       teamsUpdate.forEach((team, index) => {
-        team.isPlayOff = index < playOffTeam;
+        team.is_playoff = index < playOffTeam;
       });
 
       localStorage.setItem(
         'playoffList',
         JSON.stringify(
-          teamsSort(teamsUpdate.filter((team) => team.isPlayOff === true))
+          teamsSort(teamsUpdate.filter((team) => team.is_playoff === true))
         )
       );
     }
@@ -505,7 +505,7 @@ function Game() {
     const waterlinePoints = waterline.points + maxGamesLeft * 2;
 
     teamsList.forEach((team, index) => {
-      team.isPlayOff = index < playoffAmount && team.points > waterlinePoints;
+      team.is_playoff = index < playoffAmount && team.points > waterlinePoints;
     });
 
     return teamsList;
@@ -545,7 +545,7 @@ function Game() {
                 </Title>
                 <Sheet
                   teamsData={teamsUpdate
-                    .filter((team) => team.divisionId === '1')
+                    .filter((team) => team.division_id === '1')
                     .slice(0, 3)}
                   id={leagueId}
                 />
@@ -557,7 +557,7 @@ function Game() {
                 </Title>
                 <Sheet
                   teamsData={teamsUpdate
-                    .filter((team) => team.divisionId === '2')
+                    .filter((team) => team.division_id === '2')
                     .slice(0, 3)}
                   id={leagueId}
                 />
@@ -571,11 +571,11 @@ function Game() {
                   teamsData={teamsUpdate
                     .filter(
                       (team) =>
-                        team.divisionId === '1' || team.divisionId === '2'
+                        team.division_id === '1' || team.division_id === '2'
                     )
                     .reduce<Teams[][]>(
                       (acc, team) => {
-                        if (team.divisionId === '1') {
+                        if (team.division_id === '1') {
                           acc[0].push(team);
                         } else {
                           acc[1].push(team);
@@ -602,7 +602,7 @@ function Game() {
                 </Title>
                 <Sheet
                   teamsData={teamsUpdate
-                    .filter((team) => team.divisionId === '3')
+                    .filter((team) => team.division_id === '3')
                     .slice(0, 3)}
                   id={leagueId}
                 />
@@ -614,7 +614,7 @@ function Game() {
                 </Title>
                 <Sheet
                   teamsData={teamsUpdate
-                    .filter((team) => team.divisionId === '4')
+                    .filter((team) => team.division_id === '4')
                     .slice(0, 3)}
                   id={leagueId}
                 />
@@ -628,11 +628,11 @@ function Game() {
                   teamsData={teamsUpdate
                     .filter(
                       (team) =>
-                        team.divisionId === '3' || team.divisionId === '4'
+                        team.division_id === '3' || team.division_id === '4'
                     )
                     .reduce<Teams[][]>(
                       (acc, team) => {
-                        if (team.divisionId === '3') {
+                        if (team.division_id === '3') {
                           acc[0].push(team);
                         } else {
                           acc[1].push(team);
@@ -658,7 +658,7 @@ function Game() {
                 </Title>
                 <Sheet
                   teamsData={teamsUpdate.filter(
-                    (team) => team.conferenceId === '1'
+                    (team) => team.conference_id === '1'
                   )}
                   id={leagueId}
                 />
@@ -670,7 +670,7 @@ function Game() {
                 </Title>
                 <Sheet
                   teamsData={teamsUpdate.filter(
-                    (team) => team.conferenceId === '2'
+                    (team) => team.conference_id === '2'
                   )}
                   id={leagueId}
                 />
@@ -923,7 +923,7 @@ function Game() {
                 </Title>
                 <Sheet
                   teamsData={teamsUpdate
-                    .filter((team) => team.divisionId === '1')
+                    .filter((team) => team.division_id === '1')
                     .slice(0, 3)}
                   id={leagueId}
                 />
@@ -935,7 +935,7 @@ function Game() {
                 </Title>
                 <Sheet
                   teamsData={teamsUpdate
-                    .filter((team) => team.divisionId === '2')
+                    .filter((team) => team.division_id === '2')
                     .slice(0, 3)}
                   id={leagueId}
                 />
@@ -949,11 +949,11 @@ function Game() {
                   teamsData={teamsUpdate
                     .filter(
                       (team) =>
-                        team.divisionId === '1' || team.divisionId === '2'
+                        team.division_id === '1' || team.division_id === '2'
                     )
                     .reduce<Teams[][]>(
                       (acc, team) => {
-                        if (team.divisionId === '1') {
+                        if (team.division_id === '1') {
                           acc[0].push(team);
                         } else {
                           acc[1].push(team);
@@ -980,7 +980,7 @@ function Game() {
                 </Title>
                 <Sheet
                   teamsData={teamsUpdate
-                    .filter((team) => team.divisionId === '3')
+                    .filter((team) => team.division_id === '3')
                     .slice(0, 3)}
                   id={leagueId}
                 />
@@ -992,7 +992,7 @@ function Game() {
                 </Title>
                 <Sheet
                   teamsData={teamsUpdate
-                    .filter((team) => team.divisionId === '4')
+                    .filter((team) => team.division_id === '4')
                     .slice(0, 3)}
                   id={leagueId}
                 />
@@ -1006,11 +1006,11 @@ function Game() {
                   teamsData={teamsUpdate
                     .filter(
                       (team) =>
-                        team.divisionId === '3' || team.divisionId === '4'
+                        team.division_id === '3' || team.division_id === '4'
                     )
                     .reduce<Teams[][]>(
                       (acc, team) => {
-                        if (team.divisionId === '3') {
+                        if (team.division_id === '3') {
                           acc[0].push(team);
                         } else {
                           acc[1].push(team);
@@ -1036,7 +1036,7 @@ function Game() {
                 </Title>
                 <Sheet
                   teamsData={teamsUpdate.filter(
-                    (team) => team.conferenceId === '1'
+                    (team) => team.conference_id === '1'
                   )}
                   id={leagueId}
                 />
@@ -1048,7 +1048,7 @@ function Game() {
                 </Title>
                 <Sheet
                   teamsData={teamsUpdate.filter(
-                    (team) => team.conferenceId === '2'
+                    (team) => team.conference_id === '2'
                   )}
                   id={leagueId}
                 />
