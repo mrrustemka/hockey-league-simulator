@@ -56,27 +56,29 @@ function Game() {
 
   const League = champs.find((champ) => champ.id === leagueId);
 
-  // Test simulation
-  // useEffect(() => {
-  //   if (gameCounter < scheduleList.length) {
-  //     const interval = setInterval(() => {
-  //       const lastGame: GameResult = simulate(scheduleList[gameCounter]);
-  //       if (lastGame) {
-  //         setHomeGoals(lastGame.home_goals);
-  //         setAwayGoals(lastGame.away_goals);
-  //         setTypeOfOt(lastGame.overtime);
-  //         setIsSimulate(true);
+  useEffect(() => {
+    if (
+      gameCounter < scheduleList.length &&
+      !isFavoriteGame(scheduleList[gameCounter])
+    ) {
+      const interval = setInterval(() => {
+        const lastGame: GameResult = simulate(scheduleList[gameCounter]);
+        if (lastGame) {
+          setHomeGoals(lastGame.home_goals);
+          setAwayGoals(lastGame.away_goals);
+          setTypeOfOt(lastGame.overtime);
+          setIsSimulate(true);
 
-  //         setTimeout(() => {
-  //           setGameCounter((prev) => prev + 1);
-  //           setIsSimulate(false);
-  //         }, 50); // small delay before next game
-  //       }
-  //     }, 100); // run each simulation every second
+          setTimeout(() => {
+            setGameCounter((prev) => prev + 1);
+            setIsSimulate(false);
+          }, 50);
+        }
+      }, 100);
 
-  //     return () => clearInterval(interval);
-  //   }
-  // });
+      return () => clearInterval(interval);
+    }
+  }, [gameCounter, scheduleList]);
 
   function simulate(game: Schedule) {
     let home: Teams = {
@@ -171,7 +173,7 @@ function Game() {
 
     function getTeamInfo(team: string): Teams {
       const foundTeam = teams.find(
-        (element: { abbreviation: string }) => element.abbreviation === team
+        (element: { id: string }) => element.id === team
       );
       if (!foundTeam) {
         throw new Error(`Team with abbreviation "${team}" not found`);
@@ -414,9 +416,7 @@ function Game() {
 
   function getTeamRating(team: string): number {
     return (
-      teams.findIndex(
-        (element: { abbreviation: string }) => element.abbreviation === team
-      ) + 1
+      teams.findIndex((element: { id: string }) => element.id === team) + 1
     );
   }
 
@@ -511,14 +511,19 @@ function Game() {
     return teamsList;
   }
 
+  function isFavoriteGame(game: Schedule): boolean {
+    const favorites: string[] = JSON.parse(
+      localStorage.getItem('favoriteTeams') || '[]'
+    );
+    return favorites.includes(game.home) || favorites.includes(game.away);
+  }
+
   if (scheduleList && gameCounter < scheduleList.length) {
     const away: Teams = teams.find(
-      (element: { abbreviation: string }) =>
-        element.abbreviation === scheduleList[gameCounter].away
+      (element: { id: string }) => element.id === scheduleList[gameCounter].away
     );
     const home: Teams = teams.find(
-      (element: { abbreviation: string }) =>
-        element.abbreviation === scheduleList[gameCounter].home
+      (element: { id: string }) => element.id === scheduleList[gameCounter].home
     );
     const homeRating: number = getTeamRating(scheduleList[gameCounter].home);
     const awayRating: number = getTeamRating(scheduleList[gameCounter].away);

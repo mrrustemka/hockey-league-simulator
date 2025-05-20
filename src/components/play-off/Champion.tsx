@@ -34,6 +34,7 @@ function Champion(props: { champion: Teams }) {
     localStorage.removeItem('teamsList');
     localStorage.removeItem('playoffList');
     localStorage.removeItem('gameIndex');
+    localStorage.removeItem('favoriteTeams');
   }
   return (
     <div className='playoff__champion'>

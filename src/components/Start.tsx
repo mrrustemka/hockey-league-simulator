@@ -1,13 +1,13 @@
-import { champs } from "../data/champs";
-import Header from "./Header";
-import League from "./League";
-import "../Styles/Start.css";
+import { champs } from '../data/champs';
+import Header from './Header';
+import League from './League';
+import '../Styles/Start.css';
 
 function Start() {
   return (
     <>
-      <Header id="" />
-      <div className="start">
+      <Header id='' />
+      <div className='start'>
         {champs.map((champ) => (
           <League key={champ.id} league={champ} />
         ))}

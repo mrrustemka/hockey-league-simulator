@@ -68,6 +68,11 @@
   pointer-events: none;
 }
 
+.start__select {
+  margin: 8px auto;
+  width: 30%;
+}
+
 @media (hover: hover) {
   .start__link:hover,
   .start__card__button:hover {

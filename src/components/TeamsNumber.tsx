@@ -1,4 +1,4 @@
-import { Input, Typography } from 'antd';
+import { Input, Typography, Select } from 'antd';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
@@ -7,10 +7,17 @@ import { schedule } from '../data/schedule';
 import '../Styles/TeamsNumber.css';
 
 const { Title } = Typography;
+const { Option } = Select;
 
 function TeamsNumber({ league }: any) {
   const [champ, setChamp] = useState<TLeague>(league);
   let minTeams: number = 2;
+  const [selectedTeams, setSelectedTeams] = useState<string[]>([]);
+  const handleChange = (value: string[]) => {
+    setSelectedTeams(value);
+    localStorage.setItem('favoriteTeams', JSON.stringify(value));
+  };
+
   if (champ.id === '3' || champ.id === '4') {
     minTeams = 16;
   } else if (champ.id === '1' || champ.id === '2') {
@@ -75,7 +82,7 @@ function TeamsNumber({ league }: any) {
           Select the number of teams
         </Title>
         <Input
-          className={`start__input`}
+          className='start__input'
           type='number'
           defaultValue={league.teams_count}
           value={champ.teams_count}
@@ -95,6 +102,23 @@ function TeamsNumber({ league }: any) {
           Please enter a valid number of teams. From {minTeams} to{' '}
           {league.teams.length}
         </Title>
+        <Title level={5} className='start__actions-title--selection'>
+          Select Your Favorite Teams
+        </Title>
+        <Select
+          mode='multiple'
+          className='start__select'
+          allowClear
+          placeholder='Teams'
+          value={selectedTeams}
+          onChange={handleChange}
+        >
+          {champ.teams.slice(0, champ.teams_count).map((team) => (
+            <Option key={team.id} value={team.id}>
+              {team.name}
+            </Option>
+          ))}
+        </Select>
         <Link
           className={`start__link ${
             champ.teams_count < minTeams ||

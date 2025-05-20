@@ -1,22 +1,24 @@
-import AOS from "aos";
-import { Card, Typography } from "antd";
-import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
-import { League as TLeague } from "../data/types";
-import TeamsNumber from "./TeamsNumber";
-import "aos/dist/aos.css";
-import "../Styles/League.css";
+import AOS from 'aos';
+import { Card, Typography } from 'antd';
+import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import { League as TLeague } from '../data/types';
+import TeamsNumber from './TeamsNumber';
+import 'aos/dist/aos.css';
+import '../Styles/League.css';
 
 const { Title } = Typography;
 
 function League(props: { league: TLeague }) {
   const [refresh, setRefresh] = useState(false);
+  const allTeams = JSON.parse(localStorage.getItem('teamsList') || '[]');
 
   function startNew() {
-    localStorage.removeItem("leagueId");
-    localStorage.removeItem("scheduleList");
-    localStorage.removeItem("teamsList");
+    localStorage.removeItem('leagueId');
+    localStorage.removeItem('scheduleList');
+    localStorage.removeItem('teamsList');
+    localStorage.removeItem('favoriteTeams');
     setRefresh(!refresh);
   }
 
@@ -26,52 +28,52 @@ function League(props: { league: TLeague }) {
   }, []);
 
   if (
-    localStorage.getItem("leagueId") !== null &&
-    JSON.parse(localStorage.getItem("leagueId") || "") === props.league.id
+    localStorage.getItem('leagueId') !== null &&
+    JSON.parse(localStorage.getItem('leagueId') || '') === props.league.id
   ) {
     return (
       <>
         <Card
           key={uuidv4()}
-          className="start__card"
+          className='start__card'
           cover={
             <img
-              alt="example"
+              alt='example'
               src={props.league.image}
-              className="start__card-cover"
-              loading="lazy"
+              className='start__card-cover'
+              loading='lazy'
             />
           }
           data-aos={
-            Number(props.league.id) % 2 === 0 ? "fade-left" : "fade-right"
+            Number(props.league.id) % 2 === 0 ? 'fade-left' : 'fade-right'
           }
         >
-          <Title level={5} className="start__card-title">
+          <Title level={5} className='start__card-title'>
             {props.league.description}
           </Title>
-          <div className="start__teams">
-            {JSON.parse(localStorage.getItem("teamsList") || "[]").map(
+          <div className='start__teams'>
+            {allTeams.map(
               (team: {
                 id: number;
                 logo: string | undefined;
                 name: string | undefined;
               }) => (
-                <div key={uuidv4()} className="start__team start__team--active">
+                <div key={uuidv4()} className='start__team start__team--active'>
                   <img
                     src={team.logo}
                     alt={team.name}
-                    className="start__team-logo"
-                    loading="lazy"
+                    className='start__team-logo'
+                    loading='lazy'
                   />
                 </div>
               )
             )}
           </div>
-          <Link className="start__link start__link--active" to="season">
+          <Link className='start__link start__link--active' to='season'>
             Continue
           </Link>
           <button
-            className="start__card__button pulse"
+            className='start__card__button pulse'
             onClick={() => startNew()}
           >
             Start New
@@ -84,20 +86,20 @@ function League(props: { league: TLeague }) {
       <>
         <Card
           key={uuidv4()}
-          className="start__card"
+          className='start__card'
           cover={
             <img
-              alt="example"
+              alt='example'
               src={props.league.image}
-              className="start__card-cover"
-              loading="lazy"
+              className='start__card-cover'
+              loading='lazy'
             />
           }
           data-aos={
-            Number(props.league.id) % 2 === 0 ? "fade-left" : "fade-right"
+            Number(props.league.id) % 2 === 0 ? 'fade-left' : 'fade-right'
           }
         >
-          <Title level={5} className="start__card-title">
+          <Title level={5} className='start__card-title'>
             {props.league.description}
           </Title>
           <TeamsNumber league={props.league} />

@@ -12,8 +12,8 @@ function getDoubleRoundSchedule(teams: Teams[]): Schedule[] {
       if (i !== j) {
         schedule.push({
           id: uuidv4(),
-          home: teams[i].abbreviation,
-          away: teams[j].abbreviation,
+          home: teams[i].id,
+          away: teams[j].id,
         });
       }
     }
@@ -29,8 +29,8 @@ function getOneRoundSchedule(teams: Teams[]): Schedule[] {
     for (let j = i + 1; j < teams.length; j++) {
       schedule.push({
         id: uuidv4(),
-        home: teams[i].abbreviation,
-        away: teams[j].abbreviation,
+        home: teams[i].id,
+        away: teams[j].id,
       });
     }
   }
@@ -46,8 +46,8 @@ function getNhlEhlSchedule(teams: Teams[]): Schedule[] {
       if (i !== j) {
         schedule.push({
           id: uuidv4(),
-          home: teams[i].abbreviation,
-          away: teams[j].abbreviation,
+          home: teams[i].id,
+          away: teams[j].id,
         });
       }
     }
@@ -58,8 +58,8 @@ function getNhlEhlSchedule(teams: Teams[]): Schedule[] {
       if (teams[i].conference_id === teams[j].conference_id) {
         schedule.push({
           id: uuidv4(),
-          home: teams[i].abbreviation,
-          away: teams[j].abbreviation,
+          home: teams[i].id,
+          away: teams[j].id,
         });
       }
     }
@@ -91,7 +91,7 @@ export function schedule(teams: Teams[], id: string) {
   teamsList = [];
 
   teams.forEach((team) => {
-    if (team) return teamsList.push(team.abbreviation);
+    if (team) return teamsList.push(team.id);
   });
 
   localStorage.setItem('teamsList', JSON.stringify(teams));
