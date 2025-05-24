@@ -487,29 +487,29 @@ function Game() {
     }
   }
 
-  function getClinchedTeams(
-    teamsList: Teams[],
-    playoffAmount: number
-  ): Teams[] {
-    // The problem is calculating max availiable points of each team, now we are calculating only not in playoff teams
-    const map: number = leagueId === '1' || leagueId === '2' ? 1 : 2;
-    const estimatedTeams = [...teamsList.slice(playoffAmount)].sort((a, b) => {
-      const maxGames = (teams.length - 1) * map;
-      const aScore = (maxGames - a.game_counter) * 2 + a.points;
-      const bScore = (maxGames - b.game_counter) * 2 + b.points;
-      return bScore - aScore;
-    });
+  // function getClinchedTeams(
+  //   teamsList: Teams[],
+  //   playoffAmount: number
+  // ): Teams[] {
+  //   // The problem is calculating max availiable points of each team, now we are calculating only not in playoff teams
+  //   const map: number = leagueId === '1' || leagueId === '2' ? 1 : 2;
+  //   const estimatedTeams = [...teamsList.slice(playoffAmount)].sort((a, b) => {
+  //     const maxGames = (teams.length - 1) * map;
+  //     const aScore = (maxGames - a.game_counter) * 2 + a.points;
+  //     const bScore = (maxGames - b.game_counter) * 2 + b.points;
+  //     return bScore - aScore;
+  //   });
 
-    const waterline = estimatedTeams[0];
-    const maxGamesLeft = (teams.length - 1) * map - waterline.game_counter;
-    const waterlinePoints = waterline.points + maxGamesLeft * 2;
+  //   const waterline = estimatedTeams[0];
+  //   const maxGamesLeft = (teams.length - 1) * map - waterline.game_counter;
+  //   const waterlinePoints = waterline.points + maxGamesLeft * 2;
 
-    teamsList.forEach((team, index) => {
-      team.is_playoff = index < playoffAmount && team.points > waterlinePoints;
-    });
+  //   teamsList.forEach((team, index) => {
+  //     team.is_playoff = index < playoffAmount && team.points > waterlinePoints;
+  //   });
 
-    return teamsList;
-  }
+  //   return teamsList;
+  // }
 
   function isFavoriteGame(game: Schedule): boolean {
     const favorites: string[] = JSON.parse(
@@ -864,26 +864,38 @@ function Game() {
                 </Card>
               </Col>
             </Row>
-            <Row className='controls-panel'>
-              <Col span={24} className='controls-panel__buttons'>
-                <Button
-                  className='controls-panel__button controls-panel__button--simulate pulse'
-                  onClick={buttonHandler}
-                  disabled={isSimulate}
-                  size='large'
-                >
-                  Simulate
-                </Button>
-                <Button
-                  className='controls-panel__button controls-panel__button--next'
-                  onClick={updateCounter}
-                  disabled={!isSimulate}
-                  size='large'
-                >
-                  Next Game
-                </Button>
-              </Col>
-            </Row>
+            {isFavoriteGame(scheduleList[gameCounter]) ? (
+              <Row className='controls-panel'>
+                <Col span={24} className='controls-panel__buttons'>
+                  <Button
+                    className='controls-panel__button controls-panel__button--simulate pulse'
+                    onClick={buttonHandler}
+                    disabled={isSimulate}
+                    size='large'
+                  >
+                    Simulate
+                  </Button>
+                  <Button
+                    className='controls-panel__button controls-panel__button--next'
+                    onClick={updateCounter}
+                    disabled={!isSimulate}
+                    size='large'
+                  >
+                    Next Game
+                  </Button>
+                </Col>
+              </Row>
+            ) : (
+              <Row className='controls-panel'>
+                <Col span={24} className='controls-panel__simulating'>
+                  <Title level={4} className='simulating-text'>
+                    Simulating
+                    <span className='dots'></span>
+                  </Title>
+                </Col>
+              </Row>
+            )}
+
             {scheduleList.slice(gameCounter + 1).length > 0 ? (
               <Row className='upcoming-games slide-in-left'>
                 <Title className='upcoming-games__title' level={2}>
