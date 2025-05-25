@@ -7,7 +7,7 @@
 }
 
 * {
-  font-family: "Inter", "Arial", sans-serif !important;
+  font-family: 'Inter', 'Arial', sans-serif !important;
 }
 
 body {
@@ -173,7 +173,7 @@ th {
 
 /* Media Queries */
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .ant-card-body {
     margin: 0 8px 8px !important;
   }

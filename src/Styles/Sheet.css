@@ -96,29 +96,31 @@
   animation: tableSlideInLeft 0.5s forwards;
 }
 
-a.table__column-name:hover {
-  text-decoration: underline;
-  color: var(--table-column-name-color);
-}
-
 /* Media Queries */
 
-@media (max-width: 650px) {
+@media (width <= 650px) {
   .table__column--city {
     display: none;
   }
 }
 
-@media (max-width: 550px) {
+@media (width <= 550px) {
   .table__column--diff {
     display: none;
   }
 }
 
-@media (max-width: 500px) {
+@media (width <= 500px) {
   .table__column--wins,
   .table__column--loses,
   .table__column--loses-ot {
     display: none;
+  }
+}
+
+@media (hover: hover) {
+  a.table__column-name:hover {
+    text-decoration: underline;
+    color: var(--table-column-name-color);
   }
 }

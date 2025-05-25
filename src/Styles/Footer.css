@@ -21,13 +21,13 @@
 }
 
 /* Media Queries */
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .footer {
     padding: var(--padding-medium);
   }
 }
 
-@media (max-width: 360px) {
+@media (width <= 360px) {
   .footer {
     padding: var(--padding-small);
   }

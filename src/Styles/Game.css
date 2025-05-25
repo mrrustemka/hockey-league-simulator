@@ -160,7 +160,7 @@
 }
 
 /* Media Queries */
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .layout,
   .playoff__container {
     grid-template-columns: var(--grid-auto);
@@ -191,7 +191,7 @@
   }
 }
 
-@media (max-width: 650px) {
+@media (width <= 650px) {
   .layout__side-panel {
     display: grid;
     grid-template-columns: var(--grid-auto);
@@ -205,7 +205,7 @@
   }
 }
 
-@media (max-width: 360px) {
+@media (width <= 360px) {
   .layout__side-panel {
     max-width: 95%;
     grid-template-columns: var(--grid-auto);

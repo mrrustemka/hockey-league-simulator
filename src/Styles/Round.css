@@ -47,19 +47,19 @@
   height: auto;
 }
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .playoff__round-panel {
     grid-template-columns: repeat(3, auto);
   }
 }
 
-@media (max-width: 670px) {
+@media (width <= 670px) {
   .playoff__round-panel {
     grid-template-columns: repeat(2, auto);
   }
 }
 
-@media (max-width: 500px) {
+@media (width <= 500px) {
   .playoff__round-panel {
     grid-template-columns: auto;
   }

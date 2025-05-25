@@ -83,13 +83,13 @@
 }
 
 /* Media Queries */
-@media (max-width: 1000px) {
+@media (width <= 1000px) {
   .start__card {
     padding: 12px;
   }
 }
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .start__card-cover {
     scale: 0.7;
     margin: 0;
@@ -98,13 +98,13 @@
   }
 }
 
-@media (max-width: 550px) {
+@media (width <= 550px) {
   .start__card-cover {
     scale: 1;
   }
 }
 
-@media (max-width: 400px) {
+@media (width <= 400px) {
   .start__card-cover {
     scale: 0.9;
   }
