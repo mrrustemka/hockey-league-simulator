@@ -1727,7 +1727,7 @@ export const nhl: Teams[] = [
       cbj_10,
     ],
     arena_description:
-      'Nationwide Arena is a multi-purpose arena in the Arena District of Columbus, Ohio, United States. Completion in 200.',
+      'Nationwide Arena is a multi-purpose arena in the Arena District of Columbus, Ohio, United States. Completion in 2000.',
     arena_capacity: 18500,
     arena_photo: cbj_11,
     arena_name: 'Nationwide Arena',
