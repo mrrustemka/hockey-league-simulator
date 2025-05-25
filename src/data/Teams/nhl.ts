@@ -1556,7 +1556,7 @@ export const nhl: Teams[] = [
   },
   {
     id: 'c_7',
-    name: 'HC UTAH',
+    name: 'Mammoth',
     abbreviation: 'UTA',
     country: 'USA',
     city: 'Utah',
@@ -1572,7 +1572,7 @@ export const nhl: Teams[] = [
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
-    color: '#ffffff',
+    color: '#7AB2E0',
     flag: usa,
     is_playoff: false,
     status: '',
