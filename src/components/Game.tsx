@@ -525,8 +525,12 @@ function Game() {
     const home: Teams = teams.find(
       (element: { id: string }) => element.id === scheduleList[gameCounter].home
     );
-    const homeRating: number = getTeamRating(scheduleList[gameCounter].home);
-    const awayRating: number = getTeamRating(scheduleList[gameCounter].away);
+    const homePointsPercentage: string = home.points_percentage
+      .toFixed(3)
+      .replace(/^0/, '');
+    const awayPointsPercentage: string = away.points_percentage
+      .toFixed(3)
+      .replace(/^0/, '');
     return (
       <>
         <Header id={leagueId} />
@@ -741,13 +745,7 @@ function Game() {
                             : '0.45',
                       }}
                     >
-                      {awayRating === 1
-                        ? awayRating + 'st'
-                        : awayRating === 2
-                        ? awayRating + 'nd'
-                        : awayRating === 3
-                        ? awayRating + 'rd'
-                        : awayRating + 'th'}
+                      {awayPointsPercentage}
                     </Title>
                     <Title
                       level={5}
@@ -816,13 +814,7 @@ function Game() {
                             : '0.45',
                       }}
                     >
-                      {homeRating === 1
-                        ? homeRating + 'st'
-                        : homeRating === 2
-                        ? homeRating + 'nd'
-                        : homeRating === 3
-                        ? homeRating + 'rd'
-                        : homeRating + 'th'}
+                      {homePointsPercentage}
                     </Title>
                     <Title
                       level={5}
