@@ -890,9 +890,6 @@ function Game() {
 
             {scheduleList.slice(gameCounter + 1).length > 0 ? (
               <Row className='upcoming-games slide-in-left'>
-                <Title className='upcoming-games__title' level={2}>
-                  Upcoming Games
-                </Title>
                 <UpcomingGame
                   schedule={scheduleList.slice(
                     gameCounter + 1,

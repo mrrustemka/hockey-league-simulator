@@ -35,6 +35,11 @@
   margin: 8px auto;
 }
 
+.upcoming-games__title {
+  margin: auto;
+  color: var(--white) !important;
+}
+
 /* Media Queries */
 @media (width <= 1000px) {
   .upcoming-games-card__container {

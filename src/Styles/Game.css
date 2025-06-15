@@ -108,11 +108,6 @@
   animation: slideInLeft 0.5s ease forwards;
 }
 
-.upcoming-games__title {
-  margin: auto;
-  color: var(--white) !important;
-}
-
 .card {
   border: none;
   overflow: hidden;

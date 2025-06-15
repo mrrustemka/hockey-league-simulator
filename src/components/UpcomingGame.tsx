@@ -1,11 +1,16 @@
-import { Card } from 'antd';
+import { Card, Typography } from 'antd';
 import { Link } from 'react-router-dom';
 import { Schedule, Teams } from '../data/types';
 import '../Styles/UpcomingGame.css';
 
+const { Title } = Typography;
+
 function UpcomingGame(props: { schedule: Schedule[]; teams: Teams[] }) {
   return (
     <>
+      <Title className='upcoming-games__title' level={2}>
+        Upcoming Games
+      </Title>
       {props.schedule.map((game) => (
         <Card
           hoverable
