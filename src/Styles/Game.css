@@ -95,7 +95,12 @@
   margin: 0.8em auto;
 }
 
-.upcoming-games {
+.games-info {
+  flex-direction: column;
+  margin: 0.8rem;
+}
+
+.season-series {
   flex-direction: column;
   margin: 0.8rem;
 }
@@ -166,7 +171,7 @@
   .layout__side-panel {
     display: grid;
     grid-template-columns: var(--grid-auto) var(--grid-auto);
-    grid-template-rows: repeat(3, var(--grid-auto)) 1fr;
+    grid-template-rows: repeat(4, var(--grid-auto)) 1fr;
     max-width: var(--grid-full-width);
   }
 
@@ -177,9 +182,9 @@
     grid-column: 1 / span 1;
   }
 
-  .upcoming-games {
+  .games-info {
     grid-column: 2 / span 1;
-    grid-row: 1 / span 4;
+    grid-row: 1 / span 5;
   }
   .ant-row:nth-child(1) {
     height: fit-content;
@@ -190,12 +195,12 @@
   .layout__side-panel {
     display: grid;
     grid-template-columns: var(--grid-auto);
-    grid-template-rows: repeat(4, var(--grid-auto)) 1fr;
+    grid-template-rows: repeat(6, var(--grid-auto)) 1fr;
     max-width: var(--grid-full-width);
   }
 
-  .upcoming-games {
-    grid-row: 5 / span 1;
+  .games-info {
+    grid-row: 6 / span 1;
     grid-column: 1 / span 1;
   }
 }

@@ -270,7 +270,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [lhf_1, lhf_2, lhf_3, lhf_4],
     arena_name: 'Coop Norrbotten Arena',
     arena_description:
@@ -315,7 +315,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [tps_1, tps_2, tps_3, tps_4],
     arena_name: 'Gatorade Center',
     arena_description:
@@ -360,7 +360,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [hcd_1, hcd_2, hcd_3, hcd_4],
     arena_name: 'zondacrypto Arena',
     arena_description:
@@ -405,7 +405,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [kos_1, kos_2, kos_3, kos_4],
     arena_name: 'Steel Arena',
     arena_description:
@@ -450,7 +450,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [aik_1, aik_2, aik_3, aik_4],
     arena_name: 'Skellefteå Kraft Arena',
     arena_description:
@@ -495,7 +495,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [sil_1, sil_2, sil_3, sil_4],
     arena_name: 'CC Amfi',
     arena_description:
@@ -540,7 +540,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [hcl_1, hcl_2, hcl_3, hcl_4],
     arena_name: 'Cornèr Arena',
     arena_description:
@@ -585,7 +585,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [spa_1, spa_2, spa_3, spa_4],
     arena_name: 'O2 Arena',
     arena_description:
@@ -630,7 +630,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [kal_1, kal_2, kal_3, kal_4],
     arena_name: 'Kuopio Ice Hall',
     arena_description:
@@ -675,7 +675,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [fro_1, fro_2, fro_3, fro_4],
     arena_name: 'Scandinavium',
     arena_description:
@@ -720,7 +720,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [zsc_1, zsc_2, zsc_3, zsc_4],
     arena_name: 'Swiss Life Arena',
     arena_description:
@@ -765,7 +765,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [sba_1, sba_2, sba_3],
     arena_name: 'Tipos aréna',
     arena_description:
@@ -810,7 +810,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [tik_1, tik_2, tik_3, tik_4],
     arena_name: 'NHC Arena',
     arena_description:
@@ -855,7 +855,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [lak_1, lak_2, lak_3, lak_4],
     arena_name: 'Vida Arena',
     arena_description:
@@ -900,7 +900,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [evz_1, evz_2, evz_3, evz_4],
     arena_name: 'Bossard Arena',
     arena_description:
@@ -945,7 +945,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [pce_1, pce_2, pce_3, pce_4, pce_5],
     arena_name: 'Enteria arena',
     arena_description:
@@ -990,7 +990,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [tap_1, tap_2, tap_3, tap_4],
     arena_name: 'Nokia Arena',
     arena_description:
@@ -1035,7 +1035,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [fbk_1, fbk_2, fbk_3, fbk_4],
     arena_name: 'Löfbergs Arena',
     arena_description:
@@ -1080,7 +1080,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [scb_1, scb_2, scb_3, scb_4],
     arena_name: 'PostFinance Arena',
     arena_description:
@@ -1125,7 +1125,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [ebb_1, ebb_2, ebb_3, ebb_4],
     arena_name: 'Uber Arena',
     arena_description:
@@ -1170,7 +1170,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [ilv_1, ilv_2, ilv_3, ilv_4, ilv_5],
     arena_name: 'Nokia Arena',
     arena_description:
@@ -1215,7 +1215,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [bel_1, bel_2, bel_3, bel_4],
     arena_name: 'SSE Arena',
     arena_description:
@@ -1261,7 +1261,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [gen_1, gen_2, gen_3, gen_4],
     arena_name: 'Patinoire des Vernets',
     arena_description:
@@ -1306,7 +1306,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [kec_1, kec_2, kec_3, kec_4, kec_5],
     arena_name: 'Lanxess Arena',
     arena_description:
@@ -1351,7 +1351,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [pel_1, pel_2, pel_3, pel_4],
     arena_name: 'Isku Areena',
     arena_description:
@@ -1396,7 +1396,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [shef_1, shef_2, shef_3, shef_4],
     arena_name: 'Sheffield Arena',
     arena_description:
@@ -1441,7 +1441,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [rbm_1, rbm_2, rbm_3, rbm_4],
     arena_name: 'SAP Garden',
     arena_description:
@@ -1486,7 +1486,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [man_1, man_2, man_3, man_4],
     arena_name: 'SAP Arena',
     arena_description:
@@ -1531,7 +1531,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [ifk_1, ifk_2, ifk_3, ifk_4],
     arena_name: 'Helsinki Ice Hall',
     arena_description:
@@ -1576,7 +1576,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [wob_1, wob_2, wob_3, wob_4],
     arena_name: 'Eis Arena',
     arena_description:
@@ -1621,7 +1621,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [hcb_1, hcb_2, hcb_3],
     arena_name: 'Sparkasse Arena',
     arena_description:
@@ -1666,7 +1666,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [deg_1, deg_2, deg_3, deg_4],
     arena_name: 'PSD Bank Dome',
     arena_description:
@@ -1711,7 +1711,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [koo_1, koo_2, koo_3],
     arena_name: 'Lumon arena',
     arena_description:
@@ -1756,7 +1756,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [ore_1, ore_2, ore_3, ore_4],
     arena_name: 'Behrn Arena',
     arena_description:
@@ -1801,7 +1801,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [hcbb_1, hcbb_2, hcbb_3, hcbb_4],
     arena_name: 'Tissot Arena',
     arena_description:
@@ -1846,7 +1846,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [vit_1, vit_2, vit_3, vit_4],
     arena_name: 'Ostravar Aréna',
     arena_description:
@@ -1891,7 +1891,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [ing_1, ing_2, ing_3, ing_4, ing_5],
     arena_name: 'Saturn Arena',
     arena_description: 'Saturn Arena is an arena in Ingolstadt, Germany.',
@@ -1935,7 +1935,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [tri_1, tri_2, tri_3, tri_4],
     arena_name: 'Werk Arena',
     arena_description:
@@ -1980,7 +1980,7 @@ export const ehl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [mhk_1, mhk_2, mhk_3, mhk_4],
     arena_name: 'ČPP Arena',
     arena_description:

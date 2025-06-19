@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import { Image, Typography } from 'antd';
-import { Teams } from '../../data/types';
+import { GameResult, Teams } from '../../data/types';
 import { whiteTeams } from '../../data/whiteList';
 import { champs } from '../../data/champs';
 import Chart from '../Chart';
@@ -14,6 +14,31 @@ function Champion(props: { champion: Teams }) {
   const playOffTeams: number = JSON.parse(
     localStorage.getItem('playoffList') || '[]'
   ).length;
+  const teams = JSON.parse(localStorage.getItem('teamsList') || '[]');
+  const chartLabels: string[] =
+    props.champion.game_results.map((game: GameResult) => {
+      const {
+        home,
+        away,
+        home_goals,
+        away_goals,
+        overtime,
+        home_status,
+        away_status,
+      } = game;
+
+      const isAwayTeam = away === props.champion.id;
+      const opponentId = isAwayTeam ? home : away;
+      const teamGoals = isAwayTeam ? away_goals : home_goals;
+      const opponentGoals = isAwayTeam ? home_goals : away_goals;
+      const result = teamGoals > opponentGoals ? ' W ' : ' L ';
+      const opponentAbbr =
+        teams.find((t: Teams) => t.id === opponentId)?.abbreviation ||
+        opponentId;
+      const status = isAwayTeam ? home_status : away_status;
+
+      return `${opponentAbbr}${result}${teamGoals} - ${opponentGoals} ${overtime} ${status}`;
+    }) || [];
   function updateGame() {
     champs
       .find((champ) => champ.id === leagueId)
@@ -196,7 +221,7 @@ function Champion(props: { champion: Teams }) {
       <Gallery photos={props.champion.photos} team={props.champion.name} />
       <Chart
         rank={props.champion.chart_data}
-        labels={props.champion.chart_labels}
+        labels={chartLabels}
         color={props.champion.color}
         playOff={playOffTeams}
       />

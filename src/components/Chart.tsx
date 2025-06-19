@@ -6,9 +6,10 @@ import {
   PointElement,
   Title,
   Tooltip,
-  Legend
-} from "chart.js";
-import { Line } from "react-chartjs-2";
+  Legend,
+} from 'chart.js';
+import { Line } from 'react-chartjs-2';
+import { GameResult } from '../data/types';
 
 ChartJS.register(
   CategoryScale,
@@ -30,49 +31,49 @@ function Chart(props: {
     labels: props.labels,
     datasets: [
       {
-        label: "Rank",
+        label: 'Rank',
         data: props.rank,
         backgroundColor: props.color,
         borderColor: props.color,
-        pointBackgroundColor: "#515151",
+        pointBackgroundColor: '#515151',
         pointRadius: 2,
         borderWidth: 1,
         fill: true,
-        tension: 0.4
+        tension: 0.4,
       },
       {
-        label: "Play-Off Line",
+        label: 'Play-Off Line',
         data: Array(props.labels.length).fill(props.playOff),
-        borderColor: "rgba(255, 99, 132, 0.7)",
+        borderColor: 'rgba(255, 99, 132, 0.7)',
         borderWidth: 1,
         borderDash: [5, 5],
         pointRadius: 0,
-        fill: true
-      }
-    ]
+        fill: true,
+      },
+    ],
   };
 
   const options = {
     responsive: true,
     plugins: {
       legend: {
-        position: "top" as const
+        position: 'top' as const,
       },
       title: {
         display: true,
-        text: "Season Rank"
-      }
+        text: 'Season Rank',
+      },
     },
     scales: {
       y: {
         reverse: true,
         min: 0,
-        max: JSON.parse(localStorage.getItem("teamsList") || "[]").length + 1,
+        max: JSON.parse(localStorage.getItem('teamsList') || '[]').length + 1,
         ticks: {
-          stepSize: 1
-        }
-      }
-    }
+          stepSize: 1,
+        },
+      },
+    },
   };
 
   return (

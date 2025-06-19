@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { GameResult, Schedule, Teams } from '../data/types';
 import Header from './Header';
 import Legend from './Legend';
+import SeasonSeries from './SeasonSeries';
 import Sheet from './Sheet';
 import UpcomingGame from './UpcomingGame';
 import { whiteTeams } from '../data/whiteList';
@@ -105,7 +106,7 @@ function Game() {
       status: '',
       cur_status_length: 0,
       chart_data: [],
-      chart_labels: [],
+      game_results: [],
       photos: [],
       arena_name: '',
       arena_description: '',
@@ -147,7 +148,7 @@ function Game() {
       status: '',
       cur_status_length: 0,
       chart_data: [],
-      chart_labels: [],
+      game_results: [],
       photos: [],
       arena_name: '',
       arena_description: '',
@@ -263,26 +264,6 @@ function Game() {
     if (hGoals > aGoals) {
       home.points += 2;
       home.wins += 1;
-      home.chart_labels?.push(
-        home.status +
-          away.abbreviation +
-          ' W ' +
-          hGoals +
-          ' - ' +
-          aGoals +
-          ' ' +
-          overtime
-      );
-      away.chart_labels?.push(
-        away.status +
-          home.abbreviation +
-          ' L ' +
-          aGoals +
-          ' - ' +
-          hGoals +
-          ' ' +
-          overtime
-      );
 
       if (overtime === 'SO' || overtime === 'OT') {
         away.loses_ot += 1;
@@ -294,26 +275,6 @@ function Game() {
     } else {
       away.points += 2;
       away.wins += 1;
-      away.chart_labels?.push(
-        away.status +
-          home.abbreviation +
-          ' W ' +
-          aGoals +
-          ' - ' +
-          hGoals +
-          ' ' +
-          overtime
-      );
-      home.chart_labels?.push(
-        home.status +
-          away.abbreviation +
-          ' L ' +
-          hGoals +
-          ' - ' +
-          aGoals +
-          ' ' +
-          overtime
-      );
       if (overtime === 'SO' || overtime === 'OT') {
         home.loses_ot += 1;
         home.points += 1;
@@ -341,6 +302,9 @@ function Game() {
       home_goals: hGoals,
       away_goals: aGoals,
       overtime: overtime,
+      id: game.id,
+      home_status: home.status,
+      away_status: away.status,
     };
     let sortedTeams: Teams[] = teamsSort(teams);
     if (gameCounter + 1 === scheduleList.length) {
@@ -357,11 +321,11 @@ function Game() {
           return team;
         });
       }
-      sortedTeams.forEach((team, i) => {
-        team.chart_data?.push(i + 1);
-        team.chart_labels?.push('Play-Off');
-        return team;
-      });
+      // sortedTeams.forEach((team, i) => {
+      //   team.chart_data?.push(i + 1);
+      //   team.game_results?.push('Play-Off');
+      //   return team;
+      // });
     } else {
       if (leagueId === '1' || leagueId === '2') {
         // TO DO: Fix clinched teams in W1 & W2
@@ -386,6 +350,26 @@ function Game() {
     }
     home.chart_data?.push(sortedTeams.indexOf(home) + 1);
     away.chart_data?.push(sortedTeams.indexOf(away) + 1);
+    home.game_results?.push({
+      id: game.id,
+      home: game.home,
+      away: game.away,
+      home_goals: hGoals,
+      away_goals: aGoals,
+      overtime: overtime,
+      home_status: home.status,
+      away_status: away.status,
+    });
+    away.game_results?.push({
+      id: game.id,
+      home: game.home,
+      away: game.away,
+      home_goals: hGoals,
+      away_goals: aGoals,
+      overtime: overtime,
+      home_status: home.status,
+      away_status: away.status,
+    });
 
     setTeamsUpdate(sortedTeams);
     setIsSimulate(true);
@@ -887,9 +871,22 @@ function Game() {
                 </Col>
               </Row>
             )}
-
+            {isFavoriteGame(scheduleList[gameCounter]) ? (
+              <Row className='season-series slide-in-left'>
+                <SeasonSeries
+                  games={scheduleList.filter(
+                    (game: Schedule) =>
+                      (game.away === away.id && game.home === home.id) ||
+                      (game.away === home.id && game.home === away.id)
+                  )}
+                  teams={teams}
+                />
+              </Row>
+            ) : (
+              <></>
+            )}
             {scheduleList.slice(gameCounter + 1).length > 0 ? (
-              <Row className='upcoming-games slide-in-left'>
+              <Row className='games-info slide-in-left'>
                 <UpcomingGame
                   schedule={scheduleList.slice(
                     gameCounter + 1,

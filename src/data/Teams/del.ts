@@ -104,7 +104,7 @@ export const del: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [bhv_1, bhv_2, bhv_3],
     arena_name: 'Eisarena Bremerhaven',
     arena_description: '',
@@ -145,7 +145,7 @@ export const del: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [ebb_1, ebb_2, ebb_3, ebb_4],
     arena_name: 'Uber Arena',
     arena_description:
@@ -187,7 +187,7 @@ export const del: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [str_1, str_2, str_3],
     arena_name: 'Eisstadion am Pulverturm',
     arena_description:
@@ -229,7 +229,7 @@ export const del: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [rbm_1, rbm_2, rbm_3, rbm_4],
     arena_name: 'SAP Garden',
     arena_description:
@@ -271,7 +271,7 @@ export const del: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [wob_1, wob_2, wob_3, wob_4],
     arena_name: 'Eis Arena',
     arena_description:
@@ -313,7 +313,7 @@ export const del: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [sww_1, sww_2, sww_3, sww_4],
     arena_name: 'Helios Arena',
     arena_description:
@@ -355,7 +355,7 @@ export const del: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [man_1, man_2, man_3, man_4],
     arena_name: 'SAP Arena',
     arena_description:
@@ -397,7 +397,7 @@ export const del: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [kec_1, kec_2, kec_3, kec_4, kec_5],
     arena_name: 'Lanxess Arena',
     arena_description:
@@ -439,7 +439,7 @@ export const del: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [ing_1, ing_2, ing_3, ing_4, ing_5],
     arena_name: 'Saturn Arena',
     arena_description: 'Saturn Arena is an arena in Ingolstadt, Germany.',
@@ -480,7 +480,7 @@ export const del: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [nit_1, nit_2, nit_3],
     arena_name: 'Arena Nürnberger Versicherung',
     arena_description:
@@ -522,7 +522,7 @@ export const del: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [deg_1, deg_2, deg_3, deg_4],
     arena_name: 'PSD Bank Dome',
     arena_description:
@@ -564,7 +564,7 @@ export const del: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [fra_1, fra_2, fra_3],
     arena_name: 'Eissporthalle Frankfurt',
     arena_description:
@@ -606,7 +606,7 @@ export const del: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [iec_1, iec_2],
     arena_name: 'Balver-Zinn Arena',
     arena_description: '',
@@ -647,7 +647,7 @@ export const del: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [aug_1, aug_2, aug_3, aug_4],
     arena_name: 'Curt Frenzel Stadium',
     arena_description:

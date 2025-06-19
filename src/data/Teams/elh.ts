@@ -105,7 +105,7 @@ export const elh: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [pce_1, pce_2, pce_3, pce_4, pce_5],
     arena_name: 'Enteria arena',
     arena_description:
@@ -147,7 +147,7 @@ export const elh: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [spa_1, spa_2, spa_3, spa_4],
     arena_name: 'O2 Arena',
     arena_description:
@@ -189,7 +189,7 @@ export const elh: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [tri_1, tri_2, tri_3, tri_4],
     arena_name: 'Werk Arena',
     arena_description:
@@ -231,7 +231,7 @@ export const elh: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [kom_1, kom_2, kom_3],
     arena_name: 'Winning Group Arena',
     arena_description:
@@ -274,7 +274,7 @@ export const elh: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [ceb_1, ceb_2, ceb_3, ceb_4],
     arena_name: 'Budvar Arena',
     arena_description:
@@ -316,7 +316,7 @@ export const elh: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [mhk_1, mhk_2, mhk_3, mhk_4],
     arena_name: 'ČPP Arena',
     arena_description:
@@ -358,7 +358,7 @@ export const elh: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [lib_1, lib_2, lib_3],
     arena_name: 'Home Credit Arena',
     arena_description:
@@ -400,7 +400,7 @@ export const elh: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [vit_1, vit_2, vit_3, vit_4],
     arena_name: 'Ostravar Aréna',
     arena_description:
@@ -442,7 +442,7 @@ export const elh: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [olo_1, olo_2, olo_3],
     arena_name: 'Zimní stadion Olomouc',
     arena_description:
@@ -484,7 +484,7 @@ export const elh: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [lit_1, lit_2, lit_3, lit_4],
     arena_name: 'Zimní stadion Ivana Hlinky',
     arena_description: '',
@@ -525,7 +525,7 @@ export const elh: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [kva_1, kva_2, kva_3, kva_4, kva_5],
     arena_name: 'KV Arena',
     arena_description:
@@ -567,7 +567,7 @@ export const elh: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [plz_1, plz_2, plz_3],
     arena_name: 'Logspeed CZ Aréna',
     arena_description:
@@ -609,7 +609,7 @@ export const elh: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [mbl_1, mbl_2, mbl_3, mbl_4],
     arena_name: 'Ško-Energo Aréna',
     arena_description:
@@ -651,7 +651,7 @@ export const elh: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [kla_1, kla_2, kla_3],
     arena_name: 'ČEZ Stadion',
     arena_description:

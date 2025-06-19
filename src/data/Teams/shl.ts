@@ -113,7 +113,7 @@ export const shl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [lak_1, lak_2, lak_3, lak_4],
     arena_name: 'Vida Arena',
     arena_description:
@@ -155,7 +155,7 @@ export const shl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [aik_1, aik_2, aik_3, aik_4],
     arena_name: 'Skellefteå Kraft Arena',
     arena_description:
@@ -197,7 +197,7 @@ export const shl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [fro_1, fro_2, fro_3, fro_4],
     arena_name: 'Scandinavium',
     arena_description:
@@ -239,7 +239,7 @@ export const shl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [fbk_1, fbk_2, fbk_3, fbk_4],
     arena_name: 'Löfbergs Arena',
     arena_description:
@@ -281,7 +281,7 @@ export const shl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [tik_1, tik_2, tik_3, tik_4],
     arena_name: 'NHC Arena',
     arena_description:
@@ -323,7 +323,7 @@ export const shl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [lhf_1, lhf_2, lhf_3, lhf_4],
     arena_name: 'Coop Norrbotten Arena',
     arena_description:
@@ -365,7 +365,7 @@ export const shl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [lif_1, lif_2, lif_3, lif_4],
     arena_name: 'Tegera Arena',
     arena_description:
@@ -407,7 +407,7 @@ export const shl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [lhc_1, lhc_2, lhc_3, lhc_4],
     arena_name: 'Saab Arena',
     arena_description:
@@ -449,7 +449,7 @@ export const shl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [rbk_1, rbk_2, rbk_3, rbk_4],
     arena_name: 'Catena Arena',
     arena_description:
@@ -491,7 +491,7 @@ export const shl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [ore_1, ore_2, ore_3, ore_4],
     arena_name: 'Behrn Arena',
     arena_description:
@@ -533,7 +533,7 @@ export const shl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [modo_1, modo_2, modo_3, modo_4],
     arena_name: 'Hägglunds Arena',
     arena_description:
@@ -575,7 +575,7 @@ export const shl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [mif_1, mif_2, mif_3, mif_4],
     arena_name: 'Malmö Arena',
     arena_description:
@@ -617,7 +617,7 @@ export const shl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [hv71_1, hv71_2, hv71_3, hv71_4],
     arena_name: 'Husqvarna Garden',
     arena_description:
@@ -659,7 +659,7 @@ export const shl: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [bif_1, bif_2, bif_3],
     arena_name: 'Monitor ERP Arena',
     arena_description:
@@ -702,7 +702,7 @@ export const shl: Teams[] = [
   // 	status: '',
   // 	cur_status_length: 0,
   // 	chart_data: [],
-  // 	chart_labels: [],
+  // 	game_results: [],
   // 	photos: [iko_1, iko_2, iko_3, iko_4],
   // 	arena_name: 'Be-Ge Hockey Center',
   // 	arena_description:

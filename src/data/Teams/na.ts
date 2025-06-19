@@ -103,7 +103,7 @@ export const na: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [zsc_1, zsc_2, zsc_3, zsc_4],
     arena_name: 'Swiss Life Arena',
     arena_description:
@@ -145,7 +145,7 @@ export const na: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [evz_1, evz_2, evz_3, evz_4],
     arena_name: 'Bossard Arena',
     arena_description:
@@ -187,7 +187,7 @@ export const na: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [scb_1, scb_2, scb_3, scb_4],
     arena_name: 'PostFinance Arena',
     arena_description:
@@ -229,7 +229,7 @@ export const na: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [hcd_1, hcd_2, hcd_3, hcd_4],
     arena_name: 'zondacrypto Arena',
     arena_description:
@@ -271,7 +271,7 @@ export const na: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [lhc_1, lhc_2, lhc_3],
     arena_name: 'Vaudoise Aréna',
     arena_description:
@@ -313,7 +313,7 @@ export const na: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [frg_1, frg_2, frg_3, frg_4],
     arena_name: 'BCF Arena',
     arena_description:
@@ -355,7 +355,7 @@ export const na: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [hcl_1, hcl_2, hcl_3, hcl_4],
     arena_name: 'Cornèr Arena',
     arena_description:
@@ -397,7 +397,7 @@ export const na: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [amb_1, amb_2, amb_3],
     arena_name: 'Gottardo Arena',
     arena_description:
@@ -439,7 +439,7 @@ export const na: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [gen_1, gen_2, gen_3, gen_4],
     arena_name: 'Patinoire des Vernets',
     arena_description:
@@ -481,7 +481,7 @@ export const na: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [hcb_1, hcb_2, hcb_3, hcb_4],
     arena_name: 'Tissot Arena',
     arena_description:
@@ -523,7 +523,7 @@ export const na: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [scl_1, scl_2, scl_3],
     arena_name: 'Emmental Versicherung Arena',
     arena_description:
@@ -565,7 +565,7 @@ export const na: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [rjl_1, rjl_2, rjl_3],
     arena_name: 'St. Galler Kantonalbank Arena',
     arena_description:
@@ -607,7 +607,7 @@ export const na: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [klo_1, klo_2, klo_3, klo_4],
     arena_name: 'Swiss Arena',
     arena_description:
@@ -649,7 +649,7 @@ export const na: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [ajo_1, ajo_2, ajo_3],
     arena_name: 'Raiffeisen Arena',
     arena_description:

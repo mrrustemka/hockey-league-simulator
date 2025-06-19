@@ -116,7 +116,7 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
       status: '',
       cur_status_length: 0,
       chart_data: [],
-      chart_labels: [],
+      game_results: [],
       photos: [],
       arena_name: '',
       arena_description: '',
@@ -158,7 +158,7 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
       status: '',
       cur_status_length: 0,
       chart_data: [],
-      chart_labels: [],
+      game_results: [],
       photos: [],
       arena_name: '',
       arena_description: '',
@@ -282,6 +282,9 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
         home_goals: hGoals,
         away_goals: aGoals,
         overtime: overtime,
+        id: uuidv4(),
+        home_status: home.status,
+        away_status: away.status,
       },
     ]);
 

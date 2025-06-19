@@ -111,7 +111,7 @@ export const sml: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [tap_1, tap_2, tap_3, tap_4],
     arena_name: 'Nokia Arena',
     arena_description:
@@ -153,7 +153,7 @@ export const sml: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [pel_1, pel_2, pel_3, pel_4],
     arena_name: 'Isku Areena',
     arena_description:
@@ -195,7 +195,7 @@ export const sml: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [ifk_1, ifk_2, ifk_3, ifk_4],
     arena_name: 'Helsinki Ice Hall',
     arena_description:
@@ -237,7 +237,7 @@ export const sml: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [ilv_1, ilv_2, ilv_3, ilv_4, ilv_5],
     arena_name: 'Nokia Arena',
     arena_description:
@@ -279,7 +279,7 @@ export const sml: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [tps_1, tps_2, tps_3, tps_4],
     arena_name: 'Gatorade Center',
     arena_description:
@@ -321,7 +321,7 @@ export const sml: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [kal_1, kal_2, kal_3, kal_4],
     arena_name: 'Kuopio Ice Hall',
     arena_description:
@@ -363,7 +363,7 @@ export const sml: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [koo_1, koo_2, koo_3],
     arena_name: 'Lumon arena',
     arena_description:
@@ -405,7 +405,7 @@ export const sml: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [jyp_1, jyp_2, jyp_3],
     arena_name: 'Synergia-areena',
     arena_description:
@@ -447,7 +447,7 @@ export const sml: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [kar_1, kar_2, kar_3],
     arena_name: 'Oulun Energia Areena',
     arena_description:
@@ -489,7 +489,7 @@ export const sml: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [luk_1, luk_2, luk_3, luk_4],
     arena_name: 'Kivikylän areena',
     arena_description:
@@ -531,7 +531,7 @@ export const sml: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [sai_1, sai_2],
     arena_name: 'Kisapuisto',
     arena_description:
@@ -573,7 +573,7 @@ export const sml: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [spo_1, spo_2],
     arena_name: 'Vaasa Arena',
     arena_description:
@@ -615,7 +615,7 @@ export const sml: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [ass_1, ass_2, ass_3],
     arena_name: 'Isomäki Ice Hall',
     arena_description:
@@ -657,7 +657,7 @@ export const sml: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [juk_1, juk_2, juk_3],
     arena_name: 'Ikioma Areena',
     arena_description:
@@ -699,7 +699,7 @@ export const sml: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [hpk_1, hpk_2, hpk_3, hpk_4],
     arena_name: 'Hämeenlinna Ice Hall',
     arena_description:
@@ -741,7 +741,7 @@ export const sml: Teams[] = [
     status: '',
     cur_status_length: 0,
     chart_data: [],
-    chart_labels: [],
+    game_results: [],
     photos: [kes_1, kes_2, kes_3],
     arena_name: 'Espoo Metro Areena',
     arena_description:

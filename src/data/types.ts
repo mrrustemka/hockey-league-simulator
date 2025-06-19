@@ -22,7 +22,7 @@ export type Teams = {
   status: string;
   cur_status_length: number;
   chart_data: number[];
-  chart_labels: string[];
+  game_results: GameResult[];
   readonly photos: string[];
   readonly arena_name?: string;
   readonly arena_description?: string;
@@ -52,11 +52,14 @@ export type Schedule = {
 };
 
 export type GameResult = {
+  readonly id: string;
   home: string;
   away: string;
   home_goals: number;
   away_goals: number;
   overtime: string;
+  home_status: string;
+  away_status: string;
 };
 
 export type buttonStyles = {

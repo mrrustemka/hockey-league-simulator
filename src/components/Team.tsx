@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import { Image, Typography } from 'antd';
-import { Teams } from '../data/types';
+import { GameResult, Teams } from '../data/types';
 import { whiteTeams } from '../data/whiteList';
 import Chart from './Chart';
 import Gallery from './Gallery';
@@ -13,16 +13,41 @@ const { Title } = Typography;
 function Team() {
   const { teamId } = useParams();
   const navigate = useNavigate();
-  const team: Teams | undefined = JSON.parse(
-    localStorage.getItem('teamsList') || '[]'
-  ).find((team: Teams) => team.id === String(teamId));
+  const teams = JSON.parse(localStorage.getItem('teamsList') || '[]');
+  const team: Teams | undefined = teams.find(
+    (team: Teams) => team.id === String(teamId)
+  );
 
   if (!team) {
     return <div className='team__not-found'>Team not found</div>;
   }
 
   const chartData = team.chart_data || [];
-  const chartLabels = team.chart_labels || [];
+  const chartLabels: string[] =
+    team.game_results.map((game: GameResult) => {
+      const {
+        home,
+        away,
+        home_goals,
+        away_goals,
+        overtime,
+        home_status,
+        away_status,
+      } = game;
+
+      const isAwayTeam = away === team.id;
+      const opponentId = isAwayTeam ? home : away;
+      const teamGoals = isAwayTeam ? away_goals : home_goals;
+      const opponentGoals = isAwayTeam ? home_goals : away_goals;
+      const result = teamGoals > opponentGoals ? ' W ' : ' L ';
+      const opponentAbbr =
+        teams.find((t: Teams) => t.id === opponentId)?.abbreviation ||
+        opponentId;
+      const status = isAwayTeam ? home_status : away_status;
+
+      return `${opponentAbbr}${result}${teamGoals} - ${opponentGoals} ${overtime} ${status}`;
+    }) || [];
+
   const color = team.color || '';
   const leagueId: string = JSON.parse(localStorage.getItem('leagueId') || '');
   const playOffTeams: number = JSON.parse(
