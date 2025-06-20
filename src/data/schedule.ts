@@ -81,7 +81,14 @@ export function schedule(teams: Teams[], id: string) {
   scheduleList = [];
 
   if (id === '1' || id === '2') {
-    scheduleList = getOneRoundSchedule(teams);
+    const groupA = teams.filter((team: Teams) => team.conference_id === '1');
+    const groupB = teams.filter((team: Teams) => team.conference_id === '2');
+
+    const combinedSchedule = getOneRoundSchedule(groupA).concat(
+      getOneRoundSchedule(groupB)
+    );
+
+    scheduleList = shuffle(combinedSchedule);
   } else if (id === '3' || id === '4') {
     scheduleList = getNhlEhlSchedule(teams);
   } else {
