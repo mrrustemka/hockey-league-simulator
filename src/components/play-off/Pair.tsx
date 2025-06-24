@@ -11,31 +11,48 @@ interface PairProps {
   teams: Teams[];
   handlerIsRoundEnd: () => void;
   status: boolean;
+  playoffWinsRequiredCount: number;
 }
 
-function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
-  const [games, setGames] = useState([
-    {
-      id: uuidv4(),
-      home: teams[0].abbreviation,
-      away: teams[1].abbreviation,
-    },
-    {
-      id: uuidv4(),
-      home: teams[0].abbreviation,
-      away: teams[1].abbreviation,
-    },
-    {
-      id: uuidv4(),
-      home: teams[1].abbreviation,
-      away: teams[0].abbreviation,
-    },
-    {
-      id: uuidv4(),
-      home: teams[1].abbreviation,
-      away: teams[0].abbreviation,
-    },
-  ]);
+function Pair({
+  teams,
+  handlerIsRoundEnd,
+  status,
+  playoffWinsRequiredCount,
+}: PairProps) {
+  const leagueId: string = JSON.parse(localStorage.getItem('leagueId') || '');
+  const [games, setGames] = useState(
+    leagueId === '1' || leagueId === '2'
+      ? [
+          {
+            id: uuidv4(),
+            home: teams[0].abbreviation,
+            away: teams[1].abbreviation,
+          },
+        ]
+      : [
+          {
+            id: uuidv4(),
+            home: teams[0].abbreviation,
+            away: teams[1].abbreviation,
+          },
+          {
+            id: uuidv4(),
+            home: teams[0].abbreviation,
+            away: teams[1].abbreviation,
+          },
+          {
+            id: uuidv4(),
+            home: teams[1].abbreviation,
+            away: teams[0].abbreviation,
+          },
+          {
+            id: uuidv4(),
+            home: teams[1].abbreviation,
+            away: teams[0].abbreviation,
+          },
+        ]
+  );
   let [curGame, setCurGame] = useState<number>(0);
   const [isFinished, setIsFinished] = useState<boolean>(false);
   const [results, setResults] = useState<GameResult[]>([]);
@@ -43,7 +60,7 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
   function addGame() {
     const team0Wins = teams[0].play_off_round_wins;
     const team1Wins = teams[1].play_off_round_wins;
-    const maxWins = 4;
+    const maxWins = playoffWinsRequiredCount;
     const totalGames = games.length;
 
     if (team0Wins === maxWins || team1Wins === maxWins) {
@@ -318,9 +335,11 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
               {teams[0].status !== '' ? teams[0].status : ''}
             </Title>
             <Title className='pair__scores' level={4}>
-              {teams[0].play_off_round_wins +
-                ' - ' +
-                teams[1].play_off_round_wins}
+              {leagueId !== '1' && leagueId !== '2'
+                ? teams[0].play_off_round_wins +
+                  ' - ' +
+                  teams[1].play_off_round_wins
+                : ''}
             </Title>
             <Title className='pair__team-status-away' level={4}>
               {teams[1].status !== '' ? teams[1].status : ''}
@@ -341,6 +360,7 @@ function Pair({ teams, handlerIsRoundEnd, status }: PairProps) {
                   key={game.id}
                   index={index}
                   result={results[index]}
+                  leagueId={leagueId}
                 />
               ))}
             </div>

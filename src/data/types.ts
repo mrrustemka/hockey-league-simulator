@@ -84,6 +84,7 @@ export type League = {
   readonly cup: string;
   readonly conferences?: Conference[];
   readonly divisions?: Division[];
+  readonly playoff_wins_required_count: number;
 };
 
 export type Conference = {

@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Champion from './Champion';
+import { champs } from '../../data/champs';
+import { League, Teams } from '../../data/types';
 import Header from '../Header';
 import Round from './Round';
-// import { nhl as mock } from '../../data/Teams/nhl'; // use for tests
-import { Teams } from '../../data/types';
 import '../../Styles/PlayOff.css';
 
 function PlayOff() {
@@ -15,9 +15,10 @@ function PlayOff() {
     JSON.parse(localStorage.getItem('playoffList') || '[]')
   );
   const leagueId: string = JSON.parse(localStorage.getItem('leagueId') || '');
-
-  // const [teams, setTeams] = useState<Array<Teams>>(mock); // use for tests
   const [isChampion, setIsChampion] = useState<boolean>(false);
+  const playoffWinsRequiredCount =
+    champs.find((champ: League) => champ.id === leagueId)
+      ?.playoff_wins_required_count ?? 4;
 
   for (let i = 0; i < teams.length; i++) {
     teams[i].play_off_rank = i + 1;
@@ -36,7 +37,9 @@ function PlayOff() {
   }
 
   function nextRound() {
-    const newTeams = teams.filter((team) => team.play_off_round_wins === 4);
+    const newTeams = teams.filter(
+      (team) => team.play_off_round_wins === playoffWinsRequiredCount
+    );
     if (newTeams.length !== teams.length / 2) {
       console.log('Please simulate all games before go to the next round');
       return;
@@ -64,6 +67,7 @@ function PlayOff() {
                 pairs={value}
                 status={index === 0}
                 updateRound={nextRound}
+                playoffWinsRequiredCount={playoffWinsRequiredCount}
               />
             </div>
           ))}

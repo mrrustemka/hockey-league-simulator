@@ -43,6 +43,7 @@ export const champs: League[] = [
       { conference_id: '1', name: 'Group A' },
       { conference_id: '2', name: 'Group B' },
     ],
+    playoff_wins_required_count: 1,
   },
   {
     id: '2',
@@ -56,6 +57,7 @@ export const champs: League[] = [
       { conference_id: '1', name: 'Group A' },
       { conference_id: '2', name: 'Group B' },
     ],
+    playoff_wins_required_count: 1,
   },
   {
     id: '3',
@@ -76,6 +78,7 @@ export const champs: League[] = [
       { name: 'Central', conference_id: '2', division_id: '3' },
       { name: 'Pacific', conference_id: '2', division_id: '4' },
     ],
+    playoff_wins_required_count: 4,
   },
   {
     id: '4',
@@ -96,6 +99,7 @@ export const champs: League[] = [
       { name: 'Alpine', conference_id: '2', division_id: '3' },
       { name: 'Central', conference_id: '2', division_id: '4' },
     ],
+    playoff_wins_required_count: 4,
   },
   {
     id: '5',
@@ -106,6 +110,7 @@ export const champs: League[] = [
     teams: shl,
     teams_count: 14,
     cup: shl_cup,
+    playoff_wins_required_count: 4,
   },
   {
     id: '6',
@@ -116,6 +121,7 @@ export const champs: League[] = [
     teams: na,
     teams_count: 14,
     cup: na_cup,
+    playoff_wins_required_count: 4,
   },
   {
     id: '7',
@@ -126,6 +132,7 @@ export const champs: League[] = [
     teams: del,
     teams_count: 14,
     cup: del_cup,
+    playoff_wins_required_count: 4,
   },
   {
     id: '8',
@@ -136,6 +143,7 @@ export const champs: League[] = [
     teams: sml,
     teams_count: 16,
     cup: sml_cup,
+    playoff_wins_required_count: 4,
   },
   {
     id: '9',
@@ -146,6 +154,7 @@ export const champs: League[] = [
     teams: elh,
     teams_count: 14,
     cup: elh_cup,
+    playoff_wins_required_count: 4,
   },
   {
     id: '10',
@@ -156,5 +165,6 @@ export const champs: League[] = [
     teams: ice,
     teams_count: 13,
     cup: ice_cup,
+    playoff_wins_required_count: 4,
   },
 ];
