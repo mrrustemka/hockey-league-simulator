@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { GameResult, Schedule, Teams } from '../data/types';
 import Header from './Header';
 import Legend from './Legend';
-import PassedGames from './PassedGames';
+import PassedMatchups from './PassedMatchups';
 import SeasonSeries from './SeasonSeries';
 import Sheet from './Sheet';
 import UpcomingGames from './UpcomingGames';
@@ -892,7 +892,7 @@ function Game() {
                 gameCounter
               ) && (
                 <Row className='passed-games slide-in-left'>
-                  <PassedGames
+                  <PassedMatchups
                     schedule={scheduleList
                       .slice(Math.max(0, gameCounter - 6), gameCounter)
                       .reverse()}
