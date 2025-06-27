@@ -41,6 +41,10 @@
   width: 100%;
 }
 
+.start__card .ant-card-body {
+  text-align: center;
+}
+
 .start__card-cover {
   height: auto;
   margin: 18px auto;

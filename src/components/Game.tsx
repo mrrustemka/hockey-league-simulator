@@ -4,9 +4,10 @@ import { useState, useEffect } from 'react';
 import { GameResult, Schedule, Teams } from '../data/types';
 import Header from './Header';
 import Legend from './Legend';
+import PassedGames from './PassedGames';
 import SeasonSeries from './SeasonSeries';
 import Sheet from './Sheet';
-import UpcomingGame from './UpcomingGame';
+import UpcomingGames from './UpcomingGames';
 import { whiteTeams } from '../data/whiteList';
 import '../Styles/Game.css';
 import { champs } from '../data/champs';
@@ -885,19 +886,33 @@ function Game() {
             ) : (
               <></>
             )}
-            {scheduleList.slice(gameCounter + 1).length > 0 ? (
-              <Row className='games-info slide-in-left'>
-                <UpcomingGame
-                  schedule={scheduleList.slice(
-                    gameCounter + 1,
-                    gameCounter + 7
-                  )}
-                  teams={teams}
-                />
-              </Row>
-            ) : (
-              <></>
-            )}
+            <div className='games-info'>
+              {scheduleList.slice(
+                Math.max(0, gameCounter - 6),
+                gameCounter
+              ) && (
+                <Row className='passed-games slide-in-left'>
+                  <PassedGames
+                    schedule={scheduleList
+                      .slice(Math.max(0, gameCounter - 6), gameCounter)
+                      .reverse()}
+                  />
+                </Row>
+              )}
+              {scheduleList.slice(gameCounter + 1).length > 0 ? (
+                <Row className='upcoming-games slide-in-left'>
+                  <UpcomingGames
+                    schedule={scheduleList.slice(
+                      gameCounter + 1,
+                      gameCounter + 7
+                    )}
+                    teams={teams}
+                  />
+                </Row>
+              ) : (
+                <></>
+              )}
+            </div>
           </Col>
         </Row>
       </>

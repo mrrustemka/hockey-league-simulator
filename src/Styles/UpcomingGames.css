@@ -1,0 +1,138 @@
+﻿.upcoming-games-card {
+  margin: 18px auto;
+  padding: 8px;
+  height: fit-content;
+}
+
+.upcoming-games-card__team-logo {
+  animation: upcomingPulse 2s infinite;
+}
+
+.upcoming-games-card__team-logo--away,
+.upcoming-games-card__team-logo--home {
+  width: 75px;
+  height: 75px;
+  display: inline;
+  margin: 0 0.5em;
+}
+
+.upcoming-games-card__container {
+  display: grid !important;
+  grid-template-columns: 1fr auto auto auto 1fr;
+}
+
+.upcoming-games-card__score--home,
+.upcoming-games-card__score--away,
+.upcoming-games-card__vs {
+  color: var(--black);
+  margin: auto;
+}
+
+.upcoming-games-card__container > img {
+  border-radius: 0 !important;
+}
+
+.upcoming-games__title {
+  margin: 0 auto;
+  color: var(--white) !important;
+}
+
+.upcoming-games-card .ant-card-body {
+  padding: 0 !important;
+}
+
+.upcoming-games {
+  flex-direction: column;
+}
+
+/* Media Queries */
+@media (width <= 1500px) {
+  .upcoming-games-card__team-logo--away,
+  .upcoming-games-card__team-logo--home {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (width <= 1200px) {
+  .upcoming-games-card__container {
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .upcoming-games-card__score--away {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .upcoming-games-card__score--home {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+}
+
+@media (width <= 1000px) {
+  .upcoming-games-card__team-logo--away,
+  .upcoming-games-card__team-logo--home {
+    width: 75px;
+    height: 75px;
+  }
+
+  .upcoming-games-card {
+    margin: 18px 12px;
+  }
+}
+
+@media (width <= 900px) {
+  .upcoming-games {
+    grid-column: 2 / span 1;
+  }
+
+  .upcoming-games-card__container {
+    grid-template-columns: 1fr auto auto auto 1fr;
+    grid-template-rows: auto;
+  }
+
+  .upcoming-games-card__score--away {
+    grid-row: 1 / 2;
+  }
+
+  .upcoming-games-card__score--home {
+    grid-row: 1 / 2;
+    grid-column: 5 / 6;
+  }
+}
+
+@media (width <= 700px) {
+  .upcoming-games-card__container {
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .upcoming-games-card__score--away {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .upcoming-games-card__score--home {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+}
+
+@media (width <= 400px) {
+  .upcoming-games {
+    grid-column: 1 / span 1;
+  }
+}
+
+@media (hover: hover) {
+  .upcoming-games-card:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+  }
+
+  .upcoming-games-card__vs:hover {
+    animation: shake 0.5s ease;
+  }
+}

@@ -57,12 +57,6 @@ th {
   color: var(--black);
 }
 
-.ant-card-body {
-  text-align: center;
-  padding: 0 !important;
-  margin: 0 8px 8px !important;
-}
-
 /* Animations */
 
 @keyframes slideInLeft {

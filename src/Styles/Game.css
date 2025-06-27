@@ -62,7 +62,7 @@
   background-color: var(--button-bg-color);
   color: var(--button-color);
   border-color: var(--button-border-color);
-  margin: 8px 4px;
+  margin: var(--padding-small) 4px;
   padding: var(--button-padding);
   border-radius: var(--button-radius);
   height: auto;
@@ -79,7 +79,7 @@
   max-width: var(--grid-full-width);
 }
 
-.card--hoverable > .ant-card-body {
+.card--hoverable .ant-card-body {
   margin: 0 var(--padding-medium);
   display: grid;
   grid-template-rows: var(--grid-auto) var(--grid-auto);
@@ -95,9 +95,8 @@
   margin: 0.8em auto;
 }
 
-.games-info {
-  flex-direction: column;
-  margin: 0.8rem;
+.controls-panel__counter .ant-card-body {
+  padding: var(--padding-small);
 }
 
 .season-series {
@@ -142,6 +141,19 @@
   animation: dots-anim 1.5s infinite;
 }
 
+.games-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.simulate-panel__card .ant-card-hoverable .ant-card-body {
+  padding: var(--padding-small);
+}
+
+.cards-row__card-column .ant-card-body {
+  padding: 0 var(--padding-medium);
+}
+
 /* Animations */
 
 @keyframes dots-anim {
@@ -160,6 +172,13 @@
 }
 
 /* Media Queries */
+@media (width <= 1000px) {
+  .games-info {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+  }
+}
+
 @media (width <= 900px) {
   .layout,
   .playoff__container {
@@ -170,24 +189,29 @@
 
   .layout__side-panel {
     display: grid;
-    grid-template-columns: var(--grid-auto) var(--grid-auto);
+    grid-template-columns: 6fr 4fr;
     grid-template-rows: repeat(4, var(--grid-auto)) 1fr;
     max-width: var(--grid-full-width);
   }
 
   .simulate-panel,
-  .controls-panel,
-  .ant-row:nth-child(1),
-  .ant-row:nth-child(2) {
+  .controls-panel {
     grid-column: 1 / span 1;
   }
 
   .games-info {
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 5;
+    grid-column: 1 / span 2;
+    grid-row: 5 / span 1;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
   }
   .ant-row:nth-child(1) {
     height: fit-content;
+  }
+
+  .cards-row {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
   }
 }
 
@@ -202,6 +226,18 @@
   .games-info {
     grid-row: 6 / span 1;
     grid-column: 1 / span 1;
+  }
+
+  .cards-row {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+  }
+}
+
+@media (width <= 400px) {
+  .games-info {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
   }
 }
 

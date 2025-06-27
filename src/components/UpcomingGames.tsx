@@ -1,11 +1,11 @@
 import { Card, Typography } from 'antd';
 import { Link } from 'react-router-dom';
 import { Schedule, Teams } from '../data/types';
-import '../Styles/UpcomingGame.css';
+import '../Styles/UpcomingGames.css';
 
 const { Title } = Typography;
 
-function UpcomingGame(props: { schedule: Schedule[]; teams: Teams[] }) {
+function UpcomingGames(props: { schedule: Schedule[]; teams: Teams[] }) {
   return (
     <>
       <Title className='upcoming-games__title' level={2}>
@@ -82,4 +82,4 @@ function UpcomingGame(props: { schedule: Schedule[]; teams: Teams[] }) {
   );
 }
 
-export default UpcomingGame;
+export default UpcomingGames;

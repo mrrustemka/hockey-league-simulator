@@ -22,88 +22,88 @@ function SeasonSeries(props: { games: Schedule[]; teams: Teams[] }) {
             key={game.id}
             cover={
               <div className='season-series-card__container'>
-                <h3 className='season-series-card__status--away'>
+                <h2 className='season-series-card__status--away'>
                   {
                     props.teams
-                      .find((element) => element.id === game.away)
+                      .find((team) => team.id === game.away)
                       ?.game_results?.find(
                         (result: GameResult) => result.id === game.id
                       )?.away_status
                   }
-                </h3>
+                </h2>
+                <h2 className='season-series-card__score--away'>
+                  {
+                    props.teams
+                      .find((team) => team.id === game.away)
+                      ?.game_results?.find(
+                        (result: GameResult) => result.id === game.id
+                      )?.away_goals
+                  }
+                </h2>
                 <Link
+                  className='season-series-card__team-link--away'
                   to={`/hockey-league-simulator/season/team/${
-                    props.teams.find((element) => element.id === game.away)?.id
+                    props.teams.find((team) => team.id === game.away)?.id
                   }`}
                 >
                   <img
                     className='season-series-card__team-logo season-series-card__team-logo--away'
                     alt={
-                      props.teams.find((element) => element.id === game.away)
-                        ?.name + ' Logo'
+                      props.teams.find((team) => team.id === game.away)?.name +
+                      ' Logo'
                     }
                     src={
-                      props.teams.find((element) => element.id === game.away)
-                        ?.logo
+                      props.teams.find((team) => team.id === game.away)?.logo
                     }
                     loading='lazy'
                   />
                 </Link>
                 <h3 className='season-series-card__vs'>@</h3>
                 <Link
+                  className='season-series-card__team-link--home'
                   to={`/hockey-league-simulator/season/team/${
-                    props.teams.find((element) => element.id === game.home)?.id
+                    props.teams.find((team) => team.id === game.home)?.id
                   }`}
                 >
                   <img
-                    className='season-series-card__team-logo season-series-card__team-logo--away'
+                    className='season-series-card__team-logo season-series-card__team-logo--home'
                     alt={
-                      props.teams.find((element) => element.id === game.home)
-                        ?.name + ' Logo'
+                      props.teams.find((team) => team.id === game.home)?.name +
+                      ' Logo'
                     }
                     src={
-                      props.teams.find((element) => element.id === game.home)
-                        ?.logo
+                      props.teams.find((team) => team.id === game.home)?.logo
                     }
                     loading='lazy'
                   />
                 </Link>
-                <h3 className='season-series-card__status--home'>
+                <h2 className='season-series-card__status--home'>
                   {
                     props.teams
-                      .find((element) => element.id === game.home)
+                      .find((team) => team.id === game.home)
                       ?.game_results?.find(
                         (result: GameResult) => result.id === game.id
                       )?.home_status
                   }
-                </h3>
-                <h3 className='season-series-card__score--away'>
-                  {
-                    props.teams
-                      .find((element) => element.id === game.away)
-                      ?.game_results?.find(
-                        (result: GameResult) => result.id === game.id
-                      )?.away_goals
-                  }
-                </h3>
+                </h2>
                 <h3 className='season-series-card__overtime'>
                   {
                     props.teams
-                      .find((element) => element.id === game.home)
+                      .find((team) => team.id === game.home)
                       ?.game_results?.find(
                         (result: GameResult) => result.id === game.id
                       )?.overtime
                   }
                 </h3>
-                <h3 className='season-series-card__score--home'>
+                <h2 className='season-series-card__score--home'>
                   {
                     props.teams
-                      .find((element) => element.id === game.home)
+                      .find((team) => team.id === game.home)
                       ?.game_results?.find(
                         (result: GameResult) => result.id === game.id
                       )?.home_goals
                   }
-                </h3>
+                </h2>
               </div>
             }
           ></Card>
