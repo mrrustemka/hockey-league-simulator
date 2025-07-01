@@ -11,6 +11,9 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
   const totalTeams: number = JSON.parse(
     localStorage.getItem('teamsList') || '[]'
   ).length;
+  const favorites: string[] = JSON.parse(
+    localStorage.getItem('favoriteTeams') || '[]'
+  );
 
   return (
     <>
@@ -45,6 +48,7 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
           title='Team'
           dataIndex='name'
           key='team'
+          className='table__column table__column--name'
           render={(dataIndex) => {
             const team = props.teamsData.find(
               (item: { name: string }) => item.name === dataIndex
@@ -54,6 +58,9 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
             const is_playoff = team?.is_playoff;
             const status = team?.status;
             const teamId = team?.id;
+            const postFix = favorites.includes(team?.id ?? '')
+              ? '\u{2B50}'
+              : '  ';
 
             return (
               <div className='table__team' key={uuidv4()}>
@@ -71,12 +78,12 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
                   to={`/hockey-league-simulator/season/team/${teamId}`}
                   className='table__column-name'
                 >
-                  {` ${dataIndex} ${status}`}
+                  {` ${dataIndex}`}
                 </Link>
+                {' ' + postFix + ' '} {status}
               </div>
             );
           }}
-          className='table__column table__column--name'
         />
         <Table.Column
           title='Rating'

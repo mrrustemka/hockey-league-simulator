@@ -43,8 +43,19 @@
 .table__column--loses,
 .table__column--loses-ot,
 .table__column--points,
-.table__column--diff {
+.table__column--diff,
+.table__column--points_percentage {
   text-align: center;
+}
+
+.table__column--games,
+.table__column--wins,
+.table__column--loses,
+.table__column--loses-ot,
+.table__column--points,
+.table__column--diff,
+.table__column--points_percentage {
+  color: var(--table-column-name-color);
 }
 
 .table__column-diff--positive {
@@ -94,6 +105,11 @@
   opacity: 0;
   transform: translateX(-20px);
   animation: tableSlideInLeft 0.5s forwards;
+}
+
+.table__column--loses,
+.table__column--points_percentage {
+  background-color: #fff;
 }
 
 /* Media Queries */
