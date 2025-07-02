@@ -119,8 +119,8 @@
 
 @media (width <=650px) {
   .season-series {
-    grid-row: 5 / span 1;
-    grid-column: 1 / span 1;
+    grid-row: 5 / 6;
+    grid-column: 1 / 2;
   }
 }
 
