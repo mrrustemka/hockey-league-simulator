@@ -6,6 +6,9 @@ import '../Styles/UpcomingGames.css';
 const { Title } = Typography;
 
 function UpcomingGames(props: { schedule: Schedule[]; teams: Teams[] }) {
+  const favorites: string[] = JSON.parse(
+    localStorage.getItem('favoriteTeams') || '[]'
+  );
   return (
     <>
       <Title className='upcoming-games__title' level={2}>
@@ -31,9 +34,10 @@ function UpcomingGames(props: { schedule: Schedule[]; teams: Teams[] }) {
                 to={`/hockey-league-simulator/season/team/${
                   props.teams.find((element) => element.id === game.away)?.id
                 }`}
+                className='upcoming-games-card__team-link--away'
               >
                 <img
-                  className='upcoming-games-card__team-logo upcoming-games-card__team-logo--away'
+                  className='upcoming-games-card__team-logo--away'
                   alt={
                     props.teams.find((element) => element.id === game.away)
                       ?.name + ' Logo'
@@ -45,15 +49,20 @@ function UpcomingGames(props: { schedule: Schedule[]; teams: Teams[] }) {
                   loading='lazy'
                 />
               </Link>
-
+              <h3 className='upcoming-games-card__favorite'>
+                {favorites.includes(game.away) || favorites.includes(game.home)
+                  ? '\u{2B50}'
+                  : '  '}
+              </h3>
               <h3 className='upcoming-games-card__vs'>@</h3>
               <Link
                 to={`/hockey-league-simulator/season/team/${
                   props.teams.find((element) => element.id === game.home)?.id
                 }`}
+                className='upcoming-games-card__team-link--home'
               >
                 <img
-                  className='upcoming-games-card__team-logo upcoming-games-card__team-logo--home'
+                  className='upcoming-games-card__team-logo--home'
                   alt={
                     props.teams.find((element) => element.id === game.home)
                       ?.name + ' Logo'

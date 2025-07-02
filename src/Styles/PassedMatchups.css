@@ -4,26 +4,25 @@
   height: fit-content;
 }
 
-.passed-games-card__team-logo {
-  animation: upcomingPulse 2s infinite;
-}
-
 .passed-games-card__team-logo--away,
 .passed-games-card__team-logo--home {
   width: 75px;
   height: 75px;
   display: inline;
   margin: 0 0.5em;
+  animation: upcomingPulse 2s infinite;
 }
 
 .passed-games-card__container {
   display: grid !important;
   grid-template-columns: 1fr auto auto auto 1fr;
+  grid-template-rows: auto auto auto;
 }
 
 .passed-games-card__score--home,
 .passed-games-card__score--away,
-.passed-games-card__vs {
+.passed-games-card__vs,
+.passed-games-card__favorite {
   color: var(--black);
   margin: auto;
 }
@@ -49,35 +48,85 @@
   flex-direction: column;
 }
 
+.passed-games-card__score--away {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+
+.passed-games-card__team-link--away {
+  grid-row: 1/4;
+  grid-column: 2/3;
+}
+
+.passed-games-card__vs {
+  grid-row: 2/3;
+  grid-column: 3/4;
+}
+
+.passed-games-card__team-link--home {
+  grid-row: 1/4;
+  grid-column: 4/5;
+}
+
+.passed-games-card__score--home {
+  grid-row: 2/3;
+  grid-column: 5/6;
+}
+
+.passed-games-card__favorite {
+  grid-row: 1/2;
+  grid-column: 3/4;
+}
+
 /* Media Queries */
 @media (width <= 1500px) {
   .passed-games-card__team-logo--away,
   .passed-games-card__team-logo--home {
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 65px;
+  }
+}
+
+@media (width <= 1400px) {
+  .passed-games-card__container {
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .passed-games-card__score--away {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .passed-games-card__team-link--away {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+
+  .passed-games-card__vs {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .passed-games-card__favorite {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .passed-games-card__team-link--home {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+  }
+
+  .passed-games-card__score--home {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
   }
 }
 
 @media (width <= 1276px) {
   .passed-games__title {
     padding: 0 24px;
-  }
-}
-
-@media (width <= 1200px) {
-  .passed-games-card__container {
-    grid-template-columns: 1fr auto 1fr;
-    grid-template-rows: auto auto;
-  }
-
-  .passed-games-card__score--away {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-  }
-
-  .passed-games-card__score--home {
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
   }
 }
 
@@ -91,21 +140,42 @@
 
 @media (width <= 900px) {
   .passed-games {
-    grid-column: 1 / span 1;
+    grid-column: 1 / 2;
   }
 
   .passed-games-card__container {
     grid-template-columns: 1fr auto auto auto 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: auto auto auto;
   }
 
   .passed-games-card__score--away {
-    grid-row: 1 / 2;
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  .passed-games-card__team-link--away {
+    grid-row: 1/4;
+    grid-column: 2/3;
+  }
+
+  .passed-games-card__vs {
+    grid-row: 2/3;
+    grid-column: 3/4;
+  }
+
+  .passed-games-card__team-link--home {
+    grid-row: 1/4;
+    grid-column: 4/5;
   }
 
   .passed-games-card__score--home {
-    grid-row: 1 / 2;
-    grid-column: 5 / 6;
+    grid-row: 2/3;
+    grid-column: 5/6;
+  }
+
+  .passed-games-card__favorite {
+    grid-row: 1/2;
+    grid-column: 3/4;
   }
 }
 
