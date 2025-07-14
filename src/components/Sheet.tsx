@@ -18,15 +18,16 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
   return (
     <>
       <Table
-        dataSource={[
-          ...props.teamsData.map((team, index) => ({
-            ...team,
-            key: index,
-          })),
-        ]}
+        dataSource={props.teamsData.map((team, index) => ({
+          ...team,
+          key: index,
+        }))}
         pagination={false}
         size='small'
         rowKey={(record) => record.name}
+        rowClassName={(team, index) => {
+          return favorites.includes(team?.id ?? '') ? 'favorite' : '';
+        }}
       >
         <Table.Column
           title='Rank'

@@ -112,6 +112,10 @@
   background-color: #fff;
 }
 
+.favorite {
+  background-color: #fafafa;
+}
+
 /* Media Queries */
 
 @media (width <= 650px) {
