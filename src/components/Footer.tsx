@@ -1,8 +1,8 @@
-import "../Styles/Footer.css";
+import '../styles/Footer.css';
 
 function Footer() {
   return (
-    <div className="footer">
+    <div className='footer'>
       <p>
         My educational project is not affiliated by the Countries and Hockey
         Leagues, including the National Hockey League (NHL), the International

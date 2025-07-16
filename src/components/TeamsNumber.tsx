@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { League as TLeague } from '../data/types';
 import { schedule } from '../data/schedule';
-import '../Styles/TeamsNumber.css';
+import '../styles/TeamsNumber.css';
 
 const { Title } = Typography;
 const { Option } = Select;

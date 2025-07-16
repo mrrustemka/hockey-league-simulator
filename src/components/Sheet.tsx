@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Table } from 'antd';
 import { v4 as uuidv4 } from 'uuid';
 import { Teams } from '../data/types';
-import '../Styles/Sheet.css';
+import '../styles/Sheet.css';
 
 function Sheet(props: { teamsData: Teams[]; id: string }) {
   let rank: number = 0;

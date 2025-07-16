@@ -2,7 +2,7 @@ import { Button, Typography } from 'antd';
 import { v4 as uuidv4 } from 'uuid';
 import Pair from './Pair';
 import { Teams } from '../../data/types';
-import '../../Styles/Round.css';
+import '../../styles/Round.css';
 
 const { Title } = Typography;
 

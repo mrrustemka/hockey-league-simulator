@@ -9,7 +9,7 @@ import SeasonSeries from './SeasonSeries';
 import Sheet from './Sheet';
 import UpcomingGames from './UpcomingGames';
 import { whiteTeams } from '../data/whiteList';
-import '../Styles/Game.css';
+import '../styles/Game.css';
 import { champs } from '../data/champs';
 
 const { Title } = Typography;

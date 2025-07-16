@@ -62,7 +62,7 @@ export type GameResult = {
   away_status: string;
 };
 
-export type buttonStyles = {
+export type buttonstyles = {
   display: string;
 };
 

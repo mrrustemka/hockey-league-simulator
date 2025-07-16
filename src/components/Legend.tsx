@@ -1,4 +1,4 @@
-import '../Styles/Legend.css';
+import '../styles/Legend.css';
 function Legend() {
   return (
     <div className='legend'>

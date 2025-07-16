@@ -6,7 +6,7 @@ import { whiteTeams } from '../data/whiteList';
 import Chart from './Chart';
 import Gallery from './Gallery';
 import Header from './Header';
-import '../Styles/Team.css';
+import '../styles/Team.css';
 
 const { Title } = Typography;
 

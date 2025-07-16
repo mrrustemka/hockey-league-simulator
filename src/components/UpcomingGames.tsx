@@ -1,7 +1,7 @@
 import { Card, Typography } from 'antd';
 import { Link } from 'react-router-dom';
 import { Schedule, Teams } from '../data/types';
-import '../Styles/UpcomingGames.css';
+import '../styles/UpcomingGames.css';
 
 const { Title } = Typography;
 

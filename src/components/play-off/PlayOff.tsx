@@ -5,7 +5,7 @@ import { champs } from '../../data/champs';
 import { League, Teams } from '../../data/types';
 import Header from '../Header';
 import Round from './Round';
-import '../../Styles/PlayOff.css';
+import '../../styles/PlayOff.css';
 
 function PlayOff() {
   const [isRound, setIsRound] = useState<boolean>(true);

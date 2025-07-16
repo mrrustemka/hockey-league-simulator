@@ -1,5 +1,5 @@
 import { PlayOffGameResult, GameResult } from '../../data/types';
-import '../../Styles/PlayOffGame.css';
+import '../../styles/PlayOffGame.css';
 
 interface IPlayOffGame {
   game: PlayOffGameResult;

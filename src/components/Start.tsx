@@ -1,7 +1,7 @@
 import { champs } from '../data/champs';
 import Header from './Header';
 import League from './League';
-import '../Styles/Start.css';
+import '../styles/Start.css';
 
 function Start() {
   return (

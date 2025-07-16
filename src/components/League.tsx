@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { League as TLeague } from '../data/types';
 import TeamsNumber from './TeamsNumber';
 import 'aos/dist/aos.css';
-import '../Styles/League.css';
+import '../styles/League.css';
 
 const { Title } = Typography;
 
