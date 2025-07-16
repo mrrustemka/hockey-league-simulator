@@ -16,7 +16,7 @@
 .upcoming-games-card__container {
   display: grid !important;
   grid-template-columns: 1fr auto auto auto 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: 1fr auto 1fr;
 }
 
 .upcoming-games-card__score--home,
@@ -86,7 +86,7 @@
 @media (width <= 1400px) {
   .upcoming-games-card__container {
     grid-template-columns: 1fr auto 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 1fr auto 1fr;
   }
 
   .upcoming-games-card__score--away {
@@ -139,7 +139,7 @@
 
   .upcoming-games-card__container {
     grid-template-columns: 1fr auto auto auto 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 1fr auto 1fr;
   }
 
   .upcoming-games-card__score--away {
@@ -176,7 +176,7 @@
 @media (width <= 700px) {
   .upcoming-games-card__container {
     grid-template-columns: 1fr auto 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 1fr auto 1fr;
   }
 
   .upcoming-games-card__score--away {

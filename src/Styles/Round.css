@@ -22,9 +22,10 @@
 .playoff__round-panel {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  margin: 0 24px;
+  margin: 0 2em;
   gap: 16px 8px;
   animation: fadeIn 0.5s ease forwards;
+  justify-content: center;
 }
 
 .playoff__round-panel > * {
@@ -51,6 +52,9 @@
   .playoff__round-panel {
     grid-template-columns: repeat(3, auto);
   }
+  .playoff__round-panel {
+    gap: 12px 8px;
+  }
 }
 
 @media (width <= 670px) {
@@ -62,6 +66,9 @@
 @media (width <= 500px) {
   .playoff__round-panel {
     grid-template-columns: auto;
+  }
+  .playoff__round-panel {
+    gap: 8px 4px;
   }
 }
 

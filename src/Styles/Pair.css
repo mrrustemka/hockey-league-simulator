@@ -40,7 +40,7 @@
   grid-column: 1 / -1;
   display: inline-grid;
   text-align: center;
-  padding: 8px 48px;
+  padding: 8px 16px;
 }
 
 .pair__scores {
@@ -62,6 +62,9 @@
   border-radius: var(--pair-border-radius);
   height: auto;
   animation: pulse 1.5s infinite ease-in-out;
+}
+
+@media (width <= 1200px) {
 }
 
 @media (hover: hover) {
