@@ -2,7 +2,7 @@ import { Input, Typography, Select } from 'antd';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { League as TLeague } from '../data/types';
+import { League as TLeague, Teams } from '../data/types';
 import { schedule } from '../data/schedule';
 import '../styles/TeamsNumber.css';
 
@@ -25,8 +25,17 @@ function TeamsNumber({ league }: any) {
   }
 
   function updateTeamsNum(value: number): void {
-    const newChamp: TLeague = { ...champ, teams_count: value };
-    setChamp(newChamp);
+    const curTeams = champ.teams.slice(0, value);
+    const curTeamIds = new Set(curTeams.map((team) => team.id));
+    const curSelectedTeams = selectedTeams.filter((id) => curTeamIds.has(id));
+
+    setSelectedTeams(curSelectedTeams);
+    localStorage.setItem('favoriteTeams', JSON.stringify(curSelectedTeams));
+
+    setChamp((prev) => ({
+      ...prev,
+      teams_count: value
+    }));
   }
 
   function start() {
