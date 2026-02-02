@@ -10,6 +10,7 @@
   --button-radius: 8px;
   --grid-auto: auto;
   --grid-full-width: 100%;
+  --card-small-width: clamp(48%, 49vw, 46%);
 }
 
 .cards-row,
@@ -19,7 +20,8 @@
 
 .card--hoverable {
   width: 98%;
-  transition: transform var(--transition-ease),
+  transition:
+    transform var(--transition-ease),
     box-shadow var(--transition-ease);
 }
 
@@ -238,6 +240,10 @@
   .games-info {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
+  }
+
+  .cards-row__card-column {
+    max-width: var(--card-small-width);
   }
 }
 
