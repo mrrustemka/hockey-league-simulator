@@ -24,7 +24,7 @@ function Champion(props: { champion: Teams }) {
         away_goals,
         overtime,
         home_status,
-        away_status,
+        away_status
       } = game;
 
       const isAwayTeam = away === props.champion.id;
@@ -79,7 +79,7 @@ function Champion(props: { champion: Teams }) {
         className='team__details'
         style={{
           backgroundColor: props.champion.color,
-          color: whiteTeams.includes(props.champion.color) ? '#fff' : '#000000',
+          color: whiteTeams.includes(props.champion.color) ? '#fff' : '#000000'
         }}
       >
         <Title
@@ -92,7 +92,7 @@ function Champion(props: { champion: Teams }) {
               : '#000000',
             borderColor: whiteTeams.includes(props.champion.color)
               ? '#fff'
-              : '#000000',
+              : '#000000'
           }}
         >
           Points: {props.champion.points}
@@ -107,7 +107,7 @@ function Champion(props: { champion: Teams }) {
               : '#000000',
             borderColor: whiteTeams.includes(props.champion.color)
               ? '#fff'
-              : '#000000',
+              : '#000000'
           }}
         >
           Games Played: {props.champion.game_counter}
@@ -122,7 +122,7 @@ function Champion(props: { champion: Teams }) {
               : '#000000',
             borderColor: whiteTeams.includes(props.champion.color)
               ? '#fff'
-              : '#000000',
+              : '#000000'
           }}
         >
           Wins: {props.champion.wins}
@@ -137,7 +137,7 @@ function Champion(props: { champion: Teams }) {
               : '#000000',
             borderColor: whiteTeams.includes(props.champion.color)
               ? '#fff'
-              : '#000000',
+              : '#000000'
           }}
         >
           Losses: {props.champion.loses}
@@ -152,7 +152,7 @@ function Champion(props: { champion: Teams }) {
               : '#000000',
             borderColor: whiteTeams.includes(props.champion.color)
               ? '#fff'
-              : '#000000',
+              : '#000000'
           }}
         >
           Losses OT: {props.champion.loses_ot}
@@ -167,7 +167,7 @@ function Champion(props: { champion: Teams }) {
               : '#000000',
             borderColor: whiteTeams.includes(props.champion.color)
               ? '#fff'
-              : '#000000',
+              : '#000000'
           }}
         >
           Goals For: {props.champion.goals_for}
@@ -182,7 +182,7 @@ function Champion(props: { champion: Teams }) {
               : '#000000',
             borderColor: whiteTeams.includes(props.champion.color)
               ? '#fff'
-              : '#000000',
+              : '#000000'
           }}
         >
           Goals Against: {props.champion.goals_against}
@@ -197,7 +197,7 @@ function Champion(props: { champion: Teams }) {
               : '#000000',
             borderColor: whiteTeams.includes(props.champion.color)
               ? '#fff'
-              : '#000000',
+              : '#000000'
           }}
         >
           Goals Diff: {props.champion.goals_diff}
@@ -212,7 +212,7 @@ function Champion(props: { champion: Teams }) {
               : '#000000',
             borderColor: whiteTeams.includes(props.champion.color)
               ? '#fff'
-              : '#000000',
+              : '#000000'
           }}
         >
           Rating: {props.champion.rating}
@@ -231,7 +231,7 @@ function Champion(props: { champion: Teams }) {
             {props.champion.city +
               ' ' +
               props.champion.name +
-              ' plays at ' +
+              ' play at ' +
               props.champion.arena_name}{' '}
           </Title>
           <Image
@@ -252,7 +252,7 @@ function Champion(props: { champion: Teams }) {
         className='team__nets'
         style={{
           backgroundColor: props.champion.color,
-          color: whiteTeams.includes(props.champion.color) ? '#fff' : '#000000',
+          color: whiteTeams.includes(props.champion.color) ? '#fff' : '#000000'
         }}
       >
         {props.champion.website ? (

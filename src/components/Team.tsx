@@ -32,7 +32,7 @@ function Team() {
         away_goals,
         overtime,
         home_status,
-        away_status,
+        away_status
       } = game;
 
       const isAwayTeam = away === team.id;
@@ -62,7 +62,7 @@ function Team() {
         className='team__subheader'
         style={{
           backgroundColor: team.color,
-          color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
+          color: whiteTeams.includes(team.color) ? '#fff' : '#000000'
         }}
       >
         <button
@@ -78,7 +78,7 @@ function Team() {
               level={1}
               className='team__name'
               style={{
-                color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
+                color: whiteTeams.includes(team.color) ? '#fff' : '#000000'
               }}
             >
               {team.name + ' ' + team.status}
@@ -89,7 +89,7 @@ function Team() {
             level={1}
             className='team__name'
             style={{
-              color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
+              color: whiteTeams.includes(team.color) ? '#fff' : '#000000'
             }}
           >
             {team.name + ' ' + team.status}
@@ -107,7 +107,7 @@ function Team() {
         className='team__details'
         style={{
           backgroundColor: team.color,
-          color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
+          color: whiteTeams.includes(team.color) ? '#fff' : '#000000'
         }}
       >
         <Title
@@ -116,7 +116,7 @@ function Team() {
           style={{
             backgroundColor: team.color,
             color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
-            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000',
+            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000'
           }}
         >
           Points: {team.points}
@@ -127,7 +127,7 @@ function Team() {
           style={{
             backgroundColor: team.color,
             color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
-            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000',
+            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000'
           }}
         >
           Games Played: {team.game_counter}
@@ -138,7 +138,7 @@ function Team() {
           style={{
             backgroundColor: team.color,
             color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
-            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000',
+            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000'
           }}
         >
           Wins: {team.wins}
@@ -149,7 +149,7 @@ function Team() {
           style={{
             backgroundColor: team.color,
             color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
-            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000',
+            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000'
           }}
         >
           Losses: {team.loses}
@@ -160,7 +160,7 @@ function Team() {
           style={{
             backgroundColor: team.color,
             color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
-            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000',
+            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000'
           }}
         >
           Losses OT: {team.loses_ot}
@@ -171,7 +171,7 @@ function Team() {
           style={{
             backgroundColor: team.color,
             color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
-            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000',
+            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000'
           }}
         >
           Goals For: {team.goals_for}
@@ -182,7 +182,7 @@ function Team() {
           style={{
             backgroundColor: team.color,
             color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
-            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000',
+            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000'
           }}
         >
           Goals Against: {team.goals_against}
@@ -193,7 +193,7 @@ function Team() {
           style={{
             backgroundColor: team.color,
             color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
-            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000',
+            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000'
           }}
         >
           Goals Diff: {team.goals_diff}
@@ -204,7 +204,7 @@ function Team() {
           style={{
             backgroundColor: team.color,
             color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
-            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000',
+            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000'
           }}
         >
           Rating: {team.rating}
@@ -220,7 +220,7 @@ function Team() {
       {leagueId !== '1' && leagueId !== '2' ? (
         <>
           <Title level={2} className='team__header'>
-            {team.city + ' ' + team.name + ' plays at ' + team.arena_name}{' '}
+            {team.city + ' ' + team.name + ' play at ' + team.arena_name}{' '}
           </Title>
           <Image
             className='team__arena'
@@ -240,7 +240,7 @@ function Team() {
         className='team__nets'
         style={{
           backgroundColor: team.color,
-          color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
+          color: whiteTeams.includes(team.color) ? '#fff' : '#000000'
         }}
       >
         {team.website ? (
