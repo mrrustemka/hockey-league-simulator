@@ -116,3 +116,16 @@ canvas {
   color: inherit;
   text-decoration: none;
 }
+
+/* Media Queries */
+
+@media (width <= 500px) {
+  .team__subheader {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  .team__name {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+}
