@@ -16,6 +16,7 @@ export type Teams = {
   wins: number;
   play_off_rank: number;
   play_off_round_wins: number;
+  play_off_round_results: PlayOffRoundResult[];
   readonly color: string;
   readonly flag?: string;
   is_playoff: boolean;
@@ -96,4 +97,12 @@ export type Division = {
   readonly name: string;
   readonly division_id: string;
   readonly conference_id: string;
+};
+
+export type PlayOffRoundResult = {
+  readonly id?: string;
+  team: string;
+  team_wins: number;
+  opponent: string;
+  opponent_wins: number;
 };

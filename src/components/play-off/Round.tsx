@@ -7,7 +7,7 @@ import '../../styles/Round.css';
 const { Title } = Typography;
 
 interface IRound {
-  abv: string;
+  abv: number;
   pairs: Teams[][];
   status: boolean;
   updateRound: () => void;
@@ -34,22 +34,44 @@ function Round({
   }
 
   function handlerNextRound() {
+    if (
+      !pairs.every((pair: Teams[]) =>
+        pair.some(
+          (team) => team.play_off_round_wins === playoffWinsRequiredCount
+        )
+      )
+    ) {
+      console.log('Please simulate all games before go to the next round');
+      return;
+    }
+
+    pairs.forEach((pair: Teams[]) => {
+      pair.forEach((team: Teams) => {
+        team.play_off_round_results.push({
+          team: team.abbreviation,
+          team_wins: team.play_off_round_wins,
+          opponent: pair.find((opponent: Teams) => opponent !== team)?.abbreviation ?? '',
+          opponent_wins: pair.find((opponent: Teams) => opponent !== team)?.play_off_round_wins ?? 0,
+        });
+      });
+    });
     updateRound();
   }
 
   return (
     <div className='playoff'>
       <Title className='playoff__header' level={2}>
-        {pairs.length === 1 ? 'Final' : abv}
+        {pairs.length === 1 ? 'Final' : 'Round ' + abv}
       </Title>
       <div className='playoff__round-panel'>
         {pairs.map((pair: Teams[]) => (
           <Pair
-            key={uuidv4()}
+            key={pair[0].id + '-' + pair[1].id}
             teams={pair}
             handlerIsRoundEnd={handlerIsRoundEnd}
             status={status}
             playoffWinsRequiredCount={playoffWinsRequiredCount}
+            index={abv}
           />
         ))}
       </div>

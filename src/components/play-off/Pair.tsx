@@ -12,6 +12,7 @@ interface PairProps {
   handlerIsRoundEnd: () => void;
   status: boolean;
   playoffWinsRequiredCount: number;
+  index: number;
 }
 
 function Pair({
@@ -19,39 +20,40 @@ function Pair({
   handlerIsRoundEnd,
   status,
   playoffWinsRequiredCount,
+  index
 }: PairProps) {
   const leagueId: string = JSON.parse(localStorage.getItem('leagueId') || '');
   const [games, setGames] = useState(
     leagueId === '1' || leagueId === '2'
       ? [
-          {
-            id: uuidv4(),
-            home: teams[0].abbreviation,
-            away: teams[1].abbreviation,
-          },
-        ]
+        {
+          id: uuidv4(),
+          home: teams[0].abbreviation,
+          away: teams[1].abbreviation
+        }
+      ]
       : [
-          {
-            id: uuidv4(),
-            home: teams[0].abbreviation,
-            away: teams[1].abbreviation,
-          },
-          {
-            id: uuidv4(),
-            home: teams[0].abbreviation,
-            away: teams[1].abbreviation,
-          },
-          {
-            id: uuidv4(),
-            home: teams[1].abbreviation,
-            away: teams[0].abbreviation,
-          },
-          {
-            id: uuidv4(),
-            home: teams[1].abbreviation,
-            away: teams[0].abbreviation,
-          },
-        ]
+        {
+          id: uuidv4(),
+          home: teams[0].abbreviation,
+          away: teams[1].abbreviation
+        },
+        {
+          id: uuidv4(),
+          home: teams[0].abbreviation,
+          away: teams[1].abbreviation
+        },
+        {
+          id: uuidv4(),
+          home: teams[1].abbreviation,
+          away: teams[0].abbreviation
+        },
+        {
+          id: uuidv4(),
+          home: teams[1].abbreviation,
+          away: teams[0].abbreviation
+        }
+      ]
   );
   let [curGame, setCurGame] = useState<number>(0);
   const [isFinished, setIsFinished] = useState<boolean>(false);
@@ -88,17 +90,17 @@ function Pair({
         ...games,
         games.length === 5
           ? {
-              id: uuidv4(),
-              home: teams[1].abbreviation,
-              away: teams[0].abbreviation,
-              winner: '',
-            }
+            id: uuidv4(),
+            home: teams[1].abbreviation,
+            away: teams[0].abbreviation,
+            winner: ''
+          }
           : {
-              id: uuidv4(),
-              home: teams[0].abbreviation,
-              away: teams[1].abbreviation,
-              winner: '',
-            },
+            id: uuidv4(),
+            home: teams[0].abbreviation,
+            away: teams[1].abbreviation,
+            winner: ''
+          }
       ];
       setGames(newGame);
     }
@@ -127,6 +129,7 @@ function Pair({
       wins: 0,
       play_off_rank: 0,
       play_off_round_wins: 0,
+      play_off_round_results: [],
       color: '#ffffff',
       flag: '',
       is_playoff: false,
@@ -149,7 +152,7 @@ function Pair({
       linkedin: '',
       website: '',
       twitch: '',
-      points_percentage: 0,
+      points_percentage: 0
     };
     let away: Teams = {
       abbreviation: '',
@@ -169,6 +172,7 @@ function Pair({
       wins: 0,
       play_off_rank: 0,
       play_off_round_wins: 0,
+      play_off_round_results: [],
       color: '#ffffff',
       flag: '',
       is_playoff: false,
@@ -191,7 +195,7 @@ function Pair({
       linkedin: '',
       website: '',
       twitch: '',
-      points_percentage: 0,
+      points_percentage: 0
     };
     function getTeamInfo(team: string): Teams {
       const foundTeam = teams.find(
@@ -244,8 +248,8 @@ function Pair({
       home.status === '\u{1F525}'
         ? 99
         : home.status === '\u{1F9CA}'
-        ? 50
-        : home.rating
+          ? 50
+          : home.rating
     );
     let aGoals: number = getGoals(
       0,
@@ -253,8 +257,8 @@ function Pair({
       away.status === '\u{1F525}'
         ? 99
         : away.status === '\u{1F9CA}'
-        ? 50
-        : away.rating
+          ? 50
+          : away.rating
     );
 
     // Make more realistic game score
@@ -301,8 +305,8 @@ function Pair({
         overtime: overtime,
         id: uuidv4(),
         home_status: home.status,
-        away_status: away.status,
-      },
+        away_status: away.status
+      }
     ]);
 
     addGame();
@@ -318,7 +322,7 @@ function Pair({
               src={teams[0].logo}
               alt={teams[0].name + ' Logo'}
               style={{
-                backgroundColor: teams[0].color,
+                backgroundColor: teams[0].color
               }}
               loading='lazy'
             />
@@ -327,7 +331,7 @@ function Pair({
               src={teams[1].logo}
               alt={teams[1].name + ' Logo'}
               style={{
-                backgroundColor: teams[1].color,
+                backgroundColor: teams[1].color
               }}
               loading='lazy'
             />
@@ -337,8 +341,8 @@ function Pair({
             <Title className='pair__scores' level={4}>
               {leagueId !== '1' && leagueId !== '2'
                 ? teams[0].play_off_round_wins +
-                  ' - ' +
-                  teams[1].play_off_round_wins
+                ' - ' +
+                teams[1].play_off_round_wins
                 : ''}
             </Title>
             <Title className='pair__team-status-away' level={4}>
@@ -379,6 +383,12 @@ function Pair({
               alt={teams[1].name + ' Logo'}
               loading='lazy'
             />
+            <Title className='pair__team-result-home' level={4}>
+              {teams[0].play_off_round_results[index - 1].team_wins}
+            </Title>
+            <Title className='pair__team-result-away' level={4}>
+              {teams[1].play_off_round_results[index - 1].team_wins}
+            </Title>
           </>
         )}
       </div>

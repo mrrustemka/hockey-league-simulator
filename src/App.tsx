@@ -14,7 +14,7 @@ const router = createBrowserRouter([
       <div className='app__div'>
         <Start />
       </div>
-    ),
+    )
   },
   {
     path: '/hockey-league-simulator/season',
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       <div className='app__div'>
         <Game />
       </div>
-    ),
+    )
   },
   {
     path: '/hockey-league-simulator/season/playoff',
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       <div className='app__div'>
         <PlayOff />
       </div>
-    ),
+    )
   },
   {
     path: '/hockey-league-simulator/season/team/:teamId',
@@ -38,8 +38,8 @@ const router = createBrowserRouter([
       <div className='app__div'>
         <Team />
       </div>
-    ),
-  },
+    )
+  }
 ]);
 
 const App: FC = () => (

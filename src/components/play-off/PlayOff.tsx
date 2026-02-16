@@ -61,9 +61,9 @@ function PlayOff() {
       ) : (
         <div className='playoff__rounds'>
           {tree.map((value, index) => (
-            <div className='playoff__round' key={uuidv4()}>
+            <div className='playoff__round' key={tree.length - index}>
               <Round
-                abv={'Round ' + (tree.length - index)}
+                abv={tree.length - index}
                 pairs={value}
                 status={index === 0}
                 updateRound={nextRound}

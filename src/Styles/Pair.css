@@ -64,6 +64,14 @@
   animation: pulse 1.5s infinite ease-in-out;
 }
 
+.pair__team-result-home {
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+.pair__team-result-away {
+  grid-area: 2 / 3 / 3 / 5;
+}
+
 @media (width <= 1200px) {
 }
 
