@@ -6,6 +6,7 @@ import { whiteTeams } from '../../data/whiteList';
 import { champs } from '../../data/champs';
 import Chart from '../Chart';
 import Gallery from '../Gallery';
+import PreviousPairs from './PreviousPairs';
 
 const { Title } = Typography;
 
@@ -225,6 +226,35 @@ function Champion(props: { champion: Teams }) {
         color={props.champion.color}
         playOff={playOffTeams}
       />
+      <Title level={2} className='team__header'>
+        Play Off Series
+      </Title>
+      <div className='playoff__round-panel'>
+        {props.champion.play_off_round_results.map((result, index) => {
+          const opponent = teams.find((t: Teams) => t.abbreviation === result.opponent);
+          return (
+            <PreviousPairs
+              key={result.id || index}
+              teams={[
+                {
+                  ...result,
+                  logo: props.champion.logo,
+                  name: props.champion.name,
+                },
+                {
+                  team: result.opponent,
+                  team_wins: result.opponent_wins,
+                  opponent: result.team,
+                  opponent_wins: result.team_wins,
+                  logo: opponent?.logo,
+                  name: opponent?.name,
+                }
+              ]}
+              index={index + 1}
+            />
+          );
+        })}
+      </div>
       {leagueId !== '1' && leagueId !== '2' ? (
         <>
           <Title level={2} className='team__header'>

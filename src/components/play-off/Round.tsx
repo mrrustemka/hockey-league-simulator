@@ -1,6 +1,7 @@
 import { Button, Typography } from 'antd';
 import { v4 as uuidv4 } from 'uuid';
 import Pair from './Pair';
+import PreviousPairs from './PreviousPairs';
 import { Teams } from '../../data/types';
 import '../../styles/Round.css';
 
@@ -64,16 +65,33 @@ function Round({
         {pairs.length === 1 ? 'Final' : 'Round ' + abv}
       </Title>
       <div className='playoff__round-panel'>
-        {pairs.map((pair: Teams[]) => (
-          <Pair
-            key={pair[0].id + '-' + pair[1].id}
-            teams={pair}
-            handlerIsRoundEnd={handlerIsRoundEnd}
-            status={status}
-            playoffWinsRequiredCount={playoffWinsRequiredCount}
-            index={abv}
-          />
-        ))}
+        {pairs.map((pair: Teams[]) =>
+          status ? (
+            <Pair
+              key={pair[0].id + '-' + pair[1].id}
+              teams={pair}
+              handlerIsRoundEnd={handlerIsRoundEnd}
+              status={status}
+              playoffWinsRequiredCount={playoffWinsRequiredCount}
+              index={abv}
+            />
+          ) : (
+            <PreviousPairs
+              key={pair[0].id + '-' + pair[1].id}
+              teams={pair.map((team) => ({
+                ...(team.play_off_round_results[abv - 1] || {}),
+                id: team.id,
+                team: team.abbreviation,
+                team_wins: team.play_off_round_results[abv - 1]?.team_wins || 0,
+                opponent: '',
+                opponent_wins: 0,
+                logo: team.logo,
+                name: team.name,
+              }))}
+              index={abv}
+            />
+          )
+        )}
       </div>
       <Button
         className='playoff__next-round-button'

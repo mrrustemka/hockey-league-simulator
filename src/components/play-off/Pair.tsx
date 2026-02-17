@@ -315,82 +315,59 @@ function Pair({
   return (
     <div className='pair'>
       <div className='pair__column'>
-        {status ? (
-          <>
-            <img
-              className='pair__team-logo-home'
-              src={teams[0].logo}
-              alt={teams[0].name + ' Logo'}
-              style={{
-                backgroundColor: teams[0].color
-              }}
-              loading='lazy'
-            />
-            <img
-              className='pair__team-logo-away'
-              src={teams[1].logo}
-              alt={teams[1].name + ' Logo'}
-              style={{
-                backgroundColor: teams[1].color
-              }}
-              loading='lazy'
-            />
-            <Title className='pair__team-status-home' level={4}>
-              {teams[0].status !== '' ? teams[0].status : ''}
-            </Title>
-            <Title className='pair__scores' level={4}>
-              {leagueId !== '1' && leagueId !== '2'
-                ? teams[0].play_off_round_wins +
-                ' - ' +
-                teams[1].play_off_round_wins
-                : ''}
-            </Title>
-            <Title className='pair__team-status-away' level={4}>
-              {teams[1].status !== '' ? teams[1].status : ''}
-            </Title>
-            <div className='pair__button-container'>
-              <Button
-                className='pair__simulate-button pulse'
-                onClick={() => simulate(games[curGame])}
-                disabled={isFinished || !status}
-              >
-                Simulate
-              </Button>
-            </div>
-            <div className='pair__games'>
-              {games.map((game, index) => (
-                <PlayOffGame
-                  game={game}
-                  key={game.id}
-                  index={index}
-                  result={results[index]}
-                  leagueId={leagueId}
-                />
-              ))}
-            </div>
-          </>
-        ) : (
-          <>
-            <img
-              className='pair__team-logo-home'
-              src={teams[0].logo}
-              alt={teams[0].name + ' Logo'}
-              loading='lazy'
-            />
-            <img
-              className='pair__team-logo-away'
-              src={teams[1].logo}
-              alt={teams[1].name + ' Logo'}
-              loading='lazy'
-            />
-            <Title className='pair__team-result-home' level={4}>
-              {teams[0].play_off_round_results[index - 1].team_wins}
-            </Title>
-            <Title className='pair__team-result-away' level={4}>
-              {teams[1].play_off_round_results[index - 1].team_wins}
-            </Title>
-          </>
-        )}
+        <>
+          <img
+            className='pair__team-logo-home'
+            src={teams[0].logo}
+            alt={teams[0].name + ' Logo'}
+            style={{
+              backgroundColor: teams[0].color
+            }}
+            loading='lazy'
+          />
+          <img
+            className='pair__team-logo-away'
+            src={teams[1].logo}
+            alt={teams[1].name + ' Logo'}
+            style={{
+              backgroundColor: teams[1].color
+            }}
+            loading='lazy'
+          />
+          <Title className='pair__team-status-home' level={4}>
+            {teams[0].status !== '' ? teams[0].status : ''}
+          </Title>
+          <Title className='pair__scores' level={4}>
+            {leagueId !== '1' && leagueId !== '2'
+              ? teams[0].play_off_round_wins +
+              ' - ' +
+              teams[1].play_off_round_wins
+              : ''}
+          </Title>
+          <Title className='pair__team-status-away' level={4}>
+            {teams[1].status !== '' ? teams[1].status : ''}
+          </Title>
+          <div className='pair__button-container'>
+            <Button
+              className='pair__simulate-button pulse'
+              onClick={() => simulate(games[curGame])}
+              disabled={isFinished || !status}
+            >
+              Simulate
+            </Button>
+          </div>
+          <div className='pair__games'>
+            {games.map((game, index) => (
+              <PlayOffGame
+                game={game}
+                key={game.id}
+                index={index}
+                result={results[index]}
+                leagueId={leagueId}
+              />
+            ))}
+          </div>
+        </>
       </div>
     </div>
   );

@@ -105,4 +105,6 @@ export type PlayOffRoundResult = {
   team_wins: number;
   opponent: string;
   opponent_wins: number;
+  readonly logo?: string;
+  readonly name?: string;
 };
