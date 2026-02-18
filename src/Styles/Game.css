@@ -277,3 +277,16 @@
     border-color: var(--button-border-color) !important;
   }
 }
+
+/* Focus-visible counterparts for keyboard navigation */
+.card--hoverable:focus-visible {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.controls-panel__button--simulate:focus-visible,
+.controls-panel__button--next:focus-visible,
+.playoff__start-play-off:focus-visible {
+  color: var(--button-color) !important;
+  border-color: var(--button-border-color) !important;
+}

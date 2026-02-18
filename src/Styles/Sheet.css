@@ -144,3 +144,9 @@
     color: var(--table-column-name-color);
   }
 }
+
+/* Focus-visible counterpart for keyboard navigation */
+a.table__column-name:focus-visible {
+  text-decoration: underline;
+  color: var(--table-column-name-color);
+}

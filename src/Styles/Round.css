@@ -83,3 +83,14 @@
     border-color: var(--grey-light) !important;
   }
 }
+
+/* Focus-visible counterparts for keyboard navigation */
+.playoff__next-round-button:focus-visible:enabled {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.playoff__next-round-button:focus-visible {
+  color: var(--white) !important;
+  border-color: var(--grey-light) !important;
+}

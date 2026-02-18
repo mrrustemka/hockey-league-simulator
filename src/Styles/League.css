@@ -131,3 +131,16 @@
     color: var(--white) !important;
   }
 }
+
+/* Focus-visible counterparts for keyboard navigation */
+.start__link:focus-visible {
+  color: var(--white);
+}
+
+.start__link--active:focus-visible {
+  background-color: var(--grey-dark);
+}
+
+.start__card__button:focus-visible {
+  color: var(--white) !important;
+}
