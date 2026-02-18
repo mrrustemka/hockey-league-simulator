@@ -27,9 +27,9 @@ function PassedGames(props: { schedule: Schedule[] }) {
                 {
                   teams
                     .find((team: Teams) => game.away === team.id)
-                    ?.game_results.find(
+                    ?.game_results?.find(
                       (result: GameResult) => result.id === game.id
-                    ).away_goals
+                    )?.away_goals
                 }
               </span>
               <Link
@@ -72,9 +72,9 @@ function PassedGames(props: { schedule: Schedule[] }) {
                 {
                   teams
                     .find((team: Teams) => game.home === team.id)
-                    ?.game_results.find(
+                    ?.game_results?.find(
                       (result: GameResult) => result.id === game.id
-                    ).home_goals
+                    )?.home_goals
                 }
               </span>
             </div>
