@@ -7,7 +7,7 @@ const { Title } = Typography;
 
 function SeasonSeries(props: { games: Schedule[]; teams: Teams[] }) {
   return (
-    <>
+    <section aria-label='Season series'>
       <Title className='season-series__title' level={2}>
         Season Series
       </Title>
@@ -22,7 +22,7 @@ function SeasonSeries(props: { games: Schedule[]; teams: Teams[] }) {
             key={game.id}
             cover={
               <div className='season-series-card__container'>
-                <h2 className='season-series-card__status--away'>
+                <span className='season-series-card__status--away'>
                   {
                     props.teams
                       .find((team) => team.id === game.away)
@@ -30,8 +30,8 @@ function SeasonSeries(props: { games: Schedule[]; teams: Teams[] }) {
                         (result: GameResult) => result.id === game.id
                       )?.away_status
                   }
-                </h2>
-                <h2 className='season-series-card__score--away'>
+                </span>
+                <span className='season-series-card__score--away'>
                   {
                     props.teams
                       .find((team) => team.id === game.away)
@@ -39,12 +39,11 @@ function SeasonSeries(props: { games: Schedule[]; teams: Teams[] }) {
                         (result: GameResult) => result.id === game.id
                       )?.away_goals
                   }
-                </h2>
+                </span>
                 <Link
                   className='season-series-card__team-link--away'
-                  to={`/hockey-league-simulator/season/team/${
-                    props.teams.find((team) => team.id === game.away)?.id
-                  }`}
+                  to={`/hockey-league-simulator/season/team/${props.teams.find((team) => team.id === game.away)?.id
+                    }`}
                 >
                   <img
                     className='season-series-card__team-logo season-series-card__team-logo--away'
@@ -58,12 +57,11 @@ function SeasonSeries(props: { games: Schedule[]; teams: Teams[] }) {
                     loading='lazy'
                   />
                 </Link>
-                <h3 className='season-series-card__vs'>@</h3>
+                <span className='season-series-card__vs'>@</span>
                 <Link
                   className='season-series-card__team-link--home'
-                  to={`/hockey-league-simulator/season/team/${
-                    props.teams.find((team) => team.id === game.home)?.id
-                  }`}
+                  to={`/hockey-league-simulator/season/team/${props.teams.find((team) => team.id === game.home)?.id
+                    }`}
                 >
                   <img
                     className='season-series-card__team-logo season-series-card__team-logo--home'
@@ -77,7 +75,7 @@ function SeasonSeries(props: { games: Schedule[]; teams: Teams[] }) {
                     loading='lazy'
                   />
                 </Link>
-                <h2 className='season-series-card__status--home'>
+                <span className='season-series-card__status--home'>
                   {
                     props.teams
                       .find((team) => team.id === game.home)
@@ -85,8 +83,8 @@ function SeasonSeries(props: { games: Schedule[]; teams: Teams[] }) {
                         (result: GameResult) => result.id === game.id
                       )?.home_status
                   }
-                </h2>
-                <h3 className='season-series-card__overtime'>
+                </span>
+                <span className='season-series-card__overtime'>
                   {
                     props.teams
                       .find((team) => team.id === game.home)
@@ -94,8 +92,8 @@ function SeasonSeries(props: { games: Schedule[]; teams: Teams[] }) {
                         (result: GameResult) => result.id === game.id
                       )?.overtime
                   }
-                </h3>
-                <h2 className='season-series-card__score--home'>
+                </span>
+                <span className='season-series-card__score--home'>
                   {
                     props.teams
                       .find((team) => team.id === game.home)
@@ -103,13 +101,13 @@ function SeasonSeries(props: { games: Schedule[]; teams: Teams[] }) {
                         (result: GameResult) => result.id === game.id
                       )?.home_goals
                   }
-                </h2>
+                </span>
               </div>
             }
           ></Card>
         ))}
       </div>
-    </>
+    </section>
   );
 }
 

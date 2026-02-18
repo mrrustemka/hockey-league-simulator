@@ -11,39 +11,42 @@ const router = createBrowserRouter([
   {
     path: '/hockey-league-simulator',
     element: (
-      <div className='app__div'>
+      <main id='main-content' className='app__div'>
         <Start />
-      </div>
+      </main>
     )
   },
   {
     path: '/hockey-league-simulator/season',
     element: (
-      <div className='app__div'>
+      <main id='main-content' className='app__div'>
         <Game />
-      </div>
+      </main>
     )
   },
   {
     path: '/hockey-league-simulator/season/playoff',
     element: (
-      <div className='app__div'>
+      <main id='main-content' className='app__div'>
         <PlayOff />
-      </div>
+      </main>
     )
   },
   {
     path: '/hockey-league-simulator/season/team/:teamId',
     element: (
-      <div className='app__div'>
+      <main id='main-content' className='app__div'>
         <Team />
-      </div>
+      </main>
     )
   }
 ]);
 
 const App: FC = () => (
   <div className='app'>
+    <a href='#main-content' className='skip-link'>
+      Skip to main content
+    </a>
     <RouterProvider router={router} />
     <Footer />
   </div>

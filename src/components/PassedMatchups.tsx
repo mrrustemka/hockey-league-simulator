@@ -12,7 +12,7 @@ function PassedGames(props: { schedule: Schedule[] }) {
   );
 
   return (
-    <>
+    <section aria-label='Passed matchups'>
       <Title className='passed-games__title' level={2}>
         Passed Matchups
       </Title>
@@ -23,7 +23,7 @@ function PassedGames(props: { schedule: Schedule[] }) {
           key={game.id}
           cover={
             <div className='passed-games-card__container'>
-              <h3 className='passed-games-card__score--away'>
+              <span className='passed-games-card__score--away'>
                 {
                   teams
                     .find((team: Teams) => game.away === team.id)
@@ -31,11 +31,10 @@ function PassedGames(props: { schedule: Schedule[] }) {
                       (result: GameResult) => result.id === game.id
                     ).away_goals
                 }
-              </h3>
+              </span>
               <Link
-                to={`/hockey-league-simulator/season/team/${
-                  teams.find((team: Teams) => team.id === game.away)?.id
-                }`}
+                to={`/hockey-league-simulator/season/team/${teams.find((team: Teams) => team.id === game.away)?.id
+                  }`}
                 className='passed-games-card__team-link--away'
               >
                 <img
@@ -48,16 +47,15 @@ function PassedGames(props: { schedule: Schedule[] }) {
                   loading='lazy'
                 />
               </Link>
-              <h3 className='passed-games-card__favorite'>
+              <span className='passed-games-card__favorite'>
                 {favorites.includes(game.away) || favorites.includes(game.home)
                   ? '\u{2B50}'
                   : '  '}
-              </h3>
-              <h3 className='passed-games-card__vs'>@</h3>
+              </span>
+              <span className='passed-games-card__vs'>@</span>
               <Link
-                to={`/hockey-league-simulator/season/team/${
-                  teams.find((team: Teams) => team.id === game.home)?.id
-                }`}
+                to={`/hockey-league-simulator/season/team/${teams.find((team: Teams) => team.id === game.home)?.id
+                  }`}
                 className='passed-games-card__team-link--home'
               >
                 <img
@@ -70,7 +68,7 @@ function PassedGames(props: { schedule: Schedule[] }) {
                   loading='lazy'
                 />
               </Link>
-              <h3 className='passed-games-card__score--home'>
+              <span className='passed-games-card__score--home'>
                 {
                   teams
                     .find((team: Teams) => game.home === team.id)
@@ -78,12 +76,12 @@ function PassedGames(props: { schedule: Schedule[] }) {
                       (result: GameResult) => result.id === game.id
                     ).home_goals
                 }
-              </h3>
+              </span>
             </div>
           }
         />
       ))}
-    </>
+    </section>
   );
 }
 

@@ -63,7 +63,7 @@ function Champion(props: { champion: Teams }) {
     localStorage.removeItem('favoriteTeams');
   }
   return (
-    <div className='playoff__champion'>
+    <article className='playoff__champion' aria-label='Champion'>
       <h2 className='playoff__champion-heading'>
         The Champion is
         <div className='playoff__champion-details'>
@@ -76,8 +76,7 @@ function Champion(props: { champion: Teams }) {
           <span className='playoff__champion-name'>{props.champion.name}</span>
         </div>
       </h2>
-      <div
-        className='team__details'
+      <section className='team__details' aria-label='Champion statistics'
         style={{
           backgroundColor: props.champion.color,
           color: whiteTeams.includes(props.champion.color) ? '#fff' : '#000000'
@@ -218,7 +217,7 @@ function Champion(props: { champion: Teams }) {
         >
           Rating: {props.champion.rating}
         </Title>
-      </div>
+      </section>
       <Gallery photos={props.champion.photos} team={props.champion.name} />
       <Chart
         rank={props.champion.chart_data}
@@ -257,105 +256,108 @@ function Champion(props: { champion: Teams }) {
       </div>
       {leagueId !== '1' && leagueId !== '2' ? (
         <>
-          <Title level={2} className='team__header'>
-            {props.champion.city +
-              ' ' +
-              props.champion.name +
-              ' play at ' +
-              props.champion.arena_name}{' '}
-          </Title>
-          <Image
-            className='team__arena'
-            width='auto'
-            src={props.champion.arena_photo}
-            preview={false}
-            loading='lazy'
-          />
-          <Title level={5} className='team__description'>
-            {props.champion.arena_description}
-          </Title>
+          <section aria-label='Arena information'>
+            <Title level={2} className='team__header'>
+              {props.champion.city +
+                ' ' +
+                props.champion.name +
+                ' play at ' +
+                props.champion.arena_name}{' '}
+            </Title>
+            <Image
+              className='team__arena'
+              width='auto'
+              src={props.champion.arena_photo}
+              preview={false}
+              loading='lazy'
+            />
+            <Title level={5} className='team__description'>
+              {props.champion.arena_description}
+            </Title>
+          </section>
         </>
       ) : (
         <></>
       )}
-      <div
+      <nav
         className='team__nets'
+        aria-label='Social media links'
         style={{
           backgroundColor: props.champion.color,
           color: whiteTeams.includes(props.champion.color) ? '#fff' : '#000000'
         }}
       >
         {props.champion.website ? (
-          <a href={props.champion.website}>
+          <a href={props.champion.website} aria-label='Website'>
             <Icon icon='fa6-brands:readme' />
           </a>
         ) : (
           <></>
         )}
         {props.champion.facebook ? (
-          <a href={props.champion.facebook}>
+          <a href={props.champion.facebook} aria-label='Facebook'>
             <Icon icon='fa6-brands:facebook' />
           </a>
         ) : (
           <></>
         )}
         {props.champion.youtube ? (
-          <a href={props.champion.youtube}>
+          <a href={props.champion.youtube} aria-label='YouTube'>
             <Icon icon='simple-icons:youtube' />
           </a>
         ) : (
           <></>
         )}
         {props.champion.instagram ? (
-          <a href={props.champion.instagram}>
+          <a href={props.champion.instagram} aria-label='Instagram'>
             <Icon icon='fa6-brands:instagram' />
           </a>
         ) : (
           <></>
         )}
         {props.champion.x ? (
-          <a href={props.champion.x}>
+          <a href={props.champion.x} aria-label='X (Twitter)'>
             <Icon icon='fa6-brands:x-twitter' />
           </a>
         ) : (
           <></>
         )}
         {props.champion.threads ? (
-          <a href={props.champion.threads}>
+          <a href={props.champion.threads} aria-label='Threads'>
             <Icon icon='simple-icons:threads' />
           </a>
         ) : (
           <></>
         )}
         {props.champion.tiktok ? (
-          <a href={props.champion.tiktok}>
+          <a href={props.champion.tiktok} aria-label='TikTok'>
             <Icon icon='fa6-brands:tiktok' />
           </a>
         ) : (
           <></>
         )}
         {props.champion.snapchat ? (
-          <a href={props.champion.tiktok}>
+          <a href={props.champion.snapchat} aria-label='Snapchat'>
             <Icon icon='fa6-brands:snapchat' />
           </a>
         ) : (
           <></>
         )}
         {props.champion.linkedin ? (
-          <a href={props.champion.linkedin}>
+          <a href={props.champion.linkedin} aria-label='LinkedIn'>
             <Icon icon='fa6-brands:linkedin' />
           </a>
         ) : (
           <></>
         )}
         {props.champion.twitch ? (
-          <a href={props.champion.twitch}>
+          <a href={props.champion.twitch} aria-label='Twitch'>
             <Icon icon='fa6-brands:twitch' />
           </a>
         ) : (
           <></>
         )}
-      </div>
+      </nav>
       <Link
         to='/hockey-league-simulator'
         className='playoff__champion-link pulse'
@@ -363,7 +365,7 @@ function Champion(props: { champion: Teams }) {
       >
         Play Again
       </Link>
-    </div>
+    </article>
   );
 }
 

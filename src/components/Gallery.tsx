@@ -4,11 +4,11 @@ import '../styles/Gallery.css';
 
 function Gallery(props: { photos: string[]; team: string }) {
   return (
-    <div className='gallery-carousel'>
+    <div className='gallery-carousel' role='region' aria-label={`${props.team} photo gallery`} aria-roledescription='carousel'>
       <Carousel adaptiveHeight draggable autoplay speed={2000}>
         {props.photos.map((photo: string, i: number) => (
           <div key={uuidv4()}>
-            <img src={photo} alt={`${props.team} ${i}`} />
+            <img src={photo} alt={`Photo ${i + 1} of ${props.team}`} />
           </div>
         ))}
       </Carousel>

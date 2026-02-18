@@ -60,7 +60,7 @@ function Round({
   }
 
   return (
-    <div className='playoff'>
+    <section className='playoff' aria-label={pairs.length === 1 ? 'Final' : `Round ${abv}`}>
       <Title className='playoff__header' level={2}>
         {pairs.length === 1 ? 'Final' : 'Round ' + abv}
       </Title>
@@ -102,7 +102,7 @@ function Round({
       >
         Next Round
       </Button>
-    </div>
+    </section>
   );
 }
 

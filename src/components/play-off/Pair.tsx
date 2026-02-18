@@ -313,7 +313,7 @@ function Pair({
   }
 
   return (
-    <div className='pair'>
+    <article className='pair' aria-label={`${teams[0].name} vs ${teams[1].name}`}>
       <div className='pair__column'>
         <>
           <img
@@ -369,7 +369,7 @@ function Pair({
           </div>
         </>
       </div>
-    </div>
+    </article>
   );
 }
 

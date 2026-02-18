@@ -12,7 +12,7 @@ interface PreviousPairsProps {
 
 function PreviousPairs({ teams, index }: PreviousPairsProps) {
     return (
-        <div className='pair'>
+        <article className='pair' aria-label={`${teams[0].name || teams[0].team} vs ${teams[1].name || teams[1].team}`}>
             <div className='pair__column'>
                 <img
                     className='pair__team-logo-home'
@@ -33,7 +33,7 @@ function PreviousPairs({ teams, index }: PreviousPairsProps) {
                     {teams[1].team_wins}
                 </Title>
             </div>
-        </div>
+        </article>
     );
 }
 

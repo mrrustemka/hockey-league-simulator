@@ -32,13 +32,13 @@ function League(props: { league: TLeague }) {
     JSON.parse(localStorage.getItem('leagueId') || '') === props.league.id
   ) {
     return (
-      <>
+      <article aria-label={props.league.name}>
         <Card
           key={uuidv4()}
           className='start__card'
           cover={
             <img
-              alt='example'
+              alt={props.league.name + ' league'}
               src={props.league.image}
               className='start__card-cover'
               loading='lazy'
@@ -79,17 +79,17 @@ function League(props: { league: TLeague }) {
             Start New
           </button>
         </Card>
-      </>
+      </article>
     );
   } else {
     return (
-      <>
+      <article aria-label={props.league.name}>
         <Card
           key={uuidv4()}
           className='start__card'
           cover={
             <img
-              alt='example'
+              alt={props.league.name + ' league'}
               src={props.league.image}
               className='start__card-cover'
               loading='lazy'
@@ -104,7 +104,7 @@ function League(props: { league: TLeague }) {
           </Title>
           <TeamsNumber league={props.league} />
         </Card>
-      </>
+      </article>
     );
   }
 }

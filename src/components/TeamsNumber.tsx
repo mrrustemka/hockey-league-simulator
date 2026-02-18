@@ -62,9 +62,8 @@ function TeamsNumber({ league }: any) {
           ) => (
             <div
               key={uuidv4()}
-              className={`start__team ${
-                index < champ.teams_count ? 'start__team--active' : ''
-              }`}
+              className={`start__team ${index < champ.teams_count ? 'start__team--active' : ''
+                }`}
             >
               <img
                 src={team.logo}
@@ -81,10 +80,10 @@ function TeamsNumber({ league }: any) {
           {champ.teams_count > 16
             ? 16
             : champ.teams_count > 8
-            ? 8
-            : champ.teams_count > 4
-            ? 4
-            : 2}{' '}
+              ? 8
+              : champ.teams_count > 4
+                ? 4
+                : 2}{' '}
           teams will advance to the Play-Off
         </Title>
         <Title level={5} className='start__actions-title--selection'>
@@ -98,15 +97,15 @@ function TeamsNumber({ league }: any) {
           max={league.teams.length}
           min={String(minTeams)}
           onChange={(e) => updateTeamsNum(parseInt(e.target.value))}
+          aria-label='Number of teams'
         />
         <Title
           level={5}
-          className={`start__actions-error ${
-            champ.teams_count < minTeams ||
-            champ.teams_count > league.teams.length
+          className={`start__actions-error ${champ.teams_count < minTeams ||
+              champ.teams_count > league.teams.length
               ? 'start__actions-error--active'
               : 'start__actions-error--inactive'
-          }`}
+            }`}
         >
           Please enter a valid number of teams. From {minTeams} to{' '}
           {league.teams.length}
@@ -121,6 +120,7 @@ function TeamsNumber({ league }: any) {
           placeholder='Teams'
           value={selectedTeams}
           onChange={handleChange}
+          aria-label='Select your favorite teams'
         >
           {champ.teams.slice(0, champ.teams_count).map((team) => (
             <Option key={team.id} value={team.id}>
@@ -129,15 +129,14 @@ function TeamsNumber({ league }: any) {
           ))}
         </Select>
         <Link
-          className={`start__link ${
-            champ.teams_count < minTeams ||
-            champ.teams_count > league.teams.length
+          className={`start__link ${champ.teams_count < minTeams ||
+              champ.teams_count > league.teams.length
               ? 'start__link--inactive'
               : 'start__link--active pulse'
-          }`}
+            }`}
           to={
             champ.teams_count >= minTeams &&
-            champ.teams_count <= league.teams.length
+              champ.teams_count <= league.teams.length
               ? 'season'
               : '#'
           }

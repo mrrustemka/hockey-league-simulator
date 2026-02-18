@@ -99,12 +99,11 @@ function Team() {
         <img
           className='team__logo'
           src={team.logo}
-          alt={team.name}
+          alt={team.name + ' logo'}
           loading='lazy'
         />
       </div>
-      <div
-        className='team__details'
+      <section className='team__details' aria-label='Team statistics'
         style={{
           backgroundColor: team.color,
           color: whiteTeams.includes(team.color) ? '#fff' : '#000000'
@@ -209,7 +208,7 @@ function Team() {
         >
           Rating: {team.rating}
         </Title>
-      </div>
+      </section>
       <Gallery photos={photos} team={team.name} />
       <Chart
         rank={chartData}
@@ -219,101 +218,104 @@ function Team() {
       />
       {leagueId !== '1' && leagueId !== '2' ? (
         <>
-          <Title level={2} className='team__header'>
-            {team.city + ' ' + team.name + ' play at ' + team.arena_name}{' '}
-          </Title>
-          <Image
-            className='team__arena'
-            width='auto'
-            src={team.arena_photo}
-            preview={false}
-            loading='lazy'
-          />
-          <Title level={5} className='team__description'>
-            {team.arena_description}
-          </Title>
+          <section aria-label='Arena information'>
+            <Title level={2} className='team__header'>
+              {team.city + ' ' + team.name + ' play at ' + team.arena_name}{' '}
+            </Title>
+            <Image
+              className='team__arena'
+              width='auto'
+              src={team.arena_photo}
+              preview={false}
+              loading='lazy'
+            />
+            <Title level={5} className='team__description'>
+              {team.arena_description}
+            </Title>
+          </section>
         </>
       ) : (
         <></>
       )}
-      <div
+      <nav
         className='team__nets'
+        aria-label='Social media links'
         style={{
           backgroundColor: team.color,
           color: whiteTeams.includes(team.color) ? '#fff' : '#000000'
         }}
       >
         {team.website ? (
-          <a href={team.website}>
+          <a href={team.website} aria-label='Website'>
             <Icon icon='fa6-brands:readme' />
           </a>
         ) : (
           <></>
         )}
         {team.facebook ? (
-          <a href={team.facebook}>
+          <a href={team.facebook} aria-label='Facebook'>
             <Icon icon='fa6-brands:facebook' />
           </a>
         ) : (
           <></>
         )}
         {team.youtube ? (
-          <a href={team.youtube}>
+          <a href={team.youtube} aria-label='YouTube'>
             <Icon icon='simple-icons:youtube' />
           </a>
         ) : (
           <></>
         )}
         {team.instagram ? (
-          <a href={team.instagram}>
+          <a href={team.instagram} aria-label='Instagram'>
             <Icon icon='fa6-brands:instagram' />
           </a>
         ) : (
           <></>
         )}
         {team.x ? (
-          <a href={team.x}>
+          <a href={team.x} aria-label='X (Twitter)'>
             <Icon icon='fa6-brands:x-twitter' />
           </a>
         ) : (
           <></>
         )}
         {team.threads ? (
-          <a href={team.threads}>
+          <a href={team.threads} aria-label='Threads'>
             <Icon icon='simple-icons:threads' />
           </a>
         ) : (
           <></>
         )}
         {team.tiktok ? (
-          <a href={team.tiktok}>
+          <a href={team.tiktok} aria-label='TikTok'>
             <Icon icon='fa6-brands:tiktok' />
           </a>
         ) : (
           <></>
         )}
         {team.snapchat ? (
-          <a href={team.tiktok}>
+          <a href={team.snapchat} aria-label='Snapchat'>
             <Icon icon='fa6-brands:snapchat' />
           </a>
         ) : (
           <></>
         )}
         {team.linkedin ? (
-          <a href={team.linkedin}>
+          <a href={team.linkedin} aria-label='LinkedIn'>
             <Icon icon='fa6-brands:linkedin' />
           </a>
         ) : (
           <></>
         )}
         {team.twitch ? (
-          <a href={team.twitch}>
+          <a href={team.twitch} aria-label='Twitch'>
             <Icon icon='fa6-brands:twitch' />
           </a>
         ) : (
           <></>
         )}
-      </div>
+      </nav>
     </div>
   );
 }

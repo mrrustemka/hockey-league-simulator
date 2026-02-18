@@ -10,7 +10,7 @@ function UpcomingGames(props: { schedule: Schedule[]; teams: Teams[] }) {
     localStorage.getItem('favoriteTeams') || '[]'
   );
   return (
-    <>
+    <section aria-label='Upcoming games'>
       <Title className='upcoming-games__title' level={2}>
         Upcoming Games
       </Title>
@@ -21,7 +21,7 @@ function UpcomingGames(props: { schedule: Schedule[]; teams: Teams[] }) {
           key={game.id}
           cover={
             <div className='upcoming-games-card__container'>
-              <h3 className='upcoming-games-card__score--away'>
+              <span className='upcoming-games-card__score--away'>
                 {props.teams.find((element) => element.id === game.away)?.wins}-
                 {props.teams.find((element) => element.id === game.away)?.loses}
                 -
@@ -29,11 +29,10 @@ function UpcomingGames(props: { schedule: Schedule[]; teams: Teams[] }) {
                   props.teams.find((element) => element.id === game.away)
                     ?.loses_ot
                 }
-              </h3>
+              </span>
               <Link
-                to={`/hockey-league-simulator/season/team/${
-                  props.teams.find((element) => element.id === game.away)?.id
-                }`}
+                to={`/hockey-league-simulator/season/team/${props.teams.find((element) => element.id === game.away)?.id
+                  }`}
                 className='upcoming-games-card__team-link--away'
               >
                 <img
@@ -49,16 +48,15 @@ function UpcomingGames(props: { schedule: Schedule[]; teams: Teams[] }) {
                   loading='lazy'
                 />
               </Link>
-              <h3 className='upcoming-games-card__favorite'>
+              <span className='upcoming-games-card__favorite'>
                 {favorites.includes(game.away) || favorites.includes(game.home)
                   ? '\u{2B50}'
                   : '  '}
-              </h3>
-              <h3 className='upcoming-games-card__vs'>@</h3>
+              </span>
+              <span className='upcoming-games-card__vs'>@</span>
               <Link
-                to={`/hockey-league-simulator/season/team/${
-                  props.teams.find((element) => element.id === game.home)?.id
-                }`}
+                to={`/hockey-league-simulator/season/team/${props.teams.find((element) => element.id === game.home)?.id
+                  }`}
                 className='upcoming-games-card__team-link--home'
               >
                 <img
@@ -74,7 +72,7 @@ function UpcomingGames(props: { schedule: Schedule[]; teams: Teams[] }) {
                   loading='lazy'
                 />
               </Link>
-              <h3 className='upcoming-games-card__score--home'>
+              <span className='upcoming-games-card__score--home'>
                 {props.teams.find((element) => element.id === game.home)?.wins}-
                 {props.teams.find((element) => element.id === game.home)?.loses}
                 -
@@ -82,12 +80,12 @@ function UpcomingGames(props: { schedule: Schedule[]; teams: Teams[] }) {
                   props.teams.find((element) => element.id === game.home)
                     ?.loses_ot
                 }
-              </h3>
+              </span>
             </div>
           }
         ></Card>
       ))}
-    </>
+    </section>
   );
 }
 

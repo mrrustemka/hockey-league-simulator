@@ -17,6 +17,22 @@
   margin: var(--legend-margin);
 }
 
+.legend__column-one > div,
+.legend__column-two > div {
+  display: flex;
+  gap: 4px;
+}
+
+.legend__column-one dt,
+.legend__column-two dt {
+  font-weight: 700;
+}
+
+.legend__column-one dd,
+.legend__column-two dd {
+  margin: 0;
+}
+
 .legend__column-one {
   vertical-align: text-bottom;
   grid-column: 1;
