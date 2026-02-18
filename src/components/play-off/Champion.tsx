@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import { Image, Typography } from 'antd';
+import { useEffect } from 'react';
 import { GameResult, Teams } from '../../data/types';
 import { whiteTeams } from '../../data/whiteList';
 import { champs } from '../../data/champs';
@@ -11,6 +12,9 @@ import PreviousPairs from './PreviousPairs';
 const { Title } = Typography;
 
 function Champion(props: { champion: Teams }) {
+  useEffect(() => {
+    document.title = `Hockey Simulator - ${props.champion.name} is the Champion!`;
+  }, [props.champion.name]);
   const leagueId: string = JSON.parse(localStorage.getItem('leagueId') || '');
   const playOffTeams: number = JSON.parse(
     localStorage.getItem('playoffList') || '[]'

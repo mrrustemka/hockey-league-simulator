@@ -15,6 +15,9 @@ import { champs } from '../data/champs';
 const { Title } = Typography;
 
 function Game() {
+  useEffect(() => {
+    document.title = 'Hockey Simulator - Season Simulation';
+  }, []);
   const teams = JSON.parse(localStorage.getItem('teamsList') || '[]');
   const leagueId: string = JSON.parse(localStorage.getItem('leagueId') || '');
   const scheduleList: Schedule[] = JSON.parse(
@@ -32,10 +35,10 @@ function Game() {
     teamsUpdate.length > 16
       ? 16
       : teamsUpdate.length > 8
-      ? 8
-      : teamsUpdate.length > 4
-      ? 4
-      : 2;
+        ? 8
+        : teamsUpdate.length > 4
+          ? 4
+          : 2;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -223,8 +226,8 @@ function Game() {
       home.status === '\u{1F525}'
         ? 99
         : home.status === '\u{1F9CA}'
-        ? 50
-        : home.rating
+          ? 50
+          : home.rating
     );
     let aGoals: number = getGoals(
       0,
@@ -232,8 +235,8 @@ function Game() {
       away.status === '\u{1F525}'
         ? 99
         : away.status === '\u{1F9CA}'
-        ? 50
-        : away.rating
+          ? 50
+          : away.rating
     );
 
     // Make more realistic game score
@@ -524,8 +527,8 @@ function Game() {
         <Row className='layout'>
           <Col className='layout__content' span={14}>
             {(leagueId === '3' || leagueId === '4') &&
-            League?.divisions &&
-            League.conferences ? (
+              League?.divisions &&
+              League.conferences ? (
               <>
                 <Title
                   level={3}
@@ -831,7 +834,7 @@ function Game() {
             </Row>
             <Row className='simulate-panel'>
               <Col span={24} className='simulate-panel__card'>
-                <Card hoverable>
+                <Card hoverable aria-live='polite'>
                   <Title
                     className='simulate-panel__score slide-in-left'
                     level={2}
@@ -893,14 +896,14 @@ function Game() {
                 Math.max(0, gameCounter - 6),
                 gameCounter
               ) && (
-                <Row className='passed-games slide-in-left'>
-                  <PassedMatchups
-                    schedule={scheduleList
-                      .slice(Math.max(0, gameCounter - 6), gameCounter)
-                      .reverse()}
-                  />
-                </Row>
-              )}
+                  <Row className='passed-games slide-in-left'>
+                    <PassedMatchups
+                      schedule={scheduleList
+                        .slice(Math.max(0, gameCounter - 6), gameCounter)
+                        .reverse()}
+                    />
+                  </Row>
+                )}
               {scheduleList.slice(gameCounter + 1).length > 0 ? (
                 <Row className='upcoming-games slide-in-left'>
                   <UpcomingGames
@@ -926,8 +929,8 @@ function Game() {
         <Row className='playoff__container'>
           <Col span={14} className='playoff__container-panel'>
             {(leagueId === '3' || leagueId === '4') &&
-            League?.divisions &&
-            League.conferences ? (
+              League?.divisions &&
+              League.conferences ? (
               <>
                 <Title
                   level={3}

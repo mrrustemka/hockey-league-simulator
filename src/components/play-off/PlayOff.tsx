@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import { useState, useEffect } from 'react';
 import Champion from './Champion';
 import { champs } from '../../data/champs';
 import { League, Teams } from '../../data/types';
@@ -8,6 +7,9 @@ import Round from './Round';
 import '../../styles/PlayOff.css';
 
 function PlayOff() {
+  useEffect(() => {
+    document.title = 'Hockey Simulator - Playoff';
+  }, []);
   const [isRound, setIsRound] = useState<boolean>(true);
   let [curRound, setCurRound] = useState<number>(0);
   const [tree, setTree] = useState<Array<Teams[][]>>([]);

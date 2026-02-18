@@ -1,5 +1,5 @@
-import { FC } from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { FC, ReactNode, useEffect } from 'react';
+import { createBrowserRouter, RouterProvider, useLocation } from 'react-router-dom';
 import Game from './components/Game';
 import PlayOff from './components/play-off/PlayOff';
 import Start from './components/Start';
@@ -7,37 +7,59 @@ import Footer from './components/Footer';
 import './styles/App.css';
 import Team from './components/Team';
 
+const PageWrapper: FC<{ children: ReactNode }> = ({ children }) => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const main = document.getElementById('main-content');
+    if (main) {
+      main.focus();
+      window.scrollTo(0, 0);
+    }
+  }, [pathname]);
+
+  return <>{children}</>;
+};
+
 const router = createBrowserRouter([
   {
     path: '/hockey-league-simulator',
     element: (
-      <main id='main-content' className='app__div'>
-        <Start />
-      </main>
+      <PageWrapper>
+        <main id='main-content' className='app__div' tabIndex={-1}>
+          <Start />
+        </main>
+      </PageWrapper>
     )
   },
   {
     path: '/hockey-league-simulator/season',
     element: (
-      <main id='main-content' className='app__div'>
-        <Game />
-      </main>
+      <PageWrapper>
+        <main id='main-content' className='app__div' tabIndex={-1}>
+          <Game />
+        </main>
+      </PageWrapper>
     )
   },
   {
     path: '/hockey-league-simulator/season/playoff',
     element: (
-      <main id='main-content' className='app__div'>
-        <PlayOff />
-      </main>
+      <PageWrapper>
+        <main id='main-content' className='app__div' tabIndex={-1}>
+          <PlayOff />
+        </main>
+      </PageWrapper>
     )
   },
   {
     path: '/hockey-league-simulator/season/team/:teamId',
     element: (
-      <main id='main-content' className='app__div'>
-        <Team />
-      </main>
+      <PageWrapper>
+        <main id='main-content' className='app__div' tabIndex={-1}>
+          <Team />
+        </main>
+      </PageWrapper>
     )
   }
 ]);

@@ -337,7 +337,7 @@ function Pair({
           <Title className='pair__team-status-home' level={4}>
             {teams[0].status !== '' ? teams[0].status : ''}
           </Title>
-          <Title className='pair__scores' level={4}>
+          <Title className='pair__scores' level={4} aria-live='polite'>
             {leagueId !== '1' && leagueId !== '2'
               ? teams[0].play_off_round_wins +
               ' - ' +

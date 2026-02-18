@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 import { Image, Typography } from 'antd';
+import { useEffect } from 'react';
 import { GameResult, Teams } from '../data/types';
 import { whiteTeams } from '../data/whiteList';
 import Chart from './Chart';
@@ -17,6 +18,12 @@ function Team() {
   const team: Teams | undefined = teams.find(
     (team: Teams) => team.id === String(teamId)
   );
+
+  useEffect(() => {
+    if (team) {
+      document.title = `Hockey Simulator - ${team.name}`;
+    }
+  }, [team]);
 
   if (!team) {
     return <div className='team__not-found'>Team not found</div>;

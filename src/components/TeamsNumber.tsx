@@ -90,6 +90,7 @@ function TeamsNumber({ league }: any) {
           Select the number of teams
         </Title>
         <Input
+          id='teams-count-input'
           className='start__input'
           type='number'
           defaultValue={league.teams_count}
@@ -98,14 +99,18 @@ function TeamsNumber({ league }: any) {
           min={String(minTeams)}
           onChange={(e) => updateTeamsNum(parseInt(e.target.value))}
           aria-label='Number of teams'
+          aria-invalid={champ.teams_count < minTeams || champ.teams_count > league.teams.length}
+          aria-describedby='teams-count-error'
         />
         <Title
+          id='teams-count-error'
           level={5}
           className={`start__actions-error ${champ.teams_count < minTeams ||
-              champ.teams_count > league.teams.length
-              ? 'start__actions-error--active'
-              : 'start__actions-error--inactive'
+            champ.teams_count > league.teams.length
+            ? 'start__actions-error--active'
+            : 'start__actions-error--inactive'
             }`}
+          aria-live='assertive'
         >
           Please enter a valid number of teams. From {minTeams} to{' '}
           {league.teams.length}
@@ -130,9 +135,9 @@ function TeamsNumber({ league }: any) {
         </Select>
         <Link
           className={`start__link ${champ.teams_count < minTeams ||
-              champ.teams_count > league.teams.length
-              ? 'start__link--inactive'
-              : 'start__link--active pulse'
+            champ.teams_count > league.teams.length
+            ? 'start__link--inactive'
+            : 'start__link--active pulse'
             }`}
           to={
             champ.teams_count >= minTeams &&
