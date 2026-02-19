@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hockey-league-simulator/static/css/main.e27069ab.css",
-    "main.js": "/hockey-league-simulator/static/js/main.c2f292f7.js",
+    "main.css": "/hockey-league-simulator/static/css/main.1c4bdd36.css",
+    "main.js": "/hockey-league-simulator/static/js/main.0a60df07.js",
     "static/media/shef_5.webp": "/hockey-league-simulator/static/media/shef_5.e974702dcb14cfe34251.webp",
     "static/media/sjs_8.webp": "/hockey-league-simulator/static/media/sjs_8.de51a4334d12e764a110.webp",
     "static/media/vic_3.webp": "/hockey-league-simulator/static/media/vic_3.963665d00d841072c99b.webp",
@@ -909,11 +909,11 @@
     "static/media/nhl_min.png": "/hockey-league-simulator/static/media/nhl_min.62d7ab4adf6fbeafb12c.png",
     "static/media/nhl_bos.png": "/hockey-league-simulator/static/media/nhl_bos.75a37ff26352bcbf93f7.png",
     "index.html": "/hockey-league-simulator/index.html",
-    "main.e27069ab.css.map": "/hockey-league-simulator/static/css/main.e27069ab.css.map",
-    "main.c2f292f7.js.map": "/hockey-league-simulator/static/js/main.c2f292f7.js.map"
+    "main.1c4bdd36.css.map": "/hockey-league-simulator/static/css/main.1c4bdd36.css.map",
+    "main.0a60df07.js.map": "/hockey-league-simulator/static/js/main.0a60df07.js.map"
   },
   "entrypoints": [
-    "static/css/main.e27069ab.css",
-    "static/js/main.c2f292f7.js"
+    "static/css/main.1c4bdd36.css",
+    "static/js/main.0a60df07.js"
   ]
 }
