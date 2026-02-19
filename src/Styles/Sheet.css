@@ -118,6 +118,7 @@
 
 /* Media Queries */
 
+/* Adaptive Table - hiding columns on smaller screens */
 @media (width <= 650px) {
   .table__column--city {
     display: none;

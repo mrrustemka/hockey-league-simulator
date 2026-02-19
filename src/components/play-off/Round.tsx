@@ -93,7 +93,7 @@ function Round({
           )
         )}
       </div>
-      <Button
+      {status && <Button
         className='playoff__next-round-button'
         key={uuidv4()}
         onClick={() => handlerNextRound()}
@@ -101,7 +101,7 @@ function Round({
         size='large'
       >
         Next Round
-      </Button>
+      </Button>}
     </section>
   );
 }

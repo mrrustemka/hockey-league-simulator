@@ -117,6 +117,10 @@ canvas {
   text-decoration: none;
 }
 
+.ant-image {
+  display: block;
+}
+
 /* Media Queries */
 
 @media (width <= 500px) {

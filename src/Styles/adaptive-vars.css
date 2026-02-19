@@ -1,0 +1,14 @@
+:root {
+  /* Fluid Sizing Variables */
+  /* Logo Sizes */
+  --logo-size-upcoming: clamp(65px, 5vw + 20px, 75px);
+  --logo-size-series: clamp(40px, 4vw + 10px, 50px);
+  
+  /* Spacing */
+  --spacing-base: clamp(4px, 1vw, 8px);
+  --spacing-medium: clamp(8px, 2vw, 18px);
+  --section-margin: clamp(0.5rem, 2vw, 1rem);
+  
+  /* Container Padding */
+  --container-padding: clamp(8px, 3vw, 24px);
+}
