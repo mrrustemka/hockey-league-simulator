@@ -89,7 +89,7 @@ import tps_5 from '../../images/Gallery/Sml/Tps/tps_5.webp';
 
 export const sml: Teams[] = [
   {
-    id: '1',
+    id: 'f3f92746-a4f4-4aba-9433-05f3fb7ad0f5',
     name: 'Tappara',
     abbreviation: 'TAP',
     country: 'Fin',
@@ -132,7 +132,7 @@ export const sml: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '2',
+    id: '4dbf55de-c714-4f1e-b7b9-2761bd251dd8',
     name: 'Pelicans',
     abbreviation: 'PEL',
     country: 'Fin',
@@ -175,7 +175,7 @@ export const sml: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '3',
+    id: '9817fb52-ae68-419f-ab05-aabea0abd2ac',
     name: 'HIFK',
     abbreviation: 'IFK',
     country: 'Fin',
@@ -218,7 +218,7 @@ export const sml: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '4',
+    id: 'f469383f-f5af-4e31-b182-619ab0a2e011',
     name: 'Ilves',
     abbreviation: 'ILV',
     country: 'Fin',
@@ -261,7 +261,7 @@ export const sml: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '5',
+    id: '672ae56b-84e3-4522-a172-6b91ff02bf59',
     name: 'HC TPS',
     abbreviation: 'TPS',
     country: 'FIN',
@@ -304,7 +304,7 @@ export const sml: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '6',
+    id: 'bbc95dce-f980-46b6-9e4a-5c8b50e2f4a3',
     name: 'Kalpa',
     abbreviation: 'KAL',
     country: 'Fin',
@@ -347,7 +347,7 @@ export const sml: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '7',
+    id: 'af158530-a753-4c62-908d-0ecd0d9b2d06',
     name: 'KooKoo',
     abbreviation: 'KOO',
     country: 'FIN',
@@ -390,7 +390,7 @@ export const sml: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '8',
+    id: 'd4ed4d35-7cdf-42c5-ba7d-3b57b09cd56e',
     name: 'JYP',
     abbreviation: 'JYP',
     country: 'Fin',
@@ -433,7 +433,7 @@ export const sml: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '9',
+    id: '24ed56b2-428a-4600-9896-0c9f24d347db',
     name: 'Kärpät',
     abbreviation: 'KAR',
     country: 'Fin',
@@ -476,7 +476,7 @@ export const sml: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '10',
+    id: '32a3a9f5-70eb-4170-9992-23980408dc74',
     name: 'Lukko',
     abbreviation: 'LUK',
     country: 'Fin',
@@ -519,7 +519,7 @@ export const sml: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '11',
+    id: '71166d45-2b59-4b6f-b4d7-9f87019e8b36',
     name: 'SaiPa',
     abbreviation: 'SAI',
     country: 'Fin',
@@ -562,7 +562,7 @@ export const sml: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '12',
+    id: '81edd6f1-941e-4a65-a7cc-c61e14cb6c04',
     name: 'Sport',
     abbreviation: 'SPO',
     country: 'Fin',
@@ -605,7 +605,7 @@ export const sml: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '13',
+    id: 'a625f471-d738-424a-b645-4b1c45c46370',
     name: 'Ässät',
     abbreviation: 'ASS',
     country: 'Fin',
@@ -648,7 +648,7 @@ export const sml: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '14',
+    id: 'c3d93566-396a-4205-be95-5f273cda08fe',
     name: 'Jukurit',
     abbreviation: 'JUK',
     country: 'Fin',
@@ -691,7 +691,7 @@ export const sml: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '15',
+    id: '80ea1984-7a58-4d3f-9875-5a9e3ce4db55',
     name: 'HPK',
     abbreviation: 'HPK',
     country: 'Fin',
@@ -734,7 +734,7 @@ export const sml: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '16',
+    id: 'f1ecbedd-1503-4b91-b614-4528fc3f76fa',
     name: 'Kiekko-Espoo',
     abbreviation: 'KES',
     country: 'Fin',

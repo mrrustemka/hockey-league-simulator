@@ -91,7 +91,7 @@ import tik_5 from '../../images/Gallery/Shl/Tik/tik_5.webp';
 
 export const shl: Teams[] = [
   {
-    id: '1',
+    id: 'a10f3e28-a25e-4147-a42f-2fa74b6a5058',
     name: 'Lakers',
     abbreviation: 'LAK',
     country: 'Swe',
@@ -134,7 +134,7 @@ export const shl: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '2',
+    id: '052cc590-8f33-4945-836b-af162c5d61a7',
     name: 'AIK',
     abbreviation: 'AIK',
     country: 'Swe',
@@ -177,7 +177,7 @@ export const shl: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '3',
+    id: 'b3e586a2-2537-4a75-b028-5e90cd45fbd2',
     name: 'Frolunda HC',
     abbreviation: 'FRO',
     country: 'Swe',
@@ -220,7 +220,7 @@ export const shl: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '4',
+    id: '2faeb8ee-dcac-4696-8686-f397f5cf7d28',
     name: 'Farjestad BK',
     abbreviation: 'FBK',
     country: 'Swe',
@@ -263,7 +263,7 @@ export const shl: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '5',
+    id: '3c443bcb-68e2-4ad0-8c42-e3a47fd4ebdd',
     name: 'Timra IK',
     abbreviation: 'TIK',
     country: 'SWE',
@@ -306,7 +306,7 @@ export const shl: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '6',
+    id: 'bcde353b-c2da-400b-8ba4-4db60ab8d4ef',
     name: 'Lulea Hockey',
     abbreviation: 'LHF',
     country: 'Swe',
@@ -349,7 +349,7 @@ export const shl: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '7',
+    id: '7aefe1f3-51fa-4284-abf2-e0408e00ba3a',
     name: 'Leksands IF',
     abbreviation: 'LIF',
     country: 'Swe',
@@ -392,7 +392,7 @@ export const shl: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '8',
+    id: 'cd62b20d-7867-4fd1-a7e4-5c41454dd5d8',
     name: 'Linkoping HC',
     abbreviation: 'LHC',
     country: 'Swe',
@@ -435,7 +435,7 @@ export const shl: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '9',
+    id: '57a906c5-3d54-4947-9c4a-1cdd43c73828',
     name: 'Rogle BK',
     abbreviation: 'RBK',
     country: 'Swe',
@@ -478,7 +478,7 @@ export const shl: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '10',
+    id: '4714a45f-2334-446f-8d10-126974171f1e',
     name: 'Orebro Hockey',
     abbreviation: 'ORE',
     country: 'Swe',
@@ -521,7 +521,7 @@ export const shl: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '11',
+    id: '81fe1170-c351-42d6-9a3e-89c8458aef43',
     name: 'Modo Hockey',
     abbreviation: 'MODO',
     country: 'Swe',
@@ -564,7 +564,7 @@ export const shl: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '12',
+    id: 'a3792a35-48bf-4ec3-8147-225270125e9e',
     name: 'Malmö Redhawks',
     abbreviation: 'MIF',
     country: 'Swe',
@@ -607,7 +607,7 @@ export const shl: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '13',
+    id: 'cb841975-74bb-4fa5-8bbc-5d7507d385f6',
     name: 'HV71',
     abbreviation: 'HV71',
     country: 'Swe',
@@ -650,7 +650,7 @@ export const shl: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '15',
+    id: '81e08509-6dba-4fc0-876c-4d1fb69b60cf',
     name: 'Brynäs IF',
     abbreviation: 'BIF',
     country: 'Swe',

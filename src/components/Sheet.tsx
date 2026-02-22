@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { Table } from 'antd';
-import { v4 as uuidv4 } from 'uuid';
 import { Teams } from '../data/types';
 import '../styles/Sheet.css';
 
@@ -14,10 +13,9 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
   const favorites: string[] = JSON.parse(
     localStorage.getItem('favoriteTeams') || '[]'
   );
-
   return (
     <>
-      <Table
+      <Table<Teams>
         dataSource={props.teamsData.map((team, index) => ({
           ...team,
           key: index,
@@ -29,14 +27,14 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
           return favorites.includes(team?.id ?? '') ? 'favorite' : '';
         }}
       >
-        <Table.Column
+        <Table.Column<Teams>
           title='Rank'
           dataIndex=''
           key='rank'
-          render={() => {
+          render={(_text, record) => {
             rank++;
             return (
-              <div key={uuidv4()} className='table-slide-in-left'>
+              <div key={record.id} className='table-slide-in-left'>
                 <p className='table__column-rank'>
                   {rank > props.teamsData.length ? (rank = 0) : rank}
                 </p>
@@ -45,12 +43,12 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
           }}
           className='table__column table__column--rank'
         />
-        <Table.Column
+        <Table.Column<Teams>
           title='Team'
           dataIndex='name'
           key='team'
           className='table__column table__column--name'
-          render={(dataIndex) => {
+          render={(dataIndex, record) => {
             const team = props.teamsData.find(
               (item: { name: string }) => item.name === dataIndex
             );
@@ -64,7 +62,7 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
               : '  ';
 
             return (
-              <div className='table__team' key={uuidv4()}>
+              <div className='table__team' key={record.id}>
                 {is_playoff && (
                   <div className='table__column-name--is_playoff'>x</div>
                 )}
@@ -86,11 +84,11 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
             );
           }}
         />
-        <Table.Column
+        <Table.Column<Teams>
           title='Rating'
           dataIndex='rating'
           key='rating'
-          sorter={(a: { rating: number }, b: { rating: number }) =>
+          sorter={(a, b) =>
             a.rating - b.rating
           }
           className='table__column table__column--rating'
@@ -98,7 +96,7 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
         {worldChamps.includes(props.id) ? (
           <></>
         ) : (
-          <Table.Column
+          <Table.Column<Teams>
             title='City'
             key='city'
             className='table__column table__column--city'
@@ -123,19 +121,16 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
             }}
           />
         )}
-        <Table.Column
+        <Table.Column<Teams>
           title='GP'
           dataIndex='game_counter'
           key='game_counter'
           defaultSortOrder='descend'
           sorter={{
-            compare: (
-              a: { game_counter: number },
-              b: { game_counter: number }
-            ) => b.game_counter - a.game_counter,
+            compare: (a, b) => b.game_counter - a.game_counter,
             multiple: 4,
           }}
-          render={(gameCounter) => {
+          render={(gameCounter, record) => {
             let className = 'table__column-games';
             if (
               gameCounter >
@@ -155,84 +150,80 @@ function Sheet(props: { teamsData: Teams[]; id: string }) {
             }
 
             return (
-              <div className={className} key={uuidv4()}>
+              <div className={className} key={record.id}>
                 <p>{gameCounter}</p>
               </div>
             );
           }}
           className='table__column table__column--games'
         />
-        <Table.Column
+        <Table.Column<Teams>
           title='W'
           dataIndex='wins'
           key='wins'
           defaultSortOrder='descend'
           sorter={{
-            compare: (a: { wins: number }, b: { wins: number }) =>
-              a.wins - b.wins,
+            compare: (a, b) => a.wins - b.wins,
             multiple: 3,
           }}
           className='table__column table__column--wins'
         />
-        <Table.Column
+        <Table.Column<Teams>
           title='L'
           dataIndex='loses'
           key='loses'
           className='table__column table__column--loses'
         />
-        <Table.Column
+        <Table.Column<Teams>
           title='OT'
           dataIndex='loses_ot'
           key='loses_ot'
           defaultSortOrder='descend'
           sorter={{
-            compare: (a: { loses_ot: number }, b: { loses_ot: number }) =>
-              b.loses_ot - a.loses_ot,
+            compare: (a, b) => b.loses_ot - a.loses_ot,
             multiple: 2,
           }}
           className='table__column table__column--loses-ot'
         />
-        <Table.Column
+        <Table.Column<Teams>
           title='PTS'
           dataIndex='points'
           key='points'
           defaultSortOrder='descend'
           sorter={{
-            compare: (a: { points: number }, b: { points: number }) =>
-              a.points - b.points,
+            compare: (a, b) => a.points - b.points,
             multiple: 5,
           }}
           className='table__column table__column--points'
         />
-        <Table.Column
+        <Table.Column<Teams>
           title='P%'
           dataIndex='points_percentage'
           key='points_percentage'
           className='table__column table__column--points_percentage'
-          render={(points_percentage: number) =>
-            points_percentage.toFixed(3).replace(/^0/, '')
+          render={(_text, record) =>
+            record.points_percentage.toFixed(3).replace(/^0/, '')
           }
         />
-        <Table.Column
+        <Table.Column<Teams>
           title='DIFF'
           dataIndex='goals_diff'
           key='goals_diff'
           defaultSortOrder='descend'
           sorter={{
-            compare: (a: { goals_diff: number }, b: { goals_diff: number }) =>
-              a.goals_diff - b.goals_diff,
+            compare: (a, b) => a.goals_diff - b.goals_diff,
             multiple: 1,
           }}
-          render={(dataIndex) => {
+          render={(dataIndex, record) => {
             return (
-              <div key={uuidv4()}>
+              <div key={record.id}>
                 <p
                   className={
                     dataIndex > 0
                       ? 'table__column-diff--positive'
                       : dataIndex === 0
-                      ? ''
-                      : 'table__column-diff--negative'
+                        ? ''
+                        : 'table__column-diff--negative'
                   }
                 >
                   {dataIndex > 0 ? '+' + dataIndex : dataIndex}

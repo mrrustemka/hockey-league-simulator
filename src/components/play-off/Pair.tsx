@@ -1,6 +1,5 @@
 import { Button, Typography } from 'antd';
 import { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import { GameResult, Teams, PlayOffGameResult } from '../../data/types';
 import PlayOffGame from './PlayOffGame';
 import '../../styles/Pair.css';
@@ -27,29 +26,29 @@ function Pair({
     leagueId === '1' || leagueId === '2'
       ? [
         {
-          id: uuidv4(),
+          id: `${teams[0].abbreviation}-${teams[1].abbreviation}-1`,
           home: teams[0].abbreviation,
           away: teams[1].abbreviation
         }
       ]
       : [
         {
-          id: uuidv4(),
+          id: `${teams[0].abbreviation}-${teams[1].abbreviation}-1`,
           home: teams[0].abbreviation,
           away: teams[1].abbreviation
         },
         {
-          id: uuidv4(),
+          id: `${teams[0].abbreviation}-${teams[1].abbreviation}-2`,
           home: teams[0].abbreviation,
           away: teams[1].abbreviation
         },
         {
-          id: uuidv4(),
+          id: `${teams[0].abbreviation}-${teams[1].abbreviation}-3`,
           home: teams[1].abbreviation,
           away: teams[0].abbreviation
         },
         {
-          id: uuidv4(),
+          id: `${teams[0].abbreviation}-${teams[1].abbreviation}-4`,
           home: teams[1].abbreviation,
           away: teams[0].abbreviation
         }
@@ -90,13 +89,13 @@ function Pair({
         ...games,
         games.length === 5
           ? {
-            id: uuidv4(),
+            id: `${teams[0].abbreviation}-${teams[1].abbreviation}-${games.length + 1}`,
             home: teams[1].abbreviation,
             away: teams[0].abbreviation,
             winner: ''
           }
           : {
-            id: uuidv4(),
+            id: `${teams[0].abbreviation}-${teams[1].abbreviation}-${games.length + 1}`,
             home: teams[0].abbreviation,
             away: teams[1].abbreviation,
             winner: ''
@@ -303,7 +302,7 @@ function Pair({
         home_goals: hGoals,
         away_goals: aGoals,
         overtime: overtime,
-        id: uuidv4(),
+        id: game.id,
         home_status: home.status,
         away_status: away.status
       }

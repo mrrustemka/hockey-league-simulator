@@ -59,7 +59,7 @@ import vsv_3 from '../../images/Gallery/Ice/Vsv/vsv_3.webp';
 
 export const ice: Teams[] = [
   {
-    id: '1',
+    id: '716e9392-0cb3-4fca-9715-5b28fcd98e5c',
     name: 'EC KAC',
     abbreviation: 'KAC',
     country: 'AUS',
@@ -102,7 +102,7 @@ export const ice: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '2',
+    id: 'dd28adbf-c038-4502-8c3d-a881f7b03417',
     name: 'TIWAG Innsbruck - Die Haie',
     abbreviation: 'HCI',
     country: 'AUS',
@@ -146,7 +146,7 @@ export const ice: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '3',
+    id: '6ec7d15c-0536-42cf-96a7-3a77e4a8cc7c',
     name: 'EC VSV',
     abbreviation: 'VSV',
     country: 'AUS',
@@ -190,7 +190,7 @@ export const ice: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '4',
+    id: '252471be-76ba-42f4-bf66-0fe2f0b3d5b3',
     name: 'Red Bull Salzburg',
     abbreviation: 'RBS',
     country: 'AUS',
@@ -234,7 +234,7 @@ export const ice: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '5',
+    id: '4d30cf8f-7a53-48d0-b010-1ad3aa8b8445',
     name: 'Black Wings Linz',
     abbreviation: 'BWL',
     country: 'AUS',
@@ -277,7 +277,7 @@ export const ice: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '6',
+    id: 'ecb50f7d-da69-40a1-b488-87fb1094983d',
     name: 'HCB Südtirol Alperia',
     abbreviation: 'HCB',
     country: 'ITA',
@@ -321,7 +321,7 @@ export const ice: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '7',
+    id: '6f5fe92f-4ab6-44d4-846d-45de9319da41',
     name: 'Pustertal Wölfe',
     abbreviation: 'HCP',
     country: 'ITA',
@@ -364,7 +364,7 @@ export const ice: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '8',
+    id: '8fa1db3f-114c-4bae-a97c-423297d4e0d0',
     name: 'Hydro Fehérvár AV19',
     abbreviation: 'AVS',
     country: 'HUN',
@@ -407,7 +407,7 @@ export const ice: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '9',
+    id: 'e52dbcfb-bdfd-4537-83b1-05513d08d8ec',
     name: 'HK Olimpija',
     abbreviation: 'HKO',
     country: 'SLN',
@@ -453,7 +453,7 @@ export const ice: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '10',
+    id: 'e5e5fac1-dfb1-4105-92f3-fadfce3d88d9',
     name: 'Pioneers Vorarlberg',
     abbreviation: 'PIV',
     country: 'AUS',
@@ -497,7 +497,7 @@ export const ice: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '11',
+    id: 'bc3cefe5-9077-47f8-afd9-9d108f7bc9cd',
     name: 'Vienna Capitals',
     abbreviation: 'VIC',
     country: 'AUS',
@@ -541,7 +541,7 @@ export const ice: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '12',
+    id: '2d89d215-1351-438c-9a52-59b09696c67e',
     name: 'Asiago Hockey 1935',
     abbreviation: 'ASH',
     country: 'ITA',
@@ -584,7 +584,7 @@ export const ice: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '13',
+    id: 'f4cae6db-c29e-4887-b493-95b6952af355',
     name: 'Graz 99ers',
     abbreviation: 'G99',
     country: 'AUS',

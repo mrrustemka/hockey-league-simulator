@@ -1,5 +1,4 @@
 import { Button, Typography } from 'antd';
-import { v4 as uuidv4 } from 'uuid';
 import Pair from './Pair';
 import PreviousPairs from './PreviousPairs';
 import { Teams } from '../../data/types';
@@ -95,7 +94,7 @@ function Round({
       </div>
       {status && <Button
         className='playoff__next-round-button'
-        key={uuidv4()}
+        key="next-round-btn"
         onClick={() => handlerNextRound()}
         disabled={!status}
         size='large'

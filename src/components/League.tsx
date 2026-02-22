@@ -2,7 +2,6 @@ import AOS from 'aos';
 import { Card, Typography } from 'antd';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import { League as TLeague } from '../data/types';
 import TeamsNumber from './TeamsNumber';
 import 'aos/dist/aos.css';
@@ -34,7 +33,7 @@ function League(props: { league: TLeague }) {
     return (
       <article aria-label={props.league.name}>
         <Card
-          key={uuidv4()}
+          key={props.league.id}
           className='start__card'
           cover={
             <img
@@ -58,7 +57,7 @@ function League(props: { league: TLeague }) {
                 logo: string | undefined;
                 name: string | undefined;
               }) => (
-                <div key={uuidv4()} className='start__team start__team--active'>
+                <div key={team.id} className='start__team start__team--active'>
                   <img
                     src={team.logo}
                     alt={team.name}
@@ -85,7 +84,7 @@ function League(props: { league: TLeague }) {
     return (
       <article aria-label={props.league.name}>
         <Card
-          key={uuidv4()}
+          key={props.league.id}
           className='start__card'
           cover={
             <img

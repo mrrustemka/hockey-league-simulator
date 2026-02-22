@@ -247,7 +247,7 @@ import zsc_5 from '../../images/Gallery/Na/Zsc/zsc_5.webp';
 
 export const ehl: Teams[] = [
   {
-    id: 'b_1',
+    id: '1dd03014-2067-4a40-a206-a514198a36ed',
     name: 'Lulea Hockey',
     abbreviation: 'LHF',
     country: 'Swe',
@@ -293,7 +293,7 @@ export const ehl: Teams[] = [
     division_id: '1',
   },
   {
-    id: 'ath_1',
+    id: '5e14ee4c-0b5b-4023-9210-20e137fac4e7',
     name: 'HC TPS',
     abbreviation: 'TPS',
     country: 'Fin',
@@ -339,7 +339,7 @@ export const ehl: Teams[] = [
     division_id: '2',
   },
   {
-    id: 'alp_1',
+    id: 'c4593b9d-73bf-47e6-8648-a81af7bb13cd',
     name: 'HC Davos',
     abbreviation: 'HCD',
     country: 'Swi',
@@ -385,7 +385,7 @@ export const ehl: Teams[] = [
     division_id: '3',
   },
   {
-    id: 'c_1',
+    id: 'ec024715-06e7-479f-a761-feecb5302afd',
     name: 'HC Košice',
     abbreviation: 'KOS',
     country: 'Slk',
@@ -431,7 +431,7 @@ export const ehl: Teams[] = [
     division_id: '4',
   },
   {
-    id: 'b_2',
+    id: '084022db-7647-45ac-ae30-e90cb49ec678',
     name: 'AIK',
     abbreviation: 'AIK',
     country: 'Swe',
@@ -477,7 +477,7 @@ export const ehl: Teams[] = [
     division_id: '1',
   },
   {
-    id: 'ath_2',
+    id: '1280fb08-aebb-4ef1-a747-9e893bc6edec',
     name: 'Storhamar Hockey',
     abbreviation: 'SIL',
     country: 'Nor',
@@ -523,7 +523,7 @@ export const ehl: Teams[] = [
     division_id: '2',
   },
   {
-    id: 'alp_2',
+    id: 'bc2da730-b0a1-47c0-a5a9-8f6267c310ce',
     name: 'HC Lugano',
     abbreviation: 'HCL',
     country: 'Swi',
@@ -569,7 +569,7 @@ export const ehl: Teams[] = [
     division_id: '3',
   },
   {
-    id: 'c_2',
+    id: 'bf67086e-bb83-442b-93c8-f959135c5881',
     name: 'HC Sparta',
     abbreviation: 'SPA',
     country: 'Cze',
@@ -615,7 +615,7 @@ export const ehl: Teams[] = [
     division_id: '4',
   },
   {
-    id: 'b_3',
+    id: '2a1e9040-eeb9-474c-b737-80f3b52feb16',
     name: 'Kalpa',
     abbreviation: 'KAL',
     country: 'Fin',
@@ -661,7 +661,7 @@ export const ehl: Teams[] = [
     division_id: '1',
   },
   {
-    id: 'ath_3',
+    id: '07b0e0cc-7d6c-4043-ba2c-a95f7d7e8327',
     name: 'Frolunda HC',
     abbreviation: 'FRO',
     country: 'Swe',
@@ -707,7 +707,7 @@ export const ehl: Teams[] = [
     division_id: '2',
   },
   {
-    id: 'alp_3',
+    id: 'c1ee00b7-4bd0-4bb0-a4a3-a70c7d3d6150',
     name: 'ZSC LIONS',
     abbreviation: 'ZSC',
     country: 'Swi',
@@ -753,7 +753,7 @@ export const ehl: Teams[] = [
     division_id: '3',
   },
   {
-    id: 'c_3',
+    id: '077fe2d3-751f-4a55-8502-fdca6a083286',
     name: 'Slovan',
     abbreviation: 'SBA',
     country: 'Slk',
@@ -799,7 +799,7 @@ export const ehl: Teams[] = [
     division_id: '4',
   },
   {
-    id: 'b_4',
+    id: '669cc55b-5f90-4b18-9f20-09414c8c0777',
     name: 'Timra IK',
     abbreviation: 'TIK',
     country: 'Swe',
@@ -845,7 +845,7 @@ export const ehl: Teams[] = [
     division_id: '1',
   },
   {
-    id: 'ath_4',
+    id: 'bd3f02ca-d16f-4373-88f9-acd5df791556',
     name: 'Lakers',
     abbreviation: 'LAK',
     country: 'Swe',
@@ -891,7 +891,7 @@ export const ehl: Teams[] = [
     division_id: '2',
   },
   {
-    id: 'alp_4',
+    id: 'a9125559-380a-4b30-9dbc-2670fceb896e',
     name: 'EV Zug',
     abbreviation: 'EVZ',
     country: 'Swi',
@@ -937,7 +937,7 @@ export const ehl: Teams[] = [
     division_id: '3',
   },
   {
-    id: 'c_4',
+    id: '88d4464f-a765-448f-b2e1-7e2a753c297e',
     name: 'HC Dynamo',
     abbreviation: 'PCE',
     country: 'Cze',
@@ -983,7 +983,7 @@ export const ehl: Teams[] = [
     division_id: '4',
   },
   {
-    id: 'b_5',
+    id: '0c609285-cb90-4ae3-82db-88f0fadfc927',
     name: 'Tappara',
     abbreviation: 'TAP',
     country: 'Fin',
@@ -1029,7 +1029,7 @@ export const ehl: Teams[] = [
     division_id: '1',
   },
   {
-    id: 'ath_5',
+    id: 'be9a7858-ab50-41f7-a7c3-38896797af21',
     name: 'Farjestad BK',
     abbreviation: 'FBK',
     country: 'Swe',
@@ -1075,7 +1075,7 @@ export const ehl: Teams[] = [
     division_id: '2',
   },
   {
-    id: 'alp_5',
+    id: '7f45365c-385b-46d4-8912-1e005d69841a',
     name: 'SC BERN',
     abbreviation: 'SCB',
     country: 'Swi',
@@ -1121,7 +1121,7 @@ export const ehl: Teams[] = [
     division_id: '3',
   },
   {
-    id: 'c_5',
+    id: '8fbb7f0b-6f06-480f-8083-ccd2761872d1',
     name: 'Eisbären',
     abbreviation: 'EBB',
     country: 'Ger',
@@ -1167,7 +1167,7 @@ export const ehl: Teams[] = [
     division_id: '4',
   },
   {
-    id: 'b_6',
+    id: '57615af9-f3fe-4233-982e-81c517d21ae7',
     name: 'Ilves',
     abbreviation: 'ILV',
     country: 'Fin',
@@ -1213,7 +1213,7 @@ export const ehl: Teams[] = [
     division_id: '1',
   },
   {
-    id: 'ath_6',
+    id: '70fe5364-cada-49a4-aa06-61bbecf948aa',
     name: 'Giants',
     abbreviation: 'BEL',
     country: 'Gbr',
@@ -1260,7 +1260,7 @@ export const ehl: Teams[] = [
     division_id: '2',
   },
   {
-    id: 'alp_6',
+    id: 'bb37fb98-f035-46f9-99cf-d583e60f1027',
     name: 'Geneve Servette HC',
     abbreviation: 'GEN',
     country: 'Swi',
@@ -1306,7 +1306,7 @@ export const ehl: Teams[] = [
     division_id: '3',
   },
   {
-    id: 'c_6',
+    id: '7560f8a3-efc6-43be-a11d-e6e5928c0c7e',
     name: 'Kolner Haie',
     abbreviation: 'KEC',
     country: 'Ger',
@@ -1352,7 +1352,7 @@ export const ehl: Teams[] = [
     division_id: '4',
   },
   {
-    id: 'b_7',
+    id: 'da038a5c-4271-499f-aa57-957eb4475050',
     name: 'Pelicans',
     abbreviation: 'PEL',
     country: 'Fin',
@@ -1398,7 +1398,7 @@ export const ehl: Teams[] = [
     division_id: '1',
   },
   {
-    id: 'ath_7',
+    id: 'e172a2b2-69c0-4bbf-84f9-fcec506af2fe',
     name: 'Steelers',
     abbreviation: 'SHEF',
     country: 'Eng',
@@ -1444,7 +1444,7 @@ export const ehl: Teams[] = [
     division_id: '2',
   },
   {
-    id: 'alp_7',
+    id: 'b5595105-a0d8-4dfc-b879-6a8bc8ce70de',
     name: 'EHC Red Bull',
     abbreviation: 'RBM',
     country: 'Ger',
@@ -1490,7 +1490,7 @@ export const ehl: Teams[] = [
     division_id: '3',
   },
   {
-    id: 'c_7',
+    id: '823a17f6-fc21-41ca-aa5a-7802ffaa95b9',
     name: 'Adler',
     abbreviation: 'MAN',
     country: 'Ger',
@@ -1536,7 +1536,7 @@ export const ehl: Teams[] = [
     division_id: '4',
   },
   {
-    id: 'b_8',
+    id: 'f6c274ff-6dc9-4a27-8d10-0dd5a163e0b8',
     name: 'HIFK',
     abbreviation: 'IFK',
     country: 'Fin',
@@ -1582,7 +1582,7 @@ export const ehl: Teams[] = [
     division_id: '1',
   },
   {
-    id: 'ath_8',
+    id: '48350510-904f-4557-ac3f-94e3d8eda555',
     name: 'Grizzlies',
     abbreviation: 'WOB',
     country: 'Ger',
@@ -1628,7 +1628,7 @@ export const ehl: Teams[] = [
     division_id: '2',
   },
   {
-    id: 'alp_8',
+    id: 'f62fb4e2-992a-4ad8-b1b2-e64850e692ee',
     name: 'HCB Südtirol Alperia',
     abbreviation: 'HCB',
     country: 'Ita',
@@ -1674,7 +1674,7 @@ export const ehl: Teams[] = [
     division_id: '3',
   },
   {
-    id: 'c_8',
+    id: '380d027f-4324-4748-9bc8-846aec39935b',
     name: 'Dusseldorf EG',
     abbreviation: 'DEG',
     country: 'Ger',
@@ -1720,7 +1720,7 @@ export const ehl: Teams[] = [
     division_id: '4',
   },
   {
-    id: 'b_9',
+    id: '54517f4f-ce1d-4b21-b062-43ed83bfe7e5',
     name: 'KooKoo',
     abbreviation: 'KOO',
     country: 'Fin',
@@ -1766,7 +1766,7 @@ export const ehl: Teams[] = [
     division_id: '1',
   },
   {
-    id: 'ath_9',
+    id: 'afe0455a-0d4d-430f-9a10-88cef43b49e0',
     name: 'Orebro Hockey',
     abbreviation: 'ORE',
     country: 'Swe',
@@ -1812,7 +1812,7 @@ export const ehl: Teams[] = [
     division_id: '2',
   },
   {
-    id: 'alp_9',
+    id: '94f7a169-6202-4082-b735-8e71533f6559',
     name: 'EHC Biel-Bienne',
     abbreviation: 'HCBB',
     country: 'Swi',
@@ -1858,7 +1858,7 @@ export const ehl: Teams[] = [
     division_id: '3',
   },
   {
-    id: 'c_9',
+    id: 'e5c456f6-3f12-4c77-b70b-e19a2113f1b3',
     name: 'HC Vitkovice Ridera',
     abbreviation: 'VIT',
     country: 'Cze',
@@ -1904,7 +1904,7 @@ export const ehl: Teams[] = [
     division_id: '4',
   },
   {
-    id: 'alp_10',
+    id: 'e37daa47-5401-42fe-9fb3-ed431b261a6f',
     name: 'ERC Ingolstadt',
     abbreviation: 'ING',
     country: 'Ger',
@@ -1949,7 +1949,7 @@ export const ehl: Teams[] = [
     division_id: '3',
   },
   {
-    id: 'c_10',
+    id: 'f0f3f97d-fb58-4877-a6be-f867273c4d05',
     name: 'HC Ocelari',
     abbreviation: 'TRI',
     country: 'Cze',
@@ -1995,7 +1995,7 @@ export const ehl: Teams[] = [
     division_id: '4',
   },
   {
-    id: 'c_11',
+    id: '815eadc5-cb4c-4069-98ed-728284b1cb73',
     name: 'Mountfield HK',
     abbreviation: 'MHK',
     country: 'Cze',

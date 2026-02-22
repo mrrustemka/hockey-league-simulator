@@ -1,8 +1,8 @@
-import { v4 as uuidv4 } from 'uuid';
 import { Schedule, Teams, TeamsList } from './types';
 
 let teamsList: TeamsList = [];
 export let scheduleList: Schedule[] = [];
+let gameIdCounter = 0;
 
 function getDoubleRoundSchedule(teams: Teams[]): Schedule[] {
   const schedule: Schedule[] = [];
@@ -11,7 +11,7 @@ function getDoubleRoundSchedule(teams: Teams[]): Schedule[] {
     for (let j = 0; j < teams.length; j++) {
       if (i !== j) {
         schedule.push({
-          id: uuidv4(),
+          id: String(++gameIdCounter),
           home: teams[i].id,
           away: teams[j].id,
         });
@@ -28,7 +28,7 @@ function getOneRoundSchedule(teams: Teams[]): Schedule[] {
   for (let i = 0; i < teams.length; i++) {
     for (let j = i + 1; j < teams.length; j++) {
       schedule.push({
-        id: uuidv4(),
+        id: String(++gameIdCounter),
         home: teams[i].id,
         away: teams[j].id,
       });
@@ -45,7 +45,7 @@ function getNhlEhlSchedule(teams: Teams[]): Schedule[] {
     for (let j = 0; j < teams.length; j++) {
       if (i !== j) {
         schedule.push({
-          id: uuidv4(),
+          id: String(++gameIdCounter),
           home: teams[i].id,
           away: teams[j].id,
         });
@@ -57,7 +57,7 @@ function getNhlEhlSchedule(teams: Teams[]): Schedule[] {
     for (let j = i + 1; j < teams.length; j++) {
       if (teams[i].conference_id === teams[j].conference_id) {
         schedule.push({
-          id: uuidv4(),
+          id: String(++gameIdCounter),
           home: teams[i].id,
           away: teams[j].id,
         });
@@ -79,6 +79,7 @@ function shuffle(schedule: Schedule[]): Schedule[] {
 
 export function schedule(teams: Teams[], id: string) {
   scheduleList = [];
+  gameIdCounter = 0;
 
   if (id === '1' || id === '2') {
     const groupA = teams.filter((team: Teams) => team.conference_id === '1');

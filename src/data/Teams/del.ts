@@ -82,7 +82,7 @@ import wob_5 from '../../images/Gallery/Del/Wob/wob_5.webp';
 
 export const del: Teams[] = [
   {
-    id: '1',
+    id: '7b15988c-497b-4548-81c5-2d21041981ae',
     name: 'Fischtown Pinguins',
     abbreviation: 'BHV',
     country: 'GER',
@@ -124,7 +124,7 @@ export const del: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '2',
+    id: 'a154665a-c936-4470-9f57-2ee6bb49bfdb',
     name: 'Eisbären',
     abbreviation: 'EBB',
     country: 'Ger',
@@ -167,7 +167,7 @@ export const del: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '3',
+    id: '6d642099-be46-4889-8e80-ac4d8135e462',
     name: 'Straubing Tigers',
     abbreviation: 'STR',
     country: 'GER',
@@ -210,7 +210,7 @@ export const del: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '4',
+    id: 'a85b15fc-aee3-4e9f-bab7-bf2b585ce390',
     name: 'EHC Red Bull',
     abbreviation: 'RBM',
     country: 'Ger',
@@ -253,7 +253,7 @@ export const del: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '5',
+    id: '492043b6-2bf1-4119-b308-b0b490e9bbe6',
     name: 'Grizzlies',
     abbreviation: 'WOB',
     country: 'GER',
@@ -296,7 +296,7 @@ export const del: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '6',
+    id: '790ce685-3341-4010-819b-92498cbc772b',
     name: 'Schwenninger Wild Wings',
     abbreviation: 'SWW',
     country: 'GER',
@@ -339,7 +339,7 @@ export const del: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '7',
+    id: '8cd5a69f-c8a5-4bb5-8e4f-62e74c7998bd',
     name: 'Adler',
     abbreviation: 'MAN',
     country: 'Ger',
@@ -382,7 +382,7 @@ export const del: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '8',
+    id: '0844a38b-b9c1-4f2f-9609-68292bcea599',
     name: 'Kolner Haie',
     abbreviation: 'KEC',
     country: 'Ger',
@@ -425,7 +425,7 @@ export const del: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '9',
+    id: '40fc263f-ffaa-4c5e-9993-be24cebe4c1a',
     name: 'ERC Ingolstadt',
     abbreviation: 'ING',
     country: 'GER',
@@ -467,7 +467,7 @@ export const del: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '10',
+    id: 'ba3fd5ab-ad2d-463e-b103-fbf0b374813b',
     name: 'Nurnberg Ice Tigers',
     abbreviation: 'NIT',
     country: 'GER',
@@ -510,7 +510,7 @@ export const del: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '11',
+    id: '5b2b96d0-a2d7-4133-b298-b26daea35c1f',
     name: 'Dusseldorf EG',
     abbreviation: 'DEG',
     country: 'Ger',
@@ -553,7 +553,7 @@ export const del: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '12',
+    id: '3f40eba0-7106-4143-8c38-c2dac71279dc',
     name: 'Lowen Frankfurt',
     abbreviation: 'FRA',
     country: 'GER',
@@ -596,7 +596,7 @@ export const del: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '13',
+    id: 'efca9762-fc24-4cc6-b117-894e06d1822b',
     name: 'Iserlohn Roosters',
     abbreviation: 'IEC',
     country: 'GER',
@@ -638,7 +638,7 @@ export const del: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '14',
+    id: '421932fe-a5a4-47bd-99aa-d0157fe36061',
     name: 'Augsburger Panther',
     abbreviation: 'AUG',
     country: 'GER',

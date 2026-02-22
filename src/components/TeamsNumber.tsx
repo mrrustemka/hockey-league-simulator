@@ -1,8 +1,7 @@
 import { Input, Typography, Select } from 'antd';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import { League as TLeague, Teams } from '../data/types';
+import { League as TLeague } from '../data/types';
 import { schedule } from '../data/schedule';
 import '../styles/TeamsNumber.css';
 
@@ -61,7 +60,7 @@ function TeamsNumber({ league }: any) {
             index: number
           ) => (
             <div
-              key={uuidv4()}
+              key={team.id}
               className={`start__team ${index < champ.teams_count ? 'start__team--active' : ''
                 }`}
             >

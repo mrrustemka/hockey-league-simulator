@@ -316,7 +316,7 @@ import wsh_10 from '../../images/Gallery/Nhl/Wsh/wsh_10.webp';
 
 export const nhl: Teams[] = [
   {
-    id: 'a_1',
+    id: '01938495-88c6-42d8-8e45-d52052a33a22',
     name: 'Red Wings',
     abbreviation: 'DET',
     country: 'USA',
@@ -362,7 +362,7 @@ export const nhl: Teams[] = [
     division_id: '1',
   },
   {
-    id: 'p_1',
+    id: 'e39755c7-cc37-4ed9-a3b2-fb3bea2089d4',
     name: 'Oilers',
     abbreviation: 'EDM',
     country: 'Can',
@@ -408,7 +408,7 @@ export const nhl: Teams[] = [
     division_id: '4',
   },
   {
-    id: 'm_1',
+    id: 'ea880949-bd59-4114-a8af-3aeb5b2ec52d',
     name: 'Hurricanes',
     abbreviation: 'CAR',
     country: 'USA',
@@ -454,7 +454,7 @@ export const nhl: Teams[] = [
     division_id: '2',
   },
   {
-    id: 'c_1',
+    id: '2558874e-dbc2-433d-9095-ca7b424c001a',
     name: 'Avalanche',
     abbreviation: 'COL',
     country: 'USA',
@@ -500,7 +500,7 @@ export const nhl: Teams[] = [
     division_id: '3',
   },
   {
-    id: 'a_2',
+    id: 'df7b78bd-a625-4ed3-a07f-4b60ec953d05',
     name: 'Bruins',
     abbreviation: 'BOS',
     country: 'USA',
@@ -546,7 +546,7 @@ export const nhl: Teams[] = [
     division_id: '1',
   },
   {
-    id: 'p_2',
+    id: 'a04d315b-fea4-47d8-806a-498fff585a4d',
     name: 'Flames',
     abbreviation: 'CAL',
     country: 'Can',
@@ -592,7 +592,7 @@ export const nhl: Teams[] = [
     division_id: '4',
   },
   {
-    id: 'm_2',
+    id: '7b0c0247-ac59-4d8d-be26-4e2851e91671',
     name: 'Penguins',
     abbreviation: 'PIT',
     country: 'USA',
@@ -649,7 +649,7 @@ export const nhl: Teams[] = [
     division_id: '2',
   },
   {
-    id: 'c_2',
+    id: '7f52e7b8-c557-4d22-a1a2-166aad1c5ea9',
     name: 'Blackhawks',
     abbreviation: 'CHI',
     country: 'USA',
@@ -695,7 +695,7 @@ export const nhl: Teams[] = [
     division_id: '3',
   },
   {
-    id: 'a_3',
+    id: '2134daf9-bc84-4691-8da0-7f10076f0669',
     name: 'Sabres',
     abbreviation: 'BUF',
     country: 'USA',
@@ -741,7 +741,7 @@ export const nhl: Teams[] = [
     division_id: '1',
   },
   {
-    id: 'p_3',
+    id: 'fa3ac2a9-1806-4fb3-8926-c470710a3ac9',
     name: 'Canucks',
     abbreviation: 'VAN',
     country: 'Can',
@@ -788,7 +788,7 @@ export const nhl: Teams[] = [
     division_id: '4',
   },
   {
-    id: 'm_3',
+    id: '20da724e-fdd7-44de-8fd6-32ba7abe7245',
     name: 'Rangers',
     abbreviation: 'NYR',
     country: 'USA',
@@ -834,7 +834,7 @@ export const nhl: Teams[] = [
     division_id: '2',
   },
   {
-    id: 'c_3',
+    id: '43b4d464-27e6-4246-877b-d6afcac626e1',
     name: 'Predators',
     abbreviation: 'NSH',
     country: 'USA',
@@ -880,7 +880,7 @@ export const nhl: Teams[] = [
     division_id: '3',
   },
   {
-    id: 'a_4',
+    id: 'd4906184-a89b-4479-8866-ff6b861ba194',
     name: 'Panthers',
     abbreviation: 'FLA',
     country: 'USA',
@@ -926,7 +926,7 @@ export const nhl: Teams[] = [
     division_id: '1',
   },
   {
-    id: 'p_4',
+    id: '05887e25-65b4-44fe-aa6f-6c864d788886',
     name: 'Kraken',
     abbreviation: 'SEA',
     country: 'USA',
@@ -972,7 +972,7 @@ export const nhl: Teams[] = [
     division_id: '4',
   },
   {
-    id: 'm_4',
+    id: '9db5fd7d-fba4-451a-bb95-9aeb8acdb4eb',
     name: 'Capitals',
     abbreviation: 'WSH',
     country: 'USA',
@@ -1018,7 +1018,7 @@ export const nhl: Teams[] = [
     division_id: '2',
   },
   {
-    id: 'c_4',
+    id: 'b02b0810-5516-4e26-ae7b-dfb55adf004a',
     name: 'Blues',
     abbreviation: 'STL',
     country: 'USA',
@@ -1064,7 +1064,7 @@ export const nhl: Teams[] = [
     division_id: '3',
   },
   {
-    id: 'a_5',
+    id: 'b190011e-4c17-48c7-9cb8-5bd29c9573a1',
     name: 'Canadiens',
     abbreviation: 'MTL',
     country: 'Can',
@@ -1110,7 +1110,7 @@ export const nhl: Teams[] = [
     division_id: '1',
   },
   {
-    id: 'p_5',
+    id: '647c6597-ba95-4e09-92a8-dc027355b8e1',
     name: 'Sharks',
     abbreviation: 'SJS',
     country: 'USA',
@@ -1156,7 +1156,7 @@ export const nhl: Teams[] = [
     division_id: '4',
   },
   {
-    id: 'm_5',
+    id: '4a7cbbc0-43a6-413f-af70-1fb8b6e7943d',
     name: 'Flyers',
     abbreviation: 'PHI',
     country: 'USA',
@@ -1202,7 +1202,7 @@ export const nhl: Teams[] = [
     division_id: '2',
   },
   {
-    id: 'c_5',
+    id: 'ed5d9bf8-3126-4883-9f4f-02e6cdaf97f2',
     name: 'Wild',
     abbreviation: 'MIN',
     country: 'USA',
@@ -1248,7 +1248,7 @@ export const nhl: Teams[] = [
     division_id: '3',
   },
   {
-    id: 'a_6',
+    id: 'b754691f-3035-4ce1-93c7-749734f63a95',
     name: 'Senators',
     abbreviation: 'OTT',
     country: 'Can',
@@ -1295,7 +1295,7 @@ export const nhl: Teams[] = [
     division_id: '1',
   },
   {
-    id: 'p_6',
+    id: '54052c94-38d7-4089-8143-e7f7843155d1',
     name: 'Golden Knights',
     abbreviation: 'VGS',
     country: 'USA',
@@ -1341,7 +1341,7 @@ export const nhl: Teams[] = [
     division_id: '4',
   },
   {
-    id: 'm_6',
+    id: 'b04c0585-0c33-4397-923b-747e52f5d864',
     name: 'Islanders',
     abbreviation: 'NYI',
     country: 'USA',
@@ -1387,7 +1387,7 @@ export const nhl: Teams[] = [
     division_id: '2',
   },
   {
-    id: 'c_6',
+    id: '50cf6a99-0fa5-40a8-a9cf-790c62eb0055',
     name: 'Stars',
     abbreviation: 'DAL',
     country: 'USA',
@@ -1433,7 +1433,7 @@ export const nhl: Teams[] = [
     division_id: '3',
   },
   {
-    id: 'a_7',
+    id: '89dba822-40c2-4326-87d9-83a318d61053',
     name: 'Maple Leafs',
     abbreviation: 'TOR',
     country: 'Can',
@@ -1479,7 +1479,7 @@ export const nhl: Teams[] = [
     division_id: '1',
   },
   {
-    id: 'p_7',
+    id: '5a90669c-4572-4492-a570-fccf241017af',
     name: 'Kings',
     abbreviation: 'LAK',
     country: 'USA',
@@ -1525,7 +1525,7 @@ export const nhl: Teams[] = [
     division_id: '4',
   },
   {
-    id: 'm_7',
+    id: '8e458a1b-2cc6-471b-b6ce-7eb642f1cb0e',
     name: 'Devils',
     abbreviation: 'NJD',
     country: 'USA',
@@ -1582,7 +1582,7 @@ export const nhl: Teams[] = [
     division_id: '2',
   },
   {
-    id: 'c_7',
+    id: '79bbe7ad-9d4a-473c-8c6a-7a7316824fb8',
     name: 'Mammoth',
     abbreviation: 'UTA',
     country: 'USA',
@@ -1628,7 +1628,7 @@ export const nhl: Teams[] = [
     division_id: '3',
   },
   {
-    id: 'a_8',
+    id: '2eea6df2-7652-449c-9c39-555c1c98b0ad',
     name: 'Lightning',
     abbreviation: 'TBL',
     country: 'USA',
@@ -1674,7 +1674,7 @@ export const nhl: Teams[] = [
     division_id: '1',
   },
   {
-    id: 'p_8',
+    id: 'fb33245c-725e-4bdf-b9d6-cae059c045d9',
     name: 'Ducks',
     abbreviation: 'ANA',
     country: 'USA',
@@ -1720,7 +1720,7 @@ export const nhl: Teams[] = [
     division_id: '4',
   },
   {
-    id: 'm_8',
+    id: '4777c827-56de-4eca-ae8e-aae1a908d598',
     name: 'Blue Jackets',
     abbreviation: 'CBJ',
     country: 'USA',
@@ -1777,7 +1777,7 @@ export const nhl: Teams[] = [
     division_id: '2',
   },
   {
-    id: 'c_8',
+    id: '6a04ca78-7434-418f-90e2-d04b2d4c311d',
     name: 'Jets',
     abbreviation: 'WNP',
     country: 'Can',

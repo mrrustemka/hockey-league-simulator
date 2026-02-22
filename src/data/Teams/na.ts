@@ -81,7 +81,7 @@ import zsc_5 from '../../images/Gallery/Na/Zsc/zsc_5.webp';
 
 export const na: Teams[] = [
   {
-    id: '1',
+    id: 'd18a341d-ce3b-4ff9-b6e6-06d6133608ae',
     name: 'ZSC LIONS',
     abbreviation: 'ZSC',
     country: 'Swi',
@@ -124,7 +124,7 @@ export const na: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '2',
+    id: 'a6af80f8-d4d9-4001-bf2e-e3a267dac31b',
     name: 'EV Zug',
     abbreviation: 'EVZ',
     country: 'SWI',
@@ -167,7 +167,7 @@ export const na: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '3',
+    id: 'ebcb7092-548f-4928-91ce-ad95eef16015',
     name: 'SC BERN',
     abbreviation: 'SCB',
     country: 'Swi',
@@ -210,7 +210,7 @@ export const na: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '4',
+    id: 'd550d998-d1f4-49f3-9409-b736281ac813',
     name: 'HC Davos',
     abbreviation: 'HCD',
     country: 'Swi',
@@ -253,7 +253,7 @@ export const na: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '5',
+    id: '61e43a5a-3698-4797-8576-c885f93629e7',
     name: 'Lausanne HC',
     abbreviation: 'LHC',
     country: 'Swi',
@@ -296,7 +296,7 @@ export const na: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '6',
+    id: '3bfa595e-492f-48ff-862a-35c566fea8ec',
     name: 'Fribourg-Gottéron',
     abbreviation: 'FRG',
     country: 'Swi',
@@ -339,7 +339,7 @@ export const na: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '7',
+    id: '14019b7f-8ec0-40b3-91ea-98471da70fd2',
     name: 'HC Lugano',
     abbreviation: 'HCL',
     country: 'SWI',
@@ -382,7 +382,7 @@ export const na: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '8',
+    id: '14365b07-4281-4b85-a7a2-e6b3c1169911',
     name: 'HC Ambrì-Piotta',
     abbreviation: 'AMB',
     country: 'Swi',
@@ -425,7 +425,7 @@ export const na: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '9',
+    id: '7c363a5f-eb9f-46b8-849a-d7dde3db214b',
     name: 'Geneve Servette HC',
     abbreviation: 'GEN',
     country: 'Swi',
@@ -468,7 +468,7 @@ export const na: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '10',
+    id: 'd905d9f7-c9ca-4647-a882-b34d2f030c48',
     name: 'EHC Biel-Bienne',
     abbreviation: 'HCB',
     country: 'Swi',
@@ -511,7 +511,7 @@ export const na: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '11',
+    id: 'be7a67e1-fa14-49a3-b5b3-d5c1ad864b84',
     name: 'SCL Tigers',
     abbreviation: 'SCL',
     country: 'Swi',
@@ -554,7 +554,7 @@ export const na: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '12',
+    id: '5856a353-ead2-4047-bf35-dfee9cd08d5e',
     name: 'SC Rapperswil-Jona Lakers',
     abbreviation: 'RJL',
     country: 'Swi',
@@ -597,7 +597,7 @@ export const na: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '13',
+    id: 'd9a2081e-58df-4436-8ee0-b675db500d65',
     name: 'EHC Kloten',
     abbreviation: 'KLO',
     country: 'Swi',
@@ -640,7 +640,7 @@ export const na: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '14',
+    id: '064b33cf-ed3c-4164-b8ba-7d5ac874a39c',
     name: 'HC Ajoie',
     abbreviation: 'AJO',
     country: 'Swi',
