@@ -31,6 +31,7 @@
 .season-series-card__status--away,
 .season-series-card__status--home {
   grid-row: 1 / 3;
+  margin: auto;
 }
 
 .season-series-card__vs {
@@ -68,9 +69,7 @@
   gap: var(--spacing-base);
 }
 
-.season-series-card__overtime,
-.season-series-card__status--home,
-.season-series-card__status--away {
+.season-series-card__overtime {
   margin-bottom: 0;
 }
 

@@ -51,6 +51,7 @@
 
 .pair__games {
   animation: fadeIn 0.6s ease;
+  grid-template-columns: 1fr auto 1fr;
 }
 
 .pair__simulate-button {
@@ -70,6 +71,11 @@
 
 .pair__team-result-away {
   grid-area: 2 / 3 / 3 / 5;
+}
+
+.pair__game {
+  grid-column: 2 / 3;
+  text-align: left;
 }
 
 @media (width <= 1200px) {
