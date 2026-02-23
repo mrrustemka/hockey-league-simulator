@@ -3,11 +3,34 @@
 A hockey league simulation app: track teams, run seasons, and crown champions with rich visuals and realistic logic.
 
 ---
+## 🎲 v9.0.0 - Season Structure Update
+
+### 🎯 New Features
+1. **Dedicated W1 / W2 Schedule**
+2. **Dedicated W1 / W2 Playoff**
+3. **Improved visibility of completed matchups**
+4. **Favorite Team Enhancements**:
+- Favorite team marked on the main sheet
+- Highlighted on Upcoming games
+- Highlighted on Past games
+5. **Playoff Results Handling**:
+- Playoff results are now properly saved
+- Results are integrated into the Champion component
+6. **Accessibility & Compatibility Improvements** according to European Accessibility Act
+
+###  🛠 Fixes & Improvements
+1. Fixed edge case when changing number of teams after selecting a favorite team
+2. Fixed game cards layout issues on mobile screens
+3. Fixed team styling inconsistencies
+4. Fixed IDs to avoid unnecessary re-renders
+
+[🔗 View Release](https://www.linkedin.com/posts/mrrustemka_hockey-simulator-activity-7431692007514894336-WpRo?utm_source=share&utm_medium=member_desktop&rcm=ACoAADHL2y0BapMf7GmygfROsZbl_B9mZiDlXVE)
+
+---
 
 ## 🚨 v8.0.0 – Dedicated Schedules & Smoother UX
 
 ### ✨ New Features
-
 - **Dedicated NHL & EHL schedules** for authentic simulation.
 - **Readonly properties** added to types for enhanced type safety.
 - **Favorite team selection**: let users pick and follow their club.
@@ -16,7 +39,6 @@ A hockey league simulation app: track teams, run seasons, and crown champions wi
 - **Season series info** included in matchup views.
 
 ### 🛠 Fixes & Improvements
-
 - Improved naming consistency across type definitions.
 - Optimized all images to **WEBP** format for better performance.
 - Corrected EHL logo names.
@@ -31,7 +53,6 @@ A hockey league simulation app: track teams, run seasons, and crown champions wi
 ## 🚨 v7.0.0 – Conferences & Social Integration
 
 ### 🎯 New Features
-
 - Added **separate conferences** for World Hockey Championships, NHL, and EHL.
 - Smooth scroll animations enhance user experience.
 - **Stadiums** are now displayed for teams.
@@ -41,7 +62,6 @@ A hockey league simulation app: track teams, run seasons, and crown champions wi
 - Local storage support for **Playoff variables** persistence.
 
 ### 🛠 Fixes & Improvements
-
 - Type corrections for IDs and assertions.
 - Fixed chart rendering and playoff pairing alignment.
 - Improved legend padding and start button validation.
@@ -59,7 +79,6 @@ A hockey league simulation app: track teams, run seasons, and crown champions wi
 ## 🚀 v6.0.0 – Galleries & Double Round-Robin
 
 ### 🔹 New Features
-
 - **Double round-robin** matches between teams.
 - Team galleries for visual context.
 - Interactive team pages with charts.
@@ -68,7 +87,6 @@ A hockey league simulation app: track teams, run seasons, and crown champions wi
 - **Countdown timers** for upcoming matches.
 
 ### 🐞 Bug Fixes
-
 - Fixed mobile/tablet layouts for left-side games.
 - Corrected playoff pairs display on phones.
 - Improved header responsiveness.
@@ -84,7 +102,6 @@ A hockey league simulation app: track teams, run seasons, and crown champions wi
 ## 🔥 v5.0.0 – Streaks & Animations
 
 ### ✨ Key Features
-
 1. **Hot and cold streaks** for teams.
 2. League results saving.
 3. Animations for smoother interactions.
@@ -96,7 +113,6 @@ A hockey league simulation app: track teams, run seasons, and crown champions wi
 9. Refactored to use React Fragments.
 
 ### 🐛 Fixes
-
 - Scroll error resolved.
 - Hover effect fixed on sensor screen.
 - Upcoming games display corrected.
@@ -114,19 +130,15 @@ A hockey league simulation app: track teams, run seasons, and crown champions wi
 ## 🍂 v4.0.0 – New European Championships
 
 ### ✨ New Features
-
 - Added new leagues:
-
   - **DEL** (Germany)
   - **SM-League** (Finland)
   - **Extra-League** (Czech Republic)
   - **ICE Hockey League** (Austria, Hungary, Slovenia)
-
 - Unique team colors.
 - Country flags in international leagues.
 
 ### 🐛 Fixes
-
 - Team logos and ratings corrections.
 - Prefixed image paths.
 - Split team files into smaller modules.
@@ -138,14 +150,12 @@ A hockey league simulation app: track teams, run seasons, and crown champions wi
 ## 🛰 v3.0.0 – Championship & Team Selection
 
 ### ✨ Key Features
-
 - Championship selection (International, US & Canada, Europe).
 - Team count selection (2–max teams per championship).
 - Validation during selection.
 - "Play Again" scenario for new seasons.
 
 ### 🐛 Fixes
-
 - Type initialization via TypeScript.
 - Fixed Table component key errors.
 - Sorting issues resolved after playoffs.
@@ -157,7 +167,6 @@ A hockey league simulation app: track teams, run seasons, and crown champions wi
 ## 🏆 v2.0.0 – Dynamic Playoffs
 
 ### ✨ New Features
-
 - Playoff rounds after regular season.
 - Dynamic bracket creation based on teams.
 - Best of 7 game series.
@@ -171,7 +180,6 @@ A hockey league simulation app: track teams, run seasons, and crown champions wi
 ## 🏒 v1.0.0 – Initial Release
 
 ### 🎯 Features
-
 - Simulate hockey leagues.
 - Visualize matches and results.
 - Display champion team.
