@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/hockey-league-simulator/static/css/main.1b392469.css",
-    "main.js": "/hockey-league-simulator/static/js/main.309dc812.js",
+    "main.js": "/hockey-league-simulator/static/js/main.1172d383.js",
     "static/media/shef_5.webp": "/hockey-league-simulator/static/media/shef_5.e974702dcb14cfe34251.webp",
     "static/media/sjs_8.webp": "/hockey-league-simulator/static/media/sjs_8.de51a4334d12e764a110.webp",
     "static/media/vic_3.webp": "/hockey-league-simulator/static/media/vic_3.963665d00d841072c99b.webp",
@@ -226,6 +226,7 @@
     "static/media/ebb_1.webp": "/hockey-league-simulator/static/media/ebb_1.30ffdc9eabe4706ba6a3.webp",
     "static/media/ass_1.webp": "/hockey-league-simulator/static/media/ass_1.c8344e6d1b8463f79b2f.webp",
     "static/media/spa_3.webp": "/hockey-league-simulator/static/media/spa_3.86dea6c92dbb38637ab2.webp",
+    "static/media/dre_3.webp": "/hockey-league-simulator/static/media/dre_3.db0fac311fc65c46f8a9.webp",
     "static/media/scb_2.webp": "/hockey-league-simulator/static/media/scb_2.9a62ca286358e4c7d505.webp",
     "static/media/spo_1.webp": "/hockey-league-simulator/static/media/spo_1.3580b4442e3d096c2d6e.webp",
     "static/media/wob_1.webp": "/hockey-league-simulator/static/media/wob_1.06f950b1b70247d39a69.webp",
@@ -390,6 +391,7 @@
     "static/media/fro_3.webp": "/hockey-league-simulator/static/media/fro_3.2cfde03c49825b7b9dd5.webp",
     "static/media/usa_2.webp": "/hockey-league-simulator/static/media/usa_2.e6621e8f5c3f9e5295b0.webp",
     "static/media/lib_1.webp": "/hockey-league-simulator/static/media/lib_1.c37730ab1e1122bf8167.webp",
+    "static/media/dre_2.webp": "/hockey-league-simulator/static/media/dre_2.b09d1ecf1956db2f1f68.webp",
     "static/media/luk_4.webp": "/hockey-league-simulator/static/media/luk_4.5d2f9d56d726267c212f.webp",
     "static/media/dal_3.webp": "/hockey-league-simulator/static/media/dal_3.f9a33860ae764ea8a2c0.webp",
     "static/media/hpk_3.webp": "/hockey-league-simulator/static/media/hpk_3.b3c392aa4d97bb75535d.webp",
@@ -746,6 +748,7 @@
     "static/media/usa_1.webp": "/hockey-league-simulator/static/media/usa_1.1f3060bea1a62d9fe46f.webp",
     "static/media/kac_2.webp": "/hockey-league-simulator/static/media/kac_2.53f92b63e132e58176ed.webp",
     "static/media/tik_1.webp": "/hockey-league-simulator/static/media/tik_1.06288accfb3e2769fbf1.webp",
+    "static/media/dre_1.webp": "/hockey-league-simulator/static/media/dre_1.f0d77b798d600e09b232.webp",
     "static/media/car_5.webp": "/hockey-league-simulator/static/media/car_5.9f6de818127d0b28ec21.webp",
     "static/media/swi_4.webp": "/hockey-league-simulator/static/media/swi_4.e397ae930a78e395ba8a.webp",
     "static/media/nor_2.webp": "/hockey-league-simulator/static/media/nor_2.c9e9b5fccaa67a6a360b.webp",
@@ -781,6 +784,7 @@
     "static/media/ice_vsv.png": "/hockey-league-simulator/static/media/ice_vsv.f3c150a4dbaa721077ff.png",
     "static/media/del_deg.png": "/hockey-league-simulator/static/media/del_deg.5841bb3c9dc26d3d3731.png",
     "static/media/nyr_1.webp": "/hockey-league-simulator/static/media/nyr_1.2e2804df2fe72dae71ba.webp",
+    "static/media/del_dre.png": "/hockey-league-simulator/static/media/del_dre.004a44b86d445230db0b.png",
     "static/media/ice_hci.png": "/hockey-league-simulator/static/media/ice_hci.93222082a3b0d384350b.png",
     "static/media/sml_fro.png": "/hockey-league-simulator/static/media/sml_fro.4b9cc504da8f65703055.png",
     "static/media/elh_plz.png": "/hockey-league-simulator/static/media/elh_plz.2f12e0aa2a2cd611e76e.png",
@@ -910,10 +914,10 @@
     "static/media/nhl_bos.png": "/hockey-league-simulator/static/media/nhl_bos.75a37ff26352bcbf93f7.png",
     "index.html": "/hockey-league-simulator/index.html",
     "main.1b392469.css.map": "/hockey-league-simulator/static/css/main.1b392469.css.map",
-    "main.309dc812.js.map": "/hockey-league-simulator/static/js/main.309dc812.js.map"
+    "main.1172d383.js.map": "/hockey-league-simulator/static/js/main.1172d383.js.map"
   },
   "entrypoints": [
     "static/css/main.1b392469.css",
-    "static/js/main.309dc812.js"
+    "static/js/main.1172d383.js"
   ]
 }
