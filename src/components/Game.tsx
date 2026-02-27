@@ -404,11 +404,11 @@ function Game() {
     });
   }
 
-  function getTeamRating(team: string): number {
-    return (
-      teams.findIndex((element: { id: string }) => element.id === team) + 1
-    );
-  }
+  // function getTeamRating(team: string): number {
+  //   return (
+  //     teams.findIndex((element: { id: string }) => element.id === team) + 1
+  //   );
+  // }
 
   function getPlayOffTeams(): void {
     if (leagueId === '3' || leagueId === '4') {
