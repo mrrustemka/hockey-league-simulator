@@ -7,8 +7,8 @@ import elh_cup from '../images/elh_cup.png';
 import elh_logo from '../images/elh.png';
 import ice_cup from '../images/ice_cup.png';
 import ice_logo from '../images/ice.png';
-import na_cup from '../images/na_cup.png';
-import na_logo from '../images/na.png';
+import nl_cup from '../images/nl_cup.png';
+import nl_logo from '../images/nl.png';
 import nhl_cup from '../images/nhl_cup.png';
 import nhl_logo from '../images/nhl.png';
 import shl_cup from '../images/shl_cup.png';
@@ -22,7 +22,7 @@ import { del } from './Teams/del';
 import { ehl } from './Teams/ehl';
 import { elh } from './Teams/elh';
 import { ice } from './Teams/ice';
-import { na } from './Teams/na';
+import { nl } from './Teams/nl';
 import { nhl } from './Teams/nhl';
 import { shl } from './Teams/shl';
 import { sml } from './Teams/sml';
@@ -117,10 +117,10 @@ export const champs: League[] = [
     name: 'National League',
     description:
       'The National League a league in Switzerland and is the top tier of the Swiss league system. NL was ranked the No. 2 league in Europe.',
-    image: na_logo,
-    teams: na,
+    image: nl_logo,
+    teams: nl,
     teams_count: 14,
-    cup: na_cup,
+    cup: nl_cup,
     playoff_wins_required_count: 4,
   },
   {

@@ -1,85 +1,85 @@
 import { Teams } from '../types';
-import ajo from '../../images/na_ajo.png';
-import ajo_1 from '../../images/Gallery/Na/Ajo/ajo_1.webp';
-import ajo_2 from '../../images/Gallery/Na/Ajo/ajo_2.webp';
-import ajo_3 from '../../images/Gallery/Na/Ajo/ajo_3.webp';
-import ajo_4 from '../../images/Gallery/Na/Ajo/ajo_4.webp';
-import amb from '../../images/na_amb.png';
-import amb_1 from '../../images/Gallery/Na/Amb/amb_1.webp';
-import amb_2 from '../../images/Gallery/Na/Amb/amb_2.webp';
-import amb_3 from '../../images/Gallery/Na/Amb/amb_3.webp';
-import amb_4 from '../../images/Gallery/Na/Amb/amb_4.webp';
-import evz from '../../images/na_evz.png';
-import evz_1 from '../../images/Gallery/Na/Evz/evz_1.webp';
-import evz_2 from '../../images/Gallery/Na/Evz/evz_2.webp';
-import evz_3 from '../../images/Gallery/Na/Evz/evz_3.webp';
-import evz_4 from '../../images/Gallery/Na/Evz/evz_4.webp';
-import evz_5 from '../../images/Gallery/Na/Evz/evz_5.webp';
-import frg from '../../images/na_frg.png';
-import frg_1 from '../../images/Gallery/Na/Frg/frg_1.webp';
-import frg_2 from '../../images/Gallery/Na/Frg/frg_2.webp';
-import frg_3 from '../../images/Gallery/Na/Frg/frg_3.webp';
-import frg_4 from '../../images/Gallery/Na/Frg/frg_4.webp';
-import frg_5 from '../../images/Gallery/Na/Frg/frg_5.webp';
-import gen from '../../images/na_gen.png';
-import gen_1 from '../../images/Gallery/Na/Gen/gen_1.webp';
-import gen_2 from '../../images/Gallery/Na/Gen/gen_2.webp';
-import gen_3 from '../../images/Gallery/Na/Gen/gen_3.webp';
-import gen_4 from '../../images/Gallery/Na/Gen/gen_4.webp';
-import gen_5 from '../../images/Gallery/Na/Gen/gen_5.webp';
-import hcb from '../../images/na_hcb.png';
-import hcb_1 from '../../images/Gallery/Na/Hcb/hcb_1.webp';
-import hcb_2 from '../../images/Gallery/Na/Hcb/hcb_2.webp';
-import hcb_3 from '../../images/Gallery/Na/Hcb/hcb_3.webp';
-import hcb_4 from '../../images/Gallery/Na/Hcb/hcb_4.webp';
-import hcb_5 from '../../images/Gallery/Na/Hcb/hcb_5.webp';
-import hcd from '../../images/na_hcd.png';
-import hcd_1 from '../../images/Gallery/Na/Hcd/hcd_1.webp';
-import hcd_2 from '../../images/Gallery/Na/Hcd/hcd_2.webp';
-import hcd_3 from '../../images/Gallery/Na/Hcd/hcd_3.webp';
-import hcd_4 from '../../images/Gallery/Na/Hcd/hcd_4.webp';
-import hcd_5 from '../../images/Gallery/Na/Hcd/hcd_5.webp';
-import hcl from '../../images/na_hcl.png';
-import hcl_1 from '../../images/Gallery/Na/Hcl/hcl_1.webp';
-import hcl_2 from '../../images/Gallery/Na/Hcl/hcl_2.webp';
-import hcl_3 from '../../images/Gallery/Na/Hcl/hcl_3.webp';
-import hcl_4 from '../../images/Gallery/Na/Hcl/hcl_4.webp';
-import hcl_5 from '../../images/Gallery/Na/Hcl/hcl_5.webp';
-import klo from '../../images/na_klo.png';
-import klo_1 from '../../images/Gallery/Na/Klo/klo_1.webp';
-import klo_2 from '../../images/Gallery/Na/Klo/klo_2.webp';
-import klo_3 from '../../images/Gallery/Na/Klo/klo_3.webp';
-import klo_4 from '../../images/Gallery/Na/Klo/klo_4.webp';
-import klo_5 from '../../images/Gallery/Na/Klo/klo_5.webp';
-import lhc from '../../images/na_lhc.png';
-import lhc_1 from '../../images/Gallery/Na/Lhc/lhc_1.webp';
-import lhc_2 from '../../images/Gallery/Na/Lhc/lhc_2.webp';
-import lhc_3 from '../../images/Gallery/Na/Lhc/lhc_3.webp';
-import lhc_4 from '../../images/Gallery/Na/Lhc/lhc_4.webp';
-import rjl from '../../images/na_rjl.png';
-import rjl_1 from '../../images/Gallery/Na/Rjl/rjl_1.webp';
-import rjl_2 from '../../images/Gallery/Na/Rjl/rjl_2.webp';
-import rjl_3 from '../../images/Gallery/Na/Rjl/rjl_3.webp';
-import rjl_4 from '../../images/Gallery/Na/Rjl/rjl_4.webp';
-import scb from '../../images/na_scb.png';
-import scb_1 from '../../images/Gallery/Na/Scb/scb_1.webp';
-import scb_2 from '../../images/Gallery/Na/Scb/scb_2.webp';
-import scb_3 from '../../images/Gallery/Na/Scb/scb_3.webp';
-import scb_4 from '../../images/Gallery/Na/Scb/scb_4.webp';
-import scb_5 from '../../images/Gallery/Na/Scb/scb_5.webp';
-import scl from '../../images/na_scl.png';
-import scl_1 from '../../images/Gallery/Na/Scl/scl_1.webp';
-import scl_2 from '../../images/Gallery/Na/Scl/scl_2.webp';
-import scl_3 from '../../images/Gallery/Na/Scl/scl_3.webp';
-import scl_4 from '../../images/Gallery/Na/Scl/scl_4.webp';
-import zsc from '../../images/na_zsc.png';
-import zsc_1 from '../../images/Gallery/Na/Zsc/zsc_1.webp';
-import zsc_2 from '../../images/Gallery/Na/Zsc/zsc_2.webp';
-import zsc_3 from '../../images/Gallery/Na/Zsc/zsc_3.webp';
-import zsc_4 from '../../images/Gallery/Na/Zsc/zsc_4.webp';
-import zsc_5 from '../../images/Gallery/Na/Zsc/zsc_5.webp';
+import ajo from '../../images/nl_ajo.png';
+import ajo_1 from '../../images/Gallery/Nl/Ajo/ajo_1.webp';
+import ajo_2 from '../../images/Gallery/Nl/Ajo/ajo_2.webp';
+import ajo_3 from '../../images/Gallery/Nl/Ajo/ajo_3.webp';
+import ajo_4 from '../../images/Gallery/Nl/Ajo/ajo_4.webp';
+import amb from '../../images/nl_amb.png';
+import amb_1 from '../../images/Gallery/Nl/Amb/amb_1.webp';
+import amb_2 from '../../images/Gallery/Nl/Amb/amb_2.webp';
+import amb_3 from '../../images/Gallery/Nl/Amb/amb_3.webp';
+import amb_4 from '../../images/Gallery/Nl/Amb/amb_4.webp';
+import evz from '../../images/nl_evz.png';
+import evz_1 from '../../images/Gallery/Nl/Evz/evz_1.webp';
+import evz_2 from '../../images/Gallery/Nl/Evz/evz_2.webp';
+import evz_3 from '../../images/Gallery/Nl/Evz/evz_3.webp';
+import evz_4 from '../../images/Gallery/Nl/Evz/evz_4.webp';
+import evz_5 from '../../images/Gallery/Nl/Evz/evz_5.webp';
+import frg from '../../images/nl_frg.png';
+import frg_1 from '../../images/Gallery/Nl/Frg/frg_1.webp';
+import frg_2 from '../../images/Gallery/Nl/Frg/frg_2.webp';
+import frg_3 from '../../images/Gallery/Nl/Frg/frg_3.webp';
+import frg_4 from '../../images/Gallery/Nl/Frg/frg_4.webp';
+import frg_5 from '../../images/Gallery/Nl/Frg/frg_5.webp';
+import gen from '../../images/nl_gen.png';
+import gen_1 from '../../images/Gallery/Nl/Gen/gen_1.webp';
+import gen_2 from '../../images/Gallery/Nl/Gen/gen_2.webp';
+import gen_3 from '../../images/Gallery/Nl/Gen/gen_3.webp';
+import gen_4 from '../../images/Gallery/Nl/Gen/gen_4.webp';
+import gen_5 from '../../images/Gallery/Nl/Gen/gen_5.webp';
+import hcb from '../../images/nl_hcb.png';
+import hcb_1 from '../../images/Gallery/Nl/Hcb/hcb_1.webp';
+import hcb_2 from '../../images/Gallery/Nl/Hcb/hcb_2.webp';
+import hcb_3 from '../../images/Gallery/Nl/Hcb/hcb_3.webp';
+import hcb_4 from '../../images/Gallery/Nl/Hcb/hcb_4.webp';
+import hcb_5 from '../../images/Gallery/Nl/Hcb/hcb_5.webp';
+import hcd from '../../images/nl_hcd.png';
+import hcd_1 from '../../images/Gallery/Nl/Hcd/hcd_1.webp';
+import hcd_2 from '../../images/Gallery/Nl/Hcd/hcd_2.webp';
+import hcd_3 from '../../images/Gallery/Nl/Hcd/hcd_3.webp';
+import hcd_4 from '../../images/Gallery/Nl/Hcd/hcd_4.webp';
+import hcd_5 from '../../images/Gallery/Nl/Hcd/hcd_5.webp';
+import hcl from '../../images/nl_hcl.png';
+import hcl_1 from '../../images/Gallery/Nl/Hcl/hcl_1.webp';
+import hcl_2 from '../../images/Gallery/Nl/Hcl/hcl_2.webp';
+import hcl_3 from '../../images/Gallery/Nl/Hcl/hcl_3.webp';
+import hcl_4 from '../../images/Gallery/Nl/Hcl/hcl_4.webp';
+import hcl_5 from '../../images/Gallery/Nl/Hcl/hcl_5.webp';
+import klo from '../../images/nl_klo.png';
+import klo_1 from '../../images/Gallery/Nl/Klo/klo_1.webp';
+import klo_2 from '../../images/Gallery/Nl/Klo/klo_2.webp';
+import klo_3 from '../../images/Gallery/Nl/Klo/klo_3.webp';
+import klo_4 from '../../images/Gallery/Nl/Klo/klo_4.webp';
+import klo_5 from '../../images/Gallery/Nl/Klo/klo_5.webp';
+import lhc from '../../images/nl_lhc.png';
+import lhc_1 from '../../images/Gallery/Nl/Lhc/lhc_1.webp';
+import lhc_2 from '../../images/Gallery/Nl/Lhc/lhc_2.webp';
+import lhc_3 from '../../images/Gallery/Nl/Lhc/lhc_3.webp';
+import lhc_4 from '../../images/Gallery/Nl/Lhc/lhc_4.webp';
+import rjl from '../../images/nl_rjl.png';
+import rjl_1 from '../../images/Gallery/Nl/Rjl/rjl_1.webp';
+import rjl_2 from '../../images/Gallery/Nl/Rjl/rjl_2.webp';
+import rjl_3 from '../../images/Gallery/Nl/Rjl/rjl_3.webp';
+import rjl_4 from '../../images/Gallery/Nl/Rjl/rjl_4.webp';
+import scb from '../../images/nl_scb.png';
+import scb_1 from '../../images/Gallery/Nl/Scb/scb_1.webp';
+import scb_2 from '../../images/Gallery/Nl/Scb/scb_2.webp';
+import scb_3 from '../../images/Gallery/Nl/Scb/scb_3.webp';
+import scb_4 from '../../images/Gallery/Nl/Scb/scb_4.webp';
+import scb_5 from '../../images/Gallery/Nl/Scb/scb_5.webp';
+import scl from '../../images/nl_scl.png';
+import scl_1 from '../../images/Gallery/Nl/Scl/scl_1.webp';
+import scl_2 from '../../images/Gallery/Nl/Scl/scl_2.webp';
+import scl_3 from '../../images/Gallery/Nl/Scl/scl_3.webp';
+import scl_4 from '../../images/Gallery/Nl/Scl/scl_4.webp';
+import zsc from '../../images/nl_zsc.png';
+import zsc_1 from '../../images/Gallery/Nl/Zsc/zsc_1.webp';
+import zsc_2 from '../../images/Gallery/Nl/Zsc/zsc_2.webp';
+import zsc_3 from '../../images/Gallery/Nl/Zsc/zsc_3.webp';
+import zsc_4 from '../../images/Gallery/Nl/Zsc/zsc_4.webp';
+import zsc_5 from '../../images/Gallery/Nl/Zsc/zsc_5.webp';
 
-export const na: Teams[] = [
+export const nl: Teams[] = [
   {
     id: 'd18a341d-ce3b-4ff9-b6e6-06d6133608ae',
     name: 'ZSC LIONS',
@@ -90,7 +90,7 @@ export const na: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 99,
+    rating: 85,
     game_counter: 0,
     logo: zsc,
     loses: 0,
@@ -133,7 +133,7 @@ export const na: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 99,
+    rating: 70,
     game_counter: 0,
     logo: evz,
     loses: 0,
@@ -176,7 +176,7 @@ export const na: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 99,
+    rating: 66,
     game_counter: 0,
     logo: scb,
     loses: 0,
@@ -262,7 +262,7 @@ export const na: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 99,
+    rating: 78,
     game_counter: 0,
     logo: lhc,
     loses: 0,
@@ -305,7 +305,7 @@ export const na: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 99,
+    rating: 94,
     game_counter: 0,
     logo: frg,
     loses: 0,
@@ -348,7 +348,7 @@ export const na: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 97,
+    rating: 85,
     game_counter: 0,
     logo: hcl,
     loses: 0,
@@ -391,7 +391,7 @@ export const na: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 97,
+    rating: 54,
     game_counter: 0,
     logo: amb,
     loses: 0,
@@ -434,7 +434,7 @@ export const na: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 92,
+    rating: 79,
     game_counter: 0,
     logo: gen,
     loses: 0,
@@ -477,7 +477,7 @@ export const na: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 92,
+    rating: 61,
     game_counter: 0,
     logo: hcb,
     loses: 0,
@@ -520,7 +520,7 @@ export const na: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 88,
+    rating: 64,
     game_counter: 0,
     logo: scl,
     loses: 0,
@@ -563,7 +563,7 @@ export const na: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 81,
+    rating: 70,
     game_counter: 0,
     logo: rjl,
     loses: 0,
@@ -606,7 +606,7 @@ export const na: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 65,
+    rating: 58,
     game_counter: 0,
     logo: klo,
     loses: 0,
