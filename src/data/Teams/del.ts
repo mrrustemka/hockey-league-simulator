@@ -635,8 +635,8 @@ export const del: Teams[] = [
     twitch: '',
     points_percentage: 0,
   },
-    {
-    id: '',
+  {
+    id: 'b1cfb69e-1ab9-42b7-a367-27e163b2161f',
     name: 'Dresdner Eislöwen',
     abbreviation: 'DRE',
     country: 'GER',
