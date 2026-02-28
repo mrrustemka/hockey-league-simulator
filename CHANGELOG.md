@@ -3,6 +3,12 @@
 A hockey league simulation app: track teams, run seasons, and crown champions with rich visuals and realistic logic.
 
 ---
+## 🎲 v9.0.2 - ELH Ratings Update
+
+### 🛠 Fixes & Improvements
+1. **ELH Ratings Update** 
+
+---
 ## 🎲 v9.0.1 - DEL Ratings Update
 
 ### 🛠 Fixes & Improvements
