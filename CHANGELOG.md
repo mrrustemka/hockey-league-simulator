@@ -3,6 +3,12 @@
 A hockey league simulation app: track teams, run seasons, and crown champions with rich visuals and realistic logic.
 
 ---
+## 🎲 v9.0.4 - NHL Ratings Update
+
+### 🛠 Fixes & Improvements
+1. **NHL Ratings Update** 
+
+---
 ## 🎲 v9.0.3 - NL and ICE Ratings Update
 
 ### 🛠 Fixes & Improvements
