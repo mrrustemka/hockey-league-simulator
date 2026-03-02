@@ -10,6 +10,11 @@ import bif_1 from '../../images/Gallery/Shl/Bif/bif_1.webp';
 import bif_2 from '../../images/Gallery/Shl/Bif/bif_2.webp';
 import bif_3 from '../../images/Gallery/Shl/Bif/bif_3.webp';
 import bif_4 from '../../images/Gallery/Shl/Bif/bif_4.webp';
+import dif from '../../images/shl_dif.png';
+import dif_1 from '../../images/Gallery/Shl/Dif/dif_1.webp';
+import dif_2 from '../../images/Gallery/Shl/Dif/dif_2.webp';
+import dif_3 from '../../images/Gallery/Shl/Dif/dif_3.webp';
+import dif_4 from '../../images/Gallery/Shl/Dif/dif_4.webp';
 import fbk from '../../images/sml_fbk.png';
 import fbk_1 from '../../images/Gallery/Shl/Fbk/fbk_1.webp';
 import fbk_2 from '../../images/Gallery/Shl/Fbk/fbk_2.webp';
@@ -28,12 +33,6 @@ import hv71_2 from '../../images/Gallery/Shl/Hv71/hv71_2.webp';
 import hv71_3 from '../../images/Gallery/Shl/Hv71/hv71_3.webp';
 import hv71_4 from '../../images/Gallery/Shl/Hv71/hv71_4.webp';
 import hv71_5 from '../../images/Gallery/Shl/Hv71/hv71_5.webp';
-// import iko from '../../images/shl_iko.png';
-// import iko_1 from '../../images/Gallery/Shl/Iko/iko_1.webp';
-// import iko_2 from '../../images/Gallery/Shl/Iko/iko_2.webp';
-// import iko_3 from '../../images/Gallery/Shl/Iko/iko_3.webp';
-// import iko_4 from '../../images/Gallery/Shl/Iko/iko_4.webp';
-// import iko_5 from '../../images/Gallery/Shl/Iko/iko_5.webp';
 import lak from '../../images/shl_lak.png';
 import lak_1 from '../../images/Gallery/Shl/Lak/lak_1.webp';
 import lak_2 from '../../images/Gallery/Shl/Lak/lak_2.webp';
@@ -64,12 +63,6 @@ import mif_2 from '../../images/Gallery/Shl/Mif/mif_2.webp';
 import mif_3 from '../../images/Gallery/Shl/Mif/mif_3.webp';
 import mif_4 from '../../images/Gallery/Shl/Mif/mif_4.webp';
 import mif_5 from '../../images/Gallery/Shl/Mif/mif_5.webp';
-import modo from '../../images/shl_modo.png';
-import modo_1 from '../../images/Gallery/Shl/Modo/modo_1.webp';
-import modo_2 from '../../images/Gallery/Shl/Modo/modo_2.webp';
-import modo_3 from '../../images/Gallery/Shl/Modo/modo_3.webp';
-import modo_4 from '../../images/Gallery/Shl/Modo/modo_4.webp';
-import modo_5 from '../../images/Gallery/Shl/Modo/modo_5.webp';
 import ore from '../../images/shl_ore.png';
 import ore_1 from '../../images/Gallery/Shl/Ore/ore_1.webp';
 import ore_2 from '../../images/Gallery/Shl/Ore/ore_2.webp';
@@ -100,7 +93,7 @@ export const shl: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 99,
+    rating: 86,
     game_counter: 0,
     logo: lak,
     loses: 0,
@@ -186,7 +179,7 @@ export const shl: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 99,
+    rating: 94,
     game_counter: 0,
     logo: fro,
     loses: 0,
@@ -229,7 +222,7 @@ export const shl: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 99,
+    rating: 67,
     game_counter: 0,
     logo: fbk,
     loses: 0,
@@ -272,7 +265,7 @@ export const shl: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 99,
+    rating: 63,
     game_counter: 0,
     logo: tik,
     loses: 0,
@@ -315,7 +308,7 @@ export const shl: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 99,
+    rating: 74,
     game_counter: 0,
     logo: lhf,
     loses: 0,
@@ -358,7 +351,7 @@ export const shl: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 99,
+    rating: 50,
     game_counter: 0,
     logo: lif,
     loses: 0,
@@ -401,7 +394,7 @@ export const shl: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 99,
+    rating: 58,
     game_counter: 0,
     logo: lhc,
     loses: 0,
@@ -444,7 +437,7 @@ export const shl: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 90,
+    rating: 82,
     game_counter: 0,
     logo: rbk,
     loses: 0,
@@ -487,7 +480,7 @@ export const shl: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 86,
+    rating: 55,
     game_counter: 0,
     logo: ore,
     loses: 0,
@@ -521,49 +514,6 @@ export const shl: Teams[] = [
     points_percentage: 0,
   },
   {
-    id: '81fe1170-c351-42d6-9a3e-89c8458aef43',
-    name: 'Modo Hockey',
-    abbreviation: 'MODO',
-    country: 'Swe',
-    city: 'Ornskoldsvik',
-    points: 0,
-    goals_for: 0,
-    goals_against: 0,
-    goals_diff: 0,
-    rating: 86,
-    game_counter: 0,
-    logo: modo,
-    loses: 0,
-    loses_ot: 0,
-    wins: 0,
-    play_off_rank: 0,
-    play_off_round_wins: 0,
-    play_off_round_results: [],
-    color: '#e01c21',
-    is_playoff: false,
-    status: '',
-    cur_status_length: 0,
-    chart_data: [],
-    game_results: [],
-    photos: [modo_1, modo_2, modo_3, modo_4],
-    arena_name: 'Hägglunds Arena',
-    arena_description:
-      'Hägglunds Arena (formerly Swedbank Arena and Fjällräven Center) is an indoor sporting arena located in Örnsköldsvik, Sweden. The arena was opened on 26 August 2006.',
-    arena_capacity: 7265,
-    arena_photo: modo_5,
-    facebook: 'https://www.facebook.com/modo1921/',
-    youtube: 'https://www.youtube.com/@modo_hockey',
-    instagram: 'https://www.instagram.com/modo_hockey/',
-    x: 'https://www.facebook.com/modo1921/',
-    threads: '',
-    tiktok: 'https://www.tiktok.com/@modo_hockey',
-    snapchat: '',
-    linkedin: '',
-    website: 'https://www.modohockey.se/',
-    twitch: '',
-    points_percentage: 0,
-  },
-  {
     id: 'a3792a35-48bf-4ec3-8147-225270125e9e',
     name: 'Malmö Redhawks',
     abbreviation: 'MIF',
@@ -573,7 +523,7 @@ export const shl: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 85,
+    rating: 70,
     game_counter: 0,
     logo: mif,
     loses: 0,
@@ -616,7 +566,7 @@ export const shl: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 69,
+    rating: 53,
     game_counter: 0,
     logo: hv71,
     loses: 0,
@@ -659,7 +609,7 @@ export const shl: Teams[] = [
     goals_for: 0,
     goals_against: 0,
     goals_diff: 0,
-    rating: 50,
+    rating: 72,
     game_counter: 0,
     logo: bif,
     loses: 0,
@@ -693,6 +643,49 @@ export const shl: Teams[] = [
     points_percentage: 0,
   },
 
+    {
+    id: 'f8d4a962-1b1e-4c7a-9a3d-6b5e8f1a2c3d',
+    name: 'Djurgårdens IF',
+    abbreviation: 'DIF',
+    country: 'Swe',
+    city: 'Stockholm',
+    points: 0,
+    goals_for: 0,
+    goals_against: 0,
+    goals_diff: 0,
+    rating: 64,
+    game_counter: 0,
+    logo: dif,
+    loses: 0,
+    loses_ot: 0,
+    wins: 0,
+    play_off_rank: 0,
+    play_off_round_wins: 0,
+    play_off_round_results: [],
+    color: '#0E122B',
+    is_playoff: false,
+    status: '',
+    cur_status_length: 0,
+    chart_data: [],
+    game_results: [],
+    photos: [dif_1, dif_2, dif_3],
+    arena_name: 'Avicii Arena',
+    arena_description:
+      'Avicii Arena (Stockholm Globe Arena) is an indoor arena located in Johanneshov district of Stockholm, Sweden. The arena represents the Sun in the Sweden Solar System, the world\'s largest scale model of the Solar System.',
+    arena_capacity: 13950,
+    arena_photo: dif_4,
+    facebook: 'https://www.facebook.com/difhockeyse',
+    youtube: 'https://www.youtube.com/@difhockey',
+    instagram: 'https://www.instagram.com/difhockeyse',
+    x: 'https://x.com/DIFHockeyse',
+    threads: '',
+    tiktok: 'https://www.tiktok.com/@difhockeyse',
+    snapchat: '',
+    linkedin: '',
+    website: 'https://www.difhockey.se/',
+    twitch: '',
+    points_percentage: 0,
+  },
   // {
   // 	id: '14',
   // 	name: 'IK Oskarshamn',
@@ -734,5 +727,48 @@ export const shl: Teams[] = [
   // 	website: 'https://www.ikoskarshamn.se/',
   // 	twitch: '',
   // 	points_percentage: 0,
+  // },
+    // {
+  //   id: '81fe1170-c351-42d6-9a3e-89c8458aef43',
+  //   name: 'Modo Hockey',
+  //   abbreviation: 'MODO',
+  //   country: 'Swe',
+  //   city: 'Ornskoldsvik',
+  //   points: 0,
+  //   goals_for: 0,
+  //   goals_against: 0,
+  //   goals_diff: 0,
+  //   rating: 86,
+  //   game_counter: 0,
+  //   logo: modo,
+  //   loses: 0,
+  //   loses_ot: 0,
+  //   wins: 0,
+  //   play_off_rank: 0,
+  //   play_off_round_wins: 0,
+  //   play_off_round_results: [],
+  //   color: '#e01c21',
+  //   is_playoff: false,
+  //   status: '',
+  //   cur_status_length: 0,
+  //   chart_data: [],
+  //   game_results: [],
+  //   photos: [modo_1, modo_2, modo_3, modo_4],
+  //   arena_name: 'Hägglunds Arena',
+  //   arena_description:
+  //     'Hägglunds Arena (formerly Swedbank Arena and Fjällräven Center) is an indoor sporting arena located in Örnsköldsvik, Sweden. The arena was opened on 26 August 2006.',
+  //   arena_capacity: 7265,
+  //   arena_photo: modo_5,
+  //   facebook: 'https://www.facebook.com/modo1921/',
+  //   youtube: 'https://www.youtube.com/@modo_hockey',
+  //   instagram: 'https://www.instagram.com/modo_hockey/',
+  //   x: 'https://www.facebook.com/modo1921/',
+  //   threads: '',
+  //   tiktok: 'https://www.tiktok.com/@modo_hockey',
+  //   snapchat: '',
+  //   linkedin: '',
+  //   website: 'https://www.modohockey.se/',
+  //   twitch: '',
+  //   points_percentage: 0,
   // },
 ];

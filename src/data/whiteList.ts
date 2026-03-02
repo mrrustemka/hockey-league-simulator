@@ -9,6 +9,7 @@ export const whiteTeams: string[] = [
   '#001489',
   '#041e42',
   '#00205b',
+  '#0E122B'
 ];
 
-export const whiteLeagues: string[] = ['5'];
+export const whiteLeagues: string[] = [];
