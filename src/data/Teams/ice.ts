@@ -35,7 +35,7 @@ import hko_1 from '../../images/Gallery/Ice/Hko/hko_1.webp';
 import hko_2 from '../../images/Gallery/Ice/Hko/hko_2.webp';
 import hko_3 from '../../images/Gallery/Ice/Hko/hko_3.webp';
 import hun from '../../images/w2_hun.png';
-import ita from '../../images/w2_ita.png';
+import ita from '../../images/w1_ita.png';
 import kac from '../../images/ice_kac.png';
 import kac_1 from '../../images/Gallery/Ice/Kac/kac_1.webp';
 import kac_2 from '../../images/Gallery/Ice/Kac/kac_2.webp';
@@ -585,7 +585,7 @@ export const ice: Teams[] = [
     twitch: '',
     points_percentage: 0,
   },
-    {
+  {
     id: 'a7c5b8e2-9d14-4f36-8b2c-1a0e5d4f6c7b',
     name: 'FTC-Telekom',
     abbreviation: 'FTC',
@@ -628,7 +628,7 @@ export const ice: Teams[] = [
     twitch: '',
     points_percentage: 0,
   },
-    // {
+  // {
   //   id: '2d89d215-1351-438c-9a52-59b09696c67e',
   //   name: 'Asiago Hockey 1935',
   //   abbreviation: 'ASH',

@@ -4,6 +4,15 @@ A hockey league simulation app: track teams, run seasons, and crown champions wi
 
 ---
 
+## 🎲 v9.0.7 - W2 Ratings Update
+
+### 🛠 Fixes & Improvements
+
+1. **W1 Ratings Update**
+2. **W2 Ratings Update**
+
+---
+
 ## 🎲 v9.0.6 - EHL Ratings Update
 
 ### 🛠 Fixes & Improvements

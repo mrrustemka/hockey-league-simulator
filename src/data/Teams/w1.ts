@@ -22,6 +22,10 @@ import den_2 from '../../images/Gallery/W1/Den/den_2.webp';
 import den_3 from '../../images/Gallery/W1/Den/den_3.webp';
 import den_4 from '../../images/Gallery/W1/Den/den_4.webp';
 import den_5 from '../../images/Gallery/W1/Den/den_5.webp';
+import ita from '../../images/w1_ita.png';
+import ita_1 from '../../images/Gallery/W1/Ita/ita_1.webp';
+import ita_2 from '../../images/Gallery/W1/Ita/ita_2.webp';
+import ita_3 from '../../images/Gallery/W1/Ita/ita_3.webp';
 import fin from '../../images/w1_fin.png';
 import fin_1 from '../../images/Gallery/W1/Fin/fin_1.webp';
 import fin_2 from '../../images/Gallery/W1/Fin/fin_2.webp';
@@ -30,28 +34,21 @@ import fin_4 from '../../images/Gallery/W1/Fin/fin_4.webp';
 import fin_5 from '../../images/Gallery/W1/Fin/fin_5.webp';
 import fin_6 from '../../images/Gallery/W1/Fin/fin_6.webp';
 import fin_7 from '../../images/Gallery/W1/Fin/fin_7.webp';
-import fra from '../../images/w1_fra.png';
-import fra_1 from '../../images/Gallery/W1/Fra/fra_1.webp';
-import fra_2 from '../../images/Gallery/W1/Fra/fra_2.webp';
-import fra_3 from '../../images/Gallery/W1/Fra/fra_3.webp';
-import fra_4 from '../../images/Gallery/W1/Fra/fra_4.webp';
 import ger from '../../images/w1_ger.png';
 import ger_1 from '../../images/Gallery/W1/Ger/ger_1.webp';
 import ger_2 from '../../images/Gallery/W1/Ger/ger_2.webp';
 import ger_3 from '../../images/Gallery/W1/Ger/ger_3.webp';
 import ger_4 from '../../images/Gallery/W1/Ger/ger_4.webp';
 import ger_5 from '../../images/Gallery/W1/Ger/ger_5.webp';
+import gbr from '../../images/w1_gbr.png';
+import gbr_1 from '../../images/Gallery/W1/Gbr/gbr_1.webp';
+import gbr_2 from '../../images/Gallery/W1/Gbr/gbr_2.webp';
+import gbr_3 from '../../images/Gallery/W1/Gbr/gbr_3.webp';
 import hun from '../../images/w2_hun.png';
 import hun_1 from '../../images/Gallery/W1/Hun/hun_1.webp';
 import hun_2 from '../../images/Gallery/W1/Hun/hun_2.webp';
 import hun_3 from '../../images/Gallery/W1/Hun/hun_3.webp';
 import hun_4 from '../../images/Gallery/W1/Hun/hun_4.webp';
-import kaz from '../../images/w1_kaz.png';
-import kaz_1 from '../../images/Gallery/W1/Kaz/kaz_1.webp';
-import kaz_2 from '../../images/Gallery/W1/Kaz/kaz_2.webp';
-import kaz_3 from '../../images/Gallery/W1/Kaz/kaz_3.webp';
-import kaz_4 from '../../images/Gallery/W1/Kaz/kaz_4.webp';
-import kaz_5 from '../../images/Gallery/W1/Kaz/kaz_5.webp';
 import lat from '../../images/w1_lat.png';
 import lat_1 from '../../images/Gallery/W1/Lat/lat_1.webp';
 import lat_2 from '../../images/Gallery/W1/Lat/lat_2.webp';
@@ -132,7 +129,7 @@ export const w1: Teams[] = [
     website: 'https://www.hockeycanada.ca/',
     twitch: '',
     points_percentage: 0,
-    conference_id: '1',
+    conference_id: '2',
   },
   {
     abbreviation: 'USA',
@@ -171,7 +168,7 @@ export const w1: Teams[] = [
     website: 'https://teamusa.usahockey.com/',
     twitch: '',
     points_percentage: 0,
-    conference_id: '2',
+    conference_id: '1',
   },
   {
     abbreviation: 'SWE',
@@ -210,7 +207,7 @@ export const w1: Teams[] = [
     website: 'https://www.swehockey.se/',
     twitch: '',
     points_percentage: 0,
-    conference_id: '1',
+    conference_id: '2',
   },
   {
     abbreviation: 'FIN',
@@ -304,7 +301,7 @@ export const w1: Teams[] = [
     loses_ot: 0,
     name: 'Germany',
     points: 0,
-    rating: 94,
+    rating: 84,
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
@@ -327,7 +324,7 @@ export const w1: Teams[] = [
     website: 'http://www.deb-online.de/',
     twitch: '',
     points_percentage: 0,
-    conference_id: '2',
+    conference_id: '1',
   },
   {
     abbreviation: 'SLK',
@@ -343,7 +340,7 @@ export const w1: Teams[] = [
     loses_ot: 0,
     name: 'Slovakia',
     points: 0,
-    rating: 91,
+    rating: 81,
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
@@ -366,7 +363,7 @@ export const w1: Teams[] = [
     website: 'http://www.hockeyslovakia.sk/',
     twitch: '',
     points_percentage: 0,
-    conference_id: '1',
+    conference_id: '2',
   },
   {
     abbreviation: 'SUI',
@@ -382,7 +379,7 @@ export const w1: Teams[] = [
     loses_ot: 0,
     name: 'Switzerland',
     points: 0,
-    rating: 96,
+    rating: 86,
     wins: 0,
     play_off_rank: 0,
     play_off_round_wins: 0,
@@ -405,7 +402,7 @@ export const w1: Teams[] = [
     website: 'http://www.sihf.ch/',
     twitch: '',
     points_percentage: 0,
-    conference_id: '2',
+    conference_id: '1',
   },
   {
     abbreviation: 'LAT',
@@ -419,7 +416,7 @@ export const w1: Teams[] = [
     logo: lat,
     name: 'Latvia',
     points: 0,
-    rating: 89,
+    rating: 79,
     play_off_rank: 0,
     play_off_round_wins: 0,
     play_off_round_results: [],
@@ -458,7 +455,7 @@ export const w1: Teams[] = [
     logo: den,
     name: 'Denmark',
     points: 0,
-    rating: 85,
+    rating: 75,
     play_off_rank: 0,
     play_off_round_wins: 0,
     play_off_round_results: [],
@@ -497,7 +494,7 @@ export const w1: Teams[] = [
     logo: nor,
     name: 'Norway',
     points: 0,
-    rating: 82,
+    rating: 72,
     play_off_rank: 0,
     play_off_round_wins: 0,
     play_off_round_results: [],
@@ -525,84 +522,6 @@ export const w1: Teams[] = [
     conference_id: '2',
   },
   {
-    abbreviation: 'FRA',
-    city: 'Paris',
-    country: 'Fra',
-    game_counter: 0,
-    goals_against: 0,
-    goals_diff: 0,
-    goals_for: 0,
-    id: '8ebcb497-48d9-4378-8e1a-87eb05c3c7bd',
-    logo: fra,
-    name: 'France',
-    points: 0,
-    rating: 81,
-    play_off_rank: 0,
-    play_off_round_wins: 0,
-    play_off_round_results: [],
-    loses: 0,
-    loses_ot: 0,
-    wins: 0,
-    color: '#ffffff',
-    is_playoff: false,
-    status: '',
-    cur_status_length: 0,
-    chart_data: [],
-    game_results: [],
-    photos: [fra_1, fra_2, fra_3, fra_4],
-    facebook: 'https://www.facebook.com/hockeyfrance',
-    youtube: 'https://www.youtube.com/channel/UCbogoGXrvRiTQ6C-kbIkOTQ',
-    instagram: 'https://www.instagram.com/hockey_fra',
-    x: 'https://twitter.com/Hockey_FRA',
-    threads: '',
-    tiktok: '',
-    snapchat: '',
-    linkedin: '',
-    website: 'http://www.hockeyfrance.com/',
-    twitch: '',
-    points_percentage: 0,
-    conference_id: '1',
-  },
-  {
-    abbreviation: 'KAZ',
-    city: 'Astana',
-    country: 'Kaz',
-    game_counter: 0,
-    goals_against: 0,
-    goals_diff: 0,
-    goals_for: 0,
-    id: 'fa62755b-511b-4677-87ba-9aa169cde75a',
-    logo: kaz,
-    name: 'Kazakhstan',
-    points: 0,
-    rating: 81,
-    play_off_rank: 0,
-    play_off_round_wins: 0,
-    play_off_round_results: [],
-    loses: 0,
-    loses_ot: 0,
-    wins: 0,
-    color: '#ffcb05',
-    is_playoff: false,
-    status: '',
-    cur_status_length: 0,
-    chart_data: [],
-    game_results: [],
-    photos: [kaz_1, kaz_2, kaz_3, kaz_4, kaz_5],
-    facebook: 'https://www.facebook.com/kazakhstanhockey/',
-    youtube: '',
-    instagram: 'https://www.instagram.com/kazakhstanhockey',
-    x: '',
-    threads: '',
-    tiktok: '',
-    snapchat: '',
-    linkedin: '',
-    website: 'http://www.icehockey.kz/',
-    twitch: '',
-    points_percentage: 0,
-    conference_id: '2',
-  },
-  {
     abbreviation: 'AUT',
     city: 'Vienna',
     country: 'Aus',
@@ -614,7 +533,7 @@ export const w1: Teams[] = [
     logo: aus,
     name: 'Austria',
     points: 0,
-    rating: 81,
+    rating: 71,
     play_off_rank: 0,
     play_off_round_wins: 0,
     play_off_round_results: [],
@@ -653,7 +572,7 @@ export const w1: Teams[] = [
     logo: hun,
     name: 'Hungary',
     points: 0,
-    rating: 75,
+    rating: 65,
     play_off_rank: 0,
     play_off_round_wins: 0,
     play_off_round_results: [],
@@ -678,7 +597,7 @@ export const w1: Teams[] = [
     website: 'http://www.jegkorongszovetseg.hu/',
     twitch: '',
     points_percentage: 0,
-    conference_id: '2',
+    conference_id: '1',
   },
   {
     abbreviation: 'SVK',
@@ -692,7 +611,7 @@ export const w1: Teams[] = [
     logo: sln,
     name: 'Slovenia',
     points: 0,
-    rating: 75,
+    rating: 65,
     play_off_rank: 0,
     play_off_round_wins: 0,
     play_off_round_results: [],
@@ -717,6 +636,84 @@ export const w1: Teams[] = [
     website: 'http://www.hokej.si/',
     twitch: '',
     points_percentage: 0,
+    conference_id: '2',
+  },
+  {
+    abbreviation: 'GBR',
+    city: 'London',
+    country: 'Gbr',
+    game_counter: 0,
+    goals_against: 0,
+    goals_diff: 0,
+    goals_for: 0,
+    id: '99229c10-6bfc-4141-ad0c-cc3fe6f05d01',
+    logo: gbr,
+    name: 'Great Britain',
+    points: 0,
+    rating: 75,
+    play_off_rank: 0,
+    play_off_round_wins: 0,
+    play_off_round_results: [],
+    loses: 0,
+    loses_ot: 0,
+    wins: 0,
+    color: '#ffffff',
+    is_playoff: false,
+    status: '',
+    cur_status_length: 0,
+    chart_data: [],
+    game_results: [],
+    photos: [gbr_1, gbr_2, gbr_3],
+    facebook: 'https://www.facebook.com/greatbritainicehockey',
+    youtube: 'https://www.youtube.com/channel/UCuikKkZIwg0gVgBoHzRcZBQ',
+    instagram: 'https://www.instagram.com/teamgbicehockey',
+    x: 'https://twitter.com/IceHockeyUK',
+    threads: '',
+    tiktok: '',
+    snapchat: '',
+    linkedin: '',
+    website: 'http://www.icehockeyuk.co.uk/',
+    twitch: '',
+    points_percentage: 0,
     conference_id: '1',
+  },
+  {
+    abbreviation: 'ITA',
+    city: 'Rome',
+    country: 'Ita',
+    game_counter: 0,
+    goals_against: 0,
+    goals_diff: 0,
+    goals_for: 0,
+    id: '72b3e876-aa79-456e-a7c5-f834b8e69115',
+    logo: ita,
+    name: 'Italy',
+    points: 0,
+    rating: 74,
+    play_off_rank: 0,
+    play_off_round_wins: 0,
+    play_off_round_results: [],
+    loses: 0,
+    loses_ot: 0,
+    wins: 0,
+    color: '#0066bc',
+    is_playoff: false,
+    status: '',
+    cur_status_length: 0,
+    chart_data: [],
+    game_results: [],
+    photos: [ita_1, ita_2, ita_3],
+    facebook: 'https://www.facebook.com/fisg.it',
+    youtube: '',
+    instagram: 'https://www.instagram.com/federazione_sport_ghiaccio',
+    x: 'https://twitter.com/fisg_it',
+    threads: '',
+    tiktok: '',
+    snapchat: '',
+    linkedin: '',
+    website: 'http://www.fisg.it/',
+    twitch: '',
+    points_percentage: 0,
+    conference_id: '2',
   },
 ];
