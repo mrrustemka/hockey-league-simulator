@@ -34,7 +34,6 @@ function getOneRoundSchedule(teams: Teams[]): Schedule[] {
       });
     }
   }
-
   return shuffle(schedule);
 }
 
@@ -85,22 +84,22 @@ export function schedule(teams: Teams[], id: string) {
     const groupA = teams.filter((team: Teams) => team.conference_id === '1');
     const groupB = teams.filter((team: Teams) => team.conference_id === '2');
 
-    const combinedSchedule = getOneRoundSchedule(groupA).concat(
-      getOneRoundSchedule(groupB)
-    );
+    const combinedSchedule = [
+      ...getOneRoundSchedule(groupA),
+      ...getOneRoundSchedule(groupB),
+    ];
 
     scheduleList = shuffle(combinedSchedule);
   } else if (id === '3' || id === '4') {
     scheduleList = getNhlEhlSchedule(teams);
   } else {
-    scheduleList = getDoubleRoundSchedule(teams);
+    scheduleList = [
+      ...getDoubleRoundSchedule(teams),
+      ...getDoubleRoundSchedule(teams),
+    ];
   }
 
-  teamsList = [];
-
-  teams.forEach((team) => {
-    if (team) return teamsList.push(team.id);
-  });
+  teamsList = teams.filter(Boolean).map((team) => team.id);
 
   localStorage.setItem('teamsList', JSON.stringify(teams));
   localStorage.setItem('scheduleList', JSON.stringify(scheduleList));
