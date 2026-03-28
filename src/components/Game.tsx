@@ -863,7 +863,7 @@ function Game() {
                     disabled={!isSimulate}
                     size='large'
                   >
-                    Next Game
+                    Next
                   </Button>
                 </Col>
               </Row>
