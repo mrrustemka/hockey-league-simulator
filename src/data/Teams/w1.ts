@@ -1,11 +1,11 @@
 import { Teams } from '../types';
-import aus from '../../images/w1_aus.png';
-import aus_1 from '../../images/Gallery/W1/Aus/aus_1.webp';
-import aus_2 from '../../images/Gallery/W1/Aus/aus_2.webp';
-import aus_3 from '../../images/Gallery/W1/Aus/aus_3.webp';
-import aus_4 from '../../images/Gallery/W1/Aus/aus_4.webp';
-import aus_5 from '../../images/Gallery/W1/Aus/aus_5.webp';
-import aus_6 from '../../images/Gallery/W1/Aus/aus_6.webp';
+import aut from '../../images/w1_aut.png';
+import aut_1 from '../../images/Gallery/W1/Aut/aut_1.webp';
+import aut_2 from '../../images/Gallery/W1/Aut/aut_2.webp';
+import aut_3 from '../../images/Gallery/W1/Aut/aut_3.webp';
+import aut_4 from '../../images/Gallery/W1/Aut/aut_4.webp';
+import aut_5 from '../../images/Gallery/W1/Aut/aut_5.webp';
+import aut_6 from '../../images/Gallery/W1/Aut/aut_6.webp';
 import can from '../../images/w1_can.png';
 import can_1 from '../../images/Gallery/W1/Can/can_1.webp';
 import can_2 from '../../images/Gallery/W1/Can/can_2.webp';
@@ -524,13 +524,13 @@ export const w1: Teams[] = [
   {
     abbreviation: 'AUT',
     city: 'Vienna',
-    country: 'Aus',
+    country: 'Aut',
     game_counter: 0,
     goals_against: 0,
     goals_diff: 0,
     goals_for: 0,
     id: 'f9fe69b8-382c-4d05-9633-47bea0eda2a2',
-    logo: aus,
+    logo: aut,
     name: 'Austria',
     points: 0,
     rating: 71,
@@ -546,7 +546,7 @@ export const w1: Teams[] = [
     cur_status_length: 0,
     chart_data: [],
     game_results: [],
-    photos: [aus_1, aus_2, aus_3, aus_4, aus_5, aus_6],
+    photos: [aut_1, aut_2, aut_3, aut_4, aut_5, aut_6],
     facebook: 'https://www.facebook.com/OesterreichischerEishockeyverband',
     youtube: '',
     instagram: 'https://www.instagram.com/eishockey_oesterreich',

@@ -1,5 +1,5 @@
 import { Teams } from '../types';
-import aus from '../../images/w1_aus.png';
+import aut from '../../images/w1_aut.png';
 import avs from '../../images/ice_avs.png';
 import avs_1 from '../../images/Gallery/Ice/Avs/avs_1.webp';
 import avs_2 from '../../images/Gallery/Ice/Avs/avs_2.webp';
@@ -79,7 +79,7 @@ export const ice: Teams[] = [
     play_off_round_wins: 0,
     play_off_round_results: [],
     color: '#ffffff',
-    flag: aus,
+    flag: aut,
     is_playoff: false,
     status: '',
     cur_status_length: 0,
@@ -122,7 +122,7 @@ export const ice: Teams[] = [
     play_off_round_wins: 0,
     play_off_round_results: [],
     color: '#d6271f',
-    flag: aus,
+    flag: aut,
     is_playoff: false,
     status: '',
     cur_status_length: 0,
@@ -166,7 +166,7 @@ export const ice: Teams[] = [
     play_off_round_wins: 0,
     play_off_round_results: [],
     color: '#001489',
-    flag: aus,
+    flag: aut,
     is_playoff: false,
     status: '',
     cur_status_length: 0,
@@ -210,7 +210,7 @@ export const ice: Teams[] = [
     play_off_round_wins: 0,
     play_off_round_results: [],
     color: '#df003c',
-    flag: aus,
+    flag: aut,
     is_playoff: false,
     status: '',
     cur_status_length: 0,
@@ -254,7 +254,7 @@ export const ice: Teams[] = [
     play_off_round_wins: 0,
     play_off_round_results: [],
     color: '#000000',
-    flag: aus,
+    flag: aut,
     is_playoff: false,
     status: '',
     cur_status_length: 0,
@@ -473,7 +473,7 @@ export const ice: Teams[] = [
     play_off_round_wins: 0,
     play_off_round_results: [],
     color: '#ffffff',
-    flag: aus,
+    flag: aut,
     is_playoff: false,
     status: '',
     cur_status_length: 0,
@@ -517,7 +517,7 @@ export const ice: Teams[] = [
     play_off_round_wins: 0,
     play_off_round_results: [],
     color: '#ffed00',
-    flag: aus,
+    flag: aut,
     is_playoff: false,
     status: '',
     cur_status_length: 0,
@@ -561,7 +561,7 @@ export const ice: Teams[] = [
     play_off_round_wins: 0,
     play_off_round_results: [],
     color: '#b96535',
-    flag: aus,
+    flag: aut,
     is_playoff: false,
     status: '',
     cur_status_length: 0,
