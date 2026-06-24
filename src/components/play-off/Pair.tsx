@@ -23,7 +23,7 @@ function Pair({
 }: PairProps) {
   const leagueId: string = JSON.parse(localStorage.getItem('leagueId') || '');
   const [games, setGames] = useState(
-    leagueId === '1' || leagueId === '2'
+    leagueId === '1' || leagueId === '2' || leagueId === '11'
       ? [
         {
           id: `${teams[0].abbreviation}-${teams[1].abbreviation}-1`,

@@ -18,6 +18,7 @@ import sml_logo from '../images/sml.png';
 import w1_cup from '../images/w1_cup.png';
 import world_1 from '../images/w1.png';
 import world_2 from '../images/w2.png';
+import world_3 from '../images/w3.png';
 import { del } from './Teams/del';
 import { ehl } from './Teams/ehl';
 import { elh } from './Teams/elh';
@@ -28,11 +29,12 @@ import { shl } from './Teams/shl';
 import { sml } from './Teams/sml';
 import { w1 } from './Teams/w1';
 import { w2 } from './Teams/w2';
+import { w3 } from './Teams/w3';
 
 export const champs: League[] = [
   {
     id: '1',
-    name: 'Hockey World Championship',
+    name: 'Men\'s World Championship',
     description:
       "The World Hockey Championship is an exciting global event where the best ice hockey teams from across the world come together. It's not just about fast-paced action and sharp shooting — it's about national pride, teamwork, and intense rivalries. Fans from all walks of life come together to support their countries, creating a colorful atmosphere both in the arenas and at home.",
     image: world_1,
@@ -47,7 +49,7 @@ export const champs: League[] = [
   },
   {
     id: '2',
-    name: 'Hockey World Championship Division I',
+    name: 'Men\'s World Championship Division I',
     description: 'Second level of World Championship.',
     image: world_2,
     teams: w2,
@@ -166,5 +168,20 @@ export const champs: League[] = [
     teams_count: 13,
     cup: ice_cup,
     playoff_wins_required_count: 4,
+  },
+  {
+    id: '11',
+    name: 'Women\'s World Championship',
+    description:
+      "Women's World Hockey Championship.",
+    image: world_3,
+    teams: w3,
+    teams_count: 10,
+    cup: w1_cup,
+    conferences: [
+      { conference_id: '1', name: 'Group A' },
+      { conference_id: '2', name: 'Group B' },
+    ],
+    playoff_wins_required_count: 1,
   },
 ];

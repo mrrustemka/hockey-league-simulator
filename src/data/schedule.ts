@@ -80,7 +80,7 @@ export function schedule(teams: Teams[], id: string) {
   scheduleList = [];
   gameIdCounter = 0;
 
-  if (id === '1' || id === '2') {
+  if (id === '1' || id === '2' || id === '11') {
     const groupA = teams.filter((team: Teams) => team.conference_id === '1');
     const groupB = teams.filter((team: Teams) => team.conference_id === '2');
 

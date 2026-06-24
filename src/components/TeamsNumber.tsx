@@ -19,7 +19,7 @@ function TeamsNumber({ league }: any) {
 
   if (champ.id === '3' || champ.id === '4') {
     minTeams = 16;
-  } else if (champ.id === '1' || champ.id === '2') {
+  } else if (champ.id === '1' || champ.id === '2' || champ.id === '11') {
     minTeams = 8;
   }
 

@@ -318,7 +318,8 @@ function Game() {
         leagueId === '1' ||
         leagueId === '2' ||
         leagueId === '3' ||
-        leagueId === '4'
+        leagueId === '4' ||
+        leagueId === '11'
       ) {
         // TO DO: Fix clinched teams with two conferences
       } else {
@@ -333,7 +334,7 @@ function Game() {
       //   return team;
       // });
     } else {
-      if (leagueId === '1' || leagueId === '2') {
+      if (leagueId === '1' || leagueId === '2' || leagueId === '11') {
         // TO DO: Fix clinched teams in W1 & W2
         // const c1: Teams[] = getClinchedTeams(
         //   sortedTeams.filter((team) => team.conference_id === '1'),
@@ -450,7 +451,7 @@ function Game() {
         'playoffList',
         JSON.stringify(teamsSort([...d1, ...d2, ...d3, ...d4, ...wc1, ...wc2]))
       );
-    } else if (leagueId === '1' || leagueId === '2') {
+    } else if (leagueId === '1' || leagueId === '2' || leagueId === '11') {
       const c1: Teams[] = teamsSort(
         teamsUpdate.filter((team) => team.conference_id === '1')
       ).slice(0, 4);
@@ -646,7 +647,7 @@ function Game() {
                 />
                 <Legend />
               </>
-            ) : (leagueId === '1' || leagueId === '2') &&
+            ) : (leagueId === '1' || leagueId === '2' || leagueId === '11') &&
               League?.conferences ? (
               <>
                 <Title
@@ -1048,7 +1049,7 @@ function Game() {
                 />
                 <Legend />
               </>
-            ) : (leagueId === '1' || leagueId === '2') &&
+            ) : (leagueId === '1' || leagueId === '2' || leagueId === '11') &&
               League?.conferences ? (
               <>
                 <Title
