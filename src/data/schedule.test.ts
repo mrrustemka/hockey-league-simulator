@@ -6,10 +6,11 @@ describe('schedule generation', () => {
         localStorage.clear();
     });
 
-    const createMockTeam = (id: string, conference_id: string = ''): Teams => {
+    const createMockTeam = (id: string, conference_id: string = '', division_id: string = ''): Teams => {
         return {
             id,
             conference_id,
+            division_id,
             abbreviation: id,
             city: 'Test City',
             country: 'Test Country',
@@ -45,22 +46,19 @@ describe('schedule generation', () => {
             website: '',
             twitch: '',
             points_percentage: 0,
-        } as Teams; // Use type assertion since we only care about id and conference_id for schedule generation
+        } as Teams;
     };
 
+    // Use unique divisions for the 4 mock teams so they don't accidentally play division games against each other
     const teams: Teams[] = [
-        createMockTeam('t1', '1'),
-        createMockTeam('t2', '1'),
-        createMockTeam('t3', '2'),
-        createMockTeam('t4', '2'),
+        createMockTeam('t1', '1', '1'),
+        createMockTeam('t2', '1', '2'),
+        createMockTeam('t3', '2', '3'),
+        createMockTeam('t4', '2', '4'),
     ];
 
     it('should generate a one-round schedule for conferences when id is "1"', () => {
         schedule(teams, '1');
-
-        // Group A (conference_id = '1'): t1, t2 -> 1 game
-        // Group B (conference_id = '2'): t3, t4 -> 1 game
-        // Total games = 1 + 1 = 2 games
         expect(scheduleList.length).toBe(2);
         expect(localStorage.getItem('gameIndex')).toBe('0');
         expect(JSON.parse(localStorage.getItem('teamsList') as string)).toEqual(teams);
@@ -73,23 +71,39 @@ describe('schedule generation', () => {
     });
 
     it('should generate an NHL/EHL schedule when id is "3" or "4"', () => {
-        schedule(teams, '3');
+        // Generate a 32-team league (2 conferences, 4 divisions) to test the 84 games per team requirement
+        const nhlTeams: Teams[] = [];
+        let idCounter = 1;
+        for (const conf of ['1', '2']) {
+            const confDivisions = conf === '1' ? ['1', '2'] : ['3', '4'];
+            for (const div of confDivisions) {
+                for (let i = 0; i < 8; i++) {
+                    nhlTeams.push(createMockTeam(`team${idCounter++}`, conf, div));
+                }
+            }
+        }
 
-        // N=4 teams.
-        // Inter-conference double round-robin: 4 * 3 = 12 games.
-        // Plus one-round within same conference:
-        // Conf 1: t1, t2 -> 1 game
-        // Conf 2: t3, t4 -> 1 game
-        // Total games = 12 + 1 + 1 = 14 games
-        expect(scheduleList.length).toBe(14);
+        schedule(nhlTeams, '3');
+
+        // 32 teams playing 84 games each means 1344 total games (32 * 84 / 2)
+        expect(scheduleList.length).toBe(1344);
+
+        // Verify each team plays exactly 84 games
+        const gamesPerTeam: Record<string, number> = {};
+        nhlTeams.forEach(t => gamesPerTeam[t.id] = 0);
+        
+        scheduleList.forEach(game => {
+            gamesPerTeam[game.home]++;
+            gamesPerTeam[game.away]++;
+        });
+
+        Object.values(gamesPerTeam).forEach(count => {
+            expect(count).toBe(84);
+        });
     });
 
     it('should generate a double double-round schedule for other ids', () => {
         schedule(teams, 'default');
-
-        // N=4 teams.
-        // Double round-robin: 4 * 3 = 12 games.
-        // But it concats two of such schedules: 12 + 12 = 24 games.
         expect(scheduleList.length).toBe(24);
     });
 

@@ -41,25 +41,23 @@ function getNhlEhlSchedule(teams: Teams[]): Schedule[] {
   const schedule: Schedule[] = [];
 
   for (let i = 0; i < teams.length; i++) {
-    for (let j = 0; j < teams.length; j++) {
-      if (i !== j) {
-        schedule.push({
-          id: String(++gameIdCounter),
-          home: teams[i].id,
-          away: teams[j].id,
-        });
-      }
-    }
-  }
-
-  for (let i = 0; i < teams.length; i++) {
     for (let j = i + 1; j < teams.length; j++) {
-      if (teams[i].conference_id === teams[j].conference_id) {
-        schedule.push({
-          id: String(++gameIdCounter),
-          home: teams[i].id,
-          away: teams[j].id,
-        });
+      const teamA = teams[i];
+      const teamB = teams[j];
+
+      const addGame = (home: string, away: string) => {
+        schedule.push({ id: String(++gameIdCounter), home, away });
+      };
+
+      addGame(teamA.id, teamB.id);
+      addGame(teamB.id, teamA.id);
+
+      if (teamA.conference_id === teamB.conference_id) {
+        addGame(teamA.id, teamB.id);
+      }
+
+      if (teamA.division_id === teamB.division_id) {
+        addGame(teamA.id, teamB.id);
       }
     }
   }
