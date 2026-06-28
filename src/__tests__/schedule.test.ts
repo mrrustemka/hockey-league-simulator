@@ -1,5 +1,5 @@
-import { schedule, scheduleList } from './schedule';
-import { Teams } from './types';
+import { schedule, scheduleList } from '../data/schedule';
+import { Teams } from '../data/types';
 
 describe('schedule generation', () => {
     beforeEach(() => {
@@ -91,7 +91,7 @@ describe('schedule generation', () => {
         // Verify each team plays exactly 84 games
         const gamesPerTeam: Record<string, number> = {};
         nhlTeams.forEach(t => gamesPerTeam[t.id] = 0);
-        
+
         scheduleList.forEach(game => {
             gamesPerTeam[game.home]++;
             gamesPerTeam[game.away]++;
