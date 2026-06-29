@@ -1,111 +1,77 @@
 import AOS from 'aos';
 import { Card, Typography } from 'antd';
-import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { League as TLeague } from '../data/types';
+import ActiveLeague from './ActiveLeague';
 import TeamsNumber from './TeamsNumber';
 import 'aos/dist/aos.css';
 import '../styles/League.css';
 
 const { Title } = Typography;
 
-function League(props: { league: TLeague }) {
-  const [refresh, setRefresh] = useState(false);
-  const allTeams = JSON.parse(localStorage.getItem('teamsList') || '[]');
+/** localStorage keys used by the league flow. */
+const LS_LEAGUE_ID = 'leagueId';
+const LS_SCHEDULE = 'scheduleList';
+const LS_TEAMS = 'teamsList';
+const LS_FAVORITES = 'favoriteTeams';
 
-  function startNew() {
-    localStorage.removeItem('leagueId');
-    localStorage.removeItem('scheduleList');
-    localStorage.removeItem('teamsList');
-    localStorage.removeItem('favoriteTeams');
-    setRefresh(!refresh);
-  }
+interface LeagueProps {
+  league: TLeague;
+}
+
+function League({ league }: LeagueProps) {
+  // Increment this counter to force a re-render after clearing localStorage.
+  const [, setResetCount] = useState(0);
 
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
 
-  if (
-    localStorage.getItem('leagueId') !== null &&
-    JSON.parse(localStorage.getItem('leagueId') || '') === props.league.id
-  ) {
-    return (
-      <article aria-label={props.league.name}>
-        <Card
-          key={props.league.id}
-          className='start__card'
-          cover={
-            <img
-              alt={props.league.name + ' league'}
-              src={props.league.image}
-              className='start__card-cover'
-              loading='lazy'
-            />
-          }
-          data-aos={
-            Number(props.league.id) % 2 === 0 ? 'fade-left' : 'fade-right'
-          }
-        >
-          <Title level={5} className='start__card-title'>
-            {props.league.description}
-          </Title>
-          <div className='start__teams'>
-            {allTeams.map(
-              (team: {
-                id: number;
-                logo: string | undefined;
-                name: string | undefined;
-              }) => (
-                <div key={team.id} className='start__team start__team--active'>
-                  <img
-                    src={team.logo}
-                    alt={team.name}
-                    className='start__team-logo'
-                    loading='lazy'
-                  />
-                </div>
-              )
-            )}
-          </div>
-          <Link className='start__link start__link--active' to='season'>
-            Continue
-          </Link>
-          <button
-            className='start__card__button pulse'
-            onClick={() => startNew()}
-          >
-            Start New
-          </button>
-        </Card>
-      </article>
-    );
-  } else {
-    return (
-      <article aria-label={props.league.name}>
-        <Card
-          key={props.league.id}
-          className='start__card'
-          cover={
-            <img
-              alt={props.league.name + ' league'}
-              src={props.league.image}
-              className='start__card-cover'
-              loading='lazy'
-            />
-          }
-          data-aos={
-            Number(props.league.id) % 2 === 0 ? 'fade-left' : 'fade-right'
-          }
-        >
-          <Title level={5} className='start__card-title'>
-            {props.league.description}
-          </Title>
-          <TeamsNumber league={props.league} />
-        </Card>
-      </article>
-    );
-  }
+  const handleStartNew = useCallback(() => {
+    localStorage.removeItem(LS_LEAGUE_ID);
+    localStorage.removeItem(LS_SCHEDULE);
+    localStorage.removeItem(LS_TEAMS);
+    localStorage.removeItem(LS_FAVORITES);
+    setResetCount((prev) => prev + 1);
+  }, []);
+
+  const storedLeagueId = localStorage.getItem(LS_LEAGUE_ID);
+  const isActiveLeague =
+    storedLeagueId !== null &&
+    JSON.parse(storedLeagueId) === league.id;
+
+  const aosAnimation = Number(league.id) % 2 === 0 ? 'fade-left' : 'fade-right';
+
+  const cardCover = (
+    <img
+      alt={`${league.name} league`}
+      src={league.image}
+      className='start__card-cover'
+      loading='lazy'
+    />
+  );
+
+  return (
+    <article aria-label={league.name}>
+      <Card
+        key={league.id}
+        className='start__card'
+        cover={cardCover}
+        data-aos={aosAnimation}
+      >
+        <Title level={5} className='start__card-title'>
+          {league.description}
+        </Title>
+
+        {isActiveLeague ? (
+          <ActiveLeague onStartNew={handleStartNew} />
+        ) : (
+          <TeamsNumber league={league} />
+        )}
+      </Card>
+    </article>
+  );
 }
 
 export default League;
