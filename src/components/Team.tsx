@@ -11,13 +11,67 @@ import '../styles/Team.css';
 
 const { Title } = Typography;
 
+// Constants
+
+// Leagues that do not have arena information.
+const LEAGUES_WITHOUT_ARENA = new Set(['1', '2', '11']);
+
+// Ordered stat rows shown on the team detail panel.
+const STAT_ROWS: Array<{ label: string; key: keyof Teams }> = [
+  { label: 'Points', key: 'points' },
+  { label: 'Games Played', key: 'game_counter' },
+  { label: 'Wins', key: 'wins' },
+  { label: 'Losses', key: 'loses' },
+  { label: 'Losses OT', key: 'loses_ot' },
+  { label: 'Goals For', key: 'goals_for' },
+  { label: 'Goals Against', key: 'goals_against' },
+  { label: 'Goals Diff', key: 'goals_diff' },
+  { label: 'Rating', key: 'rating' },
+];
+
+// Social-media link definitions.
+const SOCIAL_LINKS: Array<{ key: keyof Teams; label: string; icon: string }> = [
+  { key: 'website', label: 'Website', icon: 'fa6-brands:readme' },
+  { key: 'facebook', label: 'Facebook', icon: 'fa6-brands:facebook' },
+  { key: 'youtube', label: 'YouTube', icon: 'simple-icons:youtube' },
+  { key: 'instagram', label: 'Instagram', icon: 'fa6-brands:instagram' },
+  { key: 'x', label: 'X (Twitter)', icon: 'fa6-brands:x-twitter' },
+  { key: 'threads', label: 'Threads', icon: 'simple-icons:threads' },
+  { key: 'tiktok', label: 'TikTok', icon: 'fa6-brands:tiktok' },
+  { key: 'snapchat', label: 'Snapchat', icon: 'fa6-brands:snapchat' },
+  { key: 'linkedin', label: 'LinkedIn', icon: 'fa6-brands:linkedin' },
+  { key: 'twitch', label: 'Twitch', icon: 'fa6-brands:twitch' },
+];
+
+// Helpers
+
+// Returns the text color appropriate for a given team background color.
+function getTextColor(color: string): string {
+  return whiteTeams.includes(color) ? '#fff' : '#000000';
+}
+
+// Builds a chart label string for a single game result.
+function buildChartLabel(game: GameResult, teamId: string, teams: Teams[]): string {
+  const { home, away, home_goals, away_goals, overtime, home_status, away_status } = game;
+  const isAwayTeam = away === teamId;
+  const opponentId = isAwayTeam ? home : away;
+  const teamGoals = isAwayTeam ? away_goals : home_goals;
+  const opponentGoals = isAwayTeam ? home_goals : away_goals;
+  const result = teamGoals > opponentGoals ? ' W ' : ' L ';
+  const opponentAbbr = teams.find((t) => t.id === opponentId)?.abbreviation ?? opponentId;
+  const status = isAwayTeam ? home_status : away_status;
+
+  return `${opponentAbbr}${result}${teamGoals} - ${opponentGoals} ${overtime} ${status}`;
+}
+
+// Component
+
 function Team() {
   const { teamId } = useParams();
   const navigate = useNavigate();
-  const teams = JSON.parse(localStorage.getItem('teamsList') || '[]');
-  const team: Teams | undefined = teams.find(
-    (team: Teams) => team.id === String(teamId)
-  );
+
+  const teams: Teams[] = JSON.parse(localStorage.getItem('teamsList') || '[]');
+  const team: Teams | undefined = teams.find((t) => t.id === String(teamId));
 
   useEffect(() => {
     if (team) {
@@ -29,299 +83,112 @@ function Team() {
     return <div className='team__not-found'>Team not found</div>;
   }
 
+  const textColor = getTextColor(team.color);
+  const colorStyle = { backgroundColor: team.color, color: textColor };
+  const detailTitleStyle = { ...colorStyle, borderColor: textColor };
+
   const chartData = team.chart_data || [];
-  const chartLabels: string[] =
-    team.game_results.map((game: GameResult) => {
-      const {
-        home,
-        away,
-        home_goals,
-        away_goals,
-        overtime,
-        home_status,
-        away_status
-      } = game;
+  const chartLabels = team.game_results.map((game) =>
+    buildChartLabel(game, team.id, teams)
+  );
 
-      const isAwayTeam = away === team.id;
-      const opponentId = isAwayTeam ? home : away;
-      const teamGoals = isAwayTeam ? away_goals : home_goals;
-      const opponentGoals = isAwayTeam ? home_goals : away_goals;
-      const result = teamGoals > opponentGoals ? ' W ' : ' L ';
-      const opponentAbbr =
-        teams.find((t: Teams) => t.id === opponentId)?.abbreviation ||
-        opponentId;
-      const status = isAwayTeam ? home_status : away_status;
-
-      return `${opponentAbbr}${result}${teamGoals} - ${opponentGoals} ${overtime} ${status}`;
-    }) || [];
-
-  const color = team.color || '';
-  const leagueId: string = JSON.parse(localStorage.getItem('leagueId') || '');
+  const leagueId: string = JSON.parse(localStorage.getItem('leagueId') || '""');
   const playOffTeams: number = JSON.parse(
     localStorage.getItem('playoffList') || '[]'
   ).length;
-  const photos: string[] = team.photos || [];
+
+  const hasArena = !LEAGUES_WITHOUT_ARENA.has(leagueId);
 
   return (
     <div className='team'>
       <Header id={leagueId} />
-      <div
-        className='team__subheader'
-        style={{
-          backgroundColor: team.color,
-          color: whiteTeams.includes(team.color) ? '#fff' : '#000000'
-        }}
-      >
+
+      {/* Subheader */}
+      <div className='team__subheader' style={colorStyle}>
         <button
           className='team__button team__button--back'
           onClick={() => navigate(-1)}
         >
           Back to the Season
         </button>
-        {team.is_playoff ? (
-          <div>
+
+        <div>
+          {team.is_playoff && (
             <div className='team__name--is_playoff'>x</div>
-            <Title
-              level={1}
-              className='team__name'
-              style={{
-                color: whiteTeams.includes(team.color) ? '#fff' : '#000000'
-              }}
-            >
-              {team.name + ' ' + team.status}
-            </Title>
-          </div>
-        ) : (
+          )}
           <Title
             level={1}
             className='team__name'
-            style={{
-              color: whiteTeams.includes(team.color) ? '#fff' : '#000000'
-            }}
+            style={{ color: textColor }}
           >
-            {team.name + ' ' + team.status}
+            {`${team.name} ${team.status}`}
           </Title>
-        )}
+        </div>
 
         <img
           className='team__logo'
           src={team.logo}
-          alt={team.name + ' logo'}
+          alt={`${team.name} logo`}
           loading='lazy'
         />
       </div>
-      <section className='team__details' aria-label='Team statistics'
-        style={{
-          backgroundColor: team.color,
-          color: whiteTeams.includes(team.color) ? '#fff' : '#000000'
-        }}
-      >
-        <Title
-          level={3}
-          className='team__detail-title'
-          style={{
-            backgroundColor: team.color,
-            color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
-            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000'
-          }}
-        >
-          Points: {team.points}
-        </Title>
-        <Title
-          level={3}
-          className='team__detail-title'
-          style={{
-            backgroundColor: team.color,
-            color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
-            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000'
-          }}
-        >
-          Games Played: {team.game_counter}
-        </Title>
-        <Title
-          level={3}
-          className='team__detail-title'
-          style={{
-            backgroundColor: team.color,
-            color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
-            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000'
-          }}
-        >
-          Wins: {team.wins}
-        </Title>
-        <Title
-          level={3}
-          className='team__detail-title'
-          style={{
-            backgroundColor: team.color,
-            color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
-            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000'
-          }}
-        >
-          Losses: {team.loses}
-        </Title>
-        <Title
-          level={3}
-          className='team__detail-title'
-          style={{
-            backgroundColor: team.color,
-            color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
-            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000'
-          }}
-        >
-          Losses OT: {team.loses_ot}
-        </Title>
-        <Title
-          level={3}
-          className='team__detail-title'
-          style={{
-            backgroundColor: team.color,
-            color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
-            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000'
-          }}
-        >
-          Goals For: {team.goals_for}
-        </Title>
-        <Title
-          level={3}
-          className='team__detail-title'
-          style={{
-            backgroundColor: team.color,
-            color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
-            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000'
-          }}
-        >
-          Goals Against: {team.goals_against}
-        </Title>
-        <Title
-          level={3}
-          className='team__detail-title'
-          style={{
-            backgroundColor: team.color,
-            color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
-            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000'
-          }}
-        >
-          Goals Diff: {team.goals_diff}
-        </Title>
-        <Title
-          level={3}
-          className='team__detail-title'
-          style={{
-            backgroundColor: team.color,
-            color: whiteTeams.includes(team.color) ? '#fff' : '#000000',
-            borderColor: whiteTeams.includes(team.color) ? '#fff' : '#000000'
-          }}
-        >
-          Rating: {team.rating}
-        </Title>
+
+      {/* Stats */}
+      <section className='team__details' aria-label='Team statistics' style={colorStyle}>
+        {STAT_ROWS.map(({ label, key }) => (
+          <Title
+            key={key}
+            level={3}
+            className='team__detail-title'
+            style={detailTitleStyle}
+          >
+            {label}: {team[key] as number}
+          </Title>
+        ))}
       </section>
-      <Gallery photos={photos} team={team.name} />
+
+      <Gallery photos={team.photos || []} team={team.name} />
+
       <Chart
         rank={chartData}
         labels={chartLabels}
-        color={color}
+        color={team.color}
         playOff={playOffTeams}
       />
-      {leagueId !== '1' && leagueId !== '2' ? (
-        <>
-          <section aria-label='Arena information'>
-            <Title level={2} className='team__header'>
-              {team.city + ' ' + team.name + ' play at ' + team.arena_name}{' '}
-            </Title>
-            <Image
-              className='team__arena'
-              width='auto'
-              src={team.arena_photo}
-              preview={false}
-              loading='lazy'
-            />
-            <Title level={5} className='team__description'>
-              {team.arena_description}
-            </Title>
-          </section>
-        </>
-      ) : (
-        <></>
+
+      {/* Arena */}
+      {hasArena && (
+        <section aria-label='Arena information'>
+          <Title level={2} className='team__header'>
+            {`${team.city} ${team.name} play at ${team.arena_name}`}
+          </Title>
+          <Image
+            className='team__arena'
+            width='auto'
+            src={team.arena_photo}
+            preview={false}
+            loading='lazy'
+          />
+          <Title level={5} className='team__description'>
+            {team.arena_description}
+          </Title>
+        </section>
       )}
+
+      {/* Social links */}
       <nav
         className='team__nets'
         aria-label='Social media links'
-        style={{
-          backgroundColor: team.color,
-          color: whiteTeams.includes(team.color) ? '#fff' : '#000000'
-        }}
+        style={colorStyle}
       >
-        {team.website ? (
-          <a href={team.website} aria-label='Website'>
-            <Icon icon='fa6-brands:readme' />
-          </a>
-        ) : (
-          <></>
-        )}
-        {team.facebook ? (
-          <a href={team.facebook} aria-label='Facebook'>
-            <Icon icon='fa6-brands:facebook' />
-          </a>
-        ) : (
-          <></>
-        )}
-        {team.youtube ? (
-          <a href={team.youtube} aria-label='YouTube'>
-            <Icon icon='simple-icons:youtube' />
-          </a>
-        ) : (
-          <></>
-        )}
-        {team.instagram ? (
-          <a href={team.instagram} aria-label='Instagram'>
-            <Icon icon='fa6-brands:instagram' />
-          </a>
-        ) : (
-          <></>
-        )}
-        {team.x ? (
-          <a href={team.x} aria-label='X (Twitter)'>
-            <Icon icon='fa6-brands:x-twitter' />
-          </a>
-        ) : (
-          <></>
-        )}
-        {team.threads ? (
-          <a href={team.threads} aria-label='Threads'>
-            <Icon icon='simple-icons:threads' />
-          </a>
-        ) : (
-          <></>
-        )}
-        {team.tiktok ? (
-          <a href={team.tiktok} aria-label='TikTok'>
-            <Icon icon='fa6-brands:tiktok' />
-          </a>
-        ) : (
-          <></>
-        )}
-        {team.snapchat ? (
-          <a href={team.snapchat} aria-label='Snapchat'>
-            <Icon icon='fa6-brands:snapchat' />
-          </a>
-        ) : (
-          <></>
-        )}
-        {team.linkedin ? (
-          <a href={team.linkedin} aria-label='LinkedIn'>
-            <Icon icon='fa6-brands:linkedin' />
-          </a>
-        ) : (
-          <></>
-        )}
-        {team.twitch ? (
-          <a href={team.twitch} aria-label='Twitch'>
-            <Icon icon='fa6-brands:twitch' />
-          </a>
-        ) : (
-          <></>
-        )}
+        {SOCIAL_LINKS.map(({ key, label, icon }) => {
+          const href = team[key] as string | undefined;
+          return href ? (
+            <a key={key} href={href} aria-label={label}>
+              <Icon icon={icon} />
+            </a>
+          ) : null;
+        })}
       </nav>
     </div>
   );
