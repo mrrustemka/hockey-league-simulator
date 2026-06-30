@@ -1,0 +1,92 @@
+:root {
+  --table-column-font-size: 20px;
+  --table-column-border-radius: 100%;
+  --table-column-name-height: auto;
+  --table-column-name-width: 18px;
+  --table-column-playoff-bg: #dddddd;
+  --table-column-playoff-color: #121212;
+  --table-column-playoff-font-weight: 500;
+  --table-column-playoff-padding: 1px 0 2px;
+  --table-column-playoff-margin: 2px 4px;
+  --table-column-games-high-bg: #b8dbf3;
+  --table-column-games-medium-bg: #d0e6f57b;
+  --table-column-games-low-bg: #d0e6f527;
+  --table-column-name-color: #000000;
+}
+
+/* Column-level alignment — applied via className on Table.Column */
+
+.table__column .table__column--name {
+  text-align: left !important;
+}
+
+.table__column--rating,
+.table__column--city,
+.table__column--games,
+.table__column--wins,
+.table__column--loses,
+.table__column--loses-ot,
+.table__column--points,
+.table__column--diff,
+.table__column--points_percentage {
+  text-align: center;
+}
+
+.table__column--games,
+.table__column--wins,
+.table__column--loses,
+.table__column--loses-ot,
+.table__column--points,
+.table__column--diff,
+.table__column--points_percentage {
+  color: var(--table-column-name-color);
+}
+
+.table__column--loses,
+.table__column--points_percentage {
+  background-color: #fff;
+}
+
+/* Rank column */
+
+.table__column-rank {
+  text-align: center;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+.table-slide-in-left {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: tableSlideInLeft 0.5s forwards;
+}
+
+/* Favourite row highlight */
+
+.favorite {
+  background-color: #fafafa;
+}
+
+/* Adaptive Table — hide columns on smaller screens */
+
+@media (width <= 650px) {
+  .table__column--city {
+    display: none;
+  }
+}
+
+@media (width <= 550px) {
+  .table__column--diff {
+    display: none;
+  }
+}
+
+@media (width <= 500px) {
+  .table__column--wins,
+  .table__column--loses,
+  .table__column--loses-ot {
+    display: none;
+  }
+}

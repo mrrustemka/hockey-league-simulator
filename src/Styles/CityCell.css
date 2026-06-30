@@ -1,0 +1,11 @@
+/* City name and flag inline alignment */
+
+.table__column-city,
+.table__column-flag {
+  display: inline;
+  vertical-align: middle;
+}
+
+.table__column-flag {
+  border-radius: var(--table-column-border-radius);
+}

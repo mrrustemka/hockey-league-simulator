@@ -1,0 +1,13 @@
+/* Heat-map background colours for games-played cell */
+
+.table__column-games--high {
+  background-color: var(--table-column-games-high-bg);
+}
+
+.table__column-games--medium {
+  background-color: var(--table-column-games-medium-bg);
+}
+
+.table__column-games--low {
+  background-color: var(--table-column-games-low-bg);
+}

@@ -1,0 +1,9 @@
+/* Goal differential colouring */
+
+.table__column-diff--positive {
+  color: rgb(75, 148, 72);
+}
+
+.table__column-diff--negative {
+  color: rgb(208, 2, 27);
+}

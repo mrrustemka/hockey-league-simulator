@@ -1,0 +1,47 @@
+/* Team name link + logo inline alignment */
+
+.table__team-logo,
+.table__column-name {
+  display: inline;
+  vertical-align: middle;
+}
+
+.table__team-logo {
+  border-radius: var(--table-column-border-radius);
+}
+
+.table__column-name {
+  font-size: var(--table-column-font-size);
+  color: var(--table-column-name-color);
+}
+
+/* Playoff badge */
+
+.table__column-name--is_playoff {
+  display: inline-block;
+  text-align: center;
+  line-height: 12px;
+  font-weight: var(--table-column-playoff-font-weight);
+  letter-spacing: 0px;
+  width: var(--table-column-name-width);
+  height: var(--table-column-name-height);
+  border-radius: 4px;
+  color: var(--table-column-playoff-color);
+  background: var(--table-column-playoff-bg);
+  margin: var(--table-column-playoff-margin);
+  padding: var(--table-column-playoff-padding);
+}
+
+/* Team name link interactions */
+
+@media (hover: hover) {
+  a.table__column-name:hover {
+    text-decoration: underline;
+    color: var(--table-column-name-color);
+  }
+}
+
+a.table__column-name:focus-visible {
+  text-decoration: underline;
+  color: var(--table-column-name-color);
+}
