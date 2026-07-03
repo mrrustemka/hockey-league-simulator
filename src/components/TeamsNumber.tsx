@@ -1,6 +1,6 @@
+import { useMemo, useState } from 'react';
 import { Input, Typography, Select } from 'antd';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import { League as TLeague } from '../data/types';
 import { schedule } from '../data/schedule';
 import '../styles/TeamsNumber.css';
@@ -8,82 +8,81 @@ import '../styles/TeamsNumber.css';
 const { Title } = Typography;
 const { Option } = Select;
 
-function TeamsNumber({ league }: any) {
-  const [champ, setChamp] = useState<TLeague>(league);
-  let minTeams: number = 2;
-  const [selectedTeams, setSelectedTeams] = useState<string[]>([]);
+interface TeamsNumberProps {
+  league: TLeague;
+}
+
+function TeamsNumber({ league }: TeamsNumberProps) {
+  const [teamsCount, setTeamsCount] = useState<number>(league.teams_count);
+  const [selectedTeams, setSelectedTeams] = useState<string[]>(() => {
+    try {
+      const saved = localStorage.getItem('favoriteTeams');
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
+  });
+
+  const minTeams = useMemo(() => {
+    if (league.id === '3' || league.id === '4') return 16;
+    if (league.id === '1' || league.id === '2' || league.id === '11') return 8;
+    return 2;
+  }, [league.id]);
+
+  const playoffCount = useMemo(() => {
+    if (teamsCount > 16) return 16;
+    if (teamsCount > 8) return 8;
+    if (teamsCount > 4) return 4;
+    return 2;
+  }, [teamsCount]);
+
+  const isValid = teamsCount >= minTeams && teamsCount <= league.teams.length;
+
   const handleChange = (value: string[]) => {
     setSelectedTeams(value);
     localStorage.setItem('favoriteTeams', JSON.stringify(value));
   };
 
-  if (champ.id === '3' || champ.id === '4') {
-    minTeams = 16;
-  } else if (champ.id === '1' || champ.id === '2' || champ.id === '11') {
-    minTeams = 8;
-  }
-
-  function updateTeamsNum(value: number): void {
-    const curTeams = champ.teams.slice(0, value);
+  const updateTeamsNum = (value: number): void => {
+    const safeValue = isNaN(value) ? 0 : value;
+    const curTeams = league.teams.slice(0, safeValue);
     const curTeamIds = new Set(curTeams.map((team) => team.id));
     const curSelectedTeams = selectedTeams.filter((id) => curTeamIds.has(id));
 
     setSelectedTeams(curSelectedTeams);
     localStorage.setItem('favoriteTeams', JSON.stringify(curSelectedTeams));
+    setTeamsCount(safeValue);
+  };
 
-    setChamp((prev) => ({
-      ...prev,
-      teams_count: value
-    }));
-  }
-
-  function start() {
-    const isValid =
-      champ.teams_count >= minTeams && champ.teams_count <= league.teams.length;
-
+  const start = (): void => {
     if (!isValid) return;
 
-    schedule(league.teams.slice(0, champ.teams_count), league.id);
+    schedule(league.teams.slice(0, teamsCount), league.id);
     localStorage.setItem('leagueId', JSON.stringify(league.id));
-  }
+  };
 
   return (
     <>
       <div className='start__teams'>
-        {champ.teams.map(
-          (
-            team: {
-              id: number | string;
-              logo: string | undefined;
-              name: string | undefined;
-            },
-            index: number
-          ) => (
-            <div
-              key={team.id}
-              className={`start__team ${index < champ.teams_count ? 'start__team--active' : ''
-                }`}
-            >
-              <img
-                src={team.logo}
-                alt={team.name}
-                className='start__team-logo'
-                loading='lazy'
-              />
-            </div>
-          )
-        )}
+        {league.teams.map((team, index) => (
+          <div
+            key={team.id}
+            className={`start__team ${
+              index < teamsCount ? 'start__team--active' : ''
+            }`}
+          >
+            <img
+              src={team.logo}
+              alt={`${team.name} Logo`}
+              className='start__team-logo'
+              loading='lazy'
+            />
+          </div>
+        ))}
       </div>
       <div className='start__actions'>
         <Title level={5} className='start__actions-title--play-off-count'>
-          {champ.teams_count > 16
-            ? 16
-            : champ.teams_count > 8
-              ? 8
-              : champ.teams_count > 4
-                ? 4
-                : 2}{' '}
-          teams will advance to the Play-Off
+          {playoffCount} teams will advance to the Play-Off
         </Title>
         <Title level={5} className='start__actions-title--selection'>
           Select the number of teams
@@ -92,23 +91,22 @@ function TeamsNumber({ league }: any) {
           id='teams-count-input'
           className='start__input'
           type='number'
-          defaultValue={league.teams_count}
-          value={champ.teams_count}
+          value={teamsCount}
           max={league.teams.length}
           min={String(minTeams)}
           onChange={(e) => updateTeamsNum(parseInt(e.target.value))}
           aria-label='Number of teams'
-          aria-invalid={champ.teams_count < minTeams || champ.teams_count > league.teams.length}
+          aria-invalid={!isValid}
           aria-describedby='teams-count-error'
         />
         <Title
           id='teams-count-error'
           level={5}
-          className={`start__actions-error ${champ.teams_count < minTeams ||
-            champ.teams_count > league.teams.length
-            ? 'start__actions-error--active'
-            : 'start__actions-error--inactive'
-            }`}
+          className={`start__actions-error ${
+            !isValid
+              ? 'start__actions-error--active'
+              : 'start__actions-error--inactive'
+          }`}
           aria-live='assertive'
         >
           Please enter a valid number of teams. From {minTeams} to{' '}
@@ -126,29 +124,19 @@ function TeamsNumber({ league }: any) {
           onChange={handleChange}
           aria-label='Select your favorite teams'
         >
-          {champ.teams.slice(0, champ.teams_count).map((team) => (
+          {league.teams.slice(0, teamsCount).map((team) => (
             <Option key={team.id} value={team.id}>
               {team.name}
             </Option>
           ))}
         </Select>
         <Link
-          className={`start__link ${champ.teams_count < minTeams ||
-            champ.teams_count > league.teams.length
-            ? 'start__link--inactive'
-            : 'start__link--active pulse'
-            }`}
-          to={
-            champ.teams_count >= minTeams &&
-              champ.teams_count <= league.teams.length
-              ? 'season'
-              : '#'
-          }
+          className={`start__link ${
+            !isValid ? 'start__link--inactive' : 'start__link--active pulse'
+          }`}
+          to={isValid ? 'season' : '#'}
           onClick={(e) => {
-            if (
-              champ.teams_count < minTeams ||
-              champ.teams_count > league.teams.length
-            ) {
+            if (!isValid) {
               e.preventDefault();
               return;
             }
