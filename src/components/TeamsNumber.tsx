@@ -38,6 +38,16 @@ function TeamsNumber({ league }: TeamsNumberProps) {
 
   const isValid = teamsCount >= minTeams && teamsCount <= league.teams.length;
 
+  const leagueTeamIds = useMemo(
+    () => new Set(league.teams.map((team) => team.id)),
+    [league.id]
+  );
+
+  const validSelectedTeams = useMemo(
+    () => selectedTeams.filter((id) => leagueTeamIds.has(id)),
+    [selectedTeams, leagueTeamIds]
+  );
+
   const handleChange = (value: string[]) => {
     setSelectedTeams(value);
     localStorage.setItem('favoriteTeams', JSON.stringify(value));
@@ -67,9 +77,8 @@ function TeamsNumber({ league }: TeamsNumberProps) {
         {league.teams.map((team, index) => (
           <div
             key={team.id}
-            className={`start__team ${
-              index < teamsCount ? 'start__team--active' : ''
-            }`}
+            className={`start__team ${index < teamsCount ? 'start__team--active' : ''
+              }`}
           >
             <img
               src={team.logo}
@@ -102,11 +111,10 @@ function TeamsNumber({ league }: TeamsNumberProps) {
         <Title
           id='teams-count-error'
           level={5}
-          className={`start__actions-error ${
-            !isValid
-              ? 'start__actions-error--active'
-              : 'start__actions-error--inactive'
-          }`}
+          className={`start__actions-error ${!isValid
+            ? 'start__actions-error--active'
+            : 'start__actions-error--inactive'
+            }`}
           aria-live='assertive'
         >
           Please enter a valid number of teams. From {minTeams} to{' '}
@@ -120,7 +128,7 @@ function TeamsNumber({ league }: TeamsNumberProps) {
           className='start__select'
           allowClear
           placeholder='Teams'
-          value={selectedTeams}
+          value={validSelectedTeams}
           onChange={handleChange}
           aria-label='Select your favorite teams'
         >
@@ -131,9 +139,8 @@ function TeamsNumber({ league }: TeamsNumberProps) {
           ))}
         </Select>
         <Link
-          className={`start__link ${
-            !isValid ? 'start__link--inactive' : 'start__link--active pulse'
-          }`}
+          className={`start__link ${!isValid ? 'start__link--inactive' : 'start__link--active pulse'
+            }`}
           to={isValid ? 'season' : '#'}
           onClick={(e) => {
             if (!isValid) {
