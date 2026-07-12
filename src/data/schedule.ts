@@ -57,7 +57,7 @@ function getNhlEhlSchedule(teams: Teams[]): Schedule[] {
       }
 
       if (teamA.division_id === teamB.division_id) {
-        addGame(teamA.id, teamB.id);
+        addGame(teamB.id, teamA.id);
       }
     }
   }

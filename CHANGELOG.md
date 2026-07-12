@@ -1,6 +1,25 @@
-﻿# 📄 Release Notes – Sports League Simulator
+# 📄 Release Notes – Sports League Simulator
 
 A hockey league simulation app: track teams, run seasons, and crown champions with rich visuals and realistic logic.
+
+---
+
+## 🎲 v9.1.0 - World Championship & Schedule Overhaul
+
+### 🎯 New Features
+
+1. **4-Game Schedule for European Leagues** — teams now play a full 4-game series
+2. **World Championship Calendar** — dedicated calendar for the World Championship tournament
+3. **84-Game Season Schedule** — extended season with 84 regular-season games
+4. **Women's World Championship** — implemented Women WC support
+
+### 🛠 Fixes & Improvements
+
+1. **Ratings Update** — refreshed ratings for DEL, ELH, ICE, NL, NHL, SHL, SML, EHL, W1 and W2
+2. **Team Color Whitelist** — added BUF, STL and NYR to the color whitelist
+3. **Next Game Button Label** — fixed incorrect label displayed on the Next Game button
+4. **Component Refactoring** — divided large components into smaller, focused ones for better maintainability
+5. **Favorite Teams on Home Page** — favorite teams visibility on home page when a league has already started
 
 ---
 
